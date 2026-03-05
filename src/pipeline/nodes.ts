@@ -148,7 +148,8 @@ function resolveCategory(text: string): ItemCategory {
 
   // 分类规则按“工程实践优先”设计，优先识别开源、工具、研究与教程。
   if (/open source|开源|github|repo|license/.test(input)) return "open-source";
-  if (/tool|sdk|framework|平台|workflow|agent/.test(input)) return "tooling";
+  if (/tool|sdk|framework|平台|workflow/.test(input)) return "tooling";
+  if (/agent|agentic/.test(input)) return "agent";
   if (/paper|research|arxiv|benchmark|评测|研究/.test(input)) return "research";
   if (/news|融资|并购|发布|announcement|行业/.test(input)) return "industry-news";
   if (/tutorial|guide|实践|教程|how to/.test(input)) return "tutorial";

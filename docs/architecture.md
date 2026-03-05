@@ -58,7 +58,7 @@ START
 - `collect_items`：按来源抓取原始条目；支持 `mock/live` 两种模式。
 - `normalize_items`：统一字段、规范时间、补齐 source 元信息。
 - `dedupe_items`：URL + title fingerprint 去重。
-- `classify_items`：按关键词映射分类（tooling/open-source/research/news/tutorial）。
+- `classify_items`：按关键词映射分类（tooling/agent/open-source/research/news/tutorial）。
 - `rank_items`：按重要性、影响范围、创新性打分并分级（high/medium/low）。
 - `build_report`：生成 Markdown（含重点推荐、分组内容、来源链接）。
 

@@ -5,6 +5,7 @@ import type { ItemCategory, PipelineMetrics } from "./types.js";
 const EMPTY_CATEGORY_BREAKDOWN: Record<ItemCategory, number> = {
   "open-source": 0,
   tooling: 0,
+  agent: 0,
   research: 0,
   "industry-news": 0,
   tutorial: 0,

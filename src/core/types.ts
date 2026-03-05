@@ -5,6 +5,7 @@ export type SourceType = "rss";
 export type ItemCategory =
   | "open-source"
   | "tooling"
+  | "agent"
   | "research"
   | "industry-news"
   | "tutorial"
