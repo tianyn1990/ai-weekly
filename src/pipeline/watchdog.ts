@@ -10,9 +10,12 @@ export interface WatchdogItemResult {
   reportDate: string;
   status: "published" | "processed" | "skipped" | "failed";
   reason: string;
+  attempts: number;
 }
 
 export interface WatchdogSummary {
+  startedAt: string;
+  finishedAt: string;
   processed: number;
   published: number;
   skipped: number;
@@ -23,12 +26,18 @@ export interface WatchdogSummary {
 interface RunWatchdogInput {
   candidates: WatchdogCandidate[];
   dryRun: boolean;
+  maxRetries: number;
+  retryDelayMs: number;
   runRecheck: (candidate: WatchdogCandidate) => Promise<ReportState>;
   persistResult: (result: ReportState) => Promise<void>;
+  onRetry?: (params: { reportDate: string; attempt: number; maxRetries: number; error: unknown }) => void;
 }
 
 export async function runPendingWeeklyWatchdog(input: RunWatchdogInput): Promise<WatchdogSummary> {
+  const startedAt = new Date().toISOString();
   const summary: WatchdogSummary = {
+    startedAt,
+    finishedAt: startedAt,
     processed: 0,
     published: 0,
     skipped: 0,
@@ -44,6 +53,7 @@ export async function runPendingWeeklyWatchdog(input: RunWatchdogInput): Promise
         reportDate: candidate.reportDate,
         status: "skipped",
         reason: action.reason,
+        attempts: 0,
       });
       continue;
     }
@@ -54,12 +64,20 @@ export async function runPendingWeeklyWatchdog(input: RunWatchdogInput): Promise
         reportDate: candidate.reportDate,
         status: "failed",
         reason: action.reason,
+        attempts: 0,
       });
       continue;
     }
 
     try {
-      const result = await input.runRecheck(candidate);
+      const execution = await runRecheckWithRetry({
+        candidate,
+        maxRetries: input.maxRetries,
+        retryDelayMs: input.retryDelayMs,
+        runRecheck: input.runRecheck,
+        onRetry: input.onRetry,
+      });
+      const result = execution.result;
       summary.processed += 1;
 
       if (!input.dryRun) {
@@ -72,6 +90,7 @@ export async function runPendingWeeklyWatchdog(input: RunWatchdogInput): Promise
           reportDate: candidate.reportDate,
           status: "published",
           reason: input.dryRun ? "dry_run_would_publish" : result.publishReason,
+          attempts: execution.attempts,
         });
       } else {
         summary.skipped += 1;
@@ -79,18 +98,22 @@ export async function runPendingWeeklyWatchdog(input: RunWatchdogInput): Promise
           reportDate: candidate.reportDate,
           status: "processed",
           reason: input.dryRun ? "dry_run_still_pending" : "still_pending_after_recheck",
+          attempts: execution.attempts,
         });
       }
     } catch (error) {
+      const failedAttempts = error instanceof RetryExhaustedError ? error.attempts : 1;
       summary.failed += 1;
       summary.items.push({
         reportDate: candidate.reportDate,
         status: "failed",
-        reason: error instanceof Error ? error.message : String(error),
+        reason: error instanceof RetryExhaustedError ? error.lastErrorMessage : error instanceof Error ? error.message : String(error),
+        attempts: failedAttempts,
       });
     }
   }
 
+  summary.finishedAt = new Date().toISOString();
   return summary;
 }
 
@@ -117,5 +140,60 @@ function evaluateCandidate(artifact: ReviewArtifact): { type: "process" } | { ty
 
 export const __test__ = {
   evaluateCandidate,
+  runRecheckWithRetry,
 };
 
+async function runRecheckWithRetry(input: {
+  candidate: WatchdogCandidate;
+  maxRetries: number;
+  retryDelayMs: number;
+  runRecheck: (candidate: WatchdogCandidate) => Promise<ReportState>;
+  onRetry?: (params: { reportDate: string; attempt: number; maxRetries: number; error: unknown }) => void;
+}): Promise<{ result: ReportState; attempts: number }> {
+  const maxRetries = Math.max(0, input.maxRetries);
+  let attempts = 0;
+  let lastError: unknown;
+
+  while (attempts <= maxRetries) {
+    attempts += 1;
+    try {
+      const result = await input.runRecheck(input.candidate);
+      return { result, attempts };
+    } catch (error) {
+      lastError = error;
+      const canRetry = attempts <= maxRetries;
+      if (!canRetry) {
+        break;
+      }
+
+      // 重试日志由调用方控制，避免在核心逻辑中硬编码输出介质。
+      input.onRetry?.({
+        reportDate: input.candidate.reportDate,
+        attempt: attempts,
+        maxRetries,
+        error,
+      });
+      await sleep(input.retryDelayMs);
+    }
+  }
+
+  throw new RetryExhaustedError(attempts, lastError);
+}
+
+function sleep(ms: number): Promise<void> {
+  const delay = Math.max(0, ms);
+  return new Promise((resolve) => setTimeout(resolve, delay));
+}
+
+class RetryExhaustedError extends Error {
+  attempts: number;
+  lastErrorMessage: string;
+
+  constructor(attempts: number, lastError: unknown) {
+    const message = lastError instanceof Error ? lastError.message : String(lastError);
+    super(`watchdog_recheck_failed_after_retries:${message}`);
+    this.name = "RetryExhaustedError";
+    this.attempts = attempts;
+    this.lastErrorMessage = message;
+  }
+}

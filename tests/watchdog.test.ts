@@ -80,6 +80,8 @@ describe("watchdog", () => {
     const summary = await runPendingWeeklyWatchdog({
       candidates: [{ reportDate: "2026-03-09", artifact: createReviewArtifact() }],
       dryRun: true,
+      maxRetries: 2,
+      retryDelayMs: 0,
       runRecheck: async () => createRecheckResult(true),
       persistResult: persistSpy,
     });
@@ -89,6 +91,7 @@ describe("watchdog", () => {
     expect(summary.published).toBe(1);
     expect(summary.skipped).toBe(0);
     expect(summary.failed).toBe(0);
+    expect(summary.items[0]?.attempts).toBe(1);
   });
 
   it("复检后仍 pending 的报告应计入 skipped", async () => {
@@ -96,6 +99,8 @@ describe("watchdog", () => {
     const summary = await runPendingWeeklyWatchdog({
       candidates: [{ reportDate: "2026-03-09", artifact: createReviewArtifact() }],
       dryRun: false,
+      maxRetries: 2,
+      retryDelayMs: 0,
       runRecheck: async () => createRecheckResult(false),
       persistResult: persistSpy,
     });
@@ -106,12 +111,15 @@ describe("watchdog", () => {
     expect(summary.skipped).toBe(1);
     expect(summary.failed).toBe(0);
     expect(summary.items[0]?.status).toBe("processed");
+    expect(summary.items[0]?.attempts).toBe(1);
   });
 
   it("缺少 snapshot 的 pending 报告应计入 failed", async () => {
     const summary = await runPendingWeeklyWatchdog({
       candidates: [{ reportDate: "2026-03-09", artifact: createReviewArtifact({ snapshot: undefined }) }],
       dryRun: false,
+      maxRetries: 2,
+      retryDelayMs: 0,
       runRecheck: async () => createRecheckResult(true),
       persistResult: async () => {},
     });
@@ -119,6 +127,49 @@ describe("watchdog", () => {
     expect(summary.processed).toBe(0);
     expect(summary.failed).toBe(1);
     expect(summary.items[0]?.reason).toBe("missing_snapshot");
+    expect(summary.items[0]?.attempts).toBe(0);
+  });
+
+  it("复检失败后应按配置重试并最终成功", async () => {
+    let count = 0;
+    const retrySpy = vi.fn();
+    const summary = await runPendingWeeklyWatchdog({
+      candidates: [{ reportDate: "2026-03-09", artifact: createReviewArtifact() }],
+      dryRun: true,
+      maxRetries: 2,
+      retryDelayMs: 0,
+      onRetry: retrySpy,
+      runRecheck: async () => {
+        count += 1;
+        if (count === 1) {
+          throw new Error("temporary_error");
+        }
+        return createRecheckResult(true);
+      },
+      persistResult: async () => {},
+    });
+
+    expect(retrySpy).toHaveBeenCalledTimes(1);
+    expect(summary.processed).toBe(1);
+    expect(summary.failed).toBe(0);
+    expect(summary.items[0]?.attempts).toBe(2);
+  });
+
+  it("超出最大重试次数后应记录 failed", async () => {
+    const summary = await runPendingWeeklyWatchdog({
+      candidates: [{ reportDate: "2026-03-09", artifact: createReviewArtifact() }],
+      dryRun: false,
+      maxRetries: 1,
+      retryDelayMs: 0,
+      runRecheck: async () => {
+        throw new Error("always_fail");
+      },
+      persistResult: async () => {},
+    });
+
+    expect(summary.processed).toBe(0);
+    expect(summary.failed).toBe(1);
+    expect(summary.items[0]?.attempts).toBe(2);
+    expect(summary.items[0]?.reason).toContain("always_fail");
   });
 });
-

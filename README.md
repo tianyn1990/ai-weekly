@@ -5,8 +5,8 @@
 ## 当前状态
 - 已完成 `docs/PRD.md`（冻结需求）。
 - 已完成 `docs/architecture.md`（系统设计）。
-- 已提供可运行的 M2.5 流程：`collect -> normalize -> dedupe -> classify -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> build_report`。
-- 周报审核支持「持久化指令优先，CLI 参数 fallback」与 pending 周报复检发布。
+- 已提供可运行的 M3.1 流程：`collect -> normalize -> dedupe -> classify -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> build_report`。
+- 周报审核支持「持久化指令优先，CLI 参数 fallback」、pending 周报复检发布、watchdog 守护扫描（含锁与重试）。
 
 ## 环境要求
 - Node.js >= 20
@@ -69,6 +69,12 @@ tsx src/cli.ts run --mode weekly --watch-pending-weekly --dry-run
 
 # 实际执行：对符合条件的 pending 周报执行复检并发布
 tsx src/cli.ts run --mode weekly --watch-pending-weekly
+
+# 自定义重试与锁文件
+tsx src/cli.ts run --mode weekly --watch-pending-weekly --watch-max-retries 3 --watch-retry-delay-ms 500 --watch-lock-file outputs/watchdog/weekly.lock
+
+# 锁文件异常残留时可强制清锁（谨慎）
+tsx src/cli.ts run --mode weekly --watch-pending-weekly --watch-force-unlock
 ```
 
 推荐 cron（北京时间）：
@@ -89,6 +95,6 @@ pnpm test
 
 ## 下一步（建议）
 1. 审核指令存储从文件升级到 DB/API，并补并发写保护。
-2. 增加 watchdog 多实例互斥（分布式锁）与重入保护。
+2. 将 watchdog 单机 lock 升级为分布式锁（多实例部署）。
 3. 接入 LLM 总结节点（可切换 OpenAI/Anthropic/MiniMax）。
 4. 增加 SQLite 持久化与历史检索页。

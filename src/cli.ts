@@ -10,6 +10,7 @@ import { createInitialState, loadEnabledSources } from "./pipeline/nodes.js";
 import { recheckPendingWeeklyReport } from "./pipeline/recheck.js";
 import type { WatchdogCandidate } from "./pipeline/watchdog.js";
 import { runPendingWeeklyWatchdog } from "./pipeline/watchdog.js";
+import { acquireFileLock } from "./utils/file-lock.js";
 import { nowInTimezoneIso } from "./utils/time.js";
 
 interface CliArgs {
@@ -27,6 +28,11 @@ interface CliArgs {
   recheckPending: boolean;
   watchPendingWeekly: boolean;
   dryRun: boolean;
+  watchLockFile: string;
+  watchForceUnlock: boolean;
+  watchMaxRetries: number;
+  watchRetryDelayMs: number;
+  watchSummaryRoot: string;
   reportDate?: string;
   generatedAt?: string;
 }
@@ -114,37 +120,64 @@ async function runWatchPendingWeekly(args: CliArgs) {
   }
 
   const generatedAt = args.generatedAt ?? nowInTimezoneIso(args.timezone);
-  console.log(
-    `[watch] mode=weekly, dryRun=${args.dryRun}, outputRoot=${args.outputRoot}, instructionRoot=${args.reviewInstructionRoot}`,
-  );
-
-  const loaded = await loadWatchdogCandidates(args);
-  const summary = await runPendingWeeklyWatchdog({
-    candidates: loaded.candidates,
-    dryRun: args.dryRun,
-    runRecheck: async (candidate) => {
-      const runId = `watch-recheck-${candidate.reportDate}-${Date.now()}`;
-      const recheckState = buildRecheckStateFromArtifact({
-        args,
-        artifact: candidate.artifact,
-        reportDate: candidate.reportDate,
-        generatedAt,
-        runId,
-      });
-      return recheckPendingWeeklyReport(recheckState);
-    },
-    persistResult: async (result) => {
-      await persistOutputs(result, args);
-    },
-  });
-  summary.failed += loaded.precheckFailures.length;
-  summary.items = [...loaded.precheckFailures, ...summary.items];
+  const lock = await tryAcquireWatchdogLock(args.watchLockFile, args.watchForceUnlock);
+  if (!lock) {
+    console.log(`[watch-skip] lock already held: ${args.watchLockFile}`);
+    return;
+  }
 
   console.log(
-    `[watch-summary] processed=${summary.processed}, published=${summary.published}, skipped=${summary.skipped}, failed=${summary.failed}`,
+    `[watch] mode=weekly, dryRun=${args.dryRun}, retries=${args.watchMaxRetries}, outputRoot=${args.outputRoot}, instructionRoot=${args.reviewInstructionRoot}`,
   );
-  for (const item of summary.items) {
-    console.log(`[watch-item] date=${item.reportDate}, status=${item.status}, reason=${item.reason}`);
+
+  try {
+    const loaded = await loadWatchdogCandidates(args);
+    const summary = await runPendingWeeklyWatchdog({
+      candidates: loaded.candidates,
+      dryRun: args.dryRun,
+      maxRetries: args.watchMaxRetries,
+      retryDelayMs: args.watchRetryDelayMs,
+      onRetry: ({ reportDate, attempt, maxRetries, error }) => {
+        console.log(
+          `[watch-retry] date=${reportDate}, attempt=${attempt}/${maxRetries + 1}, reason=${
+            error instanceof Error ? error.message : String(error)
+          }`,
+        );
+      },
+      runRecheck: async (candidate) => {
+        const runId = `watch-recheck-${candidate.reportDate}-${Date.now()}`;
+        const recheckState = buildRecheckStateFromArtifact({
+          args,
+          artifact: candidate.artifact,
+          reportDate: candidate.reportDate,
+          generatedAt,
+          runId,
+        });
+        return recheckPendingWeeklyReport(recheckState);
+      },
+      persistResult: async (result) => {
+        await persistOutputs(result, args);
+      },
+    });
+    summary.failed += loaded.precheckFailures.length;
+    summary.items = [...loaded.precheckFailures, ...summary.items];
+
+    const summaryPath = await persistWatchdogSummary(args, generatedAt, summary);
+    console.log(`[watch-summary-file] ${summaryPath}`);
+    console.log(
+      `[watch-summary] processed=${summary.processed}, published=${summary.published}, skipped=${summary.skipped}, failed=${summary.failed}`,
+    );
+    for (const item of summary.items) {
+      console.log(
+        `[watch-item] date=${item.reportDate}, status=${item.status}, attempts=${item.attempts}, reason=${item.reason}`,
+      );
+    }
+
+    if (summary.failed > 0) {
+      console.log(`[alert] watchdog detected failed items: ${summary.failed}`);
+    }
+  } finally {
+    await lock.release();
   }
 }
 
@@ -240,6 +273,35 @@ function parseArgs(argv: string[]): CliArgs {
       continue;
     }
 
+    if (token === "--watch-lock-file" && next) {
+      args.watchLockFile = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--watch-force-unlock") {
+      args.watchForceUnlock = true;
+      continue;
+    }
+
+    if (token === "--watch-max-retries" && next) {
+      args.watchMaxRetries = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--watch-retry-delay-ms" && next) {
+      args.watchRetryDelayMs = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--watch-summary-root" && next) {
+      args.watchSummaryRoot = next;
+      i += 1;
+      continue;
+    }
+
     if (token === "--report-date" && next) {
       args.reportDate = next;
       i += 1;
@@ -272,6 +334,11 @@ function defaults(): CliArgs {
     recheckPending: false,
     watchPendingWeekly: false,
     dryRun: false,
+    watchLockFile: "outputs/watchdog/weekly.lock",
+    watchForceUnlock: false,
+    watchMaxRetries: 2,
+    watchRetryDelayMs: 300,
+    watchSummaryRoot: "outputs/watchdog",
   };
 }
 
@@ -356,7 +423,7 @@ async function loadReviewArtifact(outputRoot: string, mode: ReportMode, reportDa
 
 async function loadWatchdogCandidates(args: CliArgs): Promise<{
   candidates: WatchdogCandidate[];
-  precheckFailures: { reportDate: string; status: "failed"; reason: string }[];
+  precheckFailures: { reportDate: string; status: "failed"; reason: string; attempts: number }[];
 }> {
   const weeklyDir = path.join(args.outputRoot, "weekly");
   let fileNames: string[] = [];
@@ -370,7 +437,7 @@ async function loadWatchdogCandidates(args: CliArgs): Promise<{
   }
 
   const candidates: WatchdogCandidate[] = [];
-  const precheckFailures: { reportDate: string; status: "failed"; reason: string }[] = [];
+  const precheckFailures: { reportDate: string; status: "failed"; reason: string; attempts: number }[] = [];
   for (const name of fileNames.sort()) {
     if (!name.endsWith(".json")) {
       continue;
@@ -386,6 +453,7 @@ async function loadWatchdogCandidates(args: CliArgs): Promise<{
         reportDate,
         status: "failed",
         reason: `invalid_review_artifact:${error instanceof Error ? error.message : String(error)}`,
+        attempts: 0,
       });
     }
   }
@@ -437,6 +505,46 @@ function buildRecheckStateFromArtifact(input: {
     outlineApproved: artifact.outlineApproved ?? false,
     finalApproved: artifact.finalApproved ?? false,
   };
+}
+
+async function persistWatchdogSummary(args: CliArgs, generatedAt: string, summary: Awaited<ReturnType<typeof runPendingWeeklyWatchdog>>) {
+  const dir = path.join(args.watchSummaryRoot, "weekly");
+  await fs.mkdir(dir, { recursive: true });
+  const stamp = generatedAt.replaceAll(":", "-");
+  const summaryPath = path.join(dir, `${stamp}.json`);
+
+  await fs.writeFile(
+    summaryPath,
+    JSON.stringify(
+      {
+        mode: "weekly",
+        generatedAt,
+        dryRun: args.dryRun,
+        retries: {
+          maxRetries: args.watchMaxRetries,
+          retryDelayMs: args.watchRetryDelayMs,
+        },
+        lockFile: args.watchLockFile,
+        summary,
+      },
+      null,
+      2,
+    ),
+    "utf-8",
+  );
+
+  return summaryPath;
+}
+
+async function tryAcquireWatchdogLock(lockPath: string, forceUnlock: boolean) {
+  try {
+    return await acquireFileLock(lockPath, { forceUnlock });
+  } catch (error) {
+    if (error instanceof Error && error.message.startsWith("watchdog_lock_exists:")) {
+      return null;
+    }
+    throw error;
+  }
 }
 
 function printRunResult(prefix: "done" | "recheck", result: ReportState) {

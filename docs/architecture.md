@@ -87,15 +87,18 @@ load_review_snapshot
 ### 4.3 watchdog 扫描流程（M3）
 ```text
 scan outputs/review/weekly/*.json
+  -> acquire lock
   -> filter pending_review + pending
   -> recheck_pending_weekly_report
   -> persist review/published
-  -> summary (processed/published/skipped/failed)
+  -> write watchdog summary
+  -> release lock
 ```
 
 说明：
 - watchdog 默认顺序执行，保证日志和状态变更可追踪。
 - 支持 `--dry-run`，只做判定不落盘。
+- 支持单机 lock 文件互斥，避免重复执行；支持失败重试（次数+间隔可配）。
 
 ## 5. 状态模型（Graph State）
 核心状态字段：
@@ -129,6 +132,10 @@ scan outputs/review/weekly/*.json
 - 所有报告先写入 `outputs/review/`，发布后写入 `outputs/published/`。
 - 周报支持 `--recheck-pending`：仅刷新审核状态和发布状态，不重跑内容采集。
 - 周报支持 `--watch-pending-weekly`：批量扫描 pending 周报并触发复检发布。
+- watchdog 关键参数：
+  - `--watch-lock-file`：锁文件路径（默认 `outputs/watchdog/weekly.lock`）。
+  - `--watch-max-retries` / `--watch-retry-delay-ms`：复检失败重试策略。
+  - `--watch-force-unlock`：清理残留锁后再执行（仅用于运维兜底）。
 
 ## 7. 数据源策略（首批）
 建议首批固定 8-10 个来源（后续再扩展）：
@@ -162,6 +169,6 @@ scan outputs/review/weekly/*.json
 
 ## 10. 后续演进路线
 - v0.3：将审核指令存储从文件升级为 DB/API（含并发控制与审计日志）。
-- v0.4：watchdog 增加分布式锁、重试策略与异常告警。
+- v0.4：watchdog 从单机 lock 升级为分布式锁与失败告警通道（Slack/Email/Webhook）。
 - v0.5：增加月报/季报聚合与趋势分析。
 - v0.6：引入向量检索与跨周期主题记忆。
