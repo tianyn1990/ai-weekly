@@ -7,6 +7,7 @@
 - 已完成 `docs/architecture.md`（系统设计）。
 - 已提供可运行的 M3.1 流程：`collect -> normalize -> dedupe -> classify -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> build_report`。
 - 周报审核支持「持久化指令优先，CLI 参数 fallback」、pending 周报复检发布、watchdog 守护扫描（含锁与重试）。
+- 分布式互斥暂缓，当前以单机定时任务为部署基线。
 
 ## 环境要求
 - Node.js >= 20
@@ -94,7 +95,7 @@ pnpm test
 - 模型调用与高级总结暂未接入，作为下一阶段扩展点。
 
 ## 下一步（建议）
-1. 审核指令存储从文件升级到 DB/API，并补并发写保护。
-2. 将 watchdog 单机 lock 升级为分布式锁（多实例部署）。
-3. 接入 LLM 总结节点（可切换 OpenAI/Anthropic/MiniMax）。
-4. 增加 SQLite 持久化与历史检索页。
+1. 接入 Feishu 审核协同：通知、审核动作输入、截止提醒。
+2. 增加“审核意见回流修订”：新增/删除候选、主题词/搜索词/权重调整。
+3. 审核指令存储从文件升级到 DB/API，并补并发写保护。
+4. 接入 LLM 总结节点，并逐步扩展到分类/打标/排序辅助。
