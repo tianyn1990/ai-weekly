@@ -32,9 +32,9 @@ START
   -> rank_items
   -> build_outline
   -> review_outline (HITL)
-  -> build_report
   -> review_final (HITL)
   -> publish_or_wait
+  -> build_report
   -> END
 ```
 

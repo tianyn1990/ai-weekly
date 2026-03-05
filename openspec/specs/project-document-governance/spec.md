@@ -1,7 +1,7 @@
 # project-document-governance Specification
 
 ## Purpose
-TBD - created by archiving change add-openspec-baseline-for-m1. Update Purpose after archive.
+定义项目文档治理规则，确保 PRD、架构与学习协作文档始终保持单一来源，并在需求、流程或学习节奏变更时同步更新，避免并行文档造成语义漂移和执行偏差。
 ## Requirements
 ### Requirement: Project SHALL maintain single canonical PRD and architecture documents
 项目 SHALL 仅维护一份需求文档与一份架构文档作为唯一来源，避免并行版本漂移。
@@ -33,4 +33,3 @@ TBD - created by archiving change add-openspec-baseline-for-m1. Update Purpose a
 #### Scenario: Learning cadence change is introduced
 - **WHEN** 学习节奏或学习交付方式发生变化
 - **THEN** `docs/learning-workflow.md` 必须同步更新
-

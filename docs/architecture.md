@@ -50,6 +50,10 @@ START
   -> dedupe_items
   -> classify_items
   -> rank_items
+  -> build_outline
+  -> review_outline
+  -> review_final
+  -> publish_or_wait
   -> build_report
   -> END
 ```
@@ -60,7 +64,11 @@ START
 - `dedupe_items`：URL + title fingerprint 去重。
 - `classify_items`：按关键词映射分类（tooling/agent/open-source/research/news/tutorial）。
 - `rank_items`：按重要性、影响范围、创新性打分并分级（high/medium/low）。
-- `build_report`：生成 Markdown（含重点推荐、分组内容、来源链接）。
+- `build_outline`：生成周报大纲草稿，供大纲审核使用。
+- `review_outline`：处理大纲审核状态，写入审核截止时间和审核阶段。
+- `build_report`：生成 Markdown（含重点推荐、分组内容、来源链接、审核状态）。
+- `review_final`：处理终稿审核状态。
+- `publish_or_wait`：统一判定发布行为（人工审核通过/超时自动发布/继续等待）。
 
 ## 5. 状态模型（Graph State）
 核心状态字段：
@@ -71,15 +79,24 @@ START
 - `items`：标准化后的条目。
 - `rankedItems`：排序后的条目。
 - `highlights`：重点推荐条目。
+- `outlineMarkdown`：大纲审核文本。
 - `reportMarkdown`：最终文稿。
+- `reviewStatus`：审核状态（not_required/pending_review/approved/timeout_published）。
+- `reviewStage`：审核阶段（outline_review/final_review/none）。
+- `reviewDeadlineAt`：审核截止时间（周一 12:30，北京时间）。
+- `publishStatus`：发布状态（pending/published）。
 - `metrics`：采集数、去重后数、分类分布、耗时。
 
 ## 6. 发布与审核策略
 - 日报：每天 09:00 生成待发布版本。
 - 周报：每周一 09:00 生成待审核版本。
+- 审核断点：
+  - 大纲审核：`review_outline`
+  - 终稿审核：`review_final`
 - 周报自动发布规则：
   - 审核截止：周一 12:30（北京时间）。
   - 截止前无人审：自动发布当前版本。
+- 当前审核输入方式：CLI 参数（`--approve-outline`、`--approve-final`），后续可替换为持久化审核指令。
 - 所有报告先写入 `outputs/review/`，发布后写入 `outputs/published/`。
 
 ## 7. 数据源策略（首批）
@@ -106,12 +123,13 @@ START
 - 去重目标：重复率 < 10%。
 - 条目下限：周报 >= 20。
 - 报告结构固定：
-  1. 重点推荐
-  2. 分类正文
-  3. 来源索引
-  4. 运行指标
+  1. 审核信息（状态、阶段、截止时间、发布原因）
+  2. 审核大纲（weekly）
+  3. 重点推荐
+  4. 分类正文
+  5. 运行指标
 
 ## 10. 后续演进路线
-- v0.2：引入 Human-in-the-loop 断点（大纲审核 + 终稿审核）。
-- v0.3：增加月报/季报聚合与趋势分析。
-- v0.4：引入向量检索与跨周期主题记忆。
+- v0.3：将审核动作从 CLI 参数升级为持久化审核系统（文件/DB/API）。
+- v0.4：增加月报/季报聚合与趋势分析。
+- v0.5：引入向量检索与跨周期主题记忆。

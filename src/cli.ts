@@ -15,6 +15,10 @@ interface CliArgs {
   sourceLimit: number;
   timezone: string;
   outputRoot: string;
+  publishRoot: string;
+  approveOutline: boolean;
+  approveFinal: boolean;
+  generatedAt?: string;
 }
 
 async function main() {
@@ -24,7 +28,7 @@ async function main() {
     throw new Error("仅支持 run 命令。示例: pnpm run:weekly:mock");
   }
 
-  const generatedAt = nowInTimezoneIso(args.timezone);
+  const generatedAt = args.generatedAt ?? nowInTimezoneIso(args.timezone);
   const runId = `${args.mode}-${Date.now()}`;
 
   const enabledSources = await loadEnabledSources(args.sourceConfigPath);
@@ -40,12 +44,18 @@ async function main() {
     sourceLimit: args.sourceLimit,
     generatedAt,
     runId,
+    approveOutline: args.approveOutline,
+    approveFinal: args.approveFinal,
   });
 
   const result = (await graph.invoke(initialState as any)) as ReportState;
   await persistOutputs(result, args);
 
   console.log(`[done] report generated with ${result.rankedItems.length} items.`);
+  console.log(
+    `[status] review=${result.reviewStatus}, stage=${result.reviewStage}, publish=${result.publishStatus}, shouldPublish=${result.shouldPublish}`,
+  );
+
   if (result.warnings.length > 0) {
     console.log("[warning] 部分来源抓取失败:");
     for (const warning of result.warnings) {
@@ -108,6 +118,28 @@ function parseArgs(argv: string[]): CliArgs {
       i += 1;
       continue;
     }
+
+    if (token === "--publish-root" && next) {
+      args.publishRoot = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--approve-outline") {
+      args.approveOutline = true;
+      continue;
+    }
+
+    if (token === "--approve-final") {
+      args.approveFinal = true;
+      continue;
+    }
+
+    if (token === "--generated-at" && next) {
+      args.generatedAt = next;
+      i += 1;
+      continue;
+    }
   }
 
   return args;
@@ -122,18 +154,36 @@ function defaults(): CliArgs {
     sourceLimit: 6,
     timezone: "Asia/Shanghai",
     outputRoot: "outputs/review",
+    publishRoot: "outputs/published",
+    approveOutline: false,
+    approveFinal: false,
   };
 }
 
 async function persistOutputs(result: ReportState, args: CliArgs) {
-  const datePart = new Date().toISOString().slice(0, 10);
-  const dir = path.join(args.outputRoot, args.mode);
+  // 产物日期统一取生成时间，确保重放历史任务时不会写错日期目录。
+  const datePart = result.generatedAt.slice(0, 10);
+
+  // 约定始终先写入 review 目录，作为可追溯的待审核基线版本。
+  const reviewPaths = await writeArtifacts(args.outputRoot, args.mode, datePart, result);
+  console.log(`[output] ${reviewPaths.mdPath}`);
+  console.log(`[output] ${reviewPaths.jsonPath}`);
+
+  // 满足发布条件时，再同步写入 published 目录。
+  if (result.shouldPublish) {
+    const publishedPaths = await writeArtifacts(args.publishRoot, args.mode, datePart, result);
+    console.log(`[published] ${publishedPaths.mdPath}`);
+    console.log(`[published] ${publishedPaths.jsonPath}`);
+  }
+}
+
+async function writeArtifacts(root: string, mode: ReportMode, datePart: string, result: ReportState) {
+  const dir = path.join(root, mode);
   await fs.mkdir(dir, { recursive: true });
 
   const mdPath = path.join(dir, `${datePart}.md`);
   const jsonPath = path.join(dir, `${datePart}.json`);
 
-  // 约定同时输出 Markdown + JSON，便于人工审核与后续自动发布/检索。
   await fs.writeFile(mdPath, result.reportMarkdown, "utf-8");
   await fs.writeFile(
     jsonPath,
@@ -142,6 +192,14 @@ async function persistOutputs(result: ReportState, args: CliArgs) {
         runId: result.runId,
         generatedAt: result.generatedAt,
         mode: result.mode,
+        reviewStatus: result.reviewStatus,
+        reviewStage: result.reviewStage,
+        reviewDeadlineAt: result.reviewDeadlineAt,
+        reviewReason: result.reviewReason,
+        publishStatus: result.publishStatus,
+        shouldPublish: result.shouldPublish,
+        publishReason: result.publishReason,
+        publishedAt: result.publishedAt,
         metrics: result.metrics,
         highlights: result.highlights,
         warnings: result.warnings,
@@ -152,8 +210,7 @@ async function persistOutputs(result: ReportState, args: CliArgs) {
     "utf-8",
   );
 
-  console.log(`[output] ${mdPath}`);
-  console.log(`[output] ${jsonPath}`);
+  return { mdPath, jsonPath };
 }
 
 main().catch((error) => {

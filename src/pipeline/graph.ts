@@ -2,12 +2,16 @@ import { Annotation, END, START, StateGraph } from "@langchain/langgraph";
 
 import type { ReportState } from "../core/types.js";
 import {
+  buildOutlineNode,
   buildReportNode,
   classifyItemsNode,
   collectItemsNode,
   dedupeItemsNode,
   normalizeItemsNode,
+  publishOrWaitNode,
   rankItemsNode,
+  reviewFinalNode,
+  reviewOutlineNode,
 } from "./nodes.js";
 
 const ReportStateAnnotation = Annotation.Root({
@@ -18,6 +22,8 @@ const ReportStateAnnotation = Annotation.Root({
   useMock: Annotation<boolean>(),
   sourceConfigPath: Annotation<string>(),
   sourceLimit: Annotation<number>(),
+  approveOutline: Annotation<boolean>(),
+  approveFinal: Annotation<boolean>(),
   // 数组字段默认采用 replace reducer，确保每个 node 输出可预测、便于调试。
   rawItems: Annotation<ReportState["rawItems"]>({
     value: (_left, right) => right,
@@ -35,10 +41,24 @@ const ReportStateAnnotation = Annotation.Root({
     value: (_left, right) => right,
     default: () => [],
   }),
+  outlineMarkdown: Annotation<string>({
+    value: (_left, right) => right,
+    default: () => "",
+  }),
   reportMarkdown: Annotation<string>({
     value: (_left, right) => right,
     default: () => "",
   }),
+  outlineApproved: Annotation<boolean>(),
+  finalApproved: Annotation<boolean>(),
+  reviewStatus: Annotation<ReportState["reviewStatus"]>(),
+  reviewStage: Annotation<ReportState["reviewStage"]>(),
+  reviewDeadlineAt: Annotation<ReportState["reviewDeadlineAt"]>(),
+  reviewReason: Annotation<string>(),
+  publishStatus: Annotation<ReportState["publishStatus"]>(),
+  shouldPublish: Annotation<boolean>(),
+  publishedAt: Annotation<ReportState["publishedAt"]>(),
+  publishReason: Annotation<string>(),
   metrics: Annotation<ReportState["metrics"]>(),
   warnings: Annotation<ReportState["warnings"]>({
     value: (_left, right) => right,
@@ -49,20 +69,28 @@ const ReportStateAnnotation = Annotation.Root({
 export type CompiledReportGraph = ReturnType<typeof buildReportGraph>;
 
 export function buildReportGraph() {
-  // 首版采用线性 DAG，先打通稳定主链路；后续再引入 Human-in-the-loop 分支。
+  // M2 进入“可审核+可自动发布”的流程：先审大纲，再审终稿，最后统一发布决策。
   return new StateGraph(ReportStateAnnotation)
     .addNode("collect_items", collectItemsNode)
     .addNode("normalize_items", normalizeItemsNode)
     .addNode("dedupe_items", dedupeItemsNode)
     .addNode("classify_items", classifyItemsNode)
     .addNode("rank_items", rankItemsNode)
+    .addNode("build_outline", buildOutlineNode)
+    .addNode("review_outline", reviewOutlineNode)
+    .addNode("review_final", reviewFinalNode)
+    .addNode("publish_or_wait", publishOrWaitNode)
     .addNode("build_report", buildReportNode)
     .addEdge(START, "collect_items")
     .addEdge("collect_items", "normalize_items")
     .addEdge("normalize_items", "dedupe_items")
     .addEdge("dedupe_items", "classify_items")
     .addEdge("classify_items", "rank_items")
-    .addEdge("rank_items", "build_report")
+    .addEdge("rank_items", "build_outline")
+    .addEdge("build_outline", "review_outline")
+    .addEdge("review_outline", "review_final")
+    .addEdge("review_final", "publish_or_wait")
+    .addEdge("publish_or_wait", "build_report")
     .addEdge("build_report", END)
     .compile();
 }

@@ -13,8 +13,8 @@ export function computeWeeklyReviewDeadline(nowIso: string, timezoneName: string
   const now = dayjs(nowIso).tz(timezoneName);
   let deadline = now.day(1).hour(12).minute(30).second(0).millisecond(0);
 
-  // 若当前时间已经超过本周一截止点，则滚动到下周一。
-  if (now.isAfter(deadline)) {
+  // Tue-Sat 运行时默认指向“下周一”审核窗口，避免误判为本周已超时。
+  if (now.day() > 1) {
     deadline = deadline.add(7, "day");
   }
 

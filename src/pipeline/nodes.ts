@@ -7,10 +7,10 @@ import type { ItemCategory, NormalizedItem, RankedItem, ReportState, SourceConfi
 import { buildReportMarkdown } from "../report/markdown.js";
 import { collectMockItems } from "../sources/mock-source.js";
 import { collectRssItems } from "../sources/rss-source.js";
+import { computeWeeklyReviewDeadline } from "../utils/time.js";
+import { decideReviewAndPublish, resolvePendingStage } from "./review-policy.js";
 
 export async function collectItemsNode(state: ReportState): Promise<Partial<ReportState>> {
-  const sources = await loadSourceConfig(state.sourceConfigPath);
-
   if (state.useMock) {
     // mock 模式用于学习与回归，保证在无网络或源不稳定时也能完整演练流程。
     const rawItems = collectMockItems(state.mode, state.generatedAt);
@@ -18,6 +18,7 @@ export async function collectItemsNode(state: ReportState): Promise<Partial<Repo
     return { rawItems, metrics };
   }
 
+  const sources = await loadSourceConfig(state.sourceConfigPath);
   const { items, warnings } = await collectRssItems(sources, state.sourceLimit);
   const metrics = { ...state.metrics, collectedCount: items.length };
   return { rawItems: items, metrics, warnings };
@@ -89,6 +90,48 @@ export async function rankItemsNode(state: ReportState): Promise<Partial<ReportS
   return { rankedItems: ranked, highlights, metrics };
 }
 
+export async function buildOutlineNode(state: ReportState): Promise<Partial<ReportState>> {
+  // 大纲只提炼重点结构，便于先审方向再审细节，降低人工审核成本。
+  const grouped = groupByCategory(state.rankedItems);
+  const lines: string[] = [];
+
+  lines.push("### 重点推荐（大纲）");
+  for (const item of state.highlights.slice(0, 5)) {
+    lines.push(`- ${item.title}`);
+  }
+  lines.push("");
+
+  lines.push("### 分类覆盖（大纲）");
+  for (const [category, items] of Object.entries(grouped)) {
+    lines.push(`- ${category}: ${items.length} 条`);
+  }
+
+  return { outlineMarkdown: lines.join("\n") };
+}
+
+export async function reviewOutlineNode(state: ReportState): Promise<Partial<ReportState>> {
+  if (state.mode === "daily") {
+    return {
+      outlineApproved: true,
+      reviewStage: "none",
+      reviewStatus: "not_required",
+      reviewReason: "日报模式跳过大纲审核",
+      reviewDeadlineAt: null,
+    };
+  }
+
+  const reviewDeadlineAt = state.reviewDeadlineAt ?? computeWeeklyReviewDeadline(state.generatedAt, state.timezone);
+  const outlineApproved = state.approveOutline;
+
+  return {
+    outlineApproved,
+    reviewDeadlineAt,
+    reviewStage: outlineApproved ? "final_review" : "outline_review",
+    reviewStatus: "pending_review",
+    reviewReason: outlineApproved ? "大纲已通过，等待终稿审核" : "等待大纲审核",
+  };
+}
+
 export async function buildReportNode(state: ReportState): Promise<Partial<ReportState>> {
   // 输出节点只负责渲染，不再改写 ranking 结果，保持数据流单向清晰。
   const reportMarkdown = buildReportMarkdown({
@@ -98,9 +141,64 @@ export async function buildReportNode(state: ReportState): Promise<Partial<Repor
     highlights: state.highlights,
     rankedItems: state.rankedItems,
     metrics: state.metrics,
+    outlineMarkdown: state.outlineMarkdown,
+    reviewStatus: state.reviewStatus,
+    reviewStage: state.reviewStage,
+    reviewDeadlineAt: state.reviewDeadlineAt,
+    publishStatus: state.publishStatus,
+    publishReason: state.publishReason,
   });
 
   return { reportMarkdown };
+}
+
+export async function reviewFinalNode(state: ReportState): Promise<Partial<ReportState>> {
+  if (state.mode === "daily") {
+    return {
+      finalApproved: true,
+      reviewStage: "none",
+      reviewStatus: "not_required",
+      reviewReason: "日报模式跳过终稿审核",
+    };
+  }
+
+  if (!state.outlineApproved) {
+    return {
+      finalApproved: false,
+      reviewStage: "outline_review",
+      reviewStatus: "pending_review",
+      reviewReason: "大纲未通过，终稿审核尚未开始",
+    };
+  }
+
+  const finalApproved = state.approveFinal;
+  return {
+    finalApproved,
+    reviewStage: finalApproved ? "none" : "final_review",
+    reviewStatus: "pending_review",
+    reviewReason: finalApproved ? "终稿审核已通过" : "等待终稿审核",
+  };
+}
+
+export async function publishOrWaitNode(state: ReportState): Promise<Partial<ReportState>> {
+  // 发布决策统一集中在该节点，避免多个节点重复判定时间与状态。
+  const decision = decideReviewAndPublish({
+    mode: state.mode,
+    generatedAt: state.generatedAt,
+    reviewDeadlineAt: state.reviewDeadlineAt,
+    outlineApproved: state.outlineApproved,
+    finalApproved: state.finalApproved,
+  });
+
+  return {
+    reviewStatus: decision.reviewStatus,
+    reviewStage: decision.reviewStage,
+    reviewReason: decision.reviewReason,
+    publishStatus: decision.publishStatus,
+    shouldPublish: decision.shouldPublish,
+    publishReason: decision.publishReason,
+    publishedAt: decision.publishedAt,
+  };
 }
 
 export function createInitialState(params: {
@@ -111,6 +209,8 @@ export function createInitialState(params: {
   sourceLimit: number;
   generatedAt: string;
   runId: string;
+  approveOutline: boolean;
+  approveFinal: boolean;
 }): ReportState {
   return {
     runId: params.runId,
@@ -124,7 +224,20 @@ export function createInitialState(params: {
     items: [],
     rankedItems: [],
     highlights: [],
+    outlineMarkdown: "",
     reportMarkdown: "",
+    approveOutline: params.approveOutline,
+    approveFinal: params.approveFinal,
+    outlineApproved: false,
+    finalApproved: false,
+    reviewStatus: params.mode === "daily" ? "not_required" : "pending_review",
+    reviewStage: params.mode === "daily" ? "none" : "outline_review",
+    reviewDeadlineAt: params.mode === "weekly" ? computeWeeklyReviewDeadline(params.generatedAt, params.timezone) : null,
+    reviewReason: params.mode === "daily" ? "日报模式默认直出" : "等待审核",
+    publishStatus: "pending",
+    shouldPublish: false,
+    publishedAt: null,
+    publishReason: "not_decided",
     metrics: createEmptyMetrics(),
     warnings: [],
   };
@@ -141,6 +254,16 @@ function buildCategoryBreakdown(items: RankedItem[]): Record<ItemCategory, numbe
 function pickHighlights(items: RankedItem[], mode: ReportState["mode"]): RankedItem[] {
   const limit = mode === "weekly" ? 8 : 5;
   return items.slice(0, limit);
+}
+
+function groupByCategory(items: RankedItem[]): Record<string, RankedItem[]> {
+  return items.reduce<Record<string, RankedItem[]>>((acc, item) => {
+    if (!acc[item.category]) {
+      acc[item.category] = [];
+    }
+    acc[item.category].push(item);
+    return acc;
+  }, {});
 }
 
 function resolveCategory(text: string): ItemCategory {
@@ -160,3 +283,8 @@ export async function loadEnabledSources(path: string): Promise<SourceConfig[]> 
   const sources = await loadSourceConfig(path);
   return sources.filter((source) => source.enabled);
 }
+
+// 供单元测试复用：便于验证审核阶段与发布判定是否符合预期。
+export const __test__ = {
+  resolvePendingStage,
+};

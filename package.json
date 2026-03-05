@@ -9,7 +9,8 @@
     "run:weekly:mock": "tsx src/cli.ts run --mode weekly --mock",
     "run:daily": "tsx src/cli.ts run --mode daily",
     "run:weekly": "tsx src/cli.ts run --mode weekly",
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
   },
   "engines": {
     "node": ">=20"
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@types/node": "^22.13.10",
     "tsx": "^4.19.3",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "vitest": "^2.1.8"
   }
 }

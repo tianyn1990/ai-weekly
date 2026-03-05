@@ -13,6 +13,12 @@ export type ItemCategory =
 
 export type ImportanceLevel = "high" | "medium" | "low";
 
+export type ReviewStatus = "not_required" | "pending_review" | "approved" | "timeout_published";
+
+export type ReviewStage = "none" | "outline_review" | "final_review";
+
+export type PublishStatus = "pending" | "published";
+
 export interface SourceConfig {
   id: string;
   name: string;
@@ -71,7 +77,20 @@ export interface ReportState {
   items: NormalizedItem[];
   rankedItems: RankedItem[];
   highlights: RankedItem[];
+  outlineMarkdown: string;
   reportMarkdown: string;
+  approveOutline: boolean;
+  approveFinal: boolean;
+  outlineApproved: boolean;
+  finalApproved: boolean;
+  reviewStatus: ReviewStatus;
+  reviewStage: ReviewStage;
+  reviewDeadlineAt: string | null;
+  reviewReason: string;
+  publishStatus: PublishStatus;
+  shouldPublish: boolean;
+  publishedAt: string | null;
+  publishReason: string;
   metrics: PipelineMetrics;
   warnings: string[];
 }

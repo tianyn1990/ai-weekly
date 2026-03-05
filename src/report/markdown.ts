@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 
-import type { PipelineMetrics, RankedItem, ReportMode } from "../core/types.js";
-import { computeWeeklyReviewDeadline, formatHumanTime } from "../utils/time.js";
+import type { PipelineMetrics, PublishStatus, RankedItem, ReportMode, ReviewStage, ReviewStatus } from "../core/types.js";
+import { formatHumanTime } from "../utils/time.js";
 
 interface BuildMarkdownInput {
   mode: ReportMode;
@@ -10,16 +10,32 @@ interface BuildMarkdownInput {
   highlights: RankedItem[];
   rankedItems: RankedItem[];
   metrics: PipelineMetrics;
+  outlineMarkdown: string;
+  reviewStatus: ReviewStatus;
+  reviewStage: ReviewStage;
+  reviewDeadlineAt: string | null;
+  publishStatus: PublishStatus;
+  publishReason: string;
 }
 
 export function buildReportMarkdown(input: BuildMarkdownInput): string {
-  const { mode, timezone, generatedAt, highlights, rankedItems, metrics } = input;
-  const title = mode === "weekly" ? "AI 周报（待审核）" : "AI 日报（待审核）";
+  const {
+    mode,
+    timezone,
+    generatedAt,
+    highlights,
+    rankedItems,
+    metrics,
+    outlineMarkdown,
+    reviewStatus,
+    reviewStage,
+    reviewDeadlineAt,
+    publishStatus,
+    publishReason,
+  } = input;
+
+  const title = resolveReportTitle(mode, reviewStatus, publishStatus);
   const readableGeneratedAt = formatHumanTime(generatedAt, timezone);
-  const reviewBlock =
-    mode === "weekly"
-      ? `- 审核截止：${formatHumanTime(computeWeeklyReviewDeadline(generatedAt, timezone), timezone)}（北京时间）\n- 规则：截止前未完成人工审核将自动发布当前版本。`
-      : "- 日报默认无需强制审核，可直接发布或手动修订后发布。";
 
   // 报告结构固定化，确保每期输出可比对、可检索、可自动审查。
   const grouped = groupByCategory(rankedItems);
@@ -29,8 +45,21 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
   lines.push("");
   lines.push(`- 生成时间：${readableGeneratedAt}（${timezone}）`);
   lines.push(`- 覆盖条目：${rankedItems.length}`);
-  lines.push(reviewBlock);
+  lines.push(`- 审核状态：${reviewStatus}`);
+  lines.push(`- 当前审核阶段：${reviewStage}`);
+  if (reviewDeadlineAt) {
+    lines.push(`- 审核截止：${formatHumanTime(reviewDeadlineAt, timezone)}（北京时间）`);
+  }
+  lines.push(`- 发布状态：${publishStatus}`);
+  lines.push(`- 发布原因：${publishReason}`);
   lines.push("");
+
+  if (mode === "weekly") {
+    lines.push("## 审核大纲");
+    lines.push("");
+    lines.push(outlineMarkdown || "- 尚未生成大纲");
+    lines.push("");
+  }
 
   lines.push("## 重点推荐");
   lines.push("");
@@ -73,6 +102,22 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
   );
 
   return lines.join("\n");
+}
+
+function resolveReportTitle(mode: ReportMode, reviewStatus: ReviewStatus, publishStatus: PublishStatus): string {
+  if (mode === "daily") {
+    return publishStatus === "published" ? "AI 日报（已发布）" : "AI 日报（待发布）";
+  }
+
+  if (reviewStatus === "approved" && publishStatus === "published") {
+    return "AI 周报（已发布）";
+  }
+
+  if (reviewStatus === "timeout_published") {
+    return "AI 周报（超时自动发布）";
+  }
+
+  return "AI 周报（待审核）";
 }
 
 function groupByCategory(items: RankedItem[]): Record<string, RankedItem[]> {
