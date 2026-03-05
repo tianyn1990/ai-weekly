@@ -1,0 +1,79 @@
+- id: openai-news
+  name: OpenAI News
+  type: rss
+  url: https://openai.com/news/rss.xml
+  language: en
+  weight: 90
+  enabled: true
+
+- id: langchain-blog
+  name: LangChain Blog
+  type: rss
+  url: https://blog.langchain.dev/rss/
+  language: en
+  weight: 86
+  enabled: true
+
+- id: huggingface-blog
+  name: Hugging Face Blog
+  type: rss
+  url: https://huggingface.co/blog/feed.xml
+  language: en
+  weight: 84
+  enabled: true
+
+- id: marktechpost
+  name: MarkTechPost
+  type: rss
+  url: https://www.marktechpost.com/feed/
+  language: en
+  weight: 78
+  enabled: true
+
+- id: venturebeat-ai
+  name: VentureBeat AI
+  type: rss
+  url: https://venturebeat.com/category/ai/feed/
+  language: en
+  weight: 76
+  enabled: true
+
+- id: zdnet-ai
+  name: ZDNet AI
+  type: rss
+  url: https://www.zdnet.com/topic/artificial-intelligence/rss.xml
+  language: en
+  weight: 74
+  enabled: true
+
+- id: hnrss-ai
+  name: HNRSS AI
+  type: rss
+  url: https://hnrss.org/newest?q=AI
+  language: en
+  weight: 70
+  enabled: true
+
+- id: qbitai
+  name: 量子位
+  type: rss
+  url: https://www.qbitai.com/feed
+  language: zh
+  weight: 72
+  enabled: true
+
+- id: paperswithcode
+  name: Papers with Code
+  type: rss
+  url: https://paperswithcode.com/rss/latest
+  language: en
+  weight: 78
+  enabled: false
+
+- id: machine-heart
+  name: 机器之心
+  type: rss
+  url: https://www.jiqizhixin.com/rss
+  language: zh
+  weight: 72
+  enabled: false
