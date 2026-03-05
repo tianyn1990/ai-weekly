@@ -18,6 +18,7 @@ const ReportStateAnnotation = Annotation.Root({
   useMock: Annotation<boolean>(),
   sourceConfigPath: Annotation<string>(),
   sourceLimit: Annotation<number>(),
+  // 数组字段默认采用 replace reducer，确保每个 node 输出可预测、便于调试。
   rawItems: Annotation<ReportState["rawItems"]>({
     value: (_left, right) => right,
     default: () => [],
@@ -48,6 +49,7 @@ const ReportStateAnnotation = Annotation.Root({
 export type CompiledReportGraph = ReturnType<typeof buildReportGraph>;
 
 export function buildReportGraph() {
+  // 首版采用线性 DAG，先打通稳定主链路；后续再引入 Human-in-the-loop 分支。
   return new StateGraph(ReportStateAnnotation)
     .addNode("collect_items", collectItemsNode)
     .addNode("normalize_items", normalizeItemsNode)

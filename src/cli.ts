@@ -30,6 +30,7 @@ async function main() {
   const enabledSources = await loadEnabledSources(args.sourceConfigPath);
   console.log(`[run] mode=${args.mode}, mock=${args.mock}, sources=${enabledSources.length}`);
 
+  // CLI 只负责 orchestration：准备初始状态、执行 graph、落盘产物。
   const graph = buildReportGraph();
   const initialState = createInitialState({
     mode: args.mode,
@@ -60,6 +61,7 @@ function parseArgs(argv: string[]): CliArgs {
 
   const args = defaults();
 
+  // 保持轻量参数解析，避免引入额外 CLI 框架影响学习成本。
   for (let i = 0; i < argv.length; i += 1) {
     const token = argv[i];
     const next = argv[i + 1];
@@ -131,6 +133,7 @@ async function persistOutputs(result: ReportState, args: CliArgs) {
   const mdPath = path.join(dir, `${datePart}.md`);
   const jsonPath = path.join(dir, `${datePart}.json`);
 
+  // 约定同时输出 Markdown + JSON，便于人工审核与后续自动发布/检索。
   await fs.writeFile(mdPath, result.reportMarkdown, "utf-8");
   await fs.writeFile(
     jsonPath,

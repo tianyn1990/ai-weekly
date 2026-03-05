@@ -12,6 +12,7 @@ export async function collectItemsNode(state: ReportState): Promise<Partial<Repo
   const sources = await loadSourceConfig(state.sourceConfigPath);
 
   if (state.useMock) {
+    // mock 模式用于学习与回归，保证在无网络或源不稳定时也能完整演练流程。
     const rawItems = collectMockItems(state.mode, state.generatedAt);
     const metrics = { ...state.metrics, collectedCount: rawItems.length };
     return { rawItems, metrics };
@@ -23,6 +24,7 @@ export async function collectItemsNode(state: ReportState): Promise<Partial<Repo
 }
 
 export async function normalizeItemsNode(state: ReportState): Promise<Partial<ReportState>> {
+  // 标准化阶段统一字段与时间，避免后续评分/分类逻辑处理多种脏格式。
   const items: NormalizedItem[] = state.rawItems.map((item) => {
     const title = normalizeWhitespace(item.title || "(无标题)");
     const snippet = normalizeWhitespace(item.contentSnippet || "");
@@ -50,6 +52,7 @@ export async function dedupeItemsNode(state: ReportState): Promise<Partial<Repor
   const deduped: NormalizedItem[] = [];
 
   for (const item of state.items) {
+    // 先用 link + title fingerprint 去重，后续可升级为 embedding 相似度去重。
     const key = `${item.link}|${titleFingerprint(item.title)}`;
     if (seen.has(key)) {
       continue;
@@ -63,6 +66,7 @@ export async function dedupeItemsNode(state: ReportState): Promise<Partial<Repor
 }
 
 export async function classifyItemsNode(state: ReportState): Promise<Partial<ReportState>> {
+  // 首版采用规则分类，确保可解释性；后续可替换为 LLM 分类节点。
   const items = state.items.map((item) => ({ ...item, category: resolveCategory(`${item.title} ${item.contentSnippet}`) }));
 
   return { items };
@@ -71,6 +75,7 @@ export async function classifyItemsNode(state: ReportState): Promise<Partial<Rep
 export async function rankItemsNode(state: ReportState): Promise<Partial<ReportState>> {
   const sources = await loadSourceConfig(state.sourceConfigPath);
   const ranked = rankItems(state.items, sources, state.generatedAt);
+  // highlights 用于报告顶部“重点推荐”，和“全覆盖正文”区分展示层次。
   const highlights = pickHighlights(ranked, state.mode);
 
   const metrics = {
@@ -85,6 +90,7 @@ export async function rankItemsNode(state: ReportState): Promise<Partial<ReportS
 }
 
 export async function buildReportNode(state: ReportState): Promise<Partial<ReportState>> {
+  // 输出节点只负责渲染，不再改写 ranking 结果，保持数据流单向清晰。
   const reportMarkdown = buildReportMarkdown({
     mode: state.mode,
     timezone: state.timezone,
@@ -140,6 +146,7 @@ function pickHighlights(items: RankedItem[], mode: ReportState["mode"]): RankedI
 function resolveCategory(text: string): ItemCategory {
   const input = text.toLowerCase();
 
+  // 分类规则按“工程实践优先”设计，优先识别开源、工具、研究与教程。
   if (/open source|开源|github|repo|license/.test(input)) return "open-source";
   if (/tool|sdk|framework|平台|workflow|agent/.test(input)) return "tooling";
   if (/paper|research|arxiv|benchmark|评测|研究/.test(input)) return "research";

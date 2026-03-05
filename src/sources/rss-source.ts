@@ -33,6 +33,7 @@ export async function collectRssItems(sources: SourceConfig[], perSourceLimit: n
         });
       }
     } catch (error) {
+      // fail-soft：单一来源失败不终止全局，交给上层统一在报告中暴露 warning。
       warnings.push(`[${source.name}] 抓取失败: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
@@ -65,7 +66,7 @@ async function safeParseRss(xml: string) {
   try {
     return await parser.parseString(xml);
   } catch {
-    // 某些来源会返回未转义的 &，这里做一次容错清洗再解析。
+    // 某些来源会返回未转义的 &，先做容错清洗，减少 parse error 对稳定性的影响。
     const sanitizedXml = xml.replace(/&(?!amp;|lt;|gt;|quot;|apos;|#\\d+;|#x[0-9a-fA-F]+;)/g, "&amp;");
     return await parser.parseString(sanitizedXml);
   }

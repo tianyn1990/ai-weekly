@@ -17,6 +17,7 @@ export function rankItems(items: NormalizedItem[], sources: SourceConfig[], nowI
 
   const ranked = items.map((item) => {
     const titleAndSnippet = `${item.title} ${item.contentSnippet}`;
+    // 综合分 = source 权重 + 时效性 + 关键词加权，先保证可解释再追求复杂模型。
     const baseScore = sourceWeightMap.get(item.sourceId) ?? 50;
     const freshnessScore = calcFreshnessScore(item.publishedAt, now);
 

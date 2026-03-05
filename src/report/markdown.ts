@@ -21,6 +21,7 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
       ? `- 审核截止：${formatHumanTime(computeWeeklyReviewDeadline(generatedAt, timezone), timezone)}（北京时间）\n- 规则：截止前未完成人工审核将自动发布当前版本。`
       : "- 日报默认无需强制审核，可直接发布或手动修订后发布。";
 
+  // 报告结构固定化，确保每期输出可比对、可检索、可自动审查。
   const grouped = groupByCategory(rankedItems);
 
   const lines: string[] = [];
@@ -56,6 +57,7 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
     lines.push("");
   }
 
+  // 运行指标直接落盘，便于后续接入质量门禁与 Dashboard。
   lines.push("## 运行指标");
   lines.push("");
   lines.push(`- 采集条目数：${metrics.collectedCount}`);
