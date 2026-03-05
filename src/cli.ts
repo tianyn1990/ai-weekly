@@ -2,9 +2,12 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
+import { z } from "zod";
+
+import type { ReportMode, ReportState } from "./core/types.js";
 import { buildReportGraph } from "./pipeline/graph.js";
 import { createInitialState, loadEnabledSources } from "./pipeline/nodes.js";
-import type { ReportMode, ReportState } from "./core/types.js";
+import { recheckPendingWeeklyReport } from "./pipeline/recheck.js";
 import { nowInTimezoneIso } from "./utils/time.js";
 
 interface CliArgs {
@@ -16,10 +19,81 @@ interface CliArgs {
   timezone: string;
   outputRoot: string;
   publishRoot: string;
+  reviewInstructionRoot: string;
   approveOutline: boolean;
   approveFinal: boolean;
+  recheckPending: boolean;
+  reportDate?: string;
   generatedAt?: string;
 }
+
+const metricsSchema = z.object({
+  collectedCount: z.number(),
+  normalizedCount: z.number(),
+  dedupedCount: z.number(),
+  highImportanceCount: z.number(),
+  mediumImportanceCount: z.number(),
+  lowImportanceCount: z.number(),
+  categoryBreakdown: z.object({
+    "open-source": z.number(),
+    tooling: z.number(),
+    agent: z.number(),
+    research: z.number(),
+    "industry-news": z.number(),
+    tutorial: z.number(),
+    other: z.number(),
+  }),
+});
+
+const rankedItemSchema = z.object({
+  id: z.string(),
+  sourceId: z.string(),
+  sourceName: z.string(),
+  title: z.string(),
+  link: z.string(),
+  contentSnippet: z.string(),
+  publishedAt: z.string(),
+  category: z.enum(["open-source", "tooling", "agent", "research", "industry-news", "tutorial", "other"]),
+  score: z.number(),
+  importance: z.enum(["high", "medium", "low"]),
+  recommendationReason: z.string(),
+});
+
+const reviewArtifactSchema = z.object({
+  runId: z.string(),
+  generatedAt: z.string(),
+  reportDate: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/)
+    .optional(),
+  mode: z.enum(["daily", "weekly"]),
+  reviewStatus: z.enum(["not_required", "pending_review", "approved", "timeout_published"]),
+  reviewStage: z.enum(["none", "outline_review", "final_review"]),
+  reviewDeadlineAt: z.string().nullable(),
+  reviewReason: z.string(),
+  publishStatus: z.enum(["pending", "published"]),
+  shouldPublish: z.boolean(),
+  publishReason: z.string(),
+  publishedAt: z.string().nullable(),
+  outlineApproved: z.boolean().optional(),
+  finalApproved: z.boolean().optional(),
+  metrics: metricsSchema,
+  highlights: z.array(rankedItemSchema),
+  warnings: z.array(z.string()),
+  snapshot: z
+    .object({
+      timezone: z.string(),
+      sourceConfigPath: z.string(),
+      sourceLimit: z.number(),
+      outlineMarkdown: z.string(),
+      rankedItems: z.array(rankedItemSchema),
+      highlights: z.array(rankedItemSchema),
+      metrics: metricsSchema,
+      warnings: z.array(z.string()),
+      reviewDeadlineAt: z.string().nullable(),
+    })
+    .optional(),
+});
 
 async function main() {
   const args = parseArgs(process.argv.slice(2));
@@ -28,7 +102,17 @@ async function main() {
     throw new Error("仅支持 run 命令。示例: pnpm run:weekly:mock");
   }
 
+  if (args.recheckPending) {
+    await runRecheckPending(args);
+    return;
+  }
+
+  await runPipeline(args);
+}
+
+async function runPipeline(args: CliArgs) {
   const generatedAt = args.generatedAt ?? nowInTimezoneIso(args.timezone);
+  const reportDate = args.reportDate ?? generatedAt.slice(0, 10);
   const runId = `${args.mode}-${Date.now()}`;
 
   const enabledSources = await loadEnabledSources(args.sourceConfigPath);
@@ -43,25 +127,70 @@ async function main() {
     sourceConfigPath: args.sourceConfigPath,
     sourceLimit: args.sourceLimit,
     generatedAt,
+    reportDate,
     runId,
     approveOutline: args.approveOutline,
     approveFinal: args.approveFinal,
+    reviewInstructionRoot: args.reviewInstructionRoot,
   });
 
   const result = (await graph.invoke(initialState as any)) as ReportState;
   await persistOutputs(result, args);
+  printRunResult("done", result);
+}
 
-  console.log(`[done] report generated with ${result.rankedItems.length} items.`);
-  console.log(
-    `[status] review=${result.reviewStatus}, stage=${result.reviewStage}, publish=${result.publishStatus}, shouldPublish=${result.shouldPublish}`,
-  );
-
-  if (result.warnings.length > 0) {
-    console.log("[warning] 部分来源抓取失败:");
-    for (const warning of result.warnings) {
-      console.log(`- ${warning}`);
-    }
+async function runRecheckPending(args: CliArgs) {
+  if (args.mode !== "weekly") {
+    throw new Error("--recheck-pending 仅支持 weekly 模式");
   }
+
+  const generatedAt = args.generatedAt ?? nowInTimezoneIso(args.timezone);
+  const reportDate = args.reportDate ?? generatedAt.slice(0, 10);
+  const runId = `recheck-${args.mode}-${Date.now()}`;
+  console.log(`[recheck] mode=${args.mode}, reportDate=${reportDate}, instructionRoot=${args.reviewInstructionRoot}`);
+
+  const artifact = await loadReviewArtifact(args.outputRoot, args.mode, reportDate);
+  if (!artifact.snapshot) {
+    throw new Error(`待复检报告缺少 snapshot（${reportDate}），请先用新版 run 流程重新生成该日期周报。`);
+  }
+
+  // 复检复用已生成快照，避免重新采集导致“审核版本”和“发布版本”内容不一致。
+  const state = createInitialState({
+    mode: "weekly",
+    timezone: artifact.snapshot.timezone,
+    useMock: false,
+    sourceConfigPath: artifact.snapshot.sourceConfigPath,
+    sourceLimit: artifact.snapshot.sourceLimit,
+    generatedAt,
+    reportDate,
+    runId,
+    approveOutline: args.approveOutline,
+    approveFinal: args.approveFinal,
+    reviewInstructionRoot: args.reviewInstructionRoot,
+  });
+
+  const recheckState: ReportState = {
+    ...state,
+    rankedItems: artifact.snapshot.rankedItems,
+    highlights: artifact.snapshot.highlights,
+    outlineMarkdown: artifact.snapshot.outlineMarkdown,
+    metrics: artifact.snapshot.metrics,
+    warnings: artifact.snapshot.warnings,
+    reviewDeadlineAt: artifact.snapshot.reviewDeadlineAt,
+    reviewStatus: artifact.reviewStatus,
+    reviewStage: artifact.reviewStage,
+    reviewReason: artifact.reviewReason,
+    publishStatus: artifact.publishStatus,
+    shouldPublish: artifact.shouldPublish,
+    publishReason: artifact.publishReason,
+    publishedAt: artifact.publishedAt,
+    outlineApproved: artifact.outlineApproved ?? false,
+    finalApproved: artifact.finalApproved ?? false,
+  };
+
+  const result = await recheckPendingWeeklyReport(recheckState);
+  await persistOutputs(result, args);
+  printRunResult("recheck", result);
 }
 
 function parseArgs(argv: string[]): CliArgs {
@@ -125,6 +254,12 @@ function parseArgs(argv: string[]): CliArgs {
       continue;
     }
 
+    if (token === "--review-instruction-root" && next) {
+      args.reviewInstructionRoot = next;
+      i += 1;
+      continue;
+    }
+
     if (token === "--approve-outline") {
       args.approveOutline = true;
       continue;
@@ -132,6 +267,17 @@ function parseArgs(argv: string[]): CliArgs {
 
     if (token === "--approve-final") {
       args.approveFinal = true;
+      continue;
+    }
+
+    if (token === "--recheck-pending") {
+      args.recheckPending = true;
+      continue;
+    }
+
+    if (token === "--report-date" && next) {
+      args.reportDate = next;
+      i += 1;
       continue;
     }
 
@@ -155,14 +301,16 @@ function defaults(): CliArgs {
     timezone: "Asia/Shanghai",
     outputRoot: "outputs/review",
     publishRoot: "outputs/published",
+    reviewInstructionRoot: "outputs/review-instructions",
     approveOutline: false,
     approveFinal: false,
+    recheckPending: false,
   };
 }
 
 async function persistOutputs(result: ReportState, args: CliArgs) {
-  // 产物日期统一取生成时间，确保重放历史任务时不会写错日期目录。
-  const datePart = result.generatedAt.slice(0, 10);
+  // 输出目录按 reportDate 分桶，保证 recheck 场景不会覆盖到错误日期。
+  const datePart = result.reportDate;
 
   // 约定始终先写入 review 目录，作为可追溯的待审核基线版本。
   const reviewPaths = await writeArtifacts(args.outputRoot, args.mode, datePart, result);
@@ -191,6 +339,7 @@ async function writeArtifacts(root: string, mode: ReportMode, datePart: string, 
       {
         runId: result.runId,
         generatedAt: result.generatedAt,
+        reportDate: result.reportDate,
         mode: result.mode,
         reviewStatus: result.reviewStatus,
         reviewStage: result.reviewStage,
@@ -200,9 +349,22 @@ async function writeArtifacts(root: string, mode: ReportMode, datePart: string, 
         shouldPublish: result.shouldPublish,
         publishReason: result.publishReason,
         publishedAt: result.publishedAt,
+        outlineApproved: result.outlineApproved,
+        finalApproved: result.finalApproved,
         metrics: result.metrics,
         highlights: result.highlights,
         warnings: result.warnings,
+        snapshot: {
+          timezone: result.timezone,
+          sourceConfigPath: result.sourceConfigPath,
+          sourceLimit: result.sourceLimit,
+          outlineMarkdown: result.outlineMarkdown,
+          rankedItems: result.rankedItems,
+          highlights: result.highlights,
+          metrics: result.metrics,
+          warnings: result.warnings,
+          reviewDeadlineAt: result.reviewDeadlineAt,
+        },
       },
       null,
       2,
@@ -211,6 +373,38 @@ async function writeArtifacts(root: string, mode: ReportMode, datePart: string, 
   );
 
   return { mdPath, jsonPath };
+}
+
+async function loadReviewArtifact(outputRoot: string, mode: ReportMode, reportDate: string) {
+  const artifactPath = path.join(outputRoot, mode, `${reportDate}.json`);
+  const content = await fs.readFile(artifactPath, "utf-8");
+  const parsed = reviewArtifactSchema.parse(JSON.parse(content));
+
+  if (parsed.mode !== mode) {
+    throw new Error(`复检目标模式不匹配: expected=${mode}, actual=${parsed.mode}`);
+  }
+
+  return { ...parsed, reportDate: parsed.reportDate ?? reportDate };
+}
+
+function printRunResult(prefix: "done" | "recheck", result: ReportState) {
+  const itemCount = result.rankedItems.length;
+  if (prefix === "done") {
+    console.log(`[done] report generated with ${itemCount} items.`);
+  } else {
+    console.log(`[done] recheck finished with ${itemCount} items.`);
+  }
+
+  console.log(
+    `[status] review=${result.reviewStatus}, stage=${result.reviewStage}, publish=${result.publishStatus}, shouldPublish=${result.shouldPublish}`,
+  );
+
+  if (result.warnings.length > 0) {
+    console.log("[warning] 流程包含 warning:");
+    for (const warning of result.warnings) {
+      console.log(`- ${warning}`);
+    }
+  }
 }
 
 main().catch((error) => {

@@ -5,6 +5,7 @@ import { rankItems } from "../core/scoring.js";
 import { createEmptyMetrics, createItemId, normalizeWhitespace, titleFingerprint } from "../core/utils.js";
 import type { ItemCategory, NormalizedItem, RankedItem, ReportState, SourceConfig } from "../core/types.js";
 import { buildReportMarkdown } from "../report/markdown.js";
+import { FileReviewInstructionStore } from "../review/instruction-store.js";
 import { collectMockItems } from "../sources/mock-source.js";
 import { collectRssItems } from "../sources/rss-source.js";
 import { computeWeeklyReviewDeadline } from "../utils/time.js";
@@ -121,14 +122,20 @@ export async function reviewOutlineNode(state: ReportState): Promise<Partial<Rep
   }
 
   const reviewDeadlineAt = state.reviewDeadlineAt ?? computeWeeklyReviewDeadline(state.generatedAt, state.timezone);
-  const outlineApproved = state.approveOutline;
+  const decision = await resolveStageApproval({
+    state,
+    stage: "outline_review",
+    fallbackApproved: state.approveOutline,
+  });
+  const outlineApproved = decision.approved;
 
   return {
     outlineApproved,
     reviewDeadlineAt,
     reviewStage: outlineApproved ? "final_review" : "outline_review",
     reviewStatus: "pending_review",
-    reviewReason: outlineApproved ? "大纲已通过，等待终稿审核" : "等待大纲审核",
+    reviewReason: outlineApproved ? `大纲已通过（${decision.source}）` : `等待大纲审核（${decision.source}）`,
+    ...(decision.warning ? { warnings: [...state.warnings, decision.warning] } : {}),
   };
 }
 
@@ -171,12 +178,18 @@ export async function reviewFinalNode(state: ReportState): Promise<Partial<Repor
     };
   }
 
-  const finalApproved = state.approveFinal;
+  const decision = await resolveStageApproval({
+    state,
+    stage: "final_review",
+    fallbackApproved: state.approveFinal,
+  });
+  const finalApproved = decision.approved;
   return {
     finalApproved,
     reviewStage: finalApproved ? "none" : "final_review",
     reviewStatus: "pending_review",
-    reviewReason: finalApproved ? "终稿审核已通过" : "等待终稿审核",
+    reviewReason: finalApproved ? `终稿审核已通过（${decision.source}）` : `等待终稿审核（${decision.source}）`,
+    ...(decision.warning ? { warnings: [...state.warnings, decision.warning] } : {}),
   };
 }
 
@@ -208,18 +221,22 @@ export function createInitialState(params: {
   sourceConfigPath: string;
   sourceLimit: number;
   generatedAt: string;
+  reportDate: string;
   runId: string;
   approveOutline: boolean;
   approveFinal: boolean;
+  reviewInstructionRoot: string;
 }): ReportState {
   return {
     runId: params.runId,
     mode: params.mode,
     timezone: params.timezone,
     generatedAt: params.generatedAt,
+    reportDate: params.reportDate,
     useMock: params.useMock,
     sourceConfigPath: params.sourceConfigPath,
     sourceLimit: params.sourceLimit,
+    reviewInstructionRoot: params.reviewInstructionRoot,
     rawItems: [],
     items: [],
     rankedItems: [],
@@ -288,3 +305,35 @@ export async function loadEnabledSources(path: string): Promise<SourceConfig[]> 
 export const __test__ = {
   resolvePendingStage,
 };
+
+async function resolveStageApproval(input: {
+  state: ReportState;
+  stage: "outline_review" | "final_review";
+  fallbackApproved: boolean;
+}): Promise<{ approved: boolean; source: "persisted" | "cli_fallback"; warning?: string }> {
+  const { state, stage, fallbackApproved } = input;
+
+  try {
+    const store = new FileReviewInstructionStore(state.reviewInstructionRoot);
+    const persistedDecision = await store.getLatestDecision({
+      mode: state.mode,
+      reportDate: state.reportDate,
+      stage,
+    });
+
+    if (persistedDecision !== null) {
+      return { approved: persistedDecision, source: "persisted" };
+    }
+  } catch (error) {
+    // 指令文件异常时回退到 CLI，保证流程不中断；warning 会写入产物便于排障。
+    return {
+      approved: fallbackApproved,
+      source: "cli_fallback",
+      warning: `读取审核指令失败，已回退 CLI 参数（stage=${stage}）: ${
+        error instanceof Error ? error.message : String(error)
+      }`,
+    };
+  }
+
+  return { approved: fallbackApproved, source: "cli_fallback" };
+}

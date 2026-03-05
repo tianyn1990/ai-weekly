@@ -40,6 +40,7 @@ pnpm run:weekly:mock
 ## 5. 学习会话记录
 - M2 导读 01（审核断点与自动发布）：`docs/learning-sessions/m2-session-01-review-gate.md`
 - M2 复盘 02（审核断点与自动发布实现）：`docs/learning-sessions/m2-session-02-implementation.md`
+- M2.5 复盘 01（持久化审核指令 + pending 复检发布）：`docs/learning-sessions/m2.5-session-01-persistent-review.md`
 
 ## 6. 执行优先级约束
 - 优先保证「可运行 + 可理解 + 可复盘」三件事同时成立。

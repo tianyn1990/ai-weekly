@@ -10,7 +10,7 @@
 系统分为四层：
 1. **Ingestion Layer**：定时拉取 RSS/社区数据，输出 `RawItem`。
 2. **Processing Layer (LangGraph)**：标准化、去重、分类、排序、生成摘要。
-3. **Review & Publish Layer**：生成待审核 Markdown，管理自动发布策略。
+3. **Review & Publish Layer**：生成待审核 Markdown，管理自动发布策略，并从持久化审核指令读取审核动作。
 4. **Storage Layer**：本地文件持久化（后续可升级 SQLite/Postgres）。
 
 ## 3. 目录结构
@@ -66,9 +66,23 @@ START
 - `rank_items`：按重要性、影响范围、创新性打分并分级（high/medium/low）。
 - `build_outline`：生成周报大纲草稿，供大纲审核使用。
 - `review_outline`：处理大纲审核状态，写入审核截止时间和审核阶段。
-- `build_report`：生成 Markdown（含重点推荐、分组内容、来源链接、审核状态）。
 - `review_final`：处理终稿审核状态。
 - `publish_or_wait`：统一判定发布行为（人工审核通过/超时自动发布/继续等待）。
+- `build_report`：生成 Markdown（含重点推荐、分组内容、来源链接、审核状态）。
+
+### 4.2 pending 复检流程（M2.5）
+```text
+load_review_snapshot
+  -> review_outline
+  -> review_final
+  -> publish_or_wait
+  -> build_report
+  -> persist_review_and_optional_publish
+```
+
+说明：
+- 复检流程不重跑采集/分类/排序，直接复用 `outputs/review/{mode}/{date}.json` 的 snapshot。
+- 复检与 run 复用同一套审核/发布节点，避免策略分叉。
 
 ## 5. 状态模型（Graph State）
 核心状态字段：
@@ -96,8 +110,11 @@ START
 - 周报自动发布规则：
   - 审核截止：周一 12:30（北京时间）。
   - 截止前无人审：自动发布当前版本。
-- 当前审核输入方式：CLI 参数（`--approve-outline`、`--approve-final`），后续可替换为持久化审核指令。
+- 审核输入优先级：
+  1. 持久化审核指令（`outputs/review-instructions/{mode}/{reportDate}.json`）
+  2. CLI 参数 fallback（`--approve-outline`、`--approve-final`）
 - 所有报告先写入 `outputs/review/`，发布后写入 `outputs/published/`。
+- 周报支持 `--recheck-pending`：仅刷新审核状态和发布状态，不重跑内容采集。
 
 ## 7. 数据源策略（首批）
 建议首批固定 8-10 个来源（后续再扩展）：
@@ -130,6 +147,6 @@ START
   5. 运行指标
 
 ## 10. 后续演进路线
-- v0.3：将审核动作从 CLI 参数升级为持久化审核系统（文件/DB/API）。
+- v0.3：将审核指令存储从文件升级为 DB/API（含并发控制与审计日志）。
 - v0.4：增加月报/季报聚合与趋势分析。
 - v0.5：引入向量检索与跨周期主题记忆。

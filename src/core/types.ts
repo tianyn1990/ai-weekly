@@ -19,6 +19,18 @@ export type ReviewStage = "none" | "outline_review" | "final_review";
 
 export type PublishStatus = "pending" | "published";
 
+export type ReviewInstructionStage = Exclude<ReviewStage, "none">;
+
+export interface ReviewInstruction {
+  mode: ReportMode;
+  reportDate: string;
+  stage: ReviewInstructionStage;
+  approved: boolean;
+  decidedAt: string;
+  operator?: string;
+  reason?: string;
+}
+
 export interface SourceConfig {
   id: string;
   name: string;
@@ -70,9 +82,11 @@ export interface ReportState {
   mode: ReportMode;
   timezone: string;
   generatedAt: string;
+  reportDate: string;
   useMock: boolean;
   sourceConfigPath: string;
   sourceLimit: number;
+  reviewInstructionRoot: string;
   rawItems: RawItem[];
   items: NormalizedItem[];
   rankedItems: RankedItem[];

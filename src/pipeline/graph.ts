@@ -19,9 +19,11 @@ const ReportStateAnnotation = Annotation.Root({
   mode: Annotation<ReportState["mode"]>(),
   timezone: Annotation<string>(),
   generatedAt: Annotation<string>(),
+  reportDate: Annotation<string>(),
   useMock: Annotation<boolean>(),
   sourceConfigPath: Annotation<string>(),
   sourceLimit: Annotation<number>(),
+  reviewInstructionRoot: Annotation<string>(),
   approveOutline: Annotation<boolean>(),
   approveFinal: Annotation<boolean>(),
   // 数组字段默认采用 replace reducer，确保每个 node 输出可预测、便于调试。

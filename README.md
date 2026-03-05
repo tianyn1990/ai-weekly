@@ -5,7 +5,8 @@
 ## 当前状态
 - 已完成 `docs/PRD.md`（冻结需求）。
 - 已完成 `docs/architecture.md`（系统设计）。
-- 已提供可运行的 M2 流程：`collect -> normalize -> dedupe -> classify -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> build_report`。
+- 已提供可运行的 M2.5 流程：`collect -> normalize -> dedupe -> classify -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> build_report`。
+- 周报审核支持「持久化指令优先，CLI 参数 fallback」与 pending 周报复检发布。
 
 ## 环境要求
 - Node.js >= 20
@@ -43,6 +44,24 @@ tsx src/cli.ts run --mode weekly --mock --approve-outline --approve-final
 tsx src/cli.ts run --mode weekly --mock --generated-at 2026-03-09T05:00:00.000Z
 ```
 
+持久化审核指令（默认目录：`outputs/review-instructions/`）：
+```bash
+# 文件路径：outputs/review-instructions/weekly/2026-03-09.json
+{
+  "mode": "weekly",
+  "reportDate": "2026-03-09",
+  "instructions": [
+    { "stage": "outline_review", "approved": true, "decidedAt": "2026-03-09T01:00:00.000Z" },
+    { "stage": "final_review", "approved": true, "decidedAt": "2026-03-09T02:00:00.000Z" }
+  ]
+}
+```
+
+pending 周报复检发布（不重跑采集链路）：
+```bash
+tsx src/cli.ts run --mode weekly --recheck-pending --report-date 2026-03-05
+```
+
 ## 测试
 ```bash
 pnpm test
@@ -54,7 +73,7 @@ pnpm test
 - 模型调用与高级总结暂未接入，作为下一阶段扩展点。
 
 ## 下一步（建议）
-1. 把审核动作从 CLI flag 升级为持久化审核指令（文件/DB/接口）。
-2. 增加定时守护任务，自动轮询 pending 周报并触发 12:30 发布。
+1. 增加定时守护任务，自动轮询 pending 周报并触发 12:30 发布。
+2. 审核指令存储从文件升级到 DB/API，并补并发写保护。
 3. 接入 LLM 总结节点（可切换 OpenAI/Anthropic/MiniMax）。
 4. 增加 SQLite 持久化与历史检索页。
