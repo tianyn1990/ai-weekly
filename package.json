@@ -7,6 +7,7 @@
   "scripts": {
     "run:daily:mock": "tsx src/cli.ts run --mode daily --mock",
     "run:weekly:mock": "tsx src/cli.ts run --mode weekly --mock",
+    "run:weekly:watch": "tsx src/cli.ts run --mode weekly --watch-pending-weekly",
     "run:daily": "tsx src/cli.ts run --mode daily",
     "run:weekly": "tsx src/cli.ts run --mode weekly",
     "build": "tsc -p tsconfig.json",

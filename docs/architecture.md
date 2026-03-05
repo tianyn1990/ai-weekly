@@ -84,6 +84,19 @@ load_review_snapshot
 - 复检流程不重跑采集/分类/排序，直接复用 `outputs/review/{mode}/{date}.json` 的 snapshot。
 - 复检与 run 复用同一套审核/发布节点，避免策略分叉。
 
+### 4.3 watchdog 扫描流程（M3）
+```text
+scan outputs/review/weekly/*.json
+  -> filter pending_review + pending
+  -> recheck_pending_weekly_report
+  -> persist review/published
+  -> summary (processed/published/skipped/failed)
+```
+
+说明：
+- watchdog 默认顺序执行，保证日志和状态变更可追踪。
+- 支持 `--dry-run`，只做判定不落盘。
+
 ## 5. 状态模型（Graph State）
 核心状态字段：
 - `runId`：一次流水线执行 ID。
@@ -115,6 +128,7 @@ load_review_snapshot
   2. CLI 参数 fallback（`--approve-outline`、`--approve-final`）
 - 所有报告先写入 `outputs/review/`，发布后写入 `outputs/published/`。
 - 周报支持 `--recheck-pending`：仅刷新审核状态和发布状态，不重跑内容采集。
+- 周报支持 `--watch-pending-weekly`：批量扫描 pending 周报并触发复检发布。
 
 ## 7. 数据源策略（首批）
 建议首批固定 8-10 个来源（后续再扩展）：
@@ -148,5 +162,6 @@ load_review_snapshot
 
 ## 10. 后续演进路线
 - v0.3：将审核指令存储从文件升级为 DB/API（含并发控制与审计日志）。
-- v0.4：增加月报/季报聚合与趋势分析。
-- v0.5：引入向量检索与跨周期主题记忆。
+- v0.4：watchdog 增加分布式锁、重试策略与异常告警。
+- v0.5：增加月报/季报聚合与趋势分析。
+- v0.6：引入向量检索与跨周期主题记忆。

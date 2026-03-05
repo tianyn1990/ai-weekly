@@ -2,12 +2,14 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-import { z } from "zod";
-
+import type { ReviewArtifact } from "./core/review-artifact.js";
+import { reviewArtifactSchema } from "./core/review-artifact.js";
 import type { ReportMode, ReportState } from "./core/types.js";
 import { buildReportGraph } from "./pipeline/graph.js";
 import { createInitialState, loadEnabledSources } from "./pipeline/nodes.js";
 import { recheckPendingWeeklyReport } from "./pipeline/recheck.js";
+import type { WatchdogCandidate } from "./pipeline/watchdog.js";
+import { runPendingWeeklyWatchdog } from "./pipeline/watchdog.js";
 import { nowInTimezoneIso } from "./utils/time.js";
 
 interface CliArgs {
@@ -23,77 +25,11 @@ interface CliArgs {
   approveOutline: boolean;
   approveFinal: boolean;
   recheckPending: boolean;
+  watchPendingWeekly: boolean;
+  dryRun: boolean;
   reportDate?: string;
   generatedAt?: string;
 }
-
-const metricsSchema = z.object({
-  collectedCount: z.number(),
-  normalizedCount: z.number(),
-  dedupedCount: z.number(),
-  highImportanceCount: z.number(),
-  mediumImportanceCount: z.number(),
-  lowImportanceCount: z.number(),
-  categoryBreakdown: z.object({
-    "open-source": z.number(),
-    tooling: z.number(),
-    agent: z.number(),
-    research: z.number(),
-    "industry-news": z.number(),
-    tutorial: z.number(),
-    other: z.number(),
-  }),
-});
-
-const rankedItemSchema = z.object({
-  id: z.string(),
-  sourceId: z.string(),
-  sourceName: z.string(),
-  title: z.string(),
-  link: z.string(),
-  contentSnippet: z.string(),
-  publishedAt: z.string(),
-  category: z.enum(["open-source", "tooling", "agent", "research", "industry-news", "tutorial", "other"]),
-  score: z.number(),
-  importance: z.enum(["high", "medium", "low"]),
-  recommendationReason: z.string(),
-});
-
-const reviewArtifactSchema = z.object({
-  runId: z.string(),
-  generatedAt: z.string(),
-  reportDate: z
-    .string()
-    .regex(/^\d{4}-\d{2}-\d{2}$/)
-    .optional(),
-  mode: z.enum(["daily", "weekly"]),
-  reviewStatus: z.enum(["not_required", "pending_review", "approved", "timeout_published"]),
-  reviewStage: z.enum(["none", "outline_review", "final_review"]),
-  reviewDeadlineAt: z.string().nullable(),
-  reviewReason: z.string(),
-  publishStatus: z.enum(["pending", "published"]),
-  shouldPublish: z.boolean(),
-  publishReason: z.string(),
-  publishedAt: z.string().nullable(),
-  outlineApproved: z.boolean().optional(),
-  finalApproved: z.boolean().optional(),
-  metrics: metricsSchema,
-  highlights: z.array(rankedItemSchema),
-  warnings: z.array(z.string()),
-  snapshot: z
-    .object({
-      timezone: z.string(),
-      sourceConfigPath: z.string(),
-      sourceLimit: z.number(),
-      outlineMarkdown: z.string(),
-      rankedItems: z.array(rankedItemSchema),
-      highlights: z.array(rankedItemSchema),
-      metrics: metricsSchema,
-      warnings: z.array(z.string()),
-      reviewDeadlineAt: z.string().nullable(),
-    })
-    .optional(),
-});
 
 async function main() {
   const args = parseArgs(process.argv.slice(2));
@@ -104,6 +40,11 @@ async function main() {
 
   if (args.recheckPending) {
     await runRecheckPending(args);
+    return;
+  }
+
+  if (args.watchPendingWeekly) {
+    await runWatchPendingWeekly(args);
     return;
   }
 
@@ -154,43 +95,57 @@ async function runRecheckPending(args: CliArgs) {
     throw new Error(`待复检报告缺少 snapshot（${reportDate}），请先用新版 run 流程重新生成该日期周报。`);
   }
 
-  // 复检复用已生成快照，避免重新采集导致“审核版本”和“发布版本”内容不一致。
-  const state = createInitialState({
-    mode: "weekly",
-    timezone: artifact.snapshot.timezone,
-    useMock: false,
-    sourceConfigPath: artifact.snapshot.sourceConfigPath,
-    sourceLimit: artifact.snapshot.sourceLimit,
-    generatedAt,
+  const recheckState = buildRecheckStateFromArtifact({
+    args,
+    artifact,
     reportDate,
+    generatedAt,
     runId,
-    approveOutline: args.approveOutline,
-    approveFinal: args.approveFinal,
-    reviewInstructionRoot: args.reviewInstructionRoot,
   });
-
-  const recheckState: ReportState = {
-    ...state,
-    rankedItems: artifact.snapshot.rankedItems,
-    highlights: artifact.snapshot.highlights,
-    outlineMarkdown: artifact.snapshot.outlineMarkdown,
-    metrics: artifact.snapshot.metrics,
-    warnings: artifact.snapshot.warnings,
-    reviewDeadlineAt: artifact.snapshot.reviewDeadlineAt,
-    reviewStatus: artifact.reviewStatus,
-    reviewStage: artifact.reviewStage,
-    reviewReason: artifact.reviewReason,
-    publishStatus: artifact.publishStatus,
-    shouldPublish: artifact.shouldPublish,
-    publishReason: artifact.publishReason,
-    publishedAt: artifact.publishedAt,
-    outlineApproved: artifact.outlineApproved ?? false,
-    finalApproved: artifact.finalApproved ?? false,
-  };
 
   const result = await recheckPendingWeeklyReport(recheckState);
   await persistOutputs(result, args);
   printRunResult("recheck", result);
+}
+
+async function runWatchPendingWeekly(args: CliArgs) {
+  if (args.mode !== "weekly") {
+    throw new Error("--watch-pending-weekly 仅支持 weekly 模式");
+  }
+
+  const generatedAt = args.generatedAt ?? nowInTimezoneIso(args.timezone);
+  console.log(
+    `[watch] mode=weekly, dryRun=${args.dryRun}, outputRoot=${args.outputRoot}, instructionRoot=${args.reviewInstructionRoot}`,
+  );
+
+  const loaded = await loadWatchdogCandidates(args);
+  const summary = await runPendingWeeklyWatchdog({
+    candidates: loaded.candidates,
+    dryRun: args.dryRun,
+    runRecheck: async (candidate) => {
+      const runId = `watch-recheck-${candidate.reportDate}-${Date.now()}`;
+      const recheckState = buildRecheckStateFromArtifact({
+        args,
+        artifact: candidate.artifact,
+        reportDate: candidate.reportDate,
+        generatedAt,
+        runId,
+      });
+      return recheckPendingWeeklyReport(recheckState);
+    },
+    persistResult: async (result) => {
+      await persistOutputs(result, args);
+    },
+  });
+  summary.failed += loaded.precheckFailures.length;
+  summary.items = [...loaded.precheckFailures, ...summary.items];
+
+  console.log(
+    `[watch-summary] processed=${summary.processed}, published=${summary.published}, skipped=${summary.skipped}, failed=${summary.failed}`,
+  );
+  for (const item of summary.items) {
+    console.log(`[watch-item] date=${item.reportDate}, status=${item.status}, reason=${item.reason}`);
+  }
 }
 
 function parseArgs(argv: string[]): CliArgs {
@@ -275,6 +230,16 @@ function parseArgs(argv: string[]): CliArgs {
       continue;
     }
 
+    if (token === "--watch-pending-weekly") {
+      args.watchPendingWeekly = true;
+      continue;
+    }
+
+    if (token === "--dry-run") {
+      args.dryRun = true;
+      continue;
+    }
+
     if (token === "--report-date" && next) {
       args.reportDate = next;
       i += 1;
@@ -305,6 +270,8 @@ function defaults(): CliArgs {
     approveOutline: false,
     approveFinal: false,
     recheckPending: false,
+    watchPendingWeekly: false,
+    dryRun: false,
   };
 }
 
@@ -385,6 +352,91 @@ async function loadReviewArtifact(outputRoot: string, mode: ReportMode, reportDa
   }
 
   return { ...parsed, reportDate: parsed.reportDate ?? reportDate };
+}
+
+async function loadWatchdogCandidates(args: CliArgs): Promise<{
+  candidates: WatchdogCandidate[];
+  precheckFailures: { reportDate: string; status: "failed"; reason: string }[];
+}> {
+  const weeklyDir = path.join(args.outputRoot, "weekly");
+  let fileNames: string[] = [];
+  try {
+    fileNames = await fs.readdir(weeklyDir);
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+      return { candidates: [], precheckFailures: [] };
+    }
+    throw error;
+  }
+
+  const candidates: WatchdogCandidate[] = [];
+  const precheckFailures: { reportDate: string; status: "failed"; reason: string }[] = [];
+  for (const name of fileNames.sort()) {
+    if (!name.endsWith(".json")) {
+      continue;
+    }
+
+    const reportDate = name.replace(/\.json$/, "");
+    try {
+      const artifact = await loadReviewArtifact(args.outputRoot, "weekly", reportDate);
+      candidates.push({ reportDate, artifact });
+    } catch (error) {
+      // 解析失败的文件在守护模式下不抛出，避免单个坏文件阻断全局巡检。
+      precheckFailures.push({
+        reportDate,
+        status: "failed",
+        reason: `invalid_review_artifact:${error instanceof Error ? error.message : String(error)}`,
+      });
+    }
+  }
+  return { candidates, precheckFailures };
+}
+
+function buildRecheckStateFromArtifact(input: {
+  args: CliArgs;
+  artifact: ReviewArtifact;
+  reportDate: string;
+  generatedAt: string;
+  runId: string;
+}): ReportState {
+  const { args, artifact, reportDate, generatedAt, runId } = input;
+  if (!artifact.snapshot) {
+    throw new Error(`待复检报告缺少 snapshot（${reportDate}）`);
+  }
+
+  // 复检复用已生成快照，避免重新采集导致“审核版本”和“发布版本”内容不一致。
+  const state = createInitialState({
+    mode: "weekly",
+    timezone: artifact.snapshot.timezone,
+    useMock: false,
+    sourceConfigPath: artifact.snapshot.sourceConfigPath,
+    sourceLimit: artifact.snapshot.sourceLimit,
+    generatedAt,
+    reportDate,
+    runId,
+    approveOutline: args.approveOutline,
+    approveFinal: args.approveFinal,
+    reviewInstructionRoot: args.reviewInstructionRoot,
+  });
+
+  return {
+    ...state,
+    rankedItems: artifact.snapshot.rankedItems,
+    highlights: artifact.snapshot.highlights,
+    outlineMarkdown: artifact.snapshot.outlineMarkdown,
+    metrics: artifact.snapshot.metrics,
+    warnings: artifact.snapshot.warnings,
+    reviewDeadlineAt: artifact.snapshot.reviewDeadlineAt,
+    reviewStatus: artifact.reviewStatus,
+    reviewStage: artifact.reviewStage,
+    reviewReason: artifact.reviewReason,
+    publishStatus: artifact.publishStatus,
+    shouldPublish: artifact.shouldPublish,
+    publishReason: artifact.publishReason,
+    publishedAt: artifact.publishedAt,
+    outlineApproved: artifact.outlineApproved ?? false,
+    finalApproved: artifact.finalApproved ?? false,
+  };
 }
 
 function printRunResult(prefix: "done" | "recheck", result: ReportState) {

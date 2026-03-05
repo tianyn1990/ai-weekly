@@ -62,6 +62,21 @@ pending 周报复检发布（不重跑采集链路）：
 tsx src/cli.ts run --mode weekly --recheck-pending --report-date 2026-03-05
 ```
 
+pending 周报守护扫描（批量巡检）：
+```bash
+# dry-run：仅输出将发布/跳过结果，不写入产物
+tsx src/cli.ts run --mode weekly --watch-pending-weekly --dry-run
+
+# 实际执行：对符合条件的 pending 周报执行复检并发布
+tsx src/cli.ts run --mode weekly --watch-pending-weekly
+```
+
+推荐 cron（北京时间）：
+```bash
+# 每周一 12:31 执行一次 watchdog
+31 12 * * 1 cd /path/to/ai-weekly && pnpm run:weekly:watch
+```
+
 ## 测试
 ```bash
 pnpm test
@@ -73,7 +88,7 @@ pnpm test
 - 模型调用与高级总结暂未接入，作为下一阶段扩展点。
 
 ## 下一步（建议）
-1. 增加定时守护任务，自动轮询 pending 周报并触发 12:30 发布。
-2. 审核指令存储从文件升级到 DB/API，并补并发写保护。
+1. 审核指令存储从文件升级到 DB/API，并补并发写保护。
+2. 增加 watchdog 多实例互斥（分布式锁）与重入保护。
 3. 接入 LLM 总结节点（可切换 OpenAI/Anthropic/MiniMax）。
 4. 增加 SQLite 持久化与历史检索页。
