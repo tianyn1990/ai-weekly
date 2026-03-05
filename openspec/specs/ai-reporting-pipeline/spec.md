@@ -50,17 +50,18 @@
 - **AND** 分类统计中包含 `agent` 维度
 
 ### Requirement: Weekly pipeline SHALL support human review gates before publish
-系统 SHALL 在 weekly 模式提供审核断点，至少包含大纲审核与终稿审核两个阶段，并记录审核状态。
+系统 SHALL 在 weekly 模式提供审核断点，至少包含大纲审核与终稿审核两个阶段，并从持久化审核指令源读取审核动作；仅当未命中持久化指令时，才允许使用 CLI 参数作为兼容兜底输入。
 
-#### Scenario: Weekly report enters review state
-- **WHEN** weekly 流程生成周报草稿
-- **THEN** 系统状态进入 `pending_review`
-- **AND** 输出产物中包含当前审核阶段与审核截止时间
+#### Scenario: Weekly report applies persisted outline decision
+- **WHEN** 指令源存在 `weekly + reportDate + outline_review` 的通过指令
+- **THEN** 系统将大纲阶段标记为已通过
+- **AND** 流程进入终稿审核阶段
 
-#### Scenario: Weekly report is approved before deadline
-- **WHEN** 审核人员在截止时间前完成终稿审核
-- **THEN** 系统将状态更新为 `approved`
-- **AND** 系统发布审核通过版本
+#### Scenario: Weekly report uses CLI fallback when no persisted instruction exists
+- **WHEN** 指令源未命中对应阶段审核指令
+- **AND** 运行参数显式提供审核通过标记
+- **THEN** 系统使用该参数作为该阶段审核结果
+- **AND** 保持与现有 mock 学习命令兼容
 
 ### Requirement: Weekly pipeline SHALL auto-publish timeout review version at deadline
 系统 SHALL 在周一 12:30（Asia/Shanghai）未完成审核时自动发布当前待审核版本，并标记为超时发布。
@@ -70,3 +71,38 @@
 - **THEN** 系统发布当前版本
 - **AND** 系统状态标记为 `timeout_published`
 - **AND** 产物中记录触发时间与发布原因
+
+### Requirement: Weekly pipeline SHALL support pending report recheck publish
+系统 SHALL 支持对已生成的 pending 周报执行复检发布，不重新采集或重排内容，仅刷新审核状态、发布状态和最终产物。
+
+#### Scenario: Pending weekly report is manually approved before deadline during recheck
+- **WHEN** 待审核周报存在且指令源显示终稿已通过
+- **AND** 当前时间未超过周一 12:30（Asia/Shanghai）
+- **THEN** 系统将周报状态更新为 `approved`
+- **AND** 系统发布该周报的已审核版本
+
+#### Scenario: Pending weekly report is auto-published at deadline during recheck
+- **WHEN** 待审核周报存在且当前时间超过周一 12:30（Asia/Shanghai）
+- **AND** 指令源中终稿仍未通过
+- **THEN** 系统将周报状态更新为 `timeout_published`
+- **AND** 系统发布该周报当前版本并记录超时原因
+
+### Requirement: Weekly pipeline SHALL provide watchdog scan for pending reports
+系统 SHALL 提供 watchdog 扫描能力，用于批量检测并处理 pending 周报，以支持定时任务自动触发复检发布。
+
+#### Scenario: Watchdog publishes timed-out pending weekly report
+- **WHEN** watchdog 扫描到 `pending_review` 且已超过周一 12:30（Asia/Shanghai）的周报
+- **THEN** 系统执行复检并发布该周报
+- **AND** 发布状态更新为 `published`
+- **AND** 审核状态更新为 `timeout_published`
+
+#### Scenario: Watchdog skips pending weekly report before deadline
+- **WHEN** watchdog 扫描到 `pending_review` 但尚未超过周一 12:30（Asia/Shanghai）的周报
+- **THEN** 系统不发布该周报
+- **AND** 在执行摘要中将该报告标记为 `skipped`
+
+#### Scenario: Watchdog dry-run does not mutate artifacts
+- **WHEN** 用户以 dry-run 模式执行 watchdog
+- **THEN** 系统仅输出待处理报告列表与摘要
+- **AND** 不修改任何 review 或 published 产物
+
