@@ -108,6 +108,30 @@ pnpm run feishu:tunnel
 - 使用 ngrok 时，可通过 `http://127.0.0.1:4040/api/tunnels` 获取公网地址。
 - 若出现 `sign match fail`，优先检查飞书机器人签名开关与 `FEISHU_WEBHOOK_SECRET` 是否一致。
 
+飞书回调 URL 建议：
+```text
+https://<your-public-domain>/feishu/review-callback?token=<FEISHU_CALLBACK_AUTH_TOKEN>
+```
+
+说明：
+- 系统支持三种回调鉴权入口：`Authorization: Bearer`、query `token`、`x-callback-token`。
+- 飞书原生回调通常不方便自定义 `Authorization`，建议使用 query `token`。
+
+飞书卡片动作 value 字段约定（建议）：
+```json
+{
+  "action": "approve_outline | approve_final | request_revision | reject",
+  "reportDate": "2026-03-09",
+  "stage": "outline_review | final_review",
+  "reason": "可选审核意见",
+  "messageId": "可选"
+}
+```
+
+兼容说明：
+- 已兼容 `report_date`、`review_action`、`action_type` 等别名字段。
+- 已兼容 `event.action.value` 与 `event.action.form_value` 两类飞书卡片常见结构。
+
 Feishu 环境变量（推荐 `direnv` 项目级自动加载）：
 ```bash
 # 1) 首次安装 direnv（macOS）
@@ -126,6 +150,41 @@ direnv allow
 
 之后你每次 `cd` 到项目目录会自动加载 `.env.local`，离开目录自动卸载。
 
+建议在 `.env.local` 同时维护以下变量（长期使用）：
+```bash
+# webhook 通知
+FEISHU_WEBHOOK_URL=""
+FEISHU_WEBHOOK_SECRET=""
+
+# 回调服务
+FEISHU_CALLBACK_AUTH_TOKEN=""
+FEISHU_SIGNING_SECRET=""
+FEISHU_CALLBACK_PORT="8787"
+FEISHU_CALLBACK_PATH="/feishu/review-callback"
+
+# 自建应用（发送 interactive 卡片时使用）
+FEISHU_APP_ID=""
+FEISHU_APP_SECRET=""
+REVIEW_CHAT_ID=""   # 可选，配置后可直接发卡片
+```
+
+Feishu 联调自动化命令：
+```bash
+# 1) 获取 tenant_access_token（自动）
+pnpm run feishu:token
+
+# 2) 查询测试群 chat_id（自动）
+pnpm run feishu:chat:list
+# 按群名过滤
+pnpm run feishu:chat:list -- --chat-name "AI 周报测试群"
+
+# 3) 发送审核卡片（自动）
+# 使用 REVIEW_CHAT_ID
+pnpm run feishu:card:send -- --report-date 2026-03-09
+# 或显式指定 chat_id
+pnpm run feishu:card:send -- --chat-id oc_xxx --report-date 2026-03-09
+```
+
 隧道依赖（任选其一）：
 ```bash
 # cloudflared（推荐）
@@ -143,8 +202,12 @@ brew install ngrok/ngrok/ngrok
    - 检查机器人关键词是否允许“AI 周报”文本。
 
 2) 提醒命令 sent=0：
-   - 说明当前没有 pending 周报，或该日期提醒已写入 marker。
-   - 可先生成 pending 周报，再删除对应 marker 后重试。
+  - 说明当前没有 pending 周报，或该日期提醒已写入 marker。
+  - 可先生成 pending 周报，再删除对应 marker 后重试。
+
+3) 飞书回调 401：
+   - 若回调地址使用了 `?token=...`，确认与 `FEISHU_CALLBACK_AUTH_TOKEN` 完全一致。
+   - 若启用 `FEISHU_SIGNING_SECRET`，确认飞书应用侧签名 secret 与本地一致。
 ```
 
 推荐 cron（北京时间）：

@@ -18,6 +18,7 @@
 - Feishu 协同通知：待审核通知、发布结果回执。
 - Feishu 截止提醒：周一 11:30 单次提醒命令（由 cron 触发）。
 - Feishu 动作回写：本地回调服务写入持久化审核指令（2B：本地服务 + 隧道）。
+- Feishu 原生 payload 适配：支持卡片 `action.value/form_value` 映射到统一审核动作模型。
 - 审核动作写入审计字段：`source/action/operator/traceId/messageId`（文件模式）。
 
 ### 2.3 规划中（M3.3 ~ M5）
@@ -136,6 +137,7 @@ weekly report generated
 - 回调动作统一转为持久化审核指令，复用现有状态机与 recheck/watchdog。
 - CLI 审核保留为 fallback（协同链路故障兜底）。
 - M3.2 回调部署采用 2B：本地服务 + 隧道暴露公网地址，回调写入前执行 token/signature 校验。
+- 飞书卡片原生回调先经过 payload adapter，再转换为 `ReviewActionPayload`，保证多种事件结构可复用同一状态机。
 
 ### 5.5 审核意见回流修订流程（M3.3 规划）
 ```text
@@ -239,10 +241,17 @@ M3.2 扩展：
 - `FEISHU_CALLBACK_HOST` / `FEISHU_CALLBACK_PORT` / `FEISHU_CALLBACK_PATH`
 - `FEISHU_CALLBACK_AUTH_TOKEN`（可选）
 - `FEISHU_SIGNING_SECRET`（回调验签）
+- `FEISHU_APP_ID` / `FEISHU_APP_SECRET`（发送 interactive 卡片与查询群聊）
+- `REVIEW_CHAT_ID`（可选，联调发送卡片默认目标）
 
 安全约束：
 - 回调必须做签名校验与幂等处理。
 - 敏感配置走环境变量，不写入仓库。
+
+运维自动化（M3.2.1）：
+- `pnpm run feishu:token`：自动获取 tenant access token。
+- `pnpm run feishu:chat:list`：自动查询 chat_id（支持按群名过滤）。
+- `pnpm run feishu:card:send`：自动发送审核卡片并携带标准 action value。
 
 ## 11. 部署与运行策略
 - 当前部署基线：**单机定时任务**。

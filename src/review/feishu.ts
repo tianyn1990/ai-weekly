@@ -172,26 +172,20 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
 }> {
   const server = createServer(async (req, res) => {
     try {
-      if (req.method === "GET" && req.url === "/health") {
+      const requestPath = getRequestPath(req.url ?? "");
+      if (req.method === "GET" && requestPath === "/health") {
         res.writeHead(200, { "content-type": "application/json" });
         res.end(JSON.stringify({ ok: true }));
         return;
       }
 
-      if (req.method !== "POST" || req.url !== input.path) {
+      if (req.method !== "POST" || requestPath !== input.path) {
         res.writeHead(404, { "content-type": "application/json" });
         res.end(JSON.stringify({ ok: false, error: "not_found" }));
         return;
       }
 
       const rawBody = await readBody(req);
-      verifyCallbackAuth({
-        headers: req.headers,
-        body: rawBody,
-        authToken: input.authToken,
-        signingSecret: input.signingSecret,
-      });
-
       const parsed = parseCallbackBody(rawBody);
       if ("challenge" in parsed) {
         // 兼容 Feishu URL 校验流程，直接原样返回 challenge。
@@ -199,6 +193,14 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
         res.end(JSON.stringify({ challenge: parsed.challenge }));
         return;
       }
+
+      verifyCallbackAuth({
+        headers: req.headers,
+        body: rawBody,
+        requestUrl: req.url ?? "",
+        authToken: input.authToken,
+        signingSecret: input.signingSecret,
+      });
 
       const instruction = buildReviewInstructionFromAction(parsed);
       await input.store.appendInstruction(instruction);
@@ -240,39 +242,53 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
   };
 }
 
-function parseCallbackBody(rawBody: string) {
-  const value = JSON.parse(rawBody);
-  const challengeSchema = z.object({
-    challenge: z.string().min(1),
-  });
-  const payloadSchema = z.object({
-    mode: z.literal("weekly").default("weekly"),
-    reportDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
-    action: z.enum(["approve_outline", "approve_final", "request_revision", "reject"]),
-    stage: z.enum(["outline_review", "final_review"]).optional(),
-    decidedAt: z.string().datetime().optional(),
-    operator: z.string().min(1).optional(),
-    reason: z.string().optional(),
-    traceId: z.string().min(1).optional(),
-    messageId: z.string().min(1).optional(),
-  });
+const challengeSchema = z.object({
+  challenge: z.string().min(1),
+});
 
-  if (challengeSchema.safeParse(value).success) {
-    return challengeSchema.parse(value);
+const actionPayloadSchema = z.object({
+  mode: z.literal("weekly").default("weekly"),
+  reportDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  action: z.enum(["approve_outline", "approve_final", "request_revision", "reject"]),
+  stage: z.enum(["outline_review", "final_review"]).optional(),
+  decidedAt: z.string().datetime().optional(),
+  operator: z.string().min(1).optional(),
+  reason: z.string().optional(),
+  traceId: z.string().min(1).optional(),
+  messageId: z.string().min(1).optional(),
+});
+
+function parseCallbackBody(rawBody: string): { challenge: string } | ReviewActionPayload {
+  const value = JSON.parse(rawBody) as unknown;
+  const challenge = extractChallenge(value);
+  if (challenge) {
+    return { challenge };
   }
 
-  return payloadSchema.parse(value);
+  // 兼容当前简化 JSON 回调输入。
+  const direct = actionPayloadSchema.safeParse(value);
+  if (direct.success) {
+    return direct.data;
+  }
+
+  // 适配飞书原生卡片回调结构，统一转换到内部动作模型。
+  return actionPayloadSchema.parse(adaptFeishuCardActionPayload(value));
 }
 
 function verifyCallbackAuth(input: {
   headers: IncomingHttpHeaders;
   body: string;
+  requestUrl: string;
   authToken?: string;
   signingSecret?: string;
 }) {
   if (input.authToken) {
     const authorization = input.headers.authorization;
-    if (!authorization || authorization !== `Bearer ${input.authToken}`) {
+    const queryToken = tryGetQueryToken(input.requestUrl);
+    const callbackToken = header(input.headers, "x-callback-token");
+    const matched =
+      authorization === `Bearer ${input.authToken}` || queryToken === input.authToken || callbackToken === input.authToken;
+    if (!matched) {
       throw new Error("unauthorized:invalid_callback_token");
     }
   }
@@ -351,8 +367,180 @@ function buildWebhookBody(text: string, webhookSecret?: string) {
   };
 }
 
+function extractChallenge(input: unknown): string | undefined {
+  const direct = challengeSchema.safeParse(input);
+  if (direct.success) {
+    return direct.data.challenge;
+  }
+
+  const record = asRecord(input);
+  const eventRecord = record ? asRecord(record.event) : undefined;
+  const maybe = eventRecord?.challenge;
+  return typeof maybe === "string" && maybe.length > 0 ? maybe : undefined;
+}
+
+function adaptFeishuCardActionPayload(input: unknown) {
+  const root = asRecord(input);
+  if (!root) {
+    throw new Error("invalid_callback_payload:expected_object");
+  }
+
+  const value = extractActionValueObject(root);
+  if (!value) {
+    throw new Error("invalid_callback_payload:missing_action_value");
+  }
+
+  const action =
+    getString(value, "action") ??
+    getString(value, "review_action") ??
+    getString(value, "reviewAction") ??
+    getString(value, "action_type");
+  const reportDate = getString(value, "reportDate") ?? getString(value, "report_date");
+  const stage = getString(value, "stage");
+
+  const eventRecord = asRecord(root.event);
+  const operator = resolveOperator(root, eventRecord) ?? getString(value, "operator");
+  const reason = getString(value, "reason") ?? getString(value, "comment");
+  const messageId =
+    getString(value, "messageId") ??
+    getString(value, "message_id") ??
+    getString(root, "open_message_id") ??
+    getString(eventRecord, "open_message_id");
+  const traceId =
+    getString(value, "traceId") ??
+    getString(value, "trace_id") ??
+    getString(asRecord(root.header), "event_id") ??
+    getString(root, "event_id");
+  const decidedAt =
+    getString(value, "decidedAt") ??
+    normalizeCreateTime(getString(eventRecord, "create_time") ?? getString(root, "create_time"));
+
+  return {
+    mode: "weekly",
+    reportDate,
+    action,
+    ...(stage ? { stage } : {}),
+    ...(decidedAt ? { decidedAt } : {}),
+    ...(operator ? { operator } : {}),
+    ...(reason ? { reason } : {}),
+    ...(traceId ? { traceId } : {}),
+    ...(messageId ? { messageId } : {}),
+  };
+}
+
+function extractActionValueObject(root: Record<string, unknown>): Record<string, unknown> | null {
+  const candidates: unknown[] = [
+    asRecord(root.action)?.value,
+    asRecord(root.action)?.form_value,
+    asRecord(root.event)?.action ? asRecord(asRecord(root.event)?.action)?.value : undefined,
+    asRecord(root.event)?.action ? asRecord(asRecord(root.event)?.action)?.form_value : undefined,
+    asRecord(asRecord(root.event)?.context)?.action ? asRecord(asRecord(asRecord(root.event)?.context)?.action)?.value : undefined,
+    asRecord(root.data)?.value,
+  ];
+
+  for (const candidate of candidates) {
+    const objectValue = parsePossibleObject(candidate);
+    if (objectValue) {
+      return objectValue;
+    }
+  }
+
+  return null;
+}
+
+function parsePossibleObject(input: unknown): Record<string, unknown> | null {
+  if (isRecord(input)) {
+    return input;
+  }
+
+  if (typeof input === "string") {
+    try {
+      const parsed = JSON.parse(input) as unknown;
+      return isRecord(parsed) ? parsed : null;
+    } catch {
+      return null;
+    }
+  }
+  return null;
+}
+
+function resolveOperator(root: Record<string, unknown>, eventRecord?: Record<string, unknown>) {
+  const candidates = [
+    asRecord(root.operator),
+    asRecord(eventRecord?.operator),
+    asRecord(eventRecord?.operator_id),
+    asRecord(eventRecord?.user),
+  ].filter((item): item is Record<string, unknown> => Boolean(item));
+
+  for (const candidate of candidates) {
+    const value =
+      getString(candidate, "name") ??
+      getString(candidate, "open_id") ??
+      getString(candidate, "union_id") ??
+      getString(candidate, "user_id");
+    if (value) {
+      return value;
+    }
+  }
+  return undefined;
+}
+
+function normalizeCreateTime(input: string | undefined): string | undefined {
+  if (!input) {
+    return undefined;
+  }
+
+  if (/^\d+$/.test(input)) {
+    const numberValue = Number(input);
+    if (!Number.isFinite(numberValue)) {
+      return undefined;
+    }
+    const milliseconds = input.length >= 13 ? numberValue : numberValue * 1000;
+    return new Date(milliseconds).toISOString();
+  }
+  return undefined;
+}
+
+function getString(record: Record<string, unknown> | undefined, key: string): string | undefined {
+  if (!record) {
+    return undefined;
+  }
+  const value = record[key];
+  return typeof value === "string" && value.length > 0 ? value : undefined;
+}
+
+function asRecord(input: unknown): Record<string, unknown> | undefined {
+  return isRecord(input) ? input : undefined;
+}
+
+function isRecord(input: unknown): input is Record<string, unknown> {
+  return typeof input === "object" && input !== null;
+}
+
+function tryGetQueryToken(requestUrl: string): string | undefined {
+  if (!requestUrl.includes("?")) {
+    return undefined;
+  }
+  try {
+    const parsed = new URL(`http://localhost${requestUrl}`);
+    const token = parsed.searchParams.get("token");
+    return token ?? undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+function getRequestPath(requestUrl: string): string {
+  try {
+    return new URL(`http://localhost${requestUrl}`).pathname;
+  } catch {
+    return requestUrl;
+  }
+}
+
 export const __test__ = {
   buildWebhookBody,
   parseCallbackBody,
+  adaptFeishuCardActionPayload,
   verifyCallbackAuth,
 };

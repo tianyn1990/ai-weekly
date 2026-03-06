@@ -72,6 +72,40 @@ describe("FeishuNotifier", () => {
 });
 
 describe("Feishu callback server", () => {
+  it("应支持 url_verification challenge 回包", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-"));
+    try {
+      const store = new FileReviewInstructionStore(tempDir);
+      const server = await startFeishuReviewCallbackServer({
+        host: "127.0.0.1",
+        port: 0,
+        path: "/feishu/review-callback",
+        authToken: "token-123",
+        store,
+      });
+
+      try {
+        const response = await fetch(`http://127.0.0.1:${server.port}/feishu/review-callback`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            type: "url_verification",
+            challenge: "challenge-token",
+          }),
+        });
+        expect(response.status).toBe(200);
+        const payload = await response.json();
+        expect(payload.challenge).toBe("challenge-token");
+      } finally {
+        await server.close();
+      }
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+
   it("应在鉴权通过后写入审核指令文件", async () => {
     const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-"));
     try {
@@ -145,5 +179,91 @@ describe("Feishu callback server", () => {
     } finally {
       await fs.rm(tempDir, { recursive: true, force: true });
     }
+  });
+
+  it("应支持飞书卡片原生 payload（action.value）并写入指令", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-"));
+    try {
+      const store = new FileReviewInstructionStore(tempDir);
+      const server = await startFeishuReviewCallbackServer({
+        host: "127.0.0.1",
+        port: 0,
+        path: "/feishu/review-callback",
+        authToken: "token-123",
+        store,
+      });
+
+      try {
+        const response = await fetch(`http://127.0.0.1:${server.port}/feishu/review-callback?token=token-123`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            schema: "2.0",
+            header: {
+              event_id: "evt_1",
+            },
+            event: {
+              create_time: "1709600000",
+              operator: {
+                open_id: "ou_xxx",
+                name: "he tao",
+              },
+              action: {
+                value: {
+                  action: "approve_final",
+                  reportDate: "2026-03-09",
+                  reason: "looks good",
+                  messageId: "msg_2",
+                },
+              },
+            },
+          }),
+        });
+        expect(response.status).toBe(200);
+
+        const instructionFile = path.join(tempDir, "weekly", "2026-03-09.json");
+        const content = JSON.parse(await fs.readFile(instructionFile, "utf-8"));
+        expect(content.instructions).toHaveLength(1);
+        expect(content.instructions[0].action).toBe("approve_final");
+        expect(content.instructions[0].operator).toBe("he tao");
+        expect(content.instructions[0].traceId).toBe("evt_1");
+        expect(content.instructions[0].reason).toBe("looks good");
+      } finally {
+        await server.close();
+      }
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+});
+
+describe("Feishu callback payload adapter", () => {
+  it("应解析 event.action.form_value 结构", () => {
+    const parsed = __test__.parseCallbackBody(
+      JSON.stringify({
+        event: {
+          operator_id: {
+            open_id: "ou_test",
+          },
+          action: {
+            form_value: {
+              review_action: "request_revision",
+              report_date: "2026-03-10",
+              reason: "补充来源",
+            },
+          },
+        },
+      }),
+    );
+
+    if ("challenge" in parsed) {
+      throw new Error("unexpected challenge");
+    }
+    expect(parsed.action).toBe("request_revision");
+    expect(parsed.reportDate).toBe("2026-03-10");
+    expect(parsed.operator).toBe("ou_test");
+    expect(parsed.reason).toBe("补充来源");
   });
 });
