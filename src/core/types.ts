@@ -21,14 +21,22 @@ export type PublishStatus = "pending" | "published";
 
 export type ReviewInstructionStage = Exclude<ReviewStage, "none">;
 
+export type ReviewInstructionSource = "cli" | "feishu_callback";
+
+export type ReviewInstructionAction = "approve_outline" | "approve_final" | "request_revision" | "reject";
+
 export interface ReviewInstruction {
   mode: ReportMode;
   reportDate: string;
   stage: ReviewInstructionStage;
-  approved: boolean;
+  approved?: boolean;
+  action?: ReviewInstructionAction;
   decidedAt: string;
+  source?: ReviewInstructionSource;
   operator?: string;
   reason?: string;
+  traceId?: string;
+  messageId?: string;
 }
 
 export interface SourceConfig {

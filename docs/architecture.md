@@ -14,8 +14,13 @@
 - watchdog 巡检：批量扫描 pending 周报，支持 dry-run。
 - watchdog 可靠性增强：单机 lock、失败重试、summary 落盘。
 
-### 2.2 规划中（M3.2 ~ M5）
-- Feishu 协同审核闭环：通知、动作输入、截止提醒。
+### 2.2 已实现（M3.2 第一阶段）
+- Feishu 协同通知：待审核通知、发布结果回执。
+- Feishu 截止提醒：周一 11:30 单次提醒命令（由 cron 触发）。
+- Feishu 动作回写：本地回调服务写入持久化审核指令（2B：本地服务 + 隧道）。
+- 审核动作写入审计字段：`source/action/operator/traceId/messageId`（文件模式）。
+
+### 2.3 规划中（M3.3 ~ M5）
 - 审核意见回流修订：在原内容基础上进行结构化调整（非取消式）。
 - 审核指令/历史存储升级：文件 -> DB/API。
 - LLM 增强：先总结，再逐步扩展到分类/打标/排序辅助。
@@ -52,7 +57,9 @@
     │   ├── recheck.ts                # 单报告复检
     │   └── watchdog.ts               # 批量巡检执行器
     ├── review/
-    │   └── instruction-store.ts      # 审核指令存储抽象（文件实现）
+    │   ├── instruction-store.ts      # 审核指令存储抽象（文件实现）
+    │   ├── feishu.ts                 # Feishu 通知与回调服务（2B）
+    │   └── reminder-policy.ts        # 周一 11:30 提醒判定策略
     ├── report/
     │   └── markdown.ts               # 报告渲染
     ├── sources/
@@ -114,13 +121,13 @@ acquire lock
 - 失败隔离：单报告失败不阻塞其他报告。
 - 可追踪：每次执行写 summary 文件并输出逐条结果。
 
-### 5.4 Feishu 审核协同流程（M3.2 规划）
+### 5.4 Feishu 审核协同流程（M3.2 已实现第一阶段）
 ```text
 weekly report generated
   -> send Feishu notify (outline review)
   -> reviewer action callback (approve / request_revision / reject)
   -> persist review instruction
-  -> recheck or revise
+  -> recheck
   -> send Feishu notify (final review / publish result)
 ```
 
@@ -128,6 +135,7 @@ weekly report generated
 - 审核通知、动作输入、截止提醒都优先走 Feishu。
 - 回调动作统一转为持久化审核指令，复用现有状态机与 recheck/watchdog。
 - CLI 审核保留为 fallback（协同链路故障兜底）。
+- M3.2 回调部署采用 2B：本地服务 + 隧道暴露公网地址，回调写入前执行 token/signature 校验。
 
 ### 5.5 审核意见回流修订流程（M3.3 规划）
 ```text
@@ -227,7 +235,9 @@ M3.2 扩展：
 
 ### 10.2 Feishu 接入配置（M3.2）
 - `FEISHU_WEBHOOK_URL`
-- `FEISHU_APP_ID` / `FEISHU_APP_SECRET`（如需）
+- `FEISHU_WEBHOOK_SECRET`（可选）
+- `FEISHU_CALLBACK_HOST` / `FEISHU_CALLBACK_PORT` / `FEISHU_CALLBACK_PATH`
+- `FEISHU_CALLBACK_AUTH_TOKEN`（可选）
 - `FEISHU_SIGNING_SECRET`（回调验签）
 
 安全约束：
@@ -240,7 +250,7 @@ M3.2 扩展：
 - 分布式互斥：仅在多实例部署时启动（当前明确暂缓）。
 
 ## 12. 分阶段执行计划（冻结）
-1. **M3.2（协同）**：Feishu 通知 + 审核动作回写 + 截止提醒。
+1. **M3.2（协同）**：Feishu 通知 + 审核动作回写 + 截止提醒【已完成第一阶段】。
 2. **M3.3（修订）**：审核意见回流执行（新增/删除候选、主题词/搜索词、权重调整）+ 打回再审核。
 3. **M4（存储）**：审核指令与历史产物迁移 DB/API，补审计与并发控制。
 4. **M5（智能）**：LLM 总结节点优先，逐步扩展到分类/打标/排序辅助。

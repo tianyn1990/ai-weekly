@@ -10,6 +10,9 @@
     "run:weekly:watch": "tsx src/cli.ts run --mode weekly --watch-pending-weekly",
     "run:daily": "tsx src/cli.ts run --mode daily",
     "run:weekly": "tsx src/cli.ts run --mode weekly",
+    "feishu:callback": "tsx src/cli.ts run --serve-feishu-callback",
+    "feishu:tunnel": "bash scripts/feishu-tunnel.sh",
+    "feishu:dev": "bash scripts/feishu-dev.sh",
     "build": "tsc -p tsconfig.json",
     "test": "vitest run"
   },

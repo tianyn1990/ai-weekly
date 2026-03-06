@@ -43,6 +43,7 @@ pnpm run:weekly:mock
 - M2.5 复盘 01（持久化审核指令 + pending 复检发布）：`docs/learning-sessions/m2.5-session-01-persistent-review.md`
 - M3 复盘 01（pending 周报 watchdog 扫描）：`docs/learning-sessions/m3-session-01-watchdog.md`
 - M3.1 复盘 01（watchdog 锁 + 重试 + 告警输出）：`docs/learning-sessions/m3.1-session-01-watchdog-reliability.md`
+- M3.2 复盘 01（Feishu 审核协同：通知 + 回调 + 提醒）：`docs/learning-sessions/m3.2-session-01-feishu-collaboration.md`
 
 ## 6. 执行优先级约束
 - 优先保证「可运行 + 可理解 + 可复盘」三件事同时成立。

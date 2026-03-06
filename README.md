@@ -7,6 +7,7 @@
 - 已完成 `docs/architecture.md`（系统设计）。
 - 已提供可运行的 M3.1 流程：`collect -> normalize -> dedupe -> classify -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> build_report`。
 - 周报审核支持「持久化指令优先，CLI 参数 fallback」、pending 周报复检发布、watchdog 守护扫描（含锁与重试）。
+- 已接入 M3.2 第一阶段能力：Feishu 待审核通知、11:30 提醒命令、发布结果回执、本地回调服务（2B：本地 + 隧道）。
 - 分布式互斥暂缓，当前以单机定时任务为部署基线。
 
 ## 环境要求
@@ -78,8 +79,79 @@ tsx src/cli.ts run --mode weekly --watch-pending-weekly --watch-max-retries 3 --
 tsx src/cli.ts run --mode weekly --watch-pending-weekly --watch-force-unlock
 ```
 
+Feishu 协同（M3.2）：
+```bash
+# 1) 启动本地回调服务（2B 形态：本地服务 + 隧道暴露）
+tsx src/cli.ts run --serve-feishu-callback
+
+# 2) 周一 11:30 提醒 pending 审核（建议由 cron 触发）
+tsx src/cli.ts run --mode weekly --notify-review-reminder
+```
+
+Feishu 与工程融合（一键联调）：
+```bash
+# 0) 确认已加载 .env.local（见下方 direnv 配置）
+
+# 1) 一键启动“本地回调 + 隧道”
+pnpm run feishu:dev
+
+# 2) 仅启动本地回调服务
+pnpm run feishu:callback
+
+# 3) 仅启动隧道（自动优先 cloudflared，fallback 到 ngrok）
+pnpm run feishu:tunnel
+```
+
+联调输出说明：
+- `pnpm run feishu:dev` 会输出本地回调地址与隧道日志。
+- 使用 cloudflared 时，日志会自动打印 `callback-url=.../feishu/review-callback`。
+- 使用 ngrok 时，可通过 `http://127.0.0.1:4040/api/tunnels` 获取公网地址。
+- 若出现 `sign match fail`，优先检查飞书机器人签名开关与 `FEISHU_WEBHOOK_SECRET` 是否一致。
+
+Feishu 环境变量（推荐 `direnv` 项目级自动加载）：
+```bash
+# 1) 首次安装 direnv（macOS）
+brew install direnv
+echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
+source ~/.zshrc
+
+# 2) 在项目根目录初始化本地变量文件
+cp .env.local.example .env.local
+
+# 3) 编辑 .env.local 填入你的真实值
+
+# 4) 授权当前目录自动加载
+direnv allow
+```
+
+之后你每次 `cd` 到项目目录会自动加载 `.env.local`，离开目录自动卸载。
+
+隧道依赖（任选其一）：
+```bash
+# cloudflared（推荐）
+brew install cloudflared
+
+# ngrok（可选）
+brew install ngrok/ngrok/ngrok
+```
+
+联调常见问题：
+```text
+1) 终端提示 sent，但飞书群无消息：
+   - 查看是否返回了飞书业务码非 0（例如 code=19021）。
+   - 检查 FEISHU_WEBHOOK_SECRET 与机器人签名配置是否匹配。
+   - 检查机器人关键词是否允许“AI 周报”文本。
+
+2) 提醒命令 sent=0：
+   - 说明当前没有 pending 周报，或该日期提醒已写入 marker。
+   - 可先生成 pending 周报，再删除对应 marker 后重试。
+```
+
 推荐 cron（北京时间）：
 ```bash
+# 每周一 11:30 发送一次审核提醒
+30 11 * * 1 cd /path/to/ai-weekly && npx tsx src/cli.ts run --mode weekly --notify-review-reminder
+
 # 每周一 12:31 执行一次 watchdog
 31 12 * * 1 cd /path/to/ai-weekly && pnpm run:weekly:watch
 ```

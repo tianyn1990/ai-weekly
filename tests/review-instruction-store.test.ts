@@ -79,5 +79,38 @@ describe("FileReviewInstructionStore", () => {
       await fs.rm(tempDir, { recursive: true, force: true });
     }
   });
-});
 
+  it("应支持写入 action 指令并被读取为最新决策", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-instruction-"));
+    try {
+      const store = new FileReviewInstructionStore(tempDir);
+      await store.appendInstruction({
+        mode: "weekly",
+        reportDate: "2026-03-09",
+        stage: "outline_review",
+        action: "approve_outline",
+        source: "feishu_callback",
+        decidedAt: "2026-03-09T01:00:00.000Z",
+        operator: "user_a",
+      });
+      await store.appendInstruction({
+        mode: "weekly",
+        reportDate: "2026-03-09",
+        stage: "outline_review",
+        action: "reject",
+        source: "feishu_callback",
+        decidedAt: "2026-03-09T02:00:00.000Z",
+        operator: "user_b",
+      });
+
+      const latestDecision = await store.getLatestDecision({
+        mode: "weekly",
+        reportDate: "2026-03-09",
+        stage: "outline_review",
+      });
+      expect(latestDecision).toBe(false);
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+});
