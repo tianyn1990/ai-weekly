@@ -11,15 +11,18 @@ import type {
   ReviewInstructionSource,
   ReviewInstructionStage,
 } from "../core/types.js";
+import { reviewFeedbackPayloadSchema } from "./feedback-schema.js";
 
 export interface GetReviewInstructionInput {
   mode: ReportMode;
   reportDate: string;
   stage: ReviewInstructionStage;
+  decidedAfterOrAt?: string;
 }
 
 export interface ReviewInstructionStore {
   getLatestDecision(input: GetReviewInstructionInput): Promise<boolean | null>;
+  getLatestInstruction(input: GetReviewInstructionInput): Promise<ReviewInstruction | null>;
   appendInstruction(input: ReviewInstruction): Promise<void>;
 }
 
@@ -39,6 +42,7 @@ const instructionRecordSchema = z
     reason: z.string().optional(),
     traceId: z.string().min(1).optional(),
     messageId: z.string().min(1).optional(),
+    feedback: reviewFeedbackPayloadSchema.optional(),
   })
   .superRefine((value, ctx) => {
     // 兼容 M2 历史格式（approved），同时支持 M3+ 的 action 驱动写法。
@@ -63,6 +67,14 @@ export class FileReviewInstructionStore implements ReviewInstructionStore {
   constructor(private readonly rootDir: string) {}
 
   async getLatestDecision(input: GetReviewInstructionInput): Promise<boolean | null> {
+    const latest = await this.getLatestInstruction(input);
+    if (!latest) {
+      return null;
+    }
+    return resolveInstructionDecision(latest);
+  }
+
+  async getLatestInstruction(input: GetReviewInstructionInput): Promise<ReviewInstruction | null> {
     const filePath = path.join(this.rootDir, input.mode, `${input.reportDate}.json`);
     const payload = await readInstructionFile(filePath);
     if (!payload) {
@@ -79,13 +91,32 @@ export class FileReviewInstructionStore implements ReviewInstructionStore {
 
     const matched = payload.instructions
       .filter((instruction) => instruction.stage === input.stage)
+      .filter((instruction) => {
+        if (!input.decidedAfterOrAt) {
+          return true;
+        }
+        return dayjs(instruction.decidedAt).isSame(dayjs(input.decidedAfterOrAt)) || dayjs(instruction.decidedAt).isAfter(dayjs(input.decidedAfterOrAt));
+      })
       .sort((a, b) => dayjs(b.decidedAt).valueOf() - dayjs(a.decidedAt).valueOf());
 
     if (matched.length === 0) {
       return null;
     }
 
-    return resolveInstructionDecision(matched[0]);
+    return {
+      mode: input.mode,
+      reportDate: input.reportDate,
+      stage: matched[0].stage,
+      approved: matched[0].approved,
+      action: matched[0].action,
+      decidedAt: matched[0].decidedAt,
+      source: matched[0].source,
+      operator: matched[0].operator,
+      reason: matched[0].reason,
+      traceId: matched[0].traceId,
+      messageId: matched[0].messageId,
+      feedback: matched[0].feedback,
+    };
   }
 
   async appendInstruction(input: ReviewInstruction): Promise<void> {
@@ -155,10 +186,11 @@ function normalizeInstruction(input: ReviewInstruction) {
     reason: input.reason,
     traceId: input.traceId,
     messageId: input.messageId,
+    feedback: input.feedback,
   });
 }
 
-function resolveInstructionDecision(instruction: z.infer<typeof instructionRecordSchema>): boolean {
+function resolveInstructionDecision(instruction: Pick<ReviewInstruction, "approved" | "action">): boolean {
   if (typeof instruction.approved === "boolean") {
     return instruction.approved;
   }

@@ -75,6 +75,16 @@ describe("watchdog", () => {
     expect(action).toEqual({ type: "skip", reason: "already_published" });
   });
 
+  it("rejected 报告应被跳过且不再尝试发布", () => {
+    const action = __test__.evaluateCandidate(
+      createReviewArtifact({
+        reviewStatus: "rejected",
+        publishStatus: "pending",
+      }),
+    );
+    expect(action).toEqual({ type: "skip", reason: "rejected_run" });
+  });
+
   it("dry-run 模式不应调用持久化写入", async () => {
     const persistSpy = vi.fn(async () => {});
     const summary = await runPendingWeeklyWatchdog({

@@ -8,6 +8,7 @@ export interface ReviewPolicyInput {
   reviewDeadlineAt: string | null;
   outlineApproved: boolean;
   finalApproved: boolean;
+  rejected: boolean;
 }
 
 export interface ReviewPolicyResult {
@@ -21,7 +22,7 @@ export interface ReviewPolicyResult {
 }
 
 export function decideReviewAndPublish(input: ReviewPolicyInput): ReviewPolicyResult {
-  const { mode, generatedAt, reviewDeadlineAt, outlineApproved, finalApproved } = input;
+  const { mode, generatedAt, reviewDeadlineAt, outlineApproved, finalApproved, rejected } = input;
 
   if (mode === "daily") {
     // 日报采用直出策略，不引入人工审核阻塞。
@@ -37,6 +38,19 @@ export function decideReviewAndPublish(input: ReviewPolicyInput): ReviewPolicyRe
   }
 
   const deadlineReached = isDeadlineReached(generatedAt, reviewDeadlineAt);
+
+  if (rejected) {
+    // reject 表示当前 run 被终止，不允许继续发布；后续需新建 run。
+    return {
+      reviewStatus: "rejected",
+      reviewStage: "none",
+      publishStatus: "pending",
+      shouldPublish: false,
+      reviewReason: "当前 run 已被 reject，必须新建 run 才能再次发布",
+      publishReason: "weekly_rejected_no_publish",
+      publishedAt: null,
+    };
+  }
 
   if (outlineApproved && finalApproved) {
     // 周报双重审核通过后立即发布，状态标记为 approved。

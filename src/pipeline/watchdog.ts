@@ -97,7 +97,7 @@ export async function runPendingWeeklyWatchdog(input: RunWatchdogInput): Promise
         summary.items.push({
           reportDate: candidate.reportDate,
           status: "processed",
-          reason: input.dryRun ? "dry_run_still_pending" : "still_pending_after_recheck",
+          reason: result.reviewStatus === "rejected" ? "rejected_run" : input.dryRun ? "dry_run_still_pending" : "still_pending_after_recheck",
           attempts: execution.attempts,
         });
       }
@@ -124,6 +124,10 @@ function evaluateCandidate(artifact: ReviewArtifact): { type: "process" } | { ty
 
   if (artifact.publishStatus === "published") {
     return { type: "skip", reason: "already_published" };
+  }
+
+  if (artifact.reviewStatus === "rejected" || artifact.rejected) {
+    return { type: "skip", reason: "rejected_run" };
   }
 
   if (artifact.reviewStatus !== "pending_review" || artifact.publishStatus !== "pending") {

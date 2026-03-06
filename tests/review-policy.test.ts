@@ -10,6 +10,7 @@ describe("review-policy", () => {
       reviewDeadlineAt: null,
       outlineApproved: false,
       finalApproved: false,
+      rejected: false,
     });
 
     expect(result.reviewStatus).toBe("not_required");
@@ -25,6 +26,7 @@ describe("review-policy", () => {
       reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
       outlineApproved: true,
       finalApproved: false,
+      rejected: false,
     });
 
     expect(result.reviewStatus).toBe("pending_review");
@@ -39,6 +41,7 @@ describe("review-policy", () => {
       reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
       outlineApproved: false,
       finalApproved: false,
+      rejected: false,
     });
 
     expect(result.reviewStatus).toBe("timeout_published");
@@ -54,6 +57,7 @@ describe("review-policy", () => {
       reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
       outlineApproved: true,
       finalApproved: true,
+      rejected: false,
     });
 
     expect(result.reviewStatus).toBe("approved");
@@ -66,5 +70,21 @@ describe("review-policy", () => {
     expect(resolvePendingStage(false, false)).toBe("outline_review");
     expect(resolvePendingStage(true, false)).toBe("final_review");
     expect(resolvePendingStage(true, true)).toBe("none");
+  });
+
+  it("reject 后当前 run 不应再发布", () => {
+    const result = decideReviewAndPublish({
+      mode: "weekly",
+      generatedAt: "2026-03-09T05:00:00.000Z",
+      reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
+      outlineApproved: true,
+      finalApproved: false,
+      rejected: true,
+    });
+
+    expect(result.reviewStatus).toBe("rejected");
+    expect(result.publishStatus).toBe("pending");
+    expect(result.shouldPublish).toBe(false);
+    expect(result.publishReason).toBe("weekly_rejected_no_publish");
   });
 });

@@ -1,6 +1,14 @@
 import dayjs from "dayjs";
 
-import type { PipelineMetrics, PublishStatus, RankedItem, ReportMode, ReviewStage, ReviewStatus } from "../core/types.js";
+import type {
+  PipelineMetrics,
+  PublishStatus,
+  RankedItem,
+  ReportMode,
+  ReviewStage,
+  ReviewStatus,
+  RevisionAuditLog,
+} from "../core/types.js";
 import { formatHumanTime } from "../utils/time.js";
 
 interface BuildMarkdownInput {
@@ -16,6 +24,7 @@ interface BuildMarkdownInput {
   reviewDeadlineAt: string | null;
   publishStatus: PublishStatus;
   publishReason: string;
+  revisionAuditLogs: RevisionAuditLog[];
 }
 
 export function buildReportMarkdown(input: BuildMarkdownInput): string {
@@ -32,6 +41,7 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
     reviewDeadlineAt,
     publishStatus,
     publishReason,
+    revisionAuditLogs,
   } = input;
 
   const title = resolveReportTitle(mode, reviewStatus, publishStatus);
@@ -53,6 +63,26 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
   lines.push(`- 发布状态：${publishStatus}`);
   lines.push(`- 发布原因：${publishReason}`);
   lines.push("");
+
+  if (revisionAuditLogs.length > 0) {
+    lines.push("## 回流修订记录");
+    lines.push("");
+    for (const log of revisionAuditLogs) {
+      lines.push(
+        `- ${formatHumanTime(log.at, timezone)} | stage=${log.stage} | operator=${log.operator ?? "unknown"} | before=${log.beforeCount} | after=${log.afterCount} | +${log.addedCount}/-${log.removedCount}`,
+      );
+      if (log.globalConfigChanges.length > 0) {
+        lines.push(`  - 全局配置变更：${log.globalConfigChanges.join(", ")}`);
+      }
+      if (log.reason) {
+        lines.push(`  - 审核原因：${log.reason}`);
+      }
+      if (log.notes) {
+        lines.push(`  - 备注：${log.notes}`);
+      }
+    }
+    lines.push("");
+  }
 
   if (mode === "weekly") {
     lines.push("## 审核大纲");
@@ -115,6 +145,10 @@ function resolveReportTitle(mode: ReportMode, reviewStatus: ReviewStatus, publis
 
   if (reviewStatus === "timeout_published") {
     return "AI 周报（超时自动发布）";
+  }
+
+  if (reviewStatus === "rejected") {
+    return "AI 周报（已拒绝）";
   }
 
   return "AI 周报（待审核）";

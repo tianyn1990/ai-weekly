@@ -113,4 +113,77 @@ describe("FileReviewInstructionStore", () => {
       await fs.rm(tempDir, { recursive: true, force: true });
     }
   });
+
+  it("应支持按 decidedAfterOrAt 过滤旧指令，避免历史 reject 影响新 run", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-instruction-"));
+    try {
+      const store = new FileReviewInstructionStore(tempDir);
+      await store.appendInstruction({
+        mode: "weekly",
+        reportDate: "2026-03-09",
+        stage: "final_review",
+        action: "reject",
+        source: "feishu_callback",
+        decidedAt: "2026-03-09T09:30:00.000Z",
+        operator: "user_old",
+      });
+      await store.appendInstruction({
+        mode: "weekly",
+        reportDate: "2026-03-09",
+        stage: "final_review",
+        action: "approve_final",
+        source: "feishu_callback",
+        decidedAt: "2026-03-09T13:10:00.000Z",
+        operator: "user_new",
+      });
+
+      const oldRun = await store.getLatestInstruction({
+        mode: "weekly",
+        reportDate: "2026-03-09",
+        stage: "final_review",
+        decidedAfterOrAt: "2026-03-09T09:00:00.000Z",
+      });
+      expect(oldRun?.action).toBe("approve_final");
+
+      const newRunOnly = await store.getLatestInstruction({
+        mode: "weekly",
+        reportDate: "2026-03-09",
+        stage: "final_review",
+        decidedAfterOrAt: "2026-03-09T12:30:00.000Z",
+      });
+      expect(newRunOnly?.action).toBe("approve_final");
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it("应保留并读取结构化 feedback 字段", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-instruction-"));
+    try {
+      const store = new FileReviewInstructionStore(tempDir);
+      await store.appendInstruction({
+        mode: "weekly",
+        reportDate: "2026-03-12",
+        stage: "final_review",
+        action: "request_revision",
+        source: "feishu_callback",
+        decidedAt: "2026-03-12T09:20:00.000Z",
+        feedback: {
+          newTopics: ["Agent Workflow"],
+          sourceToggles: [{ sourceId: "openai-news", enabled: false }],
+        },
+      });
+
+      const latest = await store.getLatestInstruction({
+        mode: "weekly",
+        reportDate: "2026-03-12",
+        stage: "final_review",
+      });
+      expect(latest?.action).toBe("request_revision");
+      expect(latest?.feedback?.newTopics).toEqual(["Agent Workflow"]);
+      expect(latest?.feedback?.sourceToggles?.[0]).toEqual({ sourceId: "openai-news", enabled: false });
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
 });

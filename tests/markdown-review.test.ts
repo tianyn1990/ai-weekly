@@ -44,6 +44,7 @@ describe("buildReportMarkdown", () => {
       reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
       publishStatus: "pending",
       publishReason: "waiting_for_manual_review",
+      revisionAuditLogs: [],
     });
 
     expect(markdown).toContain("审核状态：pending_review");
@@ -68,6 +69,7 @@ describe("buildReportMarkdown", () => {
       reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
       publishStatus: "published",
       publishReason: "weekly_manual_approved",
+      revisionAuditLogs: [],
     });
 
     expect(markdown).toContain("# AI 周报（已发布）");

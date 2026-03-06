@@ -1,10 +1,12 @@
 import dayjs from "dayjs";
 
+import { applyRuntimeSourceOverrides, loadRuntimeConfig } from "../config/runtime-config.js";
 import { loadSourceConfig } from "../config/source-config.js";
-import { rankItems } from "../core/scoring.js";
+import { rankItemsWithTuning } from "../core/scoring.js";
 import { createEmptyMetrics, createItemId, normalizeWhitespace, titleFingerprint } from "../core/utils.js";
-import type { ItemCategory, NormalizedItem, RankedItem, ReportState, SourceConfig } from "../core/types.js";
+import type { ItemCategory, NormalizedItem, RankedItem, ReportState, ReviewInstruction, SourceConfig } from "../core/types.js";
 import { buildReportMarkdown } from "../report/markdown.js";
+import { executeFeedbackRevision } from "../review/feedback-executor.js";
 import { FileReviewInstructionStore } from "../review/instruction-store.js";
 import { collectMockItems } from "../sources/mock-source.js";
 import { collectRssItems } from "../sources/rss-source.js";
@@ -19,7 +21,8 @@ export async function collectItemsNode(state: ReportState): Promise<Partial<Repo
     return { rawItems, metrics };
   }
 
-  const sources = await loadSourceConfig(state.sourceConfigPath);
+  const runtimeConfig = await loadRuntimeConfig(state.runtimeConfigPath);
+  const sources = applyRuntimeSourceOverrides(await loadSourceConfig(state.sourceConfigPath), runtimeConfig);
   const { items, warnings } = await collectRssItems(sources, state.sourceLimit);
   const metrics = { ...state.metrics, collectedCount: items.length };
   return { rawItems: items, metrics, warnings };
@@ -75,8 +78,15 @@ export async function classifyItemsNode(state: ReportState): Promise<Partial<Rep
 }
 
 export async function rankItemsNode(state: ReportState): Promise<Partial<ReportState>> {
-  const sources = await loadSourceConfig(state.sourceConfigPath);
-  const ranked = rankItems(state.items, sources, state.generatedAt);
+  const runtimeConfig = await loadRuntimeConfig(state.runtimeConfigPath);
+  const sources = applyRuntimeSourceOverrides(await loadSourceConfig(state.sourceConfigPath), runtimeConfig);
+  const ranked = rankItemsWithTuning(state.items, sources, state.generatedAt, {
+    sourceWeightMultiplier: runtimeConfig.rankingWeights.source,
+    freshnessMultiplier: runtimeConfig.rankingWeights.freshness,
+    keywordMultiplier: runtimeConfig.rankingWeights.keyword,
+    topicKeywords: runtimeConfig.topics,
+    searchTermKeywords: runtimeConfig.searchTerms,
+  });
   // highlights 用于报告顶部“重点推荐”，和“全覆盖正文”区分展示层次。
   const highlights = pickHighlights(ranked, state.mode);
 
@@ -92,12 +102,16 @@ export async function rankItemsNode(state: ReportState): Promise<Partial<ReportS
 }
 
 export async function buildOutlineNode(state: ReportState): Promise<Partial<ReportState>> {
+  return { outlineMarkdown: buildOutlineMarkdown(state.rankedItems, state.highlights) };
+}
+
+export function buildOutlineMarkdown(rankedItems: RankedItem[], highlights: RankedItem[]): string {
   // 大纲只提炼重点结构，便于先审方向再审细节，降低人工审核成本。
-  const grouped = groupByCategory(state.rankedItems);
+  const grouped = groupByCategory(rankedItems);
   const lines: string[] = [];
 
   lines.push("### 重点推荐（大纲）");
-  for (const item of state.highlights.slice(0, 5)) {
+  for (const item of highlights.slice(0, 5)) {
     lines.push(`- ${item.title}`);
   }
   lines.push("");
@@ -107,13 +121,17 @@ export async function buildOutlineNode(state: ReportState): Promise<Partial<Repo
     lines.push(`- ${category}: ${items.length} 条`);
   }
 
-  return { outlineMarkdown: lines.join("\n") };
+  return lines.join("\n");
 }
 
 export async function reviewOutlineNode(state: ReportState): Promise<Partial<ReportState>> {
+  if (state.rejected) {
+    return {};
+  }
   if (state.mode === "daily") {
     return {
       outlineApproved: true,
+      rejected: false,
       reviewStage: "none",
       reviewStatus: "not_required",
       reviewReason: "日报模式跳过大纲审核",
@@ -122,15 +140,47 @@ export async function reviewOutlineNode(state: ReportState): Promise<Partial<Rep
   }
 
   const reviewDeadlineAt = state.reviewDeadlineAt ?? computeWeeklyReviewDeadline(state.generatedAt, state.timezone);
-  const decision = await resolveStageApproval({
+  const decision = await resolveStageDecision({
     state,
     stage: "outline_review",
     fallbackApproved: state.approveOutline,
   });
+  if (decision.action === "reject") {
+    return buildRejectedResult("outline_review", decision.source, decision.reason);
+  }
+
+  if (decision.action === "request_revision") {
+    const revised = await executeFeedbackRevision({
+      mode: state.mode,
+      generatedAt: state.generatedAt,
+      sourceConfigPath: state.sourceConfigPath,
+      runtimeConfigPath: state.runtimeConfigPath,
+      rankedItems: state.rankedItems,
+      metrics: state.metrics,
+      instruction: decision.instruction,
+    });
+    return {
+      rankedItems: revised.rankedItems,
+      highlights: revised.highlights,
+      metrics: revised.metrics,
+      outlineMarkdown: buildOutlineMarkdown(revised.rankedItems, revised.highlights),
+      outlineApproved: true,
+      finalApproved: false,
+      rejected: false,
+      reviewDeadlineAt,
+      reviewStage: "final_review",
+      reviewStatus: "pending_review",
+      reviewReason: `大纲阶段回流修订已执行（${decision.source}）`,
+      revisionAuditLogs: [...state.revisionAuditLogs, revised.auditLog],
+      ...(decision.warning ? { warnings: [...state.warnings, decision.warning] } : {}),
+    };
+  }
+
   const outlineApproved = decision.approved;
 
   return {
     outlineApproved,
+    rejected: false,
     reviewDeadlineAt,
     reviewStage: outlineApproved ? "final_review" : "outline_review",
     reviewStatus: "pending_review",
@@ -154,15 +204,20 @@ export async function buildReportNode(state: ReportState): Promise<Partial<Repor
     reviewDeadlineAt: state.reviewDeadlineAt,
     publishStatus: state.publishStatus,
     publishReason: state.publishReason,
+    revisionAuditLogs: state.revisionAuditLogs,
   });
 
   return { reportMarkdown };
 }
 
 export async function reviewFinalNode(state: ReportState): Promise<Partial<ReportState>> {
+  if (state.rejected) {
+    return {};
+  }
   if (state.mode === "daily") {
     return {
       finalApproved: true,
+      rejected: false,
       reviewStage: "none",
       reviewStatus: "not_required",
       reviewReason: "日报模式跳过终稿审核",
@@ -172,20 +227,51 @@ export async function reviewFinalNode(state: ReportState): Promise<Partial<Repor
   if (!state.outlineApproved) {
     return {
       finalApproved: false,
+      rejected: false,
       reviewStage: "outline_review",
       reviewStatus: "pending_review",
       reviewReason: "大纲未通过，终稿审核尚未开始",
     };
   }
 
-  const decision = await resolveStageApproval({
+  const decision = await resolveStageDecision({
     state,
     stage: "final_review",
     fallbackApproved: state.approveFinal,
   });
+  if (decision.action === "reject") {
+    return buildRejectedResult("final_review", decision.source, decision.reason);
+  }
+
+  if (decision.action === "request_revision") {
+    const revised = await executeFeedbackRevision({
+      mode: state.mode,
+      generatedAt: state.generatedAt,
+      sourceConfigPath: state.sourceConfigPath,
+      runtimeConfigPath: state.runtimeConfigPath,
+      rankedItems: state.rankedItems,
+      metrics: state.metrics,
+      instruction: decision.instruction,
+    });
+    return {
+      rankedItems: revised.rankedItems,
+      highlights: revised.highlights,
+      metrics: revised.metrics,
+      outlineMarkdown: buildOutlineMarkdown(revised.rankedItems, revised.highlights),
+      finalApproved: false,
+      rejected: false,
+      reviewStage: "final_review",
+      reviewStatus: "pending_review",
+      reviewReason: `终稿阶段回流修订已执行（${decision.source}）`,
+      revisionAuditLogs: [...state.revisionAuditLogs, revised.auditLog],
+      ...(decision.warning ? { warnings: [...state.warnings, decision.warning] } : {}),
+    };
+  }
+
   const finalApproved = decision.approved;
   return {
     finalApproved,
+    rejected: false,
     reviewStage: finalApproved ? "none" : "final_review",
     reviewStatus: "pending_review",
     reviewReason: finalApproved ? `终稿审核已通过（${decision.source}）` : `等待终稿审核（${decision.source}）`,
@@ -201,6 +287,7 @@ export async function publishOrWaitNode(state: ReportState): Promise<Partial<Rep
     reviewDeadlineAt: state.reviewDeadlineAt,
     outlineApproved: state.outlineApproved,
     finalApproved: state.finalApproved,
+    rejected: state.rejected,
   });
 
   return {
@@ -219,8 +306,10 @@ export function createInitialState(params: {
   timezone: string;
   useMock: boolean;
   sourceConfigPath: string;
+  runtimeConfigPath?: string;
   sourceLimit: number;
   generatedAt: string;
+  reviewStartedAt?: string;
   reportDate: string;
   runId: string;
   approveOutline: boolean;
@@ -232,9 +321,11 @@ export function createInitialState(params: {
     mode: params.mode,
     timezone: params.timezone,
     generatedAt: params.generatedAt,
+    reviewStartedAt: params.reviewStartedAt ?? params.generatedAt,
     reportDate: params.reportDate,
     useMock: params.useMock,
     sourceConfigPath: params.sourceConfigPath,
+    runtimeConfigPath: params.runtimeConfigPath ?? "outputs/runtime-config/global.json",
     sourceLimit: params.sourceLimit,
     reviewInstructionRoot: params.reviewInstructionRoot,
     rawItems: [],
@@ -247,6 +338,7 @@ export function createInitialState(params: {
     approveFinal: params.approveFinal,
     outlineApproved: false,
     finalApproved: false,
+    rejected: false,
     reviewStatus: params.mode === "daily" ? "not_required" : "pending_review",
     reviewStage: params.mode === "daily" ? "none" : "outline_review",
     reviewDeadlineAt: params.mode === "weekly" ? computeWeeklyReviewDeadline(params.generatedAt, params.timezone) : null,
@@ -256,6 +348,7 @@ export function createInitialState(params: {
     publishedAt: null,
     publishReason: "not_decided",
     metrics: createEmptyMetrics(),
+    revisionAuditLogs: [],
     warnings: [],
   };
 }
@@ -296,8 +389,9 @@ function resolveCategory(text: string): ItemCategory {
   return "other";
 }
 
-export async function loadEnabledSources(path: string): Promise<SourceConfig[]> {
-  const sources = await loadSourceConfig(path);
+export async function loadEnabledSources(path: string, runtimeConfigPath = "outputs/runtime-config/global.json"): Promise<SourceConfig[]> {
+  const runtimeConfig = await loadRuntimeConfig(runtimeConfigPath);
+  const sources = applyRuntimeSourceOverrides(await loadSourceConfig(path), runtimeConfig);
   return sources.filter((source) => source.enabled);
 }
 
@@ -306,28 +400,51 @@ export const __test__ = {
   resolvePendingStage,
 };
 
-async function resolveStageApproval(input: {
+async function resolveStageDecision(input: {
   state: ReportState;
   stage: "outline_review" | "final_review";
   fallbackApproved: boolean;
-}): Promise<{ approved: boolean; source: "persisted" | "cli_fallback"; warning?: string }> {
+}): Promise<{
+  approved: boolean;
+  action?: "approve_outline" | "approve_final" | "request_revision" | "reject";
+  reason?: string;
+  instruction: ReviewInstruction;
+  source: "persisted" | "cli_fallback";
+  warning?: string;
+}> {
   const { state, stage, fallbackApproved } = input;
 
   try {
     const store = new FileReviewInstructionStore(state.reviewInstructionRoot);
-    const persistedDecision = await store.getLatestDecision({
+    const persistedInstruction = await store.getLatestInstruction({
       mode: state.mode,
       reportDate: state.reportDate,
       stage,
+      decidedAfterOrAt: state.reviewStartedAt,
     });
 
-    if (persistedDecision !== null) {
-      return { approved: persistedDecision, source: "persisted" };
+    if (persistedInstruction !== null) {
+      const approvedFromAction =
+        persistedInstruction.action === "approve_outline" || persistedInstruction.action === "approve_final";
+      return {
+        approved: persistedInstruction.approved ?? approvedFromAction,
+        action: persistedInstruction.action,
+        reason: persistedInstruction.reason,
+        instruction: persistedInstruction,
+        source: "persisted",
+      };
     }
   } catch (error) {
     // 指令文件异常时回退到 CLI，保证流程不中断；warning 会写入产物便于排障。
     return {
       approved: fallbackApproved,
+      instruction: {
+        mode: state.mode,
+        reportDate: state.reportDate,
+        stage,
+        approved: fallbackApproved,
+        decidedAt: state.generatedAt,
+      },
       source: "cli_fallback",
       warning: `读取审核指令失败，已回退 CLI 参数（stage=${stage}）: ${
         error instanceof Error ? error.message : String(error)
@@ -335,5 +452,30 @@ async function resolveStageApproval(input: {
     };
   }
 
-  return { approved: fallbackApproved, source: "cli_fallback" };
+  return {
+    approved: fallbackApproved,
+    instruction: {
+      mode: state.mode,
+      reportDate: state.reportDate,
+      stage,
+      approved: fallbackApproved,
+      decidedAt: state.generatedAt,
+    },
+    source: "cli_fallback",
+  };
+}
+
+function buildRejectedResult(stage: "outline_review" | "final_review", source: "persisted" | "cli_fallback", reason?: string) {
+  return {
+    rejected: true,
+    outlineApproved: stage === "outline_review" ? false : undefined,
+    finalApproved: stage === "final_review" ? false : undefined,
+    reviewStage: "none" as const,
+    reviewStatus: "rejected" as const,
+    publishStatus: "pending" as const,
+    shouldPublish: false,
+    publishedAt: null,
+    publishReason: "weekly_rejected_no_publish",
+    reviewReason: reason ? `当前 run 被 reject（${source}）: ${reason}` : `当前 run 被 reject（${source}）`,
+  };
 }

@@ -4,8 +4,15 @@ import { createServer, type IncomingHttpHeaders, type IncomingMessage } from "no
 import dayjs from "dayjs";
 import { z } from "zod";
 
-import type { ReviewInstruction, ReviewInstructionAction, ReviewInstructionStage, ReviewStatus } from "../core/types.js";
+import type {
+  ReviewFeedbackPayload,
+  ReviewInstruction,
+  ReviewInstructionAction,
+  ReviewInstructionStage,
+  ReviewStatus,
+} from "../core/types.js";
 import type { ReviewInstructionStore } from "./instruction-store.js";
+import { normalizeFeedbackPayload, reviewFeedbackPayloadSchema } from "./feedback-schema.js";
 
 export interface FeishuConfig {
   webhookUrl?: string;
@@ -41,6 +48,7 @@ export interface ReviewActionPayload {
   reason?: string;
   traceId?: string;
   messageId?: string;
+  feedback?: ReviewFeedbackPayload;
 }
 
 export interface StartFeishuCallbackServerInput {
@@ -82,6 +90,7 @@ export function buildReviewInstructionFromAction(payload: ReviewActionPayload): 
     reason: payload.reason,
     traceId: payload.traceId,
     messageId: payload.messageId,
+    feedback: payload.feedback,
   };
 }
 
@@ -256,6 +265,7 @@ const actionPayloadSchema = z.object({
   reason: z.string().optional(),
   traceId: z.string().min(1).optional(),
   messageId: z.string().min(1).optional(),
+  feedback: reviewFeedbackPayloadSchema.optional(),
 });
 
 function parseCallbackBody(rawBody: string): { challenge: string } | ReviewActionPayload {
@@ -268,6 +278,10 @@ function parseCallbackBody(rawBody: string): { challenge: string } | ReviewActio
   // 兼容当前简化 JSON 回调输入。
   const direct = actionPayloadSchema.safeParse(value);
   if (direct.success) {
+    const feedback = normalizeFeedbackPayload(value);
+    if (feedback) {
+      return { ...direct.data, feedback };
+    }
     return direct.data;
   }
 
@@ -401,6 +415,7 @@ function adaptFeishuCardActionPayload(input: unknown) {
   const eventRecord = asRecord(root.event);
   const operator = resolveOperator(root, eventRecord) ?? getString(value, "operator");
   const reason = getString(value, "reason") ?? getString(value, "comment");
+  const feedback = normalizeFeedbackPayload(value.feedback ?? value.revision ?? value);
   const messageId =
     getString(value, "messageId") ??
     getString(value, "message_id") ??
@@ -425,6 +440,7 @@ function adaptFeishuCardActionPayload(input: unknown) {
     ...(reason ? { reason } : {}),
     ...(traceId ? { traceId } : {}),
     ...(messageId ? { messageId } : {}),
+    ...(feedback ? { feedback } : {}),
   };
 }
 

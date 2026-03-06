@@ -13,7 +13,7 @@ export type ItemCategory =
 
 export type ImportanceLevel = "high" | "medium" | "low";
 
-export type ReviewStatus = "not_required" | "pending_review" | "approved" | "timeout_published";
+export type ReviewStatus = "not_required" | "pending_review" | "approved" | "timeout_published" | "rejected";
 
 export type ReviewStage = "none" | "outline_review" | "final_review";
 
@@ -24,6 +24,61 @@ export type ReviewInstructionStage = Exclude<ReviewStage, "none">;
 export type ReviewInstructionSource = "cli" | "feishu_callback";
 
 export type ReviewInstructionAction = "approve_outline" | "approve_final" | "request_revision" | "reject";
+
+export interface FeedbackCandidateAddition {
+  title: string;
+  link?: string;
+  summary?: string;
+  category?: ItemCategory;
+  sourceId?: string;
+  sourceName?: string;
+}
+
+export interface FeedbackCandidateRemoval {
+  id?: string;
+  link?: string;
+}
+
+export interface FeedbackSourceToggle {
+  sourceId: string;
+  enabled: boolean;
+}
+
+export interface FeedbackSourceWeightAdjustment {
+  sourceId: string;
+  weight: number;
+}
+
+export type RankingWeightDimension = "source" | "freshness" | "keyword";
+
+export interface FeedbackRankingWeightAdjustment {
+  dimension: RankingWeightDimension;
+  weight: number;
+}
+
+export interface ReviewFeedbackPayload {
+  candidateAdditions?: FeedbackCandidateAddition[];
+  candidateRemovals?: FeedbackCandidateRemoval[];
+  newTopics?: string[];
+  newSearchTerms?: string[];
+  sourceToggles?: FeedbackSourceToggle[];
+  sourceWeightAdjustments?: FeedbackSourceWeightAdjustment[];
+  rankingWeightAdjustments?: FeedbackRankingWeightAdjustment[];
+  editorNotes?: string;
+}
+
+export interface RevisionAuditLog {
+  at: string;
+  stage: ReviewInstructionStage;
+  operator?: string;
+  reason?: string;
+  addedCount: number;
+  removedCount: number;
+  beforeCount: number;
+  afterCount: number;
+  globalConfigChanges: string[];
+  notes?: string;
+}
 
 export interface ReviewInstruction {
   mode: ReportMode;
@@ -37,6 +92,7 @@ export interface ReviewInstruction {
   reason?: string;
   traceId?: string;
   messageId?: string;
+  feedback?: ReviewFeedbackPayload;
 }
 
 export interface SourceConfig {
@@ -90,9 +146,11 @@ export interface ReportState {
   mode: ReportMode;
   timezone: string;
   generatedAt: string;
+  reviewStartedAt: string;
   reportDate: string;
   useMock: boolean;
   sourceConfigPath: string;
+  runtimeConfigPath: string;
   sourceLimit: number;
   reviewInstructionRoot: string;
   rawItems: RawItem[];
@@ -105,6 +163,7 @@ export interface ReportState {
   approveFinal: boolean;
   outlineApproved: boolean;
   finalApproved: boolean;
+  rejected: boolean;
   reviewStatus: ReviewStatus;
   reviewStage: ReviewStage;
   reviewDeadlineAt: string | null;
@@ -114,5 +173,6 @@ export interface ReportState {
   publishedAt: string | null;
   publishReason: string;
   metrics: PipelineMetrics;
+  revisionAuditLogs: RevisionAuditLog[];
   warnings: string[];
 }

@@ -21,6 +21,7 @@ interface CliArgs {
   mode: ReportMode;
   mock: boolean;
   sourceConfigPath: string;
+  runtimeConfigPath: string;
   sourceLimit: number;
   timezone: string;
   outputRoot: string;
@@ -85,7 +86,7 @@ async function runPipeline(args: CliArgs) {
   const reportDate = args.reportDate ?? generatedAt.slice(0, 10);
   const runId = `${args.mode}-${Date.now()}`;
 
-  const enabledSources = await loadEnabledSources(args.sourceConfigPath);
+  const enabledSources = await loadEnabledSources(args.sourceConfigPath, args.runtimeConfigPath);
   console.log(`[run] mode=${args.mode}, mock=${args.mock}, sources=${enabledSources.length}`);
 
   // CLI 只负责 orchestration：准备初始状态、执行 graph、落盘产物。
@@ -95,8 +96,10 @@ async function runPipeline(args: CliArgs) {
     timezone: args.timezone,
     useMock: args.mock,
     sourceConfigPath: args.sourceConfigPath,
+    runtimeConfigPath: args.runtimeConfigPath,
     sourceLimit: args.sourceLimit,
     generatedAt,
+    reviewStartedAt: generatedAt,
     reportDate,
     runId,
     approveOutline: args.approveOutline,
@@ -315,6 +318,12 @@ function parseArgs(argv: string[]): CliArgs {
       continue;
     }
 
+    if (token === "--runtime-config-path" && next) {
+      args.runtimeConfigPath = next;
+      i += 1;
+      continue;
+    }
+
     if (token === "--source-limit" && next) {
       args.sourceLimit = Number(next);
       i += 1;
@@ -480,6 +489,7 @@ function defaults(): CliArgs {
     mode: "weekly",
     mock: false,
     sourceConfigPath: "data/sources.yaml",
+    runtimeConfigPath: "outputs/runtime-config/global.json",
     sourceLimit: 6,
     timezone: "Asia/Shanghai",
     outputRoot: "outputs/review",
@@ -543,6 +553,7 @@ async function writeArtifacts(root: string, mode: ReportMode, datePart: string, 
       {
         runId: result.runId,
         generatedAt: result.generatedAt,
+        reviewStartedAt: result.reviewStartedAt,
         reportDate: result.reportDate,
         mode: result.mode,
         reviewStatus: result.reviewStatus,
@@ -555,12 +566,15 @@ async function writeArtifacts(root: string, mode: ReportMode, datePart: string, 
         publishedAt: result.publishedAt,
         outlineApproved: result.outlineApproved,
         finalApproved: result.finalApproved,
+        rejected: result.rejected,
         metrics: result.metrics,
         highlights: result.highlights,
+        revisionAuditLogs: result.revisionAuditLogs,
         warnings: result.warnings,
         snapshot: {
           timezone: result.timezone,
           sourceConfigPath: result.sourceConfigPath,
+          runtimeConfigPath: result.runtimeConfigPath,
           sourceLimit: result.sourceLimit,
           outlineMarkdown: result.outlineMarkdown,
           rankedItems: result.rankedItems,
@@ -715,8 +729,10 @@ function buildRecheckStateFromArtifact(input: {
     timezone: artifact.snapshot.timezone,
     useMock: false,
     sourceConfigPath: artifact.snapshot.sourceConfigPath,
+    runtimeConfigPath: artifact.snapshot.runtimeConfigPath ?? args.runtimeConfigPath,
     sourceLimit: artifact.snapshot.sourceLimit,
     generatedAt,
+    reviewStartedAt: artifact.reviewStartedAt ?? artifact.generatedAt,
     reportDate,
     runId,
     approveOutline: args.approveOutline,
@@ -741,6 +757,8 @@ function buildRecheckStateFromArtifact(input: {
     publishedAt: artifact.publishedAt,
     outlineApproved: artifact.outlineApproved ?? false,
     finalApproved: artifact.finalApproved ?? false,
+    rejected: artifact.rejected ?? artifact.reviewStatus === "rejected",
+    revisionAuditLogs: artifact.revisionAuditLogs ?? [],
   };
 }
 

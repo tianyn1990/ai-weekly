@@ -7,7 +7,8 @@
 - 已完成 `docs/architecture.md`（系统设计）。
 - 已提供可运行的 M3.1 流程：`collect -> normalize -> dedupe -> classify -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> build_report`。
 - 周报审核支持「持久化指令优先，CLI 参数 fallback」、pending 周报复检发布、watchdog 守护扫描（含锁与重试）。
-- 已接入 M3.2 第一阶段能力：Feishu 待审核通知、11:30 提醒命令、发布结果回执、本地回调服务（2B：本地 + 隧道）。
+- 已完成 M3.2：Feishu 待审核通知、11:30 提醒命令、发布结果回执、本地回调服务（2B：本地 + 隧道）。
+- 已完成 M3.3：`request_revision` 回流修订执行、runtime config 全局沉淀、`reject` 终止当前 run 发布。
 - 分布式互斥暂缓，当前以单机定时任务为部署基线。
 
 ## 环境要求
@@ -34,7 +35,7 @@ pnpm run:weekly
 
 可选参数：
 ```bash
-tsx src/cli.ts run --mode weekly --source-config data/sources.yaml --source-limit 6 --timezone Asia/Shanghai
+tsx src/cli.ts run --mode weekly --source-config data/sources.yaml --runtime-config-path outputs/runtime-config/global.json --source-limit 6 --timezone Asia/Shanghai
 ```
 
 审核相关参数：
@@ -59,10 +60,37 @@ tsx src/cli.ts run --mode weekly --mock --generated-at 2026-03-09T05:00:00.000Z
 }
 ```
 
+回流修订示例（`request_revision`）：
+```json
+{
+  "mode": "weekly",
+  "reportDate": "2026-03-10",
+  "instructions": [
+    {
+      "stage": "final_review",
+      "action": "request_revision",
+      "decidedAt": "2026-03-10T09:20:00.000Z",
+      "feedback": {
+        "candidateAdditions": [
+          { "title": "新增 Agent 实战案例", "link": "https://example.com/agent-case", "category": "agent" }
+        ],
+        "sourceToggles": [{ "sourceId": "openai-news", "enabled": false }],
+        "rankingWeightAdjustments": [{ "dimension": "keyword", "weight": 1.2 }],
+        "editorNotes": "补充工程实践并降低泛新闻噪音"
+      }
+    }
+  ]
+}
+```
+
 pending 周报复检发布（不重跑采集链路）：
 ```bash
 tsx src/cli.ts run --mode weekly --recheck-pending --report-date 2026-03-05
 ```
+
+`reject` 语义（M3.3）：
+- 被 reject 的当前 run 在 recheck/watchdog 下不会发布。
+- 同一 reportDate 如需继续发布，必须新建 run（新 runId）。
 
 pending 周报守护扫描（批量巡检）：
 ```bash
@@ -230,7 +258,6 @@ pnpm test
 - 模型调用与高级总结暂未接入，作为下一阶段扩展点。
 
 ## 下一步（建议）
-1. 接入 Feishu 审核协同：通知、审核动作输入、截止提醒。
-2. 增加“审核意见回流修订”：新增/删除候选、主题词/搜索词/权重调整。
-3. 审核指令存储从文件升级到 DB/API，并补并发写保护。
-4. 接入 LLM 总结节点，并逐步扩展到分类/打标/排序辅助。
+1. 审核指令与 runtime config 从文件升级到 DB/API，并补并发写保护与审计查询。
+2. 增加一键新 run 命令（针对 reject 后重开流程）。
+3. 接入 LLM 总结节点，并逐步扩展到分类/打标/排序辅助。

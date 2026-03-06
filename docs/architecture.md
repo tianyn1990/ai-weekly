@@ -1,7 +1,7 @@
-# AI 周报系统设计（v0.2）
+# AI 周报系统设计（v0.3）
 
 ## 1. 文档目标与范围
-- 目标：定义 AI 日报/周报系统在 **M3.1 已完成** 与 **M3.2/M3.3 规划中** 的完整技术架构。
+- 目标：定义 AI 日报/周报系统在 **M3.3 已完成** 基线下的完整技术架构。
 - 范围：覆盖采集、处理、审核、发布、协同通知、审核意见回流、可观测与运维策略。
 - 非目标：不描述前端管理后台 UI 细节；不覆盖分布式部署实现细节（当前暂缓）。
 
@@ -14,15 +14,19 @@
 - watchdog 巡检：批量扫描 pending 周报，支持 dry-run。
 - watchdog 可靠性增强：单机 lock、失败重试、summary 落盘。
 
-### 2.2 已实现（M3.2 第一阶段）
+### 2.2 已实现（M3.2）
 - Feishu 协同通知：待审核通知、发布结果回执。
 - Feishu 截止提醒：周一 11:30 单次提醒命令（由 cron 触发）。
-- Feishu 动作回写：本地回调服务写入持久化审核指令（2B：本地服务 + 隧道）。
+- Feishu 动作回写：本地回调服务写入持久化审核指令（2B：本地服务 + 隧道，兼容 query token）。
 - Feishu 原生 payload 适配：支持卡片 `action.value/form_value` 映射到统一审核动作模型。
-- 审核动作写入审计字段：`source/action/operator/traceId/messageId`（文件模式）。
+- 审核动作写入审计字段：`source/action/operator/traceId/messageId/feedback`（文件模式）。
 
-### 2.3 规划中（M3.3 ~ M5）
-- 审核意见回流修订：在原内容基础上进行结构化调整（非取消式）。
+### 2.3 已实现（M3.3）
+- 审核意见回流修订：`request_revision` 会执行结构化反馈（候选增删、主题词/搜索词、来源启停与权重、排序权重）。
+- 全局配置沉淀：回流中的检索/排序调整写入 runtime config，并在后续 run 生效。
+- reject 终止约束：被 reject 的当前 run 在 recheck/watchdog 路径下不再发布，必须新建 run 才能再次进入发布流程。
+
+### 2.4 规划中（M4 ~ M5）
 - 审核指令/历史存储升级：文件 -> DB/API。
 - LLM 增强：先总结，再逐步扩展到分类/打标/排序辅助。
 
@@ -31,7 +35,7 @@
 1. **Ingestion Layer**：按来源抓取原始条目（RSS/后续扩展 API）。
 2. **Processing Layer (LangGraph)**：标准化、去重、分类、排序、大纲/正文生成。
 3. **Review Orchestration Layer**：审核状态机、超时发布判定、pending 复检。
-4. **Collaboration Layer（规划）**：Feishu 通知、审核动作回写、意见指令回流。
+4. **Collaboration Layer**：Feishu 通知、审核动作回写、审核意见回流修订。
 5. **Storage Layer**：本地文件持久化（后续迁移 DB/API）。
 
 ## 4. 目录与模块责任
@@ -47,6 +51,9 @@
 │   └── watchdog/
 └── src/
     ├── cli.ts                        # 运行入口/调度分发
+    ├── config/
+    │   ├── source-config.ts          # 来源配置读取
+    │   └── runtime-config.ts         # 回流全局配置（主题词/来源/权重）
     ├── core/
     │   ├── types.ts                  # 状态与领域类型
     │   ├── review-artifact.ts        # review 产物 schema
@@ -59,6 +66,8 @@
     │   └── watchdog.ts               # 批量巡检执行器
     ├── review/
     │   ├── instruction-store.ts      # 审核指令存储抽象（文件实现）
+    │   ├── feedback-schema.ts        # 回流 payload 归一化与校验
+    │   ├── feedback-executor.ts      # request_revision 回流执行器
     │   ├── feishu.ts                 # Feishu 通知与回调服务（2B）
     │   └── reminder-policy.ts        # 周一 11:30 提醒判定策略
     ├── report/
@@ -139,22 +148,22 @@ weekly report generated
 - M3.2 回调部署采用 2B：本地服务 + 隧道暴露公网地址，回调写入前执行 token/signature 校验。
 - 飞书卡片原生回调先经过 payload adapter，再转换为 `ReviewActionPayload`，保证多种事件结构可复用同一状态机。
 
-### 5.5 审核意见回流修订流程（M3.3 规划）
+### 5.5 审核意见回流修订流程（M3.3 已实现）
 ```text
 request_revision
   -> parse structured directives
-  -> apply revision rules
-  -> regenerate draft
+  -> execute feedback (candidate add/remove + runtime config merge)
+  -> rerank + rebuild outline/report
   -> back to final_review
 ```
 
 你要求的“回流不等于取消”在此落地：
 - `request_revision`：进入修订分支，不终止流程。
-- `reject`：终止本轮发布尝试，但保留产物与审计记录。
+- `reject`：终止当前 run 发布尝试，但保留产物与审计记录，新 run 可重新进入审核流。
 
 ## 6. 状态机模型
 ### 6.1 审核状态
-- `reviewStatus`: `not_required | pending_review | approved | timeout_published`
+- `reviewStatus`: `not_required | pending_review | approved | timeout_published | rejected`
 - `reviewStage`: `outline_review | final_review | none`
 - `publishStatus`: `pending | published`
 
@@ -171,16 +180,17 @@ request_revision
 - `pending_review + final_review + approve_final -> approved + published`
 - `pending_review + any + deadline_reached -> timeout_published + published`
 - `pending_review + final_review + request_revision -> pending_review + final_review(修订后)`
-- `pending_review + any + reject -> pending_review + pending(结束本次发布尝试)`
+- `pending_review + any + reject -> rejected + pending(终止当前 run 发布尝试)`
 
 ## 7. 数据模型与持久化契约
 ### 7.1 Review Artifact（已实现）
 位置：`outputs/review/{mode}/{reportDate}.json`
 
 核心字段：
-- 运行维度：`runId`, `generatedAt`, `reportDate`, `mode`
-- 审核维度：`reviewStatus`, `reviewStage`, `reviewDeadlineAt`, `outlineApproved`, `finalApproved`
+- 运行维度：`runId`, `generatedAt`, `reviewStartedAt`, `reportDate`, `mode`
+- 审核维度：`reviewStatus`, `reviewStage`, `reviewDeadlineAt`, `outlineApproved`, `finalApproved`, `rejected`
 - 发布维度：`publishStatus`, `shouldPublish`, `publishReason`, `publishedAt`
+- 修订审计：`revisionAuditLogs`
 - 内容快照：`snapshot`（recheck/watchdog 重建报告用）
 
 ### 7.2 审核指令（已实现 + 待扩展）
@@ -193,16 +203,18 @@ M3.2 扩展：
 - `source`: `cli | feishu_callback`
 - `action`: `approve_outline | approve_final | request_revision | reject`
 - `traceId` / `messageId`（便于追踪 Feishu 回调）
+- `feedback`（结构化回流 payload）
 
-### 7.3 审核意见回流指令（M3.3 规划）
-建议新增 `feedbackDirectives`：
-- `candidate_additions`: 新增候选条目
-- `candidate_removals`: 删除候选条目
-- `new_topics`: 新增主题词
-- `new_search_terms`: 新增搜索词
-- `source_weight_adjustments`: 数据源权重调整
-- `ranking_weight_adjustments`: 排序权重调整
-- `editor_notes`: 人工备注（展示用途）
+### 7.3 审核意见回流指令（M3.3 已实现）
+`feedback` 字段支持：
+- `candidateAdditions`：新增候选条目
+- `candidateRemovals`：删除候选条目
+- `newTopics`：新增主题词
+- `newSearchTerms`：新增搜索词
+- `sourceToggles`：来源启停
+- `sourceWeightAdjustments`：来源权重调整
+- `rankingWeightAdjustments`：排序权重调整（source/freshness/keyword）
+- `editorNotes`：人工备注（展示用途）
 
 ### 7.4 Watchdog Summary（已实现）
 位置：`outputs/watchdog/weekly/<timestamp>.json`
@@ -213,14 +225,14 @@ M3.2 扩展：
 - 执行上下文：`dryRun`, `retries`, `lockFile`, `startedAt`, `finishedAt`
 
 ## 8. 策略层设计（回流如何生效）
-为避免“自由文本难执行”，回流策略统一结构化并分三层：
+为避免“自由文本难执行”，回流策略统一结构化并分三层（已落地）：
 1. **条目层**：新增、删除、置顶、降权。
 2. **检索层**：主题词/搜索词/来源启停与权重调整。
 3. **输出层**：章节结构、重点推荐数量、语气风格控制。
 
 执行原则：
-- 先应用条目层，再应用检索层，最后渲染输出层。
-- 所有自动调整必须写入变更日志，保证可追溯。
+- 先应用条目层（增删候选），再应用检索层（来源/权重/关键词），最后渲染输出层。
+- 所有自动调整写入 `revisionAuditLogs`，并将 runtime 配置变更落盘。
 
 ## 9. 可观测性、容错与告警
 - 节点指标：每节点输入量/输出量/耗时。
@@ -259,8 +271,8 @@ M3.2 扩展：
 - 分布式互斥：仅在多实例部署时启动（当前明确暂缓）。
 
 ## 12. 分阶段执行计划（冻结）
-1. **M3.2（协同）**：Feishu 通知 + 审核动作回写 + 截止提醒【已完成第一阶段】。
-2. **M3.3（修订）**：审核意见回流执行（新增/删除候选、主题词/搜索词、权重调整）+ 打回再审核。
+1. **M3.2（协同）**：Feishu 通知 + 审核动作回写 + 截止提醒【已完成】。
+2. **M3.3（修订）**：审核意见回流执行 + 打回终止约束【已完成】。
 3. **M4（存储）**：审核指令与历史产物迁移 DB/API，补审计与并发控制。
 4. **M5（智能）**：LLM 总结节点优先，逐步扩展到分类/打标/排序辅助。
 5. **暂缓项**：分布式互斥（多实例部署时再做）。

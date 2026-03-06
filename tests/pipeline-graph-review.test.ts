@@ -107,8 +107,8 @@ describe("pipeline graph review flow", () => {
             mode: "weekly",
             reportDate: "2026-03-09",
             instructions: [
-              { stage: "outline_review", approved: true, decidedAt: "2026-03-09T01:00:00.000Z" },
-              { stage: "final_review", approved: true, decidedAt: "2026-03-09T02:00:00.000Z" },
+              { stage: "outline_review", approved: true, decidedAt: "2026-03-09T02:40:00.000Z" },
+              { stage: "final_review", approved: true, decidedAt: "2026-03-09T02:50:00.000Z" },
             ],
           },
           null,
