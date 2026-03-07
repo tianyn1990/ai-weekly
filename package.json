@@ -18,6 +18,7 @@
     "feishu:callback": "tsx src/cli.ts run --serve-feishu-callback",
     "feishu:tunnel": "bash scripts/feishu-tunnel.sh",
     "feishu:dev": "bash scripts/feishu-dev.sh",
+    "feishu:fullflow": "bash scripts/feishu-fullflow.sh",
     "feishu:token": "tsx src/tools/feishu-ops.ts token",
     "feishu:chat:list": "tsx src/tools/feishu-ops.ts chats",
     "feishu:card:send": "tsx src/tools/feishu-ops.ts send-card",

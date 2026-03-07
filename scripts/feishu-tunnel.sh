@@ -6,14 +6,16 @@ HOST="${FEISHU_CALLBACK_HOST:-127.0.0.1}"
 PORT="${FEISHU_CALLBACK_PORT:-8787}"
 CALLBACK_PATH="${FEISHU_CALLBACK_PATH:-/feishu/review-callback}"
 LOCAL_URL="http://${HOST}:${PORT}"
+CLOUDFLARED_PROTOCOL="${CLOUDFLARED_PROTOCOL:-http2}"
 
 if command -v cloudflared >/dev/null 2>&1; then
   echo "[feishu-tunnel] provider=cloudflared"
+  echo "[feishu-tunnel] protocol=${CLOUDFLARED_PROTOCOL}"
   echo "[feishu-tunnel] local-url=${LOCAL_URL}${CALLBACK_PATH}"
   echo "[feishu-tunnel] waiting public url..."
 
   printed=0
-  cloudflared tunnel --url "${LOCAL_URL}" 2>&1 | while IFS= read -r line; do
+  cloudflared tunnel --protocol "${CLOUDFLARED_PROTOCOL}" --url "${LOCAL_URL}" 2>&1 | while IFS= read -r line; do
     echo "${line}"
     if [[ "${printed}" -eq 0 ]]; then
       public_url="$(echo "${line}" | grep -Eo 'https://[-A-Za-z0-9.]+trycloudflare.com' | head -n 1 || true)"

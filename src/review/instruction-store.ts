@@ -22,9 +22,19 @@ export interface GetReviewInstructionInput {
   decidedAfterOrAt?: string;
 }
 
+export interface FindDuplicateReviewInstructionInput {
+  mode: ReportMode;
+  reportDate: string;
+  stage: ReviewInstructionStage;
+  action?: ReviewInstructionAction;
+  traceId?: string;
+  messageId?: string;
+}
+
 export interface ReviewInstructionStore {
   getLatestDecision(input: GetReviewInstructionInput): Promise<boolean | null>;
   getLatestInstruction(input: GetReviewInstructionInput): Promise<ReviewInstruction | null>;
+  findDuplicateInstruction(input: FindDuplicateReviewInstructionInput): Promise<ReviewInstruction | null>;
   appendInstruction(input: ReviewInstruction): Promise<void>;
 }
 
@@ -165,6 +175,40 @@ export class FileReviewInstructionStore implements ReviewInstructionStore {
     };
   }
 
+  async findDuplicateInstruction(input: FindDuplicateReviewInstructionInput): Promise<ReviewInstruction | null> {
+    const filePath = path.join(this.rootDir, input.mode, `${input.reportDate}.json`);
+    const payload = await readInstructionFile(filePath);
+    if (!payload) {
+      return null;
+    }
+    ensurePayloadMatchesTarget(payload, input.mode, input.reportDate);
+
+    const matched = payload.instructions
+      .filter((instruction) => instruction.stage === input.stage)
+      .filter((instruction) => isInstructionDuplicateOf(instruction, input))
+      .sort((a, b) => dayjs(b.decidedAt).valueOf() - dayjs(a.decidedAt).valueOf());
+
+    if (matched.length === 0) {
+      return null;
+    }
+
+    return {
+      mode: input.mode,
+      reportDate: input.reportDate,
+      stage: matched[0].stage,
+      approved: matched[0].approved,
+      action: matched[0].action,
+      decidedAt: matched[0].decidedAt,
+      source: matched[0].source,
+      operator: matched[0].operator,
+      reason: matched[0].reason,
+      traceId: matched[0].traceId,
+      messageId: matched[0].messageId,
+      runId: matched[0].runId,
+      feedback: matched[0].feedback,
+    };
+  }
+
   async appendInstruction(input: ReviewInstruction): Promise<void> {
     const filePath = path.join(this.rootDir, input.mode, `${input.reportDate}.json`);
     const existing = (await readInstructionFile(filePath)) ?? {
@@ -238,6 +282,44 @@ export class DbReviewInstructionStore implements ReviewInstructionStore {
         return null;
       }
 
+      return toReviewInstructionFromDbRow(dbInstructionRowSchema.parse(row));
+    });
+  }
+
+  async findDuplicateInstruction(input: FindDuplicateReviewInstructionInput): Promise<ReviewInstruction | null> {
+    return this.engine.read((ctx) => {
+      const row = ctx.queryOne(
+        `
+        SELECT mode, report_date, stage, approved, action, decided_at, source, operator, reason, trace_id, message_id, run_id, feedback_json
+        FROM review_instructions
+        WHERE mode = $mode
+          AND report_date = $reportDate
+          AND stage = $stage
+          AND (
+            ($traceId IS NOT NULL AND trace_id = $traceId)
+            OR (
+              $traceId IS NULL
+              AND $messageId IS NOT NULL
+              AND message_id = $messageId
+              AND (action IS $action OR action = $action)
+            )
+          )
+        ORDER BY decided_at DESC, id DESC
+        LIMIT 1;
+        `,
+        {
+          $mode: input.mode,
+          $reportDate: input.reportDate,
+          $stage: input.stage,
+          $traceId: input.traceId ?? null,
+          $messageId: input.messageId ?? null,
+          $action: input.action ?? null,
+        },
+      );
+
+      if (!row) {
+        return null;
+      }
       return toReviewInstructionFromDbRow(dbInstructionRowSchema.parse(row));
     });
   }
@@ -317,6 +399,14 @@ class HybridReviewInstructionStore implements ReviewInstructionStore {
     }
   }
 
+  async findDuplicateInstruction(input: FindDuplicateReviewInstructionInput): Promise<ReviewInstruction | null> {
+    try {
+      return await this.input.primary.findDuplicateInstruction(input);
+    } catch {
+      return this.input.fallback.findDuplicateInstruction(input);
+    }
+  }
+
   async appendInstruction(input: ReviewInstruction): Promise<void> {
     await this.input.primary.appendInstruction(input);
     // 镜像写入失败不阻断主链路，避免 fallback 存储抖动影响主路径。
@@ -366,6 +456,21 @@ function normalizeInstruction(input: ReviewInstruction) {
     runId: input.runId,
     feedback: input.feedback,
   });
+}
+
+function isInstructionDuplicateOf(
+  instruction: z.infer<typeof instructionRecordSchema>,
+  input: FindDuplicateReviewInstructionInput,
+): boolean {
+  // 回调幂等优先使用 traceId（事件级唯一），避免飞书重试导致重复动作。
+  if (input.traceId && instruction.traceId === input.traceId) {
+    return true;
+  }
+  // 当缺少 traceId 时，退化为 messageId + stage + action 组合去重。
+  if (!input.traceId && input.messageId && instruction.messageId === input.messageId) {
+    return instruction.action === input.action;
+  }
+  return false;
 }
 
 function toReviewInstructionFromDbRow(row: z.infer<typeof dbInstructionRowSchema>): ReviewInstruction {

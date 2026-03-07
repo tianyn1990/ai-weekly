@@ -186,4 +186,31 @@ describe("FileReviewInstructionStore", () => {
       await fs.rm(tempDir, { recursive: true, force: true });
     }
   });
+
+  it("应支持按 traceId 判重查询（回调幂等）", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-instruction-"));
+    try {
+      const store = new FileReviewInstructionStore(tempDir);
+      await store.appendInstruction({
+        mode: "weekly",
+        reportDate: "2026-03-12",
+        stage: "outline_review",
+        action: "approve_outline",
+        source: "feishu_callback",
+        decidedAt: "2026-03-12T09:20:00.000Z",
+        traceId: "evt-001",
+      });
+
+      const duplicated = await store.findDuplicateInstruction({
+        mode: "weekly",
+        reportDate: "2026-03-12",
+        stage: "outline_review",
+        action: "approve_outline",
+        traceId: "evt-001",
+      });
+      expect(duplicated?.traceId).toBe("evt-001");
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
 });

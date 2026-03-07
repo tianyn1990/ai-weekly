@@ -1,7 +1,7 @@
-# AI 周报系统设计（v0.4）
+# AI 周报系统设计（v0.6）
 
 ## 1. 文档目标与范围
-- 目标：定义 AI 日报/周报系统在 **M4 已完成** 基线下的完整技术架构。
+- 目标：定义 AI 日报/周报系统在 **M4.2 已完成** 基线下的完整技术架构。
 - 范围：覆盖采集、处理、审核、发布、协同通知、审核意见回流、可观测与运维策略。
 - 非目标：不描述前端管理后台 UI 细节；不覆盖分布式部署实现细节（当前暂缓）。
 
@@ -34,7 +34,21 @@
 - 迁移能力：支持从文件（`review-instructions` + runtime config）导入 DB。
 - 兼容策略：DB 优先 + 文件 fallback。
 
-### 2.5 规划中（M5）
+### 2.5 已实现（M4.1）
+- 飞书通知通道统一为 app-only：仅应用机器人负责待审核、提醒、发布与动作回执通知。
+- 点击反馈闭环：卡片点击后返回 toast（success/error），并向群内发送动作状态回执。
+- 状态回显能力：回调可读取最新 review artifact 生成状态回显；读取失败时回退到动作级推断。
+- 失败隔离：动作写入成功后，若回执推送失败只记录 warning，不反向污染审核主流程。
+- 可点击链接：支持通过 `REPORT_PUBLIC_BASE_URL` 把本地产物路径转换为飞书可点击 URL。
+
+### 2.6 已实现（M4.2）
+- 阶段引导式主卡：按 `outline_review/final_review/结束态` 渲染不同状态文案与按钮集合。
+- 单轮单主卡：同一 `reportDate + runId` 复用同一消息入口，阶段变化优先 PATCH 更新卡片。
+- 更新失败降级：主卡更新失败时自动新发卡片并覆盖记录，保证审核入口可用。
+- 回执去噪：动作回执改为业务化短句；重复回调仅返回 toast，不重复群发。
+- 兼容 recheck/watchdog：非 run 触发也会更新主卡状态，避免“卡片停留旧阶段”。
+
+### 2.7 规划中（M5）
 - LLM 增强：先总结，再逐步扩展到分类/打标/排序辅助。
 
 ## 3. 架构全景
@@ -144,24 +158,50 @@ acquire lock
 - 失败隔离：单报告失败不阻塞其他报告。
 - 可追踪：每次执行写 summary 文件并输出逐条结果。
 
-### 5.4 Feishu 审核协同流程（M3.2 已实现第一阶段）
+### 5.4 Feishu 审核协同流程（M3.2 + M4.1 已实现）
 ```text
 weekly report generated
-  -> send Feishu notify (outline review)
+  -> upsert Feishu 主审核卡 (app-only)
   -> reviewer action callback (approve / request_revision / reject)
   -> persist review instruction
+  -> callback toast feedback (success / error)
+  -> group action receipt (non-duplicate only)
   -> recheck
-  -> send Feishu notify (final review / publish result)
+  -> upsert 主卡到下一阶段 (final review / published / rejected)
+  -> send publish summary text (optional)
 ```
 
 设计要点：
-- 审核通知、动作输入、截止提醒都优先走 Feishu。
+- 审核通知、动作输入、截止提醒都由 Feishu app bot 负责。
 - 回调动作统一转为持久化审核指令，复用现有状态机与 recheck/watchdog。
 - CLI 审核保留为 fallback（协同链路故障兜底）。
 - M3.2 回调部署采用 2B：本地服务 + 隧道暴露公网地址，回调写入前执行 token/signature 校验。
 - 飞书卡片原生回调先经过 payload adapter，再转换为 `ReviewActionPayload`，保证多种事件结构可复用同一状态机。
+- 回调反馈分两层：点击人即时 toast + 群内状态回执，避免“点击后无感知”。
+- 回调状态回执字段：`reportDate/action/operator/result/reviewStage/reviewStatus/publishStatus/shouldPublish`。
+- 报告链接字段支持双形态：`reviewFile/publishedFile`（本地路径）+ `reviewUrl/publishedUrl`（公网可点击）。
 
-### 5.5 审核意见回流修订流程（M3.3 已实现）
+### 5.5 Feishu 交互重构流程（M4.2 已实现）
+```text
+pending review detected (run/recheck/watchdog)
+  -> load main-card record by reportDate
+  -> if same runId then PATCH card
+  -> else send new card and persist messageId
+  -> stage-specific buttons rendered
+
+callback action received
+  -> auth verify + payload adapt + idempotency dedupe
+  -> append instruction
+  -> toast(success/error)
+  -> notify group only when non-duplicate
+```
+
+设计要点：
+- 主卡作为“唯一操作入口”，减少群内卡片刷屏。
+- 幂等优先 `traceId`，缺失时退化到 `messageId + stage + action`。
+- 重复动作不广播，降低审核群噪音。
+
+### 5.6 审核意见回流修订流程（M3.3 已实现）
 ```text
 request_revision
   -> parse structured directives
@@ -222,6 +262,10 @@ DB 表：`review_instructions`
 - 关键列：`mode/report_date/run_id/stage/action/approved/decided_at/source/operator/trace_id/feedback_json`
 - 关键索引：`(mode, report_date, stage, decided_at DESC, id DESC)`
 
+回调动作反馈（M4.1）：
+- 点击响应体：`{ ok, toast: { type, content }, warning? }`
+- 群内回执：由通知器统一发送，记录动作受理结果（`accepted | failed`）与状态回显。
+
 ### 7.3 审核意见回流指令（M3.3 已实现）
 `feedback` 字段支持：
 - `candidateAdditions`：新增候选条目
@@ -251,6 +295,17 @@ DB 表：`audit_events`
 - 关键列：`event_type/entity_type/entity_id/payload_json/operator/source/trace_id/created_at`
 - 查询：支持按 `traceId` 与 `eventType` 检索。
 
+### 7.7 Feishu 主卡记录（M4.2）
+位置：`outputs/notifications/feishu/main-cards/weekly/{reportDate}.json`
+
+核心字段：
+- `reportDate`, `runId`, `messageId`, `stage`, `updatedAt`
+
+语义约束：
+- 若当前 `runId` 与记录一致，优先更新原卡；
+- 若 `runId` 不一致或更新失败，则发送新卡并覆盖 `messageId`；
+- 该记录仅用于协同入口路由，不参与审核状态判定。
+
 ## 8. 策略层设计（回流如何生效）
 为避免“自由文本难执行”，回流策略统一结构化并分三层（已落地）：
 1. **条目层**：新增、删除、置顶、降权。
@@ -267,6 +322,7 @@ DB 表：`audit_events`
 - 重试策略：watchdog 单条目重试（可配置次数与间隔）。
 - 告警策略（当前）：failed>0 输出 alert 日志 + summary。
 - 告警策略（M3.2）：接入 Feishu 通知与聚合告警。
+- 回调可观测（M4.1）：`[feishu-callback] accepted ...` 固定日志 + 通知失败 warning 字段。
 
 ## 10. 安全与配置
 ### 10.1 当前配置
@@ -274,9 +330,9 @@ DB 表：`audit_events`
 - 审核截止：周一 12:30
 - watchdog：`--watch-lock-file`、`--watch-max-retries`、`--watch-retry-delay-ms`
 
-### 10.2 Feishu 接入配置（M3.2）
-- `FEISHU_WEBHOOK_URL`
-- `FEISHU_WEBHOOK_SECRET`（可选）
+### 10.2 Feishu 接入配置（M3.2 + M4.1）
+- `FEISHU_APP_ID` / `FEISHU_APP_SECRET` / `REVIEW_CHAT_ID`（必填）
+- `REPORT_PUBLIC_BASE_URL`（可选，用于生成可点击报告链接）
 - `FEISHU_CALLBACK_HOST` / `FEISHU_CALLBACK_PORT` / `FEISHU_CALLBACK_PATH`
 - `FEISHU_CALLBACK_AUTH_TOKEN`（可选）
 - `FEISHU_SIGNING_SECRET`（回调验签）
@@ -308,8 +364,9 @@ DB 表：`audit_events`
 1. **M3.2（协同）**：Feishu 通知 + 审核动作回写 + 截止提醒【已完成】。
 2. **M3.3（修订）**：审核意见回流执行 + 打回终止约束【已完成】。
 3. **M4（存储）**：审核指令与 runtime 配置升级 DB/API + 审计 + 并发控制【已完成】。
-4. **M5（智能）**：LLM 总结节点优先，逐步扩展到分类/打标/排序辅助。
-5. **暂缓项**：分布式互斥（多实例部署时再做）。
+4. **M4.1（协同增强）**：Feishu app-only 通知统一 + 点击反馈闭环【已完成】。
+5. **M5（智能）**：LLM 总结节点优先，逐步扩展到分类/打标/排序辅助。
+6. **暂缓项**：分布式互斥（多实例部署时再做）。
 
 ## 13. 里程碑后的质量门禁
 - 无来源断言容忍度：0。
@@ -317,3 +374,4 @@ DB 表：`audit_events`
 - 重复率：<10%。
 - 审核链路可追溯：每个审核动作可追到来源（CLI/Feishu）与时间。
 - 自动发布可验证：超时发布与人工通过发布的状态、文案、落盘一致。
+- 点击反馈可验证：飞书卡片动作成功/失败均有可见反馈（toast + 群回执）。

@@ -1,7 +1,6 @@
 import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-import crypto from "node:crypto";
 
 import { afterEach, describe, expect, it, vi } from "vitest";
 
@@ -10,20 +9,28 @@ import { FileReviewInstructionStore } from "../src/review/instruction-store.js";
 
 describe("FeishuNotifier", () => {
   afterEach(() => {
+    __test__.clearTenantTokenCache();
     vi.restoreAllMocks();
     vi.unstubAllGlobals();
   });
 
-  it("发送待审核通知时应调用 webhook", async () => {
-    const fetchMock = vi.fn(async () => new Response(JSON.stringify({ ok: true }), { status: 200 }));
+  it("发送待审核通知时应调用应用机器人消息接口", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-notifier-"));
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, tenant_access_token: "tenant_token", expire: 7200 }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, data: { message_id: "om_xxx" } }), { status: 200 }));
     vi.stubGlobal("fetch", fetchMock);
 
     const notifier = new FeishuNotifier({
-      webhookUrl: "https://example.com/feishu-webhook",
-      webhookSecret: undefined,
+      appId: "cli_xxx",
+      appSecret: "secret_xxx",
+      reviewChatId: "oc_xxx",
+      notificationRoot: tempDir,
     });
 
     const sent = await notifier.notifyReviewPending({
+      runId: "weekly-run-1",
       reportDate: "2026-03-09",
       reviewStage: "outline_review",
       reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
@@ -31,43 +38,195 @@ describe("FeishuNotifier", () => {
     });
 
     expect(sent).toBe(true);
-    expect(fetchMock).toHaveBeenCalledTimes(1);
-    const [url, options] = fetchMock.mock.calls[0] ?? [];
-    expect(url).toBe("https://example.com/feishu-webhook");
-    const body = JSON.parse(String(options?.body));
-    expect(body.msg_type).toBe("text");
-    expect(body.content.text).toContain("2026-03-09");
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    expect(String(fetchMock.mock.calls[0]?.[0])).toContain("/auth/v3/tenant_access_token/internal");
+    expect(String(fetchMock.mock.calls[1]?.[0])).toContain("/im/v1/messages");
+    const body = JSON.parse(String(fetchMock.mock.calls[1]?.[1]?.body));
+    expect(body.msg_type).toBe("interactive");
+    await fs.rm(tempDir, { recursive: true, force: true });
   });
 
-  it("配置 webhook secret 时应生成 sign 字段", () => {
-    vi.useFakeTimers();
-    vi.setSystemTime(new Date("2026-03-05T01:02:03.000Z"));
-    const body = __test__.buildWebhookBody("hello", "secret");
-    vi.useRealTimers();
-
-    const expectedTimestamp = String(Math.floor(new Date("2026-03-05T01:02:03.000Z").getTime() / 1000));
-    const expectedSign = crypto.createHmac("sha256", `${expectedTimestamp}\nsecret`).digest("base64");
-    expect(body.timestamp).toBe(expectedTimestamp);
-    expect(body.sign).toBe(expectedSign);
-  });
-
-  it("飞书业务码非 0 时应抛错", async () => {
-    const fetchMock = vi.fn(async () => new Response(JSON.stringify({ code: 19021, msg: "sign match fail" }), { status: 200 }));
+  it("应用机器人业务码非 0 时应抛错", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-notifier-"));
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, tenant_access_token: "tenant_token", expire: 7200 }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 999, msg: "no permission" }), { status: 200 }));
     vi.stubGlobal("fetch", fetchMock);
 
     const notifier = new FeishuNotifier({
-      webhookUrl: "https://example.com/feishu-webhook",
-      webhookSecret: "secret",
+      appId: "cli_xxx",
+      appSecret: "secret_xxx",
+      reviewChatId: "oc_xxx",
+      notificationRoot: tempDir,
     });
 
     await expect(
       notifier.notifyReviewPending({
+        runId: "weekly-run-1",
         reportDate: "2026-03-09",
         reviewStage: "outline_review",
         reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
         reviewMarkdownPath: "outputs/review/weekly/2026-03-09.md",
       }),
-    ).rejects.toThrow("feishu_webhook_business_failed:19021");
+    ).rejects.toThrow("feishu_app_card_business_failed:999");
+    await fs.rm(tempDir, { recursive: true, force: true });
+  });
+
+  it("应支持通过 REPORT_PUBLIC_BASE_URL 生成可点击 URL", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-notifier-"));
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, tenant_access_token: "tenant_token", expire: 7200 }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, data: { message_id: "om_xxx" } }), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const notifier = new FeishuNotifier({
+      appId: "cli_xxx",
+      appSecret: "secret_xxx",
+      reviewChatId: "oc_xxx",
+      reportPublicBaseUrl: "https://raw.githubusercontent.com/acme/ai-weekly/main",
+      notificationRoot: tempDir,
+    });
+
+    const sent = await notifier.notifyReviewPending({
+      runId: "weekly-run-1",
+      reportDate: "2026-03-09",
+      reviewStage: "outline_review",
+      reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
+      reviewMarkdownPath: "outputs/review/weekly/2026-03-09.md",
+    });
+    expect(sent).toBe(true);
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    const body = JSON.parse(String(fetchMock.mock.calls[1]?.[1]?.body));
+    const card = JSON.parse(body.content) as { elements: Array<{ tag: string; content?: string }> };
+    const markdown = card.elements.find((item) => item.tag === "markdown")?.content ?? "";
+    expect(markdown).toContain(
+      "[查看待审核稿](https://raw.githubusercontent.com/acme/ai-weekly/main/outputs/review/weekly/2026-03-09.md)",
+    );
+    await fs.rm(tempDir, { recursive: true, force: true });
+  });
+
+  it("同一 run 再次待审核通知时应更新主卡而非重复新发", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-notifier-"));
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, tenant_access_token: "tenant_token", expire: 7200 }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, data: { message_id: "om_first" } }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, data: { message_id: "om_first" } }), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const notifier = new FeishuNotifier({
+      appId: "cli_xxx",
+      appSecret: "secret_xxx",
+      reviewChatId: "oc_xxx",
+      notificationRoot: tempDir,
+    });
+    await notifier.notifyReviewPending({
+      runId: "weekly-run-1",
+      reportDate: "2026-03-09",
+      reviewStage: "outline_review",
+      reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
+      reviewMarkdownPath: "outputs/review/weekly/2026-03-09.md",
+    });
+    await notifier.notifyReviewPending({
+      runId: "weekly-run-1",
+      reportDate: "2026-03-09",
+      reviewStage: "final_review",
+      reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
+      reviewMarkdownPath: "outputs/review/weekly/2026-03-09.md",
+    });
+
+    // token + send，token 缓存后 update 主卡。
+    expect(fetchMock).toHaveBeenCalledTimes(3);
+    expect(String(fetchMock.mock.calls[2]?.[0])).toContain("/im/v1/messages/om_first");
+    await fs.rm(tempDir, { recursive: true, force: true });
+  });
+
+  it("待审核主卡应按阶段展示不同按钮集合", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-notifier-"));
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, tenant_access_token: "tenant_token", expire: 7200 }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, data: { message_id: "om_outline" } }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, data: { message_id: "om_outline" } }), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const notifier = new FeishuNotifier({
+      appId: "cli_xxx",
+      appSecret: "secret_xxx",
+      reviewChatId: "oc_xxx",
+      notificationRoot: tempDir,
+    });
+
+    await notifier.notifyReviewPending({
+      runId: "weekly-run-1",
+      reportDate: "2026-03-09",
+      reviewStage: "outline_review",
+      reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
+      reviewMarkdownPath: "outputs/review/weekly/2026-03-09.md",
+    });
+    const outlineBody = JSON.parse(String(fetchMock.mock.calls[1]?.[1]?.body));
+    const outlineCard = JSON.parse(outlineBody.content) as { elements: Array<{ tag: string; actions?: Array<{ value?: { action?: string } }> }> };
+    const outlineActions = outlineCard.elements.find((item) => item.tag === "action")?.actions ?? [];
+    expect(outlineActions.map((item) => item.value?.action)).toEqual(["approve_outline", "request_revision", "reject"]);
+
+    await notifier.notifyReviewPending({
+      runId: "weekly-run-1",
+      reportDate: "2026-03-09",
+      reviewStage: "final_review",
+      reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
+      reviewMarkdownPath: "outputs/review/weekly/2026-03-09.md",
+    });
+    const finalBody = JSON.parse(String(fetchMock.mock.calls[2]?.[1]?.body));
+    const finalCard = JSON.parse(finalBody.content) as { elements: Array<{ tag: string; actions?: Array<{ value?: { action?: string } }> }> };
+    const finalActions = finalCard.elements.find((item) => item.tag === "action")?.actions ?? [];
+    expect(finalActions.map((item) => item.value?.action)).toEqual(["approve_final", "request_revision", "reject"]);
+
+    await fs.rm(tempDir, { recursive: true, force: true });
+  });
+
+  it("主卡更新失败时应降级发送新卡并覆盖主卡记录", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-notifier-"));
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, tenant_access_token: "tenant_token", expire: 7200 }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, data: { message_id: "om_first" } }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 999, msg: "message expired" }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, data: { message_id: "om_second" } }), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const notifier = new FeishuNotifier({
+      appId: "cli_xxx",
+      appSecret: "secret_xxx",
+      reviewChatId: "oc_xxx",
+      notificationRoot: tempDir,
+    });
+
+    await notifier.notifyReviewPending({
+      runId: "weekly-run-1",
+      reportDate: "2026-03-09",
+      reviewStage: "outline_review",
+      reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
+      reviewMarkdownPath: "outputs/review/weekly/2026-03-09.md",
+    });
+    await notifier.notifyReviewPending({
+      runId: "weekly-run-1",
+      reportDate: "2026-03-09",
+      reviewStage: "final_review",
+      reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
+      reviewMarkdownPath: "outputs/review/weekly/2026-03-09.md",
+    });
+
+    expect(String(fetchMock.mock.calls[2]?.[0])).toContain("/im/v1/messages/om_first");
+    expect(String(fetchMock.mock.calls[3]?.[0])).toContain("/im/v1/messages?receive_id_type=chat_id");
+
+    const recordFile = path.join(tempDir, "main-cards", "weekly", "2026-03-09.json");
+    const record = JSON.parse(await fs.readFile(recordFile, "utf-8")) as { messageId: string; stage: string };
+    expect(record.messageId).toBe("om_second");
+    expect(record.stage).toBe("final_review");
+
+    await fs.rm(tempDir, { recursive: true, force: true });
   });
 });
 
@@ -134,6 +293,8 @@ describe("Feishu callback server", () => {
           }),
         });
         expect(response.status).toBe(200);
+        const responsePayload = await response.json();
+        expect(responsePayload.toast?.type).toBe("success");
 
         const instructionFile = path.join(tempDir, "weekly", "2026-03-09.json");
         const content = JSON.parse(await fs.readFile(instructionFile, "utf-8"));
@@ -173,6 +334,8 @@ describe("Feishu callback server", () => {
           }),
         });
         expect(response.status).toBe(401);
+        const payload = await response.json();
+        expect(payload.toast?.type).toBe("error");
       } finally {
         await server.close();
       }
@@ -237,6 +400,197 @@ describe("Feishu callback server", () => {
       await fs.rm(tempDir, { recursive: true, force: true });
     }
   });
+
+  it("回调成功后应向 notifier 发送 accepted 回执", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-"));
+    const actionNotifier = {
+      notifyActionResult: vi.fn(async () => true),
+    };
+
+    try {
+      const store = new FileReviewInstructionStore(tempDir);
+      const server = await startFeishuReviewCallbackServer({
+        host: "127.0.0.1",
+        port: 0,
+        path: "/feishu/review-callback",
+        authToken: "token-123",
+        store,
+        notifier: actionNotifier,
+      });
+
+      try {
+        const response = await fetch(`http://127.0.0.1:${server.port}/feishu/review-callback?token=token-123`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            mode: "weekly",
+            reportDate: "2026-03-09",
+            action: "approve_outline",
+          }),
+        });
+        expect(response.status).toBe(200);
+        expect(actionNotifier.notifyActionResult).toHaveBeenCalledTimes(1);
+        expect(actionNotifier.notifyActionResult).toHaveBeenCalledWith(
+          expect.objectContaining({
+            reportDate: "2026-03-09",
+            action: "approve_outline",
+            result: "accepted",
+          }),
+        );
+      } finally {
+        await server.close();
+      }
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it("同一 traceId 重复回调时应忽略第二次并避免重复回执", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-"));
+    const actionNotifier = {
+      notifyActionResult: vi.fn(async () => true),
+    };
+
+    try {
+      const store = new FileReviewInstructionStore(tempDir);
+      const server = await startFeishuReviewCallbackServer({
+        host: "127.0.0.1",
+        port: 0,
+        path: "/feishu/review-callback",
+        authToken: "token-123",
+        store,
+        notifier: actionNotifier,
+      });
+
+      try {
+        const payload = {
+          mode: "weekly",
+          reportDate: "2026-03-09",
+          action: "approve_outline",
+          traceId: "evt-dup-001",
+          operator: "u_001",
+        };
+
+        const first = await fetch(`http://127.0.0.1:${server.port}/feishu/review-callback?token=token-123`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+        expect(first.status).toBe(200);
+
+        const second = await fetch(`http://127.0.0.1:${server.port}/feishu/review-callback?token=token-123`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+        expect(second.status).toBe(200);
+        const secondPayload = await second.json();
+        expect(secondPayload.duplicated).toBe(true);
+
+        const instructionFile = path.join(tempDir, "weekly", "2026-03-09.json");
+        const content = JSON.parse(await fs.readFile(instructionFile, "utf-8"));
+        expect(content.instructions).toHaveLength(1);
+        expect(actionNotifier.notifyActionResult).toHaveBeenCalledTimes(1);
+      } finally {
+        await server.close();
+      }
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it("回调处理后应写入审计事件（accepted）", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-"));
+    const auditLogger = vi.fn(async () => undefined);
+    try {
+      const store = new FileReviewInstructionStore(tempDir);
+      const server = await startFeishuReviewCallbackServer({
+        host: "127.0.0.1",
+        port: 0,
+        path: "/feishu/review-callback",
+        authToken: "token-123",
+        store,
+        auditLogger,
+      });
+
+      try {
+        const response = await fetch(`http://127.0.0.1:${server.port}/feishu/review-callback?token=token-123`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            mode: "weekly",
+            reportDate: "2026-03-09",
+            action: "approve_final",
+          }),
+        });
+        expect(response.status).toBe(200);
+        expect(auditLogger).toHaveBeenCalledTimes(1);
+        expect(auditLogger).toHaveBeenCalledWith(
+          expect.objectContaining({
+            reportDate: "2026-03-09",
+            action: "approve_final",
+            result: "accepted",
+            notifyResult: "skipped",
+          }),
+        );
+      } finally {
+        await server.close();
+      }
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it("回调鉴权失败时也应写入失败审计事件", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-"));
+    const auditLogger = vi.fn(async () => undefined);
+    try {
+      const store = new FileReviewInstructionStore(tempDir);
+      const server = await startFeishuReviewCallbackServer({
+        host: "127.0.0.1",
+        port: 0,
+        path: "/feishu/review-callback",
+        authToken: "token-123",
+        store,
+        auditLogger,
+      });
+
+      try {
+        const response = await fetch(`http://127.0.0.1:${server.port}/feishu/review-callback`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            mode: "weekly",
+            reportDate: "2026-03-09",
+            action: "approve_outline",
+          }),
+        });
+        expect(response.status).toBe(401);
+        expect(auditLogger).toHaveBeenCalledTimes(1);
+        expect(auditLogger).toHaveBeenCalledWith(
+          expect.objectContaining({
+            reportDate: "2026-03-09",
+            action: "approve_outline",
+            result: "failed",
+          }),
+        );
+      } finally {
+        await server.close();
+      }
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
 });
 
 describe("Feishu callback payload adapter", () => {
@@ -265,5 +619,12 @@ describe("Feishu callback payload adapter", () => {
     expect(parsed.reportDate).toBe("2026-03-10");
     expect(parsed.operator).toBe("ou_test");
     expect(parsed.reason).toBe("补充来源");
+  });
+
+  it("应输出点击动作的状态回显推断", () => {
+    const status = __test__.inferActionStatusEcho("approve_final");
+    expect(status.reviewStatus).toBe("approved");
+    expect(status.publishStatus).toBe("published");
+    expect(status.shouldPublish).toBe(true);
   });
 });

@@ -12,6 +12,7 @@ import type { WatchdogCandidate } from "./pipeline/watchdog.js";
 import { runPendingWeeklyWatchdog } from "./pipeline/watchdog.js";
 import { startReviewApiServer } from "./review/api-server.js";
 import { FeishuNotifier, loadFeishuConfigFromEnv, startFeishuReviewCallbackServer } from "./review/feishu.js";
+import type { FeishuCallbackAuditEvent } from "./review/feishu.js";
 import { createReviewInstructionStore } from "./review/instruction-store.js";
 import { isWeeklyReminderWindowReached, shouldSendWeeklyReminderForArtifact } from "./review/reminder-policy.js";
 import { DbAuditStore } from "./audit/audit-store.js";
@@ -49,8 +50,12 @@ interface CliArgs {
   serveReviewApi: boolean;
   migrateFileToDb: boolean;
   notifyReviewReminder: boolean;
-  feishuWebhookUrl?: string;
-  feishuWebhookSecret?: string;
+  feishuAppId?: string;
+  feishuAppSecret?: string;
+  feishuReviewChatId?: string;
+  reportPublicBaseUrl?: string;
+  feishuNotificationRoot: string;
+  feishuDebugVerbose: boolean;
   feishuCallbackHost: string;
   feishuCallbackPort: number;
   feishuCallbackPath: string;
@@ -246,6 +251,8 @@ async function runServeFeishuCallback(args: CliArgs) {
     fileRoot: args.reviewInstructionRoot,
     fallbackToFile: args.storageFallbackToFile,
   });
+  const notifier = createFeishuNotifier(args);
+  const callbackAuditLogger = createFeishuCallbackAuditLogger(args);
   const server = await startFeishuReviewCallbackServer({
     host: args.feishuCallbackHost,
     port: args.feishuCallbackPort,
@@ -253,10 +260,17 @@ async function runServeFeishuCallback(args: CliArgs) {
     authToken: args.feishuCallbackAuthToken,
     signingSecret: args.feishuSigningSecret,
     store,
+    notifier,
+    auditLogger: callbackAuditLogger,
+    // 点击动作后优先从最新产物回显当前状态，减少“动作已收但状态未知”的协作摩擦。
+    statusEchoProvider: async ({ reportDate }) => await loadStatusEchoFromArtifact(args.outputRoot, reportDate),
   });
 
   console.log(
     `[feishu-callback] listening on http://${args.feishuCallbackHost}:${server.port}${args.feishuCallbackPath} (local, 2B)`,
+  );
+  console.log(
+    `[feishu-callback] notifier enabled=${notifier.isEnabled()}, chatId=${args.feishuReviewChatId ? "set" : "missing"}`,
   );
   console.log("[feishu-callback] use tunnel URL in Feishu config and keep this process alive.");
 
@@ -320,12 +334,9 @@ async function runMigrateFileToDb(args: CliArgs) {
 }
 
 async function runNotifyReviewReminder(args: CliArgs) {
-  const notifier = new FeishuNotifier({
-    webhookUrl: args.feishuWebhookUrl,
-    webhookSecret: args.feishuWebhookSecret,
-  });
-  if (!args.feishuWebhookUrl) {
-    console.log("[feishu-reminder-skip] FEISHU_WEBHOOK_URL 未配置");
+  const notifier = createFeishuNotifier(args);
+  if (!notifier.isEnabled()) {
+    console.log("[feishu-reminder-skip] 飞书通知通道未配置（需要 FEISHU_APP_ID/FEISHU_APP_SECRET/REVIEW_CHAT_ID）");
     return;
   }
 
@@ -350,6 +361,7 @@ async function runNotifyReviewReminder(args: CliArgs) {
     }
 
     const sentOk = await notifier.notifyReviewReminder({
+      runId: candidate.artifact.runId,
       reportDate: candidate.reportDate,
       reviewStage: candidate.artifact.reviewStage === "none" ? "final_review" : candidate.artifact.reviewStage,
       reviewDeadlineAt: candidate.artifact.reviewDeadlineAt,
@@ -536,15 +548,38 @@ function parseArgs(argv: string[]): CliArgs {
       continue;
     }
 
-    if (token === "--feishu-webhook-url" && next) {
-      args.feishuWebhookUrl = next;
+    if (token === "--feishu-app-id" && next) {
+      args.feishuAppId = next;
       i += 1;
       continue;
     }
 
-    if (token === "--feishu-webhook-secret" && next) {
-      args.feishuWebhookSecret = next;
+    if (token === "--feishu-app-secret" && next) {
+      args.feishuAppSecret = next;
       i += 1;
+      continue;
+    }
+
+    if (token === "--feishu-review-chat-id" && next) {
+      args.feishuReviewChatId = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--report-public-base-url" && next) {
+      args.reportPublicBaseUrl = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--feishu-notification-root" && next) {
+      args.feishuNotificationRoot = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--feishu-debug-verbose") {
+      args.feishuDebugVerbose = true;
       continue;
     }
 
@@ -648,8 +683,12 @@ function defaults(): CliArgs {
     serveReviewApi: false,
     migrateFileToDb: false,
     notifyReviewReminder: false,
-    feishuWebhookUrl: feishu.webhookUrl,
-    feishuWebhookSecret: feishu.webhookSecret,
+    feishuAppId: feishu.appId,
+    feishuAppSecret: feishu.appSecret,
+    feishuReviewChatId: feishu.reviewChatId,
+    reportPublicBaseUrl: feishu.reportPublicBaseUrl,
+    feishuNotificationRoot: feishu.notificationRoot ?? "outputs/notifications/feishu",
+    feishuDebugVerbose: feishu.debugVerbose ?? false,
     feishuCallbackHost: feishu.callbackHost,
     feishuCallbackPort: feishu.callbackPort,
     feishuCallbackPath: feishu.callbackPath,
@@ -746,30 +785,25 @@ async function notifyReviewPendingIfNeeded(
   reviewMarkdownPath: string,
   trigger: "run" | "recheck" | "watchdog",
 ) {
-  if (trigger !== "run") {
-    return;
-  }
   if (result.mode !== "weekly" || result.reviewStatus !== "pending_review" || result.publishStatus !== "pending") {
     return;
   }
-  if (!args.feishuWebhookUrl) {
+  const notifier = createFeishuNotifier(args);
+  if (!notifier.isEnabled()) {
     return;
   }
 
   const reviewStage = result.reviewStage === "none" ? "final_review" : result.reviewStage;
-  const notifier = new FeishuNotifier({
-    webhookUrl: args.feishuWebhookUrl,
-    webhookSecret: args.feishuWebhookSecret,
-  });
 
   try {
     await notifier.notifyReviewPending({
+      runId: result.runId,
       reportDate: result.reportDate,
       reviewStage,
       reviewDeadlineAt: result.reviewDeadlineAt,
       reviewMarkdownPath,
     });
-    console.log(`[feishu-notify] pending review sent: ${result.reportDate}`);
+    console.log(`[feishu-notify] pending review ${trigger === "run" ? "sent" : "updated"}: ${result.reportDate}`);
   } catch (error) {
     // 通知失败不影响报告产物落盘，避免协同链路拖垮主流程。
     console.log(`[feishu-notify-warning] pending review failed: ${error instanceof Error ? error.message : String(error)}`);
@@ -777,16 +811,17 @@ async function notifyReviewPendingIfNeeded(
 }
 
 async function notifyPublishResultIfNeeded(args: CliArgs, result: ReportState, publishMarkdownPath: string) {
-  if (result.mode !== "weekly" || !args.feishuWebhookUrl) {
+  if (result.mode !== "weekly") {
     return;
   }
-  const notifier = new FeishuNotifier({
-    webhookUrl: args.feishuWebhookUrl,
-    webhookSecret: args.feishuWebhookSecret,
-  });
+  const notifier = createFeishuNotifier(args);
+  if (!notifier.isEnabled()) {
+    return;
+  }
 
   try {
     await notifier.notifyPublishResult({
+      runId: result.runId,
       reportDate: result.reportDate,
       reviewStatus: result.reviewStatus,
       publishReason: result.publishReason,
@@ -795,6 +830,62 @@ async function notifyPublishResultIfNeeded(args: CliArgs, result: ReportState, p
     console.log(`[feishu-notify] publish result sent: ${result.reportDate}`);
   } catch (error) {
     console.log(`[feishu-notify-warning] publish result failed: ${error instanceof Error ? error.message : String(error)}`);
+  }
+}
+
+function createFeishuNotifier(args: CliArgs) {
+  // CLI 与回调服务统一走同一 notifier 工厂，避免多处通道策略分叉。
+  return new FeishuNotifier({
+    appId: args.feishuAppId,
+    appSecret: args.feishuAppSecret,
+    reviewChatId: args.feishuReviewChatId,
+    reportPublicBaseUrl: args.reportPublicBaseUrl,
+    notificationRoot: args.feishuNotificationRoot,
+    debugVerbose: args.feishuDebugVerbose,
+  });
+}
+
+function createFeishuCallbackAuditLogger(args: CliArgs) {
+  if (args.storageBackend !== "db") {
+    return undefined;
+  }
+
+  // 回调审计仅在 DB 模式启用，避免 file-only 部署额外引入持久化副作用。
+  const auditStore = new DbAuditStore(new SqliteEngine(args.storageDbPath));
+  return async (event: FeishuCallbackAuditEvent) => {
+    await auditStore.append({
+      eventType: "feishu_callback_action_result",
+      entityType: "weekly_report",
+      entityId: event.reportDate,
+      operator: event.operator,
+      source: "feishu_callback",
+      traceId: event.traceId,
+      createdAt: event.createdAt,
+      payload: {
+        action: event.action,
+        stage: event.stage,
+        result: event.result,
+        notifyResult: event.notifyResult,
+        messageId: event.messageId,
+        errorMessage: event.errorMessage,
+      },
+    });
+  };
+}
+
+async function loadStatusEchoFromArtifact(outputRoot: string, reportDate: string) {
+  try {
+    const artifact = await loadReviewArtifact(outputRoot, "weekly", reportDate);
+    return {
+      reviewStage: artifact.reviewStage,
+      reviewStatus: artifact.reviewStatus,
+      publishStatus: artifact.publishStatus,
+      shouldPublish: artifact.shouldPublish,
+      note: "系统状态已更新，若刚完成点击可稍后重试查看。",
+    };
+  } catch {
+    // 首次点击可能尚未生成该日期产物，此时回退到动作级状态推断。
+    return null;
   }
 }
 

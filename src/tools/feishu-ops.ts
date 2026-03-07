@@ -10,6 +10,7 @@ interface CliArgs {
   chatId?: string;
   reportDate?: string;
   title?: string;
+  stage?: "outline_review" | "final_review";
 }
 
 interface FeishuTenantTokenResponse {
@@ -88,7 +89,11 @@ async function runSendCardCommand(args: CliArgs) {
 
   const reportDate = args.reportDate ?? dayjs().format("YYYY-MM-DD");
   const title = args.title ?? `AI 周报审核 ${reportDate}`;
-  const card = buildReviewCard({ reportDate, title });
+  const card = buildReviewCard({
+    reportDate,
+    title,
+    stage: args.stage ?? "outline_review",
+  });
 
   const token = await fetchTenantAccessToken();
   const response = await fetch("https://open.feishu.cn/open-apis/im/v1/messages?receive_id_type=chat_id", {
@@ -224,13 +229,23 @@ function parseArgs(argv: string[]): CliArgs {
       i += 1;
       continue;
     }
+    if (token === "--stage" && next) {
+      if (next !== "outline_review" && next !== "final_review") {
+        throw new Error("--stage 只支持 outline_review 或 final_review");
+      }
+      args.stage = next;
+      i += 1;
+      continue;
+    }
   }
   return args;
 }
 
 const dateStringSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 
-function buildReviewCard(input: { reportDate: string; title: string }) {
+function buildReviewCard(input: { reportDate: string; title: string; stage: "outline_review" | "final_review" }) {
+  const isOutline = input.stage === "outline_review";
+  const guide = isOutline ? "请先完成大纲审核。建议先阅读重点摘要再点击“通过”。" : "请确认终稿可发布后点击“终稿通过并发布”。";
   return {
     config: { wide_screen_mode: true },
     header: {
@@ -243,50 +258,77 @@ function buildReviewCard(input: { reportDate: string; title: string }) {
     elements: [
       {
         tag: "markdown",
-        content: `请点击审核动作，reportDate=${input.reportDate}`,
+        content: `当前阶段：${isOutline ? "待大纲审核" : "待终稿审核"}\n下一步：${guide}\nreportDate=${input.reportDate}`,
       },
       {
         tag: "action",
-        actions: [
-          {
-            tag: "button",
-            type: "primary",
-            text: { tag: "plain_text", content: "大纲通过" },
-            value: {
-              action: "approve_outline",
-              reportDate: input.reportDate,
-              reason: "from_feishu_click",
-            },
-          },
-          {
-            tag: "button",
-            type: "primary",
-            text: { tag: "plain_text", content: "终稿通过" },
-            value: {
-              action: "approve_final",
-              reportDate: input.reportDate,
-              reason: "from_feishu_click",
-            },
-          },
-          {
-            tag: "button",
-            text: { tag: "plain_text", content: "打回修订" },
-            value: {
-              action: "request_revision",
-              reportDate: input.reportDate,
-              reason: "need_revision",
-            },
-          },
-          {
-            tag: "button",
-            text: { tag: "plain_text", content: "拒绝发布" },
-            value: {
-              action: "reject",
-              reportDate: input.reportDate,
-              reason: "reject_this_round",
-            },
-          },
-        ],
+        actions: isOutline
+          ? [
+              {
+                tag: "button",
+                type: "primary",
+                text: { tag: "plain_text", content: "大纲通过" },
+                value: {
+                  action: "approve_outline",
+                  reportDate: input.reportDate,
+                  reason: "outline_approved",
+                  stage: "outline_review",
+                },
+              },
+              {
+                tag: "button",
+                text: { tag: "plain_text", content: "要求修订" },
+                value: {
+                  action: "request_revision",
+                  reportDate: input.reportDate,
+                  reason: "outline_need_revision",
+                  stage: "outline_review",
+                },
+              },
+              {
+                tag: "button",
+                text: { tag: "plain_text", content: "拒绝本次" },
+                value: {
+                  action: "reject",
+                  reportDate: input.reportDate,
+                  reason: "outline_reject",
+                  stage: "outline_review",
+                },
+              },
+            ]
+          : [
+              {
+                tag: "button",
+                type: "primary",
+                text: { tag: "plain_text", content: "终稿通过并发布" },
+                value: {
+                  action: "approve_final",
+                  reportDate: input.reportDate,
+                  reason: "final_approved",
+                  stage: "final_review",
+                },
+              },
+              {
+                tag: "button",
+                text: { tag: "plain_text", content: "要求修订" },
+                value: {
+                  action: "request_revision",
+                  reportDate: input.reportDate,
+                  reason: "final_need_revision",
+                  stage: "final_review",
+                },
+              },
+              {
+                tag: "button",
+                text: { tag: "plain_text", content: "拒绝本次" },
+                value: {
+                  action: "reject",
+                  reportDate: input.reportDate,
+                  reason: "final_reject",
+                  stage: "final_review",
+                },
+              },
+            ],
       },
     ],
   };

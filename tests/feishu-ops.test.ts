@@ -23,11 +23,14 @@ describe("feishu-ops parseArgs", () => {
       "2026-03-09",
       "--title",
       "title",
+      "--stage",
+      "final_review",
     ]);
     expect(args.command).toBe("send-card");
     expect(args.chatId).toBe("oc_xxx");
     expect(args.reportDate).toBe("2026-03-09");
     expect(args.title).toBe("title");
+    expect(args.stage).toBe("final_review");
   });
 
   it("非法子命令应抛错", () => {
@@ -36,17 +39,27 @@ describe("feishu-ops parseArgs", () => {
 });
 
 describe("feishu-ops buildReviewCard", () => {
-  it("应生成包含四个审核动作的卡片", () => {
+  it("outline 阶段应生成大纲相关动作", () => {
     const card = __test__.buildReviewCard({
       reportDate: "2026-03-09",
       title: "AI 周报审核 2026-03-09",
+      stage: "outline_review",
     });
     const actions = (card.elements[1] as { actions: Array<{ value: { action: string } }> }).actions;
     expect(actions.map((item) => item.value.action)).toEqual([
       "approve_outline",
-      "approve_final",
       "request_revision",
       "reject",
     ]);
+  });
+
+  it("final 阶段应生成终稿相关动作", () => {
+    const card = __test__.buildReviewCard({
+      reportDate: "2026-03-09",
+      title: "AI 周报审核 2026-03-09",
+      stage: "final_review",
+    });
+    const actions = (card.elements[1] as { actions: Array<{ value: { action: string } }> }).actions;
+    expect(actions.map((item) => item.value.action)).toEqual(["approve_final", "request_revision", "reject"]);
   });
 });

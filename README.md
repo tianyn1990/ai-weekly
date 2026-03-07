@@ -10,6 +10,8 @@
 - 已完成 M3.2：Feishu 待审核通知、11:30 提醒命令、发布结果回执、本地回调服务（2B：本地 + 隧道）。
 - 已完成 M3.3：`request_revision` 回流修订执行、runtime config 全局沉淀、`reject` 终止当前 run 发布。
 - 已完成 M4：审核指令与 runtime config 升级到 SQLite（DB 优先 + 文件 fallback），并提供最小 Review API 与文件迁移命令。
+- 已完成 M4.1：飞书通知统一为应用机器人（app-only）；卡片点击后支持即时反馈与群内状态回执。
+- 已完成 M4.2：飞书审核交互重构为“阶段引导主卡 + 单卡更新 + 去噪回执”，降低误操作与群消息噪音。
 - 分布式互斥暂缓，当前以单机定时任务为部署基线。
 
 ## 环境要求
@@ -120,13 +122,16 @@ tsx src/cli.ts run --mode weekly --watch-pending-weekly --watch-max-retries 3 --
 tsx src/cli.ts run --mode weekly --watch-pending-weekly --watch-force-unlock
 ```
 
-Feishu 协同（M3.2）：
+Feishu 协同（M3.2 + M4.1）：
 ```bash
 # 1) 启动本地回调服务（2B 形态：本地服务 + 隧道暴露）
 tsx src/cli.ts run --serve-feishu-callback
 
 # 2) 周一 11:30 提醒 pending 审核（建议由 cron 触发）
 tsx src/cli.ts run --mode weekly --notify-review-reminder
+
+# 3) 可选：覆盖报告公网前缀（用于通知里的可点击链接）
+tsx src/cli.ts run --mode weekly --notify-review-reminder --report-public-base-url https://raw.githubusercontent.com/<org>/<repo>/<branch>
 ```
 
 Review API（M4）：
@@ -185,13 +190,16 @@ pnpm run feishu:callback
 
 # 3) 仅启动隧道（自动优先 cloudflared，fallback 到 ngrok）
 pnpm run feishu:tunnel
+
+# 4) 完整链路脚本（生成周报 -> 发卡片 -> 两次点击 -> 两次 recheck）
+pnpm run feishu:fullflow
 ```
 
 联调输出说明：
 - `pnpm run feishu:dev` 会输出本地回调地址与隧道日志。
 - 使用 cloudflared 时，日志会自动打印 `callback-url=.../feishu/review-callback`。
 - 使用 ngrok 时，可通过 `http://127.0.0.1:4040/api/tunnels` 获取公网地址。
-- 若出现 `sign match fail`，优先检查飞书机器人签名开关与 `FEISHU_WEBHOOK_SECRET` 是否一致。
+- 若点击后无反馈，优先检查飞书后台回调 URL 是否为当前隧道地址并重新发布应用。
 
 飞书回调 URL 建议：
 ```text
@@ -237,21 +245,31 @@ direnv allow
 
 建议在 `.env.local` 同时维护以下变量（长期使用）：
 ```bash
-# webhook 通知
-FEISHU_WEBHOOK_URL=""
-FEISHU_WEBHOOK_SECRET=""
-
 # 回调服务
 FEISHU_CALLBACK_AUTH_TOKEN=""
 FEISHU_SIGNING_SECRET=""
 FEISHU_CALLBACK_PORT="8787"
 FEISHU_CALLBACK_PATH="/feishu/review-callback"
 
-# 自建应用（发送 interactive 卡片时使用）
+# 自建应用（通知 + 卡片发送 + 点击反馈回执）
 FEISHU_APP_ID=""
 FEISHU_APP_SECRET=""
-REVIEW_CHAT_ID=""   # 可选，配置后可直接发卡片
+REVIEW_CHAT_ID=""   # 必填
+
+# 可选：用于把本地文件路径转换为飞书可点击 URL
+# 例如 https://raw.githubusercontent.com/<org>/<repo>/<branch>
+REPORT_PUBLIC_BASE_URL=""
 ```
+
+飞书点击反馈（M4.1）：
+- 点击卡片动作后，回调接口会返回 toast（success/error），飞书侧可立即看到处理结果。
+- 系统会向群内追加“审核动作回执”消息，包含 `reportDate/action/operator/result/reviewStage/reviewStatus/publishStatus`。
+- 若动作写入成功但回执发送失败，回调仍返回成功并附带 warning，避免通知链路反向阻断审核主流程。
+
+飞书交互体验（M4.2）：
+- 待审核卡片为单主卡入口，同一 `reportDate + runId` 优先更新原卡，避免重复发卡。
+- 卡片按钮按阶段收敛：大纲阶段只显示大纲动作，终稿阶段只显示终稿动作。
+- 重复点击命中幂等后，仅返回“忽略重复提交”反馈，不重复群发动作回执。
 
 Feishu 联调自动化命令：
 ```bash
@@ -282,9 +300,9 @@ brew install ngrok/ngrok/ngrok
 联调常见问题：
 ```text
 1) 终端提示 sent，但飞书群无消息：
-   - 查看是否返回了飞书业务码非 0（例如 code=19021）。
-   - 检查 FEISHU_WEBHOOK_SECRET 与机器人签名配置是否匹配。
-   - 检查机器人关键词是否允许“AI 周报”文本。
+   - 检查 `FEISHU_APP_ID/FEISHU_APP_SECRET/REVIEW_CHAT_ID` 是否正确。
+   - 确认应用机器人已在目标群，并且应用版本已发布。
+   - 检查是否发到了错误群（常见是 `REVIEW_CHAT_ID` 不是当前测试群）。
 
 2) 提醒命令 sent=0：
   - 说明当前没有 pending 周报，或该日期提醒已写入 marker。
@@ -293,6 +311,9 @@ brew install ngrok/ngrok/ngrok
 3) 飞书回调 401：
    - 若回调地址使用了 `?token=...`，确认与 `FEISHU_CALLBACK_AUTH_TOKEN` 完全一致。
    - 若启用 `FEISHU_SIGNING_SECRET`，确认飞书应用侧签名 secret 与本地一致。
+4) 飞书消息里的 `reviewFile/publishedFile` 点不开：
+   - 这是本地路径，默认不可公网访问。
+   - 配置 `REPORT_PUBLIC_BASE_URL` 后，通知会附加 `reviewUrl/publishedUrl` 可点击链接。
 ```
 
 推荐 cron（北京时间）：

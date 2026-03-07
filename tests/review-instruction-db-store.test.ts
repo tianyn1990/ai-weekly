@@ -82,4 +82,33 @@ describe("DbReviewInstructionStore", () => {
       await fs.rm(tempDir, { recursive: true, force: true });
     }
   });
+
+  it("应支持按 messageId + stage + action 判重查询", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-db-instruction-"));
+    const dbPath = path.join(tempDir, "app.sqlite");
+    try {
+      const store = new DbReviewInstructionStore(new SqliteEngine(dbPath));
+      await store.appendInstruction({
+        mode: "weekly",
+        reportDate: "2026-03-09",
+        stage: "final_review",
+        action: "approve_final",
+        decidedAt: "2026-03-09T03:00:00.000Z",
+        source: "feishu_callback",
+        messageId: "msg-001",
+      });
+
+      const duplicated = await store.findDuplicateInstruction({
+        mode: "weekly",
+        reportDate: "2026-03-09",
+        stage: "final_review",
+        action: "approve_final",
+        messageId: "msg-001",
+      });
+      expect(duplicated?.messageId).toBe("msg-001");
+      expect(duplicated?.action).toBe("approve_final");
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
 });

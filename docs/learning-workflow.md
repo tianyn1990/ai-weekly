@@ -46,6 +46,8 @@ pnpm run:weekly:mock
 - M3.2 复盘 01（Feishu 审核协同：通知 + 回调 + 提醒）：`docs/learning-sessions/m3.2-session-01-feishu-collaboration.md`
 - M3.3 复盘 01（审核意见回流修订 + reject 终止约束）：`docs/learning-sessions/m3.3-session-01-feedback-revision.md`
 - M4 复盘 01（审核/配置 DB 化 + Review API + 迁移）：`docs/learning-sessions/m4-session-01-db-api-storage.md`
+- M4 复盘 02（Feishu app-only 通知统一 + 点击反馈闭环）：`docs/learning-sessions/m4-session-02-feishu-app-feedback.md`
+- M4 复盘 03（Feishu 审核交互重构：阶段主卡 + 单卡更新 + 去噪回执）：`docs/learning-sessions/m4-session-03-feishu-review-ux-guided-flow.md`
 
 ## 6. 执行优先级约束
 - 优先保证「可运行 + 可理解 + 可复盘」三件事同时成立。
@@ -55,5 +57,7 @@ pnpm run:weekly:mock
 1. M3.2：Feishu 审核协同闭环（通知 + 审核动作输入 + 截止提醒）【已完成】。
 2. M3.3：审核意见回流修订（新增/删除候选、主题词/搜索词/权重调整）【已完成】。
 3. M4：审核指令与历史数据存储升级（DB/API + 审计 + 并发控制）【已完成】。
-4. M5：LLM 增强（总结优先，逐步扩展到分类/打标/排序辅助）。
-5. 分布式互斥：暂缓，待多实例部署再启动。
+4. M4.1：Feishu app-only 通知统一 + 点击反馈闭环【已完成】。
+5. M4.2：Feishu 审核交互重构（阶段引导主卡 + 单卡更新 + 去噪回执）【已完成】。
+6. M5：LLM 增强（总结优先，逐步扩展到分类/打标/排序辅助）。
+7. 分布式互斥：暂缓，待多实例部署再启动。
