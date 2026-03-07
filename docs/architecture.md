@@ -1,7 +1,7 @@
-# AI 周报系统设计（v0.3）
+# AI 周报系统设计（v0.4）
 
 ## 1. 文档目标与范围
-- 目标：定义 AI 日报/周报系统在 **M3.3 已完成** 基线下的完整技术架构。
+- 目标：定义 AI 日报/周报系统在 **M4 已完成** 基线下的完整技术架构。
 - 范围：覆盖采集、处理、审核、发布、协同通知、审核意见回流、可观测与运维策略。
 - 非目标：不描述前端管理后台 UI 细节；不覆盖分布式部署实现细节（当前暂缓）。
 
@@ -26,8 +26,15 @@
 - 全局配置沉淀：回流中的检索/排序调整写入 runtime config，并在后续 run 生效。
 - reject 终止约束：被 reject 的当前 run 在 recheck/watchdog 路径下不再发布，必须新建 run 才能再次进入发布流程。
 
-### 2.4 规划中（M4 ~ M5）
-- 审核指令/历史存储升级：文件 -> DB/API。
+### 2.4 已实现（M4）
+- 审核指令存储升级：新增 SQLite 事件表（append-only），支持 `last-write-wins` 查询。
+- runtime config 存储升级：新增版本表，支持 `expectedVersion` 乐观并发控制。
+- 审计事件存储：新增统一 audit 表，支持 trace/eventType 查询。
+- 最小 Review API：支持审核动作写入/查询、pending 查询、runtime 配置读写、审计查询。
+- 迁移能力：支持从文件（`review-instructions` + runtime config）导入 DB。
+- 兼容策略：DB 优先 + 文件 fallback。
+
+### 2.5 规划中（M5）
 - LLM 增强：先总结，再逐步扩展到分类/打标/排序辅助。
 
 ## 3. 架构全景
@@ -36,7 +43,7 @@
 2. **Processing Layer (LangGraph)**：标准化、去重、分类、排序、大纲/正文生成。
 3. **Review Orchestration Layer**：审核状态机、超时发布判定、pending 复检。
 4. **Collaboration Layer**：Feishu 通知、审核动作回写、审核意见回流修订。
-5. **Storage Layer**：本地文件持久化（后续迁移 DB/API）。
+5. **Storage Layer**：SQLite（主）+ 文件（fallback）双轨持久化。
 
 ## 4. 目录与模块责任
 ```text
@@ -51,9 +58,11 @@
 │   └── watchdog/
 └── src/
     ├── cli.ts                        # 运行入口/调度分发
+    ├── audit/
+    │   └── audit-store.ts           # 审计事件存储（DB）
     ├── config/
     │   ├── source-config.ts          # 来源配置读取
-    │   └── runtime-config.ts         # 回流全局配置（主题词/来源/权重）
+    │   └── runtime-config.ts         # runtime 配置存储抽象（文件+DB）
     ├── core/
     │   ├── types.ts                  # 状态与领域类型
     │   ├── review-artifact.ts        # review 产物 schema
@@ -65,7 +74,8 @@
     │   ├── recheck.ts                # 单报告复检
     │   └── watchdog.ts               # 批量巡检执行器
     ├── review/
-    │   ├── instruction-store.ts      # 审核指令存储抽象（文件实现）
+    │   ├── instruction-store.ts      # 审核指令存储抽象（文件+DB）
+    │   ├── api-server.ts             # Review API 服务
     │   ├── feedback-schema.ts        # 回流 payload 归一化与校验
     │   ├── feedback-executor.ts      # request_revision 回流执行器
     │   ├── feishu.ts                 # Feishu 通知与回调服务（2B）
@@ -78,6 +88,9 @@
     └── utils/
         ├── time.ts
         └── file-lock.ts
+    └── storage/
+        ├── sqlite-engine.ts          # SQLite 引擎与 schema 初始化
+        └── migrate-file-to-db.ts     # 文件到 DB 迁移
 ```
 
 ## 5. 核心流程设计
@@ -193,7 +206,7 @@ request_revision
 - 修订审计：`revisionAuditLogs`
 - 内容快照：`snapshot`（recheck/watchdog 重建报告用）
 
-### 7.2 审核指令（已实现 + 待扩展）
+### 7.2 审核指令（M4 已升级）
 位置：`outputs/review-instructions/{mode}/{reportDate}.json`
 
 当前字段：
@@ -204,6 +217,10 @@ M3.2 扩展：
 - `action`: `approve_outline | approve_final | request_revision | reject`
 - `traceId` / `messageId`（便于追踪 Feishu 回调）
 - `feedback`（结构化回流 payload）
+
+DB 表：`review_instructions`
+- 关键列：`mode/report_date/run_id/stage/action/approved/decided_at/source/operator/trace_id/feedback_json`
+- 关键索引：`(mode, report_date, stage, decided_at DESC, id DESC)`
 
 ### 7.3 审核意见回流指令（M3.3 已实现）
 `feedback` 字段支持：
@@ -223,6 +240,16 @@ M3.2 扩展：
 - `processed`, `published`, `skipped`, `failed`
 - `items[]`: `reportDate`, `status`, `attempts`, `reason`
 - 执行上下文：`dryRun`, `retries`, `lockFile`, `startedAt`, `finishedAt`
+
+### 7.5 Runtime 配置版本化（M4）
+DB 表：`runtime_config_versions`
+- 关键列：`version/payload_json/updated_at/updated_by/trace_id`
+- 语义：append-only 版本记录，不覆盖历史版本。
+
+### 7.6 审计事件（M4）
+DB 表：`audit_events`
+- 关键列：`event_type/entity_type/entity_id/payload_json/operator/source/trace_id/created_at`
+- 查询：支持按 `traceId` 与 `eventType` 检索。
 
 ## 8. 策略层设计（回流如何生效）
 为避免“自由文本难执行”，回流策略统一结构化并分三层（已落地）：
@@ -256,6 +283,13 @@ M3.2 扩展：
 - `FEISHU_APP_ID` / `FEISHU_APP_SECRET`（发送 interactive 卡片与查询群聊）
 - `REVIEW_CHAT_ID`（可选，联调发送卡片默认目标）
 
+### 10.3 M4 存储与 API 配置
+- `STORAGE_BACKEND`：`db | file`（默认 `db`）
+- `STORAGE_DB_PATH`：SQLite 文件路径（默认 `outputs/db/app.sqlite`）
+- `STORAGE_FALLBACK_TO_FILE`：是否启用文件回退（默认 `true`）
+- `REVIEW_API_HOST` / `REVIEW_API_PORT`
+- `REVIEW_API_AUTH_TOKEN`（可选，启用后 API 需要 Bearer token）
+
 安全约束：
 - 回调必须做签名校验与幂等处理。
 - 敏感配置走环境变量，不写入仓库。
@@ -273,7 +307,7 @@ M3.2 扩展：
 ## 12. 分阶段执行计划（冻结）
 1. **M3.2（协同）**：Feishu 通知 + 审核动作回写 + 截止提醒【已完成】。
 2. **M3.3（修订）**：审核意见回流执行 + 打回终止约束【已完成】。
-3. **M4（存储）**：审核指令与历史产物迁移 DB/API，补审计与并发控制。
+3. **M4（存储）**：审核指令与 runtime 配置升级 DB/API + 审计 + 并发控制【已完成】。
 4. **M5（智能）**：LLM 总结节点优先，逐步扩展到分类/打标/排序辅助。
 5. **暂缓项**：分布式互斥（多实例部署时再做）。
 

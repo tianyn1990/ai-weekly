@@ -9,6 +9,7 @@
 - 周报审核支持「持久化指令优先，CLI 参数 fallback」、pending 周报复检发布、watchdog 守护扫描（含锁与重试）。
 - 已完成 M3.2：Feishu 待审核通知、11:30 提醒命令、发布结果回执、本地回调服务（2B：本地 + 隧道）。
 - 已完成 M3.3：`request_revision` 回流修订执行、runtime config 全局沉淀、`reject` 终止当前 run 发布。
+- 已完成 M4：审核指令与 runtime config 升级到 SQLite（DB 优先 + 文件 fallback），并提供最小 Review API 与文件迁移命令。
 - 分布式互斥暂缓，当前以单机定时任务为部署基线。
 
 ## 环境要求
@@ -36,6 +37,18 @@ pnpm run:weekly
 可选参数：
 ```bash
 tsx src/cli.ts run --mode weekly --source-config data/sources.yaml --runtime-config-path outputs/runtime-config/global.json --source-limit 6 --timezone Asia/Shanghai
+```
+
+M4 存储参数（默认 DB 模式）：
+```bash
+# 默认：--storage-backend db --storage-db-path outputs/db/app.sqlite
+tsx src/cli.ts run --mode weekly --mock
+
+# 强制回到纯文件模式
+tsx src/cli.ts run --mode weekly --mock --storage-backend file
+
+# DB 模式关闭文件回退（严格模式）
+tsx src/cli.ts run --mode weekly --mock --storage-backend db --storage-no-fallback
 ```
 
 审核相关参数：
@@ -114,6 +127,50 @@ tsx src/cli.ts run --serve-feishu-callback
 
 # 2) 周一 11:30 提醒 pending 审核（建议由 cron 触发）
 tsx src/cli.ts run --mode weekly --notify-review-reminder
+```
+
+Review API（M4）：
+```bash
+# 启动最小 API（默认 127.0.0.1:8790）
+pnpm run run:review:api
+
+# 或手动指定
+tsx src/cli.ts run --serve-review-api --review-api-host 127.0.0.1 --review-api-port 8790
+```
+
+主要接口：
+- `POST /api/review-actions`
+- `GET /api/review-actions/latest`
+- `GET /api/review/pending`
+- `GET /api/runtime-config`
+- `PATCH /api/runtime-config`（支持 `expectedVersion` 冲突检测）
+- `GET /api/audit-events`
+
+文件迁移到 DB（M4）：
+```bash
+# 将 outputs/review-instructions + runtime-config 文件导入 SQLite
+pnpm run run:migrate:file-to-db
+
+# 一键跑完 M4 核心链路验证（生成 -> API 审核 -> recheck 发布 -> 审计查询）
+pnpm run verify:m4
+
+# 用 DB Browser for SQLite 打开本地数据库（macOS）
+pnpm run db:open
+```
+
+SQLite 本地查看（CLI）：
+```bash
+pnpm run db:sqlite
+# 进入 sqlite3 后可执行：
+# .tables
+# .headers on
+# .mode column
+# SELECT id, mode, report_date, stage, action, decided_at FROM review_instructions ORDER BY id DESC LIMIT 20;
+```
+
+macOS 安装 DB Browser：
+```bash
+brew install --cask db-browser-for-sqlite
 ```
 
 Feishu 与工程融合（一键联调）：
@@ -258,6 +315,6 @@ pnpm test
 - 模型调用与高级总结暂未接入，作为下一阶段扩展点。
 
 ## 下一步（建议）
-1. 审核指令与 runtime config 从文件升级到 DB/API，并补并发写保护与审计查询。
+1. 进入 M5：接入 LLM 总结节点，并逐步扩展到分类/打标/排序辅助。
 2. 增加一键新 run 命令（针对 reject 后重开流程）。
-3. 接入 LLM 总结节点，并逐步扩展到分类/打标/排序辅助。
+3. 评估多实例部署后再启动分布式互斥方案。
