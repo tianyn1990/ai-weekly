@@ -1,13 +1,13 @@
 import dayjs from "dayjs";
 
-import { applyRuntimeSourceOverrides, loadRuntimeConfig } from "../config/runtime-config.js";
+import { applyRuntimeSourceOverrides, createRuntimeConfigStore } from "../config/runtime-config.js";
 import { loadSourceConfig } from "../config/source-config.js";
 import { rankItemsWithTuning } from "../core/scoring.js";
 import { createEmptyMetrics, createItemId, normalizeWhitespace, titleFingerprint } from "../core/utils.js";
 import type { ItemCategory, NormalizedItem, RankedItem, ReportState, ReviewInstruction, SourceConfig } from "../core/types.js";
 import { buildReportMarkdown } from "../report/markdown.js";
 import { executeFeedbackRevision } from "../review/feedback-executor.js";
-import { FileReviewInstructionStore } from "../review/instruction-store.js";
+import { createReviewInstructionStore } from "../review/instruction-store.js";
 import { collectMockItems } from "../sources/mock-source.js";
 import { collectRssItems } from "../sources/rss-source.js";
 import { computeWeeklyReviewDeadline } from "../utils/time.js";
@@ -21,7 +21,13 @@ export async function collectItemsNode(state: ReportState): Promise<Partial<Repo
     return { rawItems, metrics };
   }
 
-  const runtimeConfig = await loadRuntimeConfig(state.runtimeConfigPath);
+  const runtimeConfigStore = createRuntimeConfigStore({
+    backend: state.storageBackend,
+    dbPath: state.storageDbPath,
+    filePath: state.runtimeConfigPath,
+    fallbackToFile: state.storageFallbackToFile,
+  });
+  const runtimeConfig = (await runtimeConfigStore.getCurrent()).config;
   const sources = applyRuntimeSourceOverrides(await loadSourceConfig(state.sourceConfigPath), runtimeConfig);
   const { items, warnings } = await collectRssItems(sources, state.sourceLimit);
   const metrics = { ...state.metrics, collectedCount: items.length };
@@ -78,7 +84,13 @@ export async function classifyItemsNode(state: ReportState): Promise<Partial<Rep
 }
 
 export async function rankItemsNode(state: ReportState): Promise<Partial<ReportState>> {
-  const runtimeConfig = await loadRuntimeConfig(state.runtimeConfigPath);
+  const runtimeConfigStore = createRuntimeConfigStore({
+    backend: state.storageBackend,
+    dbPath: state.storageDbPath,
+    filePath: state.runtimeConfigPath,
+    fallbackToFile: state.storageFallbackToFile,
+  });
+  const runtimeConfig = (await runtimeConfigStore.getCurrent()).config;
   const sources = applyRuntimeSourceOverrides(await loadSourceConfig(state.sourceConfigPath), runtimeConfig);
   const ranked = rankItemsWithTuning(state.items, sources, state.generatedAt, {
     sourceWeightMultiplier: runtimeConfig.rankingWeights.source,
@@ -155,6 +167,9 @@ export async function reviewOutlineNode(state: ReportState): Promise<Partial<Rep
       generatedAt: state.generatedAt,
       sourceConfigPath: state.sourceConfigPath,
       runtimeConfigPath: state.runtimeConfigPath,
+      storageBackend: state.storageBackend,
+      storageDbPath: state.storageDbPath,
+      storageFallbackToFile: state.storageFallbackToFile,
       rankedItems: state.rankedItems,
       metrics: state.metrics,
       instruction: decision.instruction,
@@ -249,6 +264,9 @@ export async function reviewFinalNode(state: ReportState): Promise<Partial<Repor
       generatedAt: state.generatedAt,
       sourceConfigPath: state.sourceConfigPath,
       runtimeConfigPath: state.runtimeConfigPath,
+      storageBackend: state.storageBackend,
+      storageDbPath: state.storageDbPath,
+      storageFallbackToFile: state.storageFallbackToFile,
       rankedItems: state.rankedItems,
       metrics: state.metrics,
       instruction: decision.instruction,
@@ -307,6 +325,9 @@ export function createInitialState(params: {
   useMock: boolean;
   sourceConfigPath: string;
   runtimeConfigPath?: string;
+  storageBackend?: ReportState["storageBackend"];
+  storageDbPath?: string;
+  storageFallbackToFile?: boolean;
   sourceLimit: number;
   generatedAt: string;
   reviewStartedAt?: string;
@@ -326,6 +347,9 @@ export function createInitialState(params: {
     useMock: params.useMock,
     sourceConfigPath: params.sourceConfigPath,
     runtimeConfigPath: params.runtimeConfigPath ?? "outputs/runtime-config/global.json",
+    storageBackend: params.storageBackend ?? "file",
+    storageDbPath: params.storageDbPath ?? "outputs/db/app.sqlite",
+    storageFallbackToFile: params.storageFallbackToFile ?? true,
     sourceLimit: params.sourceLimit,
     reviewInstructionRoot: params.reviewInstructionRoot,
     rawItems: [],
@@ -389,9 +413,21 @@ function resolveCategory(text: string): ItemCategory {
   return "other";
 }
 
-export async function loadEnabledSources(path: string, runtimeConfigPath = "outputs/runtime-config/global.json"): Promise<SourceConfig[]> {
-  const runtimeConfig = await loadRuntimeConfig(runtimeConfigPath);
-  const sources = applyRuntimeSourceOverrides(await loadSourceConfig(path), runtimeConfig);
+export async function loadEnabledSources(input: {
+  sourceConfigPath: string;
+  runtimeConfigPath?: string;
+  storageBackend?: "file" | "db";
+  storageDbPath?: string;
+  storageFallbackToFile?: boolean;
+}): Promise<SourceConfig[]> {
+  const runtimeConfigStore = createRuntimeConfigStore({
+    backend: input.storageBackend ?? "file",
+    dbPath: input.storageDbPath ?? "outputs/db/app.sqlite",
+    filePath: input.runtimeConfigPath ?? "outputs/runtime-config/global.json",
+    fallbackToFile: input.storageFallbackToFile ?? true,
+  });
+  const runtimeConfig = (await runtimeConfigStore.getCurrent()).config;
+  const sources = applyRuntimeSourceOverrides(await loadSourceConfig(input.sourceConfigPath), runtimeConfig);
   return sources.filter((source) => source.enabled);
 }
 
@@ -415,7 +451,12 @@ async function resolveStageDecision(input: {
   const { state, stage, fallbackApproved } = input;
 
   try {
-    const store = new FileReviewInstructionStore(state.reviewInstructionRoot);
+    const store = createReviewInstructionStore({
+      backend: state.storageBackend,
+      dbPath: state.storageDbPath,
+      fileRoot: state.reviewInstructionRoot,
+      fallbackToFile: state.storageFallbackToFile,
+    });
     const persistedInstruction = await store.getLatestInstruction({
       mode: state.mode,
       reportDate: state.reportDate,
@@ -441,6 +482,7 @@ async function resolveStageDecision(input: {
       instruction: {
         mode: state.mode,
         reportDate: state.reportDate,
+        runId: state.runId,
         stage,
         approved: fallbackApproved,
         decidedAt: state.generatedAt,
@@ -457,6 +499,7 @@ async function resolveStageDecision(input: {
     instruction: {
       mode: state.mode,
       reportDate: state.reportDate,
+      runId: state.runId,
       stage,
       approved: fallbackApproved,
       decidedAt: state.generatedAt,

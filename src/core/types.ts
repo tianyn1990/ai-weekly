@@ -21,7 +21,7 @@ export type PublishStatus = "pending" | "published";
 
 export type ReviewInstructionStage = Exclude<ReviewStage, "none">;
 
-export type ReviewInstructionSource = "cli" | "feishu_callback";
+export type ReviewInstructionSource = "cli" | "feishu_callback" | "api";
 
 export type ReviewInstructionAction = "approve_outline" | "approve_final" | "request_revision" | "reject";
 
@@ -83,6 +83,7 @@ export interface RevisionAuditLog {
 export interface ReviewInstruction {
   mode: ReportMode;
   reportDate: string;
+  runId?: string;
   stage: ReviewInstructionStage;
   approved?: boolean;
   action?: ReviewInstructionAction;
@@ -151,6 +152,9 @@ export interface ReportState {
   useMock: boolean;
   sourceConfigPath: string;
   runtimeConfigPath: string;
+  storageBackend: "file" | "db";
+  storageDbPath: string;
+  storageFallbackToFile: boolean;
   sourceLimit: number;
   reviewInstructionRoot: string;
   rawItems: RawItem[];

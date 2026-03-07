@@ -10,9 +10,14 @@ import { createInitialState, loadEnabledSources } from "./pipeline/nodes.js";
 import { recheckPendingWeeklyReport } from "./pipeline/recheck.js";
 import type { WatchdogCandidate } from "./pipeline/watchdog.js";
 import { runPendingWeeklyWatchdog } from "./pipeline/watchdog.js";
+import { startReviewApiServer } from "./review/api-server.js";
 import { FeishuNotifier, loadFeishuConfigFromEnv, startFeishuReviewCallbackServer } from "./review/feishu.js";
-import { FileReviewInstructionStore } from "./review/instruction-store.js";
+import { createReviewInstructionStore } from "./review/instruction-store.js";
 import { isWeeklyReminderWindowReached, shouldSendWeeklyReminderForArtifact } from "./review/reminder-policy.js";
+import { DbAuditStore } from "./audit/audit-store.js";
+import { createRuntimeConfigStore } from "./config/runtime-config.js";
+import { SqliteEngine } from "./storage/sqlite-engine.js";
+import { migrateFileToDb } from "./storage/migrate-file-to-db.js";
 import { acquireFileLock } from "./utils/file-lock.js";
 import { nowInTimezoneIso } from "./utils/time.js";
 
@@ -22,6 +27,9 @@ interface CliArgs {
   mock: boolean;
   sourceConfigPath: string;
   runtimeConfigPath: string;
+  storageBackend: "file" | "db";
+  storageDbPath: string;
+  storageFallbackToFile: boolean;
   sourceLimit: number;
   timezone: string;
   outputRoot: string;
@@ -38,6 +46,8 @@ interface CliArgs {
   watchRetryDelayMs: number;
   watchSummaryRoot: string;
   serveFeishuCallback: boolean;
+  serveReviewApi: boolean;
+  migrateFileToDb: boolean;
   notifyReviewReminder: boolean;
   feishuWebhookUrl?: string;
   feishuWebhookSecret?: string;
@@ -46,6 +56,9 @@ interface CliArgs {
   feishuCallbackPath: string;
   feishuCallbackAuthToken?: string;
   feishuSigningSecret?: string;
+  reviewApiHost: string;
+  reviewApiPort: number;
+  reviewApiAuthToken?: string;
   notificationRoot: string;
   reportDate?: string;
   generatedAt?: string;
@@ -60,6 +73,16 @@ async function main() {
 
   if (args.recheckPending) {
     await runRecheckPending(args);
+    return;
+  }
+
+  if (args.migrateFileToDb) {
+    await runMigrateFileToDb(args);
+    return;
+  }
+
+  if (args.serveReviewApi) {
+    await runServeReviewApi(args);
     return;
   }
 
@@ -86,7 +109,13 @@ async function runPipeline(args: CliArgs) {
   const reportDate = args.reportDate ?? generatedAt.slice(0, 10);
   const runId = `${args.mode}-${Date.now()}`;
 
-  const enabledSources = await loadEnabledSources(args.sourceConfigPath, args.runtimeConfigPath);
+  const enabledSources = await loadEnabledSources({
+    sourceConfigPath: args.sourceConfigPath,
+    runtimeConfigPath: args.runtimeConfigPath,
+    storageBackend: args.storageBackend,
+    storageDbPath: args.storageDbPath,
+    storageFallbackToFile: args.storageFallbackToFile,
+  });
   console.log(`[run] mode=${args.mode}, mock=${args.mock}, sources=${enabledSources.length}`);
 
   // CLI 只负责 orchestration：准备初始状态、执行 graph、落盘产物。
@@ -97,6 +126,9 @@ async function runPipeline(args: CliArgs) {
     useMock: args.mock,
     sourceConfigPath: args.sourceConfigPath,
     runtimeConfigPath: args.runtimeConfigPath,
+    storageBackend: args.storageBackend,
+    storageDbPath: args.storageDbPath,
+    storageFallbackToFile: args.storageFallbackToFile,
     sourceLimit: args.sourceLimit,
     generatedAt,
     reviewStartedAt: generatedAt,
@@ -208,7 +240,12 @@ async function runWatchPendingWeekly(args: CliArgs) {
 }
 
 async function runServeFeishuCallback(args: CliArgs) {
-  const store = new FileReviewInstructionStore(args.reviewInstructionRoot);
+  const store = createReviewInstructionStore({
+    backend: args.storageBackend,
+    dbPath: args.storageDbPath,
+    fileRoot: args.reviewInstructionRoot,
+    fallbackToFile: args.storageFallbackToFile,
+  });
   const server = await startFeishuReviewCallbackServer({
     host: args.feishuCallbackHost,
     port: args.feishuCallbackPort,
@@ -229,6 +266,57 @@ async function runServeFeishuCallback(args: CliArgs) {
     process.once("SIGTERM", close);
   });
   await server.close();
+}
+
+async function runServeReviewApi(args: CliArgs) {
+  const reviewStore = createReviewInstructionStore({
+    backend: args.storageBackend,
+    dbPath: args.storageDbPath,
+    fileRoot: args.reviewInstructionRoot,
+    fallbackToFile: args.storageFallbackToFile,
+  });
+  const runtimeStore = createRuntimeConfigStore({
+    backend: args.storageBackend,
+    dbPath: args.storageDbPath,
+    filePath: args.runtimeConfigPath,
+    fallbackToFile: args.storageFallbackToFile,
+  });
+  const auditStore = new DbAuditStore(new SqliteEngine(args.storageDbPath));
+
+  const server = await startReviewApiServer({
+    host: args.reviewApiHost,
+    port: args.reviewApiPort,
+    authToken: args.reviewApiAuthToken,
+    outputRoot: args.outputRoot,
+    reviewStore,
+    runtimeStore,
+    auditStore,
+  });
+
+  console.log(`[review-api] listening on http://${args.reviewApiHost}:${server.port}`);
+  await new Promise<void>((resolve) => {
+    const close = () => resolve();
+    process.once("SIGINT", close);
+    process.once("SIGTERM", close);
+  });
+  await server.close();
+}
+
+async function runMigrateFileToDb(args: CliArgs) {
+  if (args.storageBackend !== "db") {
+    throw new Error("--migrate-file-to-db 仅支持在 --storage-backend=db 下执行");
+  }
+
+  const summary = await migrateFileToDb({
+    instructionRoot: args.reviewInstructionRoot,
+    runtimeConfigPath: args.runtimeConfigPath,
+    dbPath: args.storageDbPath,
+  });
+
+  console.log(
+    `[migrate] instructions inserted=${summary.instruction.inserted}, skipped=${summary.instruction.skipped}, failed=${summary.instruction.failed}`,
+  );
+  console.log(`[migrate] runtime-config insertedVersion=${summary.runtimeConfig.insertedVersion}`);
 }
 
 async function runNotifyReviewReminder(args: CliArgs) {
@@ -324,6 +412,26 @@ function parseArgs(argv: string[]): CliArgs {
       continue;
     }
 
+    if (token === "--storage-backend" && next) {
+      if (next !== "file" && next !== "db") {
+        throw new Error("--storage-backend 只支持 file 或 db");
+      }
+      args.storageBackend = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--storage-db-path" && next) {
+      args.storageDbPath = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--storage-no-fallback") {
+      args.storageFallbackToFile = false;
+      continue;
+    }
+
     if (token === "--source-limit" && next) {
       args.sourceLimit = Number(next);
       i += 1;
@@ -413,6 +521,16 @@ function parseArgs(argv: string[]): CliArgs {
       continue;
     }
 
+    if (token === "--serve-review-api") {
+      args.serveReviewApi = true;
+      continue;
+    }
+
+    if (token === "--migrate-file-to-db") {
+      args.migrateFileToDb = true;
+      continue;
+    }
+
     if (token === "--notify-review-reminder") {
       args.notifyReviewReminder = true;
       continue;
@@ -460,6 +578,24 @@ function parseArgs(argv: string[]): CliArgs {
       continue;
     }
 
+    if (token === "--review-api-host" && next) {
+      args.reviewApiHost = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--review-api-port" && next) {
+      args.reviewApiPort = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--review-api-auth-token" && next) {
+      args.reviewApiAuthToken = next;
+      i += 1;
+      continue;
+    }
+
     if (token === "--notification-root" && next) {
       args.notificationRoot = next;
       i += 1;
@@ -490,6 +626,9 @@ function defaults(): CliArgs {
     mock: false,
     sourceConfigPath: "data/sources.yaml",
     runtimeConfigPath: "outputs/runtime-config/global.json",
+    storageBackend: (process.env.STORAGE_BACKEND as "file" | "db" | undefined) ?? "db",
+    storageDbPath: process.env.STORAGE_DB_PATH ?? "outputs/db/app.sqlite",
+    storageFallbackToFile: process.env.STORAGE_FALLBACK_TO_FILE !== "false",
     sourceLimit: 6,
     timezone: "Asia/Shanghai",
     outputRoot: "outputs/review",
@@ -506,6 +645,8 @@ function defaults(): CliArgs {
     watchRetryDelayMs: 300,
     watchSummaryRoot: "outputs/watchdog",
     serveFeishuCallback: false,
+    serveReviewApi: false,
+    migrateFileToDb: false,
     notifyReviewReminder: false,
     feishuWebhookUrl: feishu.webhookUrl,
     feishuWebhookSecret: feishu.webhookSecret,
@@ -514,6 +655,9 @@ function defaults(): CliArgs {
     feishuCallbackPath: feishu.callbackPath,
     feishuCallbackAuthToken: feishu.callbackAuthToken,
     feishuSigningSecret: feishu.callbackSigningSecret,
+    reviewApiHost: process.env.REVIEW_API_HOST ?? "127.0.0.1",
+    reviewApiPort: Number(process.env.REVIEW_API_PORT ?? "8790"),
+    reviewApiAuthToken: process.env.REVIEW_API_AUTH_TOKEN,
     notificationRoot: "outputs/notifications/feishu",
   };
 }
@@ -575,6 +719,9 @@ async function writeArtifacts(root: string, mode: ReportMode, datePart: string, 
           timezone: result.timezone,
           sourceConfigPath: result.sourceConfigPath,
           runtimeConfigPath: result.runtimeConfigPath,
+          storageBackend: result.storageBackend,
+          storageDbPath: result.storageDbPath,
+          storageFallbackToFile: result.storageFallbackToFile,
           sourceLimit: result.sourceLimit,
           outlineMarkdown: result.outlineMarkdown,
           rankedItems: result.rankedItems,
@@ -730,6 +877,9 @@ function buildRecheckStateFromArtifact(input: {
     useMock: false,
     sourceConfigPath: artifact.snapshot.sourceConfigPath,
     runtimeConfigPath: artifact.snapshot.runtimeConfigPath ?? args.runtimeConfigPath,
+    storageBackend: artifact.snapshot.storageBackend ?? args.storageBackend,
+    storageDbPath: artifact.snapshot.storageDbPath ?? args.storageDbPath,
+    storageFallbackToFile: artifact.snapshot.storageFallbackToFile ?? args.storageFallbackToFile,
     sourceLimit: artifact.snapshot.sourceLimit,
     generatedAt,
     reviewStartedAt: artifact.reviewStartedAt ?? artifact.generatedAt,

@@ -8,3 +8,5 @@ outputs/published/**
 !outputs/published/.gitkeep
 outputs/review-instructions/**
 outputs/notifications/**
+outputs/runtime-config/**
+outputs/db/**

@@ -1,9 +1,9 @@
 import { loadSourceConfig } from "../config/source-config.js";
 import {
   applyRuntimeSourceOverrides,
-  loadRuntimeConfig,
   mergeRuntimeConfigByFeedback,
-  saveRuntimeConfig,
+  loadRuntimeConfigByStore,
+  saveRuntimeConfigByStore,
 } from "../config/runtime-config.js";
 import { rankItemsWithTuning } from "../core/scoring.js";
 import { createEmptyMetrics, createItemId, normalizeWhitespace } from "../core/utils.js";
@@ -14,6 +14,9 @@ interface ExecuteFeedbackRevisionInput {
   generatedAt: string;
   sourceConfigPath: string;
   runtimeConfigPath: string;
+  storageBackend: "file" | "db";
+  storageDbPath: string;
+  storageFallbackToFile: boolean;
   rankedItems: RankedItem[];
   metrics: {
     collectedCount: number;
@@ -62,13 +65,24 @@ export async function executeFeedbackRevision(input: ExecuteFeedbackRevisionInpu
   const withAdditions = applyCandidateAdditions(withRemovals.items, feedback, input.generatedAt);
   const filteredByToggle = applySourceToggleFilter(withAdditions.items, feedback);
 
-  const runtimeConfigBefore = await loadRuntimeConfig(input.runtimeConfigPath);
+  const runtimeStoreInput = {
+    backend: input.storageBackend,
+    dbPath: input.storageDbPath,
+    filePath: input.runtimeConfigPath,
+    fallbackToFile: input.storageFallbackToFile,
+  } as const;
+  const runtimeConfigBefore = await loadRuntimeConfigByStore(runtimeStoreInput);
   const runtimeMerge = mergeRuntimeConfigByFeedback({
-    current: runtimeConfigBefore,
+    current: runtimeConfigBefore.config,
     feedback,
     nowIso: input.generatedAt,
   });
-  await saveRuntimeConfig(input.runtimeConfigPath, runtimeMerge.config);
+  await saveRuntimeConfigByStore(runtimeStoreInput, {
+    config: runtimeMerge.config,
+    updatedAt: input.generatedAt,
+    updatedBy: input.instruction.operator,
+    traceId: input.instruction.traceId,
+  });
 
   const sourceConfig = await loadSourceConfig(input.sourceConfigPath);
   const effectiveSources = applyRuntimeSourceOverrides(sourceConfig, runtimeMerge.config);
