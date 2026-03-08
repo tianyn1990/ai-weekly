@@ -4,4 +4,5 @@ dist
 .env.local
 outputs/notifications/**
 outputs/db/**
+outputs/daemon/**
 outputs/service-logs/**

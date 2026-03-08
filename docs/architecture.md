@@ -448,6 +448,7 @@ DB 表：`operation_jobs`
 - 默认不纳入同步的目录：
   - `outputs/db/**`（二进制数据库，不适合协作合并）
   - `outputs/notifications/**`（运行时通知缓存）
+  - `outputs/daemon/**`（调度去重与补偿 marker，属于单机运行态）
   - `outputs/service-logs/**`（本机运行日志，体积增长快且无协作价值）
 
 ### 10.6 M4.4 本地服务运维配置

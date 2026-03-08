@@ -276,6 +276,7 @@ M4.3 运维备忘（防遗漏）：
 - 默认不会被同步的路径：
   - `outputs/db/**`
   - `outputs/notifications/**`
+  - `outputs/daemon/**`
   - `outputs/service-logs/**`
 
 macOS 初始化与一键服务托管（M4.4）：
