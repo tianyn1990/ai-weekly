@@ -86,6 +86,16 @@
       "source": "feishu_callback",
       "reason": "大纲通过",
       "messageId": "om_x100b55e6120e44a4b34e80633ab5892"
+    },
+    {
+      "stage": "final_review",
+      "approved": true,
+      "action": "approve_final",
+      "decidedAt": "2026-03-08T07:30:17.957Z",
+      "source": "feishu_callback",
+      "operator": "ou_e19d72b55e637aab98b744b155bd66c7",
+      "reason": "终稿通过",
+      "traceId": "8a51794119d5a59ddd3ddff4702b3da7"
     }
   ]
 }
