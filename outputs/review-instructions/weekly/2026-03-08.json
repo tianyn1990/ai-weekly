@@ -67,6 +67,25 @@
       "source": "feishu_callback",
       "reason": "终稿通过",
       "messageId": "om_x100b55f2a2e18c6cb3804b527cf8c69"
+    },
+    {
+      "stage": "outline_review",
+      "approved": true,
+      "action": "approve_outline",
+      "decidedAt": "2026-03-08T07:30:01.690Z",
+      "source": "feishu_callback",
+      "operator": "ou_e19d72b55e637aab98b744b155bd66c7",
+      "reason": "大纲通过",
+      "traceId": "425c370cc8ec489311e5e02a2c8c18d5"
+    },
+    {
+      "stage": "outline_review",
+      "approved": true,
+      "action": "approve_outline",
+      "decidedAt": "2026-03-08T07:30:01.692Z",
+      "source": "feishu_callback",
+      "reason": "大纲通过",
+      "messageId": "om_x100b55e6120e44a4b34e80633ab5892"
     }
   ]
 }
