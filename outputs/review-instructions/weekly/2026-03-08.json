@@ -96,6 +96,15 @@
       "operator": "ou_e19d72b55e637aab98b744b155bd66c7",
       "reason": "终稿通过",
       "traceId": "8a51794119d5a59ddd3ddff4702b3da7"
+    },
+    {
+      "stage": "outline_review",
+      "approved": true,
+      "action": "approve_outline",
+      "decidedAt": "2026-03-08T08:50:19.221Z",
+      "source": "feishu_callback",
+      "reason": "大纲通过",
+      "messageId": "om_x100b55e7c52e0ca0b207143cabc1811"
     }
   ]
 }
