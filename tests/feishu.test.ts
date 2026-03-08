@@ -220,6 +220,41 @@ describe("FeishuNotifier", () => {
     await fs.rm(tempDir, { recursive: true, force: true });
   });
 
+  it("同一 run + 同一 stage 的短时间重复通知应跳过更新", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-notifier-"));
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, tenant_access_token: "tenant_token", expire: 7200 }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, data: { message_id: "om_outline" } }), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const notifier = new FeishuNotifier({
+      appId: "cli_xxx",
+      appSecret: "secret_xxx",
+      reviewChatId: "oc_xxx",
+      notificationRoot: tempDir,
+    });
+
+    await notifier.notifyReviewPending({
+      runId: "weekly-run-1",
+      reportDate: "2026-03-09",
+      reviewStage: "outline_review",
+      reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
+      reviewMarkdownPath: "outputs/review/weekly/2026-03-09.md",
+    });
+    await notifier.notifyReviewPending({
+      runId: "weekly-run-1",
+      reportDate: "2026-03-09",
+      reviewStage: "outline_review",
+      reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
+      reviewMarkdownPath: "outputs/review/weekly/2026-03-09.md",
+    });
+
+    // token + 首次发卡；第二次同 stage 在短窗口内应 no-op，不再请求飞书。
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    await fs.rm(tempDir, { recursive: true, force: true });
+  });
+
   it("主卡更新失败时应降级发送新卡并覆盖主卡记录", async () => {
     const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-notifier-"));
     const fetchMock = vi
@@ -789,6 +824,73 @@ describe("Feishu callback server", () => {
         expect(response.status).toBe(200);
         const payload = await response.json();
         expect(payload.ok).toBe(true);
+        expect(mentionHandler).toHaveBeenCalledTimes(1);
+      } finally {
+        await server.close();
+      }
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it("重复 mention 回调应只处理一次并返回 duplicated", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-"));
+    const mentionHandler = vi.fn(async () => ({
+      handled: true,
+      message: "已发送操作卡",
+    }));
+    try {
+      const store = new FileReviewInstructionStore(tempDir);
+      const server = await startFeishuReviewCallbackServer({
+        host: "127.0.0.1",
+        port: 0,
+        path: "/feishu/review-callback",
+        authToken: "token-123",
+        store,
+        mentionHandler,
+      });
+
+      try {
+        const payload = {
+          schema: "2.0",
+          header: {
+            event_type: "im.message.receive_v1",
+            event_id: "evt_mention_dup_001",
+          },
+          event: {
+            operator: {
+              open_id: "ou_test",
+            },
+            message: {
+              message_type: "text",
+              message_id: "om_dup_001",
+              chat_id: "oc_001",
+              content: JSON.stringify({
+                text: "@机器人 运维",
+              }),
+            },
+          },
+        };
+
+        const first = await fetch(`http://127.0.0.1:${server.port}/feishu/review-callback?token=token-123`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+        expect(first.status).toBe(200);
+
+        const second = await fetch(`http://127.0.0.1:${server.port}/feishu/review-callback?token=token-123`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+        expect(second.status).toBe(200);
+        const secondPayload = await second.json();
+        expect(secondPayload.duplicated).toBe(true);
         expect(mentionHandler).toHaveBeenCalledTimes(1);
       } finally {
         await server.close();

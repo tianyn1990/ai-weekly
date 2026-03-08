@@ -1,7 +1,7 @@
-# AI 周报系统设计（v0.7）
+# AI 周报系统设计（v0.8）
 
 ## 1. 文档目标与范围
-- 目标：定义 AI 日报/周报系统在 **M4.3 已完成** 基线下的完整技术架构。
+- 目标：定义 AI 日报/周报系统在 **M4.4 已完成** 基线下的完整技术架构。
 - 范围：覆盖采集、处理、审核、发布、协同通知、审核意见回流、可观测与运维策略。
 - 非目标：不描述前端管理后台 UI 细节；不覆盖分布式部署实现细节（当前暂缓）。
 
@@ -56,17 +56,25 @@
 - 自动 Git 同步：支持受控目录自动 add/commit/push，push 阶段支持可选代理注入。
 - 任务可观测：新增 `operation_jobs` 队列表并支持 API 查询。
 
-### 2.8 规划中（M5）
+### 2.8 已实现（M4.4）
+- 新机初始化引导：新增 `setup:macos`，统一检查依赖、环境变量、tunnel 资产与 cloudflared config。
+- 配置自动补齐：当缺失 `~/.cloudflared/config.yml` 且环境参数齐全时，自动生成固定域名配置。
+- 一键服务托管：新增 `services:up/down/restart/status/logs`，通过 launchd 托管 daemon + Named Tunnel。
+- 联合健康检查：`services:status` 同时输出本地 health 与公网 callback health，降低排障成本。
+- 模式边界显式化：保留 `feishu:tunnel` 作为临时调试模式，并在脚本中输出非稳定 URL 提示。
+
+### 2.9 规划中（M5）
 - LLM 增强：先总结，再逐步扩展到分类/打标/排序辅助。
 
 ## 3. 架构全景
-系统分为六层：
+系统分为七层：
 1. **Ingestion Layer**：按来源抓取原始条目（RSS/后续扩展 API）。
 2. **Processing Layer (LangGraph)**：标准化、去重、分类、排序、大纲/正文生成。
 3. **Review Orchestration Layer**：审核状态机、超时发布判定、pending 复检。
 4. **Collaboration Layer**：Feishu 通知、审核动作回写、审核意见回流修订。
 5. **Storage Layer**：SQLite（主）+ 文件（fallback）双轨持久化。
 6. **Automation Layer**：daemon scheduler + operation queue + git sync executor。
+7. **Service Ops Layer**：macOS bootstrap + launchd service lifecycle（本地运维收敛层）。
 
 ## 4. 目录与模块责任
 ```text
@@ -112,6 +120,8 @@
     │   └── reminder-policy.ts        # 周一 11:30 提醒判定策略
     ├── report/
     │   └── markdown.ts               # 报告渲染
+    ├── tools/
+    │   └── service-ops.ts            # macOS 初始化与服务托管命令
     ├── sources/
     │   ├── rss-source.ts
     │   └── mock-source.ts
@@ -121,6 +131,12 @@
     └── storage/
         ├── sqlite-engine.ts          # SQLite 引擎与 schema 初始化
         └── migrate-file-to-db.ts     # 文件到 DB 迁移
+└── infra/
+    ├── cloudflared/
+    │   └── config.example.yml        # 固定域名 tunnel 配置模板
+    └── launchd/
+        ├── com.ai-weekly.daemon.plist.tmpl
+        └── com.ai-weekly.tunnel.plist.tmpl
 ```
 
 ## 5. 核心流程设计
@@ -247,6 +263,25 @@ daemon start
 - 主动触发入口为“@机器人 -> 运维操作卡 -> operation_jobs 入队”。
 - 审核动作写入后自动入队 `recheck_weekly`，减少人工补命令。
 - 自动入队的 `recheck_weekly` 视为系统内部动作，不群发主动触发回执，避免干扰审核对话。
+
+### 5.8 macOS 初始化与服务托管流程（M4.4 已实现）
+```text
+pnpm run setup:macos
+  -> check binary/env/tunnel/config
+  -> optional generate ~/.cloudflared/config.yml
+  -> print actionable fix hints
+
+pnpm run services:up
+  -> render launch agents (daemon + tunnel)
+  -> launchctl bootstrap + kickstart
+  -> run status health summary
+```
+
+设计要点：
+- 把“首次接入复杂性”和“日常运维复杂性”分层：`setup` 负责发现问题，`services:*` 负责稳定运行。
+- launchd 托管双服务，避免手工开两个终端造成漏启动与回调不可用。
+- `status` 的本地 + 公网双健康检查可快速定位“服务在本地正常但外网不可达”问题。
+- 继续保留 `feishu:tunnel` 作为临时联调入口，但脚本显式警告 URL 不稳定，避免误用为长期模式。
 
 ## 6. 状态机模型
 ### 6.1 审核状态
@@ -413,6 +448,20 @@ DB 表：`operation_jobs`
 - 默认不纳入同步的目录：
   - `outputs/db/**`（二进制数据库，不适合协作合并）
   - `outputs/notifications/**`（运行时通知缓存）
+  - `outputs/service-logs/**`（本机运行日志，体积增长快且无协作价值）
+
+### 10.6 M4.4 本地服务运维配置
+- `AI_WEEKLY_ENV_FILE`（可选，默认 `<repo>/.env.local`）
+- `AI_WEEKLY_LAUNCHD_ENV_FILE`（可选，默认 `~/.config/ai-weekly/.env.launchd`）
+- `CLOUDFLARED_TUNNEL_NAME`（默认 `ai-weekly-callback`）
+- `CLOUDFLARED_CONFIG_PATH`（默认 `~/.cloudflared/config.yml`）
+- `CLOUDFLARED_TUNNEL_ID` / `CLOUDFLARED_TUNNEL_HOSTNAME`（首次 setup 自动生成 config 时使用）
+- `CLOUDFLARED_CREDENTIALS_FILE`（可选，默认推导 `~/.cloudflared/<tunnel-id>.json`）
+- `SERVICE_LOGS_TAIL`（`services:logs` 默认 tail 行数）
+
+实现约束：
+- `services:up` 会把 `AI_WEEKLY_ENV_FILE` 同步到 `AI_WEEKLY_LAUNCHD_ENV_FILE`，确保 launchd 读取路径稳定，规避 macOS TCC 对 `Documents/Desktop` 的权限拦截。
+- `launchctl bootstrap` 增加短重试与 stop 态等待，降低 `Input/output error` 的偶发失败概率。
 
 安全约束：
 - 回调必须做签名校验与幂等处理。
@@ -434,8 +483,9 @@ DB 表：`operation_jobs`
 3. **M4（存储）**：审核指令与 runtime 配置升级 DB/API + 审计 + 并发控制【已完成】。
 4. **M4.1（协同增强）**：Feishu app-only 通知统一 + 点击反馈闭环【已完成】。
 5. **M4.3（自动化）**：daemon 自动调度 + @机器人主动触发 + 自动 Git 同步【已完成】。
-6. **M5（智能）**：LLM 总结节点优先，逐步扩展到分类/打标/排序辅助。
-7. **暂缓项**：分布式互斥（多实例部署时再做）。
+6. **M4.4（运维）**：macOS 初始化引导 + 一键服务托管（launchd + Named Tunnel）【已完成】。
+7. **M5（智能）**：LLM 总结节点优先，逐步扩展到分类/打标/排序辅助。
+8. **暂缓项**：分布式互斥（多实例部署时再做）。
 
 ## 13. 里程碑后的质量门禁
 - 无来源断言容忍度：0。

@@ -1,9 +1,9 @@
-# AI 周报项目 PRD（v0.7）
+# AI 周报项目 PRD（v0.8）
 
 ## 0. 文档状态
-- 版本：v0.7
-- 状态：M4.3 已实现基线
-- 更新时间：2026-03-07
+- 版本：v0.8
+- 状态：M4.4 已实现基线
+- 更新时间：2026-03-08
 
 ## 1. 目标与读者
 - 主要读者：前端开发团队、Agent 开发团队。
@@ -78,6 +78,8 @@
 - 自动推进：审核动作写入成功后，系统自动入队并执行 recheck。
 - 链接可读性：飞书通知需支持附加可点击的公网报告链接（当配置 `REPORT_PUBLIC_BASE_URL` 时）。
 - 状态远程可审阅：待审核与已发布产物支持自动 Git 同步，方便在仓库直接审核。
+- 新机接入体验：提供 `setup:macos` 一次性初始化检查，自动发现依赖/配置缺失并给出修复建议。
+- 常驻运维体验：提供 `services:up/down/restart/status/logs` 一键托管 daemon + Named Tunnel，避免手工开多终端。
 - 审核意见回流：回流不等于取消，系统需支持在原始内容基础上进行结构化调整：
   - 新增/删除候选条目
   - 新增主题或搜索词
@@ -133,6 +135,7 @@
 - M4.1：飞书 app-only 通知统一 + 点击反馈闭环【已完成】。
 - M4.2：飞书审核交互重构（阶段引导主卡 + 单卡更新 + 去噪回执）【已完成】。
 - M4.3：daemon 自动化调度 + @机器人主动触发 + 自动 Git 同步【已完成】。
+- M4.4：macOS 初始化引导 + 一键服务托管（launchd + Named Tunnel）【已完成】。
 - M5：LLM 增强（总结优先，逐步覆盖分类/打标/排序辅助）。
 - M6：月报/季报/年报聚合与趋势分析。
 
@@ -182,3 +185,11 @@
 - [ ] 主动触发任务采用“入队异步执行 + 完成回执”模式，避免回调超时。
 - [ ] 审核动作写入后可自动触发 recheck，无需人工补执行。
 - [ ] `outputs/review` / `outputs/published` / `outputs/review-instructions` / `outputs/runtime-config` 支持自动 Git 同步（可选 push 代理）。
+
+### 12.8 M4.4（macOS 初始化与一键服务托管）验收
+- [ ] 执行 `pnpm run setup:macos` 后，系统可输出依赖、环境变量、tunnel 与 config 检查结果，并给出修复建议。
+- [ ] 缺失 `~/.cloudflared/config.yml` 且已配置 tunnel id/hostname 时，setup 可自动生成固定域名配置。
+- [ ] 执行 `pnpm run services:up` 后，daemon 与 tunnel 均被 launchd 托管并可在 `services:status` 中看到健康状态。
+- [ ] 执行 `pnpm run services:restart` 可稳定重启双服务，`services:down` 可一致停止双服务。
+- [ ] `pnpm run services:logs` 可查看 daemon/tunnel 日志，便于排障。
+- [ ] `pnpm run feishu:tunnel` 仍可用于临时联调，且命令输出明确提示“URL 非稳定，不建议长期运行”。

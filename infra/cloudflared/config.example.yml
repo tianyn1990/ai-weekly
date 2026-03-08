@@ -1,0 +1,7 @@
+tunnel: ${CLOUDFLARED_TUNNEL_NAME}
+credentials-file: ${CLOUDFLARED_CREDENTIALS_FILE}
+
+ingress:
+  - hostname: ${CLOUDFLARED_TUNNEL_HOSTNAME}
+    service: http://${FEISHU_CALLBACK_HOST}:${FEISHU_CALLBACK_PORT}
+  - service: http_status:404

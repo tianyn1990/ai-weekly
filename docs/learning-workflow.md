@@ -49,6 +49,7 @@ pnpm run:weekly:mock
 - M4 复盘 02（Feishu app-only 通知统一 + 点击反馈闭环）：`docs/learning-sessions/m4-session-02-feishu-app-feedback.md`
 - M4 复盘 03（Feishu 审核交互重构：阶段主卡 + 单卡更新 + 去噪回执）：`docs/learning-sessions/m4-session-03-feishu-review-ux-guided-flow.md`
 - M4 复盘 04（daemon 自动化 + @机器人主动触发 + 自动 Git 同步）：`docs/learning-sessions/m4-session-04-daemon-and-manual-ops.md`
+- M4 复盘 05（macOS 初始化引导 + 一键服务托管）：`docs/learning-sessions/m4-session-05-macos-bootstrap-and-service-runner.md`
 
 ## 6. 执行优先级约束
 - 优先保证「可运行 + 可理解 + 可复盘」三件事同时成立。
@@ -61,10 +62,20 @@ pnpm run:weekly:mock
 4. M4.1：Feishu app-only 通知统一 + 点击反馈闭环【已完成】。
 5. M4.2：Feishu 审核交互重构（阶段引导主卡 + 单卡更新 + 去噪回执）【已完成】。
 6. M4.3：daemon 自动化 + @机器人主动触发 + 自动 Git 同步【已完成】。
-7. M5：LLM 增强（总结优先，逐步扩展到分类/打标/排序辅助）。
-8. 分布式互斥：暂缓，待多实例部署再启动。
+7. M4.4：macOS 初始化引导 + 一键服务托管（launchd + Named Tunnel）【已完成】。
+8. M5：LLM 增强（总结优先，逐步扩展到分类/打标/排序辅助）。
+9. 分布式互斥：暂缓，待多实例部署再启动。
 
 ## 8. M4.3 运行备忘（防遗忘）
 - 常驻运行入口：`pnpm run run:daemon`。
 - 主动触发入口：飞书群内 @应用机器人并发送“运维/操作卡/ops/触发”关键词。
 - 自动同步配置与代理说明以 `README.md` 为准；每次变更同步策略时需同步更新 `README.md` 与 `docs/architecture.md`。
+
+## 9. M4.4 运行备忘（防遗忘）
+- 新机初始化入口：`pnpm run setup:macos`（先修复 FAIL 项，再启动服务）。
+- 一键托管入口：
+  - 启动：`pnpm run services:up`
+  - 状态：`pnpm run services:status`
+  - 日志：`pnpm run services:logs`
+  - 停止：`pnpm run services:down`
+- Quick Tunnel 仅用于临时联调：`pnpm run feishu:tunnel`，长期模式统一使用 Named Tunnel + `services:up`。

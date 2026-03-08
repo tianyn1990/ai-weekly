@@ -23,6 +23,12 @@
     "feishu:token": "tsx src/tools/feishu-ops.ts token",
     "feishu:chat:list": "tsx src/tools/feishu-ops.ts chats",
     "feishu:card:send": "tsx src/tools/feishu-ops.ts send-card",
+    "setup:macos": "tsx src/tools/service-ops.ts setup-macos",
+    "services:up": "tsx src/tools/service-ops.ts up",
+    "services:down": "tsx src/tools/service-ops.ts down",
+    "services:restart": "tsx src/tools/service-ops.ts restart",
+    "services:status": "tsx src/tools/service-ops.ts status",
+    "services:logs": "tsx src/tools/service-ops.ts logs",
     "build": "tsc -p tsconfig.json",
     "test": "vitest run"
   },

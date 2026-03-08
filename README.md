@@ -13,11 +13,60 @@
 - 已完成 M4.1：飞书通知统一为应用机器人（app-only）；卡片点击后支持即时反馈与群内状态回执。
 - 已完成 M4.2：飞书审核交互重构为“阶段引导主卡 + 单卡更新 + 去噪回执”，降低误操作与群消息噪音。
 - 已完成 M4.3：daemon 常驻自动调度 + @机器人主动触发面板 + 自动 Git 同步（可选 push 代理）。
+- 已完成 M4.4：macOS 初始化引导 + 一键服务托管（launchd 托管 daemon + Named Tunnel）。
 - 分布式互斥暂缓，当前以单机 daemon 为部署基线。
 
 ## 环境要求
 - Node.js >= 20
 - pnpm >= 9
+
+## 新手最短路径（10 分钟）
+适用人群：第一次在新电脑跑本项目，希望先跑通稳定模式（daemon + Named Tunnel）。
+
+1) 安装依赖
+```bash
+pnpm install
+```
+
+2) 准备环境变量
+```bash
+cp .env.local.example .env.local
+```
+- 至少填好：`FEISHU_APP_ID`、`FEISHU_APP_SECRET`、`REVIEW_CHAT_ID`、`FEISHU_CALLBACK_AUTH_TOKEN`。
+- 若你已完成 Cloudflare Named Tunnel，补充：`CLOUDFLARED_TUNNEL_NAME`、`CLOUDFLARED_CONFIG_PATH`。
+
+3) 执行初始化自检（会给出缺失项修复建议）
+```bash
+pnpm run setup:macos
+```
+
+4) 启动常驻服务（daemon + tunnel）
+```bash
+pnpm run services:up
+```
+- 说明：该命令会自动把 `AI_WEEKLY_ENV_FILE` 同步到 `~/.config/ai-weekly/.env.launchd`，规避 macOS 对 `Documents/Desktop` 的读取限制。
+
+5) 检查运行状态（必须看这一条）
+```bash
+pnpm run services:status
+```
+预期：`daemon=running`、`tunnel=running`、`local=ok`、`public=ok`。
+
+6) 飞书内触发一次实际流程
+- 在群里 `@应用机器人` 并发送：`运维`。
+- 在操作卡点击：`生成周报（mock）`。
+
+7) 完成审核动作
+- 点击 `大纲通过`，再点击 `终稿通过并发布`。
+
+8) 排障日志（如果步骤 5/6 异常）
+```bash
+pnpm run services:logs
+```
+
+说明：
+- `pnpm run feishu:tunnel` 是临时联调模式，URL 可能变化；长期运行请使用 `services:up`。
+- 如果只想本地看骨架，不走飞书协同，可直接执行 `pnpm run:weekly:mock`。
 
 ## 快速开始
 ```bash
@@ -227,6 +276,33 @@ M4.3 运维备忘（防遗漏）：
 - 默认不会被同步的路径：
   - `outputs/db/**`
   - `outputs/notifications/**`
+  - `outputs/service-logs/**`
+
+macOS 初始化与一键服务托管（M4.4）：
+```bash
+# 1) 首次在新电脑执行（检查依赖/配置/隧道资产）
+pnpm run setup:macos
+
+# 2) 一键启动双服务（daemon + tunnel）
+pnpm run services:up
+
+# 3) 查看运行状态与健康检查（local + public）
+pnpm run services:status
+
+# 4) 查看服务日志（默认 tail 80 行）
+pnpm run services:logs
+
+# 5) 重启/停止
+pnpm run services:restart
+pnpm run services:down
+```
+
+M4.4 说明：
+- `services:up` 会写入 `~/Library/LaunchAgents/com.ai-weekly.{daemon,tunnel}.plist` 并执行 `launchctl bootstrap/kickstart`。
+- `services:up` 启动前会同步 launchd 专用 env 文件（默认 `~/.config/ai-weekly/.env.launchd`），降低 `source .env.local` 被系统拦截概率。
+- callback 稳定模式推荐使用 Named Tunnel（`CLOUDFLARED_TUNNEL_NAME` + 固定域名）。
+- `pnpm run feishu:tunnel` 仅用于临时联调，URL 可能变化，不建议长期运行。
+- 如需修改默认环境文件位置，可设置 `AI_WEEKLY_ENV_FILE=/path/to/.env.local`。
 
 联调输出说明：
 - `pnpm run feishu:dev` 会输出本地回调地址与隧道日志。
@@ -292,6 +368,21 @@ REVIEW_CHAT_ID=""   # 必填
 # 可选：用于把本地文件路径转换为飞书可点击 URL
 # 例如 https://raw.githubusercontent.com/<org>/<repo>/<branch>
 REPORT_PUBLIC_BASE_URL=""
+
+# Service Runner（M4.4）
+# 可选：显式指定 env 文件路径；不填默认 <repo>/.env.local
+AI_WEEKLY_ENV_FILE="/Users/<your-user>/Documents/github/ai-weekly/.env.local"
+# 可选：launchd 实际读取的 env 路径；不填默认 ~/.config/ai-weekly/.env.launchd
+AI_WEEKLY_LAUNCHD_ENV_FILE="/Users/<your-user>/.config/ai-weekly/.env.launchd"
+# Named Tunnel 固定模式（长期运行推荐）
+CLOUDFLARED_TUNNEL_NAME="ai-weekly-callback"
+CLOUDFLARED_CONFIG_PATH="/Users/<your-user>/.cloudflared/config.yml"
+# 首次自动生成 config 时使用；若 config 已存在可留空
+CLOUDFLARED_TUNNEL_ID=""
+CLOUDFLARED_TUNNEL_HOSTNAME="callback.example.com"
+CLOUDFLARED_CREDENTIALS_FILE=""
+# services:logs 默认 tail 行数
+SERVICE_LOGS_TAIL="80"
 
 # daemon 常驻调度配置
 DAEMON_SCHEDULER_INTERVAL_MS="30000"

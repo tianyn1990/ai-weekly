@@ -149,6 +149,9 @@ export interface FeishuCallbackAuditEvent {
 // tenant token 在单进程内短期缓存，减少每条通知都请求鉴权接口的开销与限流风险。
 const tenantTokenCache = new Map<string, { token: string; expireAtMs: number }>();
 const REVIEW_ACTION_SEMANTIC_DEDUP_SECONDS = 120;
+const CALLBACK_EVENT_DEDUP_SECONDS = 120;
+const ACTION_RECEIPT_DEDUP_SECONDS = 120;
+const MAIN_CARD_SAME_STAGE_NOOP_SECONDS = 45;
 
 export function loadFeishuConfigFromEnv(): FeishuConfig {
   return {
@@ -400,6 +403,10 @@ export class FeishuNotifier {
   }): Promise<boolean> {
     const record = await this.readMainCardRecord(input.reportDate);
     if (record && record.runId === input.runId) {
+      if (record.stage === input.stage && isRecentTimestamp(record.updatedAt, MAIN_CARD_SAME_STAGE_NOOP_SECONDS)) {
+        // 同 runId + 同 stage 的高频重复通知不必再次 patch，避免群里出现重复卡片更新噪音。
+        return true;
+      }
       try {
         await this.updateInteractiveCard(record.messageId, input.card);
         await this.writeMainCardRecord({
@@ -518,6 +525,11 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
   close: () => Promise<void>;
   port: number;
 }> {
+  // 回调链路在弱网下可能出现重复投递，这里使用进程内短窗口去重，优先拦截“重复发卡/重复入队/重复回执”噪音。
+  const mentionEventDedupeCache = new Map<string, number>();
+  const operationEventDedupeCache = new Map<string, number>();
+  const actionReceiptDedupeCache = new Map<string, number>();
+
   const server = createServer(async (req, res) => {
     let parsedReviewAction: ReviewActionPayload | null = null;
     try {
@@ -555,6 +567,28 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
       });
 
       if (parsed.kind === "mention_event") {
+        const mentionDedupeKey = buildCallbackEventDedupeKey("mention", {
+          traceId: parsed.payload.traceId,
+          messageId: parsed.payload.messageId,
+          reportDate: parsed.payload.chatId,
+          actionOrOperation: parsed.payload.text,
+        });
+        if (isRecentDuplicateEvent(mentionEventDedupeCache, mentionDedupeKey, CALLBACK_EVENT_DEDUP_SECONDS)) {
+          res.writeHead(200, { "content-type": "application/json" });
+          res.end(
+            JSON.stringify({
+              ok: true,
+              handled: true,
+              duplicated: true,
+              ...buildCallbackToastPayload({
+                success: true,
+                content: "已处理过相同请求，忽略重复提交。",
+              }),
+            }),
+          );
+          return;
+        }
+
         if (!input.mentionHandler) {
           res.writeHead(200, { "content-type": "application/json" });
           res.end(
@@ -586,6 +620,27 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
       }
 
       if (parsed.kind === "operation_action") {
+        const operationDedupeKey = buildCallbackEventDedupeKey("operation", {
+          traceId: parsed.payload.traceId,
+          messageId: parsed.payload.messageId,
+          reportDate: parsed.payload.reportDate,
+          actionOrOperation: parsed.payload.operation,
+        });
+        if (isRecentDuplicateEvent(operationEventDedupeCache, operationDedupeKey, CALLBACK_EVENT_DEDUP_SECONDS)) {
+          res.writeHead(200, { "content-type": "application/json" });
+          res.end(
+            JSON.stringify({
+              ok: true,
+              duplicated: true,
+              ...buildCallbackToastPayload({
+                success: true,
+                content: "该任务已在受理中，忽略重复提交。",
+              }),
+            }),
+          );
+          return;
+        }
+
         if (!input.operationHandler) {
           throw new Error("operation_handler_not_configured");
         }
@@ -707,13 +762,21 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
       let notifySent = false;
       try {
         if (input.notifier) {
-          notifySent = await input.notifier.notifyActionResult({
-            reportDate: reviewPayload.reportDate,
-            action: reviewPayload.action,
-            operator: instruction.operator,
-            result: "accepted",
-            statusEcho,
-          });
+          const receiptDedupeKey = `${reviewPayload.reportDate}|${instruction.stage}|${reviewPayload.action}|accepted`;
+          const duplicatedReceipt = isRecentDuplicateEvent(
+            actionReceiptDedupeCache,
+            receiptDedupeKey,
+            ACTION_RECEIPT_DEDUP_SECONDS,
+          );
+          if (!duplicatedReceipt) {
+            notifySent = await input.notifier.notifyActionResult({
+              reportDate: reviewPayload.reportDate,
+              action: reviewPayload.action,
+              operator: instruction.operator,
+              result: "accepted",
+              statusEcho,
+            });
+          }
         }
       } catch (error) {
         // 动作写入已成功，通知失败不应反向污染审核主流程。
@@ -1595,6 +1658,48 @@ function makeOperationButton(
   };
 }
 
+function buildCallbackEventDedupeKey(
+  kind: "mention" | "operation",
+  input: {
+    traceId?: string;
+    messageId?: string;
+    reportDate?: string;
+    actionOrOperation: string;
+  },
+): string {
+  if (input.traceId) {
+    return `${kind}:trace:${input.traceId}`;
+  }
+  if (input.messageId) {
+    return `${kind}:message:${input.messageId}`;
+  }
+  return `${kind}:semantic:${input.reportDate ?? "none"}:${input.actionOrOperation}`;
+}
+
+function isRecentDuplicateEvent(cache: Map<string, number>, key: string, windowSeconds: number): boolean {
+  const now = Date.now();
+  // 清理窗口外 key，避免常驻进程里去重缓存无限增长。
+  for (const [itemKey, ts] of cache.entries()) {
+    if (now - ts > windowSeconds * 1000) {
+      cache.delete(itemKey);
+    }
+  }
+  const existing = cache.get(key);
+  if (existing && now - existing <= windowSeconds * 1000) {
+    return true;
+  }
+  cache.set(key, now);
+  return false;
+}
+
+function isRecentTimestamp(input: string, windowSeconds: number): boolean {
+  const timestamp = dayjs(input).valueOf();
+  if (!Number.isFinite(timestamp)) {
+    return false;
+  }
+  return Date.now() - timestamp <= windowSeconds * 1000;
+}
+
 function shortErrorMessage(message: string): string {
   if (message.length <= 80) {
     return message;
@@ -1649,5 +1754,7 @@ export const __test__ = {
   inferActionStatusEcho,
   hasAppConfig,
   buildCallbackToastPayload,
+  isRecentDuplicateEvent,
+  buildCallbackEventDedupeKey,
   clearTenantTokenCache: () => tenantTokenCache.clear(),
 };
