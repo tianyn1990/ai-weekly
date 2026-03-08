@@ -20,6 +20,16 @@
       "operator": "ou_e19d72b55e637aab98b744b155bd66c7",
       "reason": "大纲通过",
       "traceId": "d722c52347712fcc70f21ae0caae0d93"
+    },
+    {
+      "stage": "final_review",
+      "approved": true,
+      "action": "approve_final",
+      "decidedAt": "2026-03-08T10:09:18.499Z",
+      "source": "feishu_callback",
+      "operator": "ou_e19d72b55e637aab98b744b155bd66c7",
+      "reason": "终稿通过",
+      "traceId": "fc4f459583c102d7d99b6d592d924dd9"
     }
   ]
 }
