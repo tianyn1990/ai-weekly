@@ -1,0 +1,25 @@
+{
+  "mode": "weekly",
+  "reportDate": "2026-03-08",
+  "instructions": [
+    {
+      "stage": "outline_review",
+      "approved": true,
+      "action": "approve_outline",
+      "decidedAt": "2026-03-08T10:09:02.639Z",
+      "source": "feishu_callback",
+      "reason": "大纲通过",
+      "messageId": "om_x100b55e0fddd00a0b3f69d27881d6f0"
+    },
+    {
+      "stage": "outline_review",
+      "approved": true,
+      "action": "approve_outline",
+      "decidedAt": "2026-03-08T10:09:02.875Z",
+      "source": "feishu_callback",
+      "operator": "ou_e19d72b55e637aab98b744b155bd66c7",
+      "reason": "大纲通过",
+      "traceId": "d722c52347712fcc70f21ae0caae0d93"
+    }
+  ]
+}
