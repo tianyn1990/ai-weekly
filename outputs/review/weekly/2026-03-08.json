@@ -1,7 +1,7 @@
 {
-  "runId": "weekly-1772982906339",
-  "generatedAt": "2026-03-08T15:15:06.303Z",
-  "reviewStartedAt": "2026-03-08T15:15:06.303Z",
+  "runId": "weekly-1772983082695",
+  "generatedAt": "2026-03-08T15:18:02.654Z",
+  "reviewStartedAt": "2026-03-08T15:18:02.654Z",
   "reportDate": "2026-03-08",
   "mode": "weekly",
   "reviewStatus": "pending_review",
@@ -140,168 +140,6 @@
       "evidenceItemIds": [
         "28c10ad734e1"
       ]
-    },
-    {
-      "itemId": "2b7b3f77799b",
-      "title": "开源项目：支持浏览器端 embedding 的库",
-      "summary": "开源项目：支持浏览器端 embedding 的库，聚焦工程实践与可落地方案。",
-      "recommendation": "开源生态更新",
-      "evidenceItemIds": [
-        "2b7b3f77799b"
-      ]
-    },
-    {
-      "itemId": "f6f394b14c60",
-      "title": "研究快讯：多 Agent 协作的通信协议优化",
-      "summary": "研究快讯：多 Agent 协作的通信协议优化，聚焦工程实践与可落地方案。",
-      "recommendation": "Agent 工程实践相关",
-      "evidenceItemIds": [
-        "f6f394b14c60"
-      ]
-    },
-    {
-      "itemId": "e0338d07938c",
-      "title": "评测：不同模型在 coding task 上的表现差异",
-      "summary": "评测：不同模型在 coding task 上的表现差异，聚焦工程实践与可落地方案。",
-      "recommendation": "评测与性能信息",
-      "evidenceItemIds": [
-        "e0338d07938c"
-      ]
-    },
-    {
-      "itemId": "52634bd97a3d",
-      "title": "技术分享：LangGraph checkpoint 机制详解",
-      "summary": "技术分享：LangGraph checkpoint 机制详解，聚焦工程实践与可落地方案。",
-      "recommendation": "Agent 工程实践相关",
-      "evidenceItemIds": [
-        "52634bd97a3d"
-      ]
-    },
-    {
-      "itemId": "29fb4d96b0fa",
-      "title": "教程：如何做 prompt injection 防护",
-      "summary": "教程：如何做 prompt injection 防护，聚焦工程实践与可落地方案。",
-      "recommendation": "可直接学习实践",
-      "evidenceItemIds": [
-        "29fb4d96b0fa"
-      ]
-    },
-    {
-      "itemId": "bd4efba83f0e",
-      "title": "教程：从零实现结构化输出与 JSON schema 校验",
-      "summary": "教程：从零实现结构化输出与 JSON schema 校验，聚焦工程实践与可落地方案。",
-      "recommendation": "可直接学习实践",
-      "evidenceItemIds": [
-        "bd4efba83f0e"
-      ]
-    },
-    {
-      "itemId": "1dbef653499b",
-      "title": "Hugging Face 推出轻量化 inference toolkit",
-      "summary": "Hugging Face 推出轻量化 inference toolkit，聚焦工程实践与可落地方案。",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "1dbef653499b"
-      ]
-    },
-    {
-      "itemId": "4b1206b984b1",
-      "title": "案例复盘：AI 应用灰度发布策略",
-      "summary": "案例复盘：AI 应用灰度发布策略，聚焦工程实践与可落地方案。",
-      "recommendation": "模型或产品发布",
-      "evidenceItemIds": [
-        "4b1206b984b1"
-      ]
-    },
-    {
-      "itemId": "40b20dfc1bbf",
-      "title": "Open-source eval framework 支持自定义指标",
-      "summary": "Open-source eval framework 支持自定义指标，聚焦工程实践与可落地方案。",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "40b20dfc1bbf"
-      ]
-    },
-    {
-      "itemId": "ac1181ab4aa0",
-      "title": "工程实践：多模型路由的成本优化方案",
-      "summary": "工程实践：多模型路由的成本优化方案，聚焦工程实践与可落地方案。",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "ac1181ab4aa0"
-      ]
-    },
-    {
-      "itemId": "4cf5531e8b10",
-      "title": "最佳实践：如何构建可审计的 AI 周报系统",
-      "summary": "最佳实践：如何构建可审计的 AI 周报系统，聚焦工程实践与可落地方案。",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "4cf5531e8b10"
-      ]
-    },
-    {
-      "itemId": "b665a79b9b96",
-      "title": "新产品：团队知识库智能检索助手",
-      "summary": "新产品：团队知识库智能检索助手，聚焦工程实践与可落地方案。",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "b665a79b9b96"
-      ]
-    },
-    {
-      "itemId": "f2241d647f2c",
-      "title": "社区案例：前端团队如何接入 AI coding assistant",
-      "summary": "社区案例：前端团队如何接入 AI coding assistant，聚焦工程实践与可落地方案。",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "f2241d647f2c"
-      ]
-    },
-    {
-      "itemId": "ee00b654ad92",
-      "title": "新工具：可视化 prompt tracing 平台",
-      "summary": "新工具：可视化 prompt tracing 平台，聚焦工程实践与可落地方案。",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "ee00b654ad92"
-      ]
-    },
-    {
-      "itemId": "f575594a0488",
-      "title": "Meta AI 论文解读：高效推理架构",
-      "summary": "Meta AI 论文解读：高效推理架构，聚焦工程实践与可落地方案。",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "f575594a0488"
-      ]
-    },
-    {
-      "itemId": "8afb009ee855",
-      "title": "行业动态：AI 开发工具并购事件跟踪",
-      "summary": "行业动态：AI 开发工具并购事件跟踪，聚焦工程实践与可落地方案。",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "8afb009ee855"
-      ]
-    },
-    {
-      "itemId": "95f320a04613",
-      "title": "新方案：混合检索在企业问答中的效果",
-      "summary": "新方案：混合检索在企业问答中的效果，聚焦工程实践与可落地方案。",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "95f320a04613"
-      ]
-    },
-    {
-      "itemId": "bda80c0ecf75",
-      "title": "产品更新：开发者平台新增 observability 面板",
-      "summary": "产品更新：开发者平台新增 observability 面板，聚焦工程实践与可落地方案。",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "bda80c0ecf75"
-      ]
     }
   ],
   "quickDigest": [
@@ -346,49 +184,21 @@
       "evidenceItemIds": [
         "2ae7cf6a0614"
       ]
-    },
-    {
-      "title": "Papers with Code：新一代代码生成 benchmark",
-      "takeaway": "Papers with Code：新一代代码生成 benchmark，聚焦工程实践与可落地方案。",
-      "evidenceItemIds": [
-        "d2fe0fff6b4c"
-      ]
-    },
-    {
-      "title": "InfoQ 专栏：企业落地 AI Agent 的工程化要点",
-      "takeaway": "InfoQ 专栏：企业落地 AI Agent 的工程化要点，聚焦工程实践与可落地方案。",
-      "evidenceItemIds": [
-        "0cc641e2fb9f"
-      ]
-    },
-    {
-      "title": "OpenAI 发布最新 reasoning model 与 function calling 增强",
-      "takeaway": "OpenAI 发布最新 reasoning model 与 function calling 增强，聚焦工程实践与可落地方案。",
-      "evidenceItemIds": [
-        "b04ca3e5003b"
-      ]
-    },
-    {
-      "title": "Google DeepMind 发布多模态研究进展",
-      "takeaway": "Google DeepMind 发布多模态研究进展，聚焦工程实践与可落地方案。",
-      "evidenceItemIds": [
-        "bffa9c5284f6"
-      ]
     }
   ],
-  "summaryInputHash": "2acd88ead93a48cae4d0073f134047d507a50fa5adbafbdf9305c63a90b44148",
+  "summaryInputHash": "11fa6b1140623355e0344e0a1906b32f25728c36f0c05f58e7549c821e16f9b8",
   "llmSummaryMeta": {
     "enabled": true,
     "provider": "minimax",
     "model": "MiniMax-M2.5",
     "promptVersion": "m5.1-v1",
-    "startedAt": "2026-03-08T15:15:06.550Z",
-    "finishedAt": "2026-03-08T15:15:18.566Z",
-    "durationMs": 12016,
-    "inputCount": 30,
-    "summarizedCount": 30,
+    "startedAt": "2026-03-08T15:18:02.917Z",
+    "finishedAt": "2026-03-08T15:18:31.098Z",
+    "durationMs": 28181,
+    "inputCount": 12,
+    "summarizedCount": 12,
     "fallbackTriggered": true,
-    "fallbackReason": "llm_summary_failed:minimax_timeout:12000ms"
+    "fallbackReason": "llm_summary_failed:minimax_invalid_json_content"
   },
   "highlights": [
     {
@@ -398,7 +208,7 @@
       "title": "LangGraph 发布新的 multi-agent orchestration 指南",
       "link": "https://example.com/mock/1",
       "contentSnippet": "LangGraph 发布新的 multi-agent orchestration 指南，聚焦工程实践与可落地方案。",
-      "publishedAt": "2026-03-08T15:15:06.303Z",
+      "publishedAt": "2026-03-08T15:18:02.654Z",
       "category": "agent",
       "score": 131,
       "importance": "high",
@@ -411,7 +221,7 @@
       "title": "LangChain 发布 long-term memory 教程",
       "link": "https://example.com/mock/8",
       "contentSnippet": "LangChain 发布 long-term memory 教程，聚焦工程实践与可落地方案。",
-      "publishedAt": "2026-03-07T18:15:06.303Z",
+      "publishedAt": "2026-03-07T18:18:02.654Z",
       "category": "industry-news",
       "score": 130,
       "importance": "high",
@@ -424,7 +234,7 @@
       "title": "Anthropic 分享 Agent 安全防护实践",
       "link": "https://example.com/mock/3",
       "contentSnippet": "Anthropic 分享 Agent 安全防护实践，聚焦工程实践与可落地方案。",
-      "publishedAt": "2026-03-08T09:15:06.303Z",
+      "publishedAt": "2026-03-08T09:18:02.654Z",
       "category": "agent",
       "score": 129,
       "importance": "high",
@@ -437,7 +247,7 @@
       "title": "GitHub 热门开源：高性能 RAG pipeline 模板",
       "link": "https://example.com/mock/4",
       "contentSnippet": "GitHub 热门开源：高性能 RAG pipeline 模板，聚焦工程实践与可落地方案。",
-      "publishedAt": "2026-03-08T06:15:06.303Z",
+      "publishedAt": "2026-03-08T06:18:02.654Z",
       "category": "open-source",
       "score": 126,
       "importance": "high",
@@ -450,7 +260,7 @@
       "title": "开源工具：低代码 Agent workflow builder",
       "link": "https://example.com/mock/25",
       "contentSnippet": "开源工具：低代码 Agent workflow builder，聚焦工程实践与可落地方案。",
-      "publishedAt": "2026-03-05T15:15:06.303Z",
+      "publishedAt": "2026-03-05T15:18:02.654Z",
       "category": "open-source",
       "score": 123,
       "importance": "high",
@@ -463,7 +273,7 @@
       "title": "研究动态：tool-use agent 的鲁棒性评测",
       "link": "https://example.com/mock/13",
       "contentSnippet": "研究动态：tool-use agent 的鲁棒性评测，聚焦工程实践与可落地方案。",
-      "publishedAt": "2026-03-07T03:15:06.303Z",
+      "publishedAt": "2026-03-07T03:18:02.654Z",
       "category": "tooling",
       "score": 121,
       "importance": "high",
@@ -476,7 +286,7 @@
       "title": "Papers with Code：新一代代码生成 benchmark",
       "link": "https://example.com/mock/5",
       "contentSnippet": "Papers with Code：新一代代码生成 benchmark，聚焦工程实践与可落地方案。",
-      "publishedAt": "2026-03-08T03:15:06.303Z",
+      "publishedAt": "2026-03-08T03:18:02.654Z",
       "category": "research",
       "score": 116,
       "importance": "high",
@@ -489,7 +299,7 @@
       "title": "InfoQ 专栏：企业落地 AI Agent 的工程化要点",
       "link": "https://example.com/mock/9",
       "contentSnippet": "InfoQ 专栏：企业落地 AI Agent 的工程化要点，聚焦工程实践与可落地方案。",
-      "publishedAt": "2026-03-07T15:15:06.303Z",
+      "publishedAt": "2026-03-07T15:18:02.654Z",
       "category": "agent",
       "score": 116,
       "importance": "high",
@@ -498,7 +308,7 @@
   ],
   "revisionAuditLogs": [],
   "warnings": [
-    "LLM 总结已回退规则模式：llm_summary_failed:minimax_timeout:12000ms"
+    "LLM 总结已回退规则模式：llm_summary_failed:minimax_invalid_json_content"
   ],
   "snapshot": {
     "timezone": "Asia/Shanghai",
@@ -517,7 +327,7 @@
         "title": "LangGraph 发布新的 multi-agent orchestration 指南",
         "link": "https://example.com/mock/1",
         "contentSnippet": "LangGraph 发布新的 multi-agent orchestration 指南，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-08T15:15:06.303Z",
+        "publishedAt": "2026-03-08T15:18:02.654Z",
         "category": "agent",
         "score": 131,
         "importance": "high",
@@ -530,7 +340,7 @@
         "title": "LangChain 发布 long-term memory 教程",
         "link": "https://example.com/mock/8",
         "contentSnippet": "LangChain 发布 long-term memory 教程，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-07T18:15:06.303Z",
+        "publishedAt": "2026-03-07T18:18:02.654Z",
         "category": "industry-news",
         "score": 130,
         "importance": "high",
@@ -543,7 +353,7 @@
         "title": "Anthropic 分享 Agent 安全防护实践",
         "link": "https://example.com/mock/3",
         "contentSnippet": "Anthropic 分享 Agent 安全防护实践，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-08T09:15:06.303Z",
+        "publishedAt": "2026-03-08T09:18:02.654Z",
         "category": "agent",
         "score": 129,
         "importance": "high",
@@ -556,7 +366,7 @@
         "title": "GitHub 热门开源：高性能 RAG pipeline 模板",
         "link": "https://example.com/mock/4",
         "contentSnippet": "GitHub 热门开源：高性能 RAG pipeline 模板，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-08T06:15:06.303Z",
+        "publishedAt": "2026-03-08T06:18:02.654Z",
         "category": "open-source",
         "score": 126,
         "importance": "high",
@@ -569,7 +379,7 @@
         "title": "开源工具：低代码 Agent workflow builder",
         "link": "https://example.com/mock/25",
         "contentSnippet": "开源工具：低代码 Agent workflow builder，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-05T15:15:06.303Z",
+        "publishedAt": "2026-03-05T15:18:02.654Z",
         "category": "open-source",
         "score": 123,
         "importance": "high",
@@ -582,7 +392,7 @@
         "title": "研究动态：tool-use agent 的鲁棒性评测",
         "link": "https://example.com/mock/13",
         "contentSnippet": "研究动态：tool-use agent 的鲁棒性评测，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-07T03:15:06.303Z",
+        "publishedAt": "2026-03-07T03:18:02.654Z",
         "category": "tooling",
         "score": 121,
         "importance": "high",
@@ -595,7 +405,7 @@
         "title": "Papers with Code：新一代代码生成 benchmark",
         "link": "https://example.com/mock/5",
         "contentSnippet": "Papers with Code：新一代代码生成 benchmark，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-08T03:15:06.303Z",
+        "publishedAt": "2026-03-08T03:18:02.654Z",
         "category": "research",
         "score": 116,
         "importance": "high",
@@ -608,7 +418,7 @@
         "title": "InfoQ 专栏：企业落地 AI Agent 的工程化要点",
         "link": "https://example.com/mock/9",
         "contentSnippet": "InfoQ 专栏：企业落地 AI Agent 的工程化要点，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-07T15:15:06.303Z",
+        "publishedAt": "2026-03-07T15:18:02.654Z",
         "category": "agent",
         "score": 116,
         "importance": "high",
@@ -621,7 +431,7 @@
         "title": "OpenAI 发布最新 reasoning model 与 function calling 增强",
         "link": "https://example.com/mock/2",
         "contentSnippet": "OpenAI 发布最新 reasoning model 与 function calling 增强，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-08T12:15:06.303Z",
+        "publishedAt": "2026-03-08T12:18:02.654Z",
         "category": "industry-news",
         "score": 114,
         "importance": "high",
@@ -634,7 +444,7 @@
         "title": "Google DeepMind 发布多模态研究进展",
         "link": "https://example.com/mock/7",
         "contentSnippet": "Google DeepMind 发布多模态研究进展，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-07T21:15:06.303Z",
+        "publishedAt": "2026-03-07T21:18:02.654Z",
         "category": "research",
         "score": 111,
         "importance": "high",
@@ -647,7 +457,7 @@
         "title": "研究综述：长期记忆对 Agent 的影响",
         "link": "https://example.com/mock/20",
         "contentSnippet": "研究综述：长期记忆对 Agent 的影响，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-06T06:15:06.303Z",
+        "publishedAt": "2026-03-06T06:18:02.654Z",
         "category": "agent",
         "score": 109,
         "importance": "high",
@@ -660,7 +470,7 @@
         "title": "行业新闻：主流云厂商联合发布模型互操作规范",
         "link": "https://example.com/mock/15",
         "contentSnippet": "行业新闻：主流云厂商联合发布模型互操作规范，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-06T21:15:06.303Z",
+        "publishedAt": "2026-03-06T21:18:02.654Z",
         "category": "industry-news",
         "score": 106,
         "importance": "high",
@@ -673,7 +483,7 @@
         "title": "开源项目：支持浏览器端 embedding 的库",
         "link": "https://example.com/mock/18",
         "contentSnippet": "开源项目：支持浏览器端 embedding 的库，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-06T12:15:06.303Z",
+        "publishedAt": "2026-03-06T12:18:02.654Z",
         "category": "open-source",
         "score": 106,
         "importance": "high",
@@ -686,7 +496,7 @@
         "title": "研究快讯：多 Agent 协作的通信协议优化",
         "link": "https://example.com/mock/29",
         "contentSnippet": "研究快讯：多 Agent 协作的通信协议优化，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-05T03:15:06.303Z",
+        "publishedAt": "2026-03-05T03:18:02.654Z",
         "category": "agent",
         "score": 106,
         "importance": "high",
@@ -699,7 +509,7 @@
         "title": "评测：不同模型在 coding task 上的表现差异",
         "link": "https://example.com/mock/22",
         "contentSnippet": "评测：不同模型在 coding task 上的表现差异，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-06T00:15:06.303Z",
+        "publishedAt": "2026-03-06T00:18:02.654Z",
         "category": "research",
         "score": 104,
         "importance": "high",
@@ -712,7 +522,7 @@
         "title": "技术分享：LangGraph checkpoint 机制详解",
         "link": "https://example.com/mock/26",
         "contentSnippet": "技术分享：LangGraph checkpoint 机制详解，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-05T12:15:06.303Z",
+        "publishedAt": "2026-03-05T12:18:02.654Z",
         "category": "tutorial",
         "score": 104,
         "importance": "high",
@@ -725,7 +535,7 @@
         "title": "教程：如何做 prompt injection 防护",
         "link": "https://example.com/mock/23",
         "contentSnippet": "教程：如何做 prompt injection 防护，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-05T21:15:06.303Z",
+        "publishedAt": "2026-03-05T21:18:02.654Z",
         "category": "tutorial",
         "score": 102,
         "importance": "high",
@@ -738,7 +548,7 @@
         "title": "教程：从零实现结构化输出与 JSON schema 校验",
         "link": "https://example.com/mock/16",
         "contentSnippet": "教程：从零实现结构化输出与 JSON schema 校验，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-06T18:15:06.303Z",
+        "publishedAt": "2026-03-06T18:18:02.654Z",
         "category": "tutorial",
         "score": 100,
         "importance": "high",
@@ -751,7 +561,7 @@
         "title": "Hugging Face 推出轻量化 inference toolkit",
         "link": "https://example.com/mock/6",
         "contentSnippet": "Hugging Face 推出轻量化 inference toolkit，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-08T00:15:06.303Z",
+        "publishedAt": "2026-03-08T00:18:02.654Z",
         "category": "tooling",
         "score": 99,
         "importance": "high",
@@ -764,7 +574,7 @@
         "title": "案例复盘：AI 应用灰度发布策略",
         "link": "https://example.com/mock/30",
         "contentSnippet": "案例复盘：AI 应用灰度发布策略，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-05T00:15:06.303Z",
+        "publishedAt": "2026-03-05T00:18:02.654Z",
         "category": "industry-news",
         "score": 99,
         "importance": "high",
@@ -777,7 +587,7 @@
         "title": "Open-source eval framework 支持自定义指标",
         "link": "https://example.com/mock/11",
         "contentSnippet": "Open-source eval framework 支持自定义指标，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-07T09:15:06.303Z",
+        "publishedAt": "2026-03-07T09:18:02.654Z",
         "category": "tooling",
         "score": 96,
         "importance": "high",
@@ -790,7 +600,7 @@
         "title": "工程实践：多模型路由的成本优化方案",
         "link": "https://example.com/mock/17",
         "contentSnippet": "工程实践：多模型路由的成本优化方案，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-06T15:15:06.303Z",
+        "publishedAt": "2026-03-06T15:18:02.654Z",
         "category": "tutorial",
         "score": 96,
         "importance": "high",
@@ -803,7 +613,7 @@
         "title": "最佳实践：如何构建可审计的 AI 周报系统",
         "link": "https://example.com/mock/19",
         "contentSnippet": "最佳实践：如何构建可审计的 AI 周报系统，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-06T09:15:06.303Z",
+        "publishedAt": "2026-03-06T09:18:02.654Z",
         "category": "tutorial",
         "score": 96,
         "importance": "high",
@@ -816,7 +626,7 @@
         "title": "新产品：团队知识库智能检索助手",
         "link": "https://example.com/mock/21",
         "contentSnippet": "新产品：团队知识库智能检索助手，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-06T03:15:06.303Z",
+        "publishedAt": "2026-03-06T03:18:02.654Z",
         "category": "tutorial",
         "score": 96,
         "importance": "high",
@@ -829,7 +639,7 @@
         "title": "社区案例：前端团队如何接入 AI coding assistant",
         "link": "https://example.com/mock/10",
         "contentSnippet": "社区案例：前端团队如何接入 AI coding assistant，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-07T12:15:06.303Z",
+        "publishedAt": "2026-03-07T12:18:02.654Z",
         "category": "tutorial",
         "score": 94,
         "importance": "high",
@@ -842,7 +652,7 @@
         "title": "新工具：可视化 prompt tracing 平台",
         "link": "https://example.com/mock/12",
         "contentSnippet": "新工具：可视化 prompt tracing 平台，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-07T06:15:06.303Z",
+        "publishedAt": "2026-03-07T06:18:02.654Z",
         "category": "tooling",
         "score": 94,
         "importance": "high",
@@ -855,7 +665,7 @@
         "title": "Meta AI 论文解读：高效推理架构",
         "link": "https://example.com/mock/14",
         "contentSnippet": "Meta AI 论文解读：高效推理架构，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-07T00:15:06.303Z",
+        "publishedAt": "2026-03-07T00:18:02.654Z",
         "category": "tutorial",
         "score": 94,
         "importance": "high",
@@ -868,7 +678,7 @@
         "title": "行业动态：AI 开发工具并购事件跟踪",
         "link": "https://example.com/mock/24",
         "contentSnippet": "行业动态：AI 开发工具并购事件跟踪，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-05T18:15:06.303Z",
+        "publishedAt": "2026-03-05T18:18:02.654Z",
         "category": "industry-news",
         "score": 94,
         "importance": "high",
@@ -881,7 +691,7 @@
         "title": "新方案：混合检索在企业问答中的效果",
         "link": "https://example.com/mock/27",
         "contentSnippet": "新方案：混合检索在企业问答中的效果，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-05T09:15:06.303Z",
+        "publishedAt": "2026-03-05T09:18:02.654Z",
         "category": "tutorial",
         "score": 91,
         "importance": "high",
@@ -894,7 +704,7 @@
         "title": "产品更新：开发者平台新增 observability 面板",
         "link": "https://example.com/mock/28",
         "contentSnippet": "产品更新：开发者平台新增 observability 面板，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-05T06:15:06.303Z",
+        "publishedAt": "2026-03-05T06:18:02.654Z",
         "category": "tooling",
         "score": 89,
         "importance": "high",
@@ -1009,168 +819,6 @@
         "evidenceItemIds": [
           "28c10ad734e1"
         ]
-      },
-      {
-        "itemId": "2b7b3f77799b",
-        "title": "开源项目：支持浏览器端 embedding 的库",
-        "summary": "开源项目：支持浏览器端 embedding 的库，聚焦工程实践与可落地方案。",
-        "recommendation": "开源生态更新",
-        "evidenceItemIds": [
-          "2b7b3f77799b"
-        ]
-      },
-      {
-        "itemId": "f6f394b14c60",
-        "title": "研究快讯：多 Agent 协作的通信协议优化",
-        "summary": "研究快讯：多 Agent 协作的通信协议优化，聚焦工程实践与可落地方案。",
-        "recommendation": "Agent 工程实践相关",
-        "evidenceItemIds": [
-          "f6f394b14c60"
-        ]
-      },
-      {
-        "itemId": "e0338d07938c",
-        "title": "评测：不同模型在 coding task 上的表现差异",
-        "summary": "评测：不同模型在 coding task 上的表现差异，聚焦工程实践与可落地方案。",
-        "recommendation": "评测与性能信息",
-        "evidenceItemIds": [
-          "e0338d07938c"
-        ]
-      },
-      {
-        "itemId": "52634bd97a3d",
-        "title": "技术分享：LangGraph checkpoint 机制详解",
-        "summary": "技术分享：LangGraph checkpoint 机制详解，聚焦工程实践与可落地方案。",
-        "recommendation": "Agent 工程实践相关",
-        "evidenceItemIds": [
-          "52634bd97a3d"
-        ]
-      },
-      {
-        "itemId": "29fb4d96b0fa",
-        "title": "教程：如何做 prompt injection 防护",
-        "summary": "教程：如何做 prompt injection 防护，聚焦工程实践与可落地方案。",
-        "recommendation": "可直接学习实践",
-        "evidenceItemIds": [
-          "29fb4d96b0fa"
-        ]
-      },
-      {
-        "itemId": "bd4efba83f0e",
-        "title": "教程：从零实现结构化输出与 JSON schema 校验",
-        "summary": "教程：从零实现结构化输出与 JSON schema 校验，聚焦工程实践与可落地方案。",
-        "recommendation": "可直接学习实践",
-        "evidenceItemIds": [
-          "bd4efba83f0e"
-        ]
-      },
-      {
-        "itemId": "1dbef653499b",
-        "title": "Hugging Face 推出轻量化 inference toolkit",
-        "summary": "Hugging Face 推出轻量化 inference toolkit，聚焦工程实践与可落地方案。",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "1dbef653499b"
-        ]
-      },
-      {
-        "itemId": "4b1206b984b1",
-        "title": "案例复盘：AI 应用灰度发布策略",
-        "summary": "案例复盘：AI 应用灰度发布策略，聚焦工程实践与可落地方案。",
-        "recommendation": "模型或产品发布",
-        "evidenceItemIds": [
-          "4b1206b984b1"
-        ]
-      },
-      {
-        "itemId": "40b20dfc1bbf",
-        "title": "Open-source eval framework 支持自定义指标",
-        "summary": "Open-source eval framework 支持自定义指标，聚焦工程实践与可落地方案。",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "40b20dfc1bbf"
-        ]
-      },
-      {
-        "itemId": "ac1181ab4aa0",
-        "title": "工程实践：多模型路由的成本优化方案",
-        "summary": "工程实践：多模型路由的成本优化方案，聚焦工程实践与可落地方案。",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "ac1181ab4aa0"
-        ]
-      },
-      {
-        "itemId": "4cf5531e8b10",
-        "title": "最佳实践：如何构建可审计的 AI 周报系统",
-        "summary": "最佳实践：如何构建可审计的 AI 周报系统，聚焦工程实践与可落地方案。",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "4cf5531e8b10"
-        ]
-      },
-      {
-        "itemId": "b665a79b9b96",
-        "title": "新产品：团队知识库智能检索助手",
-        "summary": "新产品：团队知识库智能检索助手，聚焦工程实践与可落地方案。",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "b665a79b9b96"
-        ]
-      },
-      {
-        "itemId": "f2241d647f2c",
-        "title": "社区案例：前端团队如何接入 AI coding assistant",
-        "summary": "社区案例：前端团队如何接入 AI coding assistant，聚焦工程实践与可落地方案。",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "f2241d647f2c"
-        ]
-      },
-      {
-        "itemId": "ee00b654ad92",
-        "title": "新工具：可视化 prompt tracing 平台",
-        "summary": "新工具：可视化 prompt tracing 平台，聚焦工程实践与可落地方案。",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "ee00b654ad92"
-        ]
-      },
-      {
-        "itemId": "f575594a0488",
-        "title": "Meta AI 论文解读：高效推理架构",
-        "summary": "Meta AI 论文解读：高效推理架构，聚焦工程实践与可落地方案。",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "f575594a0488"
-        ]
-      },
-      {
-        "itemId": "8afb009ee855",
-        "title": "行业动态：AI 开发工具并购事件跟踪",
-        "summary": "行业动态：AI 开发工具并购事件跟踪，聚焦工程实践与可落地方案。",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "8afb009ee855"
-        ]
-      },
-      {
-        "itemId": "95f320a04613",
-        "title": "新方案：混合检索在企业问答中的效果",
-        "summary": "新方案：混合检索在企业问答中的效果，聚焦工程实践与可落地方案。",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "95f320a04613"
-        ]
-      },
-      {
-        "itemId": "bda80c0ecf75",
-        "title": "产品更新：开发者平台新增 observability 面板",
-        "summary": "产品更新：开发者平台新增 observability 面板，聚焦工程实践与可落地方案。",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "bda80c0ecf75"
-        ]
       }
     ],
     "quickDigest": [
@@ -1215,49 +863,21 @@
         "evidenceItemIds": [
           "2ae7cf6a0614"
         ]
-      },
-      {
-        "title": "Papers with Code：新一代代码生成 benchmark",
-        "takeaway": "Papers with Code：新一代代码生成 benchmark，聚焦工程实践与可落地方案。",
-        "evidenceItemIds": [
-          "d2fe0fff6b4c"
-        ]
-      },
-      {
-        "title": "InfoQ 专栏：企业落地 AI Agent 的工程化要点",
-        "takeaway": "InfoQ 专栏：企业落地 AI Agent 的工程化要点，聚焦工程实践与可落地方案。",
-        "evidenceItemIds": [
-          "0cc641e2fb9f"
-        ]
-      },
-      {
-        "title": "OpenAI 发布最新 reasoning model 与 function calling 增强",
-        "takeaway": "OpenAI 发布最新 reasoning model 与 function calling 增强，聚焦工程实践与可落地方案。",
-        "evidenceItemIds": [
-          "b04ca3e5003b"
-        ]
-      },
-      {
-        "title": "Google DeepMind 发布多模态研究进展",
-        "takeaway": "Google DeepMind 发布多模态研究进展，聚焦工程实践与可落地方案。",
-        "evidenceItemIds": [
-          "bffa9c5284f6"
-        ]
       }
     ],
-    "summaryInputHash": "2acd88ead93a48cae4d0073f134047d507a50fa5adbafbdf9305c63a90b44148",
+    "summaryInputHash": "11fa6b1140623355e0344e0a1906b32f25728c36f0c05f58e7549c821e16f9b8",
     "llmSummaryMeta": {
       "enabled": true,
       "provider": "minimax",
       "model": "MiniMax-M2.5",
       "promptVersion": "m5.1-v1",
-      "startedAt": "2026-03-08T15:15:06.550Z",
-      "finishedAt": "2026-03-08T15:15:18.566Z",
-      "durationMs": 12016,
-      "inputCount": 30,
-      "summarizedCount": 30,
+      "startedAt": "2026-03-08T15:18:02.917Z",
+      "finishedAt": "2026-03-08T15:18:31.098Z",
+      "durationMs": 28181,
+      "inputCount": 12,
+      "summarizedCount": 12,
       "fallbackTriggered": true,
-      "fallbackReason": "llm_summary_failed:minimax_timeout:12000ms"
+      "fallbackReason": "llm_summary_failed:minimax_invalid_json_content"
     },
     "highlights": [
       {
@@ -1267,7 +887,7 @@
         "title": "LangGraph 发布新的 multi-agent orchestration 指南",
         "link": "https://example.com/mock/1",
         "contentSnippet": "LangGraph 发布新的 multi-agent orchestration 指南，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-08T15:15:06.303Z",
+        "publishedAt": "2026-03-08T15:18:02.654Z",
         "category": "agent",
         "score": 131,
         "importance": "high",
@@ -1280,7 +900,7 @@
         "title": "LangChain 发布 long-term memory 教程",
         "link": "https://example.com/mock/8",
         "contentSnippet": "LangChain 发布 long-term memory 教程，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-07T18:15:06.303Z",
+        "publishedAt": "2026-03-07T18:18:02.654Z",
         "category": "industry-news",
         "score": 130,
         "importance": "high",
@@ -1293,7 +913,7 @@
         "title": "Anthropic 分享 Agent 安全防护实践",
         "link": "https://example.com/mock/3",
         "contentSnippet": "Anthropic 分享 Agent 安全防护实践，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-08T09:15:06.303Z",
+        "publishedAt": "2026-03-08T09:18:02.654Z",
         "category": "agent",
         "score": 129,
         "importance": "high",
@@ -1306,7 +926,7 @@
         "title": "GitHub 热门开源：高性能 RAG pipeline 模板",
         "link": "https://example.com/mock/4",
         "contentSnippet": "GitHub 热门开源：高性能 RAG pipeline 模板，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-08T06:15:06.303Z",
+        "publishedAt": "2026-03-08T06:18:02.654Z",
         "category": "open-source",
         "score": 126,
         "importance": "high",
@@ -1319,7 +939,7 @@
         "title": "开源工具：低代码 Agent workflow builder",
         "link": "https://example.com/mock/25",
         "contentSnippet": "开源工具：低代码 Agent workflow builder，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-05T15:15:06.303Z",
+        "publishedAt": "2026-03-05T15:18:02.654Z",
         "category": "open-source",
         "score": 123,
         "importance": "high",
@@ -1332,7 +952,7 @@
         "title": "研究动态：tool-use agent 的鲁棒性评测",
         "link": "https://example.com/mock/13",
         "contentSnippet": "研究动态：tool-use agent 的鲁棒性评测，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-07T03:15:06.303Z",
+        "publishedAt": "2026-03-07T03:18:02.654Z",
         "category": "tooling",
         "score": 121,
         "importance": "high",
@@ -1345,7 +965,7 @@
         "title": "Papers with Code：新一代代码生成 benchmark",
         "link": "https://example.com/mock/5",
         "contentSnippet": "Papers with Code：新一代代码生成 benchmark，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-08T03:15:06.303Z",
+        "publishedAt": "2026-03-08T03:18:02.654Z",
         "category": "research",
         "score": 116,
         "importance": "high",
@@ -1358,7 +978,7 @@
         "title": "InfoQ 专栏：企业落地 AI Agent 的工程化要点",
         "link": "https://example.com/mock/9",
         "contentSnippet": "InfoQ 专栏：企业落地 AI Agent 的工程化要点，聚焦工程实践与可落地方案。",
-        "publishedAt": "2026-03-07T15:15:06.303Z",
+        "publishedAt": "2026-03-07T15:18:02.654Z",
         "category": "agent",
         "score": 116,
         "importance": "high",
@@ -1383,7 +1003,7 @@
       }
     },
     "warnings": [
-      "LLM 总结已回退规则模式：llm_summary_failed:minimax_timeout:12000ms"
+      "LLM 总结已回退规则模式：llm_summary_failed:minimax_invalid_json_content"
     ],
     "reviewDeadlineAt": "2026-03-09T04:30:00.000Z"
   }
