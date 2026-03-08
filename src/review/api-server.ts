@@ -6,6 +6,7 @@ import { z } from "zod";
 
 import type { DbAuditStore } from "../audit/audit-store.js";
 import { RuntimeConfigVersionConflictError, type RuntimeConfigStore } from "../config/runtime-config.js";
+import type { DbOperationJobStore } from "../daemon/operation-job-store.js";
 import { reviewArtifactSchema } from "../core/review-artifact.js";
 import type { ReviewInstructionStore } from "./instruction-store.js";
 
@@ -17,6 +18,7 @@ export interface StartReviewApiServerInput {
   reviewStore: ReviewInstructionStore;
   runtimeStore: RuntimeConfigStore;
   auditStore: DbAuditStore;
+  operationJobStore?: DbOperationJobStore;
 }
 
 const reviewActionSchema = z.object({
@@ -143,6 +145,24 @@ export async function startReviewApiServer(input: StartReviewApiServerInput): Pr
           limit: query.limit ? Number(query.limit) : undefined,
         });
         return sendJson(res, 200, { ok: true, items: events });
+      }
+
+      if (method === "GET" && requestPath === "/api/operation-jobs") {
+        if (!input.operationJobStore) {
+          return sendJson(res, 200, { ok: true, items: [] });
+        }
+        const query = getQuery(req.url);
+        if (query.jobId) {
+          const jobId = Number(query.jobId);
+          if (!Number.isFinite(jobId)) {
+            return sendJson(res, 400, { ok: false, error: "invalid_job_id" });
+          }
+          const item = await input.operationJobStore.getById(jobId);
+          return sendJson(res, 200, { ok: true, item });
+        }
+        const limit = query.limit ? Number(query.limit) : 20;
+        const items = await input.operationJobStore.listRecent(Number.isFinite(limit) ? limit : 20);
+        return sendJson(res, 200, { ok: true, items });
       }
 
       return sendJson(res, 404, { ok: false, error: "not_found" });

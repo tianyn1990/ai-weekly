@@ -13,6 +13,7 @@ import type {
   ReviewInstructionStage,
   ReviewStatus,
 } from "../core/types.js";
+import type { OperationJobType } from "../daemon/types.js";
 import type { ReviewInstructionStore } from "./instruction-store.js";
 import { normalizeFeedbackPayload, reviewFeedbackPayloadSchema } from "./feedback-schema.js";
 
@@ -85,6 +86,26 @@ export interface ReviewActionPayload {
   feedback?: ReviewFeedbackPayload;
 }
 
+export interface FeishuOperationActionPayload {
+  mode: "weekly";
+  operation: OperationJobType;
+  reportDate?: string;
+  generatedAt?: string;
+  dryRun?: boolean;
+  operator?: string;
+  reason?: string;
+  traceId?: string;
+  messageId?: string;
+}
+
+export interface FeishuMentionEventPayload {
+  chatId?: string;
+  text: string;
+  operator?: string;
+  traceId?: string;
+  messageId?: string;
+}
+
 export interface StartFeishuCallbackServerInput {
   host: string;
   port: number;
@@ -99,6 +120,17 @@ export interface StartFeishuCallbackServerInput {
     action: ReviewInstructionAction;
     stage: ReviewInstructionStage;
   }) => Promise<FeishuActionStatusEcho | null>;
+  operationHandler?: (input: FeishuOperationActionPayload) => Promise<{
+    accepted: boolean;
+    message: string;
+    duplicated?: boolean;
+    jobId?: number;
+  }>;
+  mentionHandler?: (input: FeishuMentionEventPayload) => Promise<{
+    handled: boolean;
+    message: string;
+  }>;
+  onReviewAccepted?: (input: { instruction: ReviewInstruction; payload: ReviewActionPayload }) => Promise<void>;
 }
 
 export interface FeishuCallbackAuditEvent {
@@ -116,6 +148,7 @@ export interface FeishuCallbackAuditEvent {
 
 // tenant token 在单进程内短期缓存，减少每条通知都请求鉴权接口的开销与限流风险。
 const tenantTokenCache = new Map<string, { token: string; expireAtMs: number }>();
+const REVIEW_ACTION_SEMANTIC_DEDUP_SECONDS = 120;
 
 export function loadFeishuConfigFromEnv(): FeishuConfig {
   return {
@@ -274,6 +307,33 @@ export class FeishuNotifier {
     return this.sendText(text);
   }
 
+  async notifyOperationControlCard(input: { chatId?: string; reportDate: string }): Promise<boolean> {
+    if (!hasAppConfig(this.config)) {
+      return false;
+    }
+
+    const card = buildOperationControlCard(input.reportDate);
+    const messageId = await this.sendInteractiveCard(card, input.chatId);
+    return Boolean(messageId);
+  }
+
+  async notifyOperationResult(input: {
+    operator?: string;
+    operation: OperationJobType;
+    result: "success" | "failed";
+    detail: string;
+  }): Promise<boolean> {
+    const operator = input.operator ?? "某位同学";
+    const statusText = input.result === "success" ? "执行成功" : "执行失败";
+    const text = [
+      "【AI 周报主动触发回执】",
+      `${operator} 触发了：${toOperationLabel(input.operation)}`,
+      `结果：${statusText}`,
+      `详情：${input.detail}`,
+    ].join("\n");
+    return this.sendText(text);
+  }
+
   private async sendText(text: string): Promise<boolean> {
     return this.sendTextByApp(text);
   }
@@ -316,9 +376,20 @@ export class FeishuNotifier {
     if (!base) {
       return null;
     }
-    const normalizedBase = base.replace(/\/+$/, "");
     const normalizedPath = filePath.split(path.sep).join("/").replace(/^\.?\//, "");
-    return `${normalizedBase}/${normalizedPath}`;
+    try {
+      const baseUrl = new URL(base);
+      const baseSegments = baseUrl.pathname.split("/").filter(Boolean);
+      const fileSegments = normalizedPath.split("/").filter(Boolean);
+      const overlap = findPathOverlap(baseSegments, fileSegments);
+      const merged = [...baseSegments, ...fileSegments.slice(overlap)];
+      baseUrl.pathname = `/${merged.join("/")}`;
+      return baseUrl.toString().replace(/\/+$/, "");
+    } catch {
+      // 兼容非标准 URL 输入（例如内网网关短链接），至少保证路径拼接行为可预期。
+      const normalizedBase = base.replace(/\/+$/, "");
+      return `${normalizedBase}/${normalizedPath}`;
+    }
   }
 
   private async upsertMainReviewCard(input: {
@@ -357,7 +428,7 @@ export class FeishuNotifier {
     return true;
   }
 
-  private async sendInteractiveCard(card: Record<string, unknown>): Promise<string | null> {
+  private async sendInteractiveCard(card: Record<string, unknown>, chatId?: string): Promise<string | null> {
     if (!hasAppConfig(this.config)) {
       return null;
     }
@@ -370,7 +441,7 @@ export class FeishuNotifier {
         "content-type": "application/json",
       },
       body: JSON.stringify({
-        receive_id: this.config.reviewChatId,
+        receive_id: chatId ?? this.config.reviewChatId,
         msg_type: "interactive",
         content: JSON.stringify(card),
       }),
@@ -448,7 +519,7 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
   port: number;
 }> {
   const server = createServer(async (req, res) => {
-    let parsedAction: ReviewActionPayload | null = null;
+    let parsedReviewAction: ReviewActionPayload | null = null;
     try {
       const requestPath = getRequestPath(req.url ?? "");
       if (req.method === "GET" && requestPath === "/health") {
@@ -471,7 +542,9 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
         res.end(JSON.stringify({ challenge: parsed.challenge }));
         return;
       }
-      parsedAction = parsed;
+      if (parsed.kind === "review_action") {
+        parsedReviewAction = parsed.payload;
+      }
 
       verifyCallbackAuth({
         headers: req.headers,
@@ -481,7 +554,60 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
         signingSecret: input.signingSecret,
       });
 
-      const instruction = buildReviewInstructionFromAction(parsed);
+      if (parsed.kind === "mention_event") {
+        if (!input.mentionHandler) {
+          res.writeHead(200, { "content-type": "application/json" });
+          res.end(
+            JSON.stringify({
+              ok: true,
+              handled: false,
+              ...buildCallbackToastPayload({
+                success: true,
+                content: "已收到消息，当前未启用主动触发能力。",
+              }),
+            }),
+          );
+          return;
+        }
+
+        const mentionResult = await input.mentionHandler(parsed.payload);
+        res.writeHead(200, { "content-type": "application/json" });
+        res.end(
+          JSON.stringify({
+            ok: true,
+            handled: mentionResult.handled,
+            ...buildCallbackToastPayload({
+              success: mentionResult.handled,
+              content: mentionResult.message,
+            }),
+          }),
+        );
+        return;
+      }
+
+      if (parsed.kind === "operation_action") {
+        if (!input.operationHandler) {
+          throw new Error("operation_handler_not_configured");
+        }
+
+        const operationResult = await input.operationHandler(parsed.payload);
+        res.writeHead(200, { "content-type": "application/json" });
+        res.end(
+          JSON.stringify({
+            ok: operationResult.accepted,
+            ...(operationResult.duplicated ? { duplicated: true } : {}),
+            ...(operationResult.jobId ? { jobId: operationResult.jobId } : {}),
+            ...buildCallbackToastPayload({
+              success: operationResult.accepted,
+              content: operationResult.message,
+            }),
+          }),
+        );
+        return;
+      }
+
+      const reviewPayload = parsed.payload;
+      const instruction = buildReviewInstructionFromAction(reviewPayload);
 
       // 飞书可能因网络抖动重试同一次点击事件，这里在写入前做幂等判重，避免重复回执刷屏。
       const duplicated = await input.store.findDuplicateInstruction({
@@ -494,8 +620,8 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
       });
       if (duplicated) {
         await appendCallbackAuditLog(input.auditLogger, {
-          reportDate: parsed.reportDate,
-          action: parsed.action,
+          reportDate: reviewPayload.reportDate,
+          action: reviewPayload.action,
           stage: instruction.stage,
           operator: instruction.operator,
           traceId: instruction.traceId,
@@ -507,7 +633,7 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
         });
 
         console.log(
-          `[feishu-callback] duplicated reportDate=${parsed.reportDate}, action=${parsed.action}, stage=${instruction.stage}, traceId=${
+          `[feishu-callback] duplicated reportDate=${reviewPayload.reportDate}, action=${reviewPayload.action}, stage=${instruction.stage}, traceId=${
             instruction.traceId ?? "none"
           }`,
         );
@@ -518,7 +644,49 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
             duplicated: true,
             ...buildCallbackToastPayload({
               success: true,
-              content: `该动作已处理，已忽略重复提交（${toActionLabel(parsed.action)}）`,
+              content: `该动作已处理，已忽略重复提交（${toActionLabel(reviewPayload.action)}）`,
+            }),
+          }),
+        );
+        return;
+      }
+
+      const latestInstruction = await input.store.getLatestInstruction({
+        mode: instruction.mode,
+        reportDate: instruction.reportDate,
+        stage: instruction.stage,
+      });
+      if (
+        isSemanticallyDuplicatedReviewAction({
+          latest: latestInstruction,
+          current: instruction,
+          duplicateWindowSeconds: REVIEW_ACTION_SEMANTIC_DEDUP_SECONDS,
+        })
+      ) {
+        await appendCallbackAuditLog(input.auditLogger, {
+          reportDate: reviewPayload.reportDate,
+          action: reviewPayload.action,
+          stage: instruction.stage,
+          operator: instruction.operator,
+          traceId: instruction.traceId,
+          messageId: instruction.messageId,
+          result: "accepted",
+          notifyResult: "skipped",
+          errorMessage: "duplicate_callback_semantic_ignored",
+          createdAt: new Date().toISOString(),
+        });
+
+        console.log(
+          `[feishu-callback] duplicated-semantic reportDate=${reviewPayload.reportDate}, action=${reviewPayload.action}, stage=${instruction.stage}`,
+        );
+        res.writeHead(200, { "content-type": "application/json" });
+        res.end(
+          JSON.stringify({
+            ok: true,
+            duplicated: true,
+            ...buildCallbackToastPayload({
+              success: true,
+              content: `该动作刚刚已处理，已忽略重复提交（${toActionLabel(reviewPayload.action)}），请以最新状态卡为准。`,
             }),
           }),
         );
@@ -530,18 +698,18 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
       // 回调里优先回显“当前状态”，若状态查询失败则回退到动作级推断，保证点击方总能得到可理解反馈。
       const statusEcho =
         (await input.statusEchoProvider?.({
-          reportDate: parsed.reportDate,
-          action: parsed.action,
+          reportDate: reviewPayload.reportDate,
+          action: reviewPayload.action,
           stage: instruction.stage,
-        })) ?? inferActionStatusEcho(parsed.action);
+        })) ?? inferActionStatusEcho(reviewPayload.action);
 
       let notifyWarning: string | undefined;
       let notifySent = false;
       try {
         if (input.notifier) {
           notifySent = await input.notifier.notifyActionResult({
-            reportDate: parsed.reportDate,
-            action: parsed.action,
+            reportDate: reviewPayload.reportDate,
+            action: reviewPayload.action,
             operator: instruction.operator,
             result: "accepted",
             statusEcho,
@@ -552,8 +720,8 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
         notifyWarning = error instanceof Error ? error.message : String(error);
       }
       await appendCallbackAuditLog(input.auditLogger, {
-        reportDate: parsed.reportDate,
-        action: parsed.action,
+        reportDate: reviewPayload.reportDate,
+        action: reviewPayload.action,
         stage: instruction.stage,
         operator: instruction.operator,
         traceId: instruction.traceId,
@@ -564,36 +732,51 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
         createdAt: new Date().toISOString(),
       });
 
+      let acceptWarning: string | undefined;
+      try {
+        await input.onReviewAccepted?.({ instruction, payload: reviewPayload });
+      } catch (error) {
+        // 自动推进链路失败不影响“动作已写入”事实，仅以 warning 回传便于排障。
+        acceptWarning = error instanceof Error ? error.message : String(error);
+      }
+
       console.log(
-        `[feishu-callback] accepted reportDate=${parsed.reportDate}, action=${parsed.action}, stage=${instruction.stage}, operator=${instruction.operator ?? "unknown"}`,
+        `[feishu-callback] accepted reportDate=${reviewPayload.reportDate}, action=${reviewPayload.action}, stage=${instruction.stage}, operator=${instruction.operator ?? "unknown"}`,
       );
       res.writeHead(200, { "content-type": "application/json" });
       res.end(
         JSON.stringify({
           ok: true,
-          ...(notifyWarning ? { warning: `notify_failed:${notifyWarning}` } : {}),
+          ...(notifyWarning || acceptWarning
+            ? {
+                warning: [
+                  notifyWarning ? `notify_failed:${notifyWarning}` : null,
+                  acceptWarning ? `post_accept_failed:${acceptWarning}` : null,
+                ]
+                  .filter(Boolean)
+                  .join(";"),
+              }
+            : {}),
           ...buildCallbackToastPayload({
             success: true,
-            content: notifyWarning
-              ? `已接收：${toActionLabel(parsed.action)}（通知发送失败）`
-              : `已接收：${toActionLabel(parsed.action)}`,
+            content: notifyWarning ? `已接收：${toActionLabel(reviewPayload.action)}（通知发送失败）` : `已接收：${toActionLabel(reviewPayload.action)}`,
           }),
         }),
       );
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
-      if (parsedAction) {
+      if (parsedReviewAction) {
         let notifyWarning: string | undefined;
         let notifySent = false;
         // 失败路径也尝试发送群内回执，避免“点击后静默失败”。
         if (input.notifier) {
           await input.notifier
             .notifyActionResult({
-              reportDate: parsedAction.reportDate,
-              action: parsedAction.action,
-              operator: parsedAction.operator,
+              reportDate: parsedReviewAction.reportDate,
+              action: parsedReviewAction.action,
+              operator: parsedReviewAction.operator,
               result: "failed",
-              statusEcho: inferActionStatusEcho(parsedAction.action),
+              statusEcho: inferActionStatusEcho(parsedReviewAction.action),
               errorMessage: message,
             })
             .then((sent) => {
@@ -605,12 +788,12 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
         }
 
         await appendCallbackAuditLog(input.auditLogger, {
-          reportDate: parsedAction.reportDate,
-          action: parsedAction.action,
-          stage: parsedAction.stage ?? resolveStageFromAction(parsedAction.action),
-          operator: parsedAction.operator,
-          traceId: parsedAction.traceId,
-          messageId: parsedAction.messageId,
+          reportDate: parsedReviewAction.reportDate,
+          action: parsedReviewAction.action,
+          stage: parsedReviewAction.stage ?? resolveStageFromAction(parsedReviewAction.action),
+          operator: parsedReviewAction.operator,
+          traceId: parsedReviewAction.traceId,
+          messageId: parsedReviewAction.messageId,
           result: "failed",
           notifyResult: !input.notifier ? "skipped" : notifyWarning ? "failed" : notifySent ? "sent" : "skipped",
           errorMessage: notifyWarning ? `${message}; notify:${notifyWarning}` : message,
@@ -678,11 +861,51 @@ const actionPayloadSchema = z.object({
   feedback: reviewFeedbackPayloadSchema.optional(),
 });
 
-function parseCallbackBody(rawBody: string): { challenge: string } | ReviewActionPayload {
+const operationTypeSchema = z.enum([
+  "run_daily",
+  "run_weekly",
+  "recheck_weekly",
+  "watchdog_weekly",
+  "watchdog_weekly_dry_run",
+  "notify_weekly_reminder",
+  "query_weekly_status",
+  "git_sync",
+]);
+
+const operationPayloadSchema = z.object({
+  mode: z.literal("weekly").default("weekly"),
+  operation: operationTypeSchema,
+  reportDate: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/)
+    .optional(),
+  generatedAt: z.string().datetime().optional(),
+  dryRun: z.boolean().optional(),
+  operator: z.string().min(1).optional(),
+  reason: z.string().optional(),
+  traceId: z.string().min(1).optional(),
+  messageId: z.string().min(1).optional(),
+});
+
+type ParsedCallbackBody =
+  | { challenge: string }
+  | { kind: "review_action"; payload: ReviewActionPayload }
+  | { kind: "operation_action"; payload: FeishuOperationActionPayload }
+  | { kind: "mention_event"; payload: FeishuMentionEventPayload };
+
+function parseCallbackBody(rawBody: string): ParsedCallbackBody {
   const value = JSON.parse(rawBody) as unknown;
   const challenge = extractChallenge(value);
   if (challenge) {
     return { challenge };
+  }
+
+  const mention = extractMentionEvent(value);
+  if (mention) {
+    return {
+      kind: "mention_event",
+      payload: mention,
+    };
   }
 
   // 兼容当前简化 JSON 回调输入。
@@ -690,13 +913,39 @@ function parseCallbackBody(rawBody: string): { challenge: string } | ReviewActio
   if (direct.success) {
     const feedback = normalizeFeedbackPayload(value);
     if (feedback) {
-      return { ...direct.data, feedback };
+      return {
+        kind: "review_action",
+        payload: { ...direct.data, feedback },
+      };
     }
-    return direct.data;
+    return {
+      kind: "review_action",
+      payload: direct.data,
+    };
+  }
+
+  const directOperation = operationPayloadSchema.safeParse(value);
+  if (directOperation.success) {
+    return {
+      kind: "operation_action",
+      payload: directOperation.data,
+    };
   }
 
   // 适配飞书原生卡片回调结构，统一转换到内部动作模型。
-  return actionPayloadSchema.parse(adaptFeishuCardActionPayload(value));
+  const adapted = adaptFeishuCardActionPayload(value);
+  if ("operation" in adapted) {
+    return {
+      kind: "operation_action",
+      payload: operationPayloadSchema.parse(adapted),
+    };
+  }
+
+  const reviewPayload = actionPayloadSchema.parse(adapted);
+  return {
+    kind: "review_action",
+    payload: reviewPayload,
+  };
 }
 
 function verifyCallbackAuth(input: {
@@ -794,18 +1043,18 @@ function adaptFeishuCardActionPayload(input: unknown) {
     throw new Error("invalid_callback_payload:missing_action_value");
   }
 
-  const action =
-    getString(value, "action") ??
-    getString(value, "review_action") ??
-    getString(value, "reviewAction") ??
-    getString(value, "action_type");
+  const operation =
+    getString(value, "operation") ??
+    getString(value, "op_action") ??
+    getString(value, "operation_action") ??
+    getString(value, "operationAction");
+
   const reportDate = getString(value, "reportDate") ?? getString(value, "report_date");
   const stage = getString(value, "stage");
 
   const eventRecord = asRecord(root.event);
   const operator = resolveOperator(root, eventRecord) ?? getString(value, "operator");
   const reason = getString(value, "reason") ?? getString(value, "comment");
-  const feedback = normalizeFeedbackPayload(value.feedback ?? value.revision ?? value);
   const messageId =
     getString(value, "messageId") ??
     getString(value, "message_id") ??
@@ -820,6 +1069,27 @@ function adaptFeishuCardActionPayload(input: unknown) {
     getString(value, "decidedAt") ??
     normalizeCreateTime(getString(eventRecord, "create_time") ?? getString(root, "create_time"));
 
+  if (operation) {
+    return {
+      mode: "weekly",
+      operation,
+      ...(reportDate ? { reportDate } : {}),
+      ...(decidedAt ? { generatedAt: decidedAt } : {}),
+      ...(operator ? { operator } : {}),
+      ...(reason ? { reason } : {}),
+      ...(traceId ? { traceId } : {}),
+      ...(messageId ? { messageId } : {}),
+      ...(typeof value.dryRun === "boolean" ? { dryRun: value.dryRun } : {}),
+    };
+  }
+
+  const action =
+    getString(value, "action") ??
+    getString(value, "review_action") ??
+    getString(value, "reviewAction") ??
+    getString(value, "action_type");
+  const feedback = normalizeFeedbackPayload(value.feedback ?? value.revision ?? value);
+
   return {
     mode: "weekly",
     reportDate,
@@ -831,6 +1101,55 @@ function adaptFeishuCardActionPayload(input: unknown) {
     ...(traceId ? { traceId } : {}),
     ...(messageId ? { messageId } : {}),
     ...(feedback ? { feedback } : {}),
+  };
+}
+
+function extractMentionEvent(input: unknown): FeishuMentionEventPayload | null {
+  const root = asRecord(input);
+  if (!root) {
+    return null;
+  }
+
+  const eventType =
+    getString(asRecord(root.header), "event_type") ??
+    getString(root, "event_type") ??
+    getString(asRecord(root.event), "type");
+  if (eventType !== "im.message.receive_v1") {
+    return null;
+  }
+
+  const event = asRecord(root.event);
+  const message = asRecord(event?.message);
+  if (!message) {
+    return null;
+  }
+  const messageType = getString(message, "message_type");
+  if (messageType !== "text") {
+    return null;
+  }
+
+  const content = parsePossibleObject(message.content);
+  const text = getString(content ?? undefined, "text");
+  if (!text) {
+    return null;
+  }
+
+  // 只在明显的主动触发关键词出现时当作“运维操作卡请求”，避免污染普通群消息。
+  if (!/(运维|操作卡|ops|触发|recheck|watchdog)/i.test(text)) {
+    return null;
+  }
+
+  const operator = resolveOperator(root, event);
+  const messageId = getString(message, "message_id") ?? getString(root, "open_message_id");
+  const traceId = getString(asRecord(root.header), "event_id") ?? getString(root, "event_id");
+  const chatId = getString(message, "chat_id");
+
+  return {
+    chatId,
+    text,
+    operator,
+    traceId: traceId ?? undefined,
+    messageId: messageId ?? undefined,
   };
 }
 
@@ -1040,6 +1359,17 @@ function toActionLabel(action: ReviewInstructionAction) {
   return "拒绝本次发布";
 }
 
+function toOperationLabel(operation: OperationJobType) {
+  if (operation === "run_daily") return "生成日报";
+  if (operation === "run_weekly") return "生成周报";
+  if (operation === "recheck_weekly") return "执行 recheck";
+  if (operation === "watchdog_weekly") return "执行 watchdog";
+  if (operation === "watchdog_weekly_dry_run") return "执行 watchdog dry-run";
+  if (operation === "notify_weekly_reminder") return "发送审核提醒";
+  if (operation === "query_weekly_status") return "查询本期状态";
+  return "执行 Git 同步";
+}
+
 function resolveStatusEchoText(statusEcho: FeishuActionStatusEcho | undefined) {
   if (!statusEcho) {
     return "系统已记录本次动作。";
@@ -1054,6 +1384,58 @@ function resolveStatusEchoText(statusEcho: FeishuActionStatusEcho | undefined) {
     return "当前状态：已进入终稿审核。";
   }
   return "当前状态：等待后续审核动作。";
+}
+
+function isSemanticallyDuplicatedReviewAction(input: {
+  latest: ReviewInstruction | null;
+  current: ReviewInstruction;
+  duplicateWindowSeconds: number;
+}) {
+  const latest = input.latest;
+  if (!latest) {
+    return false;
+  }
+  if (latest.source !== "feishu_callback") {
+    return false;
+  }
+  if (latest.action !== input.current.action) {
+    return false;
+  }
+
+  const latestAt = dayjs(latest.decidedAt).valueOf();
+  const currentAt = dayjs(input.current.decidedAt).valueOf();
+  if (!Number.isFinite(latestAt) || !Number.isFinite(currentAt)) {
+    return false;
+  }
+  const deltaMs = Math.abs(currentAt - latestAt);
+  if (deltaMs > input.duplicateWindowSeconds * 1000) {
+    return false;
+  }
+
+  // 指纹刻意忽略 operator/traceId/messageId，避免同一次点击因回调格式差异被误判为不同动作。
+  return buildReviewActionSemanticFingerprint(latest) === buildReviewActionSemanticFingerprint(input.current);
+}
+
+function buildReviewActionSemanticFingerprint(input: Pick<ReviewInstruction, "reportDate" | "stage" | "action" | "reason" | "feedback">) {
+  return stableJsonStringify({
+    reportDate: input.reportDate,
+    stage: input.stage,
+    action: input.action ?? null,
+    reason: input.reason?.trim() || null,
+    feedback: input.feedback ?? null,
+  });
+}
+
+function stableJsonStringify(input: unknown): string {
+  if (Array.isArray(input)) {
+    return `[${input.map((item) => stableJsonStringify(item)).join(",")}]`;
+  }
+  if (input && typeof input === "object") {
+    const record = input as Record<string, unknown>;
+    const keys = Object.keys(record).sort();
+    return `{${keys.map((key) => `${JSON.stringify(key)}:${stableJsonStringify(record[key])}`).join(",")}}`;
+  }
+  return JSON.stringify(input);
 }
 
 function buildReviewMainCard(input: {
@@ -1135,6 +1517,39 @@ function buildStageActions(stage: FeishuMainCardRecord["stage"], reportDate: str
   ];
 }
 
+function buildOperationControlCard(reportDate: string) {
+  return {
+    config: { wide_screen_mode: true },
+    header: {
+      template: "turquoise",
+      title: {
+        tag: "plain_text",
+        content: `AI 周报主动触发面板（${reportDate}）`,
+      },
+    },
+    elements: [
+      {
+        tag: "markdown",
+        content: [
+          "**用途**：用于测试、补偿触发和排障。",
+          "**执行方式**：点击后先受理入队，后台异步执行，完成后群内回执结果。",
+          `**默认 reportDate**：${reportDate}`,
+        ].join("\n"),
+      },
+      {
+        tag: "action",
+        actions: [
+          makeOperationButton("生成周报（mock）", "run_weekly", reportDate, false, "primary"),
+          makeOperationButton("执行 recheck", "recheck_weekly", reportDate, false, "default"),
+          makeOperationButton("watchdog dry-run", "watchdog_weekly_dry_run", reportDate, true, "default"),
+          makeOperationButton("发送审核提醒", "notify_weekly_reminder", reportDate, false, "default"),
+          makeOperationButton("查询本期状态", "query_weekly_status", reportDate, false, "default"),
+        ],
+      },
+    ],
+  };
+}
+
 function makeCardButton(
   label: string,
   action: ReviewInstructionAction,
@@ -1157,11 +1572,46 @@ function makeCardButton(
   };
 }
 
+function makeOperationButton(
+  label: string,
+  operation: OperationJobType,
+  reportDate: string,
+  dryRun: boolean,
+  type: "primary" | "default" | "danger",
+) {
+  return {
+    tag: "button",
+    type,
+    text: {
+      tag: "plain_text",
+      content: label,
+    },
+    value: {
+      operation,
+      reportDate,
+      dryRun,
+      reason: `manual_operation:${operation}`,
+    },
+  };
+}
+
 function shortErrorMessage(message: string): string {
   if (message.length <= 80) {
     return message;
   }
   return `${message.slice(0, 77)}...`;
+}
+
+function findPathOverlap(baseSegments: string[], fileSegments: string[]): number {
+  const max = Math.min(baseSegments.length, fileSegments.length);
+  for (let size = max; size >= 1; size -= 1) {
+    const baseTail = baseSegments.slice(baseSegments.length - size).join("/");
+    const fileHead = fileSegments.slice(0, size).join("/");
+    if (baseTail === fileHead) {
+      return size;
+    }
+  }
+  return 0;
 }
 
 function buildCallbackToastPayload(input: { success: boolean; content: string }) {
@@ -1193,6 +1643,8 @@ async function appendCallbackAuditLog(
 export const __test__ = {
   parseCallbackBody,
   adaptFeishuCardActionPayload,
+  extractMentionEvent,
+  buildOperationControlCard,
   verifyCallbackAuth,
   inferActionStatusEcho,
   hasAppConfig,

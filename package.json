@@ -10,6 +10,7 @@
     "run:weekly:watch": "tsx src/cli.ts run --mode weekly --watch-pending-weekly",
     "run:daily": "tsx src/cli.ts run --mode daily",
     "run:weekly": "tsx src/cli.ts run --mode weekly",
+    "run:daemon": "tsx src/cli.ts run --daemon",
     "run:review:api": "tsx src/cli.ts run --serve-review-api",
     "run:migrate:file-to-db": "tsx src/cli.ts run --migrate-file-to-db --storage-backend db",
     "verify:m4": "bash scripts/m4-verify.sh",

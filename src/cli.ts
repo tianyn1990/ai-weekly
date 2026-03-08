@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import fs from "node:fs/promises";
 import path from "node:path";
+import dayjs from "dayjs";
 
 import type { ReviewArtifact } from "./core/review-artifact.js";
 import { reviewArtifactSchema } from "./core/review-artifact.js";
@@ -17,6 +18,13 @@ import { createReviewInstructionStore } from "./review/instruction-store.js";
 import { isWeeklyReminderWindowReached, shouldSendWeeklyReminderForArtifact } from "./review/reminder-policy.js";
 import { DbAuditStore } from "./audit/audit-store.js";
 import { createRuntimeConfigStore } from "./config/runtime-config.js";
+import { DbOperationJobStore } from "./daemon/operation-job-store.js";
+import { buildManualOperationDedupeKey } from "./daemon/operation-dedupe.js";
+import { FileScheduleMarkerStore } from "./daemon/schedule-marker-store.js";
+import { computeDueScheduledJobs } from "./daemon/scheduler.js";
+import { executeOperationJob } from "./daemon/worker.js";
+import type { OperationJobType } from "./daemon/types.js";
+import { autoSyncToGit } from "./git/auto-sync.js";
 import { SqliteEngine } from "./storage/sqlite-engine.js";
 import { migrateFileToDb } from "./storage/migrate-file-to-db.js";
 import { acquireFileLock } from "./utils/file-lock.js";
@@ -50,6 +58,18 @@ interface CliArgs {
   serveReviewApi: boolean;
   migrateFileToDb: boolean;
   notifyReviewReminder: boolean;
+  daemon: boolean;
+  daemonSchedulerIntervalMs: number;
+  daemonWorkerPollMs: number;
+  daemonMarkerRoot: string;
+  autoGitSync: boolean;
+  gitSyncPush: boolean;
+  gitSyncRemote: string;
+  gitSyncBranch?: string;
+  gitSyncIncludePaths: string[];
+  gitSyncHttpProxy?: string;
+  gitSyncHttpsProxy?: string;
+  gitSyncNoProxy?: string;
   feishuAppId?: string;
   feishuAppSecret?: string;
   feishuReviewChatId?: string;
@@ -74,6 +94,11 @@ async function main() {
 
   if (args.command !== "run") {
     throw new Error("仅支持 run 命令。示例: pnpm run:weekly:mock");
+  }
+
+  if (args.daemon) {
+    await runDaemon(args);
+    return;
   }
 
   if (args.recheckPending) {
@@ -244,6 +269,158 @@ async function runWatchPendingWeekly(args: CliArgs) {
   }
 }
 
+async function runDaemon(args: CliArgs) {
+  if (args.storageBackend !== "db") {
+    throw new Error("--daemon 仅支持 --storage-backend=db，确保任务队列可持久化");
+  }
+
+  const engine = new SqliteEngine(args.storageDbPath);
+  const jobStore = new DbOperationJobStore(engine);
+  const markerStore = new FileScheduleMarkerStore(args.daemonMarkerRoot);
+  const notifier = createFeishuNotifier(args);
+  const callbackAuditLogger = createFeishuCallbackAuditLogger(args);
+
+  const callbackServer = await startFeishuReviewCallbackServer({
+    host: args.feishuCallbackHost,
+    port: args.feishuCallbackPort,
+    path: args.feishuCallbackPath,
+    authToken: args.feishuCallbackAuthToken,
+    signingSecret: args.feishuSigningSecret,
+    store: createReviewInstructionStore({
+      backend: args.storageBackend,
+      dbPath: args.storageDbPath,
+      fileRoot: args.reviewInstructionRoot,
+      fallbackToFile: args.storageFallbackToFile,
+    }),
+    notifier,
+    auditLogger: callbackAuditLogger,
+    statusEchoProvider: async ({ reportDate }) => await loadStatusEchoFromArtifact(args.outputRoot, reportDate),
+    onReviewAccepted: async ({ instruction }) => {
+      const dedupeKey = instruction.traceId
+        ? `auto_recheck:${instruction.traceId}`
+        : `auto_recheck:${instruction.reportDate}:${instruction.action ?? "unknown"}:${instruction.decidedAt}`;
+      await jobStore.enqueue({
+        jobType: "recheck_weekly",
+        payload: {
+          reportDate: instruction.reportDate,
+          generatedAt: new Date().toISOString(),
+        },
+        dedupeKey,
+        createdBy: instruction.operator,
+        source: "feishu_callback_auto",
+        traceId: instruction.traceId,
+        maxRetries: 1,
+      });
+    },
+    operationHandler: async (payload) => {
+      const reportDate = payload.reportDate ?? dayjs().tz(args.timezone).format("YYYY-MM-DD");
+      const dedupeKey = buildManualOperationDedupeKey({
+        operation: payload.operation,
+        reportDate,
+      });
+      const enqueue = await jobStore.enqueue({
+        jobType: payload.operation,
+        payload: buildOperationPayloadFromFeishuAction(payload.operation, reportDate, payload),
+        dedupeKey,
+        createdBy: payload.operator,
+        source: "feishu_manual",
+        traceId: payload.traceId,
+        maxRetries: payload.operation === "watchdog_weekly" ? 0 : 1,
+      });
+      return {
+        accepted: true,
+        duplicated: !enqueue.created,
+        jobId: enqueue.jobId,
+        message: enqueue.created ? "已受理，任务已入队执行。" : "该任务已在队列中，忽略重复提交。",
+      };
+    },
+    mentionHandler: async (payload) => {
+      const reportDate = dayjs().tz(args.timezone).format("YYYY-MM-DD");
+      const sent = await notifier.notifyOperationControlCard({
+        chatId: payload.chatId,
+        reportDate,
+      });
+      return {
+        handled: sent,
+        message: sent ? `已发送主动触发面板（${reportDate}）。` : "主动触发面板发送失败，请检查应用配置。",
+      };
+    },
+  });
+
+  console.log(
+    `[daemon] started callback=http://${args.feishuCallbackHost}:${callbackServer.port}${args.feishuCallbackPath}, schedulerIntervalMs=${args.daemonSchedulerIntervalMs}, workerPollMs=${args.daemonWorkerPollMs}`,
+  );
+
+  let schedulerRunning = false;
+  let workerRunning = false;
+
+  const runSchedulerTick = async () => {
+    if (schedulerRunning) {
+      return;
+    }
+    schedulerRunning = true;
+    try {
+      const markers = await markerStore.listMarkerKeys();
+      const nowIso = nowInTimezoneIso(args.timezone);
+      const due = computeDueScheduledJobs({
+        nowIso,
+        timezoneName: args.timezone,
+        alreadyTriggered: markers,
+      });
+
+      for (const candidate of due) {
+        const enqueue = await jobStore.enqueue(candidate.job);
+        await markerStore.mark(candidate.markerKey, {
+          created: enqueue.created,
+          jobId: enqueue.jobId,
+          nowIso,
+        });
+        console.log(`[daemon-scheduler] marker=${candidate.markerKey}, created=${enqueue.created}, jobId=${enqueue.jobId}`);
+      }
+    } finally {
+      schedulerRunning = false;
+    }
+  };
+
+  const runWorkerTick = async () => {
+    if (workerRunning) {
+      return;
+    }
+    workerRunning = true;
+    try {
+      await processOneOperationJob(args, jobStore, notifier);
+    } finally {
+      workerRunning = false;
+    }
+  };
+
+  // 启动后先执行一次补偿扫描，覆盖 daemon 重启或机器休眠错过窗口的场景。
+  await runSchedulerTick();
+  await runWorkerTick();
+
+  const schedulerTimer = setInterval(() => {
+    runSchedulerTick().catch((error) => {
+      console.log(`[daemon-scheduler-warning] ${error instanceof Error ? error.message : String(error)}`);
+    });
+  }, Math.max(2_000, args.daemonSchedulerIntervalMs));
+
+  const workerTimer = setInterval(() => {
+    runWorkerTick().catch((error) => {
+      console.log(`[daemon-worker-warning] ${error instanceof Error ? error.message : String(error)}`);
+    });
+  }, Math.max(500, args.daemonWorkerPollMs));
+
+  await new Promise<void>((resolve) => {
+    const close = () => resolve();
+    process.once("SIGINT", close);
+    process.once("SIGTERM", close);
+  });
+
+  clearInterval(schedulerTimer);
+  clearInterval(workerTimer);
+  await callbackServer.close();
+}
+
 async function runServeFeishuCallback(args: CliArgs) {
   const store = createReviewInstructionStore({
     backend: args.storageBackend,
@@ -253,6 +430,7 @@ async function runServeFeishuCallback(args: CliArgs) {
   });
   const notifier = createFeishuNotifier(args);
   const callbackAuditLogger = createFeishuCallbackAuditLogger(args);
+  const operationJobStore = args.storageBackend === "db" ? new DbOperationJobStore(new SqliteEngine(args.storageDbPath)) : null;
   const server = await startFeishuReviewCallbackServer({
     host: args.feishuCallbackHost,
     port: args.feishuCallbackPort,
@@ -264,6 +442,65 @@ async function runServeFeishuCallback(args: CliArgs) {
     auditLogger: callbackAuditLogger,
     // 点击动作后优先从最新产物回显当前状态，减少“动作已收但状态未知”的协作摩擦。
     statusEchoProvider: async ({ reportDate }) => await loadStatusEchoFromArtifact(args.outputRoot, reportDate),
+    onReviewAccepted: async ({ instruction }) => {
+      if (!operationJobStore) {
+        return;
+      }
+      const dedupeKey = instruction.traceId
+        ? `auto_recheck:${instruction.traceId}`
+        : `auto_recheck:${instruction.reportDate}:${instruction.action ?? "unknown"}:${instruction.decidedAt}`;
+      await operationJobStore.enqueue({
+        jobType: "recheck_weekly",
+        payload: {
+          reportDate: instruction.reportDate,
+          generatedAt: new Date().toISOString(),
+        },
+        dedupeKey,
+        createdBy: instruction.operator,
+        source: "feishu_callback_auto",
+        traceId: instruction.traceId,
+        maxRetries: 1,
+      });
+    },
+    operationHandler: async (payload) => {
+      if (!operationJobStore) {
+        return {
+          accepted: false,
+          message: "当前存储模式不支持主动触发队列，请切换到 DB 模式。",
+        };
+      }
+      const reportDate = payload.reportDate ?? dayjs().tz(args.timezone).format("YYYY-MM-DD");
+      const dedupeKey = buildManualOperationDedupeKey({
+        operation: payload.operation,
+        reportDate,
+      });
+      const enqueue = await operationJobStore.enqueue({
+        jobType: payload.operation,
+        payload: buildOperationPayloadFromFeishuAction(payload.operation, reportDate, payload),
+        dedupeKey,
+        createdBy: payload.operator,
+        source: "feishu_manual",
+        traceId: payload.traceId,
+        maxRetries: 1,
+      });
+      return {
+        accepted: true,
+        duplicated: !enqueue.created,
+        jobId: enqueue.jobId,
+        message: enqueue.created ? "已受理，任务已入队执行（请启动 daemon worker 消费）。" : "该任务已在队列中，忽略重复提交。",
+      };
+    },
+    mentionHandler: async (payload) => {
+      const reportDate = dayjs().tz(args.timezone).format("YYYY-MM-DD");
+      const sent = await notifier.notifyOperationControlCard({
+        chatId: payload.chatId,
+        reportDate,
+      });
+      return {
+        handled: sent,
+        message: sent ? `已发送主动触发面板（${reportDate}）。` : "主动触发面板发送失败，请检查应用配置。",
+      };
+    },
   });
 
   console.log(
@@ -296,6 +533,7 @@ async function runServeReviewApi(args: CliArgs) {
     fallbackToFile: args.storageFallbackToFile,
   });
   const auditStore = new DbAuditStore(new SqliteEngine(args.storageDbPath));
+  const operationJobStore = args.storageBackend === "db" ? new DbOperationJobStore(new SqliteEngine(args.storageDbPath)) : undefined;
 
   const server = await startReviewApiServer({
     host: args.reviewApiHost,
@@ -305,6 +543,7 @@ async function runServeReviewApi(args: CliArgs) {
     reviewStore,
     runtimeStore,
     auditStore,
+    operationJobStore,
   });
 
   console.log(`[review-api] listening on http://${args.reviewApiHost}:${server.port}`);
@@ -379,6 +618,163 @@ async function runNotifyReviewReminder(args: CliArgs) {
   }
 
   console.log(`[feishu-reminder-summary] sent=${sent}, skipped=${skipped}, invalid=${loaded.precheckFailures.length}`);
+}
+
+async function processOneOperationJob(args: CliArgs, jobStore: DbOperationJobStore, notifier: FeishuNotifier) {
+  const job = await jobStore.pickNextPending();
+  if (!job) {
+    return;
+  }
+
+  try {
+    const detail = await executeOperationJob(job, {
+      runReport: async (payload) => {
+        const nextArgs: CliArgs = {
+          ...args,
+          mode: payload.mode,
+          mock: payload.mock,
+          reportDate: payload.reportDate,
+          generatedAt: payload.generatedAt,
+        };
+        await runPipeline(nextArgs);
+        return `${payload.mode} run 已完成（reportDate=${payload.reportDate ?? "auto"}）`;
+      },
+      recheckWeekly: async (payload) => {
+        const nextArgs: CliArgs = {
+          ...args,
+          mode: "weekly",
+          recheckPending: true,
+          reportDate: payload.reportDate,
+          generatedAt: payload.generatedAt,
+        };
+        await runRecheckPending(nextArgs);
+        return `recheck 已完成（reportDate=${payload.reportDate}）`;
+      },
+      runWatchdog: async (payload) => {
+        const nextArgs: CliArgs = {
+          ...args,
+          mode: "weekly",
+          watchPendingWeekly: true,
+          dryRun: payload.dryRun,
+          generatedAt: payload.generatedAt,
+        };
+        await runWatchPendingWeekly(nextArgs);
+        return `watchdog 已完成（dryRun=${payload.dryRun}）`;
+      },
+      notifyWeeklyReminder: async (payload) => {
+        const nextArgs: CliArgs = {
+          ...args,
+          mode: "weekly",
+          notifyReviewReminder: true,
+          generatedAt: payload.generatedAt,
+        };
+        await runNotifyReviewReminder(nextArgs);
+        return "提醒任务已执行";
+      },
+      queryWeeklyStatus: async (payload) => {
+        const artifact = await loadReviewArtifact(args.outputRoot, "weekly", payload.reportDate);
+        return `status: review=${artifact.reviewStatus}, stage=${artifact.reviewStage}, publish=${artifact.publishStatus}`;
+      },
+      runGitSync: async () => {
+        const result = await runAutoGitSync(args, `operation_job:${job.id}`);
+        if (!result.changed) {
+          return "git 同步跳过（无变更）";
+        }
+        return `git 同步完成（committed=${result.committed}, pushed=${result.pushed}, sha=${result.commitSha ?? "none"}）`;
+      },
+    });
+
+    await jobStore.markSuccess(job.id);
+    if (job.source === "feishu_manual") {
+      await notifier
+        .notifyOperationResult({
+          operator: job.createdBy,
+          operation: job.jobType,
+          result: "success",
+          detail,
+        })
+        .catch((error) => {
+          console.log(`[daemon-notify-warning] ${error instanceof Error ? error.message : String(error)}`);
+        });
+    }
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    const failed = await jobStore.markFailed(job.id, message);
+    if (!failed.requeued && job.source === "feishu_manual") {
+      await notifier
+        .notifyOperationResult({
+          operator: job.createdBy,
+          operation: job.jobType,
+          result: "failed",
+          detail: message,
+        })
+        .catch((notifyError) => {
+          console.log(`[daemon-notify-warning] ${notifyError instanceof Error ? notifyError.message : String(notifyError)}`);
+        });
+    }
+  }
+}
+
+async function runAutoGitSync(args: CliArgs, reason: string) {
+  return autoSyncToGit({
+    repoRoot: process.cwd(),
+    includePaths: args.gitSyncIncludePaths,
+    commitMessage: `[auto-sync] ${reason}`,
+    push: args.gitSyncPush,
+    remote: args.gitSyncRemote,
+    branch: args.gitSyncBranch,
+    httpProxy: args.gitSyncHttpProxy,
+    httpsProxy: args.gitSyncHttpsProxy,
+    noProxy: args.gitSyncNoProxy,
+  });
+}
+
+function buildOperationPayloadFromFeishuAction(
+  operation: OperationJobType,
+  reportDate: string,
+  payload: {
+    generatedAt?: string;
+    dryRun?: boolean;
+  },
+): Record<string, unknown> {
+  const generatedAt = payload.generatedAt ?? new Date().toISOString();
+  if (operation === "run_daily") {
+    return {
+      mode: "daily",
+      mock: true,
+      reportDate,
+      generatedAt,
+    };
+  }
+  if (operation === "run_weekly") {
+    return {
+      mode: "weekly",
+      mock: true,
+      reportDate,
+      generatedAt,
+    };
+  }
+  if (operation === "recheck_weekly") {
+    return {
+      reportDate,
+      generatedAt,
+    };
+  }
+  if (operation === "watchdog_weekly" || operation === "watchdog_weekly_dry_run") {
+    return {
+      dryRun: operation === "watchdog_weekly_dry_run" ? true : payload.dryRun ?? false,
+      generatedAt,
+    };
+  }
+  if (operation === "notify_weekly_reminder") {
+    return { generatedAt };
+  }
+  if (operation === "query_weekly_status") {
+    return { reportDate };
+  }
+  return {
+    reason: `manual_trigger:${reportDate}`,
+  };
 }
 
 function parseArgs(argv: string[]): CliArgs {
@@ -548,6 +944,78 @@ function parseArgs(argv: string[]): CliArgs {
       continue;
     }
 
+    if (token === "--daemon") {
+      args.daemon = true;
+      continue;
+    }
+
+    if (token === "--daemon-scheduler-interval-ms" && next) {
+      args.daemonSchedulerIntervalMs = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--daemon-worker-poll-ms" && next) {
+      args.daemonWorkerPollMs = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--daemon-marker-root" && next) {
+      args.daemonMarkerRoot = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--auto-git-sync") {
+      args.autoGitSync = true;
+      continue;
+    }
+
+    if (token === "--git-sync-no-push") {
+      args.gitSyncPush = false;
+      continue;
+    }
+
+    if (token === "--git-sync-remote" && next) {
+      args.gitSyncRemote = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--git-sync-branch" && next) {
+      args.gitSyncBranch = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--git-sync-include-paths" && next) {
+      args.gitSyncIncludePaths = next
+        .split(",")
+        .map((item) => item.trim())
+        .filter((item) => item.length > 0);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--git-sync-http-proxy" && next) {
+      args.gitSyncHttpProxy = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--git-sync-https-proxy" && next) {
+      args.gitSyncHttpsProxy = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--git-sync-no-proxy" && next) {
+      args.gitSyncNoProxy = next;
+      i += 1;
+      continue;
+    }
+
     if (token === "--feishu-app-id" && next) {
       args.feishuAppId = next;
       i += 1;
@@ -683,6 +1151,22 @@ function defaults(): CliArgs {
     serveReviewApi: false,
     migrateFileToDb: false,
     notifyReviewReminder: false,
+    daemon: false,
+    daemonSchedulerIntervalMs: Number(process.env.DAEMON_SCHEDULER_INTERVAL_MS ?? "30000"),
+    daemonWorkerPollMs: Number(process.env.DAEMON_WORKER_POLL_MS ?? "2000"),
+    daemonMarkerRoot: process.env.DAEMON_MARKER_ROOT ?? "outputs/daemon/schedule-markers",
+    autoGitSync: process.env.AUTO_GIT_SYNC === "true",
+    gitSyncPush: process.env.GIT_SYNC_PUSH === "true",
+    gitSyncRemote: process.env.GIT_SYNC_REMOTE ?? "origin",
+    gitSyncBranch: process.env.GIT_SYNC_BRANCH,
+    gitSyncIncludePaths: (process.env.GIT_SYNC_INCLUDE_PATHS ??
+      "outputs/review,outputs/published,outputs/review-instructions,outputs/runtime-config")
+      .split(",")
+      .map((item) => item.trim())
+      .filter((item) => item.length > 0),
+    gitSyncHttpProxy: process.env.GIT_PUSH_HTTP_PROXY,
+    gitSyncHttpsProxy: process.env.GIT_PUSH_HTTPS_PROXY,
+    gitSyncNoProxy: process.env.GIT_PUSH_NO_PROXY,
     feishuAppId: feishu.appId,
     feishuAppSecret: feishu.appSecret,
     feishuReviewChatId: feishu.reviewChatId,
@@ -715,11 +1199,31 @@ async function persistOutputs(result: ReportState, args: CliArgs, trigger: "run"
     const publishedPaths = await writeArtifacts(args.publishRoot, args.mode, datePart, result);
     console.log(`[published] ${publishedPaths.mdPath}`);
     console.log(`[published] ${publishedPaths.jsonPath}`);
+    // 优先尝试 Git 同步，再通知群组，尽量保证通知内链接在用户点击时已可访问。
+    await autoSyncOutputsIfNeeded(args, `publish:${result.mode}:${result.reportDate}`);
     await notifyPublishResultIfNeeded(args, result, publishedPaths.mdPath);
     return;
   }
 
+  // 审核通知前先同步产物，减少“卡片已到达但链接尚不可访问”的窗口。
+  await autoSyncOutputsIfNeeded(args, `review:${result.mode}:${result.reportDate}`);
   await notifyReviewPendingIfNeeded(args, result, reviewPaths.mdPath, trigger);
+}
+
+async function autoSyncOutputsIfNeeded(args: CliArgs, reason: string) {
+  if (!args.autoGitSync) {
+    return;
+  }
+
+  try {
+    const sync = await runAutoGitSync(args, reason);
+    console.log(
+      `[git-sync] changed=${sync.changed}, committed=${sync.committed}, pushed=${sync.pushed}, files=${sync.changedFiles.length}`,
+    );
+  } catch (error) {
+    // Git 同步失败不应阻断主流程，避免通知/发布被版本控制链路拖垮。
+    console.log(`[git-sync-warning] ${error instanceof Error ? error.message : String(error)}`);
+  }
 }
 
 async function writeArtifacts(root: string, mode: ReportMode, datePart: string, result: ReportState) {

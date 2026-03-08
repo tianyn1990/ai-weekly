@@ -197,4 +197,37 @@ function ensureSchema(db: SqlJsDatabase) {
     CREATE INDEX IF NOT EXISTS idx_audit_event_trace
     ON audit_events(trace_id);
   `);
+
+  db.run(`
+    CREATE TABLE IF NOT EXISTS operation_jobs (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      job_type TEXT NOT NULL,
+      status TEXT NOT NULL,
+      payload_json TEXT NOT NULL,
+      dedupe_key TEXT,
+      created_by TEXT,
+      source TEXT,
+      trace_id TEXT,
+      retry_count INTEGER NOT NULL DEFAULT 0,
+      max_retries INTEGER NOT NULL DEFAULT 0,
+      last_error TEXT,
+      started_at TEXT,
+      finished_at TEXT,
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL
+    );
+  `);
+  db.run(`
+    CREATE INDEX IF NOT EXISTS idx_operation_job_pick
+    ON operation_jobs(status, created_at ASC, id ASC);
+  `);
+  db.run(`
+    CREATE INDEX IF NOT EXISTS idx_operation_job_trace
+    ON operation_jobs(trace_id);
+  `);
+  db.run(`
+    CREATE UNIQUE INDEX IF NOT EXISTS idx_operation_job_dedupe
+    ON operation_jobs(dedupe_key)
+    WHERE dedupe_key IS NOT NULL AND status IN ('pending', 'running');
+  `);
 }

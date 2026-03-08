@@ -1,7 +1,7 @@
-# AI 周报系统设计（v0.6）
+# AI 周报系统设计（v0.7）
 
 ## 1. 文档目标与范围
-- 目标：定义 AI 日报/周报系统在 **M4.2 已完成** 基线下的完整技术架构。
+- 目标：定义 AI 日报/周报系统在 **M4.3 已完成** 基线下的完整技术架构。
 - 范围：覆盖采集、处理、审核、发布、协同通知、审核意见回流、可观测与运维策略。
 - 非目标：不描述前端管理后台 UI 细节；不覆盖分布式部署实现细节（当前暂缓）。
 
@@ -48,16 +48,25 @@
 - 回执去噪：动作回执改为业务化短句；重复回调仅返回 toast，不重复群发。
 - 兼容 recheck/watchdog：非 run 触发也会更新主卡状态，避免“卡片停留旧阶段”。
 
-### 2.7 规划中（M5）
+### 2.7 已实现（M4.3）
+- daemon 常驻模式：单进程统一托管 scheduler、Feishu callback、operation worker。
+- 自动调度：daily/weekly/reminder/watchdog 按时间窗口自动入队，并支持重启补偿扫描。
+- 主动触发：支持 @应用机器人下发运维操作卡，按钮回调入队异步执行。
+- 自动推进：审核动作回调写入成功后自动入队 `recheck_weekly`。
+- 自动 Git 同步：支持受控目录自动 add/commit/push，push 阶段支持可选代理注入。
+- 任务可观测：新增 `operation_jobs` 队列表并支持 API 查询。
+
+### 2.8 规划中（M5）
 - LLM 增强：先总结，再逐步扩展到分类/打标/排序辅助。
 
 ## 3. 架构全景
-系统分为五层：
+系统分为六层：
 1. **Ingestion Layer**：按来源抓取原始条目（RSS/后续扩展 API）。
 2. **Processing Layer (LangGraph)**：标准化、去重、分类、排序、大纲/正文生成。
 3. **Review Orchestration Layer**：审核状态机、超时发布判定、pending 复检。
 4. **Collaboration Layer**：Feishu 通知、审核动作回写、审核意见回流修订。
 5. **Storage Layer**：SQLite（主）+ 文件（fallback）双轨持久化。
+6. **Automation Layer**：daemon scheduler + operation queue + git sync executor。
 
 ## 4. 目录与模块责任
 ```text
@@ -72,6 +81,13 @@
 │   └── watchdog/
 └── src/
     ├── cli.ts                        # 运行入口/调度分发
+    ├── daemon/
+    │   ├── scheduler.ts              # 调度窗口判定（含补偿扫描）
+    │   ├── schedule-marker-store.ts  # 调度 marker 持久化
+    │   ├── operation-job-store.ts    # operation_jobs 队列存储
+    │   └── worker.ts                 # operation job 执行路由
+    ├── git/
+    │   └── auto-sync.ts              # 受控目录自动 Git 同步
     ├── audit/
     │   └── audit-store.ts           # 审计事件存储（DB）
     ├── config/
@@ -179,6 +195,7 @@ weekly report generated
 - 飞书卡片原生回调先经过 payload adapter，再转换为 `ReviewActionPayload`，保证多种事件结构可复用同一状态机。
 - 回调反馈分两层：点击人即时 toast + 群内状态回执，避免“点击后无感知”。
 - 回调状态回执字段：`reportDate/action/operator/result/reviewStage/reviewStatus/publishStatus/shouldPublish`。
+- 回调幂等采用“双层去重”：先按 `traceId/messageId`，再按语义指纹（同 `reportDate + stage + action` 的短窗口重复点击仅受理一次）。
 - 报告链接字段支持双形态：`reviewFile/publishedFile`（本地路径）+ `reviewUrl/publishedUrl`（公网可点击）。
 
 ### 5.5 Feishu 交互重构流程（M4.2 已实现）
@@ -213,6 +230,23 @@ request_revision
 你要求的“回流不等于取消”在此落地：
 - `request_revision`：进入修订分支，不终止流程。
 - `reject`：终止当前 run 发布尝试，但保留产物与审计记录，新 run 可重新进入审核流。
+
+### 5.7 daemon 自动化与主动触发流程（M4.3 已实现）
+```text
+daemon start
+  -> scheduler tick (daily/weekly/reminder/watchdog enqueue)
+  -> callback server (review action / mention / operation action)
+  -> operation worker poll
+  -> execute queued job
+  -> send async result receipt
+```
+
+设计要点：
+- callback 只做“鉴权 + 入队 + 快速反馈”，长任务由 worker 异步执行，避免飞书回调超时。
+- daemon 启动后先执行一次补偿扫描，处理休眠/重启导致的漏触发。
+- 主动触发入口为“@机器人 -> 运维操作卡 -> operation_jobs 入队”。
+- 审核动作写入后自动入队 `recheck_weekly`，减少人工补命令。
+- 自动入队的 `recheck_weekly` 视为系统内部动作，不群发主动触发回执，避免干扰审核对话。
 
 ## 6. 状态机模型
 ### 6.1 审核状态
@@ -265,6 +299,7 @@ DB 表：`review_instructions`
 回调动作反馈（M4.1）：
 - 点击响应体：`{ ok, toast: { type, content }, warning? }`
 - 群内回执：由通知器统一发送，记录动作受理结果（`accepted | failed`）与状态回显。
+- 重复回调：返回 `duplicated=true` 且提示“以最新状态卡为准”，不重复群发回执。
 
 ### 7.3 审核意见回流指令（M3.3 已实现）
 `feedback` 字段支持：
@@ -306,6 +341,20 @@ DB 表：`audit_events`
 - 若 `runId` 不一致或更新失败，则发送新卡并覆盖 `messageId`；
 - 该记录仅用于协同入口路由，不参与审核状态判定。
 
+### 7.8 Operation Jobs（M4.3）
+DB 表：`operation_jobs`
+
+核心字段：
+- `job_type`, `status`, `payload_json`, `dedupe_key`
+- `created_by`, `source`, `trace_id`
+- `retry_count`, `max_retries`, `last_error`
+- `started_at`, `finished_at`, `created_at`, `updated_at`
+
+语义约束：
+- `dedupe_key` 在 `pending/running` 状态下唯一，防止重复入队；
+- worker 每次只把一条 `pending` 任务推进到 `running`；
+- 失败后按 `max_retries` 自动回队，超限标记为 `failed`。
+
 ## 8. 策略层设计（回流如何生效）
 为避免“自由文本难执行”，回流策略统一结构化并分三层（已落地）：
 1. **条目层**：新增、删除、置顶、降权。
@@ -346,6 +395,25 @@ DB 表：`audit_events`
 - `REVIEW_API_HOST` / `REVIEW_API_PORT`
 - `REVIEW_API_AUTH_TOKEN`（可选，启用后 API 需要 Bearer token）
 
+### 10.4 M4.3 daemon 与 Git 自动同步配置
+- `DAEMON_SCHEDULER_INTERVAL_MS`
+- `DAEMON_WORKER_POLL_MS`
+- `DAEMON_MARKER_ROOT`
+- `AUTO_GIT_SYNC`
+- `GIT_SYNC_PUSH` / `GIT_SYNC_REMOTE` / `GIT_SYNC_BRANCH`
+- `GIT_SYNC_INCLUDE_PATHS`
+- `GIT_PUSH_HTTP_PROXY` / `GIT_PUSH_HTTPS_PROXY` / `GIT_PUSH_NO_PROXY`
+
+### 10.5 Git 跟踪边界（M4.3）
+- 默认纳入 Git 自动同步与远程审核的目录：
+  - `outputs/review/**`
+  - `outputs/published/**`
+  - `outputs/review-instructions/**`
+  - `outputs/runtime-config/**`
+- 默认不纳入同步的目录：
+  - `outputs/db/**`（二进制数据库，不适合协作合并）
+  - `outputs/notifications/**`（运行时通知缓存）
+
 安全约束：
 - 回调必须做签名校验与幂等处理。
 - 敏感配置走环境变量，不写入仓库。
@@ -356,7 +424,7 @@ DB 表：`audit_events`
 - `pnpm run feishu:card:send`：自动发送审核卡片并携带标准 action value。
 
 ## 11. 部署与运行策略
-- 当前部署基线：**单机定时任务**。
+- 当前部署基线：**单机 daemon 常驻运行**（CLI/cron 仍保留 fallback）。
 - 互斥策略：单机 lock 文件已满足当前形态。
 - 分布式互斥：仅在多实例部署时启动（当前明确暂缓）。
 
@@ -365,8 +433,9 @@ DB 表：`audit_events`
 2. **M3.3（修订）**：审核意见回流执行 + 打回终止约束【已完成】。
 3. **M4（存储）**：审核指令与 runtime 配置升级 DB/API + 审计 + 并发控制【已完成】。
 4. **M4.1（协同增强）**：Feishu app-only 通知统一 + 点击反馈闭环【已完成】。
-5. **M5（智能）**：LLM 总结节点优先，逐步扩展到分类/打标/排序辅助。
-6. **暂缓项**：分布式互斥（多实例部署时再做）。
+5. **M4.3（自动化）**：daemon 自动调度 + @机器人主动触发 + 自动 Git 同步【已完成】。
+6. **M5（智能）**：LLM 总结节点优先，逐步扩展到分类/打标/排序辅助。
+7. **暂缓项**：分布式互斥（多实例部署时再做）。
 
 ## 13. 里程碑后的质量门禁
 - 无来源断言容忍度：0。

@@ -12,7 +12,8 @@
 - 已完成 M4：审核指令与 runtime config 升级到 SQLite（DB 优先 + 文件 fallback），并提供最小 Review API 与文件迁移命令。
 - 已完成 M4.1：飞书通知统一为应用机器人（app-only）；卡片点击后支持即时反馈与群内状态回执。
 - 已完成 M4.2：飞书审核交互重构为“阶段引导主卡 + 单卡更新 + 去噪回执”，降低误操作与群消息噪音。
-- 分布式互斥暂缓，当前以单机定时任务为部署基线。
+- 已完成 M4.3：daemon 常驻自动调度 + @机器人主动触发面板 + 自动 Git 同步（可选 push 代理）。
+- 分布式互斥暂缓，当前以单机 daemon 为部署基线。
 
 ## 环境要求
 - Node.js >= 20
@@ -34,6 +35,8 @@ pnpm run:weekly:mock
 ```bash
 pnpm run:daily
 pnpm run:weekly
+# 常驻自动化模式（推荐）
+pnpm run run:daemon
 ```
 
 可选参数：
@@ -150,6 +153,7 @@ tsx src/cli.ts run --serve-review-api --review-api-host 127.0.0.1 --review-api-p
 - `GET /api/runtime-config`
 - `PATCH /api/runtime-config`（支持 `expectedVersion` 冲突检测）
 - `GET /api/audit-events`
+- `GET /api/operation-jobs`
 
 文件迁移到 DB（M4）：
 ```bash
@@ -194,6 +198,35 @@ pnpm run feishu:tunnel
 # 4) 完整链路脚本（生成周报 -> 发卡片 -> 两次点击 -> 两次 recheck）
 pnpm run feishu:fullflow
 ```
+
+Feishu 主动触发（M4.3）：
+- 在群里 `@应用机器人` 并发送包含“运维/操作卡/ops/触发”等关键词的文本。
+- 机器人会下发“主动触发面板”卡片，支持按钮触发：
+  - 生成周报（mock）
+  - recheck
+  - watchdog dry-run
+  - 发送审核提醒
+  - 查询本期状态
+- 点击按钮后先“受理入队”，任务完成后再群内回执 success/failed。
+
+M4.3 运维备忘（防遗漏）：
+- 常驻运行命令：`pnpm run run:daemon`
+- 关键自动化开关：
+  - `AUTO_GIT_SYNC=true|false`
+  - `GIT_SYNC_PUSH=true|false`
+  - `GIT_SYNC_INCLUDE_PATHS=outputs/review,outputs/published,outputs/review-instructions,outputs/runtime-config`
+- push 代理（仅 push 使用）：
+  - `GIT_PUSH_HTTP_PROXY`
+  - `GIT_PUSH_HTTPS_PROXY`
+  - `GIT_PUSH_NO_PROXY`
+- 默认会被自动同步的路径：
+  - `outputs/review/**`
+  - `outputs/published/**`
+  - `outputs/review-instructions/**`
+  - `outputs/runtime-config/**`
+- 默认不会被同步的路径：
+  - `outputs/db/**`
+  - `outputs/notifications/**`
 
 联调输出说明：
 - `pnpm run feishu:dev` 会输出本地回调地址与隧道日志。
@@ -259,17 +292,36 @@ REVIEW_CHAT_ID=""   # 必填
 # 可选：用于把本地文件路径转换为飞书可点击 URL
 # 例如 https://raw.githubusercontent.com/<org>/<repo>/<branch>
 REPORT_PUBLIC_BASE_URL=""
+
+# daemon 常驻调度配置
+DAEMON_SCHEDULER_INTERVAL_MS="30000"
+DAEMON_WORKER_POLL_MS="2000"
+DAEMON_MARKER_ROOT="outputs/daemon/schedule-markers"
+
+# 自动 Git 同步（默认关闭）
+AUTO_GIT_SYNC="false"
+GIT_SYNC_PUSH="false"
+GIT_SYNC_INCLUDE_PATHS="outputs/review,outputs/published,outputs/review-instructions,outputs/runtime-config"
+GIT_SYNC_REMOTE="origin"
+GIT_SYNC_BRANCH=""
+
+# push 代理（可选，只有 git push 使用）
+GIT_PUSH_HTTP_PROXY=""
+GIT_PUSH_HTTPS_PROXY=""
+GIT_PUSH_NO_PROXY=""
 ```
 
 飞书点击反馈（M4.1）：
 - 点击卡片动作后，回调接口会返回 toast（success/error），飞书侧可立即看到处理结果。
 - 系统会向群内追加“审核动作回执”消息，包含 `reportDate/action/operator/result/reviewStage/reviewStatus/publishStatus`。
 - 若动作写入成功但回执发送失败，回调仍返回成功并附带 warning，避免通知链路反向阻断审核主流程。
+- 回调幂等采用双层策略：`traceId/messageId` 去重 + 语义去重（短窗口内同动作仅受理一次）。
 
 飞书交互体验（M4.2）：
 - 待审核卡片为单主卡入口，同一 `reportDate + runId` 优先更新原卡，避免重复发卡。
 - 卡片按钮按阶段收敛：大纲阶段只显示大纲动作，终稿阶段只显示终稿动作。
-- 重复点击命中幂等后，仅返回“忽略重复提交”反馈，不重复群发动作回执。
+- 重复点击命中幂等后，仅返回“忽略重复提交，请以最新状态卡为准”反馈，不重复群发动作回执。
+- 系统自动入队的 `recheck` 为内部动作，不再群发“主动触发回执”；群里仅回显人工主动触发任务。
 
 Feishu 联调自动化命令：
 ```bash
@@ -316,14 +368,9 @@ brew install ngrok/ngrok/ngrok
    - 配置 `REPORT_PUBLIC_BASE_URL` 后，通知会附加 `reviewUrl/publishedUrl` 可点击链接。
 ```
 
-推荐 cron（北京时间）：
-```bash
-# 每周一 11:30 发送一次审核提醒
-30 11 * * 1 cd /path/to/ai-weekly && npx tsx src/cli.ts run --mode weekly --notify-review-reminder
-
-# 每周一 12:31 执行一次 watchdog
-31 12 * * 1 cd /path/to/ai-weekly && pnpm run:weekly:watch
-```
+推荐运行方式：
+- 优先使用 `pnpm run run:daemon` 常驻运行，自动触发 daily/weekly/reminder/watchdog。
+- 若暂不启用 daemon，可继续使用 cron 触发 `--notify-review-reminder` 与 `--watch-pending-weekly`。
 
 ## 测试
 ```bash

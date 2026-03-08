@@ -6,6 +6,7 @@ import { describe, expect, it } from "vitest";
 
 import { DbAuditStore } from "../src/audit/audit-store.js";
 import { createDefaultRuntimeConfig, createRuntimeConfigStore } from "../src/config/runtime-config.js";
+import { DbOperationJobStore } from "../src/daemon/operation-job-store.js";
 import { startReviewApiServer } from "../src/review/api-server.js";
 import { createReviewInstructionStore } from "../src/review/instruction-store.js";
 import { SqliteEngine } from "../src/storage/sqlite-engine.js";
@@ -152,6 +153,63 @@ describe("review api server", () => {
         }),
       });
       expect(patchConflict.status).toBe(409);
+    } finally {
+      await server.close();
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it("应支持 operation jobs 查询", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-review-api-"));
+    const dbPath = path.join(tempDir, "app.sqlite");
+    const outputRoot = path.join(tempDir, "review");
+    const authToken = "token-123";
+
+    const reviewStore = createReviewInstructionStore({
+      backend: "db",
+      dbPath,
+      fileRoot: path.join(tempDir, "instructions"),
+      fallbackToFile: true,
+    });
+    const runtimeStore = createRuntimeConfigStore({
+      backend: "db",
+      dbPath,
+      filePath: path.join(tempDir, "runtime-config.json"),
+      fallbackToFile: true,
+    });
+    const auditStore = new DbAuditStore(new SqliteEngine(dbPath));
+    const operationJobStore = new DbOperationJobStore(new SqliteEngine(dbPath));
+    await operationJobStore.enqueue({
+      jobType: "recheck_weekly",
+      payload: { reportDate: "2026-03-09" },
+      source: "test",
+    });
+
+    const server = await startReviewApiServer({
+      host: "127.0.0.1",
+      port: 0,
+      authToken,
+      outputRoot,
+      reviewStore,
+      runtimeStore,
+      auditStore,
+      operationJobStore,
+    });
+
+    try {
+      const baseUrl = `http://127.0.0.1:${server.port}`;
+      const listRes = await fetch(`${baseUrl}/api/operation-jobs?limit=5`, {
+        headers: {
+          authorization: `Bearer ${authToken}`,
+        },
+      });
+      expect(listRes.status).toBe(200);
+      const listPayload = (await listRes.json()) as {
+        ok: boolean;
+        items: Array<{ jobType: string }>;
+      };
+      expect(listPayload.ok).toBe(true);
+      expect(listPayload.items[0]?.jobType).toBe("recheck_weekly");
     } finally {
       await server.close();
       await fs.rm(tempDir, { recursive: true, force: true });
