@@ -141,6 +141,36 @@ describe("FeishuNotifier", () => {
     await fs.rm(tempDir, { recursive: true, force: true });
   });
 
+  it("LLM 回退告警应发送单条文本回执", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-notifier-"));
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, tenant_access_token: "tenant_token", expire: 7200 }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, data: { message_id: "om_alert" } }), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const notifier = new FeishuNotifier({
+      appId: "cli_xxx",
+      appSecret: "secret_xxx",
+      reviewChatId: "oc_xxx",
+      notificationRoot: tempDir,
+    });
+
+    const sent = await notifier.notifyLlmFallback({
+      runId: "weekly-123",
+      reportDate: "2026-03-10",
+      mode: "weekly",
+      reason: "llm_summary_failed:minimax_timeout",
+    });
+    expect(sent).toBe(true);
+    const body = JSON.parse(String(fetchMock.mock.calls[1]?.[1]?.body));
+    expect(body.msg_type).toBe("text");
+    const textContent = JSON.parse(body.content) as { text: string };
+    expect(textContent.text).toContain("LLM 降级告警");
+    expect(textContent.text).toContain("llm_summary_failed:minimax_timeout");
+    await fs.rm(tempDir, { recursive: true, force: true });
+  });
+
   it("同一 run 再次待审核通知时应更新主卡而非重复新发", async () => {
     const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-notifier-"));
     const fetchMock = vi

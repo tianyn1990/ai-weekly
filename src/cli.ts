@@ -28,6 +28,7 @@ import { autoSyncToGit } from "./git/auto-sync.js";
 import { SqliteEngine } from "./storage/sqlite-engine.js";
 import { migrateFileToDb } from "./storage/migrate-file-to-db.js";
 import { acquireFileLock } from "./utils/file-lock.js";
+import { loadProjectEnv } from "./utils/env-loader.js";
 import { nowInTimezoneIso } from "./utils/time.js";
 
 interface CliArgs {
@@ -40,6 +41,15 @@ interface CliArgs {
   storageDbPath: string;
   storageFallbackToFile: boolean;
   sourceLimit: number;
+  llmSummaryEnabled: boolean;
+  llmSummaryProvider: "minimax";
+  llmSummaryMinimaxApiKey?: string;
+  llmSummaryMinimaxModel: string;
+  llmSummaryTimeoutMs: number;
+  llmSummaryMaxItems: number;
+  llmSummaryMaxConcurrency: number;
+  llmSummaryPromptVersion: string;
+  llmFallbackAlertEnabled: boolean;
   timezone: string;
   outputRoot: string;
   publishRoot: string;
@@ -90,6 +100,8 @@ interface CliArgs {
 }
 
 async function main() {
+  // CLI 启动时强制加载项目 `.env.local`，避免全局 shell 变量污染本仓库配置。
+  await loadProjectEnv({ override: true });
   const args = parseArgs(process.argv.slice(2));
 
   if (args.command !== "run") {
@@ -160,6 +172,15 @@ async function runPipeline(args: CliArgs) {
     storageDbPath: args.storageDbPath,
     storageFallbackToFile: args.storageFallbackToFile,
     sourceLimit: args.sourceLimit,
+    llmSummaryEnabled: args.llmSummaryEnabled,
+    llmSummaryProvider: args.llmSummaryProvider,
+    llmSummaryMinimaxApiKey: args.llmSummaryMinimaxApiKey,
+    llmSummaryMinimaxModel: args.llmSummaryMinimaxModel,
+    llmSummaryTimeoutMs: args.llmSummaryTimeoutMs,
+    llmSummaryMaxItems: args.llmSummaryMaxItems,
+    llmSummaryMaxConcurrency: args.llmSummaryMaxConcurrency,
+    llmSummaryPromptVersion: args.llmSummaryPromptVersion,
+    llmFallbackAlertEnabled: args.llmFallbackAlertEnabled,
     generatedAt,
     reviewStartedAt: generatedAt,
     reportDate,
@@ -846,6 +867,61 @@ function parseArgs(argv: string[]): CliArgs {
       continue;
     }
 
+    if (token === "--llm-summary-enabled") {
+      args.llmSummaryEnabled = true;
+      continue;
+    }
+
+    if (token === "--llm-summary-provider" && next) {
+      if (next !== "minimax") {
+        throw new Error("--llm-summary-provider 当前仅支持 minimax");
+      }
+      args.llmSummaryProvider = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--llm-summary-minimax-api-key" && next) {
+      args.llmSummaryMinimaxApiKey = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--llm-summary-minimax-model" && next) {
+      args.llmSummaryMinimaxModel = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--llm-summary-timeout-ms" && next) {
+      args.llmSummaryTimeoutMs = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--llm-summary-max-items" && next) {
+      args.llmSummaryMaxItems = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--llm-summary-max-concurrency" && next) {
+      args.llmSummaryMaxConcurrency = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--llm-summary-prompt-version" && next) {
+      args.llmSummaryPromptVersion = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--llm-fallback-alert-disabled") {
+      args.llmFallbackAlertEnabled = false;
+      continue;
+    }
+
     if (token === "--timezone" && next) {
       args.timezone = next;
       i += 1;
@@ -1133,6 +1209,15 @@ function defaults(): CliArgs {
     storageDbPath: process.env.STORAGE_DB_PATH ?? "outputs/db/app.sqlite",
     storageFallbackToFile: process.env.STORAGE_FALLBACK_TO_FILE !== "false",
     sourceLimit: 6,
+    llmSummaryEnabled: process.env.LLM_SUMMARY_ENABLED === "true",
+    llmSummaryProvider: process.env.LLM_SUMMARY_PROVIDER === "minimax" ? "minimax" : "minimax",
+    llmSummaryMinimaxApiKey: process.env.MINIMAX_API_KEY ?? process.env.ANTHROPIC_API_KEY,
+    llmSummaryMinimaxModel: process.env.MINIMAX_MODEL ?? "MiniMax-M2.5",
+    llmSummaryTimeoutMs: Number(process.env.LLM_SUMMARY_TIMEOUT_MS ?? "12000"),
+    llmSummaryMaxItems: Number(process.env.LLM_SUMMARY_MAX_ITEMS ?? "30"),
+    llmSummaryMaxConcurrency: Number(process.env.LLM_SUMMARY_MAX_CONCURRENCY ?? "4"),
+    llmSummaryPromptVersion: process.env.LLM_SUMMARY_PROMPT_VERSION ?? "m5.1-v1",
+    llmFallbackAlertEnabled: process.env.LLM_FALLBACK_ALERT_ENABLED !== "false",
     timezone: "Asia/Shanghai",
     outputRoot: "outputs/review",
     publishRoot: "outputs/published",
@@ -1202,12 +1287,14 @@ async function persistOutputs(result: ReportState, args: CliArgs, trigger: "run"
     // 优先尝试 Git 同步，再通知群组，尽量保证通知内链接在用户点击时已可访问。
     await autoSyncOutputsIfNeeded(args, `publish:${result.mode}:${result.reportDate}`);
     await notifyPublishResultIfNeeded(args, result, publishedPaths.mdPath);
+    await notifyLlmFallbackIfNeeded(args, result);
     return;
   }
 
   // 审核通知前先同步产物，减少“卡片已到达但链接尚不可访问”的窗口。
   await autoSyncOutputsIfNeeded(args, `review:${result.mode}:${result.reportDate}`);
   await notifyReviewPendingIfNeeded(args, result, reviewPaths.mdPath, trigger);
+  await notifyLlmFallbackIfNeeded(args, result);
 }
 
 async function autoSyncOutputsIfNeeded(args: CliArgs, reason: string) {
@@ -1255,6 +1342,10 @@ async function writeArtifacts(root: string, mode: ReportMode, datePart: string, 
         finalApproved: result.finalApproved,
         rejected: result.rejected,
         metrics: result.metrics,
+        itemSummaries: result.itemSummaries,
+        quickDigest: result.quickDigest,
+        summaryInputHash: result.summaryInputHash,
+        llmSummaryMeta: result.llmSummaryMeta,
         highlights: result.highlights,
         revisionAuditLogs: result.revisionAuditLogs,
         warnings: result.warnings,
@@ -1268,6 +1359,10 @@ async function writeArtifacts(root: string, mode: ReportMode, datePart: string, 
           sourceLimit: result.sourceLimit,
           outlineMarkdown: result.outlineMarkdown,
           rankedItems: result.rankedItems,
+          itemSummaries: result.itemSummaries,
+          quickDigest: result.quickDigest,
+          summaryInputHash: result.summaryInputHash,
+          llmSummaryMeta: result.llmSummaryMeta,
           highlights: result.highlights,
           metrics: result.metrics,
           warnings: result.warnings,
@@ -1334,6 +1429,30 @@ async function notifyPublishResultIfNeeded(args: CliArgs, result: ReportState, p
     console.log(`[feishu-notify] publish result sent: ${result.reportDate}`);
   } catch (error) {
     console.log(`[feishu-notify-warning] publish result failed: ${error instanceof Error ? error.message : String(error)}`);
+  }
+}
+
+async function notifyLlmFallbackIfNeeded(args: CliArgs, result: ReportState) {
+  if (!args.llmFallbackAlertEnabled) {
+    return;
+  }
+  if (!result.llmSummaryMeta.enabled || !result.llmSummaryMeta.fallbackTriggered) {
+    return;
+  }
+  const notifier = createFeishuNotifier(args);
+  if (!notifier.isEnabled()) {
+    return;
+  }
+  try {
+    await notifier.notifyLlmFallback({
+      runId: result.runId,
+      reportDate: result.reportDate,
+      mode: result.mode,
+      reason: result.llmSummaryMeta.fallbackReason ?? "unknown",
+    });
+    console.log(`[feishu-notify] llm fallback alert sent: ${result.reportDate}`);
+  } catch (error) {
+    console.log(`[feishu-notify-warning] llm fallback alert failed: ${error instanceof Error ? error.message : String(error)}`);
   }
 }
 
@@ -1476,6 +1595,15 @@ function buildRecheckStateFromArtifact(input: {
     storageDbPath: artifact.snapshot.storageDbPath ?? args.storageDbPath,
     storageFallbackToFile: artifact.snapshot.storageFallbackToFile ?? args.storageFallbackToFile,
     sourceLimit: artifact.snapshot.sourceLimit,
+    llmSummaryEnabled: args.llmSummaryEnabled,
+    llmSummaryProvider: args.llmSummaryProvider,
+    llmSummaryMinimaxApiKey: args.llmSummaryMinimaxApiKey,
+    llmSummaryMinimaxModel: args.llmSummaryMinimaxModel,
+    llmSummaryTimeoutMs: args.llmSummaryTimeoutMs,
+    llmSummaryMaxItems: args.llmSummaryMaxItems,
+    llmSummaryMaxConcurrency: args.llmSummaryMaxConcurrency,
+    llmSummaryPromptVersion: args.llmSummaryPromptVersion,
+    llmFallbackAlertEnabled: args.llmFallbackAlertEnabled,
     generatedAt,
     reviewStartedAt: artifact.reviewStartedAt ?? artifact.generatedAt,
     reportDate,
@@ -1488,6 +1616,16 @@ function buildRecheckStateFromArtifact(input: {
   return {
     ...state,
     rankedItems: artifact.snapshot.rankedItems,
+    itemSummaries: artifact.snapshot.itemSummaries ?? artifact.itemSummaries ?? [],
+    quickDigest: artifact.snapshot.quickDigest ?? artifact.quickDigest ?? [],
+    summaryInputHash: artifact.snapshot.summaryInputHash ?? artifact.summaryInputHash ?? "",
+    llmSummaryMeta: artifact.snapshot.llmSummaryMeta ??
+      artifact.llmSummaryMeta ?? {
+        enabled: false,
+        inputCount: 0,
+        summarizedCount: 0,
+        fallbackTriggered: false,
+      },
     highlights: artifact.snapshot.highlights,
     outlineMarkdown: artifact.snapshot.outlineMarkdown,
     metrics: artifact.snapshot.metrics,

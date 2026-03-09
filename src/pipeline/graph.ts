@@ -7,6 +7,7 @@ import {
   classifyItemsNode,
   collectItemsNode,
   dedupeItemsNode,
+  llmSummarizeNode,
   normalizeItemsNode,
   publishOrWaitNode,
   rankItemsNode,
@@ -28,6 +29,15 @@ const ReportStateAnnotation = Annotation.Root({
   storageDbPath: Annotation<string>(),
   storageFallbackToFile: Annotation<boolean>(),
   sourceLimit: Annotation<number>(),
+  llmSummaryEnabled: Annotation<boolean>(),
+  llmSummaryProvider: Annotation<ReportState["llmSummaryProvider"]>(),
+  llmSummaryMinimaxApiKey: Annotation<string | undefined>(),
+  llmSummaryMinimaxModel: Annotation<string>(),
+  llmSummaryTimeoutMs: Annotation<number>(),
+  llmSummaryMaxItems: Annotation<number>(),
+  llmSummaryMaxConcurrency: Annotation<number>(),
+  llmSummaryPromptVersion: Annotation<string>(),
+  llmFallbackAlertEnabled: Annotation<boolean>(),
   reviewInstructionRoot: Annotation<string>(),
   approveOutline: Annotation<boolean>(),
   approveFinal: Annotation<boolean>(),
@@ -72,6 +82,19 @@ const ReportStateAnnotation = Annotation.Root({
     value: (_left, right) => right,
     default: () => [],
   }),
+  itemSummaries: Annotation<ReportState["itemSummaries"]>({
+    value: (_left, right) => right,
+    default: () => [],
+  }),
+  quickDigest: Annotation<ReportState["quickDigest"]>({
+    value: (_left, right) => right,
+    default: () => [],
+  }),
+  summaryInputHash: Annotation<string>({
+    value: (_left, right) => right,
+    default: () => "",
+  }),
+  llmSummaryMeta: Annotation<ReportState["llmSummaryMeta"]>(),
   warnings: Annotation<ReportState["warnings"]>({
     value: (_left, right) => right,
     default: () => [],
@@ -92,6 +115,7 @@ export function buildReportGraph() {
     .addNode("review_outline", reviewOutlineNode)
     .addNode("review_final", reviewFinalNode)
     .addNode("publish_or_wait", publishOrWaitNode)
+    .addNode("llm_summarize", llmSummarizeNode)
     .addNode("build_report", buildReportNode)
     .addEdge(START, "collect_items")
     .addEdge("collect_items", "normalize_items")
@@ -102,7 +126,8 @@ export function buildReportGraph() {
     .addEdge("build_outline", "review_outline")
     .addEdge("review_outline", "review_final")
     .addEdge("review_final", "publish_or_wait")
-    .addEdge("publish_or_wait", "build_report")
+    .addEdge("publish_or_wait", "llm_summarize")
+    .addEdge("llm_summarize", "build_report")
     .addEdge("build_report", END)
     .compile();
 }

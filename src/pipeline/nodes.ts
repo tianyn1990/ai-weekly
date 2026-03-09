@@ -1,15 +1,18 @@
 import dayjs from "dayjs";
 
+import { DbAuditStore } from "../audit/audit-store.js";
 import { applyRuntimeSourceOverrides, createRuntimeConfigStore } from "../config/runtime-config.js";
 import { loadSourceConfig } from "../config/source-config.js";
 import { rankItemsWithTuning } from "../core/scoring.js";
 import { createEmptyMetrics, createItemId, normalizeWhitespace, titleFingerprint } from "../core/utils.js";
 import type { ItemCategory, NormalizedItem, RankedItem, ReportState, ReviewInstruction, SourceConfig } from "../core/types.js";
+import { buildLlmSummary, canReuseLlmSummary, type LlmSummaryAuditEvent } from "../llm/summary.js";
 import { buildReportMarkdown } from "../report/markdown.js";
 import { executeFeedbackRevision } from "../review/feedback-executor.js";
 import { createReviewInstructionStore } from "../review/instruction-store.js";
 import { collectMockItems } from "../sources/mock-source.js";
 import { collectRssItems } from "../sources/rss-source.js";
+import { SqliteEngine } from "../storage/sqlite-engine.js";
 import { computeWeeklyReviewDeadline } from "../utils/time.js";
 import { decideReviewAndPublish, resolvePendingStage } from "./review-policy.js";
 
@@ -136,6 +139,58 @@ export function buildOutlineMarkdown(rankedItems: RankedItem[], highlights: Rank
   return lines.join("\n");
 }
 
+export async function llmSummarizeNode(state: ReportState): Promise<Partial<ReportState>> {
+  // 若 rankedItems 未变化且已有有效 LLM 结果，复检直接复用，避免重复调用外部模型造成额外成本。
+  if (
+    canReuseLlmSummary({
+      summaryInputHash: state.summaryInputHash,
+      rankedItems: state.rankedItems,
+      meta: state.llmSummaryMeta,
+      itemSummaries: state.itemSummaries,
+      quickDigest: state.quickDigest,
+    })
+  ) {
+    return {};
+  }
+
+  const result = await buildLlmSummary({
+    rankedItems: state.rankedItems,
+    generatedAt: state.generatedAt,
+    settings: {
+      enabled: state.llmSummaryEnabled,
+      provider: state.llmSummaryProvider,
+      minimaxApiKey: state.llmSummaryMinimaxApiKey,
+      minimaxModel: state.llmSummaryMinimaxModel,
+      timeoutMs: state.llmSummaryTimeoutMs,
+      maxItems: state.llmSummaryMaxItems,
+      maxConcurrency: state.llmSummaryMaxConcurrency,
+      promptVersion: state.llmSummaryPromptVersion,
+    },
+  });
+
+  let auditWarning: string | undefined;
+  try {
+    await appendLlmSummaryAuditEvents({
+      dbPath: state.storageDbPath,
+      runId: state.runId,
+      reportDate: state.reportDate,
+      generatedAt: state.generatedAt,
+      events: result.auditEvents,
+    });
+  } catch (error) {
+    // LLM 审计写入失败不应阻断主流程，避免存储抖动拖垮审核/发布链路。
+    auditWarning = `llm_summary_audit_failed:${error instanceof Error ? error.message : String(error)}`;
+  }
+
+  return {
+    itemSummaries: result.itemSummaries,
+    quickDigest: result.quickDigest,
+    summaryInputHash: result.summaryInputHash,
+    llmSummaryMeta: result.meta,
+    warnings: [...state.warnings, ...result.warnings, ...(auditWarning ? [auditWarning] : [])],
+  };
+}
+
 export async function reviewOutlineNode(state: ReportState): Promise<Partial<ReportState>> {
   if (state.rejected) {
     return {};
@@ -210,6 +265,9 @@ export async function buildReportNode(state: ReportState): Promise<Partial<Repor
     mode: state.mode,
     timezone: state.timezone,
     generatedAt: state.generatedAt,
+    quickDigest: state.quickDigest,
+    itemSummaries: state.itemSummaries,
+    llmSummaryMeta: state.llmSummaryMeta,
     highlights: state.highlights,
     rankedItems: state.rankedItems,
     metrics: state.metrics,
@@ -329,6 +387,15 @@ export function createInitialState(params: {
   storageDbPath?: string;
   storageFallbackToFile?: boolean;
   sourceLimit: number;
+  llmSummaryEnabled?: boolean;
+  llmSummaryProvider?: ReportState["llmSummaryProvider"];
+  llmSummaryMinimaxApiKey?: string;
+  llmSummaryMinimaxModel?: string;
+  llmSummaryTimeoutMs?: number;
+  llmSummaryMaxItems?: number;
+  llmSummaryMaxConcurrency?: number;
+  llmSummaryPromptVersion?: string;
+  llmFallbackAlertEnabled?: boolean;
   generatedAt: string;
   reviewStartedAt?: string;
   reportDate: string;
@@ -351,6 +418,15 @@ export function createInitialState(params: {
     storageDbPath: params.storageDbPath ?? "outputs/db/app.sqlite",
     storageFallbackToFile: params.storageFallbackToFile ?? true,
     sourceLimit: params.sourceLimit,
+    llmSummaryEnabled: params.llmSummaryEnabled ?? false,
+    llmSummaryProvider: params.llmSummaryProvider ?? "minimax",
+    llmSummaryMinimaxApiKey: params.llmSummaryMinimaxApiKey,
+    llmSummaryMinimaxModel: params.llmSummaryMinimaxModel ?? "MiniMax-M2.5",
+    llmSummaryTimeoutMs: params.llmSummaryTimeoutMs ?? 12_000,
+    llmSummaryMaxItems: params.llmSummaryMaxItems ?? 30,
+    llmSummaryMaxConcurrency: params.llmSummaryMaxConcurrency ?? 4,
+    llmSummaryPromptVersion: params.llmSummaryPromptVersion ?? "m5.1-v1",
+    llmFallbackAlertEnabled: params.llmFallbackAlertEnabled ?? true,
     reviewInstructionRoot: params.reviewInstructionRoot,
     rawItems: [],
     items: [],
@@ -373,8 +449,48 @@ export function createInitialState(params: {
     publishReason: "not_decided",
     metrics: createEmptyMetrics(),
     revisionAuditLogs: [],
+    itemSummaries: [],
+    quickDigest: [],
+    summaryInputHash: "",
+    llmSummaryMeta: {
+      enabled: params.llmSummaryEnabled ?? false,
+      provider: params.llmSummaryProvider ?? "minimax",
+      model: params.llmSummaryMinimaxModel ?? "MiniMax-M2.5",
+      promptVersion: params.llmSummaryPromptVersion ?? "m5.1-v1",
+      inputCount: 0,
+      summarizedCount: 0,
+      fallbackTriggered: false,
+    },
     warnings: [],
   };
+}
+
+async function appendLlmSummaryAuditEvents(input: {
+  dbPath: string;
+  runId: string;
+  reportDate: string;
+  generatedAt: string;
+  events: LlmSummaryAuditEvent[];
+}) {
+  if (input.events.length === 0) {
+    return;
+  }
+  const store = new DbAuditStore(new SqliteEngine(input.dbPath));
+  for (const event of input.events) {
+    await store.append({
+      eventType: event.eventType,
+      entityType: "report_run",
+      entityId: input.reportDate,
+      payload: {
+        runId: input.runId,
+        reportDate: input.reportDate,
+        generatedAt: input.generatedAt,
+        ...event.payload,
+      },
+      source: "pipeline",
+      createdAt: new Date().toISOString(),
+    });
+  }
 }
 
 function buildCategoryBreakdown(items: RankedItem[]): Record<ItemCategory, number> {

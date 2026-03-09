@@ -1,6 +1,9 @@
 import dayjs from "dayjs";
 
 import type {
+  LlmItemSummary,
+  LlmQuickDigestItem,
+  LlmSummaryMeta,
   PipelineMetrics,
   PublishStatus,
   RankedItem,
@@ -15,6 +18,9 @@ interface BuildMarkdownInput {
   mode: ReportMode;
   timezone: string;
   generatedAt: string;
+  quickDigest: LlmQuickDigestItem[];
+  itemSummaries: LlmItemSummary[];
+  llmSummaryMeta: LlmSummaryMeta;
   highlights: RankedItem[];
   rankedItems: RankedItem[];
   metrics: PipelineMetrics;
@@ -32,6 +38,9 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
     mode,
     timezone,
     generatedAt,
+    quickDigest,
+    itemSummaries,
+    llmSummaryMeta,
     highlights,
     rankedItems,
     metrics,
@@ -62,7 +71,40 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
   }
   lines.push(`- 发布状态：${publishStatus}`);
   lines.push(`- 发布原因：${publishReason}`);
+  if (llmSummaryMeta.enabled) {
+    lines.push(`- LLM 总结：${llmSummaryMeta.fallbackTriggered ? "已回退规则摘要" : "已启用（MiniMax）"}`);
+  } else {
+    lines.push("- LLM 总结：未启用");
+  }
   lines.push("");
+
+  lines.push("## 3 分钟速览");
+  lines.push("");
+  if (quickDigest.length === 0) {
+    lines.push("- 暂无可用重点摘要。");
+  } else {
+    for (const digest of quickDigest) {
+      lines.push(`- ${digest.title}`);
+      lines.push(`  - 重点：${digest.takeaway}`);
+      lines.push(`  - 证据：${digest.evidenceItemIds.join(", ")}`);
+    }
+  }
+  if (llmSummaryMeta.fallbackTriggered) {
+    lines.push(`- 说明：LLM 总结失败，已自动回退规则摘要（${llmSummaryMeta.fallbackReason ?? "unknown"}）`);
+  }
+  lines.push("");
+
+  if (itemSummaries.length > 0) {
+    lines.push("## 逐条摘要");
+    lines.push("");
+    for (const summary of itemSummaries) {
+      lines.push(`- ${summary.title}`);
+      lines.push(`  - 摘要：${summary.summary}`);
+      lines.push(`  - 推荐：${summary.recommendation}`);
+      lines.push(`  - 证据：${summary.evidenceItemIds.join(", ")}`);
+    }
+    lines.push("");
+  }
 
   if (revisionAuditLogs.length > 0) {
     lines.push("## 回流修订记录");

@@ -7,9 +7,9 @@
   enabled: true
 
 - id: langchain-blog
-  name: LangChain Blog
+  name: LangChain Changelog
   type: rss
-  url: https://blog.langchain.dev/rss/
+  url: https://changelog.langchain.com/feed
   language: en
   weight: 86
   enabled: true
@@ -18,6 +18,14 @@
   name: Hugging Face Blog
   type: rss
   url: https://huggingface.co/blog/feed.xml
+  language: en
+  weight: 84
+  enabled: false
+
+- id: microsoft-ai-blog
+  name: Microsoft AI Blog
+  type: rss
+  url: https://blogs.microsoft.com/ai/feed/
   language: en
   weight: 84
   enabled: true

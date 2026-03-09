@@ -1,5 +1,5 @@
 import type { ReportState } from "../core/types.js";
-import { buildReportNode, publishOrWaitNode, reviewFinalNode, reviewOutlineNode } from "./nodes.js";
+import { buildReportNode, llmSummarizeNode, publishOrWaitNode, reviewFinalNode, reviewOutlineNode } from "./nodes.js";
 
 type ReportNode = (state: ReportState) => Promise<Partial<ReportState>>;
 
@@ -9,7 +9,7 @@ export async function recheckPendingWeeklyReport(state: ReportState): Promise<Re
     throw new Error("仅 weekly 模式支持 pending 复检发布");
   }
 
-  return applyNodesSequentially(state, [reviewOutlineNode, reviewFinalNode, publishOrWaitNode, buildReportNode]);
+  return applyNodesSequentially(state, [reviewOutlineNode, reviewFinalNode, publishOrWaitNode, llmSummarizeNode, buildReportNode]);
 }
 
 async function applyNodesSequentially(state: ReportState, nodes: ReportNode[]): Promise<ReportState> {
@@ -20,4 +20,3 @@ async function applyNodesSequentially(state: ReportState, nodes: ReportNode[]): 
   }
   return current;
 }
-

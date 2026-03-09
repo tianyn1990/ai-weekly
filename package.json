@@ -13,6 +13,7 @@
     "run:daemon": "tsx src/cli.ts run --daemon",
     "run:review:api": "tsx src/cli.ts run --serve-review-api",
     "run:migrate:file-to-db": "tsx src/cli.ts run --migrate-file-to-db --storage-backend db",
+    "source:diagnose": "bash scripts/source-diagnose.sh",
     "verify:m4": "bash scripts/m4-verify.sh",
     "db:open": "bash scripts/db-open.sh",
     "db:sqlite": "sqlite3 outputs/db/app.sqlite",

@@ -63,11 +63,19 @@
 - 联合健康检查：`services:status` 同时输出本地 health 与公网 callback health，降低排障成本。
 - 模式边界显式化：保留 `feishu:tunnel` 作为临时调试模式，并在脚本中输出非稳定 URL 提示。
 
-### 2.9 规划中（M5）
-- LLM 增强：先总结，再逐步扩展到分类/打标/排序辅助。
+### 2.9 已实现（M5.1）
+- 新增 `llm_summarize` 节点，位于 `publish_or_wait -> build_report` 之间。
+- 总结策略采用“逐条总结 + 聚合速览”，避免全量单 prompt 导致上下文退化。
+- 速览条目数自适应 `4-12`，覆盖 `daily` 与 `weekly`。
+- provider 首发 MiniMax，保留 provider 抽象扩展位。
+- 失败自动回退规则摘要，不阻断审核/发布状态机。
+- 回退告警按 run 合并发送 1 条飞书消息，避免重复噪音。
+
+### 2.10 规划中（M5.2）
+- LLM 扩展到分类/打标/排序辅助，采用“规则 baseline + LLM 修正分”双轨策略。
 
 ## 3. 架构全景
-系统分为七层：
+系统分为八层：
 1. **Ingestion Layer**：按来源抓取原始条目（RSS/后续扩展 API）。
 2. **Processing Layer (LangGraph)**：标准化、去重、分类、排序、大纲/正文生成。
 3. **Review Orchestration Layer**：审核状态机、超时发布判定、pending 复检。
@@ -75,6 +83,7 @@
 5. **Storage Layer**：SQLite（主）+ 文件（fallback）双轨持久化。
 6. **Automation Layer**：daemon scheduler + operation queue + git sync executor。
 7. **Service Ops Layer**：macOS bootstrap + launchd service lifecycle（本地运维收敛层）。
+8. **Intelligence Layer**：LLM item-wise summarize + quick digest（可回退、可审计）。
 
 ## 4. 目录与模块责任
 ```text
@@ -98,6 +107,8 @@
     │   └── auto-sync.ts              # 受控目录自动 Git 同步
     ├── audit/
     │   └── audit-store.ts           # 审计事件存储（DB）
+    ├── llm/
+    │   └── summary.ts               # MiniMax 总结 client + 回退与证据校验
     ├── config/
     │   ├── source-config.ts          # 来源配置读取
     │   └── runtime-config.ts         # runtime 配置存储抽象（文件+DB）
@@ -459,6 +470,10 @@ DB 表：`operation_jobs`
 - `CLOUDFLARED_TUNNEL_ID` / `CLOUDFLARED_TUNNEL_HOSTNAME`（首次 setup 自动生成 config 时使用）
 - `CLOUDFLARED_CREDENTIALS_FILE`（可选，默认推导 `~/.cloudflared/<tunnel-id>.json`）
 - `SERVICE_LOGS_TAIL`（`services:logs` 默认 tail 行数）
+- `LLM_SUMMARY_ENABLED`（是否启用 LLM 总结）
+- `MINIMAX_API_KEY` / `MINIMAX_MODEL`（MiniMax 调用配置）
+- `LLM_SUMMARY_TIMEOUT_MS` / `LLM_SUMMARY_MAX_ITEMS` / `LLM_SUMMARY_MAX_CONCURRENCY`
+- `LLM_SUMMARY_PROMPT_VERSION` / `LLM_FALLBACK_ALERT_ENABLED`
 
 实现约束：
 - `services:up` 会把 `AI_WEEKLY_ENV_FILE` 同步到 `AI_WEEKLY_LAUNCHD_ENV_FILE`，确保 launchd 读取路径稳定，规避 macOS TCC 对 `Documents/Desktop` 的权限拦截。
@@ -485,8 +500,9 @@ DB 表：`operation_jobs`
 4. **M4.1（协同增强）**：Feishu app-only 通知统一 + 点击反馈闭环【已完成】。
 5. **M4.3（自动化）**：daemon 自动调度 + @机器人主动触发 + 自动 Git 同步【已完成】。
 6. **M4.4（运维）**：macOS 初始化引导 + 一键服务托管（launchd + Named Tunnel）【已完成】。
-7. **M5（智能）**：LLM 总结节点优先，逐步扩展到分类/打标/排序辅助。
-8. **暂缓项**：分布式互斥（多实例部署时再做）。
+7. **M5.1（智能）**：LLM 总结节点（MiniMax，逐条总结 + 速览聚合）【已完成】。
+8. **M5.2（智能）**：分类/打标/排序辅助（规则 baseline + LLM 修正分）。
+9. **暂缓项**：分布式互斥（多实例部署时再做）。
 
 ## 13. 里程碑后的质量门禁
 - 无来源断言容忍度：0。
@@ -495,3 +511,4 @@ DB 表：`operation_jobs`
 - 审核链路可追溯：每个审核动作可追到来源（CLI/Feishu）与时间。
 - 自动发布可验证：超时发布与人工通过发布的状态、文案、落盘一致。
 - 点击反馈可验证：飞书卡片动作成功/失败均有可见反馈（toast + 群回执）。
+- LLM 回退可验证：回退时报告有可见标记、审计可追踪、飞书告警每 run 至多 1 条。

@@ -50,6 +50,7 @@ pnpm run:weekly:mock
 - M4 复盘 03（Feishu 审核交互重构：阶段主卡 + 单卡更新 + 去噪回执）：`docs/learning-sessions/m4-session-03-feishu-review-ux-guided-flow.md`
 - M4 复盘 04（daemon 自动化 + @机器人主动触发 + 自动 Git 同步）：`docs/learning-sessions/m4-session-04-daemon-and-manual-ops.md`
 - M4 复盘 05（macOS 初始化引导 + 一键服务托管）：`docs/learning-sessions/m4-session-05-macos-bootstrap-and-service-runner.md`
+- M5 复盘 01（MiniMax 逐条总结 + 4-12 速览 + 回退告警）：`docs/learning-sessions/m5-session-01-llm-summary-minimax.md`
 
 ## 6. 执行优先级约束
 - 优先保证「可运行 + 可理解 + 可复盘」三件事同时成立。
@@ -63,8 +64,9 @@ pnpm run:weekly:mock
 5. M4.2：Feishu 审核交互重构（阶段引导主卡 + 单卡更新 + 去噪回执）【已完成】。
 6. M4.3：daemon 自动化 + @机器人主动触发 + 自动 Git 同步【已完成】。
 7. M4.4：macOS 初始化引导 + 一键服务托管（launchd + Named Tunnel）【已完成】。
-8. M5：LLM 增强（总结优先，逐步扩展到分类/打标/排序辅助）。
-9. 分布式互斥：暂缓，待多实例部署再启动。
+8. M5.1：LLM 总结节点（MiniMax，逐条总结 + 速览聚合）【已完成】。
+9. M5.2：分类/打标/排序辅助（规则 baseline + LLM 修正分）。
+10. 分布式互斥：暂缓，待多实例部署再启动。
 
 ## 8. M4.3 运行备忘（防遗忘）
 - 常驻运行入口：`pnpm run run:daemon`。

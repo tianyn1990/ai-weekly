@@ -32,6 +32,34 @@ export const rankedItemSchema = z.object({
   recommendationReason: z.string(),
 });
 
+const llmItemSummarySchema = z.object({
+  itemId: z.string(),
+  title: z.string(),
+  summary: z.string(),
+  recommendation: z.string(),
+  evidenceItemIds: z.array(z.string()),
+});
+
+const llmQuickDigestSchema = z.object({
+  title: z.string(),
+  takeaway: z.string(),
+  evidenceItemIds: z.array(z.string()),
+});
+
+const llmSummaryMetaSchema = z.object({
+  enabled: z.boolean(),
+  provider: z.enum(["minimax"]).optional(),
+  model: z.string().optional(),
+  promptVersion: z.string().optional(),
+  startedAt: z.string().optional(),
+  finishedAt: z.string().optional(),
+  durationMs: z.number().optional(),
+  inputCount: z.number(),
+  summarizedCount: z.number(),
+  fallbackTriggered: z.boolean(),
+  fallbackReason: z.string().optional(),
+});
+
 export const reviewArtifactSchema = z.object({
   runId: z.string(),
   generatedAt: z.string(),
@@ -53,6 +81,10 @@ export const reviewArtifactSchema = z.object({
   finalApproved: z.boolean().optional(),
   rejected: z.boolean().optional(),
   metrics: metricsSchema,
+  itemSummaries: z.array(llmItemSummarySchema).optional(),
+  quickDigest: z.array(llmQuickDigestSchema).optional(),
+  summaryInputHash: z.string().optional(),
+  llmSummaryMeta: llmSummaryMetaSchema.optional(),
   highlights: z.array(rankedItemSchema),
   revisionAuditLogs: z
     .array(
@@ -82,6 +114,10 @@ export const reviewArtifactSchema = z.object({
       sourceLimit: z.number(),
       outlineMarkdown: z.string(),
       rankedItems: z.array(rankedItemSchema),
+      itemSummaries: z.array(llmItemSummarySchema).optional(),
+      quickDigest: z.array(llmQuickDigestSchema).optional(),
+      summaryInputHash: z.string().optional(),
+      llmSummaryMeta: llmSummaryMetaSchema.optional(),
       highlights: z.array(rankedItemSchema),
       metrics: metricsSchema,
       warnings: z.array(z.string()),

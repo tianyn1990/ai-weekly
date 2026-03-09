@@ -40,6 +40,28 @@
 - 在用户未明确确认前，Agent 不得直接进入后续阶段，不得自动连续执行 `spec + 实现 + 教学` 全流程。
 - 若用户提出讨论或调整意见，Agent 需先完成对齐并更新方案/文档，再请求进入下一阶段确认。
 
+## LLM 节点开发经验规则（长期生效）
+- Prompt 设计优先“少量高质量正例 + 明确 output contract”，避免堆叠大量反例导致模型被干扰。
+- Prompt 必须显式要求：仅输出单个 JSON object、禁止 markdown/code fence、禁止解释性文本、输出前自检 `JSON.parse` 可通过。
+- LLM 返回解析必须做多形态兼容，至少覆盖：Anthropic 风格 `content[]`、字符串 `content`、`output_text`、OpenAI 风格 `choices.message.content/text`。
+- 解析器必须兼容脏格式：` ```json ` 包裹、前后解释文本、转义 JSON（如 `\\\"`）、字段前缀噪音（如 `summary:`）。
+- 必须实现“质量闸门（quality gate）”，仅 schema 通过不算成功；至少校验：
+  - 占位词（如 `summary`/`推荐`）拦截；
+  - `summary` 与 `recommendation` 不能相同；
+  - recommendation 需包含建议性 action 语义；
+  - 字段前缀噪音拦截。
+- 质量问题分级处理：
+  - `hard quality error`（占位词、字段串位等）必须重试，重试失败可回退规则摘要；
+  - `soft quality error`（如截断句）首轮触发重试，若末轮仍存在则可保留，不强制回退。
+- recommendation 自动补全禁止直接复制摘要；应使用“category + importance”模板生成可执行建议。
+- Retry 策略必须覆盖：timeout、429/5xx、空内容响应、可修复的 JSON 失败、质量闸门失败。
+- 监控与可观测性要求：
+  - 记录每次回退与条目失败原因；
+  - 输出 success rate 与 fallback reason，便于快速定位是“解析失败”还是“低质量通过”。
+- 测试要求：
+  - 新增/修改 LLM 节点时，必须补齐单测覆盖“真实坏样本”；
+  - 至少包含：`code fence`、半截 JSON、字段串位、占位词、空内容响应、多返回格式提取、重试与回退分支。
+
 <!-- OPENSPEC:START -->
 # OpenSpec Instructions
 

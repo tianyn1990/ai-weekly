@@ -5,7 +5,7 @@
 ## 当前状态
 - 已完成 `docs/PRD.md`（冻结需求）。
 - 已完成 `docs/architecture.md`（系统设计）。
-- 已提供可运行的 M3.1 流程：`collect -> normalize -> dedupe -> classify -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> build_report`。
+- 已提供可运行流程：`collect -> normalize -> dedupe -> classify -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> llm_summarize -> build_report`。
 - 周报审核支持「持久化指令优先，CLI 参数 fallback」、pending 周报复检发布、watchdog 守护扫描（含锁与重试）。
 - 已完成 M3.2：Feishu 待审核通知、11:30 提醒命令、发布结果回执、本地回调服务（2B：本地 + 隧道）。
 - 已完成 M3.3：`request_revision` 回流修订执行、runtime config 全局沉淀、`reject` 终止当前 run 发布。
@@ -14,6 +14,7 @@
 - 已完成 M4.2：飞书审核交互重构为“阶段引导主卡 + 单卡更新 + 去噪回执”，降低误操作与群消息噪音。
 - 已完成 M4.3：daemon 常驻自动调度 + @机器人主动触发面板 + 自动 Git 同步（可选 push 代理）。
 - 已完成 M4.4：macOS 初始化引导 + 一键服务托管（launchd 托管 daemon + Named Tunnel）。
+- 已完成 M5.1：MiniMax 逐条总结（daily/weekly）、4-12 条自适应“3 分钟速览”、失败自动回退与飞书合并告警。
 - 分布式互斥暂缓，当前以单机 daemon 为部署基线。
 
 ## 环境要求
@@ -34,6 +35,7 @@ cp .env.local.example .env.local
 ```
 - 至少填好：`FEISHU_APP_ID`、`FEISHU_APP_SECRET`、`REVIEW_CHAT_ID`、`FEISHU_CALLBACK_AUTH_TOKEN`。
 - 若你已完成 Cloudflare Named Tunnel，补充：`CLOUDFLARED_TUNNEL_NAME`、`CLOUDFLARED_CONFIG_PATH`。
+- 说明：`src/cli.ts` 与 `src/tools/feishu-ops.ts` 启动时会自动加载 `.env.local`（或 `AI_WEEKLY_ENV_FILE` 指定文件）并覆盖同名进程变量，避免全局 shell 变量污染当前项目。
 
 3) 执行初始化自检（会给出缺失项修复建议）
 ```bash
@@ -88,6 +90,14 @@ pnpm run:weekly
 pnpm run run:daemon
 ```
 
+仅用于“数据源健康诊断”时，建议使用一键诊断命令（自动关闭 LLM/通知/自动 git 同步）：
+```bash
+pnpm run source:diagnose
+# 可选：
+# MODE=daily pnpm run source:diagnose
+# SOURCE_DIAG_FAIL_ON_WARNING=true pnpm run source:diagnose
+```
+
 可选参数：
 ```bash
 tsx src/cli.ts run --mode weekly --source-config data/sources.yaml --runtime-config-path outputs/runtime-config/global.json --source-limit 6 --timezone Asia/Shanghai
@@ -112,6 +122,20 @@ tsx src/cli.ts run --mode weekly --mock --approve-outline --approve-final
 
 # 指定生成时间（用于回放“周一 12:30 超时自动发布”场景）
 tsx src/cli.ts run --mode weekly --mock --generated-at 2026-03-09T05:00:00.000Z
+```
+
+LLM 总结增强参数（M5.1，MiniMax）：
+```bash
+# 方式 1：环境变量开启（推荐）
+export LLM_SUMMARY_ENABLED=true
+export ANTHROPIC_BASE_URL=https://api.minimaxi.com/anthropic
+export ANTHROPIC_API_KEY=your_coding_plan_key
+# 或使用 MINIMAX_API_KEY（二选一）
+# export MINIMAX_API_KEY=your_coding_plan_key
+pnpm run run:weekly
+
+# 方式 2：命令行临时覆盖
+tsx src/cli.ts run --mode weekly --llm-summary-enabled --llm-summary-minimax-api-key your_key --llm-summary-minimax-model MiniMax-M2.5
 ```
 
 持久化审核指令（默认目录：`outputs/review-instructions/`）：
@@ -353,6 +377,11 @@ direnv allow
 
 之后你每次 `cd` 到项目目录会自动加载 `.env.local`，离开目录自动卸载。
 
+环境变量优先级说明（防全局污染）：
+- `src/cli.ts` 与 `src/tools/feishu-ops.ts` 启动时会自动加载 `.env.local`（或 `AI_WEEKLY_ENV_FILE` 指定文件）并覆盖同名进程变量。
+- 这意味着即使 shell 里残留了错误的全局变量（如 `ANTHROPIC_BASE_URL`），项目命令仍以仓库内配置为准。
+- 新电脑初始化时只要完成 `cp .env.local.example .env.local` 并填写真实值，即可避免同类污染问题。
+
 建议在 `.env.local` 同时维护以下变量（长期使用）：
 ```bash
 # 回调服务
@@ -469,12 +498,12 @@ brew install ngrok/ngrok/ngrok
 pnpm test
 ```
 
-## 首版设计取舍
+## 设计取舍
 - 首版先用 RSS + 规则分类，优先保证流程稳定与可追溯。
-- 先输出 Markdown，后续再接入审核 UI 与自动发布守护进程。
-- 模型调用与高级总结暂未接入，作为下一阶段扩展点。
+- 总结能力采用“逐条 LLM + 聚合速览”，避免全量单 prompt 导致上下文劣化。
+- LLM 调用失败时自动回退规则摘要，且不阻断审核/发布主流程。
 
 ## 下一步（建议）
-1. 进入 M5：接入 LLM 总结节点，并逐步扩展到分类/打标/排序辅助。
-2. 增加一键新 run 命令（针对 reject 后重开流程）。
+1. 进入 M5.2：把分类/打标做成“规则 baseline + LLM 修正分”双轨策略。
+2. 增加 LLM 成本预算开关与周期统计看板（日报/周报维度）。
 3. 评估多实例部署后再启动分布式互斥方案。

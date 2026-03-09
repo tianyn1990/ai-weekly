@@ -80,6 +80,34 @@ export interface RevisionAuditLog {
   notes?: string;
 }
 
+export interface LlmItemSummary {
+  itemId: string;
+  title: string;
+  summary: string;
+  recommendation: string;
+  evidenceItemIds: string[];
+}
+
+export interface LlmQuickDigestItem {
+  title: string;
+  takeaway: string;
+  evidenceItemIds: string[];
+}
+
+export interface LlmSummaryMeta {
+  enabled: boolean;
+  provider?: "minimax";
+  model?: string;
+  promptVersion?: string;
+  startedAt?: string;
+  finishedAt?: string;
+  durationMs?: number;
+  inputCount: number;
+  summarizedCount: number;
+  fallbackTriggered: boolean;
+  fallbackReason?: string;
+}
+
 export interface ReviewInstruction {
   mode: ReportMode;
   reportDate: string;
@@ -178,5 +206,18 @@ export interface ReportState {
   publishReason: string;
   metrics: PipelineMetrics;
   revisionAuditLogs: RevisionAuditLog[];
+  itemSummaries: LlmItemSummary[];
+  quickDigest: LlmQuickDigestItem[];
+  summaryInputHash: string;
+  llmSummaryMeta: LlmSummaryMeta;
+  llmSummaryEnabled: boolean;
+  llmSummaryProvider: "minimax";
+  llmSummaryMinimaxApiKey?: string;
+  llmSummaryMinimaxModel: string;
+  llmSummaryTimeoutMs: number;
+  llmSummaryMaxItems: number;
+  llmSummaryMaxConcurrency: number;
+  llmSummaryPromptVersion: string;
+  llmFallbackAlertEnabled: boolean;
   warnings: string[];
 }

@@ -47,6 +47,13 @@ export interface FeishuPublishNotification {
   publishMarkdownPath: string;
 }
 
+export interface FeishuLlmFallbackNotification {
+  runId: string;
+  reportDate: string;
+  mode: "daily" | "weekly";
+  reason: string;
+}
+
 interface FeishuMainCardRecord {
   mode: "weekly";
   reportDate: string;
@@ -333,6 +340,17 @@ export class FeishuNotifier {
       `${operator} 触发了：${toOperationLabel(input.operation)}`,
       `结果：${statusText}`,
       `详情：${input.detail}`,
+    ].join("\n");
+    return this.sendText(text);
+  }
+
+  async notifyLlmFallback(input: FeishuLlmFallbackNotification): Promise<boolean> {
+    const text = [
+      "【AI 报告 LLM 降级告警】",
+      `mode=${input.mode}, reportDate=${input.reportDate}`,
+      "本次已自动回退到规则摘要，不影响审核与发布主流程。",
+      `原因：${input.reason}`,
+      `runId：${input.runId}`,
     ].join("\n");
     return this.sendText(text);
   }

@@ -3,6 +3,7 @@
 import dayjs from "dayjs";
 import { z } from "zod";
 import { pathToFileURL } from "node:url";
+import { loadProjectEnv } from "../utils/env-loader.js";
 
 interface CliArgs {
   command: "token" | "chats" | "send-card";
@@ -43,6 +44,8 @@ interface FeishuSendMessageResponse {
 }
 
 async function main() {
+  // 工具脚本与主 CLI 保持一致：优先使用项目 `.env.local`，避免全局环境污染。
+  await loadProjectEnv({ override: true });
   const args = parseArgs(process.argv.slice(2));
   if (args.command === "token") {
     await runTokenCommand();
