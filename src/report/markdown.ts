@@ -20,6 +20,7 @@ interface BuildMarkdownInput {
   generatedAt: string;
   quickDigest: LlmQuickDigestItem[];
   itemSummaries: LlmItemSummary[];
+  leadSummary?: string;
   llmSummaryMeta: LlmSummaryMeta;
   highlights: RankedItem[];
   rankedItems: RankedItem[];
@@ -40,6 +41,7 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
     generatedAt,
     quickDigest,
     itemSummaries,
+    leadSummary,
     llmSummaryMeta,
     highlights,
     rankedItems,
@@ -58,6 +60,7 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
 
   // 报告结构固定化，确保每期输出可比对、可检索、可自动审查。
   const grouped = groupByCategory(rankedItems);
+  const evidenceItemMap = new Map(rankedItems.map((item) => [item.id, item]));
 
   const lines: string[] = [];
   lines.push(`# ${title}`);
@@ -78,15 +81,23 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
   }
   lines.push("");
 
+  if (leadSummary && leadSummary.trim()) {
+    lines.push("## 本期导语");
+    lines.push("");
+    lines.push(`- ${leadSummary.trim()}`);
+    lines.push("");
+  }
+
   lines.push("## 3 分钟速览");
   lines.push("");
   if (quickDigest.length === 0) {
     lines.push("- 暂无可用重点摘要。");
   } else {
     for (const digest of quickDigest) {
-      lines.push(`- ${digest.title}`);
+      const displayTitle = resolveDisplayTitleById(rankedItems, digest.itemId, digest.title);
+      lines.push(`- ${displayTitle}`);
       lines.push(`  - 重点：${digest.takeaway}`);
-      lines.push(`  - 证据：${digest.evidenceItemIds.join(", ")}`);
+      lines.push(`  - 证据：${formatEvidenceRefs(digest.evidenceItemIds, evidenceItemMap)}`);
     }
   }
   if (llmSummaryMeta.fallbackTriggered) {
@@ -98,10 +109,16 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
     lines.push("## 逐条摘要");
     lines.push("");
     for (const summary of itemSummaries) {
-      lines.push(`- ${summary.title}`);
+      const displayTitle = resolveDisplayTitleById(rankedItems, summary.itemId, summary.title);
+      lines.push(`- ${displayTitle}`);
       lines.push(`  - 摘要：${summary.summary}`);
       lines.push(`  - 推荐：${summary.recommendation}`);
-      lines.push(`  - 证据：${summary.evidenceItemIds.join(", ")}`);
+      if (summary.domainTag || summary.intentTag || typeof summary.actionability === "number") {
+        const tags = [summary.domainTag, summary.intentTag].filter(Boolean).join(" / ");
+        const actionability = typeof summary.actionability === "number" ? ` | 可执行性=${summary.actionability}` : "";
+        lines.push(`  - 标签：${tags || "unknown"}${actionability}`);
+      }
+      lines.push(`  - 证据：${formatEvidenceRefs(summary.evidenceItemIds, evidenceItemMap)}`);
     }
     lines.push("");
   }
@@ -136,7 +153,7 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
   lines.push("## 重点推荐");
   lines.push("");
   for (const item of highlights) {
-    lines.push(`- [${item.title}](${item.link})`);
+    lines.push(`- [${resolveDisplayTitle(item)}](${item.link})`);
     lines.push(`  - 重要级别：${item.importance} | 评分：${item.score}`);
     lines.push(`  - 推荐理由：${item.recommendationReason}`);
   }
@@ -150,7 +167,7 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
     lines.push("");
     for (const item of items) {
       const publishedAt = dayjs(item.publishedAt).tz(timezone).format("YYYY-MM-DD HH:mm");
-      lines.push(`- [${item.title}](${item.link})`);
+      lines.push(`- [${resolveDisplayTitle(item)}](${item.link})`);
       lines.push(`  - 来源：${item.sourceName} | 发布时间：${publishedAt}`);
       lines.push(`  - 评分：${item.score} | 推荐级别：${item.importance}`);
       lines.push(`  - 摘要：${shorten(item.contentSnippet, 140)}`);
@@ -212,4 +229,43 @@ function shorten(input: string, max: number): string {
     return input;
   }
   return `${input.slice(0, max - 1)}…`;
+}
+
+function resolveDisplayTitle(item: Pick<RankedItem, "title" | "titleZh">): string {
+  if (!item.titleZh) {
+    return item.title;
+  }
+  const titleZh = item.titleZh.trim();
+  if (!titleZh || titleZh === item.title) {
+    return item.title;
+  }
+  return `${titleZh} (${item.title})`;
+}
+
+function resolveDisplayTitleById(items: RankedItem[], itemId: string | undefined, fallbackTitle: string): string {
+  if (!itemId) {
+    return fallbackTitle;
+  }
+  const matched = items.find((item) => item.id === itemId);
+  if (!matched) {
+    return fallbackTitle;
+  }
+  return resolveDisplayTitle(matched);
+}
+
+function formatEvidenceRefs(evidenceItemIds: string[], evidenceItemMap: Map<string, RankedItem>): string {
+  if (evidenceItemIds.length === 0) {
+    return "无";
+  }
+
+  const refs = Array.from(new Set(evidenceItemIds)).map((id) => {
+    const matched = evidenceItemMap.get(id);
+    if (!matched) {
+      // 历史产物可能存在无法映射的证据 id，保留原值便于排查。
+      return id;
+    }
+    return `[${resolveDisplayTitle(matched)}](${matched.link})`;
+  });
+
+  return refs.join(" | ");
 }

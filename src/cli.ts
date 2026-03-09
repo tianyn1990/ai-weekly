@@ -48,6 +48,9 @@ interface CliArgs {
   llmSummaryTimeoutMs: number;
   llmSummaryMaxItems: number;
   llmSummaryMaxConcurrency: number;
+  llmGlobalMaxConcurrency: number;
+  llmRankFusionWeight: number;
+  llmAssistMinConfidence: number;
   llmSummaryPromptVersion: string;
   llmFallbackAlertEnabled: boolean;
   timezone: string;
@@ -179,6 +182,9 @@ async function runPipeline(args: CliArgs) {
     llmSummaryTimeoutMs: args.llmSummaryTimeoutMs,
     llmSummaryMaxItems: args.llmSummaryMaxItems,
     llmSummaryMaxConcurrency: args.llmSummaryMaxConcurrency,
+    llmGlobalMaxConcurrency: args.llmGlobalMaxConcurrency,
+    llmRankFusionWeight: args.llmRankFusionWeight,
+    llmAssistMinConfidence: args.llmAssistMinConfidence,
     llmSummaryPromptVersion: args.llmSummaryPromptVersion,
     llmFallbackAlertEnabled: args.llmFallbackAlertEnabled,
     generatedAt,
@@ -917,6 +923,24 @@ function parseArgs(argv: string[]): CliArgs {
       continue;
     }
 
+    if (token === "--llm-global-max-concurrency" && next) {
+      args.llmGlobalMaxConcurrency = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--llm-rank-fusion-weight" && next) {
+      args.llmRankFusionWeight = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--llm-assist-min-confidence" && next) {
+      args.llmAssistMinConfidence = Number(next);
+      i += 1;
+      continue;
+    }
+
     if (token === "--llm-fallback-alert-disabled") {
       args.llmFallbackAlertEnabled = false;
       continue;
@@ -1215,8 +1239,11 @@ function defaults(): CliArgs {
     llmSummaryMinimaxModel: process.env.MINIMAX_MODEL ?? "MiniMax-M2.5",
     llmSummaryTimeoutMs: Number(process.env.LLM_SUMMARY_TIMEOUT_MS ?? "12000"),
     llmSummaryMaxItems: Number(process.env.LLM_SUMMARY_MAX_ITEMS ?? "30"),
-    llmSummaryMaxConcurrency: Number(process.env.LLM_SUMMARY_MAX_CONCURRENCY ?? "4"),
-    llmSummaryPromptVersion: process.env.LLM_SUMMARY_PROMPT_VERSION ?? "m5.1-v1",
+    llmSummaryMaxConcurrency: Number(process.env.LLM_SUMMARY_MAX_CONCURRENCY ?? "3"),
+    llmGlobalMaxConcurrency: Number(process.env.LLM_GLOBAL_MAX_CONCURRENCY ?? "3"),
+    llmRankFusionWeight: Number(process.env.LLM_RANK_FUSION_WEIGHT ?? "0.65"),
+    llmAssistMinConfidence: Number(process.env.LLM_ASSIST_MIN_CONFIDENCE ?? "0.5"),
+    llmSummaryPromptVersion: process.env.LLM_SUMMARY_PROMPT_VERSION ?? "m5.2-v1",
     llmFallbackAlertEnabled: process.env.LLM_FALLBACK_ALERT_ENABLED !== "false",
     timezone: "Asia/Shanghai",
     outputRoot: "outputs/review",
@@ -1344,6 +1371,7 @@ async function writeArtifacts(root: string, mode: ReportMode, datePart: string, 
         metrics: result.metrics,
         itemSummaries: result.itemSummaries,
         quickDigest: result.quickDigest,
+        leadSummary: result.leadSummary,
         summaryInputHash: result.summaryInputHash,
         llmSummaryMeta: result.llmSummaryMeta,
         highlights: result.highlights,
@@ -1361,6 +1389,7 @@ async function writeArtifacts(root: string, mode: ReportMode, datePart: string, 
           rankedItems: result.rankedItems,
           itemSummaries: result.itemSummaries,
           quickDigest: result.quickDigest,
+          leadSummary: result.leadSummary,
           summaryInputHash: result.summaryInputHash,
           llmSummaryMeta: result.llmSummaryMeta,
           highlights: result.highlights,
@@ -1602,6 +1631,9 @@ function buildRecheckStateFromArtifact(input: {
     llmSummaryTimeoutMs: args.llmSummaryTimeoutMs,
     llmSummaryMaxItems: args.llmSummaryMaxItems,
     llmSummaryMaxConcurrency: args.llmSummaryMaxConcurrency,
+    llmGlobalMaxConcurrency: args.llmGlobalMaxConcurrency,
+    llmRankFusionWeight: args.llmRankFusionWeight,
+    llmAssistMinConfidence: args.llmAssistMinConfidence,
     llmSummaryPromptVersion: args.llmSummaryPromptVersion,
     llmFallbackAlertEnabled: args.llmFallbackAlertEnabled,
     generatedAt,
@@ -1618,6 +1650,7 @@ function buildRecheckStateFromArtifact(input: {
     rankedItems: artifact.snapshot.rankedItems,
     itemSummaries: artifact.snapshot.itemSummaries ?? artifact.itemSummaries ?? [],
     quickDigest: artifact.snapshot.quickDigest ?? artifact.quickDigest ?? [],
+    leadSummary: artifact.snapshot.leadSummary ?? artifact.leadSummary ?? "",
     summaryInputHash: artifact.snapshot.summaryInputHash ?? artifact.summaryInputHash ?? "",
     llmSummaryMeta: artifact.snapshot.llmSummaryMeta ??
       artifact.llmSummaryMeta ?? {

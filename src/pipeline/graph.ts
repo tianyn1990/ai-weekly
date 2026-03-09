@@ -36,6 +36,9 @@ const ReportStateAnnotation = Annotation.Root({
   llmSummaryTimeoutMs: Annotation<number>(),
   llmSummaryMaxItems: Annotation<number>(),
   llmSummaryMaxConcurrency: Annotation<number>(),
+  llmGlobalMaxConcurrency: Annotation<number>(),
+  llmRankFusionWeight: Annotation<number>(),
+  llmAssistMinConfidence: Annotation<number>(),
   llmSummaryPromptVersion: Annotation<string>(),
   llmFallbackAlertEnabled: Annotation<boolean>(),
   reviewInstructionRoot: Annotation<string>(),
@@ -89,6 +92,10 @@ const ReportStateAnnotation = Annotation.Root({
   quickDigest: Annotation<ReportState["quickDigest"]>({
     value: (_left, right) => right,
     default: () => [],
+  }),
+  leadSummary: Annotation<string>({
+    value: (_left, right) => right,
+    default: () => "",
   }),
   summaryInputHash: Annotation<string>({
     value: (_left, right) => right,

@@ -15,6 +15,7 @@
 - 已完成 M4.3：daemon 常驻自动调度 + @机器人主动触发面板 + 自动 Git 同步（可选 push 代理）。
 - 已完成 M4.4：macOS 初始化引导 + 一键服务托管（launchd 托管 daemon + Named Tunnel）。
 - 已完成 M5.1：MiniMax 逐条总结（daily/weekly）、4-12 条自适应“3 分钟速览”、失败自动回退与飞书合并告警。
+- 已完成 M5.2：LLM 辅助标签/排序融合、全局并发闸门（默认 3）、报告导语、英文标题中文化展示。
 - 分布式互斥暂缓，当前以单机 daemon 为部署基线。
 
 ## 环境要求
@@ -124,7 +125,7 @@ tsx src/cli.ts run --mode weekly --mock --approve-outline --approve-final
 tsx src/cli.ts run --mode weekly --mock --generated-at 2026-03-09T05:00:00.000Z
 ```
 
-LLM 总结增强参数（M5.1，MiniMax）：
+LLM 增强参数（M5.2，MiniMax）：
 ```bash
 # 方式 1：环境变量开启（推荐）
 export LLM_SUMMARY_ENABLED=true
@@ -132,11 +133,27 @@ export ANTHROPIC_BASE_URL=https://api.minimaxi.com/anthropic
 export ANTHROPIC_API_KEY=your_coding_plan_key
 # 或使用 MINIMAX_API_KEY（二选一）
 # export MINIMAX_API_KEY=your_coding_plan_key
+export LLM_SUMMARY_MAX_CONCURRENCY=2
+export LLM_GLOBAL_MAX_CONCURRENCY=2
+export LLM_RANK_FUSION_WEIGHT=0.65
+export LLM_ASSIST_MIN_CONFIDENCE=0.5
+export LLM_SUMMARY_PROMPT_VERSION=m5.2-v1
 pnpm run run:weekly
 
 # 方式 2：命令行临时覆盖
-tsx src/cli.ts run --mode weekly --llm-summary-enabled --llm-summary-minimax-api-key your_key --llm-summary-minimax-model MiniMax-M2.5
+tsx src/cli.ts run --mode weekly \
+  --llm-summary-enabled \
+  --llm-summary-minimax-api-key your_key \
+  --llm-summary-minimax-model MiniMax-M2.5 \
+  --llm-global-max-concurrency 2 \
+  --llm-rank-fusion-weight 0.65 \
+  --llm-assist-min-confidence 0.5
 ```
+
+M5.2 输出增强说明：
+- 报告会新增“本期导语”区块（2-3 句）。
+- 英文标题会尝试显示为“中文标题（原标题）”。
+- 结构化产物会记录 `scoreBreakdown`（规则分/LLM 分/融合分）以及标签字段（`domainTag`/`intentTag`/`actionability`）。
 
 持久化审核指令（默认目录：`outputs/review-instructions/`）：
 ```bash
@@ -504,6 +521,6 @@ pnpm test
 - LLM 调用失败时自动回退规则摘要，且不阻断审核/发布主流程。
 
 ## 下一步（建议）
-1. 进入 M5.2：把分类/打标做成“规则 baseline + LLM 修正分”双轨策略。
+1. 进入 M5.3：在 M5.2 基线上继续打磨提示词与评分 rubric，并观察真实数据稳定性。
 2. 增加 LLM 成本预算开关与周期统计看板（日报/周报维度）。
 3. 评估多实例部署后再启动分布式互斥方案。

@@ -83,15 +83,42 @@ export interface RevisionAuditLog {
 export interface LlmItemSummary {
   itemId: string;
   title: string;
+  titleZh?: string;
   summary: string;
   recommendation: string;
   evidenceItemIds: string[];
+  domainTag?: string;
+  intentTag?: string;
+  actionability?: number;
+  confidence?: number;
+  llmScore?: number;
 }
 
 export interface LlmQuickDigestItem {
+  itemId?: string;
   title: string;
   takeaway: string;
   evidenceItemIds: string[];
+}
+
+export interface LlmFailureStats {
+  totalFailed: number;
+  timeout: number;
+  http: number;
+  business: number;
+  missingContent: number;
+  invalidJson: number;
+  quality: number;
+  other: number;
+}
+
+export interface LlmRetryStats {
+  retryableTriggeredCount: number;
+  missingContentExtraRetryTriggeredCount: number;
+  compensationRetryItemCount: number;
+  serialDegradeTriggered: boolean;
+  serialRetriedItemCount: number;
+  serialTriggerMaxConsecutiveMissingContent: number;
 }
 
 export interface LlmSummaryMeta {
@@ -106,6 +133,21 @@ export interface LlmSummaryMeta {
   summarizedCount: number;
   fallbackTriggered: boolean;
   fallbackReason?: string;
+  effectiveConcurrency?: number;
+  assistAppliedCount?: number;
+  assistFallbackCount?: number;
+  leadFallbackTriggered?: boolean;
+  failureStats?: LlmFailureStats;
+  retryStats?: LlmRetryStats;
+}
+
+export interface ScoreBreakdown {
+  ruleScore: number;
+  ruleScoreNormalized: number;
+  llmScore?: number;
+  finalScore: number;
+  fusionWeight: number;
+  usedLlm: boolean;
 }
 
 export interface ReviewInstruction {
@@ -158,6 +200,13 @@ export interface RankedItem extends NormalizedItem {
   score: number;
   importance: ImportanceLevel;
   recommendationReason: string;
+  titleZh?: string;
+  domainTag?: string;
+  intentTag?: string;
+  actionability?: number;
+  confidence?: number;
+  llmScore?: number;
+  scoreBreakdown?: ScoreBreakdown;
 }
 
 export interface PipelineMetrics {
@@ -208,6 +257,7 @@ export interface ReportState {
   revisionAuditLogs: RevisionAuditLog[];
   itemSummaries: LlmItemSummary[];
   quickDigest: LlmQuickDigestItem[];
+  leadSummary: string;
   summaryInputHash: string;
   llmSummaryMeta: LlmSummaryMeta;
   llmSummaryEnabled: boolean;
@@ -217,6 +267,9 @@ export interface ReportState {
   llmSummaryTimeoutMs: number;
   llmSummaryMaxItems: number;
   llmSummaryMaxConcurrency: number;
+  llmGlobalMaxConcurrency: number;
+  llmRankFusionWeight: number;
+  llmAssistMinConfidence: number;
   llmSummaryPromptVersion: string;
   llmFallbackAlertEnabled: boolean;
   warnings: string[];

@@ -110,37 +110,52 @@ describe("llm summary", () => {
       },
     });
 
-    expect(fetchMock).toHaveBeenCalledTimes(14);
+    expect(fetchMock).toHaveBeenCalledTimes(15);
     expect(result.meta.fallbackTriggered).toBe(false);
     expect(result.itemSummaries.length).toBe(14);
     expect(result.quickDigest.length).toBe(8);
     expect(result.quickDigest[0]?.evidenceItemIds.length).toBeGreaterThan(0);
   });
 
-  it("请求 prompt 应包含 few-shots 与输出自检约束", async () => {
+  it("首轮应使用轻量 prompt，严格重试才注入 few-shots", async () => {
     const capturedUserPayload: Array<Record<string, unknown>> = [];
-    const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
-      const payload = JSON.parse(String(init?.body ?? "{}")) as {
-        messages?: Array<{ role: string; content?: Array<{ type?: string; text?: string }> }>;
-      };
-      const userContent = payload.messages?.find((message) => message.role === "user")?.content?.[0]?.text ?? "{}";
-      capturedUserPayload.push(JSON.parse(userContent) as Record<string, unknown>);
-      return {
-        ok: true,
-        json: async () => ({
-          content: [
-            {
-              type: "text",
-              text: JSON.stringify({
-                summary: "测试总结",
-                recommendation: "测试推荐",
-                evidenceItemIds: ["item-1"],
-              }),
-            },
-          ],
-        }),
-      } satisfies Partial<Response> as Response;
-    });
+    const fetchMock = vi
+      .fn()
+      .mockImplementationOnce(async (_url: string, init?: RequestInit) => {
+        const payload = JSON.parse(String(init?.body ?? "{}")) as {
+          messages?: Array<{ role: string; content?: Array<{ type?: string; text?: string }> }>;
+        };
+        const userContent = payload.messages?.find((message) => message.role === "user")?.content?.[0]?.text ?? "{}";
+        capturedUserPayload.push(JSON.parse(userContent) as Record<string, unknown>);
+        return {
+          ok: true,
+          json: async () => ({
+            content: [{ type: "text", text: "```json\n```" }],
+          }),
+        } satisfies Partial<Response> as Response;
+      })
+      .mockImplementationOnce(async (_url: string, init?: RequestInit) => {
+        const payload = JSON.parse(String(init?.body ?? "{}")) as {
+          messages?: Array<{ role: string; content?: Array<{ type?: string; text?: string }> }>;
+        };
+        const userContent = payload.messages?.find((message) => message.role === "user")?.content?.[0]?.text ?? "{}";
+        capturedUserPayload.push(JSON.parse(userContent) as Record<string, unknown>);
+        return {
+          ok: true,
+          json: async () => ({
+            content: [
+              {
+                type: "text",
+                text: JSON.stringify({
+                  summary: "测试总结",
+                  recommendation: "测试推荐",
+                  evidenceItemIds: ["item-1"],
+                }),
+              },
+            ],
+          }),
+        } satisfies Partial<Response> as Response;
+      });
     vi.stubGlobal("fetch", fetchMock);
 
     await buildLlmSummary({
@@ -158,13 +173,20 @@ describe("llm summary", () => {
       },
     });
 
-    const first = capturedUserPayload[0] ?? {};
-    const examples = Array.isArray(first.fewShotExamples) ? first.fewShotExamples : [];
-    const outputContract = first.outputContract as { selfCheck?: unknown[]; requiredKeys?: unknown[] } | undefined;
-    expect(examples.length).toBeGreaterThanOrEqual(3);
-    expect(Array.isArray(outputContract?.selfCheck)).toBe(true);
-    expect(Array.isArray(outputContract?.requiredKeys)).toBe(true);
-    expect(outputContract?.requiredKeys).toEqual(["summary", "recommendation", "evidenceItemIds"]);
+    const lightPrompt = capturedUserPayload.find((payload) => payload.strictRetry === false) ?? {};
+    const strictPrompt = capturedUserPayload.find((payload) => payload.strictRetry === true) ?? {};
+    const lightExamples = Array.isArray(lightPrompt.fewShotExamples) ? lightPrompt.fewShotExamples : [];
+    const strictExamples = Array.isArray(strictPrompt.fewShotExamples) ? strictPrompt.fewShotExamples : [];
+    const lightContract = lightPrompt.outputContract as { selfCheck?: unknown[]; requiredKeys?: unknown[] } | undefined;
+    const strictContract = strictPrompt.outputContract as { selfCheck?: unknown[]; requiredKeys?: unknown[] } | undefined;
+
+    expect(capturedUserPayload.length).toBeGreaterThanOrEqual(2);
+    expect(lightExamples.length).toBe(0);
+    expect(Array.isArray(lightContract?.requiredKeys)).toBe(true);
+    expect(Array.isArray(lightContract?.selfCheck)).toBe(false);
+    expect(strictExamples.length).toBeGreaterThanOrEqual(3);
+    expect(Array.isArray(strictContract?.selfCheck)).toBe(true);
+    expect(strictContract?.requiredKeys).toEqual(["summary", "recommendation", "evidenceItemIds", "confidence", "llmScore"]);
   });
 
   it("应兼容提取 OpenAI 风格 choices 返回文本", () => {
@@ -174,6 +196,18 @@ describe("llm summary", () => {
           message: {
             content: '{"summary":"A","recommendation":"B","evidenceItemIds":["item-1"]}',
           },
+        },
+      ],
+    });
+    expect(text).toContain('"summary":"A"');
+  });
+
+  it("应兼容提取非 text 类型 block 的文本", () => {
+    const text = __test__.extractModelText({
+      content: [
+        {
+          type: "output_text",
+          text: '{"summary":"A","recommendation":"B","evidenceItemIds":["item-1"]}',
         },
       ],
     });
@@ -358,6 +392,53 @@ describe("llm summary", () => {
     expect(result.quickDigest.length).toBe(6);
   });
 
+  it("失败条目少于 3 时即便成功率不足也不应触发全局回退", async () => {
+    const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
+      const payload = JSON.parse(String(init?.body ?? "{}")) as {
+        messages?: Array<{ role: string; content?: Array<{ type?: string; text?: string }> }>;
+      };
+      const userContent = payload.messages?.find((message) => message.role === "user")?.content?.[0]?.text ?? "{}";
+      const parsed = JSON.parse(userContent) as { item?: { id?: string } };
+      const id = parsed.item?.id ?? "unknown";
+      const isBad = id === "item-5" || id === "item-6";
+      return {
+        ok: true,
+        json: async () => ({
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify({
+                summary: `${id} 总结`,
+                recommendation: `${id} 推荐`,
+                evidenceItemIds: isBad ? ["not-exist"] : [id],
+              }),
+            },
+          ],
+        }),
+      } satisfies Partial<Response> as Response;
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    const result = await buildLlmSummary({
+      rankedItems: Array.from({ length: 6 }).map((_, index) => createItem(index + 1)),
+      generatedAt: "2026-03-08T00:00:00.000Z",
+      settings: {
+        enabled: true,
+        provider: "minimax",
+        minimaxApiKey: "test-key",
+        minimaxModel: "MiniMax-M2.5",
+        timeoutMs: 3000,
+        maxItems: 6,
+        maxConcurrency: 2,
+        promptVersion: "m5.2-test",
+      },
+    });
+
+    expect(result.meta.fallbackTriggered).toBe(false);
+    expect(result.meta.summarizedCount).toBe(4);
+    expect(result.warnings.join("\n")).toContain("部分条目回退");
+  });
+
   it("成功率低于 70% 时应触发全局回退", async () => {
     const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
       const payload = JSON.parse(String(init?.body ?? "{}")) as {
@@ -403,6 +484,112 @@ describe("llm summary", () => {
     expect(result.meta.fallbackTriggered).toBe(true);
     expect(result.meta.fallbackReason).toContain("llm_success_rate_below_threshold");
     expect(result.meta.summarizedCount).toBe(6);
+  });
+
+  it("应在 meta 中记录失败分类与重试统计", async () => {
+    const fetchMock = vi.fn(async () => ({
+      ok: true,
+      json: async () => ({
+        content: [],
+      }),
+    })) as unknown as typeof fetch;
+    vi.stubGlobal("fetch", fetchMock);
+
+    const result = await buildLlmSummary({
+      rankedItems: [createItem(1), createItem(2), createItem(3), createItem(4)],
+      generatedAt: "2026-03-08T00:00:00.000Z",
+      settings: {
+        enabled: true,
+        provider: "minimax",
+        minimaxApiKey: "test-key",
+        minimaxModel: "MiniMax-M2.5",
+        timeoutMs: 3000,
+        maxItems: 4,
+        maxConcurrency: 2,
+        promptVersion: "m5.2-test",
+      },
+    });
+
+    expect(result.meta.fallbackTriggered).toBe(true);
+    expect(result.meta.failureStats?.missingContent).toBe(4);
+    expect(result.meta.retryStats?.retryableTriggeredCount).toBeGreaterThan(0);
+    expect(result.meta.retryStats?.serialDegradeTriggered).toBe(true);
+    expect(result.meta.retryStats?.serialRetriedItemCount).toBe(4);
+    expect(result.warnings.join("\n")).toContain("LLM 失败分类");
+    expect(result.warnings.join("\n")).toContain("LLM 重试统计");
+  });
+
+  it("missing_content 连续达到阈值时应触发临时串行降载重试", async () => {
+    const callCountById = new Map<string, number>();
+    const unstableIds = new Set(["item-1", "item-2", "item-3"]);
+    const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
+      const payload = JSON.parse(String(init?.body ?? "{}")) as {
+        messages?: Array<{ role: string; content?: Array<{ type?: string; text?: string }> }>;
+      };
+      const userContent = payload.messages?.find((message) => message.role === "user")?.content?.[0]?.text ?? "{}";
+      const parsed = JSON.parse(userContent) as { item?: { id?: string } };
+      const id = parsed.item?.id ?? "lead";
+      const nextCount = (callCountById.get(id) ?? 0) + 1;
+      callCountById.set(id, nextCount);
+
+      if (id === "lead") {
+        return {
+          ok: true,
+          json: async () => ({
+            content: [{ type: "text", text: JSON.stringify({ lead: "本期导语测试文本。" }) }],
+          }),
+        } satisfies Partial<Response> as Response;
+      }
+
+      if (unstableIds.has(id) && nextCount <= 3) {
+        return {
+          ok: true,
+          json: async () => ({
+            content: [],
+          }),
+        } satisfies Partial<Response> as Response;
+      }
+
+      return {
+        ok: true,
+        json: async () => ({
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify({
+                summary: `${id} 总结`,
+                recommendation: `${id} 推荐`,
+                evidenceItemIds: [id],
+                confidence: 0.8,
+                llmScore: 80,
+              }),
+            },
+          ],
+        }),
+      } satisfies Partial<Response> as Response;
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    const result = await buildLlmSummary({
+      rankedItems: Array.from({ length: 6 }).map((_, index) => createItem(index + 1)),
+      generatedAt: "2026-03-08T00:00:00.000Z",
+      settings: {
+        enabled: true,
+        provider: "minimax",
+        minimaxApiKey: "test-key",
+        minimaxModel: "MiniMax-M2.5",
+        timeoutMs: 3000,
+        maxItems: 6,
+        maxConcurrency: 3,
+        promptVersion: "m5.2-test",
+      },
+    });
+
+    expect(result.meta.fallbackTriggered).toBe(false);
+    expect(result.meta.summarizedCount).toBe(6);
+    expect(result.meta.retryStats?.serialDegradeTriggered).toBe(true);
+    expect(result.meta.retryStats?.serialRetriedItemCount).toBe(3);
+    expect(result.warnings.join("\n")).toContain("临时降载串行重试");
   });
 
   it("可复用判断应基于 input hash 与 fallback 状态", () => {
@@ -700,5 +887,185 @@ describe("llm summary", () => {
     expect(fetchMock).toHaveBeenCalledTimes(3);
     expect(result.meta.fallbackTriggered).toBe(false);
     expect(result.itemSummaries[0]?.summary).toContain("工程观测链路");
+  });
+
+  it("应对并发执行应用全局并发上限", async () => {
+    let active = 0;
+    let peak = 0;
+    const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
+      const payload = JSON.parse(String(init?.body ?? "{}")) as {
+        messages?: Array<{ role: string; content?: Array<{ type?: string; text?: string }> }>;
+      };
+      const userContent = payload.messages?.find((message) => message.role === "user")?.content?.[0]?.text ?? "{}";
+      const parsed = JSON.parse(userContent) as { item?: { id?: string } };
+      const id = parsed.item?.id ?? "lead";
+      active += 1;
+      peak = Math.max(peak, active);
+      await new Promise((resolve) => setTimeout(resolve, 30));
+      active -= 1;
+      if (id === "lead") {
+        return {
+          ok: true,
+          json: async () => ({
+            content: [{ type: "text", text: JSON.stringify({ lead: "本期导语测试文本。" }) }],
+          }),
+        } satisfies Partial<Response> as Response;
+      }
+      return {
+        ok: true,
+        json: async () => ({
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify({
+                summary: `${id} 总结`,
+                recommendation: `${id} 推荐`,
+                evidenceItemIds: [id],
+                confidence: 0.8,
+                llmScore: 80,
+              }),
+            },
+          ],
+        }),
+      } satisfies Partial<Response> as Response;
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    await buildLlmSummary({
+      rankedItems: Array.from({ length: 6 }).map((_, index) => createItem(index + 1)),
+      generatedAt: "2026-03-08T00:00:00.000Z",
+      settings: {
+        enabled: true,
+        provider: "minimax",
+        minimaxApiKey: "test-key",
+        minimaxModel: "MiniMax-M2.5",
+        timeoutMs: 3000,
+        maxItems: 6,
+        maxConcurrency: 6,
+        globalMaxConcurrency: 2,
+        promptVersion: "m5.2-test",
+      },
+    });
+
+    expect(peak).toBeLessThanOrEqual(2);
+  });
+
+  it("应按规则分与 LLM 分融合重排", async () => {
+    const items = [createItem(1), createItem(2)];
+    const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
+      const payload = JSON.parse(String(init?.body ?? "{}")) as {
+        messages?: Array<{ role: string; content?: Array<{ type?: string; text?: string }> }>;
+      };
+      const userContent = payload.messages?.find((message) => message.role === "user")?.content?.[0]?.text ?? "{}";
+      const parsed = JSON.parse(userContent) as { item?: { id?: string } };
+      const id = parsed.item?.id;
+      if (!id) {
+        return {
+          ok: true,
+          json: async () => ({
+            content: [{ type: "text", text: JSON.stringify({ lead: "本期导语测试文本。" }) }],
+          }),
+        } satisfies Partial<Response> as Response;
+      }
+      return {
+        ok: true,
+        json: async () => ({
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify({
+                summary: `${id} 总结`,
+                recommendation: `${id} 推荐`,
+                evidenceItemIds: [id],
+                confidence: 0.9,
+                llmScore: id === "item-1" ? 40 : 95,
+              }),
+            },
+          ],
+        }),
+      } satisfies Partial<Response> as Response;
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    const result = await buildLlmSummary({
+      rankedItems: items,
+      generatedAt: "2026-03-08T00:00:00.000Z",
+      settings: {
+        enabled: true,
+        provider: "minimax",
+        minimaxApiKey: "test-key",
+        minimaxModel: "MiniMax-M2.5",
+        timeoutMs: 3000,
+        maxItems: 2,
+        maxConcurrency: 2,
+        rankFusionWeight: 1,
+        assistMinConfidence: 0.5,
+        promptVersion: "m5.2-test",
+      },
+    });
+
+    expect(result.rankedItems[0]?.id).toBe("item-2");
+    expect(result.rankedItems[0]?.scoreBreakdown?.usedLlm).toBe(true);
+  });
+
+  it("英文标题翻译成功时应写入 titleZh", async () => {
+    const englishItem: RankedItem = {
+      ...createItem(1),
+      title: "LangGraph introduces multi-agent orchestration",
+    };
+
+    const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
+      const payload = JSON.parse(String(init?.body ?? "{}")) as {
+        messages?: Array<{ role: string; content?: Array<{ type?: string; text?: string }> }>;
+      };
+      const userContent = payload.messages?.find((message) => message.role === "user")?.content?.[0]?.text ?? "{}";
+      const parsed = JSON.parse(userContent) as { item?: { id?: string } };
+      const id = parsed.item?.id;
+      if (!id) {
+        return {
+          ok: true,
+          json: async () => ({
+            content: [{ type: "text", text: JSON.stringify({ lead: "本期导语测试文本。" }) }],
+          }),
+        } satisfies Partial<Response> as Response;
+      }
+      return {
+        ok: true,
+        json: async () => ({
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify({
+                summary: "该指南聚焦多 Agent 编排落地。",
+                recommendation: "建议工程团队优先评估编排策略与可观测能力。",
+                evidenceItemIds: [id],
+                confidence: 0.85,
+                llmScore: 82,
+                titleZh: "LangGraph 发布多 Agent 编排指南",
+              }),
+            },
+          ],
+        }),
+      } satisfies Partial<Response> as Response;
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    const result = await buildLlmSummary({
+      rankedItems: [englishItem, createItem(2)],
+      generatedAt: "2026-03-08T00:00:00.000Z",
+      settings: {
+        enabled: true,
+        provider: "minimax",
+        minimaxApiKey: "test-key",
+        minimaxModel: "MiniMax-M2.5",
+        timeoutMs: 3000,
+        maxItems: 2,
+        maxConcurrency: 2,
+        promptVersion: "m5.2-test",
+      },
+    });
+
+    const translated = result.rankedItems.find((item) => item.id === "item-1");
+    expect(translated?.titleZh).toContain("LangGraph 发布多 Agent 编排指南");
   });
 });

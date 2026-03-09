@@ -1,7 +1,7 @@
-# AI 周报系统设计（v0.8）
+# AI 周报系统设计（v0.9）
 
 ## 1. 文档目标与范围
-- 目标：定义 AI 日报/周报系统在 **M4.4 已完成** 基线下的完整技术架构。
+- 目标：定义 AI 日报/周报系统在 **M5.2 已完成** 基线下的完整技术架构。
 - 范围：覆盖采集、处理、审核、发布、协同通知、审核意见回流、可观测与运维策略。
 - 非目标：不描述前端管理后台 UI 细节；不覆盖分布式部署实现细节（当前暂缓）。
 
@@ -71,8 +71,13 @@
 - 失败自动回退规则摘要，不阻断审核/发布状态机。
 - 回退告警按 run 合并发送 1 条飞书消息，避免重复噪音。
 
-### 2.10 规划中（M5.2）
-- LLM 扩展到分类/打标/排序辅助，采用“规则 baseline + LLM 修正分”双轨策略。
+### 2.10 已实现（M5.2）
+- 新增 LLM 辅助排序：在规则 baseline 之后融合 `llmScore`，默认提升 LLM 权重（可配置）。
+- 新增 LLM 标签输出：`domainTag`、`intentTag`、`actionability`、`confidence`。
+- 新增中文标题增强：英文标题可显示为“中文标题（原标题）”。
+- 新增报告导语：在报告顶部补充 2-3 句“本期导语”（失败时模板回退）。
+- 新增并发闸门：`effectiveConcurrency=min(nodeConcurrency, globalConcurrency)`，默认上限 2。
+- 新增自适应降载：当 `missing_content` 连续失败达到阈值时，自动触发临时串行重试，降低 provider 拥塞导致的批量失败。
 
 ## 3. 架构全景
 系统分为八层：
@@ -83,7 +88,7 @@
 5. **Storage Layer**：SQLite（主）+ 文件（fallback）双轨持久化。
 6. **Automation Layer**：daemon scheduler + operation queue + git sync executor。
 7. **Service Ops Layer**：macOS bootstrap + launchd service lifecycle（本地运维收敛层）。
-8. **Intelligence Layer**：LLM item-wise summarize + quick digest（可回退、可审计）。
+8. **Intelligence Layer**：LLM item-wise summarize + ranking assist + lead summary（可回退、可审计）。
 
 ## 4. 目录与模块责任
 ```text
@@ -108,7 +113,7 @@
     ├── audit/
     │   └── audit-store.ts           # 审计事件存储（DB）
     ├── llm/
-    │   └── summary.ts               # MiniMax 总结 client + 回退与证据校验
+    │   └── summary.ts               # MiniMax 总结/辅助排序/导语生成 + 回退与证据校验
     ├── config/
     │   ├── source-config.ts          # 来源配置读取
     │   └── runtime-config.ts         # runtime 配置存储抽象（文件+DB）
@@ -473,6 +478,9 @@ DB 表：`operation_jobs`
 - `LLM_SUMMARY_ENABLED`（是否启用 LLM 总结）
 - `MINIMAX_API_KEY` / `MINIMAX_MODEL`（MiniMax 调用配置）
 - `LLM_SUMMARY_TIMEOUT_MS` / `LLM_SUMMARY_MAX_ITEMS` / `LLM_SUMMARY_MAX_CONCURRENCY`
+- `LLM_GLOBAL_MAX_CONCURRENCY`（全局 LLM 并发闸门，默认 2）
+- `LLM_RANK_FUSION_WEIGHT`（规则分与 LLM 分融合权重）
+- `LLM_ASSIST_MIN_CONFIDENCE`（LLM 辅助分生效的最低置信度）
 - `LLM_SUMMARY_PROMPT_VERSION` / `LLM_FALLBACK_ALERT_ENABLED`
 
 实现约束：
@@ -501,7 +509,7 @@ DB 表：`operation_jobs`
 5. **M4.3（自动化）**：daemon 自动调度 + @机器人主动触发 + 自动 Git 同步【已完成】。
 6. **M4.4（运维）**：macOS 初始化引导 + 一键服务托管（launchd + Named Tunnel）【已完成】。
 7. **M5.1（智能）**：LLM 总结节点（MiniMax，逐条总结 + 速览聚合）【已完成】。
-8. **M5.2（智能）**：分类/打标/排序辅助（规则 baseline + LLM 修正分）。
+8. **M5.2（智能）**：分类/打标/排序辅助 + 导语 + 标题翻译（规则 baseline + LLM 融合分）【已完成】。
 9. **暂缓项**：分布式互斥（多实例部署时再做）。
 
 ## 13. 里程碑后的质量门禁

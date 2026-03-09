@@ -164,6 +164,9 @@ export async function llmSummarizeNode(state: ReportState): Promise<Partial<Repo
       timeoutMs: state.llmSummaryTimeoutMs,
       maxItems: state.llmSummaryMaxItems,
       maxConcurrency: state.llmSummaryMaxConcurrency,
+      globalMaxConcurrency: state.llmGlobalMaxConcurrency,
+      rankFusionWeight: state.llmRankFusionWeight,
+      assistMinConfidence: state.llmAssistMinConfidence,
       promptVersion: state.llmSummaryPromptVersion,
     },
   });
@@ -182,9 +185,22 @@ export async function llmSummarizeNode(state: ReportState): Promise<Partial<Repo
     auditWarning = `llm_summary_audit_failed:${error instanceof Error ? error.message : String(error)}`;
   }
 
+  const mergedRankedItems = result.rankedItems.length > 0 ? result.rankedItems : state.rankedItems;
+  const mergedHighlights = pickHighlights(mergedRankedItems, state.mode);
+  const mergedMetrics = {
+    ...state.metrics,
+    highImportanceCount: mergedRankedItems.filter((item) => item.importance === "high").length,
+    mediumImportanceCount: mergedRankedItems.filter((item) => item.importance === "medium").length,
+    lowImportanceCount: mergedRankedItems.filter((item) => item.importance === "low").length,
+  };
+
   return {
+    rankedItems: mergedRankedItems,
+    highlights: mergedHighlights,
+    metrics: mergedMetrics,
     itemSummaries: result.itemSummaries,
     quickDigest: result.quickDigest,
+    leadSummary: result.leadSummary,
     summaryInputHash: result.summaryInputHash,
     llmSummaryMeta: result.meta,
     warnings: [...state.warnings, ...result.warnings, ...(auditWarning ? [auditWarning] : [])],
@@ -267,6 +283,7 @@ export async function buildReportNode(state: ReportState): Promise<Partial<Repor
     generatedAt: state.generatedAt,
     quickDigest: state.quickDigest,
     itemSummaries: state.itemSummaries,
+    leadSummary: state.leadSummary,
     llmSummaryMeta: state.llmSummaryMeta,
     highlights: state.highlights,
     rankedItems: state.rankedItems,
@@ -394,6 +411,9 @@ export function createInitialState(params: {
   llmSummaryTimeoutMs?: number;
   llmSummaryMaxItems?: number;
   llmSummaryMaxConcurrency?: number;
+  llmGlobalMaxConcurrency?: number;
+  llmRankFusionWeight?: number;
+  llmAssistMinConfidence?: number;
   llmSummaryPromptVersion?: string;
   llmFallbackAlertEnabled?: boolean;
   generatedAt: string;
@@ -424,8 +444,11 @@ export function createInitialState(params: {
     llmSummaryMinimaxModel: params.llmSummaryMinimaxModel ?? "MiniMax-M2.5",
     llmSummaryTimeoutMs: params.llmSummaryTimeoutMs ?? 12_000,
     llmSummaryMaxItems: params.llmSummaryMaxItems ?? 30,
-    llmSummaryMaxConcurrency: params.llmSummaryMaxConcurrency ?? 4,
-    llmSummaryPromptVersion: params.llmSummaryPromptVersion ?? "m5.1-v1",
+    llmSummaryMaxConcurrency: params.llmSummaryMaxConcurrency ?? 3,
+    llmGlobalMaxConcurrency: params.llmGlobalMaxConcurrency ?? 3,
+    llmRankFusionWeight: params.llmRankFusionWeight ?? 0.65,
+    llmAssistMinConfidence: params.llmAssistMinConfidence ?? 0.5,
+    llmSummaryPromptVersion: params.llmSummaryPromptVersion ?? "m5.2-v1",
     llmFallbackAlertEnabled: params.llmFallbackAlertEnabled ?? true,
     reviewInstructionRoot: params.reviewInstructionRoot,
     rawItems: [],
@@ -451,12 +474,13 @@ export function createInitialState(params: {
     revisionAuditLogs: [],
     itemSummaries: [],
     quickDigest: [],
+    leadSummary: "",
     summaryInputHash: "",
     llmSummaryMeta: {
       enabled: params.llmSummaryEnabled ?? false,
       provider: params.llmSummaryProvider ?? "minimax",
       model: params.llmSummaryMinimaxModel ?? "MiniMax-M2.5",
-      promptVersion: params.llmSummaryPromptVersion ?? "m5.1-v1",
+      promptVersion: params.llmSummaryPromptVersion ?? "m5.2-v1",
       inputCount: 0,
       summarizedCount: 0,
       fallbackTriggered: false,

@@ -91,4 +91,60 @@ describe("buildReportMarkdown", () => {
     expect(markdown).toContain("# AI 周报（已发布）");
     expect(markdown).not.toContain("待审核");
   });
+
+  it("有导语与中文标题时应优先展示中文标题", () => {
+    const metrics = createEmptyMetrics();
+    const translatedItem: RankedItem = {
+      ...createItem("LangGraph introduces orchestration", "agent"),
+      titleZh: "LangGraph 发布编排能力",
+    };
+    const markdown = buildReportMarkdown({
+      mode: "weekly",
+      timezone: "Asia/Shanghai",
+      generatedAt: "2026-03-09T02:00:00.000Z",
+      quickDigest: [
+        {
+          itemId: translatedItem.id,
+          title: translatedItem.title,
+          takeaway: "重点摘要",
+          evidenceItemIds: [translatedItem.id],
+        },
+      ],
+      itemSummaries: [
+        {
+          itemId: translatedItem.id,
+          title: translatedItem.title,
+          titleZh: translatedItem.titleZh,
+          summary: "逐条摘要",
+          recommendation: "推荐理由",
+          evidenceItemIds: [translatedItem.id],
+          domainTag: "agent",
+          intentTag: "release",
+          actionability: 3,
+        },
+      ],
+      leadSummary: "本期重点关注 Agent 编排能力与落地实践。",
+      llmSummaryMeta: {
+        enabled: true,
+        inputCount: 1,
+        summarizedCount: 1,
+        fallbackTriggered: false,
+      },
+      highlights: [translatedItem],
+      rankedItems: [translatedItem],
+      metrics,
+      outlineMarkdown: "### 重点推荐（大纲）\n- Agent 方向",
+      reviewStatus: "pending_review",
+      reviewStage: "outline_review",
+      reviewDeadlineAt: "2026-03-09T04:30:00.000Z",
+      publishStatus: "pending",
+      publishReason: "waiting_for_manual_review",
+      revisionAuditLogs: [],
+    });
+
+    expect(markdown).toContain("## 本期导语");
+    expect(markdown).toContain("LangGraph 发布编排能力 (LangGraph introduces orchestration)");
+    expect(markdown).toContain("标签：agent / release | 可执行性=3");
+    expect(markdown).toContain("证据：[LangGraph 发布编排能力 (LangGraph introduces orchestration)](https://example.com/item)");
+  });
 });
