@@ -1,5 +1,5 @@
 {
-  "runId": "weekly-1773043825521",
+  "runId": "weekly-1773044054214",
   "generatedAt": "2031-01-06T02:00:00.000Z",
   "reviewStartedAt": "2031-01-06T02:00:00.000Z",
   "reportDate": "2031-01-06",
@@ -19,9 +19,9 @@
     "collectedCount": 30,
     "normalizedCount": 30,
     "dedupedCount": 30,
-    "highImportanceCount": 5,
-    "mediumImportanceCount": 1,
-    "lowImportanceCount": 24,
+    "highImportanceCount": 30,
+    "mediumImportanceCount": 0,
+    "lowImportanceCount": 0,
     "categoryBreakdown": {
       "open-source": 3,
       "tooling": 5,
@@ -36,72 +36,47 @@
     {
       "itemId": "b038bc7a8332",
       "title": "LangGraph 发布新的 multi-agent orchestration 指南",
-      "summary": "LangGraph 发布新的多代理编排指南，聚焦工程实践与可落地实施方案，为团队提供系统化的",
-      "recommendation": "建议本周优先评估《LangGraph 发布新的 multi-agent orchestration 指南》相关方案，重点关注多 Agent 协作策略与稳定性。",
+      "summary": "LangGraph 发布新的 multi-agent orchestration 指南，聚焦工程实践与可落地方案。",
+      "recommendation": "Agent 工程实践相关",
       "evidenceItemIds": [
         "b038bc7a8332"
-      ],
-      "domainTag": "agent",
-      "intentTag": "news",
-      "actionability": 1,
-      "confidence": 0.6,
-      "llmScore": 100
+      ]
     },
     {
       "itemId": "6e7b6da1a9ca",
       "title": "LangChain 发布 long-term memory 教程",
-      "summary": "LangChain发布long-term memory教程，聚焦工程实践与可落地方案，帮助开发者实现Agent的持久化记忆能力。",
-      "recommendation": "对使用LangChain构建Agent的团队有直接工程价值，建议优先学习该教程以实现对话上下文的长期记忆。",
+      "summary": "LangChain 发布 long-term memory 教程，聚焦工程实践与可落地方案。",
+      "recommendation": "Agent 工程实践相关",
       "evidenceItemIds": [
         "6e7b6da1a9ca"
-      ],
-      "domainTag": "industry-news",
-      "intentTag": "news",
-      "actionability": 1,
-      "confidence": 0.6,
-      "llmScore": 100
+      ]
     },
     {
       "itemId": "2fc17ec60b30",
       "title": "Anthropic 分享 Agent 安全防护实践",
-      "summary": "Anthropic 分享 Agent 安全防护实践，聚焦工程实践与可落地方案，提供生产环境下的 Agent 安全",
-      "recommendation": "建议本周优先评估《Anthropic 分享 Agent 安全防护实践》相关方案，重点关注多 Agent 协作策略与稳定性。",
+      "summary": "Anthropic 分享 Agent 安全防护实践，聚焦工程实践与可落地方案。",
+      "recommendation": "Agent 工程实践相关",
       "evidenceItemIds": [
         "2fc17ec60b30"
-      ],
-      "domainTag": "agent",
-      "intentTag": "news",
-      "actionability": 1,
-      "confidence": 0.6,
-      "llmScore": 100
+      ]
     },
     {
       "itemId": "c5d5a1ed3c3c",
       "title": "GitHub 热门开源：高性能 RAG pipeline 模板",
-      "summary": "该模板提供生产级 RAG pipeline 实现，包含检索优化、向量索引与召回策略等关键模块，可直接用于快速搭建高效 RAG 系统。",
-      "recommendation": "建议本周优先评估《GitHub 热门开源：高性能 RAG pipeline 模板》相关方案，重点关注仓库成熟度与二次开发成本。",
+      "summary": "GitHub 热门开源：高性能 RAG pipeline 模板，聚焦工程实践与可落地方案。",
+      "recommendation": "开源生态更新",
       "evidenceItemIds": [
         "c5d5a1ed3c3c"
-      ],
-      "domainTag": "open-source",
-      "intentTag": "news",
-      "actionability": 1,
-      "confidence": 0.6,
-      "llmScore": 100
+      ]
     },
     {
       "itemId": "f89a7abc69bc",
       "title": "开源工具：低代码 Agent workflow builder",
-      "summary": "该工具降低 Agent workflow 构建门槛，提供可视化编排能力，适合快速迭代与原型验证。",
-      "recommendation": "对需要快速搭建 Agent 工作流的工程团队有直接价值，建议评估其与现有 LangChain 生态的集成成本。",
+      "summary": "开源工具：低代码 Agent workflow builder，聚焦工程实践与可落地方案。",
+      "recommendation": "Agent 工程实践相关",
       "evidenceItemIds": [
         "f89a7abc69bc"
-      ],
-      "domainTag": "open-source",
-      "intentTag": "news",
-      "actionability": 1,
-      "confidence": 0.6,
-      "llmScore": 100
+      ]
     },
     {
       "itemId": "2ae7cf6a0614",
@@ -111,13 +86,229 @@
       "evidenceItemIds": [
         "2ae7cf6a0614"
       ]
+    },
+    {
+      "itemId": "d2fe0fff6b4c",
+      "title": "Papers with Code：新一代代码生成 benchmark",
+      "summary": "Papers with Code：新一代代码生成 benchmark，聚焦工程实践与可落地方案。",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "d2fe0fff6b4c"
+      ]
+    },
+    {
+      "itemId": "0cc641e2fb9f",
+      "title": "InfoQ 专栏：企业落地 AI Agent 的工程化要点",
+      "summary": "InfoQ 专栏：企业落地 AI Agent 的工程化要点，聚焦工程实践与可落地方案。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "0cc641e2fb9f"
+      ]
+    },
+    {
+      "itemId": "b04ca3e5003b",
+      "title": "OpenAI 发布最新 reasoning model 与 function calling 增强",
+      "summary": "OpenAI 发布最新 reasoning model 与 function calling 增强，聚焦工程实践与可落地方案。",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "b04ca3e5003b"
+      ]
+    },
+    {
+      "itemId": "bffa9c5284f6",
+      "title": "Google DeepMind 发布多模态研究进展",
+      "summary": "Google DeepMind 发布多模态研究进展，聚焦工程实践与可落地方案。",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "bffa9c5284f6"
+      ]
+    },
+    {
+      "itemId": "5d99a513b77b",
+      "title": "研究综述：长期记忆对 Agent 的影响",
+      "summary": "研究综述：长期记忆对 Agent 的影响，聚焦工程实践与可落地方案。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "5d99a513b77b"
+      ]
+    },
+    {
+      "itemId": "28c10ad734e1",
+      "title": "行业新闻：主流云厂商联合发布模型互操作规范",
+      "summary": "行业新闻：主流云厂商联合发布模型互操作规范，聚焦工程实践与可落地方案。",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "28c10ad734e1"
+      ]
+    },
+    {
+      "itemId": "2b7b3f77799b",
+      "title": "开源项目：支持浏览器端 embedding 的库",
+      "summary": "开源项目：支持浏览器端 embedding 的库，聚焦工程实践与可落地方案。",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "2b7b3f77799b"
+      ]
+    },
+    {
+      "itemId": "f6f394b14c60",
+      "title": "研究快讯：多 Agent 协作的通信协议优化",
+      "summary": "研究快讯：多 Agent 协作的通信协议优化，聚焦工程实践与可落地方案。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "f6f394b14c60"
+      ]
+    },
+    {
+      "itemId": "e0338d07938c",
+      "title": "评测：不同模型在 coding task 上的表现差异",
+      "summary": "评测：不同模型在 coding task 上的表现差异，聚焦工程实践与可落地方案。",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "e0338d07938c"
+      ]
+    },
+    {
+      "itemId": "52634bd97a3d",
+      "title": "技术分享：LangGraph checkpoint 机制详解",
+      "summary": "技术分享：LangGraph checkpoint 机制详解，聚焦工程实践与可落地方案。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "52634bd97a3d"
+      ]
+    },
+    {
+      "itemId": "29fb4d96b0fa",
+      "title": "教程：如何做 prompt injection 防护",
+      "summary": "教程：如何做 prompt injection 防护，聚焦工程实践与可落地方案。",
+      "recommendation": "可直接学习实践",
+      "evidenceItemIds": [
+        "29fb4d96b0fa"
+      ]
+    },
+    {
+      "itemId": "bd4efba83f0e",
+      "title": "教程：从零实现结构化输出与 JSON schema 校验",
+      "summary": "教程：从零实现结构化输出与 JSON schema 校验，聚焦工程实践与可落地方案。",
+      "recommendation": "可直接学习实践",
+      "evidenceItemIds": [
+        "bd4efba83f0e"
+      ]
+    },
+    {
+      "itemId": "1dbef653499b",
+      "title": "Hugging Face 推出轻量化 inference toolkit",
+      "summary": "Hugging Face 推出轻量化 inference toolkit，聚焦工程实践与可落地方案。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1dbef653499b"
+      ]
+    },
+    {
+      "itemId": "4b1206b984b1",
+      "title": "案例复盘：AI 应用灰度发布策略",
+      "summary": "案例复盘：AI 应用灰度发布策略，聚焦工程实践与可落地方案。",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "4b1206b984b1"
+      ]
+    },
+    {
+      "itemId": "40b20dfc1bbf",
+      "title": "Open-source eval framework 支持自定义指标",
+      "summary": "Open-source eval framework 支持自定义指标，聚焦工程实践与可落地方案。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "40b20dfc1bbf"
+      ]
+    },
+    {
+      "itemId": "ac1181ab4aa0",
+      "title": "工程实践：多模型路由的成本优化方案",
+      "summary": "工程实践：多模型路由的成本优化方案，聚焦工程实践与可落地方案。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "ac1181ab4aa0"
+      ]
+    },
+    {
+      "itemId": "4cf5531e8b10",
+      "title": "最佳实践：如何构建可审计的 AI 周报系统",
+      "summary": "最佳实践：如何构建可审计的 AI 周报系统，聚焦工程实践与可落地方案。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "4cf5531e8b10"
+      ]
+    },
+    {
+      "itemId": "b665a79b9b96",
+      "title": "新产品：团队知识库智能检索助手",
+      "summary": "新产品：团队知识库智能检索助手，聚焦工程实践与可落地方案。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b665a79b9b96"
+      ]
+    },
+    {
+      "itemId": "f2241d647f2c",
+      "title": "社区案例：前端团队如何接入 AI coding assistant",
+      "summary": "社区案例：前端团队如何接入 AI coding assistant，聚焦工程实践与可落地方案。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f2241d647f2c"
+      ]
+    },
+    {
+      "itemId": "ee00b654ad92",
+      "title": "新工具：可视化 prompt tracing 平台",
+      "summary": "新工具：可视化 prompt tracing 平台，聚焦工程实践与可落地方案。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "ee00b654ad92"
+      ]
+    },
+    {
+      "itemId": "f575594a0488",
+      "title": "Meta AI 论文解读：高效推理架构",
+      "summary": "Meta AI 论文解读：高效推理架构，聚焦工程实践与可落地方案。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f575594a0488"
+      ]
+    },
+    {
+      "itemId": "8afb009ee855",
+      "title": "行业动态：AI 开发工具并购事件跟踪",
+      "summary": "行业动态：AI 开发工具并购事件跟踪，聚焦工程实践与可落地方案。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "8afb009ee855"
+      ]
+    },
+    {
+      "itemId": "95f320a04613",
+      "title": "新方案：混合检索在企业问答中的效果",
+      "summary": "新方案：混合检索在企业问答中的效果，聚焦工程实践与可落地方案。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "95f320a04613"
+      ]
+    },
+    {
+      "itemId": "bda80c0ecf75",
+      "title": "产品更新：开发者平台新增 observability 面板",
+      "summary": "产品更新：开发者平台新增 observability 面板，聚焦工程实践与可落地方案。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "bda80c0ecf75"
+      ]
     }
   ],
   "quickDigest": [
     {
       "itemId": "b038bc7a8332",
       "title": "LangGraph 发布新的 multi-agent orchestration 指南",
-      "takeaway": "LangGraph 发布新的多代理编排指南，聚焦工程实践与可落地实施方案，为团队提供系统化的",
+      "takeaway": "LangGraph 发布新的 multi-agent orchestration 指南，聚焦工程实践与可落地方案。",
       "evidenceItemIds": [
         "b038bc7a8332"
       ]
@@ -125,7 +316,7 @@
     {
       "itemId": "6e7b6da1a9ca",
       "title": "LangChain 发布 long-term memory 教程",
-      "takeaway": "LangChain发布long-term memory教程，聚焦工程实践与可落地方案，帮助开发者实现Agent的持久化记忆能力。",
+      "takeaway": "LangChain 发布 long-term memory 教程，聚焦工程实践与可落地方案。",
       "evidenceItemIds": [
         "6e7b6da1a9ca"
       ]
@@ -133,7 +324,7 @@
     {
       "itemId": "2fc17ec60b30",
       "title": "Anthropic 分享 Agent 安全防护实践",
-      "takeaway": "Anthropic 分享 Agent 安全防护实践，聚焦工程实践与可落地方案，提供生产环境下的 Agent 安全",
+      "takeaway": "Anthropic 分享 Agent 安全防护实践，聚焦工程实践与可落地方案。",
       "evidenceItemIds": [
         "2fc17ec60b30"
       ]
@@ -141,9 +332,57 @@
     {
       "itemId": "c5d5a1ed3c3c",
       "title": "GitHub 热门开源：高性能 RAG pipeline 模板",
-      "takeaway": "该模板提供生产级 RAG pipeline 实现，包含检索优化、向量索引与召回策略等关键模块，可直接用于快速搭建高效 RAG 系统。",
+      "takeaway": "GitHub 热门开源：高性能 RAG pipeline 模板，聚焦工程实践与可落地方案。",
       "evidenceItemIds": [
         "c5d5a1ed3c3c"
+      ]
+    },
+    {
+      "itemId": "f89a7abc69bc",
+      "title": "开源工具：低代码 Agent workflow builder",
+      "takeaway": "开源工具：低代码 Agent workflow builder，聚焦工程实践与可落地方案。",
+      "evidenceItemIds": [
+        "f89a7abc69bc"
+      ]
+    },
+    {
+      "itemId": "2ae7cf6a0614",
+      "title": "研究动态：tool-use agent 的鲁棒性评测",
+      "takeaway": "研究动态：tool-use agent 的鲁棒性评测，聚焦工程实践与可落地方案。",
+      "evidenceItemIds": [
+        "2ae7cf6a0614"
+      ]
+    },
+    {
+      "itemId": "d2fe0fff6b4c",
+      "title": "Papers with Code：新一代代码生成 benchmark",
+      "takeaway": "Papers with Code：新一代代码生成 benchmark，聚焦工程实践与可落地方案。",
+      "evidenceItemIds": [
+        "d2fe0fff6b4c"
+      ]
+    },
+    {
+      "itemId": "0cc641e2fb9f",
+      "title": "InfoQ 专栏：企业落地 AI Agent 的工程化要点",
+      "takeaway": "InfoQ 专栏：企业落地 AI Agent 的工程化要点，聚焦工程实践与可落地方案。",
+      "evidenceItemIds": [
+        "0cc641e2fb9f"
+      ]
+    },
+    {
+      "itemId": "b04ca3e5003b",
+      "title": "OpenAI 发布最新 reasoning model 与 function calling 增强",
+      "takeaway": "OpenAI 发布最新 reasoning model 与 function calling 增强，聚焦工程实践与可落地方案。",
+      "evidenceItemIds": [
+        "b04ca3e5003b"
+      ]
+    },
+    {
+      "itemId": "bffa9c5284f6",
+      "title": "Google DeepMind 发布多模态研究进展",
+      "takeaway": "Google DeepMind 发布多模态研究进展，聚焦工程实践与可落地方案。",
+      "evidenceItemIds": [
+        "bffa9c5284f6"
       ]
     }
   ],
@@ -154,16 +393,17 @@
     "provider": "minimax",
     "model": "MiniMax-M2.5",
     "promptVersion": "m5.2-v1",
-    "startedAt": "2026-03-09T08:10:25.774Z",
-    "finishedAt": "2026-03-09T08:12:34.554Z",
-    "durationMs": 128783,
-    "inputCount": 6,
-    "summarizedCount": 5,
-    "fallbackTriggered": false,
-    "effectiveConcurrency": 2,
-    "assistAppliedCount": 5,
-    "assistFallbackCount": 1,
-    "leadFallbackTriggered": true
+    "startedAt": "2026-03-09T08:14:14.495Z",
+    "finishedAt": "2026-03-09T08:17:05.017Z",
+    "durationMs": 170522,
+    "inputCount": 30,
+    "summarizedCount": 3,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:50%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 30,
+    "leadFallbackTriggered": true,
+    "effectiveConcurrency": 2
   },
   "highlights": [
     {
@@ -175,21 +415,15 @@
       "contentSnippet": "LangGraph 发布新的 multi-agent orchestration 指南，聚焦工程实践与可落地方案。",
       "publishedAt": "2031-01-06T02:00:00.000Z",
       "category": "agent",
-      "score": 100,
+      "score": 131,
       "importance": "high",
       "recommendationReason": "Agent 工程实践相关",
-      "domainTag": "agent",
-      "intentTag": "news",
-      "actionability": 1,
-      "confidence": 0.6,
-      "llmScore": 100,
       "scoreBreakdown": {
         "ruleScore": 131,
         "ruleScoreNormalized": 100,
-        "llmScore": 100,
-        "finalScore": 100,
+        "finalScore": 131,
         "fusionWeight": 0.65,
-        "usedLlm": true
+        "usedLlm": false
       }
     },
     {
@@ -201,21 +435,15 @@
       "contentSnippet": "LangChain 发布 long-term memory 教程，聚焦工程实践与可落地方案。",
       "publishedAt": "2031-01-05T05:00:00.000Z",
       "category": "industry-news",
-      "score": 99.17,
+      "score": 130,
       "importance": "high",
       "recommendationReason": "Agent 工程实践相关",
-      "domainTag": "industry-news",
-      "intentTag": "news",
-      "actionability": 1,
-      "confidence": 0.6,
-      "llmScore": 100,
       "scoreBreakdown": {
         "ruleScore": 130,
-        "ruleScoreNormalized": 97.61904761904762,
-        "llmScore": 100,
-        "finalScore": 99.17,
+        "ruleScoreNormalized": 100,
+        "finalScore": 130,
         "fusionWeight": 0.65,
-        "usedLlm": true
+        "usedLlm": false
       }
     },
     {
@@ -227,21 +455,15 @@
       "contentSnippet": "Anthropic 分享 Agent 安全防护实践，聚焦工程实践与可落地方案。",
       "publishedAt": "2031-01-05T20:00:00.000Z",
       "category": "agent",
-      "score": 98.33,
+      "score": 129,
       "importance": "high",
       "recommendationReason": "Agent 工程实践相关",
-      "domainTag": "agent",
-      "intentTag": "news",
-      "actionability": 1,
-      "confidence": 0.6,
-      "llmScore": 100,
       "scoreBreakdown": {
         "ruleScore": 129,
-        "ruleScoreNormalized": 95.23809523809523,
-        "llmScore": 100,
-        "finalScore": 98.33,
+        "ruleScoreNormalized": 100,
+        "finalScore": 129,
         "fusionWeight": 0.65,
-        "usedLlm": true
+        "usedLlm": false
       }
     },
     {
@@ -253,21 +475,15 @@
       "contentSnippet": "GitHub 热门开源：高性能 RAG pipeline 模板，聚焦工程实践与可落地方案。",
       "publishedAt": "2031-01-05T17:00:00.000Z",
       "category": "open-source",
-      "score": 95.83,
+      "score": 126,
       "importance": "high",
       "recommendationReason": "开源生态更新",
-      "domainTag": "open-source",
-      "intentTag": "news",
-      "actionability": 1,
-      "confidence": 0.6,
-      "llmScore": 100,
       "scoreBreakdown": {
         "ruleScore": 126,
-        "ruleScoreNormalized": 88.09523809523809,
-        "llmScore": 100,
-        "finalScore": 95.83,
+        "ruleScoreNormalized": 100,
+        "finalScore": 126,
         "fusionWeight": 0.65,
-        "usedLlm": true
+        "usedLlm": false
       }
     },
     {
@@ -279,21 +495,15 @@
       "contentSnippet": "开源工具：低代码 Agent workflow builder，聚焦工程实践与可落地方案。",
       "publishedAt": "2031-01-03T02:00:00.000Z",
       "category": "open-source",
-      "score": 93.33,
+      "score": 123,
       "importance": "high",
       "recommendationReason": "Agent 工程实践相关",
-      "domainTag": "open-source",
-      "intentTag": "news",
-      "actionability": 1,
-      "confidence": 0.6,
-      "llmScore": 100,
       "scoreBreakdown": {
         "ruleScore": 123,
-        "ruleScoreNormalized": 80.95238095238095,
-        "llmScore": 100,
-        "finalScore": 93.33,
+        "ruleScoreNormalized": 100,
+        "finalScore": 123,
         "fusionWeight": 0.65,
-        "usedLlm": true
+        "usedLlm": false
       }
     },
     {
@@ -305,13 +515,13 @@
       "contentSnippet": "研究动态：tool-use agent 的鲁棒性评测，聚焦工程实践与可落地方案。",
       "publishedAt": "2031-01-04T14:00:00.000Z",
       "category": "tooling",
-      "score": 76.19,
-      "importance": "medium",
+      "score": 121,
+      "importance": "high",
       "recommendationReason": "Agent 工程实践相关",
       "scoreBreakdown": {
         "ruleScore": 121,
-        "ruleScoreNormalized": 76.19047619047619,
-        "finalScore": 76.19,
+        "ruleScoreNormalized": 100,
+        "finalScore": 121,
         "fusionWeight": 0.65,
         "usedLlm": false
       }
@@ -325,13 +535,13 @@
       "contentSnippet": "Papers with Code：新一代代码生成 benchmark，聚焦工程实践与可落地方案。",
       "publishedAt": "2031-01-05T14:00:00.000Z",
       "category": "research",
-      "score": 64.29,
-      "importance": "low",
+      "score": 116,
+      "importance": "high",
       "recommendationReason": "评测与性能信息",
       "scoreBreakdown": {
         "ruleScore": 116,
-        "ruleScoreNormalized": 64.28571428571429,
-        "finalScore": 64.29,
+        "ruleScoreNormalized": 100,
+        "finalScore": 116,
         "fusionWeight": 0.65,
         "usedLlm": false
       }
@@ -345,13 +555,13 @@
       "contentSnippet": "InfoQ 专栏：企业落地 AI Agent 的工程化要点，聚焦工程实践与可落地方案。",
       "publishedAt": "2031-01-05T02:00:00.000Z",
       "category": "agent",
-      "score": 64.29,
-      "importance": "low",
+      "score": 116,
+      "importance": "high",
       "recommendationReason": "Agent 工程实践相关",
       "scoreBreakdown": {
         "ruleScore": 116,
-        "ruleScoreNormalized": 64.28571428571429,
-        "finalScore": 64.29,
+        "ruleScoreNormalized": 100,
+        "finalScore": 116,
         "fusionWeight": 0.65,
         "usedLlm": false
       }
@@ -359,10 +569,8 @@
   ],
   "revisionAuditLogs": [],
   "warnings": [
-    "LLM 部分条目回退规则摘要：1/6（success=83%）",
-    "LLM 条目失败明细（前 3/6）：minimax_invalid_response:missing_content",
-    "LLM 排序辅助部分回退：1/6",
-    "LLM 条目失败明细（前 3/6）：missing_llm_score"
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:50%<70%",
+    "LLM 条目失败明细（前 3/6）：minimax_invalid_response:missing_content | minimax_invalid_response:missing_content | minimax_invalid_response:missing_content"
   ],
   "snapshot": {
     "timezone": "Asia/Shanghai",
@@ -383,21 +591,15 @@
         "contentSnippet": "LangGraph 发布新的 multi-agent orchestration 指南，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-06T02:00:00.000Z",
         "category": "agent",
-        "score": 100,
+        "score": 131,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
-        "domainTag": "agent",
-        "intentTag": "news",
-        "actionability": 1,
-        "confidence": 0.6,
-        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 131,
           "ruleScoreNormalized": 100,
-          "llmScore": 100,
-          "finalScore": 100,
+          "finalScore": 131,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -409,21 +611,15 @@
         "contentSnippet": "LangChain 发布 long-term memory 教程，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-05T05:00:00.000Z",
         "category": "industry-news",
-        "score": 99.17,
+        "score": 130,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
-        "domainTag": "industry-news",
-        "intentTag": "news",
-        "actionability": 1,
-        "confidence": 0.6,
-        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 130,
-          "ruleScoreNormalized": 97.61904761904762,
-          "llmScore": 100,
-          "finalScore": 99.17,
+          "ruleScoreNormalized": 100,
+          "finalScore": 130,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -435,21 +631,15 @@
         "contentSnippet": "Anthropic 分享 Agent 安全防护实践，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-05T20:00:00.000Z",
         "category": "agent",
-        "score": 98.33,
+        "score": 129,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
-        "domainTag": "agent",
-        "intentTag": "news",
-        "actionability": 1,
-        "confidence": 0.6,
-        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 129,
-          "ruleScoreNormalized": 95.23809523809523,
-          "llmScore": 100,
-          "finalScore": 98.33,
+          "ruleScoreNormalized": 100,
+          "finalScore": 129,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -461,21 +651,15 @@
         "contentSnippet": "GitHub 热门开源：高性能 RAG pipeline 模板，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-05T17:00:00.000Z",
         "category": "open-source",
-        "score": 95.83,
+        "score": 126,
         "importance": "high",
         "recommendationReason": "开源生态更新",
-        "domainTag": "open-source",
-        "intentTag": "news",
-        "actionability": 1,
-        "confidence": 0.6,
-        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 126,
-          "ruleScoreNormalized": 88.09523809523809,
-          "llmScore": 100,
-          "finalScore": 95.83,
+          "ruleScoreNormalized": 100,
+          "finalScore": 126,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -487,21 +671,15 @@
         "contentSnippet": "开源工具：低代码 Agent workflow builder，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-03T02:00:00.000Z",
         "category": "open-source",
-        "score": 93.33,
+        "score": 123,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
-        "domainTag": "open-source",
-        "intentTag": "news",
-        "actionability": 1,
-        "confidence": 0.6,
-        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 123,
-          "ruleScoreNormalized": 80.95238095238095,
-          "llmScore": 100,
-          "finalScore": 93.33,
+          "ruleScoreNormalized": 100,
+          "finalScore": 123,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -513,13 +691,13 @@
         "contentSnippet": "研究动态：tool-use agent 的鲁棒性评测，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-04T14:00:00.000Z",
         "category": "tooling",
-        "score": 76.19,
-        "importance": "medium",
+        "score": 121,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
           "ruleScore": 121,
-          "ruleScoreNormalized": 76.19047619047619,
-          "finalScore": 76.19,
+          "ruleScoreNormalized": 100,
+          "finalScore": 121,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -533,13 +711,13 @@
         "contentSnippet": "Papers with Code：新一代代码生成 benchmark，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-05T14:00:00.000Z",
         "category": "research",
-        "score": 64.29,
-        "importance": "low",
+        "score": 116,
+        "importance": "high",
         "recommendationReason": "评测与性能信息",
         "scoreBreakdown": {
           "ruleScore": 116,
-          "ruleScoreNormalized": 64.28571428571429,
-          "finalScore": 64.29,
+          "ruleScoreNormalized": 100,
+          "finalScore": 116,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -553,13 +731,13 @@
         "contentSnippet": "InfoQ 专栏：企业落地 AI Agent 的工程化要点，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-05T02:00:00.000Z",
         "category": "agent",
-        "score": 64.29,
-        "importance": "low",
+        "score": 116,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
           "ruleScore": 116,
-          "ruleScoreNormalized": 64.28571428571429,
-          "finalScore": 64.29,
+          "ruleScoreNormalized": 100,
+          "finalScore": 116,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -573,13 +751,13 @@
         "contentSnippet": "OpenAI 发布最新 reasoning model 与 function calling 增强，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-05T23:00:00.000Z",
         "category": "industry-news",
-        "score": 59.52,
-        "importance": "low",
+        "score": 114,
+        "importance": "high",
         "recommendationReason": "模型或产品发布",
         "scoreBreakdown": {
           "ruleScore": 114,
-          "ruleScoreNormalized": 59.523809523809526,
-          "finalScore": 59.52,
+          "ruleScoreNormalized": 100,
+          "finalScore": 114,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -593,13 +771,13 @@
         "contentSnippet": "Google DeepMind 发布多模态研究进展，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-05T08:00:00.000Z",
         "category": "research",
-        "score": 52.38,
-        "importance": "low",
+        "score": 111,
+        "importance": "high",
         "recommendationReason": "模型或产品发布",
         "scoreBreakdown": {
           "ruleScore": 111,
-          "ruleScoreNormalized": 52.38095238095239,
-          "finalScore": 52.38,
+          "ruleScoreNormalized": 100,
+          "finalScore": 111,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -613,13 +791,13 @@
         "contentSnippet": "研究综述：长期记忆对 Agent 的影响，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-03T17:00:00.000Z",
         "category": "agent",
-        "score": 47.62,
-        "importance": "low",
+        "score": 109,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
           "ruleScore": 109,
-          "ruleScoreNormalized": 47.61904761904761,
-          "finalScore": 47.62,
+          "ruleScoreNormalized": 100,
+          "finalScore": 109,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -633,13 +811,13 @@
         "contentSnippet": "行业新闻：主流云厂商联合发布模型互操作规范，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-04T08:00:00.000Z",
         "category": "industry-news",
-        "score": 40.48,
-        "importance": "low",
+        "score": 106,
+        "importance": "high",
         "recommendationReason": "模型或产品发布",
         "scoreBreakdown": {
           "ruleScore": 106,
-          "ruleScoreNormalized": 40.476190476190474,
-          "finalScore": 40.48,
+          "ruleScoreNormalized": 100,
+          "finalScore": 106,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -653,13 +831,13 @@
         "contentSnippet": "开源项目：支持浏览器端 embedding 的库，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-03T23:00:00.000Z",
         "category": "open-source",
-        "score": 40.48,
-        "importance": "low",
+        "score": 106,
+        "importance": "high",
         "recommendationReason": "开源生态更新",
         "scoreBreakdown": {
           "ruleScore": 106,
-          "ruleScoreNormalized": 40.476190476190474,
-          "finalScore": 40.48,
+          "ruleScoreNormalized": 100,
+          "finalScore": 106,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -673,13 +851,13 @@
         "contentSnippet": "研究快讯：多 Agent 协作的通信协议优化，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-02T14:00:00.000Z",
         "category": "agent",
-        "score": 40.48,
-        "importance": "low",
+        "score": 106,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
           "ruleScore": 106,
-          "ruleScoreNormalized": 40.476190476190474,
-          "finalScore": 40.48,
+          "ruleScoreNormalized": 100,
+          "finalScore": 106,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -693,13 +871,13 @@
         "contentSnippet": "评测：不同模型在 coding task 上的表现差异，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-03T11:00:00.000Z",
         "category": "research",
-        "score": 35.71,
-        "importance": "low",
+        "score": 104,
+        "importance": "high",
         "recommendationReason": "评测与性能信息",
         "scoreBreakdown": {
           "ruleScore": 104,
-          "ruleScoreNormalized": 35.714285714285715,
-          "finalScore": 35.71,
+          "ruleScoreNormalized": 100,
+          "finalScore": 104,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -713,13 +891,13 @@
         "contentSnippet": "技术分享：LangGraph checkpoint 机制详解，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-02T23:00:00.000Z",
         "category": "tutorial",
-        "score": 35.71,
-        "importance": "low",
+        "score": 104,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
           "ruleScore": 104,
-          "ruleScoreNormalized": 35.714285714285715,
-          "finalScore": 35.71,
+          "ruleScoreNormalized": 100,
+          "finalScore": 104,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -733,13 +911,13 @@
         "contentSnippet": "教程：如何做 prompt injection 防护，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-03T08:00:00.000Z",
         "category": "tutorial",
-        "score": 30.95,
-        "importance": "low",
+        "score": 102,
+        "importance": "high",
         "recommendationReason": "可直接学习实践",
         "scoreBreakdown": {
           "ruleScore": 102,
-          "ruleScoreNormalized": 30.952380952380953,
-          "finalScore": 30.95,
+          "ruleScoreNormalized": 100,
+          "finalScore": 102,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -753,13 +931,13 @@
         "contentSnippet": "教程：从零实现结构化输出与 JSON schema 校验，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-04T05:00:00.000Z",
         "category": "tutorial",
-        "score": 26.19,
-        "importance": "low",
+        "score": 100,
+        "importance": "high",
         "recommendationReason": "可直接学习实践",
         "scoreBreakdown": {
           "ruleScore": 100,
-          "ruleScoreNormalized": 26.190476190476193,
-          "finalScore": 26.19,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -773,13 +951,13 @@
         "contentSnippet": "Hugging Face 推出轻量化 inference toolkit，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-05T11:00:00.000Z",
         "category": "tooling",
-        "score": 23.81,
-        "importance": "low",
+        "score": 99,
+        "importance": "high",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
           "ruleScore": 99,
-          "ruleScoreNormalized": 23.809523809523807,
-          "finalScore": 23.81,
+          "ruleScoreNormalized": 99,
+          "finalScore": 99,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -793,13 +971,13 @@
         "contentSnippet": "案例复盘：AI 应用灰度发布策略，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-02T11:00:00.000Z",
         "category": "industry-news",
-        "score": 23.81,
-        "importance": "low",
+        "score": 99,
+        "importance": "high",
         "recommendationReason": "模型或产品发布",
         "scoreBreakdown": {
           "ruleScore": 99,
-          "ruleScoreNormalized": 23.809523809523807,
-          "finalScore": 23.81,
+          "ruleScoreNormalized": 99,
+          "finalScore": 99,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -813,13 +991,13 @@
         "contentSnippet": "Open-source eval framework 支持自定义指标，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-04T20:00:00.000Z",
         "category": "tooling",
-        "score": 16.67,
-        "importance": "low",
+        "score": 96,
+        "importance": "high",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
           "ruleScore": 96,
-          "ruleScoreNormalized": 16.666666666666664,
-          "finalScore": 16.67,
+          "ruleScoreNormalized": 96,
+          "finalScore": 96,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -833,13 +1011,13 @@
         "contentSnippet": "工程实践：多模型路由的成本优化方案，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-04T02:00:00.000Z",
         "category": "tutorial",
-        "score": 16.67,
-        "importance": "low",
+        "score": 96,
+        "importance": "high",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
           "ruleScore": 96,
-          "ruleScoreNormalized": 16.666666666666664,
-          "finalScore": 16.67,
+          "ruleScoreNormalized": 96,
+          "finalScore": 96,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -853,13 +1031,13 @@
         "contentSnippet": "最佳实践：如何构建可审计的 AI 周报系统，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-03T20:00:00.000Z",
         "category": "tutorial",
-        "score": 16.67,
-        "importance": "low",
+        "score": 96,
+        "importance": "high",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
           "ruleScore": 96,
-          "ruleScoreNormalized": 16.666666666666664,
-          "finalScore": 16.67,
+          "ruleScoreNormalized": 96,
+          "finalScore": 96,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -873,13 +1051,13 @@
         "contentSnippet": "新产品：团队知识库智能检索助手，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-03T14:00:00.000Z",
         "category": "tutorial",
-        "score": 16.67,
-        "importance": "low",
+        "score": 96,
+        "importance": "high",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
           "ruleScore": 96,
-          "ruleScoreNormalized": 16.666666666666664,
-          "finalScore": 16.67,
+          "ruleScoreNormalized": 96,
+          "finalScore": 96,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -893,13 +1071,13 @@
         "contentSnippet": "社区案例：前端团队如何接入 AI coding assistant，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-04T23:00:00.000Z",
         "category": "tutorial",
-        "score": 11.9,
-        "importance": "low",
+        "score": 94,
+        "importance": "high",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
           "ruleScore": 94,
-          "ruleScoreNormalized": 11.904761904761903,
-          "finalScore": 11.9,
+          "ruleScoreNormalized": 94,
+          "finalScore": 94,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -913,13 +1091,13 @@
         "contentSnippet": "新工具：可视化 prompt tracing 平台，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-04T17:00:00.000Z",
         "category": "tooling",
-        "score": 11.9,
-        "importance": "low",
+        "score": 94,
+        "importance": "high",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
           "ruleScore": 94,
-          "ruleScoreNormalized": 11.904761904761903,
-          "finalScore": 11.9,
+          "ruleScoreNormalized": 94,
+          "finalScore": 94,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -933,13 +1111,13 @@
         "contentSnippet": "Meta AI 论文解读：高效推理架构，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-04T11:00:00.000Z",
         "category": "tutorial",
-        "score": 11.9,
-        "importance": "low",
+        "score": 94,
+        "importance": "high",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
           "ruleScore": 94,
-          "ruleScoreNormalized": 11.904761904761903,
-          "finalScore": 11.9,
+          "ruleScoreNormalized": 94,
+          "finalScore": 94,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -953,13 +1131,13 @@
         "contentSnippet": "行业动态：AI 开发工具并购事件跟踪，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-03T05:00:00.000Z",
         "category": "industry-news",
-        "score": 11.9,
-        "importance": "low",
+        "score": 94,
+        "importance": "high",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
           "ruleScore": 94,
-          "ruleScoreNormalized": 11.904761904761903,
-          "finalScore": 11.9,
+          "ruleScoreNormalized": 94,
+          "finalScore": 94,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -973,13 +1151,13 @@
         "contentSnippet": "新方案：混合检索在企业问答中的效果，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-02T20:00:00.000Z",
         "category": "tutorial",
-        "score": 4.76,
-        "importance": "low",
+        "score": 91,
+        "importance": "high",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
           "ruleScore": 91,
-          "ruleScoreNormalized": 4.761904761904762,
-          "finalScore": 4.76,
+          "ruleScoreNormalized": 91,
+          "finalScore": 91,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -993,13 +1171,13 @@
         "contentSnippet": "产品更新：开发者平台新增 observability 面板，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-02T17:00:00.000Z",
         "category": "tooling",
-        "score": 0,
-        "importance": "low",
+        "score": 89,
+        "importance": "high",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
           "ruleScore": 89,
-          "ruleScoreNormalized": 0,
-          "finalScore": 0,
+          "ruleScoreNormalized": 89,
+          "finalScore": 89,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -1009,72 +1187,47 @@
       {
         "itemId": "b038bc7a8332",
         "title": "LangGraph 发布新的 multi-agent orchestration 指南",
-        "summary": "LangGraph 发布新的多代理编排指南，聚焦工程实践与可落地实施方案，为团队提供系统化的",
-        "recommendation": "建议本周优先评估《LangGraph 发布新的 multi-agent orchestration 指南》相关方案，重点关注多 Agent 协作策略与稳定性。",
+        "summary": "LangGraph 发布新的 multi-agent orchestration 指南，聚焦工程实践与可落地方案。",
+        "recommendation": "Agent 工程实践相关",
         "evidenceItemIds": [
           "b038bc7a8332"
-        ],
-        "domainTag": "agent",
-        "intentTag": "news",
-        "actionability": 1,
-        "confidence": 0.6,
-        "llmScore": 100
+        ]
       },
       {
         "itemId": "6e7b6da1a9ca",
         "title": "LangChain 发布 long-term memory 教程",
-        "summary": "LangChain发布long-term memory教程，聚焦工程实践与可落地方案，帮助开发者实现Agent的持久化记忆能力。",
-        "recommendation": "对使用LangChain构建Agent的团队有直接工程价值，建议优先学习该教程以实现对话上下文的长期记忆。",
+        "summary": "LangChain 发布 long-term memory 教程，聚焦工程实践与可落地方案。",
+        "recommendation": "Agent 工程实践相关",
         "evidenceItemIds": [
           "6e7b6da1a9ca"
-        ],
-        "domainTag": "industry-news",
-        "intentTag": "news",
-        "actionability": 1,
-        "confidence": 0.6,
-        "llmScore": 100
+        ]
       },
       {
         "itemId": "2fc17ec60b30",
         "title": "Anthropic 分享 Agent 安全防护实践",
-        "summary": "Anthropic 分享 Agent 安全防护实践，聚焦工程实践与可落地方案，提供生产环境下的 Agent 安全",
-        "recommendation": "建议本周优先评估《Anthropic 分享 Agent 安全防护实践》相关方案，重点关注多 Agent 协作策略与稳定性。",
+        "summary": "Anthropic 分享 Agent 安全防护实践，聚焦工程实践与可落地方案。",
+        "recommendation": "Agent 工程实践相关",
         "evidenceItemIds": [
           "2fc17ec60b30"
-        ],
-        "domainTag": "agent",
-        "intentTag": "news",
-        "actionability": 1,
-        "confidence": 0.6,
-        "llmScore": 100
+        ]
       },
       {
         "itemId": "c5d5a1ed3c3c",
         "title": "GitHub 热门开源：高性能 RAG pipeline 模板",
-        "summary": "该模板提供生产级 RAG pipeline 实现，包含检索优化、向量索引与召回策略等关键模块，可直接用于快速搭建高效 RAG 系统。",
-        "recommendation": "建议本周优先评估《GitHub 热门开源：高性能 RAG pipeline 模板》相关方案，重点关注仓库成熟度与二次开发成本。",
+        "summary": "GitHub 热门开源：高性能 RAG pipeline 模板，聚焦工程实践与可落地方案。",
+        "recommendation": "开源生态更新",
         "evidenceItemIds": [
           "c5d5a1ed3c3c"
-        ],
-        "domainTag": "open-source",
-        "intentTag": "news",
-        "actionability": 1,
-        "confidence": 0.6,
-        "llmScore": 100
+        ]
       },
       {
         "itemId": "f89a7abc69bc",
         "title": "开源工具：低代码 Agent workflow builder",
-        "summary": "该工具降低 Agent workflow 构建门槛，提供可视化编排能力，适合快速迭代与原型验证。",
-        "recommendation": "对需要快速搭建 Agent 工作流的工程团队有直接价值，建议评估其与现有 LangChain 生态的集成成本。",
+        "summary": "开源工具：低代码 Agent workflow builder，聚焦工程实践与可落地方案。",
+        "recommendation": "Agent 工程实践相关",
         "evidenceItemIds": [
           "f89a7abc69bc"
-        ],
-        "domainTag": "open-source",
-        "intentTag": "news",
-        "actionability": 1,
-        "confidence": 0.6,
-        "llmScore": 100
+        ]
       },
       {
         "itemId": "2ae7cf6a0614",
@@ -1084,13 +1237,229 @@
         "evidenceItemIds": [
           "2ae7cf6a0614"
         ]
+      },
+      {
+        "itemId": "d2fe0fff6b4c",
+        "title": "Papers with Code：新一代代码生成 benchmark",
+        "summary": "Papers with Code：新一代代码生成 benchmark，聚焦工程实践与可落地方案。",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "d2fe0fff6b4c"
+        ]
+      },
+      {
+        "itemId": "0cc641e2fb9f",
+        "title": "InfoQ 专栏：企业落地 AI Agent 的工程化要点",
+        "summary": "InfoQ 专栏：企业落地 AI Agent 的工程化要点，聚焦工程实践与可落地方案。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "0cc641e2fb9f"
+        ]
+      },
+      {
+        "itemId": "b04ca3e5003b",
+        "title": "OpenAI 发布最新 reasoning model 与 function calling 增强",
+        "summary": "OpenAI 发布最新 reasoning model 与 function calling 增强，聚焦工程实践与可落地方案。",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "b04ca3e5003b"
+        ]
+      },
+      {
+        "itemId": "bffa9c5284f6",
+        "title": "Google DeepMind 发布多模态研究进展",
+        "summary": "Google DeepMind 发布多模态研究进展，聚焦工程实践与可落地方案。",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "bffa9c5284f6"
+        ]
+      },
+      {
+        "itemId": "5d99a513b77b",
+        "title": "研究综述：长期记忆对 Agent 的影响",
+        "summary": "研究综述：长期记忆对 Agent 的影响，聚焦工程实践与可落地方案。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "5d99a513b77b"
+        ]
+      },
+      {
+        "itemId": "28c10ad734e1",
+        "title": "行业新闻：主流云厂商联合发布模型互操作规范",
+        "summary": "行业新闻：主流云厂商联合发布模型互操作规范，聚焦工程实践与可落地方案。",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "28c10ad734e1"
+        ]
+      },
+      {
+        "itemId": "2b7b3f77799b",
+        "title": "开源项目：支持浏览器端 embedding 的库",
+        "summary": "开源项目：支持浏览器端 embedding 的库，聚焦工程实践与可落地方案。",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "2b7b3f77799b"
+        ]
+      },
+      {
+        "itemId": "f6f394b14c60",
+        "title": "研究快讯：多 Agent 协作的通信协议优化",
+        "summary": "研究快讯：多 Agent 协作的通信协议优化，聚焦工程实践与可落地方案。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "f6f394b14c60"
+        ]
+      },
+      {
+        "itemId": "e0338d07938c",
+        "title": "评测：不同模型在 coding task 上的表现差异",
+        "summary": "评测：不同模型在 coding task 上的表现差异，聚焦工程实践与可落地方案。",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "e0338d07938c"
+        ]
+      },
+      {
+        "itemId": "52634bd97a3d",
+        "title": "技术分享：LangGraph checkpoint 机制详解",
+        "summary": "技术分享：LangGraph checkpoint 机制详解，聚焦工程实践与可落地方案。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "52634bd97a3d"
+        ]
+      },
+      {
+        "itemId": "29fb4d96b0fa",
+        "title": "教程：如何做 prompt injection 防护",
+        "summary": "教程：如何做 prompt injection 防护，聚焦工程实践与可落地方案。",
+        "recommendation": "可直接学习实践",
+        "evidenceItemIds": [
+          "29fb4d96b0fa"
+        ]
+      },
+      {
+        "itemId": "bd4efba83f0e",
+        "title": "教程：从零实现结构化输出与 JSON schema 校验",
+        "summary": "教程：从零实现结构化输出与 JSON schema 校验，聚焦工程实践与可落地方案。",
+        "recommendation": "可直接学习实践",
+        "evidenceItemIds": [
+          "bd4efba83f0e"
+        ]
+      },
+      {
+        "itemId": "1dbef653499b",
+        "title": "Hugging Face 推出轻量化 inference toolkit",
+        "summary": "Hugging Face 推出轻量化 inference toolkit，聚焦工程实践与可落地方案。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1dbef653499b"
+        ]
+      },
+      {
+        "itemId": "4b1206b984b1",
+        "title": "案例复盘：AI 应用灰度发布策略",
+        "summary": "案例复盘：AI 应用灰度发布策略，聚焦工程实践与可落地方案。",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "4b1206b984b1"
+        ]
+      },
+      {
+        "itemId": "40b20dfc1bbf",
+        "title": "Open-source eval framework 支持自定义指标",
+        "summary": "Open-source eval framework 支持自定义指标，聚焦工程实践与可落地方案。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "40b20dfc1bbf"
+        ]
+      },
+      {
+        "itemId": "ac1181ab4aa0",
+        "title": "工程实践：多模型路由的成本优化方案",
+        "summary": "工程实践：多模型路由的成本优化方案，聚焦工程实践与可落地方案。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "ac1181ab4aa0"
+        ]
+      },
+      {
+        "itemId": "4cf5531e8b10",
+        "title": "最佳实践：如何构建可审计的 AI 周报系统",
+        "summary": "最佳实践：如何构建可审计的 AI 周报系统，聚焦工程实践与可落地方案。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "4cf5531e8b10"
+        ]
+      },
+      {
+        "itemId": "b665a79b9b96",
+        "title": "新产品：团队知识库智能检索助手",
+        "summary": "新产品：团队知识库智能检索助手，聚焦工程实践与可落地方案。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b665a79b9b96"
+        ]
+      },
+      {
+        "itemId": "f2241d647f2c",
+        "title": "社区案例：前端团队如何接入 AI coding assistant",
+        "summary": "社区案例：前端团队如何接入 AI coding assistant，聚焦工程实践与可落地方案。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f2241d647f2c"
+        ]
+      },
+      {
+        "itemId": "ee00b654ad92",
+        "title": "新工具：可视化 prompt tracing 平台",
+        "summary": "新工具：可视化 prompt tracing 平台，聚焦工程实践与可落地方案。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "ee00b654ad92"
+        ]
+      },
+      {
+        "itemId": "f575594a0488",
+        "title": "Meta AI 论文解读：高效推理架构",
+        "summary": "Meta AI 论文解读：高效推理架构，聚焦工程实践与可落地方案。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f575594a0488"
+        ]
+      },
+      {
+        "itemId": "8afb009ee855",
+        "title": "行业动态：AI 开发工具并购事件跟踪",
+        "summary": "行业动态：AI 开发工具并购事件跟踪，聚焦工程实践与可落地方案。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "8afb009ee855"
+        ]
+      },
+      {
+        "itemId": "95f320a04613",
+        "title": "新方案：混合检索在企业问答中的效果",
+        "summary": "新方案：混合检索在企业问答中的效果，聚焦工程实践与可落地方案。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "95f320a04613"
+        ]
+      },
+      {
+        "itemId": "bda80c0ecf75",
+        "title": "产品更新：开发者平台新增 observability 面板",
+        "summary": "产品更新：开发者平台新增 observability 面板，聚焦工程实践与可落地方案。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "bda80c0ecf75"
+        ]
       }
     ],
     "quickDigest": [
       {
         "itemId": "b038bc7a8332",
         "title": "LangGraph 发布新的 multi-agent orchestration 指南",
-        "takeaway": "LangGraph 发布新的多代理编排指南，聚焦工程实践与可落地实施方案，为团队提供系统化的",
+        "takeaway": "LangGraph 发布新的 multi-agent orchestration 指南，聚焦工程实践与可落地方案。",
         "evidenceItemIds": [
           "b038bc7a8332"
         ]
@@ -1098,7 +1467,7 @@
       {
         "itemId": "6e7b6da1a9ca",
         "title": "LangChain 发布 long-term memory 教程",
-        "takeaway": "LangChain发布long-term memory教程，聚焦工程实践与可落地方案，帮助开发者实现Agent的持久化记忆能力。",
+        "takeaway": "LangChain 发布 long-term memory 教程，聚焦工程实践与可落地方案。",
         "evidenceItemIds": [
           "6e7b6da1a9ca"
         ]
@@ -1106,7 +1475,7 @@
       {
         "itemId": "2fc17ec60b30",
         "title": "Anthropic 分享 Agent 安全防护实践",
-        "takeaway": "Anthropic 分享 Agent 安全防护实践，聚焦工程实践与可落地方案，提供生产环境下的 Agent 安全",
+        "takeaway": "Anthropic 分享 Agent 安全防护实践，聚焦工程实践与可落地方案。",
         "evidenceItemIds": [
           "2fc17ec60b30"
         ]
@@ -1114,9 +1483,57 @@
       {
         "itemId": "c5d5a1ed3c3c",
         "title": "GitHub 热门开源：高性能 RAG pipeline 模板",
-        "takeaway": "该模板提供生产级 RAG pipeline 实现，包含检索优化、向量索引与召回策略等关键模块，可直接用于快速搭建高效 RAG 系统。",
+        "takeaway": "GitHub 热门开源：高性能 RAG pipeline 模板，聚焦工程实践与可落地方案。",
         "evidenceItemIds": [
           "c5d5a1ed3c3c"
+        ]
+      },
+      {
+        "itemId": "f89a7abc69bc",
+        "title": "开源工具：低代码 Agent workflow builder",
+        "takeaway": "开源工具：低代码 Agent workflow builder，聚焦工程实践与可落地方案。",
+        "evidenceItemIds": [
+          "f89a7abc69bc"
+        ]
+      },
+      {
+        "itemId": "2ae7cf6a0614",
+        "title": "研究动态：tool-use agent 的鲁棒性评测",
+        "takeaway": "研究动态：tool-use agent 的鲁棒性评测，聚焦工程实践与可落地方案。",
+        "evidenceItemIds": [
+          "2ae7cf6a0614"
+        ]
+      },
+      {
+        "itemId": "d2fe0fff6b4c",
+        "title": "Papers with Code：新一代代码生成 benchmark",
+        "takeaway": "Papers with Code：新一代代码生成 benchmark，聚焦工程实践与可落地方案。",
+        "evidenceItemIds": [
+          "d2fe0fff6b4c"
+        ]
+      },
+      {
+        "itemId": "0cc641e2fb9f",
+        "title": "InfoQ 专栏：企业落地 AI Agent 的工程化要点",
+        "takeaway": "InfoQ 专栏：企业落地 AI Agent 的工程化要点，聚焦工程实践与可落地方案。",
+        "evidenceItemIds": [
+          "0cc641e2fb9f"
+        ]
+      },
+      {
+        "itemId": "b04ca3e5003b",
+        "title": "OpenAI 发布最新 reasoning model 与 function calling 增强",
+        "takeaway": "OpenAI 发布最新 reasoning model 与 function calling 增强，聚焦工程实践与可落地方案。",
+        "evidenceItemIds": [
+          "b04ca3e5003b"
+        ]
+      },
+      {
+        "itemId": "bffa9c5284f6",
+        "title": "Google DeepMind 发布多模态研究进展",
+        "takeaway": "Google DeepMind 发布多模态研究进展，聚焦工程实践与可落地方案。",
+        "evidenceItemIds": [
+          "bffa9c5284f6"
         ]
       }
     ],
@@ -1127,16 +1544,17 @@
       "provider": "minimax",
       "model": "MiniMax-M2.5",
       "promptVersion": "m5.2-v1",
-      "startedAt": "2026-03-09T08:10:25.774Z",
-      "finishedAt": "2026-03-09T08:12:34.554Z",
-      "durationMs": 128783,
-      "inputCount": 6,
-      "summarizedCount": 5,
-      "fallbackTriggered": false,
-      "effectiveConcurrency": 2,
-      "assistAppliedCount": 5,
-      "assistFallbackCount": 1,
-      "leadFallbackTriggered": true
+      "startedAt": "2026-03-09T08:14:14.495Z",
+      "finishedAt": "2026-03-09T08:17:05.017Z",
+      "durationMs": 170522,
+      "inputCount": 30,
+      "summarizedCount": 3,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:50%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 30,
+      "leadFallbackTriggered": true,
+      "effectiveConcurrency": 2
     },
     "highlights": [
       {
@@ -1148,21 +1566,15 @@
         "contentSnippet": "LangGraph 发布新的 multi-agent orchestration 指南，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-06T02:00:00.000Z",
         "category": "agent",
-        "score": 100,
+        "score": 131,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
-        "domainTag": "agent",
-        "intentTag": "news",
-        "actionability": 1,
-        "confidence": 0.6,
-        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 131,
           "ruleScoreNormalized": 100,
-          "llmScore": 100,
-          "finalScore": 100,
+          "finalScore": 131,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -1174,21 +1586,15 @@
         "contentSnippet": "LangChain 发布 long-term memory 教程，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-05T05:00:00.000Z",
         "category": "industry-news",
-        "score": 99.17,
+        "score": 130,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
-        "domainTag": "industry-news",
-        "intentTag": "news",
-        "actionability": 1,
-        "confidence": 0.6,
-        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 130,
-          "ruleScoreNormalized": 97.61904761904762,
-          "llmScore": 100,
-          "finalScore": 99.17,
+          "ruleScoreNormalized": 100,
+          "finalScore": 130,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -1200,21 +1606,15 @@
         "contentSnippet": "Anthropic 分享 Agent 安全防护实践，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-05T20:00:00.000Z",
         "category": "agent",
-        "score": 98.33,
+        "score": 129,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
-        "domainTag": "agent",
-        "intentTag": "news",
-        "actionability": 1,
-        "confidence": 0.6,
-        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 129,
-          "ruleScoreNormalized": 95.23809523809523,
-          "llmScore": 100,
-          "finalScore": 98.33,
+          "ruleScoreNormalized": 100,
+          "finalScore": 129,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -1226,21 +1626,15 @@
         "contentSnippet": "GitHub 热门开源：高性能 RAG pipeline 模板，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-05T17:00:00.000Z",
         "category": "open-source",
-        "score": 95.83,
+        "score": 126,
         "importance": "high",
         "recommendationReason": "开源生态更新",
-        "domainTag": "open-source",
-        "intentTag": "news",
-        "actionability": 1,
-        "confidence": 0.6,
-        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 126,
-          "ruleScoreNormalized": 88.09523809523809,
-          "llmScore": 100,
-          "finalScore": 95.83,
+          "ruleScoreNormalized": 100,
+          "finalScore": 126,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -1252,21 +1646,15 @@
         "contentSnippet": "开源工具：低代码 Agent workflow builder，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-03T02:00:00.000Z",
         "category": "open-source",
-        "score": 93.33,
+        "score": 123,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
-        "domainTag": "open-source",
-        "intentTag": "news",
-        "actionability": 1,
-        "confidence": 0.6,
-        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 123,
-          "ruleScoreNormalized": 80.95238095238095,
-          "llmScore": 100,
-          "finalScore": 93.33,
+          "ruleScoreNormalized": 100,
+          "finalScore": 123,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -1278,13 +1666,13 @@
         "contentSnippet": "研究动态：tool-use agent 的鲁棒性评测，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-04T14:00:00.000Z",
         "category": "tooling",
-        "score": 76.19,
-        "importance": "medium",
+        "score": 121,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
           "ruleScore": 121,
-          "ruleScoreNormalized": 76.19047619047619,
-          "finalScore": 76.19,
+          "ruleScoreNormalized": 100,
+          "finalScore": 121,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -1298,13 +1686,13 @@
         "contentSnippet": "Papers with Code：新一代代码生成 benchmark，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-05T14:00:00.000Z",
         "category": "research",
-        "score": 64.29,
-        "importance": "low",
+        "score": 116,
+        "importance": "high",
         "recommendationReason": "评测与性能信息",
         "scoreBreakdown": {
           "ruleScore": 116,
-          "ruleScoreNormalized": 64.28571428571429,
-          "finalScore": 64.29,
+          "ruleScoreNormalized": 100,
+          "finalScore": 116,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -1318,13 +1706,13 @@
         "contentSnippet": "InfoQ 专栏：企业落地 AI Agent 的工程化要点，聚焦工程实践与可落地方案。",
         "publishedAt": "2031-01-05T02:00:00.000Z",
         "category": "agent",
-        "score": 64.29,
-        "importance": "low",
+        "score": 116,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
           "ruleScore": 116,
-          "ruleScoreNormalized": 64.28571428571429,
-          "finalScore": 64.29,
+          "ruleScoreNormalized": 100,
+          "finalScore": 116,
           "fusionWeight": 0.65,
           "usedLlm": false
         }
@@ -1334,9 +1722,9 @@
       "collectedCount": 30,
       "normalizedCount": 30,
       "dedupedCount": 30,
-      "highImportanceCount": 5,
-      "mediumImportanceCount": 1,
-      "lowImportanceCount": 24,
+      "highImportanceCount": 30,
+      "mediumImportanceCount": 0,
+      "lowImportanceCount": 0,
       "categoryBreakdown": {
         "open-source": 3,
         "tooling": 5,
@@ -1348,10 +1736,8 @@
       }
     },
     "warnings": [
-      "LLM 部分条目回退规则摘要：1/6（success=83%）",
-      "LLM 条目失败明细（前 3/6）：minimax_invalid_response:missing_content",
-      "LLM 排序辅助部分回退：1/6",
-      "LLM 条目失败明细（前 3/6）：missing_llm_score"
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:50%<70%",
+      "LLM 条目失败明细（前 3/6）：minimax_invalid_response:missing_content | minimax_invalid_response:missing_content | minimax_invalid_response:missing_content"
     ],
     "reviewDeadlineAt": "2031-01-06T04:30:00.000Z"
   }
