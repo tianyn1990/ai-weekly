@@ -101,6 +101,14 @@ export interface LlmQuickDigestItem {
   evidenceItemIds: string[];
 }
 
+export interface CategoryLeadSummary {
+  category: ItemCategory;
+  lead: string;
+  sourceItemIds: string[];
+  fallbackTriggered: boolean;
+  reason?: string;
+}
+
 export interface LlmFailureStats {
   totalFailed: number;
   timeout: number;
@@ -121,6 +129,20 @@ export interface LlmRetryStats {
   serialTriggerMaxConsecutiveMissingContent: number;
 }
 
+export interface LlmAdaptiveDegradeStats {
+  windowSize: number;
+  triggerMissingContentRateThreshold: number;
+  recoverSuccessRateThreshold: number;
+  triggerCount: number;
+  recoverCount: number;
+  degradedRetriedItemCount: number;
+  currentMode: "normal" | "degraded";
+  maxWindowMissingContentRate: number;
+  maxWindowSuccessRate: number;
+  lastWindowMissingContentRate: number;
+  lastWindowSuccessRate: number;
+}
+
 export interface LlmSummaryMeta {
   enabled: boolean;
   provider?: "minimax";
@@ -139,6 +161,7 @@ export interface LlmSummaryMeta {
   leadFallbackTriggered?: boolean;
   failureStats?: LlmFailureStats;
   retryStats?: LlmRetryStats;
+  adaptiveDegradeStats?: LlmAdaptiveDegradeStats;
 }
 
 export interface ScoreBreakdown {
@@ -258,6 +281,7 @@ export interface ReportState {
   itemSummaries: LlmItemSummary[];
   quickDigest: LlmQuickDigestItem[];
   leadSummary: string;
+  categoryLeadSummaries: CategoryLeadSummary[];
   summaryInputHash: string;
   llmSummaryMeta: LlmSummaryMeta;
   llmSummaryEnabled: boolean;

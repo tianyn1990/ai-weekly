@@ -110,11 +110,133 @@ describe("llm summary", () => {
       },
     });
 
-    expect(fetchMock).toHaveBeenCalledTimes(15);
+    expect(fetchMock).toHaveBeenCalledTimes(16);
     expect(result.meta.fallbackTriggered).toBe(false);
     expect(result.itemSummaries.length).toBe(14);
     expect(result.quickDigest.length).toBe(8);
     expect(result.quickDigest[0]?.evidenceItemIds.length).toBeGreaterThan(0);
+  });
+
+  it("未显式配置全局并发时应使用默认值 2", async () => {
+    const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
+      const payload = JSON.parse(String(init?.body ?? "{}")) as {
+        messages?: Array<{ role: string; content?: Array<{ type?: string; text?: string }> }>;
+      };
+      const userContent = payload.messages?.find((message) => message.role === "user")?.content?.[0]?.text ?? "{}";
+      const parsed = JSON.parse(userContent) as { item?: { id?: string } };
+      if (parsed.item?.id) {
+        return {
+          ok: true,
+          json: async () => ({
+            content: [
+              {
+                type: "text",
+                text: JSON.stringify({
+                  summary: `${parsed.item.id} 总结`,
+                  recommendation: `${parsed.item.id} 推荐`,
+                  evidenceItemIds: [parsed.item.id],
+                  confidence: 0.9,
+                  llmScore: 90,
+                }),
+              },
+            ],
+          }),
+        } satisfies Partial<Response> as Response;
+      }
+      return {
+        ok: true,
+        json: async () => ({
+          content: [{ type: "text", text: JSON.stringify({ lead: "导语/导读测试文本" }) }],
+        }),
+      } satisfies Partial<Response> as Response;
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    const result = await buildLlmSummary({
+      rankedItems: Array.from({ length: 8 }).map((_, index) => createItem(index + 1)),
+      generatedAt: "2026-03-08T00:00:00.000Z",
+      settings: {
+        enabled: true,
+        provider: "minimax",
+        minimaxApiKey: "test-key",
+        minimaxModel: "MiniMax-M2.5",
+        timeoutMs: 3000,
+        maxItems: 8,
+        maxConcurrency: 6,
+        promptVersion: "m5.3-test",
+      },
+    });
+
+    expect(result.meta.fallbackTriggered).toBe(false);
+    expect(result.meta.effectiveConcurrency).toBe(2);
+  });
+
+  it("分类导读生成失败时应回退模板导读", async () => {
+    const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
+      const payload = JSON.parse(String(init?.body ?? "{}")) as {
+        messages?: Array<{ role: string; content?: Array<{ type?: string; text?: string }> }>;
+      };
+      const userContent = payload.messages?.find((message) => message.role === "user")?.content?.[0]?.text ?? "{}";
+      const parsed = JSON.parse(userContent) as { item?: { id?: string }; task?: string };
+      if (parsed.item?.id) {
+        return {
+          ok: true,
+          json: async () => ({
+            content: [
+              {
+                type: "text",
+                text: JSON.stringify({
+                  summary: `${parsed.item.id} 总结`,
+                  recommendation: `${parsed.item.id} 推荐`,
+                  evidenceItemIds: [parsed.item.id],
+                  confidence: 0.8,
+                  llmScore: 80,
+                }),
+              },
+            ],
+          }),
+        } satisfies Partial<Response> as Response;
+      }
+      if (parsed.task?.includes("导读")) {
+        return {
+          ok: true,
+          json: async () => ({
+            content: [],
+          }),
+        } satisfies Partial<Response> as Response;
+      }
+      return {
+        ok: true,
+        json: async () => ({
+          content: [{ type: "text", text: JSON.stringify({ lead: "本期导语测试文本。" }) }],
+        }),
+      } satisfies Partial<Response> as Response;
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    const rankedItems = Array.from({ length: 6 }).map((_, index) => ({
+      ...createItem(index + 1),
+      category: index % 2 === 0 ? "agent" : "tooling",
+    })) as RankedItem[];
+
+    const result = await buildLlmSummary({
+      rankedItems,
+      generatedAt: "2026-03-08T00:00:00.000Z",
+      settings: {
+        enabled: true,
+        provider: "minimax",
+        minimaxApiKey: "test-key",
+        minimaxModel: "MiniMax-M2.5",
+        timeoutMs: 3000,
+        maxItems: 6,
+        maxConcurrency: 2,
+        promptVersion: "m5.3-test",
+      },
+    });
+
+    expect(result.meta.fallbackTriggered).toBe(false);
+    expect(result.categoryLeadSummaries.length).toBeGreaterThanOrEqual(2);
+    expect(result.categoryLeadSummaries.some((item) => item.fallbackTriggered)).toBe(true);
   });
 
   it("首轮应使用轻量 prompt，严格重试才注入 few-shots", async () => {
@@ -519,7 +641,7 @@ describe("llm summary", () => {
     expect(result.warnings.join("\n")).toContain("LLM 重试统计");
   });
 
-  it("missing_content 连续达到阈值时应触发临时串行降载重试", async () => {
+  it("missing_content 簇状失败时应触发自适应降载并优先重试失败条目", async () => {
     const callCountById = new Map<string, number>();
     const unstableIds = new Set(["item-1", "item-2", "item-3"]);
     const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
@@ -587,9 +709,9 @@ describe("llm summary", () => {
 
     expect(result.meta.fallbackTriggered).toBe(false);
     expect(result.meta.summarizedCount).toBe(6);
-    expect(result.meta.retryStats?.serialDegradeTriggered).toBe(true);
-    expect(result.meta.retryStats?.serialRetriedItemCount).toBe(3);
-    expect(result.warnings.join("\n")).toContain("临时降载串行重试");
+    expect((result.meta.adaptiveDegradeStats?.triggerCount ?? 0) > 0).toBe(true);
+    expect((result.meta.adaptiveDegradeStats?.degradedRetriedItemCount ?? 0) > 0).toBe(true);
+    expect(result.warnings.join("\n")).toContain("窗口 missing_content 偏高");
   });
 
   it("可复用判断应基于 input hash 与 fallback 状态", () => {
@@ -620,6 +742,14 @@ describe("llm summary", () => {
           title: "标题1",
           takeaway: "总结",
           evidenceItemIds: ["item-1"],
+        },
+      ],
+      categoryLeadSummaries: [
+        {
+          category: "agent",
+          lead: "Agent 方向本期建议优先关注工程落地与稳定性实践。",
+          sourceItemIds: ["item-1"],
+          fallbackTriggered: true,
         },
       ],
     });

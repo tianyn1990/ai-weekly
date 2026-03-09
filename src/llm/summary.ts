@@ -3,6 +3,8 @@ import crypto from "node:crypto";
 import { z } from "zod";
 
 import type {
+  CategoryLeadSummary,
+  LlmAdaptiveDegradeStats,
   LlmFailureStats,
   LlmItemSummary,
   LlmQuickDigestItem,
@@ -47,6 +49,7 @@ export interface LlmSummaryResult {
   itemSummaries: LlmItemSummary[];
   quickDigest: LlmQuickDigestItem[];
   leadSummary: string;
+  categoryLeadSummaries: CategoryLeadSummary[];
   summaryInputHash: string;
   meta: LlmSummaryMeta;
   warnings: string[];
@@ -85,6 +88,13 @@ interface ItemExecutionStats {
   successRate: number;
   fallbackReasons: string[];
   failureStats: LlmFailureStats;
+}
+
+interface AdaptiveWindowStats {
+  sampleSize: number;
+  missingContentCount: number;
+  missingContentRate: number;
+  successRate: number;
 }
 
 interface RetryTelemetry {
@@ -127,11 +137,15 @@ export interface BuildLlmSummaryOutput extends LlmSummaryResult {
 
 const LLM_GLOBAL_FALLBACK_SUCCESS_RATE_THRESHOLD = 0.7;
 const LLM_GLOBAL_FALLBACK_MIN_FAILED_ITEMS = 3;
-const DEFAULT_GLOBAL_MAX_CONCURRENCY = 3;
+const DEFAULT_GLOBAL_MAX_CONCURRENCY = 2;
 const DEFAULT_LLM_RANK_FUSION_WEIGHT = 0.65;
 const DEFAULT_LLM_ASSIST_MIN_CONFIDENCE = 0.5;
 const MISSING_CONTENT_EXTRA_RETRIES = 1;
 const MISSING_CONTENT_CONSECUTIVE_DEGRADE_THRESHOLD = 3;
+const ADAPTIVE_DEGRADE_WINDOW_SIZE = 6;
+const ADAPTIVE_DEGRADE_MIN_SAMPLE_SIZE = 3;
+const ADAPTIVE_DEGRADE_MISSING_CONTENT_RATE_THRESHOLD = 0.34;
+const ADAPTIVE_DEGRADE_RECOVER_SUCCESS_RATE_THRESHOLD = 0.85;
 const RETRY_BASE_DELAY_MS = 180;
 const RETRY_MAX_DELAY_MS = 800;
 const SERIAL_RETRY_INTERVAL_MS = 220;
@@ -240,10 +254,44 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
     let serialRetriedItemCount = 0;
     let serialDegradeTriggered = false;
     let serialTriggerMaxConsecutiveMissingContent = resolveMaxConsecutiveMissingContentFailures(itemResults);
+    const adaptiveDegradeStats = createInitialAdaptiveDegradeStats();
+    let adaptiveRetriedItemCount = 0;
     const adaptiveWarnings: string[] = [];
+
+    const initialWindowStats = computeAdaptiveWindowStats(itemResults, ADAPTIVE_DEGRADE_WINDOW_SIZE);
+    updateAdaptiveDegradeStats(adaptiveDegradeStats, initialWindowStats);
+
+    // 在局部窗口出现簇状 missing_content 时，优先“降并发 + 失败条目重试”抑制错误扩散。
+    if (shouldTriggerAdaptiveDegrade(initialWindowStats)) {
+      adaptiveDegradeStats.currentMode = "degraded";
+      adaptiveDegradeStats.triggerCount += 1;
+      const adaptiveRetried = await retryFailedItemsOnce({
+        client,
+        items: selectedItems,
+        itemResults,
+        concurrency: 1,
+      });
+      itemResults = adaptiveRetried.results;
+      adaptiveRetriedItemCount = adaptiveRetried.retriedItemCount;
+      adaptiveDegradeStats.degradedRetriedItemCount += adaptiveRetried.retriedItemCount;
+      stats = computeItemExecutionStats(itemResults);
+      const recoveredWindowStats = computeAdaptiveWindowStats(itemResults, ADAPTIVE_DEGRADE_WINDOW_SIZE);
+      updateAdaptiveDegradeStats(adaptiveDegradeStats, recoveredWindowStats);
+      adaptiveWarnings.push(
+        `LLM 检测到窗口 missing_content 偏高（rate=${Math.round(initialWindowStats.missingContentRate * 100)}%），已临时降载重试 ${adaptiveRetriedItemCount} 条`,
+      );
+      if (shouldRecoverFromAdaptiveDegrade(recoveredWindowStats)) {
+        adaptiveDegradeStats.currentMode = "normal";
+        adaptiveDegradeStats.recoverCount += 1;
+        adaptiveWarnings.push(
+          `LLM 自适应降载已恢复（window_success=${Math.round(recoveredWindowStats.successRate * 100)}%）`,
+        );
+      }
+    }
 
     // 当 missing_content 连续失败达到阈值时，说明 provider 侧可能处于拥塞窗口。
     // 这里临时降载为串行重试，优先恢复可用结果，避免整批被回退。
+    serialTriggerMaxConsecutiveMissingContent = resolveMaxConsecutiveMissingContentFailures(itemResults);
     if (serialTriggerMaxConsecutiveMissingContent >= MISSING_CONTENT_CONSECUTIVE_DEGRADE_THRESHOLD) {
       const serialRetried = await retryMissingContentItemsSerially({
         client,
@@ -259,6 +307,12 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
           `LLM 检测到 missing_content 连续失败（max=${serialTriggerMaxConsecutiveMissingContent}），已临时降载串行重试 ${serialRetriedItemCount} 条`,
         );
       }
+      const postSerialWindowStats = computeAdaptiveWindowStats(itemResults, ADAPTIVE_DEGRADE_WINDOW_SIZE);
+      updateAdaptiveDegradeStats(adaptiveDegradeStats, postSerialWindowStats);
+      if (adaptiveDegradeStats.currentMode === "degraded" && shouldRecoverFromAdaptiveDegrade(postSerialWindowStats)) {
+        adaptiveDegradeStats.currentMode = "normal";
+        adaptiveDegradeStats.recoverCount += 1;
+      }
     }
 
     // 先做一次“失败条目补偿重试”，降低偶发判定抖动导致的全局 fallback。
@@ -268,11 +322,17 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
         items: selectedItems,
         itemResults,
         // 若刚触发过串行降载，补偿轮继续保持低并发，避免短时间内再次击穿 provider。
-        concurrency: serialDegradeTriggered ? 1 : effectiveConcurrency,
+        concurrency: serialDegradeTriggered || adaptiveDegradeStats.currentMode === "degraded" ? 1 : effectiveConcurrency,
       });
       itemResults = retried.results;
       compensationRetryItemCount = retried.retriedItemCount;
       stats = computeItemExecutionStats(itemResults);
+      const postCompensateWindowStats = computeAdaptiveWindowStats(itemResults, ADAPTIVE_DEGRADE_WINDOW_SIZE);
+      updateAdaptiveDegradeStats(adaptiveDegradeStats, postCompensateWindowStats);
+      if (adaptiveDegradeStats.currentMode === "degraded" && shouldRecoverFromAdaptiveDegrade(postCompensateWindowStats)) {
+        adaptiveDegradeStats.currentMode = "normal";
+        adaptiveDegradeStats.recoverCount += 1;
+      }
     }
     const itemSummaries = itemResults.map((result) => result.summary);
     const { llmSuccessCount, llmFailureCount, successRate, fallbackReasons, failureStats } = stats;
@@ -282,6 +342,9 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
       serialRetriedItemCount,
       serialTriggerMaxConsecutiveMissingContent,
     });
+    if (adaptiveRetriedItemCount > 0) {
+      adaptiveWarnings.push(formatAdaptiveRetryWarning(adaptiveRetriedItemCount));
+    }
     const shouldGlobalFallback = shouldTriggerGlobalFallback(stats, itemResults.length);
 
     if (shouldGlobalFallback) {
@@ -300,6 +363,7 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
         rankFusionWeight,
         failureStats,
         retryStats,
+        adaptiveDegradeStats,
       });
       const mergedWarnings = [
         ...fallback.warnings,
@@ -307,6 +371,7 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
         ...formatItemFailureWarnings(fallbackReasons, itemResults.length),
         formatFailureStatsWarning(failureStats),
         formatRetryStatsWarning(retryStats),
+        formatAdaptiveDegradeWarning(adaptiveDegradeStats),
       ];
 
       auditEvents.push({
@@ -330,6 +395,7 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
           effectiveConcurrency,
           failureStats,
           retryStats,
+          adaptiveDegradeStats,
         },
         auditEvents,
       };
@@ -346,6 +412,10 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
       client,
       rankedItems: rankingAssist.rankedItems,
       quickDigest,
+    });
+    const categoryLeadSummaries = await buildCategoryLeadSummariesWithFallback({
+      client,
+      rankedItems: rankingAssist.rankedItems,
     });
     const finishedAt = new Date().toISOString();
     const durationMs = Date.now() - startedEpoch;
@@ -366,6 +436,7 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
       leadFallbackTriggered: lead.fallbackTriggered,
       failureStats,
       retryStats,
+      adaptiveDegradeStats,
     };
 
     auditEvents.push({
@@ -383,6 +454,7 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
       itemSummaries,
       quickDigest,
       leadSummary: lead.text,
+      categoryLeadSummaries,
       summaryInputHash,
       meta,
       warnings:
@@ -394,7 +466,11 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
               ...formatItemFailureWarnings(fallbackReasons, itemResults.length),
               formatFailureStatsWarning(failureStats),
               formatRetryStatsWarning(retryStats),
+              formatAdaptiveDegradeWarning(adaptiveDegradeStats),
             ]
+            : []),
+          ...(adaptiveDegradeStats.triggerCount > 0 && llmFailureCount === 0
+            ? [formatAdaptiveDegradeWarning(adaptiveDegradeStats)]
             : []),
           ...rankingAssist.warnings,
         ],
@@ -439,11 +515,12 @@ export function canReuseLlmSummary(input: {
   meta: LlmSummaryMeta;
   itemSummaries: LlmItemSummary[];
   quickDigest: LlmQuickDigestItem[];
+  categoryLeadSummaries: CategoryLeadSummary[];
 }): boolean {
   if (!input.meta.enabled || input.meta.fallbackTriggered) {
     return false;
   }
-  if (input.itemSummaries.length === 0 || input.quickDigest.length === 0) {
+  if (input.itemSummaries.length === 0 || input.quickDigest.length === 0 || input.categoryLeadSummaries.length === 0) {
     return false;
   }
   return input.summaryInputHash === computeSummaryInputHash(input.rankedItems);
@@ -791,6 +868,78 @@ function formatRetryStatsWarning(stats: LlmRetryStats): string {
   return `LLM 重试统计：retryable=${stats.retryableTriggeredCount}, missing_content_extra=${stats.missingContentExtraRetryTriggeredCount}, compensation=${stats.compensationRetryItemCount}, serial_degrade=${stats.serialDegradeTriggered ? 1 : 0}, serial_retried=${stats.serialRetriedItemCount}`;
 }
 
+function formatAdaptiveRetryWarning(retriedCount: number): string {
+  return `LLM 自适应降载重试：retried=${retriedCount}`;
+}
+
+function formatAdaptiveDegradeWarning(stats: LlmAdaptiveDegradeStats): string {
+  return `LLM 自适应降载：trigger=${stats.triggerCount}, recover=${stats.recoverCount}, retried=${stats.degradedRetriedItemCount}, mode=${stats.currentMode}, window_missing_content=${Math.round(stats.lastWindowMissingContentRate * 100)}%, window_success=${Math.round(stats.lastWindowSuccessRate * 100)}%`;
+}
+
+function createInitialAdaptiveDegradeStats(): LlmAdaptiveDegradeStats {
+  return {
+    windowSize: ADAPTIVE_DEGRADE_WINDOW_SIZE,
+    triggerMissingContentRateThreshold: ADAPTIVE_DEGRADE_MISSING_CONTENT_RATE_THRESHOLD,
+    recoverSuccessRateThreshold: ADAPTIVE_DEGRADE_RECOVER_SUCCESS_RATE_THRESHOLD,
+    triggerCount: 0,
+    recoverCount: 0,
+    degradedRetriedItemCount: 0,
+    currentMode: "normal",
+    maxWindowMissingContentRate: 0,
+    maxWindowSuccessRate: 0,
+    lastWindowMissingContentRate: 0,
+    lastWindowSuccessRate: 0,
+  };
+}
+
+function computeAdaptiveWindowStats(results: ItemSummaryExecutionResult[], windowSize: number): AdaptiveWindowStats {
+  const effectiveWindowSize = Math.max(1, windowSize);
+  const sampled = results.slice(-effectiveWindowSize);
+  const sampleSize = sampled.length;
+  if (sampleSize === 0) {
+    return {
+      sampleSize: 0,
+      missingContentCount: 0,
+      missingContentRate: 0,
+      successRate: 1,
+    };
+  }
+
+  const llmSuccessCount = sampled.filter((result) => result.llmUsed).length;
+  const missingContentCount = sampled.filter((result) =>
+    !result.llmUsed && (result.errorReason?.includes("minimax_invalid_response:missing_content") ?? false)).length;
+  return {
+    sampleSize,
+    missingContentCount,
+    missingContentRate: missingContentCount / sampleSize,
+    successRate: llmSuccessCount / sampleSize,
+  };
+}
+
+function updateAdaptiveDegradeStats(target: LlmAdaptiveDegradeStats, windowStats: AdaptiveWindowStats): void {
+  target.lastWindowMissingContentRate = windowStats.missingContentRate;
+  target.lastWindowSuccessRate = windowStats.successRate;
+  target.maxWindowMissingContentRate = Math.max(target.maxWindowMissingContentRate, windowStats.missingContentRate);
+  target.maxWindowSuccessRate = Math.max(target.maxWindowSuccessRate, windowStats.successRate);
+}
+
+function shouldTriggerAdaptiveDegrade(windowStats: AdaptiveWindowStats): boolean {
+  if (windowStats.sampleSize < ADAPTIVE_DEGRADE_MIN_SAMPLE_SIZE) {
+    return false;
+  }
+  return windowStats.missingContentRate >= ADAPTIVE_DEGRADE_MISSING_CONTENT_RATE_THRESHOLD;
+}
+
+function shouldRecoverFromAdaptiveDegrade(windowStats: AdaptiveWindowStats): boolean {
+  if (windowStats.sampleSize < ADAPTIVE_DEGRADE_MIN_SAMPLE_SIZE) {
+    return false;
+  }
+  return (
+    windowStats.successRate >= ADAPTIVE_DEGRADE_RECOVER_SUCCESS_RATE_THRESHOLD &&
+    windowStats.missingContentRate < ADAPTIVE_DEGRADE_MISSING_CONTENT_RATE_THRESHOLD
+  );
+}
+
 function shouldTriggerGlobalFallback(stats: ItemExecutionStats, total: number): boolean {
   if (total === 0) {
     return false;
@@ -908,6 +1057,7 @@ function buildRuleFallback(
     finishedAt?: string;
     failureStats?: LlmFailureStats;
     retryStats?: LlmRetryStats;
+    adaptiveDegradeStats?: LlmAdaptiveDegradeStats;
   },
 ): LlmSummaryResult {
   const startedAt = input.startedAt ?? new Date().toISOString();
@@ -926,6 +1076,7 @@ function buildRuleFallback(
     } satisfies RankedItem;
   });
   const itemSummaries = rankedItems.map((item) => buildRuleSummaryForItem(item));
+  const categoryLeadSummaries = buildTemplateCategoryLeadSummaries(rankedItems);
 
   const quickDigest = buildQuickDigest(itemSummaries, rankedItems);
   return {
@@ -933,6 +1084,7 @@ function buildRuleFallback(
     itemSummaries,
     quickDigest,
     leadSummary: buildTemplateLeadSummary(rankedItems),
+    categoryLeadSummaries,
     summaryInputHash: computeSummaryInputHash(rankedItems),
     meta: {
       enabled: input.enabled,
@@ -951,6 +1103,7 @@ function buildRuleFallback(
       leadFallbackTriggered: true,
       failureStats: input.failureStats,
       retryStats: input.retryStats,
+      adaptiveDegradeStats: input.adaptiveDegradeStats ?? createInitialAdaptiveDegradeStats(),
     },
     warnings: [`LLM 总结已回退规则模式：${input.reason}`],
   };
@@ -1143,6 +1296,110 @@ function buildTemplateLeadSummary(items: RankedItem[]): string {
   const categorySet = Array.from(new Set(top.map((item) => item.category))).slice(0, 2);
   const topics = top.map((item) => `《${item.titleZh ?? item.title}》`).join("、");
   return `本期重点围绕${categorySet.join("与")}展开，建议优先关注${topics}，并结合现有工程路线评估接入优先级与落地成本。`;
+}
+
+async function buildCategoryLeadSummariesWithFallback(input: {
+  client: MiniMaxSummaryClient;
+  rankedItems: RankedItem[];
+}): Promise<CategoryLeadSummary[]> {
+  const groups = pickMajorCategoryGroups(input.rankedItems);
+  if (groups.length === 0) {
+    return [];
+  }
+
+  const leads: CategoryLeadSummary[] = [];
+  for (const group of groups) {
+    const topItems = group.items.slice(0, 4);
+    if (topItems.length < 2) {
+      leads.push({
+        category: group.category,
+        lead: buildTemplateCategoryLead(group.category, topItems),
+        sourceItemIds: topItems.map((item) => item.id),
+        fallbackTriggered: true,
+        reason: "insufficient_samples_for_llm",
+      });
+      continue;
+    }
+    try {
+      const lead = await input.client.generateCategoryLead(group.category, topItems);
+      if (!lead.trim()) {
+        throw new Error("empty_category_lead");
+      }
+      leads.push({
+        category: group.category,
+        lead: lead.trim(),
+        sourceItemIds: topItems.map((item) => item.id),
+        fallbackTriggered: false,
+      });
+    } catch (error) {
+      leads.push({
+        category: group.category,
+        lead: buildTemplateCategoryLead(group.category, topItems),
+        sourceItemIds: topItems.map((item) => item.id),
+        fallbackTriggered: true,
+        reason: error instanceof Error ? error.message : String(error),
+      });
+    }
+  }
+
+  return leads;
+}
+
+function buildTemplateCategoryLeadSummaries(items: RankedItem[]): CategoryLeadSummary[] {
+  return pickMajorCategoryGroups(items).map((group) => {
+    const topItems = group.items.slice(0, 4);
+    return {
+      category: group.category,
+      lead: buildTemplateCategoryLead(group.category, topItems),
+      sourceItemIds: topItems.map((item) => item.id),
+      fallbackTriggered: true,
+      reason: "template_fallback_only",
+    } satisfies CategoryLeadSummary;
+  });
+}
+
+function pickMajorCategoryGroups(items: RankedItem[], limit = 4): Array<{ category: RankedItem["category"]; items: RankedItem[] }> {
+  const grouped = items.reduce<Map<RankedItem["category"], RankedItem[]>>((acc, item) => {
+    const current = acc.get(item.category) ?? [];
+    current.push(item);
+    acc.set(item.category, current);
+    return acc;
+  }, new Map());
+
+  return Array.from(grouped.entries())
+    .filter(([, groupedItems]) => groupedItems.length > 0)
+    .sort((left, right) => {
+      if (right[1].length !== left[1].length) {
+        return right[1].length - left[1].length;
+      }
+      const leftTopScore = left[1][0]?.score ?? 0;
+      const rightTopScore = right[1][0]?.score ?? 0;
+      return rightTopScore - leftTopScore;
+    })
+    .slice(0, limit)
+    .map(([category, groupedItems]) => ({ category, items: groupedItems }));
+}
+
+function buildTemplateCategoryLead(category: RankedItem["category"], items: RankedItem[]): string {
+  const label = resolveCategoryLabel(category);
+  if (items.length === 0) {
+    return `${label}暂无可用条目，建议稍后重试采集并复核来源配置。`;
+  }
+  const topicText = items.slice(0, 2).map((item) => `《${item.titleZh ?? item.title}》`).join("、");
+  return `${label}本期共 ${items.length} 条，建议优先阅读${topicText}，重点关注其工程可落地性与集成成本。`;
+}
+
+function resolveCategoryLabel(category: RankedItem["category"]): string {
+  const labels: Record<RankedItem["category"], string> = {
+    "open-source": "开源方向",
+    tooling: "工具链方向",
+    agent: "Agent 方向",
+    research: "研究方向",
+    "industry-news": "行业动态",
+    tutorial: "教程实践",
+    other: "其他方向",
+  };
+  return labels[category];
 }
 
 function buildSummaryPromptPayload(item: RankedItem, promptVersion: string, strictRetry: boolean): Record<string, unknown> {
@@ -1379,6 +1636,90 @@ class MiniMaxSummaryClient {
     const json = parseJsonObjectFromText(contentText);
     const parsed = minimaxLeadSchema.parse(json);
     return shorten(parsed.lead, 220);
+  }
+
+  async generateCategoryLead(category: RankedItem["category"], items: RankedItem[]): Promise<string> {
+    const url = `${this.options.apiBaseUrl.replace(/\/+$/, "")}/v1/messages`;
+    const body = {
+      model: this.options.model,
+      max_tokens: 180,
+      temperature: 0.2,
+      system:
+        "你是 AI 报告编辑助手。仅基于给定条目生成分类导读，不得编造未提供事实。只返回 JSON object，不允许 markdown、解释或额外文本。",
+      messages: [
+        {
+          role: "user",
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify({
+                promptVersion: this.options.promptVersion,
+                task: "请生成该分类的一句中文导读（40-90 字），突出读者应优先关注的工程价值点。",
+                outputSchema: {
+                  lead: "一句中文导读，40-90 字",
+                },
+                input: {
+                  category,
+                  categoryLabel: resolveCategoryLabel(category),
+                  items: items.slice(0, 4).map((item) => ({
+                    id: item.id,
+                    title: item.title,
+                    titleZh: item.titleZh,
+                    score: item.score,
+                    importance: item.importance,
+                    summary: item.contentSnippet,
+                  })),
+                },
+              }),
+            },
+          ],
+        },
+      ],
+    };
+
+    const response = await fetchWithTimeout(
+      url,
+      {
+        method: "POST",
+        headers: {
+          "x-api-key": this.options.apiKey,
+          "anthropic-version": "2023-06-01",
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(body),
+      },
+      this.options.timeoutMs,
+    );
+    if (!response.ok) {
+      throw new Error(`minimax_http_failed:${response.status}`);
+    }
+    const payload = (await response.json().catch(() => null)) as
+      | {
+          error?: { message?: string; type?: string };
+          content?: Array<Record<string, unknown>> | string;
+          output_text?: string;
+          completion?: string;
+          message?: {
+            content?: string | Array<Record<string, unknown>>;
+          };
+          choices?: Array<{
+            text?: string;
+            message?: {
+              content?: string | Array<Record<string, unknown>>;
+            };
+          }>;
+        }
+      | null;
+    if (payload?.error?.message) {
+      throw new Error(`minimax_business_failed:${payload.error.type ?? "unknown"}:${payload.error.message}`);
+    }
+    const contentText = extractModelText(payload);
+    if (!contentText) {
+      throw new Error("minimax_invalid_response:missing_content");
+    }
+    const json = parseJsonObjectFromText(contentText);
+    const parsed = minimaxLeadSchema.parse(json);
+    return shorten(parsed.lead, 120);
   }
 
   private async requestSummary(item: RankedItem, strictRetry: boolean): Promise<MinimaxItemSummaryRaw> {
@@ -1870,5 +2211,10 @@ export const __test__ = {
   buildQuickDigest,
   applyLlmAssistToRanking,
   buildTemplateLeadSummary,
+  buildTemplateCategoryLeadSummaries,
+  computeAdaptiveWindowStats,
+  shouldTriggerAdaptiveDegrade,
+  shouldRecoverFromAdaptiveDegrade,
+  formatAdaptiveDegradeWarning,
   shouldTranslateTitle,
 };

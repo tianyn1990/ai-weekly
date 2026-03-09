@@ -124,6 +124,14 @@ describe("buildReportMarkdown", () => {
         },
       ],
       leadSummary: "本期重点关注 Agent 编排能力与落地实践。",
+      categoryLeadSummaries: [
+        {
+          category: "agent",
+          lead: "Agent 方向建议先看编排能力与观测性落地实践。",
+          sourceItemIds: [translatedItem.id],
+          fallbackTriggered: false,
+        },
+      ],
       llmSummaryMeta: {
         enabled: true,
         inputCount: 1,
@@ -143,6 +151,8 @@ describe("buildReportMarkdown", () => {
     });
 
     expect(markdown).toContain("## 本期导语");
+    expect(markdown).toContain("## 分类导读");
+    expect(markdown).toContain("agent：Agent 方向建议先看编排能力与观测性落地实践。");
     expect(markdown).toContain("LangGraph 发布编排能力 (LangGraph introduces orchestration)");
     expect(markdown).toContain("标签：agent / release | 可执行性=3");
     expect(markdown).toContain("证据：[LangGraph 发布编排能力 (LangGraph introduces orchestration)](https://example.com/item)");

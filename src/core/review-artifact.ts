@@ -69,6 +69,14 @@ const llmQuickDigestSchema = z.object({
   evidenceItemIds: z.array(z.string()),
 });
 
+const categoryLeadSummarySchema = z.object({
+  category: z.enum(["open-source", "tooling", "agent", "research", "industry-news", "tutorial", "other"]),
+  lead: z.string(),
+  sourceItemIds: z.array(z.string()),
+  fallbackTriggered: z.boolean(),
+  reason: z.string().optional(),
+});
+
 const llmSummaryMetaSchema = z.object({
   enabled: z.boolean(),
   provider: z.enum(["minimax"]).optional(),
@@ -107,6 +115,21 @@ const llmSummaryMetaSchema = z.object({
       serialTriggerMaxConsecutiveMissingContent: z.number(),
     })
     .optional(),
+  adaptiveDegradeStats: z
+    .object({
+      windowSize: z.number(),
+      triggerMissingContentRateThreshold: z.number(),
+      recoverSuccessRateThreshold: z.number(),
+      triggerCount: z.number(),
+      recoverCount: z.number(),
+      degradedRetriedItemCount: z.number(),
+      currentMode: z.enum(["normal", "degraded"]),
+      maxWindowMissingContentRate: z.number(),
+      maxWindowSuccessRate: z.number(),
+      lastWindowMissingContentRate: z.number(),
+      lastWindowSuccessRate: z.number(),
+    })
+    .optional(),
 });
 
 export const reviewArtifactSchema = z.object({
@@ -133,6 +156,7 @@ export const reviewArtifactSchema = z.object({
   itemSummaries: z.array(llmItemSummarySchema).optional(),
   quickDigest: z.array(llmQuickDigestSchema).optional(),
   leadSummary: z.string().optional(),
+  categoryLeadSummaries: z.array(categoryLeadSummarySchema).optional(),
   summaryInputHash: z.string().optional(),
   llmSummaryMeta: llmSummaryMetaSchema.optional(),
   highlights: z.array(rankedItemSchema),
@@ -167,6 +191,7 @@ export const reviewArtifactSchema = z.object({
       itemSummaries: z.array(llmItemSummarySchema).optional(),
       quickDigest: z.array(llmQuickDigestSchema).optional(),
       leadSummary: z.string().optional(),
+      categoryLeadSummaries: z.array(categoryLeadSummarySchema).optional(),
       summaryInputHash: z.string().optional(),
       llmSummaryMeta: llmSummaryMetaSchema.optional(),
       highlights: z.array(rankedItemSchema),

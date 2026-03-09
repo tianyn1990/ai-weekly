@@ -97,6 +97,10 @@ const ReportStateAnnotation = Annotation.Root({
     value: (_left, right) => right,
     default: () => "",
   }),
+  categoryLeadSummaries: Annotation<ReportState["categoryLeadSummaries"]>({
+    value: (_left, right) => right,
+    default: () => [],
+  }),
   summaryInputHash: Annotation<string>({
     value: (_left, right) => right,
     default: () => "",

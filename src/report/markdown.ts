@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 
 import type {
+  CategoryLeadSummary,
   LlmItemSummary,
   LlmQuickDigestItem,
   LlmSummaryMeta,
@@ -21,6 +22,7 @@ interface BuildMarkdownInput {
   quickDigest: LlmQuickDigestItem[];
   itemSummaries: LlmItemSummary[];
   leadSummary?: string;
+  categoryLeadSummaries?: CategoryLeadSummary[];
   llmSummaryMeta: LlmSummaryMeta;
   highlights: RankedItem[];
   rankedItems: RankedItem[];
@@ -42,6 +44,7 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
     quickDigest,
     itemSummaries,
     leadSummary,
+    categoryLeadSummaries,
     llmSummaryMeta,
     highlights,
     rankedItems,
@@ -158,6 +161,18 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
     lines.push(`  - 推荐理由：${item.recommendationReason}`);
   }
   lines.push("");
+
+  if (categoryLeadSummaries && categoryLeadSummaries.length > 0) {
+    lines.push("## 分类导读");
+    lines.push("");
+    for (const summary of categoryLeadSummaries) {
+      lines.push(`- ${summary.category}：${summary.lead}`);
+      if (summary.fallbackTriggered) {
+        lines.push(`  - 说明：该导读使用模板回退（${summary.reason ?? "unknown"}）`);
+      }
+    }
+    lines.push("");
+  }
 
   lines.push("## 分类正文");
   lines.push("");

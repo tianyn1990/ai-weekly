@@ -1,13 +1,13 @@
-# AI 周报系统设计（v0.9）
+# AI 周报系统设计（v1.0）
 
 ## 1. 文档目标与范围
-- 目标：定义 AI 日报/周报系统在 **M5.2 已完成** 基线下的完整技术架构。
+- 目标：定义 AI 日报/周报系统在 **M5.3 已完成** 基线下的完整技术架构。
 - 范围：覆盖采集、处理、审核、发布、协同通知、审核意见回流、可观测与运维策略。
 - 非目标：不描述前端管理后台 UI 细节；不覆盖分布式部署实现细节（当前暂缓）。
 
 ## 2. 当前阶段边界（必须先对齐）
 ### 2.1 已实现（M1 ~ M3.1）
-- 基础 LangGraph 流水线：`collect -> normalize -> dedupe -> classify -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> build_report`。
+- 基础 LangGraph 流水线：`collect -> normalize -> dedupe -> classify -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> llm_summarize -> build_report`。
 - 周报审核断点：大纲审核 + 终稿审核。
 - 超时自动发布：周一 12:30（Asia/Shanghai）未完成审核自动发布。
 - pending 复检发布：基于 review snapshot 重算状态并发布，不重跑采集链路。
@@ -77,7 +77,12 @@
 - 新增中文标题增强：英文标题可显示为“中文标题（原标题）”。
 - 新增报告导语：在报告顶部补充 2-3 句“本期导语”（失败时模板回退）。
 - 新增并发闸门：`effectiveConcurrency=min(nodeConcurrency, globalConcurrency)`，默认上限 2。
-- 新增自适应降载：当 `missing_content` 连续失败达到阈值时，自动触发临时串行重试，降低 provider 拥塞导致的批量失败。
+
+### 2.11 已实现（M5.3）
+- 新增窗口型自适应降载：短窗口 `missing_content` 比例异常时，自动降载并优先重试失败条目。
+- 新增自动恢复：窗口成功率回升后自动恢复并发预算，避免长期低吞吐。
+- 新增 run 级诊断元数据：`adaptiveDegradeStats`（trigger/recover/currentMode/windowStats）。
+- 新增分类导读：按主要分类生成 1 句导读，失败回退模板文案。
 
 ## 3. 架构全景
 系统分为八层：
@@ -168,6 +173,7 @@ START
   -> review_outline
   -> review_final
   -> publish_or_wait
+  -> llm_summarize
   -> build_report
   -> END
 ```
@@ -510,7 +516,8 @@ DB 表：`operation_jobs`
 6. **M4.4（运维）**：macOS 初始化引导 + 一键服务托管（launchd + Named Tunnel）【已完成】。
 7. **M5.1（智能）**：LLM 总结节点（MiniMax，逐条总结 + 速览聚合）【已完成】。
 8. **M5.2（智能）**：分类/打标/排序辅助 + 导语 + 标题翻译（规则 baseline + LLM 融合分）【已完成】。
-9. **暂缓项**：分布式互斥（多实例部署时再做）。
+9. **M5.3（智能）**：自适应降载与 run 级诊断 + 分类导读（LLM + 模板回退）【已完成】。
+10. **暂缓项**：分布式互斥（多实例部署时再做）。
 
 ## 13. 里程碑后的质量门禁
 - 无来源断言容忍度：0。
