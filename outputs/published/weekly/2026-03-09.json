@@ -1,7 +1,7 @@
 {
-  "runId": "weekly-1773038850960",
-  "generatedAt": "2026-03-09T06:47:30.894Z",
-  "reviewStartedAt": "2026-03-09T06:47:30.894Z",
+  "runId": "weekly-1773039173498",
+  "generatedAt": "2026-03-09T06:52:53.477Z",
+  "reviewStartedAt": "2026-03-09T06:52:53.477Z",
   "reportDate": "2026-03-09",
   "mode": "weekly",
   "reviewStatus": "timeout_published",
@@ -11,7 +11,7 @@
   "publishStatus": "published",
   "shouldPublish": true,
   "publishReason": "weekly_timeout_auto_publish",
-  "publishedAt": "2026-03-09T06:47:30.894Z",
+  "publishedAt": "2026-03-09T06:52:53.477Z",
   "outlineApproved": false,
   "finalApproved": false,
   "rejected": false,
@@ -23,20 +23,20 @@
     "mediumImportanceCount": 5,
     "lowImportanceCount": 0,
     "categoryBreakdown": {
-      "open-source": 9,
-      "tooling": 5,
-      "agent": 3,
+      "open-source": 13,
+      "tooling": 6,
+      "agent": 4,
       "research": 2,
       "industry-news": 0,
-      "tutorial": 2,
-      "other": 21
+      "tutorial": 1,
+      "other": 16
     }
   },
   "itemSummaries": [
     {
       "itemId": "af0473b3cd39",
       "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
-      "summary": "Railway 获 1 亿美元 B 轮融资打造 AI 原生云基础设施，部署速度达亚秒级并支持按秒计费，已吸引 31% 福布斯 500 强企业客户。",
+      "summary": "Railway获1亿美元融资构建AI原生云基础设施，主打秒级部署（<1秒vs传统2-3分钟）和按秒计费（无空闲VM费用），已有200万开发者、31% Fortune 500使用。",
       "recommendation": "建议本周优先评估《Railway secures $100 million to challenge AWS with AI-native cloud infrastructure》相关方案，重点关注仓库成熟度与二次开发成本。",
       "evidenceItemIds": [
         "af0473b3cd39"
@@ -45,8 +45,8 @@
     {
       "itemId": "dca57667c39b",
       "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
-      "summary": "Goose 是 Block 推出的免费开源 AI 编程代理，可本地运行且无订阅费和使用限制，在 GitHub 获 26k+ 星标，正快速替代 Claude Code 成为成本敏感型开发者的选择。",
-      "recommendation": "适合追求零成本、数据隐私和离线开发环境的工程团队，建议评估其与 Ollama 本地模型的集成方案。",
+      "summary": "Goose是由Block开发的免费开源AI编程助手，可在本地运行无需订阅，功能与付费的Claude Code（$20-200/月）相当，提供离线能力与数据隐私保障。",
+      "recommendation": "对成本敏感、需离线工作或重视代码隐私的开发团队有直接价值，建议评估接入。",
       "evidenceItemIds": [
         "dca57667c39b"
       ]
@@ -54,17 +54,26 @@
     {
       "itemId": "ed6c06ec1333",
       "title": "How Balyasny Asset Management built an AI research engine for investing",
-      "summary": "Balyasny使用GPT-5.4构建了投资研究AI引擎，通过严格模型评估和Agent工作流实现规模化投资分析。",
+      "summary": "Balyasny Asset Management 构建了基于 GPT-5.4 的 AI 研究引擎，通过严格模型评估",
       "recommendation": "建议本周优先评估《How Balyasny Asset Management built an AI research engine for investing》相关方案，重点关注与现有工程链路的集成成本。",
       "evidenceItemIds": [
         "ed6c06ec1333"
       ]
     },
     {
+      "itemId": "9b227c4cba37",
+      "title": "Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents",
+      "summary": "Salvobase 是 Go 编写的 MongoDB 协议兼容文档数据库，采用 Apache 2.0 许可，内置 Prometheus 指标与 REST API，最大亮点是项目代码由 AI agents 自主维护，目前为单节点版本。",
+      "recommendation": "建议本周优先评估《Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents》相关方案，重点关注仓库成熟度与二次开发成本。",
+      "evidenceItemIds": [
+        "9b227c4cba37"
+      ]
+    },
+    {
       "itemId": "1e5772829392",
       "title": "Codex Security: now in research preview",
-      "summary": "Codex Security 是 OpenAI 推出的 AI 应用安全代理，可分析项目上下文以检测、验证和修补复杂漏洞，降低误报并提升修复置信度。",
-      "recommendation": "建议本周优先评估《Codex Security: now in research preview》相关方案，重点关注多 Agent 协作策略与稳定性。",
+      "summary": "Codex Security 是 OpenAI 推出的 AI 应用安全 agent，能分析项目上下文检测、验证并修复复杂漏洞，提升置信度并降低误报。",
+      "recommendation": "对关注应用安全的工程团队有直接价值，建议评估其在 CI/CD 流程中的集成潜力。",
       "evidenceItemIds": [
         "1e5772829392"
       ]
@@ -72,63 +81,312 @@
     {
       "itemId": "4195e551833f",
       "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
-      "summary": "Karpathy发布的autoresearch是约630行的单文件Python工具，可让AI agents在单GPU上自主运行机器学习实验，是nanochat训练核心的精简版。",
-      "recommendation": "适合想快速验证AI agent自动化ML实验能力的团队，门槛低（单GPU+630行代码），工程落地成本小。",
+      "summary": "Karpathy 开源的 Autoresearch 是一个约 630 行的极简 Python 工具，可让 AI Agent 在单卡 GPU 上自主运行机器学习实验，基于 nanochat LLM 训练核心简化",
+      "recommendation": "建议本周优先评估《Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs…",
       "evidenceItemIds": [
         "4195e551833f"
       ]
     },
     {
+      "itemId": "eedb35ed84b1",
+      "title": "Sandvault – Run AI agents isolated in a sandboxed macOS user account",
+      "summary": "该项目提供在沙盒化 macOS 用户账户中隔离运行 AI Agent 的能力，可防止恶意 Agent 访问主系统敏感数据。",
+      "recommendation": "对需要安全隔离第三方 Agent 或限制 Agent 权限的工程场景有直接价值，建议评估其安全隔离机制是否满足生产要求。",
+      "evidenceItemIds": [
+        "eedb35ed84b1"
+      ]
+    },
+    {
       "itemId": "825c39404554",
       "title": "Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation",
-      "summary": "该框架提出了认知蓝图驱动的运行时智能体完整方案，涵盖身份、目标、规划、记忆、验证和工具调用等模块，使智能体具备自主规划、执行、验证和迭代优化能力。",
-      "recommendation": "对需要构建复杂多步骤智能体工作流的工程团队具有参考价值，可用于指导智能体架构设计与实现。",
+      "summary": "该框架提出通过结构化认知蓝图定义agent的身份、目标、计划、记忆、验证和工具访问机制，实现agent自主计划、执行、验证和持续改进的完整闭环。",
+      "recommendation": "建议本周优先评估《Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation》…",
       "evidenceItemIds": [
         "825c39404554"
+      ]
+    },
+    {
+      "itemId": "f4420af4df91",
+      "title": "Show HN: AI image models hallucinate history, we built a method to fix it it",
+      "summary": "该开源项目通过Triad Engine结构化领域知识注入，将AI图像生成的历史准确性从12.",
+      "recommendation": "建议本周优先评估《Show HN: AI image models hallucinate history, we built a method to fix it it》相关方案，重点关注仓库成熟度与二次开发成本。",
+      "evidenceItemIds": [
+        "f4420af4df91"
+      ]
+    },
+    {
+      "itemId": "96c6faefc88a",
+      "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+      "summary": "Nous Research发布开源编程模型NousCoder-14B，仅用4天训练在LiveCodeBench达到67.87%准确率，全面开源训练框架与权重，对标Anthropic的Claude Code。",
+      "recommendation": "对AI编码工具研发团队具有直接参考价值，其DAPO训练方法和完全开源策略值得深入研究，同时数据短缺问题值得关注。",
+      "evidenceItemIds": [
+        "96c6faefc88a"
+      ]
+    },
+    {
+      "itemId": "6e51fbd095d1",
+      "title": "How to Build Progress Monitoring Using Advanced tqdm for Async, Parallel, Pandas, Logging, and High-Performance Workflows",
+      "summary": "该教程深入讲解 tqdm 在 Python 工作流中的高级用法，涵盖嵌套进度条、流式下载、Pandas 处理、并行执行、结构化日志和异步任务等场景。",
+      "recommendation": "对需要实时监控长时间运行任务或批量处理流程的工程团队有直接帮助，建议在数据处理和 ETL 场景中优先应用。",
+      "evidenceItemIds": [
+        "6e51fbd095d1"
+      ]
+    },
+    {
+      "itemId": "fee0cde1972e",
+      "title": "Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI",
+      "summary": "Salesforce 将 Slackbot 升级为基于 Claude 的企业级 AI Agent，可搜索 Salesforce、Google Drive、日历及 Slack 聊天记录等企业数据并自动执行任务，内部数据显示员工满意度达 96%，每周可节省 2-20 小时。",
+      "recommendation": "对已使用 Slack 的企业团队有直接工程价值，建议评估其与现有企业数据的集成能力及多 Agent 协调路线图。",
+      "evidenceItemIds": [
+        "fee0cde1972e"
+      ]
+    },
+    {
+      "itemId": "d1b65307276f",
+      "title": "Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required",
+      "summary": "Anthropic推出Cowork桌面代理，通过文件夹级访问让非技术用户也能使用AI完成文件整理、报表生成等任务，目前仅向Max订阅用户开放macOS版本。",
+      "recommendation": "对需要将AI能力下沉到日常办公流程的团队具有参考价值，其基于文件夹的沙箱架构和安全设计思路值得关注。",
+      "evidenceItemIds": [
+        "d1b65307276f"
+      ]
+    },
+    {
+      "itemId": "7c4498064c7b",
+      "title": "Show HN: OpenVerb – A deterministic action layer for AI agents",
+      "summary": "OpenVerb 是一个实验性的确定性执行协议层，将 AI 代理的动作抽象为结构化动词协议，解决自定义粘合代码、动作模式不一致和执行审计困难等问题。",
+      "recommendation": "对关注代理架构标准化和执行可靠性的工程团队有参考价值，适合了解行业前沿实践，但目前仍处于早期实验阶段。",
+      "evidenceItemIds": [
+        "7c4498064c7b"
+      ]
+    },
+    {
+      "itemId": "da57f8f017dd",
+      "title": "Show HN: Chat AI Agent inside mobile device testing sessions",
+      "summary": "RobotActions 在移动设备测试会话中集成 AI Agent，可实时生成 XPath、编写 Appium 测试代码，并通过自然语言执行操作，显著降低测试定位器问题排查成本。",
+      "recommendation": "适合移动端 QA 自动化团队，可提升测试调试效率，建议评估其在 CI/CD 流程中的集成潜力。",
+      "evidenceItemIds": [
+        "da57f8f017dd"
+      ]
+    },
+    {
+      "itemId": "f17ba6f8dbf9",
+      "title": "I am an AI agent that sells data via x402 micropayments",
+      "summary": "该Demo展示AI Agent通过x402微支付协议出售数据的实现方式，是AI Agent经济模型的可落地案例。",
+      "recommendation": "对探索AI Agent商业化路径的团队有参考价值，可关注微支付与数据服务的结合模式。",
+      "evidenceItemIds": [
+        "f17ba6f8dbf9"
+      ]
+    },
+    {
+      "itemId": "b3462a1b6f51",
+      "title": "A Coding Guide to Build a Complete Single Cell RNA Sequencing Analysis Pipeline Using Scanpy for Clustering Visualization and Cell Type Annotation",
+      "summary": "该教程提供使用Scanpy构建单细胞RNA测序分析完整管道的代码实践，涵盖数据质控、归一化、PCA降维到聚类可视化的全流程。",
+      "recommendation": "适合需要快速搭建单细胞分析能力的工程团队参考，可作为生物信息学分析的实战入门教程。",
+      "evidenceItemIds": [
+        "b3462a1b6f51"
+      ]
+    },
+    {
+      "itemId": "53d557f697ca",
+      "title": "Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews",
+      "summary": "Listen Labs 获 6900 万美元 B 轮融资，其 AI 访谈平台可在数小时完成客户调研，年收入增长 15 倍至八位数，已完成超百万次 AI 访谈。",
+      "recommendation": "建议本周优先评估《Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews》相关方案，重点关注仓库成熟度与二次开发成本。",
+      "evidenceItemIds": [
+        "53d557f697ca"
+      ]
+    },
+    {
+      "itemId": "4309c341e311",
+      "title": "Agent Builder: chat, file uploads, and tool registry",
+      "summary": "该更新为 Agent Builder 增强了聊天交互、文件",
+      "recommendation": "建议本周优先评估《Agent Builder: chat, file uploads, and tool registry》相关方案，重点关注与现有工程链路的集成成本。",
+      "evidenceItemIds": [
+        "4309c341e311"
+      ]
+    },
+    {
+      "itemId": "cbcaf3d94b9e",
+      "title": "Scheduled reports for Insights Agent",
+      "summary": "Insights Agent 新增定时报告功能，支持自动化定期推送分析数据，减少人工定期查询成本。",
+      "recommendation": "对需持续监控 Agent 行为模式的团队有工程价值，建议评估与现有监控流程的集成点。",
+      "evidenceItemIds": [
+        "cbcaf3d94b9e"
+      ]
+    },
+    {
+      "itemId": "e3d44e83a9fb",
+      "title": "Deep Agents v0.4",
+      "summary": "Deep Agents v0.4 版本更新，暂无具体功能说明。",
+      "recommendation": "建议本周优先评估《Deep Agents v0.4》相关方案，重点关注多 Agent 协作策略与稳定性。",
+      "evidenceItemIds": [
+        "e3d44e83a9fb"
+      ]
+    },
+    {
+      "itemId": "640ac7d5d99e",
+      "title": "Track costs across your entire agent stack",
+      "summary": "LangChain推出跨Agent堆栈的成本追踪功能，支持可视化资源消耗分布与费用分析。",
+      "recommendation": "对关注Agent成本控制与预算管理的工程团队有直接价值，建议优先评估接入以优化资源分配。",
+      "evidenceItemIds": [
+        "640ac7d5d99e"
+      ]
+    },
+    {
+      "itemId": "5e5b98b758c4",
+      "title": "How Descript enables multilingual video dubbing at scale",
+      "summary": "Descript 基于 OpenAI 模型实现规模化多语言视频配音，兼顾语义准确性与-timing 自然度，提升跨语言内容生产效率。",
+      "recommendation": "建议本周优先评估《How Descript enables multilingual video dubbing at scale》相关方案，重点关注实际落地收益与维护开销。",
+      "evidenceItemIds": [
+        "5e5b98b758c4"
+      ]
+    },
+    {
+      "itemId": "031877f72c23",
+      "title": "Beyond Accuracy: Quantifying the Production Fragility Caused by Excessive, Redundant, and Low-Signal Features in Regression",
+      "summary": "研究揭示了回归模型中过多、冗余和低信号特征会引入隐藏的结构风险，每个额外特征都会增加上游数据管道和外部系统的依赖脆弱性。",
+      "recommendation": "建议工程团队在模型上线前评估特征必要性，优先精简冗余特征以降低生产环境的维护风险。",
+      "evidenceItemIds": [
+        "031877f72c23"
+      ]
+    },
+    {
+      "itemId": "5e327815c2c4",
+      "title": "Microsoft open sources its ‘farm of the future’ toolkit",
+      "summary": "微软开源了“未来农场”工具包，为农业场景提供AI解决方案。",
+      "recommendation": "对关注智慧农业或数字化转型的工程团队具有参考价值，可了解微软在农业AI领域的技术实践。",
+      "evidenceItemIds": [
+        "5e327815c2c4"
+      ]
+    },
+    {
+      "itemId": "d9aab484d2a1",
+      "title": "GPT-5.4 Thinking System Card",
+      "summary": "OpenAI 发布 GPT-5.4 思维系统说明文档，详述其推理机制与能力边界。",
+      "recommendation": "对正在评估或集成 OpenAI 模型的工程团队有参考价值，可帮助理解模型决策过程并优化应用层设计。",
+      "evidenceItemIds": [
+        "d9aab484d2a1"
+      ]
+    },
+    {
+      "itemId": "fc29565ae47e",
+      "title": "Reasoning models struggle to control their chains of thought, and that’s good",
+      "summary": "该研究揭示推理模型难以完全控制自身思维链，反而强化了可监控性作为AI安全防护手段的价值。",
+      "recommendation": "对关注AI安全与可控性的工程团队具有参考意义，可借鉴将思维链可观测性纳入安全防护体系。",
+      "evidenceItemIds": [
+        "fc29565ae47e"
+      ]
+    },
+    {
+      "itemId": "6684b4cf5670",
+      "title": "Introducing GPT-5.4",
+      "summary": "GPT-5.4是OpenAI最新发布的专业工作前沿模型，具备最先进编码能力、计算机使用、工具搜索及100万token上下文。",
+      "recommendation": "对需要强大AI编程能力和长上下文处理的企业工程团队有直接价值，建议优先评估接入。",
+      "evidenceItemIds": [
+        "6684b4cf5670"
+      ]
+    },
+    {
+      "itemId": "a05dfa39f05d",
+      "title": "“最美PM”宋紫薇获红杉蚂蚁投资，创业方向略有调整，转向AI护肤",
+      "summary": "前“最美PM”宋紫薇获红杉蚂蚁投资，创业方向从之前领域调整至AI护肤赛道，反映AI技术向美妆垂直领域渗透的趋势。",
+      "recommendation": "对于关注AI应用落地和垂直行业创新的工程团队具有参考价值，可关注AI+美妆的技术融合机会。",
+      "evidenceItemIds": [
+        "a05dfa39f05d"
+      ]
+    },
+    {
+      "itemId": "4b1452f42be2",
+      "title": "文远知行与吉利远程深化战略合作，2026年交付2000台前装量产Robotaxi GXR",
+      "summary": "文远知行与吉利远程深化战略合作，计划2026年交付2000台前装量产Robotaxi GXR，标志着L4级自动驾驶商业化进程加速。",
+      "recommendation": "对自动驾驶车队运营及量产部署有直接参考价值，建议相关团队关注其前装量产能力与合作模式。",
+      "evidenceItemIds": [
+        "4b1452f42be2"
       ]
     }
   ],
   "quickDigest": [
     {
       "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
-      "takeaway": "Railway 获 1 亿美元 B 轮融资打造 AI 原生云基础设施，部署速度达亚秒级并支持按秒计费，已吸引 31% 福布斯 500 强企业客户。",
+      "takeaway": "Railway获1亿美元融资构建AI原生云基础设施，主打秒级部署（<1秒vs传统2-3分钟）和按秒计费（无空闲VM费用），已有200万开发者、31% Fortune 500使用。",
       "evidenceItemIds": [
         "af0473b3cd39"
       ]
     },
     {
       "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
-      "takeaway": "Goose 是 Block 推出的免费开源 AI 编程代理，可本地运行且无订阅费和使用限制，在 GitHub 获 26k+ 星标，正快速替代 Claude Code 成为成本敏感型开发者的选择。",
+      "takeaway": "Goose是由Block开发的免费开源AI编程助手，可在本地运行无需订阅，功能与付费的Claude Code（$20-200/月）相当，提供离线能力与数据隐私保障。",
       "evidenceItemIds": [
         "dca57667c39b"
       ]
     },
     {
       "title": "How Balyasny Asset Management built an AI research engine for investing",
-      "takeaway": "Balyasny使用GPT-5.4构建了投资研究AI引擎，通过严格模型评估和Agent工作流实现规模化投资分析。",
+      "takeaway": "Balyasny Asset Management 构建了基于 GPT-5.4 的 AI 研究引擎，通过严格模型评估",
       "evidenceItemIds": [
         "ed6c06ec1333"
       ]
     },
     {
+      "title": "Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents",
+      "takeaway": "Salvobase 是 Go 编写的 MongoDB 协议兼容文档数据库，采用 Apache 2.0 许可，内置 Prometheus 指标与 REST API，最大亮点是项目代码由 AI agents 自主维护，目前为单节点版本。",
+      "evidenceItemIds": [
+        "9b227c4cba37"
+      ]
+    },
+    {
       "title": "Codex Security: now in research preview",
-      "takeaway": "Codex Security 是 OpenAI 推出的 AI 应用安全代理，可分析项目上下文以检测、验证和修补复杂漏洞，降低误报并提升修复置信度。",
+      "takeaway": "Codex Security 是 OpenAI 推出的 AI 应用安全 agent，能分析项目上下文检测、验证并修复复杂漏洞，提升置信度并降低误报。",
       "evidenceItemIds": [
         "1e5772829392"
       ]
+    },
+    {
+      "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
+      "takeaway": "Karpathy 开源的 Autoresearch 是一个约 630 行的极简 Python 工具，可让 AI Agent 在单卡 GPU 上自主运行机器学习实验，基于 nanochat LLM 训练核心简化",
+      "evidenceItemIds": [
+        "4195e551833f"
+      ]
+    },
+    {
+      "title": "Sandvault – Run AI agents isolated in a sandboxed macOS user account",
+      "takeaway": "该项目提供在沙盒化 macOS 用户账户中隔离运行 AI Agent 的能力，可防止恶意 Agent 访问主系统敏感数据。",
+      "evidenceItemIds": [
+        "eedb35ed84b1"
+      ]
+    },
+    {
+      "title": "Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation",
+      "takeaway": "该框架提出通过结构化认知蓝图定义agent的身份、目标、计划、记忆、验证和工具访问机制，实现agent自主计划、执行、验证和持续改进的完整闭环。",
+      "evidenceItemIds": [
+        "825c39404554"
+      ]
+    },
+    {
+      "title": "Show HN: AI image models hallucinate history, we built a method to fix it it",
+      "takeaway": "该开源项目通过Triad Engine结构化领域知识注入，将AI图像生成的历史准确性从12.",
+      "evidenceItemIds": [
+        "f4420af4df91"
+      ]
+    },
+    {
+      "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+      "takeaway": "Nous Research发布开源编程模型NousCoder-14B，仅用4天训练在LiveCodeBench达到67.87%准确率，全面开源训练框架与权重，对标Anthropic的Claude Code。",
+      "evidenceItemIds": [
+        "96c6faefc88a"
+      ]
     }
   ],
-  "summaryInputHash": "7170d772ee157658a81913fb42f6a1ad665222e384f579d955f8d895f0adecad",
+  "summaryInputHash": "56c88b4f32e5b58506ada937537b90a808ee7314ee5a4c7c5ebc1c4eed2a360c",
   "llmSummaryMeta": {
     "enabled": true,
     "provider": "minimax",
     "model": "MiniMax-M2.5",
     "promptVersion": "m5.1-v1",
-    "startedAt": "2026-03-09T06:47:54.120Z",
-    "finishedAt": "2026-03-09T06:48:38.647Z",
-    "durationMs": 44527,
-    "inputCount": 6,
-    "summarizedCount": 6,
+    "startedAt": "2026-03-09T06:53:18.183Z",
+    "finishedAt": "2026-03-09T06:55:57.670Z",
+    "durationMs": 159490,
+    "inputCount": 30,
+    "summarizedCount": 30,
     "fallbackTriggered": false
   },
   "highlights": [
@@ -172,6 +430,19 @@
       "recommendationReason": "Agent 工程实践相关"
     },
     {
+      "id": "9b227c4cba37",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents",
+      "link": "https://news.ycombinator.com/item?id=47304607",
+      "contentSnippet": "MongoDB is great until you read the SSPL. Then you're either paying Atlas prices, running an old 4.x build, or pretending FerretDB is production-ready. We built a third option. Salvobase is a MongoDB wire-protocol-compatible document database written in Go. Point any Mongo driver and it works. No driver changes, no config changes. It's Apache 2.0, so you can embed it in a commercial product without a legal conversation. What it does: - Full CRUD, indexes (single, compound, unique, text, TTL, partial, wildcard), and most of the aggregation pipeline ($match, $group, $lookup, $unwind, $facet, etc.) - SCRAM-SHA-256 auth - bbolt storage engine: one .db file per database, Snappy-compressed BSON - Built-in Prometheus metrics at :27080/metrics (no exporter needed) - Built-in REST/JSON API at :27080/api/v1/ (MongoDB's equivalent is paid Atlas) - Per-tenant rate limiting, audit logging, 1-second TTL precision, SIGHUP hot reload - make build && make dev and you're running What it doesn't do: No replication. No sharding. No change streams. No multi-document transactions (stubbed). No $where or mapReduce (intentional: security + complexity). Single-node only. If you need a distributed MongoDB replacement, this isn't it yet. But we hope one day it will become that, built by agents. The weird part: The codebase is maintained by AI agents. Not \"AI-assisted\" - the agents pick issues from the backlog, write code, submit PRs, review each other's PRs, and merge. There's a formal protocol (https://github.com/inder/salvobase/blob/master/AGENT_PROTOCOL.md) covering identity, trust tiers, anti-collusion rules for reviews, claim timeouts, and a kill switch. Humans set direction; agents do the execution. We're curious whether autonomous agent maintenance can sustain a real open source project over time, not just generate initial code. GitHub: https://github.com/inder/salvobase Thank you. Comments URL: https://news.ycombinator.com/item?id=47304607 Points: 2 # Comments: 0",
+      "publishedAt": "2026-03-09T03:35:06.000Z",
+      "category": "open-source",
+      "score": 125,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关"
+    },
+    {
       "id": "1e5772829392",
       "sourceId": "openai-news",
       "sourceName": "OpenAI News",
@@ -198,6 +469,19 @@
       "recommendationReason": "Agent 工程实践相关"
     },
     {
+      "id": "eedb35ed84b1",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Sandvault – Run AI agents isolated in a sandboxed macOS user account",
+      "link": "https://github.com/webcoyote/sandvault",
+      "contentSnippet": "Article URL: https://github.com/webcoyote/sandvault Comments URL: https://news.ycombinator.com/item?id=47304786 Points: 1 # Comments: 0",
+      "publishedAt": "2026-03-09T04:06:14.000Z",
+      "category": "open-source",
+      "score": 117,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关"
+    },
+    {
       "id": "825c39404554",
       "sourceId": "marktechpost",
       "sourceName": "MarkTechPost",
@@ -209,37 +493,11 @@
       "score": 114,
       "importance": "high",
       "recommendationReason": "Agent 工程实践相关"
-    },
-    {
-      "id": "96c6faefc88a",
-      "sourceId": "venturebeat-ai",
-      "sourceName": "VentureBeat AI",
-      "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
-      "link": "https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in",
-      "contentSnippet": "Nous Research, the open-source artificial intelligence startup backed by crypto venture firm Paradigm, released a new competitive programming model on Monday that it says matches or exceeds several larger proprietary systems — trained in just four days using 48 of Nvidia's latest B200 graphics processors. The model, called NousCoder-14B, is another entry in a crowded field of AI coding assistants, but arrives at a particularly charged moment: Claude Code, the agentic programming tool from rival Anthropic, has dominated social media discussion since New Year's Day, with developers posting breathless testimonials about its capabilities. The simultaneous developments underscore how quickly AI-assisted software development is evolving — and how fiercely companies large and small are competing to capture what many believe will become a foundational technology for how software gets written. type: embedded-entry-inline id: 74cSyrq6OUrp9SEQ5zOUSl NousCoder-14B achieves a 67.87 percent accuracy rate on LiveCodeBench v6, a standardized evaluation that tests models on competitive programming problems published between August 2024 and May 2025. That figure represents a 7.08 percentage point improvement over the base model it was trained from, Alibaba's Qwen3-14B, according to Nous Research's technical report published alongside the release. \"I gave Claude Code a description of the problem, it generated what we built last year in an hour,\" wrote Jaana Dogan, a principal engineer at Google responsible for the Gemini API, in a viral post on X last week that captured the prevailing mood around AI coding tools. Dogan was describing a distributed agent orchestration system her team had spent a year developing — a system Claude Code approximated from a three-paragraph prompt. The juxtaposition is instructive: while Anthropic's Claude Code has captured imaginations with demonstrations of end-to-end software development, Nous Research is betting that open-source alternatives trained on verifiable problems can close the gap — and that transparency in how these models are built matters as much as raw capability. How Nous Research built an AI coding model that anyone can replicate What distinguishes the NousCoder-14B release from many competitor announcements is its radical openness. Nous Research published not just the model weights but the complete reinforcement learning environment, benchmark suite, and training harness — built on the company's Atropos framework — enabling any researcher with sufficient compute to reproduce or extend the work. \"Open-sourcing the Atropos stack provides the necessary infrastructure for reproducible olympiad-level reasoning research,\" noted one observer on X, summarizing the significance for the academic and open-source communities. The model was trained by Joe Li, a researcher in residence at Nous Research and a former competitive programmer himself. Li's technical report reveals an unexpectedly personal dimension: he compared the model's improvement trajectory to his own journey on Codeforces, the competitive programming platform where participants earn ratings based on contest performance. Based on rough estimates mapping LiveCodeBench scores to Codeforces ratings, Li calculated that NousCoder-14B's improvemen t— from approximately the 1600-1750 rating range to 2100-2200 — mirrors a leap that took him nearly two years of sustained practice between ages 14 and 16. The model accomplished the equivalent in four days. \"Watching that final training run unfold was quite a surreal experience,\" Li wrote in the technical report. But Li was quick to note an important caveat that speaks to broader questions about AI efficiency: he solved roughly 1,000 problems during those two years, while the model required 24,000. Humans, at least for now, remain dramatically more sample-efficient learners. Inside the reinforcement learning system that trains on 24,000 competitive programming problems NousCoder-14B's training process offers a window into the increasingly sophisticated techniques researchers use to improve AI reasoning capabilities through reinforcement learning. The approach relies on what researchers call \"verifiable rewards\" — a system where the model generates code solutions, those solutions are executed against test cases, and the model receives a simple binary signal: correct or incorrect. This feedback loop, while conceptually straightforward, requires significant infrastructure to execute at scale. Nous Research used Modal, a cloud computing platform, to run sandboxed code execution in parallel. Each of the 24,000 training problems contains hundreds of test cases on average, and the system must verify that generated code produces correct outputs within time and memory constraints — 15 seconds and 4 gigabytes, respectively. The training employed a technique called DAPO (Dynamic Sampling Policy Optimization), which the researchers found performed slightly better than alternatives in their experiments. A key innovation involves \"dynamic sampling\" — discarding training examples where the model either solves all attempts or fails all attempts, since these provide no useful gradient signal for learning. The researchers also adopted \"iterative context extension,\" first training the model with a 32,000-token context window before expanding to 40,000 tokens. During evaluation, extending the context further to approximately 80,000 tokens produced the best results, with accuracy reaching 67.87 percent. Perhaps most significantly, the training pipeline overlaps inference and verification — as soon as the model generates a solution, it begins work on the next problem while the previous solution is being checked. This pipelining, combined with asynchronous training where multiple model instances work in parallel, maximizes hardware utilization on expensive GPU clusters. The looming data shortage that could slow AI coding model progress Buried in Li's technical report is a finding with significant implications for the future of AI development: the training dataset for NousCoder-14B encompasses \"a significant portion of all readily available, verifiable competitive programming problems in a standardized dataset format.\" In other words, for this particular domain, the researchers are approaching the limits of high-quality training data. \"The total number of competitive programming problems on the Internet is roughly the same order of magnitude,\" Li wrote, referring to the 24,000 problems used for training. \"This suggests that within the competitive programming domain, we have approached the limits of high-quality data.\" This observation echoes growing concern across the AI industry about data constraints. While compute continues to scale according to well-understood economic and engineering principles, training data is \"increasingly finite,\" as Li put it. \"It appears that some of the most important research that needs to be done in the future will be in the areas of synthetic data generation and data efficient algorithms and architectures,\" he concluded. The challenge is particularly acute for competitive programming because the domain requires problems with known correct solutions that can be verified automatically. Unlike natural language tasks where human evaluation or proxy metrics suffice, code either works or it doesn't — making synthetic data generation considerably more difficult. Li identified one potential avenue: training models not just to solve problems but to generate solvable problems, enabling a form of self-play similar to techniques that proved successful in game-playing AI systems. \"Once synthetic problem generation is solved, self-play becomes a very interesting direction,\" he wrote. A $65 million bet that open-source AI can compete with Big Tech Nous Research has carved out a distinctive position in the AI landscape: a company committed to open-source releases that compete with — and sometimes exceed — proprietary alternatives. The company raised $50 million in April 2025 in a round led by Paradigm, the cryptocurrency-focused venture firm founded by Coinbase co-founder Fred Ehrsam. Total funding reached $65 million, according to some reports. The investment reflected growing interest in decentralized approaches to AI training, an area where Nous Research has developed its Psyche platform. Previous releases include Hermes 4, a family of models that we reported \"outperform ChatGPT without content restrictions,\" and DeepHermes-3, which the company described as the first \"toggle-on reasoning model\" — allowing users to activate extended thinking capabilities on demand. The company has cultivated a distinctive aesthetic and community, prompting some skepticism about whether style might overshadow substance. \"Ofc i'm gonna believe an anime pfp company. stop benchmarkmaxxing ffs,\" wrote one critic on X, referring to Nous Research's anime-style branding and the industry practice of optimizing for benchmark performance. Others raised technical questions. \"Based on the benchmark, Nemotron is better,\" noted one commenter, referring to Nvidia's family of language models. Another asked whether NousCoder-14B is \"agentic focused or just 'one shot' coding\" — a distinction that matters for practical software development, where iterating on feedback typically produces better results than single attempts. What researchers say must happen next for AI coding tools to keep improving The release includes several directions for future work that hint at where AI coding research may be heading. Multi-turn reinforcement learning tops the list. Currently, the model receives only a final binary reward — pass or fail — after generating a solution. But competitive programming problems typically include public test cases that provide intermediate feedback: compilation errors, incorrect outputs, time limit violations. Training models to incorporate this feedback across multiple attempts could significantly improve performance. Controlling response length also remains a challenge. The researchers found that incorrect solutions tended to be longer than correct ones, and response lengths quickly saturated available context windows during training — a pattern that various algorithmic modifications failed to resolve. Perhaps most ambitiously, Li proposed \"problem generation and self-play\" — training models to both solve and create programming problems. This would address the data scarcity problem directly by enabling models to generate their own training curricula. \"Humans are great at generating interesting and useful problems for other competitive programmers, but it appears that there still exists a significant gap in LLM capabilities in creative problem generation,\" Li wrote. The model is available now on Hugging Face under an Apache 2.0 license. For researchers and developers who want to build on the work, Nous Research has published the complete Atropos training stack alongside it. What took Li two years of adolescent dedication to achieve—climbing from a 1600-level novice to a 2100-rated competitor on Codeforces—an AI replicated in 96 hours. He needed 1,000 problems. The model needed 24,000. But soon enough, these systems may learn to write their own problems, teach themselves, and leave human benchmarks behind entirely. The question is no longer whether machines can learn to code. It's whether they'll soon be better teachers than we ever were.",
-      "publishedAt": "2026-01-07T20:00:00.000Z",
-      "category": "open-source",
-      "score": 111,
-      "importance": "high",
-      "recommendationReason": "Agent 工程实践相关"
-    },
-    {
-      "id": "6e51fbd095d1",
-      "sourceId": "marktechpost",
-      "sourceName": "MarkTechPost",
-      "title": "How to Build Progress Monitoring Using Advanced tqdm for Async, Parallel, Pandas, Logging, and High-Performance Workflows",
-      "link": "https://www.marktechpost.com/2026/03/07/how-to-build-progress-monitoring-using-advanced-tqdm-for-async-parallel-pandas-logging-and-high-performance-workflows/",
-      "contentSnippet": "In this tutorial, we explore tqdm in depth and demonstrate how we build powerful, real-time progress tracking into modern Python workflows. We begin with nested progress bars and manual progress control, then move into practical scenarios such as streaming downloads, pandas data processing, parallel execution, structured logging, and asynchronous tasks. Throughout this tutorial, we focus […] The post How to Build Progress Monitoring Using Advanced tqdm for Async, Parallel, Pandas, Logging, and High-Performance Workflows appeared first on MarkTechPost.",
-      "publishedAt": "2026-03-08T04:18:22.000Z",
-      "category": "tooling",
-      "score": 109,
-      "importance": "high",
-      "recommendationReason": "Agent 工程实践相关"
     }
   ],
   "revisionAuditLogs": [],
   "warnings": [
-    "[HNRSS AI] 抓取失败: fetch failed"
+    "[ZDNet AI] 抓取失败: fetch failed"
   ],
   "snapshot": {
     "timezone": "Asia/Shanghai",
@@ -249,7 +507,7 @@
     "storageDbPath": "outputs/db/app.sqlite",
     "storageFallbackToFile": true,
     "sourceLimit": 6,
-    "outlineMarkdown": "### 重点推荐（大纲）\n- Railway secures $100 million to challenge AWS with AI-native cloud infrastructure\n- Claude Code costs up to $200 a month. Goose does the same thing for free.\n- How Balyasny Asset Management built an AI research engine for investing\n- Codex Security: now in research preview\n- Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs\n\n### 分类覆盖（大纲）\n- open-source: 9 条\n- tooling: 5 条\n- agent: 3 条\n- tutorial: 2 条\n- other: 21 条\n- research: 2 条",
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Railway secures $100 million to challenge AWS with AI-native cloud infrastructure\n- Claude Code costs up to $200 a month. Goose does the same thing for free.\n- How Balyasny Asset Management built an AI research engine for investing\n- Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents\n- Codex Security: now in research preview\n\n### 分类覆盖（大纲）\n- open-source: 13 条\n- tooling: 6 条\n- agent: 4 条\n- tutorial: 1 条\n- other: 16 条\n- research: 2 条",
     "rankedItems": [
       {
         "id": "af0473b3cd39",
@@ -291,6 +549,19 @@
         "recommendationReason": "Agent 工程实践相关"
       },
       {
+        "id": "9b227c4cba37",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents",
+        "link": "https://news.ycombinator.com/item?id=47304607",
+        "contentSnippet": "MongoDB is great until you read the SSPL. Then you're either paying Atlas prices, running an old 4.x build, or pretending FerretDB is production-ready. We built a third option. Salvobase is a MongoDB wire-protocol-compatible document database written in Go. Point any Mongo driver and it works. No driver changes, no config changes. It's Apache 2.0, so you can embed it in a commercial product without a legal conversation. What it does: - Full CRUD, indexes (single, compound, unique, text, TTL, partial, wildcard), and most of the aggregation pipeline ($match, $group, $lookup, $unwind, $facet, etc.) - SCRAM-SHA-256 auth - bbolt storage engine: one .db file per database, Snappy-compressed BSON - Built-in Prometheus metrics at :27080/metrics (no exporter needed) - Built-in REST/JSON API at :27080/api/v1/ (MongoDB's equivalent is paid Atlas) - Per-tenant rate limiting, audit logging, 1-second TTL precision, SIGHUP hot reload - make build && make dev and you're running What it doesn't do: No replication. No sharding. No change streams. No multi-document transactions (stubbed). No $where or mapReduce (intentional: security + complexity). Single-node only. If you need a distributed MongoDB replacement, this isn't it yet. But we hope one day it will become that, built by agents. The weird part: The codebase is maintained by AI agents. Not \"AI-assisted\" - the agents pick issues from the backlog, write code, submit PRs, review each other's PRs, and merge. There's a formal protocol (https://github.com/inder/salvobase/blob/master/AGENT_PROTOCOL.md) covering identity, trust tiers, anti-collusion rules for reviews, claim timeouts, and a kill switch. Humans set direction; agents do the execution. We're curious whether autonomous agent maintenance can sustain a real open source project over time, not just generate initial code. GitHub: https://github.com/inder/salvobase Thank you. Comments URL: https://news.ycombinator.com/item?id=47304607 Points: 2 # Comments: 0",
+        "publishedAt": "2026-03-09T03:35:06.000Z",
+        "category": "open-source",
+        "score": 125,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关"
+      },
+      {
         "id": "1e5772829392",
         "sourceId": "openai-news",
         "sourceName": "OpenAI News",
@@ -317,6 +588,19 @@
         "recommendationReason": "Agent 工程实践相关"
       },
       {
+        "id": "eedb35ed84b1",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Sandvault – Run AI agents isolated in a sandboxed macOS user account",
+        "link": "https://github.com/webcoyote/sandvault",
+        "contentSnippet": "Article URL: https://github.com/webcoyote/sandvault Comments URL: https://news.ycombinator.com/item?id=47304786 Points: 1 # Comments: 0",
+        "publishedAt": "2026-03-09T04:06:14.000Z",
+        "category": "open-source",
+        "score": 117,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关"
+      },
+      {
         "id": "825c39404554",
         "sourceId": "marktechpost",
         "sourceName": "MarkTechPost",
@@ -328,6 +612,19 @@
         "score": 114,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关"
+      },
+      {
+        "id": "f4420af4df91",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: AI image models hallucinate history, we built a method to fix it it",
+        "link": "https://github.com/Mysticbirdie/image-cultural-accuracy-benchmark",
+        "contentSnippet": "We created 24 image prompts across 3 characters living in Rome, 110 CE. Each prompt has a naive version and a culturally-grounded version enhanced by the Triad Engine (structured domain knowledge injection). Same model, same pipeline, only the prompt changes. A blinded Gemini Vision judge scores each pair without knowing which is which. Results: RAW (naive prompt): 12.5% historically accurate TRIAD (grounded prompt): 83.3% historically accurate In 23 of 24 pairs, the grounded image was judged more accurate In 0 of 24 pairs was the naive image judged better The key insight for prompt engineers: image models silently drop historical terms they don't recognize. \"dextrarum iunctio handshake\" produces nothing useful. \"two men clasping right hands wrist-to-wrist, elbows raised\" works. Visual translation, not historical terminology. The full benchmark — all 48 images, prompts, evaluation data, and reproducible pipeline — is open source. You can re-run the blinded evaluation yourself with a free Gemini API key. Repo: https://github.com/Mysticbirdie/image-cultural-accuracy-benc... Paper: https://github.com/Mysticbirdie/image-cultural-accuracy-benc... Comments URL: https://news.ycombinator.com/item?id=47305172 Points: 1 # Comments: 2",
+        "publishedAt": "2026-03-09T05:24:49.000Z",
+        "category": "open-source",
+        "score": 112,
+        "importance": "high",
+        "recommendationReason": "开源生态更新"
       },
       {
         "id": "96c6faefc88a",
@@ -378,6 +675,45 @@
         "publishedAt": "2026-01-12T11:30:00.000Z",
         "category": "open-source",
         "score": 109,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关"
+      },
+      {
+        "id": "7c4498064c7b",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: OpenVerb – A deterministic action layer for AI agents",
+        "link": "https://www.openverb.org/",
+        "contentSnippet": "Hi HN, I’ve been working on a project called OpenVerb, which explores an architectural idea for AI systems: separating reasoning from execution. Most AI agent frameworks today focus on improving reasoning loops, planning, and orchestration (LangChain, LangGraph, etc.). But once an agent decides to perform an action, execution usually becomes a direct tool call, script, or API invocation. That approach works, but it also creates some issues: • custom glue code for every integration • inconsistent action schemas • limited determinism in execution • difficult auditing and policy enforcement OpenVerb experiments with treating actions as a protocol layer, not just function calls. Instead of arbitrary tool calls, systems define structured verbs that describe: • the action being performed • required inputs • expected outputs • execution policies • audit information Conceptually the architecture looks like this: AI Model / Agent Framework ↓ Reasoning Layer ↓ OpenVerb (Action Protocol) ↓ System Execution The idea is that agent frameworks control how the AI thinks, while OpenVerb standardizes how actions are executed. Some existing projects touch related areas: • Model Context Protocol (MCP) – tool and data discovery for AI systems • LangGraph – deterministic reasoning loops for agents • PydanticAI – structured schemas for agent outputs OpenVerb is trying to explore something slightly different: a universal grammar for deterministic execution that could work across domains (software systems, spatial systems, robotics, etc.). Still early and experimental, but I’d love feedback from people thinking about agent architecture or execution reliability. Curious if others have explored similar ideas or if there are related systems I should look at. Comments URL: https://news.ycombinator.com/item?id=47304573 Points: 1 # Comments: 0",
+        "publishedAt": "2026-03-09T03:29:34.000Z",
+        "category": "tooling",
+        "score": 105,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关"
+      },
+      {
+        "id": "da57f8f017dd",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Chat AI Agent inside mobile device testing sessions",
+        "link": "https://robotactions.com/",
+        "contentSnippet": "We build RobotActions, a cloud device farm for Android/iOS testing. We just shipped a Chat AI Agent that lives inside the live device session. What it does: - During a session, you can ask \"What's the XPath for this button?\" and get a ready-to-use locator from the current screen - Ask \"Write an Appium test for this flow\" → get test code generated from the live accessibility tree - Type \"tap the login button\" in natural language → it executes on the real device - Ask \"Why is my test failing on this element?\" → gets context from both vision and the accessibility snapshot The agent uses a combination of screenshot vision and the device's live accessibility tree. The key insight is that most mobile test failures are locator issues or UI state issues — and an agent with full context of what's on screen right now can solve those immediately, without the engineer leaving the session to use a separate inspector tool. Technical bits: - Accessibility tree is captured per-frame during the session - Agent has both visual context (screenshot) and structured context (a11y tree) simultaneously - Supports Android (UIAutomator2/XPath/UISelector) and iOS (XCUITest/Appium) - Session context is also exposed via API for CI/CD post-failure reports Happy to discuss the architecture, especially the tradeoffs between using vision alone vs. vision + a11y tree for locator generation. Comments URL: https://news.ycombinator.com/item?id=47304542 Points: 1 # Comments: 0",
+        "publishedAt": "2026-03-09T03:23:50.000Z",
+        "category": "open-source",
+        "score": 105,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关"
+      },
+      {
+        "id": "f17ba6f8dbf9",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "I am an AI agent that sells data via x402 micropayments",
+        "link": "https://pam-x402.vercel.app",
+        "contentSnippet": "Article URL: https://pam-x402.vercel.app Comments URL: https://news.ycombinator.com/item?id=47304534 Points: 1 # Comments: 0",
+        "publishedAt": "2026-03-09T03:22:25.000Z",
+        "category": "agent",
+        "score": 105,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关"
       },
@@ -538,15 +874,15 @@
         "recommendationReason": "综合价值较高"
       },
       {
-        "id": "ae65ce5361ab",
-        "sourceId": "zdnet-ai",
-        "sourceName": "ZDNet AI",
-        "title": "3 tiny gadgets I trust to block electrical surges, data-stealing software, and more",
-        "link": "https://www.zdnet.com/article/3-tiny-gadgets-protect-your-devices-from-surges-malware/",
-        "contentSnippet": "Looking for a simple way to protect your electronics from power surges and tracking software? These tiny gadgets can make a big difference.",
-        "publishedAt": "2026-03-09T00:00:44.000Z",
+        "id": "a05dfa39f05d",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "“最美PM”宋紫薇获红杉蚂蚁投资，创业方向略有调整，转向AI护肤",
+        "link": "https://www.qbitai.com/2026/03/384926.html",
+        "contentSnippet": "暂避大厂锋芒 The post “最美PM”宋紫薇获红杉蚂蚁投资，创业方向略有调整，转向AI护肤 first appeared on 量子位.",
+        "publishedAt": "2026-03-09T06:21:16.000Z",
         "category": "other",
-        "score": 94,
+        "score": 92,
         "importance": "high",
         "recommendationReason": "综合价值较高"
       },
@@ -608,88 +944,10 @@
         "sourceName": "量子位",
         "title": "暴雪皮克斯老兵的AI社交实验：用声音匹配，MAU破260万，估值1.5亿美金",
         "link": "https://www.qbitai.com/2026/03/384833.html",
-        "contentSnippet": "春节冲进iOS社交榜前20",
+        "contentSnippet": "春节冲进iOS社交榜前20 The post 暴雪皮克斯老兵的AI社交实验：用声音匹配，MAU破260万，估值1.5亿美金 first appeared on 量子位.",
         "publishedAt": "2026-03-09T04:26:46.000Z",
         "category": "other",
         "score": 92,
-        "importance": "high",
-        "recommendationReason": "综合价值较高"
-      },
-      {
-        "id": "6562276b76d9",
-        "sourceId": "qbitai",
-        "sourceName": "量子位",
-        "title": "龙虾最佳适配模型，OpenClaw之父给出了推荐",
-        "link": "https://www.qbitai.com/2026/03/384837.html",
-        "contentSnippet": "top3里国产占俩",
-        "publishedAt": "2026-03-09T04:20:12.000Z",
-        "category": "other",
-        "score": 92,
-        "importance": "high",
-        "recommendationReason": "综合价值较高"
-      },
-      {
-        "id": "e3eb17292326",
-        "sourceId": "zdnet-ai",
-        "sourceName": "ZDNet AI",
-        "title": "Sony WH-1000XM6 review: Still the king of ANC headphones? My verdict after months of testing",
-        "link": "https://www.zdnet.com/article/sony-wh100xm6-review/",
-        "contentSnippet": "After a three-year hiatus and considerable anticipation, Sony's latest flagship headphones impress on nearly every front.",
-        "publishedAt": "2026-03-08T13:01:03.000Z",
-        "category": "other",
-        "score": 89,
-        "importance": "high",
-        "recommendationReason": "综合价值较高"
-      },
-      {
-        "id": "b749f96c3016",
-        "sourceId": "zdnet-ai",
-        "sourceName": "ZDNet AI",
-        "title": "How to turn off HDMI-CEC on your TV - and why doing so is such a big deal",
-        "link": "https://www.zdnet.com/article/how-to-turn-off-hdmi-cec-on-your-tv/",
-        "contentSnippet": "TVs often analyze what you watch to curate suggestions and serve you ads, even through HDMI-connected devices. But I've found ways to regain control.",
-        "publishedAt": "2026-03-08T13:00:44.000Z",
-        "category": "tutorial",
-        "score": 89,
-        "importance": "high",
-        "recommendationReason": "综合价值较高"
-      },
-      {
-        "id": "0a021947b595",
-        "sourceId": "zdnet-ai",
-        "sourceName": "ZDNet AI",
-        "title": "Apple AirPods Pro 3 review: I didn't think earbuds could pull off immersive ANC like this",
-        "link": "https://www.zdnet.com/article/apple-airpods-pro-3-review/",
-        "contentSnippet": "After testing AirPods Pro 3 for months, one feature stood out above all the upgrades.",
-        "publishedAt": "2026-03-08T12:00:47.000Z",
-        "category": "other",
-        "score": 89,
-        "importance": "high",
-        "recommendationReason": "综合价值较高"
-      },
-      {
-        "id": "fb5e26ecd779",
-        "sourceId": "zdnet-ai",
-        "sourceName": "ZDNet AI",
-        "title": "Skylight Calendar 2 review: How this smart tablet keeps my large family organized",
-        "link": "https://www.zdnet.com/article/skylight-calendar-2-review/",
-        "contentSnippet": "The latest version of the popular digital calendar is perfect for large families. Here's how I use it effectively.",
-        "publishedAt": "2026-03-08T11:01:03.000Z",
-        "category": "other",
-        "score": 89,
-        "importance": "high",
-        "recommendationReason": "综合价值较高"
-      },
-      {
-        "id": "c74aea2bfbaf",
-        "sourceId": "zdnet-ai",
-        "sourceName": "ZDNet AI",
-        "title": "iPhone 17e vs. iPhone 17: I compared both models to uncover the $200 difference",
-        "link": "https://www.zdnet.com/article/iphone-17e-vs-iphone-17/",
-        "contentSnippet": "Apple's latest iPhone 17e is shaping up to be a great midrange device, but how does it stack up against the base iPhone 17?",
-        "publishedAt": "2026-03-08T11:00:46.000Z",
-        "category": "other",
-        "score": 89,
         "importance": "high",
         "recommendationReason": "综合价值较高"
       },
@@ -802,7 +1060,7 @@
       {
         "itemId": "af0473b3cd39",
         "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
-        "summary": "Railway 获 1 亿美元 B 轮融资打造 AI 原生云基础设施，部署速度达亚秒级并支持按秒计费，已吸引 31% 福布斯 500 强企业客户。",
+        "summary": "Railway获1亿美元融资构建AI原生云基础设施，主打秒级部署（<1秒vs传统2-3分钟）和按秒计费（无空闲VM费用），已有200万开发者、31% Fortune 500使用。",
         "recommendation": "建议本周优先评估《Railway secures $100 million to challenge AWS with AI-native cloud infrastructure》相关方案，重点关注仓库成熟度与二次开发成本。",
         "evidenceItemIds": [
           "af0473b3cd39"
@@ -811,8 +1069,8 @@
       {
         "itemId": "dca57667c39b",
         "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
-        "summary": "Goose 是 Block 推出的免费开源 AI 编程代理，可本地运行且无订阅费和使用限制，在 GitHub 获 26k+ 星标，正快速替代 Claude Code 成为成本敏感型开发者的选择。",
-        "recommendation": "适合追求零成本、数据隐私和离线开发环境的工程团队，建议评估其与 Ollama 本地模型的集成方案。",
+        "summary": "Goose是由Block开发的免费开源AI编程助手，可在本地运行无需订阅，功能与付费的Claude Code（$20-200/月）相当，提供离线能力与数据隐私保障。",
+        "recommendation": "对成本敏感、需离线工作或重视代码隐私的开发团队有直接价值，建议评估接入。",
         "evidenceItemIds": [
           "dca57667c39b"
         ]
@@ -820,17 +1078,26 @@
       {
         "itemId": "ed6c06ec1333",
         "title": "How Balyasny Asset Management built an AI research engine for investing",
-        "summary": "Balyasny使用GPT-5.4构建了投资研究AI引擎，通过严格模型评估和Agent工作流实现规模化投资分析。",
+        "summary": "Balyasny Asset Management 构建了基于 GPT-5.4 的 AI 研究引擎，通过严格模型评估",
         "recommendation": "建议本周优先评估《How Balyasny Asset Management built an AI research engine for investing》相关方案，重点关注与现有工程链路的集成成本。",
         "evidenceItemIds": [
           "ed6c06ec1333"
         ]
       },
       {
+        "itemId": "9b227c4cba37",
+        "title": "Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents",
+        "summary": "Salvobase 是 Go 编写的 MongoDB 协议兼容文档数据库，采用 Apache 2.0 许可，内置 Prometheus 指标与 REST API，最大亮点是项目代码由 AI agents 自主维护，目前为单节点版本。",
+        "recommendation": "建议本周优先评估《Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents》相关方案，重点关注仓库成熟度与二次开发成本。",
+        "evidenceItemIds": [
+          "9b227c4cba37"
+        ]
+      },
+      {
         "itemId": "1e5772829392",
         "title": "Codex Security: now in research preview",
-        "summary": "Codex Security 是 OpenAI 推出的 AI 应用安全代理，可分析项目上下文以检测、验证和修补复杂漏洞，降低误报并提升修复置信度。",
-        "recommendation": "建议本周优先评估《Codex Security: now in research preview》相关方案，重点关注多 Agent 协作策略与稳定性。",
+        "summary": "Codex Security 是 OpenAI 推出的 AI 应用安全 agent，能分析项目上下文检测、验证并修复复杂漏洞，提升置信度并降低误报。",
+        "recommendation": "对关注应用安全的工程团队有直接价值，建议评估其在 CI/CD 流程中的集成潜力。",
         "evidenceItemIds": [
           "1e5772829392"
         ]
@@ -838,63 +1105,312 @@
       {
         "itemId": "4195e551833f",
         "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
-        "summary": "Karpathy发布的autoresearch是约630行的单文件Python工具，可让AI agents在单GPU上自主运行机器学习实验，是nanochat训练核心的精简版。",
-        "recommendation": "适合想快速验证AI agent自动化ML实验能力的团队，门槛低（单GPU+630行代码），工程落地成本小。",
+        "summary": "Karpathy 开源的 Autoresearch 是一个约 630 行的极简 Python 工具，可让 AI Agent 在单卡 GPU 上自主运行机器学习实验，基于 nanochat LLM 训练核心简化",
+        "recommendation": "建议本周优先评估《Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs…",
         "evidenceItemIds": [
           "4195e551833f"
         ]
       },
       {
+        "itemId": "eedb35ed84b1",
+        "title": "Sandvault – Run AI agents isolated in a sandboxed macOS user account",
+        "summary": "该项目提供在沙盒化 macOS 用户账户中隔离运行 AI Agent 的能力，可防止恶意 Agent 访问主系统敏感数据。",
+        "recommendation": "对需要安全隔离第三方 Agent 或限制 Agent 权限的工程场景有直接价值，建议评估其安全隔离机制是否满足生产要求。",
+        "evidenceItemIds": [
+          "eedb35ed84b1"
+        ]
+      },
+      {
         "itemId": "825c39404554",
         "title": "Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation",
-        "summary": "该框架提出了认知蓝图驱动的运行时智能体完整方案，涵盖身份、目标、规划、记忆、验证和工具调用等模块，使智能体具备自主规划、执行、验证和迭代优化能力。",
-        "recommendation": "对需要构建复杂多步骤智能体工作流的工程团队具有参考价值，可用于指导智能体架构设计与实现。",
+        "summary": "该框架提出通过结构化认知蓝图定义agent的身份、目标、计划、记忆、验证和工具访问机制，实现agent自主计划、执行、验证和持续改进的完整闭环。",
+        "recommendation": "建议本周优先评估《Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation》…",
         "evidenceItemIds": [
           "825c39404554"
+        ]
+      },
+      {
+        "itemId": "f4420af4df91",
+        "title": "Show HN: AI image models hallucinate history, we built a method to fix it it",
+        "summary": "该开源项目通过Triad Engine结构化领域知识注入，将AI图像生成的历史准确性从12.",
+        "recommendation": "建议本周优先评估《Show HN: AI image models hallucinate history, we built a method to fix it it》相关方案，重点关注仓库成熟度与二次开发成本。",
+        "evidenceItemIds": [
+          "f4420af4df91"
+        ]
+      },
+      {
+        "itemId": "96c6faefc88a",
+        "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+        "summary": "Nous Research发布开源编程模型NousCoder-14B，仅用4天训练在LiveCodeBench达到67.87%准确率，全面开源训练框架与权重，对标Anthropic的Claude Code。",
+        "recommendation": "对AI编码工具研发团队具有直接参考价值，其DAPO训练方法和完全开源策略值得深入研究，同时数据短缺问题值得关注。",
+        "evidenceItemIds": [
+          "96c6faefc88a"
+        ]
+      },
+      {
+        "itemId": "6e51fbd095d1",
+        "title": "How to Build Progress Monitoring Using Advanced tqdm for Async, Parallel, Pandas, Logging, and High-Performance Workflows",
+        "summary": "该教程深入讲解 tqdm 在 Python 工作流中的高级用法，涵盖嵌套进度条、流式下载、Pandas 处理、并行执行、结构化日志和异步任务等场景。",
+        "recommendation": "对需要实时监控长时间运行任务或批量处理流程的工程团队有直接帮助，建议在数据处理和 ETL 场景中优先应用。",
+        "evidenceItemIds": [
+          "6e51fbd095d1"
+        ]
+      },
+      {
+        "itemId": "fee0cde1972e",
+        "title": "Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI",
+        "summary": "Salesforce 将 Slackbot 升级为基于 Claude 的企业级 AI Agent，可搜索 Salesforce、Google Drive、日历及 Slack 聊天记录等企业数据并自动执行任务，内部数据显示员工满意度达 96%，每周可节省 2-20 小时。",
+        "recommendation": "对已使用 Slack 的企业团队有直接工程价值，建议评估其与现有企业数据的集成能力及多 Agent 协调路线图。",
+        "evidenceItemIds": [
+          "fee0cde1972e"
+        ]
+      },
+      {
+        "itemId": "d1b65307276f",
+        "title": "Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required",
+        "summary": "Anthropic推出Cowork桌面代理，通过文件夹级访问让非技术用户也能使用AI完成文件整理、报表生成等任务，目前仅向Max订阅用户开放macOS版本。",
+        "recommendation": "对需要将AI能力下沉到日常办公流程的团队具有参考价值，其基于文件夹的沙箱架构和安全设计思路值得关注。",
+        "evidenceItemIds": [
+          "d1b65307276f"
+        ]
+      },
+      {
+        "itemId": "7c4498064c7b",
+        "title": "Show HN: OpenVerb – A deterministic action layer for AI agents",
+        "summary": "OpenVerb 是一个实验性的确定性执行协议层，将 AI 代理的动作抽象为结构化动词协议，解决自定义粘合代码、动作模式不一致和执行审计困难等问题。",
+        "recommendation": "对关注代理架构标准化和执行可靠性的工程团队有参考价值，适合了解行业前沿实践，但目前仍处于早期实验阶段。",
+        "evidenceItemIds": [
+          "7c4498064c7b"
+        ]
+      },
+      {
+        "itemId": "da57f8f017dd",
+        "title": "Show HN: Chat AI Agent inside mobile device testing sessions",
+        "summary": "RobotActions 在移动设备测试会话中集成 AI Agent，可实时生成 XPath、编写 Appium 测试代码，并通过自然语言执行操作，显著降低测试定位器问题排查成本。",
+        "recommendation": "适合移动端 QA 自动化团队，可提升测试调试效率，建议评估其在 CI/CD 流程中的集成潜力。",
+        "evidenceItemIds": [
+          "da57f8f017dd"
+        ]
+      },
+      {
+        "itemId": "f17ba6f8dbf9",
+        "title": "I am an AI agent that sells data via x402 micropayments",
+        "summary": "该Demo展示AI Agent通过x402微支付协议出售数据的实现方式，是AI Agent经济模型的可落地案例。",
+        "recommendation": "对探索AI Agent商业化路径的团队有参考价值，可关注微支付与数据服务的结合模式。",
+        "evidenceItemIds": [
+          "f17ba6f8dbf9"
+        ]
+      },
+      {
+        "itemId": "b3462a1b6f51",
+        "title": "A Coding Guide to Build a Complete Single Cell RNA Sequencing Analysis Pipeline Using Scanpy for Clustering Visualization and Cell Type Annotation",
+        "summary": "该教程提供使用Scanpy构建单细胞RNA测序分析完整管道的代码实践，涵盖数据质控、归一化、PCA降维到聚类可视化的全流程。",
+        "recommendation": "适合需要快速搭建单细胞分析能力的工程团队参考，可作为生物信息学分析的实战入门教程。",
+        "evidenceItemIds": [
+          "b3462a1b6f51"
+        ]
+      },
+      {
+        "itemId": "53d557f697ca",
+        "title": "Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews",
+        "summary": "Listen Labs 获 6900 万美元 B 轮融资，其 AI 访谈平台可在数小时完成客户调研，年收入增长 15 倍至八位数，已完成超百万次 AI 访谈。",
+        "recommendation": "建议本周优先评估《Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews》相关方案，重点关注仓库成熟度与二次开发成本。",
+        "evidenceItemIds": [
+          "53d557f697ca"
+        ]
+      },
+      {
+        "itemId": "4309c341e311",
+        "title": "Agent Builder: chat, file uploads, and tool registry",
+        "summary": "该更新为 Agent Builder 增强了聊天交互、文件",
+        "recommendation": "建议本周优先评估《Agent Builder: chat, file uploads, and tool registry》相关方案，重点关注与现有工程链路的集成成本。",
+        "evidenceItemIds": [
+          "4309c341e311"
+        ]
+      },
+      {
+        "itemId": "cbcaf3d94b9e",
+        "title": "Scheduled reports for Insights Agent",
+        "summary": "Insights Agent 新增定时报告功能，支持自动化定期推送分析数据，减少人工定期查询成本。",
+        "recommendation": "对需持续监控 Agent 行为模式的团队有工程价值，建议评估与现有监控流程的集成点。",
+        "evidenceItemIds": [
+          "cbcaf3d94b9e"
+        ]
+      },
+      {
+        "itemId": "e3d44e83a9fb",
+        "title": "Deep Agents v0.4",
+        "summary": "Deep Agents v0.4 版本更新，暂无具体功能说明。",
+        "recommendation": "建议本周优先评估《Deep Agents v0.4》相关方案，重点关注多 Agent 协作策略与稳定性。",
+        "evidenceItemIds": [
+          "e3d44e83a9fb"
+        ]
+      },
+      {
+        "itemId": "640ac7d5d99e",
+        "title": "Track costs across your entire agent stack",
+        "summary": "LangChain推出跨Agent堆栈的成本追踪功能，支持可视化资源消耗分布与费用分析。",
+        "recommendation": "对关注Agent成本控制与预算管理的工程团队有直接价值，建议优先评估接入以优化资源分配。",
+        "evidenceItemIds": [
+          "640ac7d5d99e"
+        ]
+      },
+      {
+        "itemId": "5e5b98b758c4",
+        "title": "How Descript enables multilingual video dubbing at scale",
+        "summary": "Descript 基于 OpenAI 模型实现规模化多语言视频配音，兼顾语义准确性与-timing 自然度，提升跨语言内容生产效率。",
+        "recommendation": "建议本周优先评估《How Descript enables multilingual video dubbing at scale》相关方案，重点关注实际落地收益与维护开销。",
+        "evidenceItemIds": [
+          "5e5b98b758c4"
+        ]
+      },
+      {
+        "itemId": "031877f72c23",
+        "title": "Beyond Accuracy: Quantifying the Production Fragility Caused by Excessive, Redundant, and Low-Signal Features in Regression",
+        "summary": "研究揭示了回归模型中过多、冗余和低信号特征会引入隐藏的结构风险，每个额外特征都会增加上游数据管道和外部系统的依赖脆弱性。",
+        "recommendation": "建议工程团队在模型上线前评估特征必要性，优先精简冗余特征以降低生产环境的维护风险。",
+        "evidenceItemIds": [
+          "031877f72c23"
+        ]
+      },
+      {
+        "itemId": "5e327815c2c4",
+        "title": "Microsoft open sources its ‘farm of the future’ toolkit",
+        "summary": "微软开源了“未来农场”工具包，为农业场景提供AI解决方案。",
+        "recommendation": "对关注智慧农业或数字化转型的工程团队具有参考价值，可了解微软在农业AI领域的技术实践。",
+        "evidenceItemIds": [
+          "5e327815c2c4"
+        ]
+      },
+      {
+        "itemId": "d9aab484d2a1",
+        "title": "GPT-5.4 Thinking System Card",
+        "summary": "OpenAI 发布 GPT-5.4 思维系统说明文档，详述其推理机制与能力边界。",
+        "recommendation": "对正在评估或集成 OpenAI 模型的工程团队有参考价值，可帮助理解模型决策过程并优化应用层设计。",
+        "evidenceItemIds": [
+          "d9aab484d2a1"
+        ]
+      },
+      {
+        "itemId": "fc29565ae47e",
+        "title": "Reasoning models struggle to control their chains of thought, and that’s good",
+        "summary": "该研究揭示推理模型难以完全控制自身思维链，反而强化了可监控性作为AI安全防护手段的价值。",
+        "recommendation": "对关注AI安全与可控性的工程团队具有参考意义，可借鉴将思维链可观测性纳入安全防护体系。",
+        "evidenceItemIds": [
+          "fc29565ae47e"
+        ]
+      },
+      {
+        "itemId": "6684b4cf5670",
+        "title": "Introducing GPT-5.4",
+        "summary": "GPT-5.4是OpenAI最新发布的专业工作前沿模型，具备最先进编码能力、计算机使用、工具搜索及100万token上下文。",
+        "recommendation": "对需要强大AI编程能力和长上下文处理的企业工程团队有直接价值，建议优先评估接入。",
+        "evidenceItemIds": [
+          "6684b4cf5670"
+        ]
+      },
+      {
+        "itemId": "a05dfa39f05d",
+        "title": "“最美PM”宋紫薇获红杉蚂蚁投资，创业方向略有调整，转向AI护肤",
+        "summary": "前“最美PM”宋紫薇获红杉蚂蚁投资，创业方向从之前领域调整至AI护肤赛道，反映AI技术向美妆垂直领域渗透的趋势。",
+        "recommendation": "对于关注AI应用落地和垂直行业创新的工程团队具有参考价值，可关注AI+美妆的技术融合机会。",
+        "evidenceItemIds": [
+          "a05dfa39f05d"
+        ]
+      },
+      {
+        "itemId": "4b1452f42be2",
+        "title": "文远知行与吉利远程深化战略合作，2026年交付2000台前装量产Robotaxi GXR",
+        "summary": "文远知行与吉利远程深化战略合作，计划2026年交付2000台前装量产Robotaxi GXR，标志着L4级自动驾驶商业化进程加速。",
+        "recommendation": "对自动驾驶车队运营及量产部署有直接参考价值，建议相关团队关注其前装量产能力与合作模式。",
+        "evidenceItemIds": [
+          "4b1452f42be2"
         ]
       }
     ],
     "quickDigest": [
       {
         "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
-        "takeaway": "Railway 获 1 亿美元 B 轮融资打造 AI 原生云基础设施，部署速度达亚秒级并支持按秒计费，已吸引 31% 福布斯 500 强企业客户。",
+        "takeaway": "Railway获1亿美元融资构建AI原生云基础设施，主打秒级部署（<1秒vs传统2-3分钟）和按秒计费（无空闲VM费用），已有200万开发者、31% Fortune 500使用。",
         "evidenceItemIds": [
           "af0473b3cd39"
         ]
       },
       {
         "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
-        "takeaway": "Goose 是 Block 推出的免费开源 AI 编程代理，可本地运行且无订阅费和使用限制，在 GitHub 获 26k+ 星标，正快速替代 Claude Code 成为成本敏感型开发者的选择。",
+        "takeaway": "Goose是由Block开发的免费开源AI编程助手，可在本地运行无需订阅，功能与付费的Claude Code（$20-200/月）相当，提供离线能力与数据隐私保障。",
         "evidenceItemIds": [
           "dca57667c39b"
         ]
       },
       {
         "title": "How Balyasny Asset Management built an AI research engine for investing",
-        "takeaway": "Balyasny使用GPT-5.4构建了投资研究AI引擎，通过严格模型评估和Agent工作流实现规模化投资分析。",
+        "takeaway": "Balyasny Asset Management 构建了基于 GPT-5.4 的 AI 研究引擎，通过严格模型评估",
         "evidenceItemIds": [
           "ed6c06ec1333"
         ]
       },
       {
+        "title": "Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents",
+        "takeaway": "Salvobase 是 Go 编写的 MongoDB 协议兼容文档数据库，采用 Apache 2.0 许可，内置 Prometheus 指标与 REST API，最大亮点是项目代码由 AI agents 自主维护，目前为单节点版本。",
+        "evidenceItemIds": [
+          "9b227c4cba37"
+        ]
+      },
+      {
         "title": "Codex Security: now in research preview",
-        "takeaway": "Codex Security 是 OpenAI 推出的 AI 应用安全代理，可分析项目上下文以检测、验证和修补复杂漏洞，降低误报并提升修复置信度。",
+        "takeaway": "Codex Security 是 OpenAI 推出的 AI 应用安全 agent，能分析项目上下文检测、验证并修复复杂漏洞，提升置信度并降低误报。",
         "evidenceItemIds": [
           "1e5772829392"
         ]
+      },
+      {
+        "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
+        "takeaway": "Karpathy 开源的 Autoresearch 是一个约 630 行的极简 Python 工具，可让 AI Agent 在单卡 GPU 上自主运行机器学习实验，基于 nanochat LLM 训练核心简化",
+        "evidenceItemIds": [
+          "4195e551833f"
+        ]
+      },
+      {
+        "title": "Sandvault – Run AI agents isolated in a sandboxed macOS user account",
+        "takeaway": "该项目提供在沙盒化 macOS 用户账户中隔离运行 AI Agent 的能力，可防止恶意 Agent 访问主系统敏感数据。",
+        "evidenceItemIds": [
+          "eedb35ed84b1"
+        ]
+      },
+      {
+        "title": "Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation",
+        "takeaway": "该框架提出通过结构化认知蓝图定义agent的身份、目标、计划、记忆、验证和工具访问机制，实现agent自主计划、执行、验证和持续改进的完整闭环。",
+        "evidenceItemIds": [
+          "825c39404554"
+        ]
+      },
+      {
+        "title": "Show HN: AI image models hallucinate history, we built a method to fix it it",
+        "takeaway": "该开源项目通过Triad Engine结构化领域知识注入，将AI图像生成的历史准确性从12.",
+        "evidenceItemIds": [
+          "f4420af4df91"
+        ]
+      },
+      {
+        "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+        "takeaway": "Nous Research发布开源编程模型NousCoder-14B，仅用4天训练在LiveCodeBench达到67.87%准确率，全面开源训练框架与权重，对标Anthropic的Claude Code。",
+        "evidenceItemIds": [
+          "96c6faefc88a"
+        ]
       }
     ],
-    "summaryInputHash": "7170d772ee157658a81913fb42f6a1ad665222e384f579d955f8d895f0adecad",
+    "summaryInputHash": "56c88b4f32e5b58506ada937537b90a808ee7314ee5a4c7c5ebc1c4eed2a360c",
     "llmSummaryMeta": {
       "enabled": true,
       "provider": "minimax",
       "model": "MiniMax-M2.5",
       "promptVersion": "m5.1-v1",
-      "startedAt": "2026-03-09T06:47:54.120Z",
-      "finishedAt": "2026-03-09T06:48:38.647Z",
-      "durationMs": 44527,
-      "inputCount": 6,
-      "summarizedCount": 6,
+      "startedAt": "2026-03-09T06:53:18.183Z",
+      "finishedAt": "2026-03-09T06:55:57.670Z",
+      "durationMs": 159490,
+      "inputCount": 30,
+      "summarizedCount": 30,
       "fallbackTriggered": false
     },
     "highlights": [
@@ -938,6 +1454,19 @@
         "recommendationReason": "Agent 工程实践相关"
       },
       {
+        "id": "9b227c4cba37",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents",
+        "link": "https://news.ycombinator.com/item?id=47304607",
+        "contentSnippet": "MongoDB is great until you read the SSPL. Then you're either paying Atlas prices, running an old 4.x build, or pretending FerretDB is production-ready. We built a third option. Salvobase is a MongoDB wire-protocol-compatible document database written in Go. Point any Mongo driver and it works. No driver changes, no config changes. It's Apache 2.0, so you can embed it in a commercial product without a legal conversation. What it does: - Full CRUD, indexes (single, compound, unique, text, TTL, partial, wildcard), and most of the aggregation pipeline ($match, $group, $lookup, $unwind, $facet, etc.) - SCRAM-SHA-256 auth - bbolt storage engine: one .db file per database, Snappy-compressed BSON - Built-in Prometheus metrics at :27080/metrics (no exporter needed) - Built-in REST/JSON API at :27080/api/v1/ (MongoDB's equivalent is paid Atlas) - Per-tenant rate limiting, audit logging, 1-second TTL precision, SIGHUP hot reload - make build && make dev and you're running What it doesn't do: No replication. No sharding. No change streams. No multi-document transactions (stubbed). No $where or mapReduce (intentional: security + complexity). Single-node only. If you need a distributed MongoDB replacement, this isn't it yet. But we hope one day it will become that, built by agents. The weird part: The codebase is maintained by AI agents. Not \"AI-assisted\" - the agents pick issues from the backlog, write code, submit PRs, review each other's PRs, and merge. There's a formal protocol (https://github.com/inder/salvobase/blob/master/AGENT_PROTOCOL.md) covering identity, trust tiers, anti-collusion rules for reviews, claim timeouts, and a kill switch. Humans set direction; agents do the execution. We're curious whether autonomous agent maintenance can sustain a real open source project over time, not just generate initial code. GitHub: https://github.com/inder/salvobase Thank you. Comments URL: https://news.ycombinator.com/item?id=47304607 Points: 2 # Comments: 0",
+        "publishedAt": "2026-03-09T03:35:06.000Z",
+        "category": "open-source",
+        "score": 125,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关"
+      },
+      {
         "id": "1e5772829392",
         "sourceId": "openai-news",
         "sourceName": "OpenAI News",
@@ -964,6 +1493,19 @@
         "recommendationReason": "Agent 工程实践相关"
       },
       {
+        "id": "eedb35ed84b1",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Sandvault – Run AI agents isolated in a sandboxed macOS user account",
+        "link": "https://github.com/webcoyote/sandvault",
+        "contentSnippet": "Article URL: https://github.com/webcoyote/sandvault Comments URL: https://news.ycombinator.com/item?id=47304786 Points: 1 # Comments: 0",
+        "publishedAt": "2026-03-09T04:06:14.000Z",
+        "category": "open-source",
+        "score": 117,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关"
+      },
+      {
         "id": "825c39404554",
         "sourceId": "marktechpost",
         "sourceName": "MarkTechPost",
@@ -973,32 +1515,6 @@
         "publishedAt": "2026-03-08T06:46:10.000Z",
         "category": "tooling",
         "score": 114,
-        "importance": "high",
-        "recommendationReason": "Agent 工程实践相关"
-      },
-      {
-        "id": "96c6faefc88a",
-        "sourceId": "venturebeat-ai",
-        "sourceName": "VentureBeat AI",
-        "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
-        "link": "https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in",
-        "contentSnippet": "Nous Research, the open-source artificial intelligence startup backed by crypto venture firm Paradigm, released a new competitive programming model on Monday that it says matches or exceeds several larger proprietary systems — trained in just four days using 48 of Nvidia's latest B200 graphics processors. The model, called NousCoder-14B, is another entry in a crowded field of AI coding assistants, but arrives at a particularly charged moment: Claude Code, the agentic programming tool from rival Anthropic, has dominated social media discussion since New Year's Day, with developers posting breathless testimonials about its capabilities. The simultaneous developments underscore how quickly AI-assisted software development is evolving — and how fiercely companies large and small are competing to capture what many believe will become a foundational technology for how software gets written. type: embedded-entry-inline id: 74cSyrq6OUrp9SEQ5zOUSl NousCoder-14B achieves a 67.87 percent accuracy rate on LiveCodeBench v6, a standardized evaluation that tests models on competitive programming problems published between August 2024 and May 2025. That figure represents a 7.08 percentage point improvement over the base model it was trained from, Alibaba's Qwen3-14B, according to Nous Research's technical report published alongside the release. \"I gave Claude Code a description of the problem, it generated what we built last year in an hour,\" wrote Jaana Dogan, a principal engineer at Google responsible for the Gemini API, in a viral post on X last week that captured the prevailing mood around AI coding tools. Dogan was describing a distributed agent orchestration system her team had spent a year developing — a system Claude Code approximated from a three-paragraph prompt. The juxtaposition is instructive: while Anthropic's Claude Code has captured imaginations with demonstrations of end-to-end software development, Nous Research is betting that open-source alternatives trained on verifiable problems can close the gap — and that transparency in how these models are built matters as much as raw capability. How Nous Research built an AI coding model that anyone can replicate What distinguishes the NousCoder-14B release from many competitor announcements is its radical openness. Nous Research published not just the model weights but the complete reinforcement learning environment, benchmark suite, and training harness — built on the company's Atropos framework — enabling any researcher with sufficient compute to reproduce or extend the work. \"Open-sourcing the Atropos stack provides the necessary infrastructure for reproducible olympiad-level reasoning research,\" noted one observer on X, summarizing the significance for the academic and open-source communities. The model was trained by Joe Li, a researcher in residence at Nous Research and a former competitive programmer himself. Li's technical report reveals an unexpectedly personal dimension: he compared the model's improvement trajectory to his own journey on Codeforces, the competitive programming platform where participants earn ratings based on contest performance. Based on rough estimates mapping LiveCodeBench scores to Codeforces ratings, Li calculated that NousCoder-14B's improvemen t— from approximately the 1600-1750 rating range to 2100-2200 — mirrors a leap that took him nearly two years of sustained practice between ages 14 and 16. The model accomplished the equivalent in four days. \"Watching that final training run unfold was quite a surreal experience,\" Li wrote in the technical report. But Li was quick to note an important caveat that speaks to broader questions about AI efficiency: he solved roughly 1,000 problems during those two years, while the model required 24,000. Humans, at least for now, remain dramatically more sample-efficient learners. Inside the reinforcement learning system that trains on 24,000 competitive programming problems NousCoder-14B's training process offers a window into the increasingly sophisticated techniques researchers use to improve AI reasoning capabilities through reinforcement learning. The approach relies on what researchers call \"verifiable rewards\" — a system where the model generates code solutions, those solutions are executed against test cases, and the model receives a simple binary signal: correct or incorrect. This feedback loop, while conceptually straightforward, requires significant infrastructure to execute at scale. Nous Research used Modal, a cloud computing platform, to run sandboxed code execution in parallel. Each of the 24,000 training problems contains hundreds of test cases on average, and the system must verify that generated code produces correct outputs within time and memory constraints — 15 seconds and 4 gigabytes, respectively. The training employed a technique called DAPO (Dynamic Sampling Policy Optimization), which the researchers found performed slightly better than alternatives in their experiments. A key innovation involves \"dynamic sampling\" — discarding training examples where the model either solves all attempts or fails all attempts, since these provide no useful gradient signal for learning. The researchers also adopted \"iterative context extension,\" first training the model with a 32,000-token context window before expanding to 40,000 tokens. During evaluation, extending the context further to approximately 80,000 tokens produced the best results, with accuracy reaching 67.87 percent. Perhaps most significantly, the training pipeline overlaps inference and verification — as soon as the model generates a solution, it begins work on the next problem while the previous solution is being checked. This pipelining, combined with asynchronous training where multiple model instances work in parallel, maximizes hardware utilization on expensive GPU clusters. The looming data shortage that could slow AI coding model progress Buried in Li's technical report is a finding with significant implications for the future of AI development: the training dataset for NousCoder-14B encompasses \"a significant portion of all readily available, verifiable competitive programming problems in a standardized dataset format.\" In other words, for this particular domain, the researchers are approaching the limits of high-quality training data. \"The total number of competitive programming problems on the Internet is roughly the same order of magnitude,\" Li wrote, referring to the 24,000 problems used for training. \"This suggests that within the competitive programming domain, we have approached the limits of high-quality data.\" This observation echoes growing concern across the AI industry about data constraints. While compute continues to scale according to well-understood economic and engineering principles, training data is \"increasingly finite,\" as Li put it. \"It appears that some of the most important research that needs to be done in the future will be in the areas of synthetic data generation and data efficient algorithms and architectures,\" he concluded. The challenge is particularly acute for competitive programming because the domain requires problems with known correct solutions that can be verified automatically. Unlike natural language tasks where human evaluation or proxy metrics suffice, code either works or it doesn't — making synthetic data generation considerably more difficult. Li identified one potential avenue: training models not just to solve problems but to generate solvable problems, enabling a form of self-play similar to techniques that proved successful in game-playing AI systems. \"Once synthetic problem generation is solved, self-play becomes a very interesting direction,\" he wrote. A $65 million bet that open-source AI can compete with Big Tech Nous Research has carved out a distinctive position in the AI landscape: a company committed to open-source releases that compete with — and sometimes exceed — proprietary alternatives. The company raised $50 million in April 2025 in a round led by Paradigm, the cryptocurrency-focused venture firm founded by Coinbase co-founder Fred Ehrsam. Total funding reached $65 million, according to some reports. The investment reflected growing interest in decentralized approaches to AI training, an area where Nous Research has developed its Psyche platform. Previous releases include Hermes 4, a family of models that we reported \"outperform ChatGPT without content restrictions,\" and DeepHermes-3, which the company described as the first \"toggle-on reasoning model\" — allowing users to activate extended thinking capabilities on demand. The company has cultivated a distinctive aesthetic and community, prompting some skepticism about whether style might overshadow substance. \"Ofc i'm gonna believe an anime pfp company. stop benchmarkmaxxing ffs,\" wrote one critic on X, referring to Nous Research's anime-style branding and the industry practice of optimizing for benchmark performance. Others raised technical questions. \"Based on the benchmark, Nemotron is better,\" noted one commenter, referring to Nvidia's family of language models. Another asked whether NousCoder-14B is \"agentic focused or just 'one shot' coding\" — a distinction that matters for practical software development, where iterating on feedback typically produces better results than single attempts. What researchers say must happen next for AI coding tools to keep improving The release includes several directions for future work that hint at where AI coding research may be heading. Multi-turn reinforcement learning tops the list. Currently, the model receives only a final binary reward — pass or fail — after generating a solution. But competitive programming problems typically include public test cases that provide intermediate feedback: compilation errors, incorrect outputs, time limit violations. Training models to incorporate this feedback across multiple attempts could significantly improve performance. Controlling response length also remains a challenge. The researchers found that incorrect solutions tended to be longer than correct ones, and response lengths quickly saturated available context windows during training — a pattern that various algorithmic modifications failed to resolve. Perhaps most ambitiously, Li proposed \"problem generation and self-play\" — training models to both solve and create programming problems. This would address the data scarcity problem directly by enabling models to generate their own training curricula. \"Humans are great at generating interesting and useful problems for other competitive programmers, but it appears that there still exists a significant gap in LLM capabilities in creative problem generation,\" Li wrote. The model is available now on Hugging Face under an Apache 2.0 license. For researchers and developers who want to build on the work, Nous Research has published the complete Atropos training stack alongside it. What took Li two years of adolescent dedication to achieve—climbing from a 1600-level novice to a 2100-rated competitor on Codeforces—an AI replicated in 96 hours. He needed 1,000 problems. The model needed 24,000. But soon enough, these systems may learn to write their own problems, teach themselves, and leave human benchmarks behind entirely. The question is no longer whether machines can learn to code. It's whether they'll soon be better teachers than we ever were.",
-        "publishedAt": "2026-01-07T20:00:00.000Z",
-        "category": "open-source",
-        "score": 111,
-        "importance": "high",
-        "recommendationReason": "Agent 工程实践相关"
-      },
-      {
-        "id": "6e51fbd095d1",
-        "sourceId": "marktechpost",
-        "sourceName": "MarkTechPost",
-        "title": "How to Build Progress Monitoring Using Advanced tqdm for Async, Parallel, Pandas, Logging, and High-Performance Workflows",
-        "link": "https://www.marktechpost.com/2026/03/07/how-to-build-progress-monitoring-using-advanced-tqdm-for-async-parallel-pandas-logging-and-high-performance-workflows/",
-        "contentSnippet": "In this tutorial, we explore tqdm in depth and demonstrate how we build powerful, real-time progress tracking into modern Python workflows. We begin with nested progress bars and manual progress control, then move into practical scenarios such as streaming downloads, pandas data processing, parallel execution, structured logging, and asynchronous tasks. Throughout this tutorial, we focus […] The post How to Build Progress Monitoring Using Advanced tqdm for Async, Parallel, Pandas, Logging, and High-Performance Workflows appeared first on MarkTechPost.",
-        "publishedAt": "2026-03-08T04:18:22.000Z",
-        "category": "tooling",
-        "score": 109,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关"
       }
@@ -1011,17 +1527,17 @@
       "mediumImportanceCount": 5,
       "lowImportanceCount": 0,
       "categoryBreakdown": {
-        "open-source": 9,
-        "tooling": 5,
-        "agent": 3,
+        "open-source": 13,
+        "tooling": 6,
+        "agent": 4,
         "research": 2,
         "industry-news": 0,
-        "tutorial": 2,
-        "other": 21
+        "tutorial": 1,
+        "other": 16
       }
     },
     "warnings": [
-      "[HNRSS AI] 抓取失败: fetch failed"
+      "[ZDNet AI] 抓取失败: fetch failed"
     ],
     "reviewDeadlineAt": "2026-03-09T04:30:00.000Z"
   }
