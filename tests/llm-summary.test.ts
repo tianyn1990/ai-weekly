@@ -310,7 +310,7 @@ describe("llm summary", () => {
     expect(result.itemSummaries[0]?.summary).toContain("重试后成功总结");
   });
 
-  it("成功率等于 90% 时不应全局回退，仅失败条目回退规则摘要", async () => {
+  it("成功率高于 70% 时不应全局回退，仅失败条目回退规则摘要", async () => {
     const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
       const payload = JSON.parse(String(init?.body ?? "{}")) as {
         messages?: Array<{ role: string; content?: Array<{ type?: string; text?: string }> }>;
@@ -358,7 +358,7 @@ describe("llm summary", () => {
     expect(result.quickDigest.length).toBe(6);
   });
 
-  it("成功率低于 90% 时应触发全局回退", async () => {
+  it("成功率低于 70% 时应触发全局回退", async () => {
     const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
       const payload = JSON.parse(String(init?.body ?? "{}")) as {
         messages?: Array<{ role: string; content?: Array<{ type?: string; text?: string }> }>;
@@ -366,7 +366,7 @@ describe("llm summary", () => {
       const userContent = payload.messages?.find((message) => message.role === "user")?.content?.[0]?.text ?? "{}";
       const parsed = JSON.parse(userContent) as { item?: { id?: string } };
       const id = parsed.item?.id ?? "unknown";
-      const isBad = id === "item-9" || id === "item-10";
+      const isBad = id === "item-7" || id === "item-8" || id === "item-9" || id === "item-10";
       return {
         ok: true,
         json: async () => ({
@@ -402,7 +402,7 @@ describe("llm summary", () => {
 
     expect(result.meta.fallbackTriggered).toBe(true);
     expect(result.meta.fallbackReason).toContain("llm_success_rate_below_threshold");
-    expect(result.meta.summarizedCount).toBe(8);
+    expect(result.meta.summarizedCount).toBe(6);
   });
 
   it("可复用判断应基于 input hash 与 fallback 状态", () => {
@@ -466,6 +466,15 @@ describe("llm summary", () => {
         recommendation: "summary",
       }),
     ).toThrowError(/llm_quality_invalid/);
+  });
+
+  it("recommendation 允许描述性文本，不再要求固定动作词", () => {
+    expect(() =>
+      __test__.validateItemSummaryQuality({
+        summary: "该实践提供了完整的 Agent 评测流程与工程步骤。",
+        recommendation: "该方案提供了可参考的工程实现路径与实践细节。",
+      }),
+    ).not.toThrow();
   });
 
   it("条目低质量时应触发重试并采用重试结果", async () => {
@@ -578,5 +587,118 @@ describe("llm summary", () => {
     expect(result.meta.fallbackTriggered).toBe(false);
     expect(result.itemSummaries[0]?.summary.endsWith("，")).toBe(true);
     expect(result.warnings.length).toBe(0);
+  });
+
+  it("低于全局阈值时应先重试失败条目，重试后达标则不触发全局回退", async () => {
+    const callCountById = new Map<string, number>();
+    const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
+      const payload = JSON.parse(String(init?.body ?? "{}")) as {
+        messages?: Array<{ role: string; content?: Array<{ type?: string; text?: string }> }>;
+      };
+      const userContent = payload.messages?.find((message) => message.role === "user")?.content?.[0]?.text ?? "{}";
+      const parsed = JSON.parse(userContent) as { item?: { id?: string } };
+      const id = parsed.item?.id ?? "unknown";
+
+      const nextCount = (callCountById.get(id) ?? 0) + 1;
+      callCountById.set(id, nextCount);
+      const shouldFailInitially = id === "item-7" || id === "item-8" || id === "item-9" || id === "item-10";
+      const keepFail = id === "item-10";
+      const failNow = shouldFailInitially && (nextCount <= 2 || keepFail);
+
+      const summary = failNow ? "summary" : `${id} 总结文本`;
+      const recommendation = failNow ? "summary" : "建议工程团队优先评估接入成本与收益。";
+      return {
+        ok: true,
+        json: async () => ({
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify({
+                summary,
+                recommendation,
+                evidenceItemIds: [id],
+              }),
+            },
+          ],
+        }),
+      } satisfies Partial<Response> as Response;
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    const result = await buildLlmSummary({
+      rankedItems: Array.from({ length: 10 }).map((_, index) => createItem(index + 1)),
+      generatedAt: "2026-03-08T00:00:00.000Z",
+      settings: {
+        enabled: true,
+        provider: "minimax",
+        minimaxApiKey: "test-key",
+        minimaxModel: "MiniMax-M2.5",
+        timeoutMs: 3000,
+        maxItems: 10,
+        maxConcurrency: 3,
+        promptVersion: "m5.1-test",
+      },
+    });
+
+    // 四个失败条目在首轮各重试一次（2 次），且在全局回退前再补偿 1 次。
+    expect(callCountById.get("item-7")).toBe(3);
+    expect(callCountById.get("item-8")).toBe(3);
+    expect(callCountById.get("item-9")).toBe(3);
+    expect(callCountById.get("item-10")).toBe(3);
+    expect(result.meta.fallbackTriggered).toBe(false);
+    expect(result.meta.summarizedCount).toBe(9);
+    expect(result.warnings.join("\n")).toContain("部分条目回退");
+  });
+
+  it("missing_content 应触发额外重试一次", async () => {
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          content: [],
+        }),
+      })
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          content: [],
+        }),
+      })
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify({
+                summary: "该更新补齐了工程观测链路。",
+                recommendation: "建议工程团队优先评估接入成本与收益。",
+                evidenceItemIds: ["item-1"],
+              }),
+            },
+          ],
+        }),
+      });
+    vi.stubGlobal("fetch", fetchMock as unknown as typeof fetch);
+
+    const result = await buildLlmSummary({
+      rankedItems: [createItem(1)],
+      generatedAt: "2026-03-08T00:00:00.000Z",
+      settings: {
+        enabled: true,
+        provider: "minimax",
+        minimaxApiKey: "test-key",
+        minimaxModel: "MiniMax-M2.5",
+        timeoutMs: 3000,
+        maxItems: 1,
+        maxConcurrency: 1,
+        promptVersion: "m5.1-test",
+      },
+    });
+
+    expect(fetchMock).toHaveBeenCalledTimes(3);
+    expect(result.meta.fallbackTriggered).toBe(false);
+    expect(result.itemSummaries[0]?.summary).toContain("工程观测链路");
   });
 });

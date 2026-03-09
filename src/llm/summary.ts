@@ -49,6 +49,13 @@ interface ItemSummaryExecutionResult {
   errorReason?: string;
 }
 
+interface ItemExecutionStats {
+  llmSuccessCount: number;
+  llmFailureCount: number;
+  successRate: number;
+  fallbackReasons: string[];
+}
+
 interface SummaryQualityOptions {
   // 截断句属于“可读性瑕疵”而非事实错误：首轮触发重试，末轮可接受，避免退化到 rule fallback。
   allowTruncatedSummary?: boolean;
@@ -81,7 +88,10 @@ export interface BuildLlmSummaryOutput extends LlmSummaryResult {
   auditEvents: LlmSummaryAuditEvent[];
 }
 
-const LLM_GLOBAL_FALLBACK_SUCCESS_RATE_THRESHOLD = 0.9;
+const LLM_GLOBAL_FALLBACK_SUCCESS_RATE_THRESHOLD = 0.7;
+const MISSING_CONTENT_EXTRA_RETRIES = 1;
+const RETRY_BASE_DELAY_MS = 180;
+const RETRY_MAX_DELAY_MS = 800;
 
 /**
  * M5.1 采用“逐条总结 + 聚合重点”，避免把所有候选一次性塞进单个 prompt 造成上下文退化。
@@ -162,16 +172,23 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
     });
 
     const concurrency = Math.max(1, input.settings.maxConcurrency);
-    const itemResults = await mapWithConcurrency(selectedItems, concurrency, async (item) =>
+    let itemResults = await mapWithConcurrency(selectedItems, concurrency, async (item) =>
       summarizeItemWithResilience(client, item),
     );
+    let stats = computeItemExecutionStats(itemResults);
+
+    // 先做一次“失败条目补偿重试”，降低偶发判定抖动导致的全局 fallback。
+    if (itemResults.length > 0 && stats.successRate < LLM_GLOBAL_FALLBACK_SUCCESS_RATE_THRESHOLD && stats.llmFailureCount > 0) {
+      itemResults = await retryFailedItemsOnce({
+        client,
+        items: selectedItems,
+        itemResults,
+        concurrency,
+      });
+      stats = computeItemExecutionStats(itemResults);
+    }
     const itemSummaries = itemResults.map((result) => result.summary);
-    const llmSuccessCount = itemResults.filter((result) => result.llmUsed).length;
-    const llmFailureCount = itemResults.length - llmSuccessCount;
-    const successRate = itemResults.length === 0 ? 1 : llmSuccessCount / itemResults.length;
-    const fallbackReasons = itemResults
-      .filter((result) => !result.llmUsed && result.errorReason)
-      .map((result) => result.errorReason!);
+    const { llmSuccessCount, llmFailureCount, successRate, fallbackReasons } = stats;
 
     if (itemResults.length > 0 && successRate < LLM_GLOBAL_FALLBACK_SUCCESS_RATE_THRESHOLD) {
       const finishedAt = new Date().toISOString();
@@ -320,9 +337,13 @@ function normalizeItemSummary(item: RankedItem, raw: MinimaxItemSummaryRaw, opti
   };
 }
 
-async function summarizeItemWithResilience(client: MiniMaxSummaryClient, item: RankedItem): Promise<ItemSummaryExecutionResult> {
+async function summarizeItemWithResilience(
+  client: MiniMaxSummaryClient,
+  item: RankedItem,
+  maxAttempts = 2,
+): Promise<ItemSummaryExecutionResult> {
   try {
-    const summary = await summarizeItemWithRetry(client, item, 2);
+    const summary = await summarizeItemWithRetry(client, item, maxAttempts);
     return {
       summary,
       llmUsed: true,
@@ -339,18 +360,24 @@ async function summarizeItemWithResilience(client: MiniMaxSummaryClient, item: R
 
 async function summarizeItemWithRetry(client: MiniMaxSummaryClient, item: RankedItem, maxAttempts: number): Promise<LlmItemSummary> {
   let lastError: unknown;
-  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+  let effectiveMaxAttempts = maxAttempts;
+  for (let attempt = 1; attempt <= effectiveMaxAttempts; attempt += 1) {
     try {
       const raw = await client.summarizeItem(item);
-      const isLastAttempt = attempt >= maxAttempts;
+      const isLastAttempt = attempt >= effectiveMaxAttempts;
       return normalizeItemSummary(item, raw, {
         allowTruncatedSummary: isLastAttempt,
       });
     } catch (error) {
       lastError = error;
-      if (attempt >= maxAttempts || !isRetryableLlmError(error)) {
+      // 对 missing_content 额外放宽一次重试，降低偶发空响应导致的误回退。
+      if (isMissingContentError(error) && effectiveMaxAttempts < maxAttempts + MISSING_CONTENT_EXTRA_RETRIES) {
+        effectiveMaxAttempts = maxAttempts + MISSING_CONTENT_EXTRA_RETRIES;
+      }
+      if (attempt >= effectiveMaxAttempts || !isRetryableLlmError(error)) {
         throw error;
       }
+      await sleep(Math.min(RETRY_MAX_DELAY_MS, RETRY_BASE_DELAY_MS * attempt));
     }
   }
   throw lastError instanceof Error ? lastError : new Error(String(lastError));
@@ -374,7 +401,6 @@ function isRetryableLlmError(error: unknown): boolean {
 }
 
 const SUMMARY_PLACEHOLDER_SET = new Set(["summary", "recommendation", "摘要", "推荐"]);
-const RECOMMENDATION_HINT_WORDS = ["建议", "适合", "优先", "可考虑", "值得", "推荐", "可先", "可优先"];
 
 function validateItemSummaryQuality(raw: Pick<MinimaxItemSummaryRaw, "summary" | "recommendation">, options?: SummaryQualityOptions): void {
   const summary = normalizeQualityText(raw.summary);
@@ -412,10 +438,6 @@ function validateItemSummaryQuality(raw: Pick<MinimaxItemSummaryRaw, "summary" |
     throw new Error("llm_quality_invalid:field_prefix_noise");
   }
 
-  const hasAdviceWord = RECOMMENDATION_HINT_WORDS.some((word) => recommendationWithoutQuotes.includes(word));
-  if (!hasAdviceWord) {
-    throw new Error("llm_quality_invalid:recommendation_no_action_word");
-  }
 }
 
 function normalizeQualityText(input: string): string {
@@ -448,10 +470,54 @@ function normalizeRecoveredRecommendation(item: Pick<RankedItem, "title" | "cate
     return buildFallbackRecommendation(item);
   }
   // 修复器在“半结构化文本”场景下常拿不到有效 recommendation，这里补全一条可执行建议。
-  if (recommendationText === summaryText || !RECOMMENDATION_HINT_WORDS.some((word) => recommendationText.includes(word))) {
+  if (recommendationText === summaryText || recommendationText.length < 6) {
     return buildFallbackRecommendation(item);
   }
   return recommendationText;
+}
+
+function isMissingContentError(error: unknown): boolean {
+  const message = error instanceof Error ? error.message : String(error);
+  return message.includes("minimax_invalid_response:missing_content");
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, Math.max(0, ms)));
+}
+
+function computeItemExecutionStats(results: ItemSummaryExecutionResult[]): ItemExecutionStats {
+  const llmSuccessCount = results.filter((result) => result.llmUsed).length;
+  const llmFailureCount = results.length - llmSuccessCount;
+  return {
+    llmSuccessCount,
+    llmFailureCount,
+    successRate: results.length === 0 ? 1 : llmSuccessCount / results.length,
+    fallbackReasons: results.filter((result) => !result.llmUsed && result.errorReason).map((result) => result.errorReason!),
+  };
+}
+
+async function retryFailedItemsOnce(input: {
+  client: MiniMaxSummaryClient;
+  items: RankedItem[];
+  itemResults: ItemSummaryExecutionResult[];
+  concurrency: number;
+}): Promise<ItemSummaryExecutionResult[]> {
+  const failedIndexes = input.itemResults
+    .map((result, index) => (!result.llmUsed ? index : -1))
+    .filter((index) => index >= 0);
+  if (failedIndexes.length === 0) {
+    return input.itemResults;
+  }
+
+  const retriedResults = [...input.itemResults];
+  const retries = await mapWithConcurrency(failedIndexes, Math.max(1, Math.min(input.concurrency, failedIndexes.length)), async (index) =>
+    summarizeItemWithResilience(input.client, input.items[index]!, 1),
+  );
+  for (let i = 0; i < failedIndexes.length; i += 1) {
+    const index = failedIndexes[i]!;
+    retriedResults[index] = retries[i]!;
+  }
+  return retriedResults;
 }
 
 function buildFallbackRecommendation(item: Pick<RankedItem, "title" | "category" | "importance">): string {
@@ -1061,6 +1127,7 @@ export const __test__ = {
   sanitizeRecoveredField,
   validateItemSummaryQuality,
   isLikelyTruncatedSummary,
+  computeItemExecutionStats,
   extractModelText,
   buildQuickDigest,
 };
