@@ -1,7 +1,7 @@
 {
-  "runId": "weekly-1773035167565",
-  "generatedAt": "2026-03-09T05:46:07.525Z",
-  "reviewStartedAt": "2026-03-09T05:46:07.525Z",
+  "runId": "weekly-1773036074721",
+  "generatedAt": "2026-03-09T06:01:14.704Z",
+  "reviewStartedAt": "2026-03-09T06:01:14.704Z",
   "reportDate": "2026-03-09",
   "mode": "weekly",
   "reviewStatus": "timeout_published",
@@ -11,7 +11,7 @@
   "publishStatus": "published",
   "shouldPublish": true,
   "publishReason": "weekly_timeout_auto_publish",
-  "publishedAt": "2026-03-09T05:46:07.525Z",
+  "publishedAt": "2026-03-09T06:01:14.704Z",
   "outlineApproved": false,
   "finalApproved": false,
   "rejected": false,
@@ -23,21 +23,21 @@
     "mediumImportanceCount": 5,
     "lowImportanceCount": 0,
     "categoryBreakdown": {
-      "open-source": 14,
+      "open-source": 13,
       "tooling": 6,
       "agent": 4,
       "research": 2,
       "industry-news": 0,
       "tutorial": 2,
-      "other": 20
+      "other": 21
     }
   },
   "itemSummaries": [
     {
       "itemId": "af0473b3cd39",
       "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
-      "summary": "Railway, a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar…",
-      "recommendation": "Agent 工程实践相关",
+      "summary": "Railway 获 1 亿美元融资打造 AI 原生云基础设施，部署速度不到 1 秒，比传统云便宜约 50%，已有 31% Fortune 500 企业使用。",
+      "recommendation": "对追求快速迭代和成本优化的工程团队有直接价值，建议评估其 AI 应用部署与 Agent 工作流托管能力。",
       "evidenceItemIds": [
         "af0473b3cd39"
       ]
@@ -45,8 +45,8 @@
     {
       "itemId": "dca57667c39b",
       "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
-      "summary": "The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code, Anthropic's terminal-bas…",
-      "recommendation": "Agent 工程实践相关",
+      "summary": "Goose是Block开发的开源免费AI编程代理，可在本地离线运行保护数据隐私，功能与收费$20-200/月的Claude Code相近但无需付费。",
+      "recommendation": "适合对成本敏感、重视数据隐私和离线工作能力的工程团队优先评估使用。",
       "evidenceItemIds": [
         "dca57667c39b"
       ]
@@ -54,8 +54,8 @@
     {
       "itemId": "ed6c06ec1333",
       "title": "How Balyasny Asset Management built an AI research engine for investing",
-      "summary": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform …",
-      "recommendation": "Agent 工程实践相关",
+      "summary": "该案例展示了Balyasny如何利用GPT-5.4、严格模型评估和Agent工作流构建AI投资研究系统，为大规模投资分析提供参考。",
+      "recommendation": "建议本周优先评估《How Balyasny Asset Management built an AI research engine for investing》相关方案，重点关注与现有工程链路的集成成本。",
       "evidenceItemIds": [
         "ed6c06ec1333"
       ]
@@ -63,8 +63,8 @@
     {
       "itemId": "9b227c4cba37",
       "title": "Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents",
-      "summary": "MongoDB is great until you read the SSPL. Then you're either paying Atlas prices, running an old 4.x build, or pretendi…",
-      "recommendation": "Agent 工程实践相关",
+      "summary": "Salvobase 是 Go 编写的 MongoDB wire 协议兼容文档数据库，采用 Apache 2.0 许可，支持 CRUD、聚合管道、Prometheus 指标和 REST API，但无复制分片；核心亮点是由 AI agents 自主维护代码。",
+      "recommendation": "对需要避免 MongoDB SSPL 许可风险、追求轻量嵌入式文档库的团队有参考价值，可关注其 AI 维护模式的长期可行性。",
       "evidenceItemIds": [
         "9b227c4cba37"
       ]
@@ -72,8 +72,8 @@
     {
       "itemId": "1e5772829392",
       "title": "Codex Security: now in research preview",
-      "summary": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex…",
-      "recommendation": "Agent 工程实践相关",
+      "summary": "Codex Security 是 OpenAI 推出的 AI 应用安全代理，可分析项目上下文来检测、验证并修复复杂漏洞，具备更高置信度和更低误报率。",
+      "recommendation": "建议本周优先评估《Codex Security: now in research preview》相关方案，重点关注多 Agent 协作策略与稳定性。",
       "evidenceItemIds": [
         "1e5772829392"
       ]
@@ -81,8 +81,8 @@
     {
       "itemId": "4195e551833f",
       "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
-      "summary": "Andrej Karpathy released autoresearch, a minimalist Python tool designed to enable AI agents to autonomously conduct ma…",
-      "recommendation": "Agent 工程实践相关",
+      "summary": "Karpathy 开源的 autoresearch 是一个约 630 行代码的单文件 Python 工具，可让 AI Agent 在单卡 GPU 上自主执行机器学习实验",
+      "recommendation": "建议本周优先评估《Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs…",
       "evidenceItemIds": [
         "4195e551833f"
       ]
@@ -90,8 +90,8 @@
     {
       "itemId": "eedb35ed84b1",
       "title": "Sandvault – Run AI agents isolated in a sandboxed macOS user account",
-      "summary": "Article URL: https://github.com/webcoyote/sandvault Comments URL: https://news.ycombinator.com/item?id=47304786 Points:…",
-      "recommendation": "Agent 工程实践相关",
+      "summary": "Sandvault 提供在沙盒化 macOS 用户账户中隔离运行 AI Agent 的能力，可有效限制恶意 Agent",
+      "recommendation": "建议本周优先评估《Sandvault – Run AI agents isolated in a sandboxed macOS user account》相关方案，重点关注仓库成熟度与二次开发成本。",
       "evidenceItemIds": [
         "eedb35ed84b1"
       ]
@@ -99,70 +99,295 @@
     {
       "itemId": "825c39404554",
       "title": "Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation",
-      "summary": "In this tutorial, we build a complete cognitive blueprint and runtime agent framework. We define structured blueprints …",
-      "recommendation": "Agent 工程实践相关",
+      "summary": "该教程提供了一套完整的认知蓝图驱动运行时Agent框架，涵盖身份定义、目标规划、记忆管理、结果验证和工具调用，使Agent具备自主计划、执行和持续改进能力。",
+      "recommendation": "适合正在构建生产级Agent系统的工程团队参考，可借鉴其认知架构设计思路来提升Agent的可靠性和自主性。",
       "evidenceItemIds": [
         "825c39404554"
+      ]
+    },
+    {
+      "itemId": "f4420af4df91",
+      "title": "Show HN: AI image models hallucinate history, we built a method to fix it it",
+      "summary": "该项目提出 Triad Engine",
+      "recommendation": "建议本周优先评估《Show HN: AI image models hallucinate history, we built a method to fix it it》相关方案，重点关注仓库成熟度与二次开发成本。",
+      "evidenceItemIds": [
+        "f4420af4df91"
+      ]
+    },
+    {
+      "itemId": "96c6faefc88a",
+      "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+      "summary": "NousCoder-14B是一款仅用4天训练完成的开源编程模型，在LiveCodeBench上达67.87%准确率，训练过程与Atropos框架完全开源，支持本地部署用于代码辅助开发。",
+      "recommendation": "建议本周优先评估《Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment》相关方案，重点关注仓库成熟度与二次开发成本。",
+      "evidenceItemIds": [
+        "96c6faefc88a"
+      ]
+    },
+    {
+      "itemId": "6e51fbd095d1",
+      "title": "How to Build Progress Monitoring Using Advanced tqdm for Async, Parallel, Pandas, Logging, and High-Performance Workflows",
+      "summary": "该教程深入讲解 tqdm 在现代 Python 工作流中的高级用法，涵盖嵌套进度条、手动控制、流式下载、pandas 并行处理、结构化日志和异步任务等场景。",
+      "recommendation": "对需要构建高性能、可观测流水线的工程团队有直接参考价值，建议结合实际项目评估接入。",
+      "evidenceItemIds": [
+        "6e51fbd095d1"
+      ]
+    },
+    {
+      "itemId": "fee0cde1972e",
+      "title": "Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI",
+      "summary": "Salesforce推出全新Slackbot，从通知工具转型为AI Agent，基于Claude构建可搜索企业数据、起草文档及执行操作，内部测试显示96%满意度，旨在与Microsoft Copilot和Google Gemini竞争企业AI市场。",
+      "recommendation": "建议本周优先评估《Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI》相关方案，重点关注仓库成熟度与二次开发成本。",
+      "evidenceItemIds": [
+        "fee0cde1972e"
+      ]
+    },
+    {
+      "itemId": "d1b65307276f",
+      "title": "Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required",
+      "summary": "Anthropic推出Cowork桌面Agent，可直接读取编辑用户指定文件夹内的文件，将Claude Code能力普惠至非技术用户，当前仅向Max订阅户开放macOS版。",
+      "recommendation": "对需要自动化日常文件处理任务的团队有直接价值，建议评估其与现有工作流的集成可行性及安全风险管控方案。",
+      "evidenceItemIds": [
+        "d1b65307276f"
+      ]
+    },
+    {
+      "itemId": "7c4498064c7b",
+      "title": "Show HN: OpenVerb – A deterministic action layer for AI agents",
+      "summary": "OpenVerb 提出将 AI Agent 的推理层与执行层分离，通过结构化动词定义动作、执行策略和审计信息，解决跨集成粘合代码、动作模式不一致和执行确定性不足的问题。",
+      "recommendation": "适合关注 Agent 架构标准化和执行可靠性工程的团队，可作为跨领域确定性执行的参考协议进行评估。",
+      "evidenceItemIds": [
+        "7c4498064c7b"
+      ]
+    },
+    {
+      "itemId": "da57f8f017dd",
+      "title": "Show HN: Chat AI Agent inside mobile device testing sessions",
+      "summary": "该工具将 AI Agent 嵌入移动设备测试会话，可实时生成 XPath locator、编写 Appium 测试代码、解析测试失败原因，解决测试中常见的定位器和 UI 状态问题。",
+      "recommendation": "对移动端测试自动化团队有直接价值，可减少工程师在测试会话与检查工具间的切换成本，建议评估其在 CI/CD 流程中的集成潜力。",
+      "evidenceItemIds": [
+        "da57f8f017dd"
+      ]
+    },
+    {
+      "itemId": "f17ba6f8dbf9",
+      "title": "I am an AI agent that sells data via x402 micropayments",
+      "summary": "该方案展示AI Agent通过x402协议实现数据微支付的可行性，为AI服务变现提供新思路。",
+      "recommendation": "适合关注AI Agent商业化与支付集成的工程团队参考，可了解x402在自动化数据交易场景的落地实践。",
+      "evidenceItemIds": [
+        "f17ba6f8dbf9"
+      ]
+    },
+    {
+      "itemId": "b3462a1b6f51",
+      "title": "A Coding Guide to Build a Complete Single Cell RNA Sequencing Analysis Pipeline Using Scanpy for Clustering Visualization and Cell Type Annotation",
+      "summary": "该教程详细讲解使用Scanpy构建完整的单细胞RNA测序分析pipeline，涵盖数据质控、归一化、降维、聚类可视化与细胞类型注释全流程。",
+      "recommendation": "对需要处理单细胞转录组数据的生物信息学团队有直接参考价值，可快速搭建标准化分析流程。",
+      "evidenceItemIds": [
+        "b3462a1b6f51"
+      ]
+    },
+    {
+      "itemId": "53d557f697ca",
+      "title": "Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews",
+      "summary": "Listen Labs 是一个 AI 驱动的客户访谈平台，9 个月内 ARR 增长 15 倍至八位数，完成超百万次 AI 访谈，并获得 6900 万美元 B 轮融资。该平台通过 AI 面试官替代传统问卷，解决市场研究在规模化与深度之间的矛盾，并建立了防欺诈质量检测体系。",
+      "recommendation": "建议本周优先评估《Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews》相关方案，重点关注仓库成熟度与二次开发成本。",
+      "evidenceItemIds": [
+        "53d557f697ca"
+      ]
+    },
+    {
+      "itemId": "4309c341e311",
+      "title": "Agent Builder: chat, file uploads, and tool registry",
+      "summary": "该更新为 LangChain Agent Builder 增加了聊天交互、文件上传和工具注册能力，完善了 Agent 开发的基础设施。",
+      "recommendation": "建议本周优先评估《Agent Builder: chat, file uploads, and tool registry》相关方案，重点关注与现有工程链路的集成成本。",
+      "evidenceItemIds": [
+        "4309c341e311"
+      ]
+    },
+    {
+      "itemId": "cbcaf3d94b9e",
+      "title": "Scheduled reports for Insights Agent",
+      "summary": "LangChain 为 Insights Agent 新增定时报告功能，支持自动生成并发送周期性分析结果，便于团队持续跟踪 AI 应用的关键指标。",
+      "recommendation": "建议本周优先评估《Scheduled reports for Insights Agent》相关方案，重点关注仓库成熟度与二次开发成本。",
+      "evidenceItemIds": [
+        "cbcaf3d94b9e"
+      ]
+    },
+    {
+      "itemId": "e3d44e83a9fb",
+      "title": "Deep Agents v0.4",
+      "summary": "Deep Agents v0.4 是 LangChain 推出的深度 Agent 产品的重要版本更新。",
+      "recommendation": "对正在构建复杂 Agent 系统的工程团队值得关注，建议查看更新日志了解具体新能力。",
+      "evidenceItemIds": [
+        "e3d44e83a9fb"
+      ]
+    },
+    {
+      "itemId": "640ac7d5d99e",
+      "title": "Track costs across your entire agent stack",
+      "summary": "该更新提供全链路Agent成本追踪能力，帮助团队监控与分析Agent调用成本。",
+      "recommendation": "建议本周优先评估《Track costs across your entire agent stack》相关方案，重点关注多 Agent 协作策略与稳定性。",
+      "evidenceItemIds": [
+        "640ac7d5d99e"
+      ]
+    },
+    {
+      "itemId": "5e5b98b758c4",
+      "title": "How Descript enables multilingual video dubbing at scale",
+      "summary": "该技术展示了如何利用OpenAI模型实现大规模多语言视频配音，在保持语义准确的同时优化语音timing，使配音在不同语言下听起来自然流畅。",
+      "recommendation": "对于需要构建多语言内容分发能力的工程团队具有直接参考价值，特别是视频/音频内容的多语言本地化场景。",
+      "evidenceItemIds": [
+        "5e5b98b758c4"
+      ]
+    },
+    {
+      "itemId": "031877f72c23",
+      "title": "Beyond Accuracy: Quantifying the Production Fragility Caused by Excessive, Redundant, and Low-Signal Features in Regression",
+      "summary": "该研究量化了回归模型中特征过多、冗余和低信号特征导致的生产脆弱性风险，揭示了盲目增加特征对上游数据管道和外部系统的依赖性危害。",
+      "recommendation": "适合工程团队在模型上线前评估特征必要性，建议将特征依赖管理纳入MLOps流程以降低生产环境维护风险。",
+      "evidenceItemIds": [
+        "031877f72c23"
+      ]
+    },
+    {
+      "itemId": "5e327815c2c4",
+      "title": "Microsoft open sources its ‘farm of the future’ toolkit",
+      "summary": "Microsoft 开源了「未来农场」工具包，为农业数字化提供技术基座。",
+      "recommendation": "对农业 AI 或智能硬件团队有参考价值，可评估其数据采集与预测能力是否适配自身场景。",
+      "evidenceItemIds": [
+        "5e327815c2c4"
+      ]
+    },
+    {
+      "itemId": "d9aab484d2a1",
+      "title": "GPT-5.4 Thinking System Card",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d9aab484d2a1"
+      ]
+    },
+    {
+      "itemId": "fc29565ae47e",
+      "title": "Reasoning models struggle to control their chains of thought, and that’s good",
+      "summary": "OpenAI 的 CoT-Control 研究表明推理模型",
+      "recommendation": "建议本周优先评估《Reasoning models struggle to control their chains of thought, and that’s good》相关方案，重点关注实际落地收益与维护开销。",
+      "evidenceItemIds": [
+        "fc29565ae47e"
+      ]
+    },
+    {
+      "itemId": "6684b4cf5670",
+      "title": "Introducing GPT-5.4",
+      "summary": "Introducing GPT-5.4, OpenAI’s most most capable and efficient frontier model for professional work, with state-of-the-a…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "6684b4cf5670"
+      ]
+    },
+    {
+      "itemId": "ae65ce5361ab",
+      "title": "3 tiny gadgets I trust to block electrical surges, data-stealing software, and more",
+      "summary": "该文章介绍三款用于防护电气涌流和数据窃取软件的小工具，帮助用户保护电子设备安全。",
+      "recommendation": "对关注硬件安全和终端防护的工程团队有参考价值，可作为设备保护方案的补充选项。",
+      "evidenceItemIds": [
+        "ae65ce5361ab"
+      ]
+    },
+    {
+      "itemId": "4b1452f42be2",
+      "title": "文远知行与吉利远程深化战略合作，2026年交付2000台前装量产Robotaxi GXR",
+      "summary": "文远知行与吉利远程深化战略合作",
+      "recommendation": "建议本周优先评估《文远知行与吉利远程深化战略合作，2026年交付2000台前装量产Robotaxi GXR》相关方案，重点关注实际落地收益与维护开销。",
+      "evidenceItemIds": [
+        "4b1452f42be2"
       ]
     }
   ],
   "quickDigest": [
     {
       "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
-      "takeaway": "Railway, a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar…",
+      "takeaway": "Railway 获 1 亿美元融资打造 AI 原生云基础设施，部署速度不到 1 秒，比传统云便宜约 50%，已有 31% Fortune 500 企业使用。",
       "evidenceItemIds": [
         "af0473b3cd39"
       ]
     },
     {
       "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
-      "takeaway": "The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code, Anthropic's terminal-bas…",
+      "takeaway": "Goose是Block开发的开源免费AI编程代理，可在本地离线运行保护数据隐私，功能与收费$20-200/月的Claude Code相近但无需付费。",
       "evidenceItemIds": [
         "dca57667c39b"
       ]
     },
     {
       "title": "How Balyasny Asset Management built an AI research engine for investing",
-      "takeaway": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform …",
+      "takeaway": "该案例展示了Balyasny如何利用GPT-5.4、严格模型评估和Agent工作流构建AI投资研究系统，为大规模投资分析提供参考。",
       "evidenceItemIds": [
         "ed6c06ec1333"
       ]
     },
     {
       "title": "Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents",
-      "takeaway": "MongoDB is great until you read the SSPL. Then you're either paying Atlas prices, running an old 4.x build, or pretendi…",
+      "takeaway": "Salvobase 是 Go 编写的 MongoDB wire 协议兼容文档数据库，采用 Apache 2.0 许可，支持 CRUD、聚合管道、Prometheus 指标和 REST API，但无复制分片；核心亮点是由 AI agents 自主维护代码。",
       "evidenceItemIds": [
         "9b227c4cba37"
       ]
     },
     {
       "title": "Codex Security: now in research preview",
-      "takeaway": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex…",
+      "takeaway": "Codex Security 是 OpenAI 推出的 AI 应用安全代理，可分析项目上下文来检测、验证并修复复杂漏洞，具备更高置信度和更低误报率。",
       "evidenceItemIds": [
         "1e5772829392"
       ]
     },
     {
       "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
-      "takeaway": "Andrej Karpathy released autoresearch, a minimalist Python tool designed to enable AI agents to autonomously conduct ma…",
+      "takeaway": "Karpathy 开源的 autoresearch 是一个约 630 行代码的单文件 Python 工具，可让 AI Agent 在单卡 GPU 上自主执行机器学习实验",
       "evidenceItemIds": [
         "4195e551833f"
       ]
+    },
+    {
+      "title": "Sandvault – Run AI agents isolated in a sandboxed macOS user account",
+      "takeaway": "Sandvault 提供在沙盒化 macOS 用户账户中隔离运行 AI Agent 的能力，可有效限制恶意 Agent",
+      "evidenceItemIds": [
+        "eedb35ed84b1"
+      ]
+    },
+    {
+      "title": "Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation",
+      "takeaway": "该教程提供了一套完整的认知蓝图驱动运行时Agent框架，涵盖身份定义、目标规划、记忆管理、结果验证和工具调用，使Agent具备自主计划、执行和持续改进能力。",
+      "evidenceItemIds": [
+        "825c39404554"
+      ]
+    },
+    {
+      "title": "Show HN: AI image models hallucinate history, we built a method to fix it it",
+      "takeaway": "该项目提出 Triad Engine",
+      "evidenceItemIds": [
+        "f4420af4df91"
+      ]
+    },
+    {
+      "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+      "takeaway": "NousCoder-14B是一款仅用4天训练完成的开源编程模型，在LiveCodeBench上达67.87%准确率，训练过程与Atropos框架完全开源，支持本地部署用于代码辅助开发。",
+      "evidenceItemIds": [
+        "96c6faefc88a"
+      ]
     }
   ],
-  "summaryInputHash": "070c500315c011dcef03a584c153048aba0c22ee477761aded090c8fceb3719b",
+  "summaryInputHash": "6fd1cc34f42ff9751eb1f98b6a9f6868bc832045707346a0330944f3f94c6aae",
   "llmSummaryMeta": {
     "enabled": true,
     "provider": "minimax",
     "model": "MiniMax-M2.5",
     "promptVersion": "m5.1-v1",
-    "startedAt": "2026-03-09T05:46:26.659Z",
-    "finishedAt": "2026-03-09T05:47:07.928Z",
-    "durationMs": 41269,
-    "inputCount": 8,
-    "summarizedCount": 7,
-    "fallbackTriggered": true,
-    "fallbackReason": "llm_success_rate_below_threshold:88%<90%"
+    "startedAt": "2026-03-09T06:01:28.897Z",
+    "finishedAt": "2026-03-09T06:03:21.254Z",
+    "durationMs": 112357,
+    "inputCount": 30,
+    "summarizedCount": 28,
+    "fallbackTriggered": false
   },
   "highlights": [
     {
@@ -272,8 +497,8 @@
   ],
   "revisionAuditLogs": [],
   "warnings": [
-    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:88%<90%",
-    "LLM 条目失败明细（前 3/8）：llm_quality_invalid:recommendation_no_action_word"
+    "LLM 部分条目回退规则摘要：2/30（success=93%）",
+    "LLM 条目失败明细（前 3/30）：minimax_invalid_response:missing_content | minimax_invalid_response:missing_content"
   ],
   "snapshot": {
     "timezone": "Asia/Shanghai",
@@ -283,7 +508,7 @@
     "storageDbPath": "outputs/db/app.sqlite",
     "storageFallbackToFile": true,
     "sourceLimit": 6,
-    "outlineMarkdown": "### 重点推荐（大纲）\n- Railway secures $100 million to challenge AWS with AI-native cloud infrastructure\n- Claude Code costs up to $200 a month. Goose does the same thing for free.\n- How Balyasny Asset Management built an AI research engine for investing\n- Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents\n- Codex Security: now in research preview\n\n### 分类覆盖（大纲）\n- open-source: 14 条\n- tooling: 6 条\n- agent: 4 条\n- tutorial: 2 条\n- other: 20 条\n- research: 2 条",
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Railway secures $100 million to challenge AWS with AI-native cloud infrastructure\n- Claude Code costs up to $200 a month. Goose does the same thing for free.\n- How Balyasny Asset Management built an AI research engine for investing\n- Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents\n- Codex Security: now in research preview\n\n### 分类覆盖（大纲）\n- open-source: 13 条\n- tooling: 6 条\n- agent: 4 条\n- tutorial: 2 条\n- other: 21 条\n- research: 2 条",
     "rankedItems": [
       {
         "id": "af0473b3cd39",
@@ -507,19 +732,6 @@
         "recommendationReason": "可直接学习实践"
       },
       {
-        "id": "0fbfc6e991ca",
-        "sourceId": "qbitai",
-        "sourceName": "量子位",
-        "title": "科研AI出了个狠角色：开源30B小模型，硬刚Gemini和Claude",
-        "link": "https://www.qbitai.com/2026/03/384818.html",
-        "contentSnippet": "真正跑通“假设-证据-验证”的循环",
-        "publishedAt": "2026-03-09T04:11:54.000Z",
-        "category": "open-source",
-        "score": 104,
-        "importance": "high",
-        "recommendationReason": "开源生态更新"
-      },
-      {
         "id": "53d557f697ca",
         "sourceId": "venturebeat-ai",
         "sourceName": "VentureBeat AI",
@@ -676,6 +888,32 @@
         "recommendationReason": "综合价值较高"
       },
       {
+        "id": "4b1452f42be2",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "文远知行与吉利远程深化战略合作，2026年交付2000台前装量产Robotaxi GXR",
+        "link": "https://www.qbitai.com/2026/03/384835.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-03-09T05:31:56.000Z",
+        "category": "other",
+        "score": 92,
+        "importance": "high",
+        "recommendationReason": "综合价值较高"
+      },
+      {
+        "id": "4372880ebb82",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "龙虾最大痛点被官方插件升级！对话永不忘记，GPT和Gemini最强模型都可接入",
+        "link": "https://www.qbitai.com/2026/03/384907.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-03-09T05:02:00.000Z",
+        "category": "other",
+        "score": 92,
+        "importance": "high",
+        "recommendationReason": "综合价值较高"
+      },
+      {
         "id": "115c4bd24052",
         "sourceId": "qbitai",
         "sourceName": "量子位",
@@ -806,19 +1044,6 @@
         "recommendationReason": "综合价值较高"
       },
       {
-        "id": "9c026a2ba86a",
-        "sourceId": "qbitai",
-        "sourceName": "量子位",
-        "title": "高中生AI创业，现在只招龙虾员工：每月成本2800",
-        "link": "https://www.qbitai.com/2026/03/384797.html",
-        "contentSnippet": "全龙虾公司，还设了好几个部门",
-        "publishedAt": "2026-03-08T10:07:27.000Z",
-        "category": "other",
-        "score": 87,
-        "importance": "high",
-        "recommendationReason": "综合价值较高"
-      },
-      {
         "id": "8a9ed6e50795",
         "sourceId": "langchain-blog",
         "sourceName": "LangChain Changelog",
@@ -914,8 +1139,8 @@
       {
         "itemId": "af0473b3cd39",
         "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
-        "summary": "Railway, a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar…",
-        "recommendation": "Agent 工程实践相关",
+        "summary": "Railway 获 1 亿美元融资打造 AI 原生云基础设施，部署速度不到 1 秒，比传统云便宜约 50%，已有 31% Fortune 500 企业使用。",
+        "recommendation": "对追求快速迭代和成本优化的工程团队有直接价值，建议评估其 AI 应用部署与 Agent 工作流托管能力。",
         "evidenceItemIds": [
           "af0473b3cd39"
         ]
@@ -923,8 +1148,8 @@
       {
         "itemId": "dca57667c39b",
         "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
-        "summary": "The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code, Anthropic's terminal-bas…",
-        "recommendation": "Agent 工程实践相关",
+        "summary": "Goose是Block开发的开源免费AI编程代理，可在本地离线运行保护数据隐私，功能与收费$20-200/月的Claude Code相近但无需付费。",
+        "recommendation": "适合对成本敏感、重视数据隐私和离线工作能力的工程团队优先评估使用。",
         "evidenceItemIds": [
           "dca57667c39b"
         ]
@@ -932,8 +1157,8 @@
       {
         "itemId": "ed6c06ec1333",
         "title": "How Balyasny Asset Management built an AI research engine for investing",
-        "summary": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform …",
-        "recommendation": "Agent 工程实践相关",
+        "summary": "该案例展示了Balyasny如何利用GPT-5.4、严格模型评估和Agent工作流构建AI投资研究系统，为大规模投资分析提供参考。",
+        "recommendation": "建议本周优先评估《How Balyasny Asset Management built an AI research engine for investing》相关方案，重点关注与现有工程链路的集成成本。",
         "evidenceItemIds": [
           "ed6c06ec1333"
         ]
@@ -941,8 +1166,8 @@
       {
         "itemId": "9b227c4cba37",
         "title": "Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents",
-        "summary": "MongoDB is great until you read the SSPL. Then you're either paying Atlas prices, running an old 4.x build, or pretendi…",
-        "recommendation": "Agent 工程实践相关",
+        "summary": "Salvobase 是 Go 编写的 MongoDB wire 协议兼容文档数据库，采用 Apache 2.0 许可，支持 CRUD、聚合管道、Prometheus 指标和 REST API，但无复制分片；核心亮点是由 AI agents 自主维护代码。",
+        "recommendation": "对需要避免 MongoDB SSPL 许可风险、追求轻量嵌入式文档库的团队有参考价值，可关注其 AI 维护模式的长期可行性。",
         "evidenceItemIds": [
           "9b227c4cba37"
         ]
@@ -950,8 +1175,8 @@
       {
         "itemId": "1e5772829392",
         "title": "Codex Security: now in research preview",
-        "summary": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex…",
-        "recommendation": "Agent 工程实践相关",
+        "summary": "Codex Security 是 OpenAI 推出的 AI 应用安全代理，可分析项目上下文来检测、验证并修复复杂漏洞，具备更高置信度和更低误报率。",
+        "recommendation": "建议本周优先评估《Codex Security: now in research preview》相关方案，重点关注多 Agent 协作策略与稳定性。",
         "evidenceItemIds": [
           "1e5772829392"
         ]
@@ -959,8 +1184,8 @@
       {
         "itemId": "4195e551833f",
         "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
-        "summary": "Andrej Karpathy released autoresearch, a minimalist Python tool designed to enable AI agents to autonomously conduct ma…",
-        "recommendation": "Agent 工程实践相关",
+        "summary": "Karpathy 开源的 autoresearch 是一个约 630 行代码的单文件 Python 工具，可让 AI Agent 在单卡 GPU 上自主执行机器学习实验",
+        "recommendation": "建议本周优先评估《Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs…",
         "evidenceItemIds": [
           "4195e551833f"
         ]
@@ -968,8 +1193,8 @@
       {
         "itemId": "eedb35ed84b1",
         "title": "Sandvault – Run AI agents isolated in a sandboxed macOS user account",
-        "summary": "Article URL: https://github.com/webcoyote/sandvault Comments URL: https://news.ycombinator.com/item?id=47304786 Points:…",
-        "recommendation": "Agent 工程实践相关",
+        "summary": "Sandvault 提供在沙盒化 macOS 用户账户中隔离运行 AI Agent 的能力，可有效限制恶意 Agent",
+        "recommendation": "建议本周优先评估《Sandvault – Run AI agents isolated in a sandboxed macOS user account》相关方案，重点关注仓库成熟度与二次开发成本。",
         "evidenceItemIds": [
           "eedb35ed84b1"
         ]
@@ -977,70 +1202,295 @@
       {
         "itemId": "825c39404554",
         "title": "Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation",
-        "summary": "In this tutorial, we build a complete cognitive blueprint and runtime agent framework. We define structured blueprints …",
-        "recommendation": "Agent 工程实践相关",
+        "summary": "该教程提供了一套完整的认知蓝图驱动运行时Agent框架，涵盖身份定义、目标规划、记忆管理、结果验证和工具调用，使Agent具备自主计划、执行和持续改进能力。",
+        "recommendation": "适合正在构建生产级Agent系统的工程团队参考，可借鉴其认知架构设计思路来提升Agent的可靠性和自主性。",
         "evidenceItemIds": [
           "825c39404554"
+        ]
+      },
+      {
+        "itemId": "f4420af4df91",
+        "title": "Show HN: AI image models hallucinate history, we built a method to fix it it",
+        "summary": "该项目提出 Triad Engine",
+        "recommendation": "建议本周优先评估《Show HN: AI image models hallucinate history, we built a method to fix it it》相关方案，重点关注仓库成熟度与二次开发成本。",
+        "evidenceItemIds": [
+          "f4420af4df91"
+        ]
+      },
+      {
+        "itemId": "96c6faefc88a",
+        "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+        "summary": "NousCoder-14B是一款仅用4天训练完成的开源编程模型，在LiveCodeBench上达67.87%准确率，训练过程与Atropos框架完全开源，支持本地部署用于代码辅助开发。",
+        "recommendation": "建议本周优先评估《Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment》相关方案，重点关注仓库成熟度与二次开发成本。",
+        "evidenceItemIds": [
+          "96c6faefc88a"
+        ]
+      },
+      {
+        "itemId": "6e51fbd095d1",
+        "title": "How to Build Progress Monitoring Using Advanced tqdm for Async, Parallel, Pandas, Logging, and High-Performance Workflows",
+        "summary": "该教程深入讲解 tqdm 在现代 Python 工作流中的高级用法，涵盖嵌套进度条、手动控制、流式下载、pandas 并行处理、结构化日志和异步任务等场景。",
+        "recommendation": "对需要构建高性能、可观测流水线的工程团队有直接参考价值，建议结合实际项目评估接入。",
+        "evidenceItemIds": [
+          "6e51fbd095d1"
+        ]
+      },
+      {
+        "itemId": "fee0cde1972e",
+        "title": "Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI",
+        "summary": "Salesforce推出全新Slackbot，从通知工具转型为AI Agent，基于Claude构建可搜索企业数据、起草文档及执行操作，内部测试显示96%满意度，旨在与Microsoft Copilot和Google Gemini竞争企业AI市场。",
+        "recommendation": "建议本周优先评估《Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI》相关方案，重点关注仓库成熟度与二次开发成本。",
+        "evidenceItemIds": [
+          "fee0cde1972e"
+        ]
+      },
+      {
+        "itemId": "d1b65307276f",
+        "title": "Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required",
+        "summary": "Anthropic推出Cowork桌面Agent，可直接读取编辑用户指定文件夹内的文件，将Claude Code能力普惠至非技术用户，当前仅向Max订阅户开放macOS版。",
+        "recommendation": "对需要自动化日常文件处理任务的团队有直接价值，建议评估其与现有工作流的集成可行性及安全风险管控方案。",
+        "evidenceItemIds": [
+          "d1b65307276f"
+        ]
+      },
+      {
+        "itemId": "7c4498064c7b",
+        "title": "Show HN: OpenVerb – A deterministic action layer for AI agents",
+        "summary": "OpenVerb 提出将 AI Agent 的推理层与执行层分离，通过结构化动词定义动作、执行策略和审计信息，解决跨集成粘合代码、动作模式不一致和执行确定性不足的问题。",
+        "recommendation": "适合关注 Agent 架构标准化和执行可靠性工程的团队，可作为跨领域确定性执行的参考协议进行评估。",
+        "evidenceItemIds": [
+          "7c4498064c7b"
+        ]
+      },
+      {
+        "itemId": "da57f8f017dd",
+        "title": "Show HN: Chat AI Agent inside mobile device testing sessions",
+        "summary": "该工具将 AI Agent 嵌入移动设备测试会话，可实时生成 XPath locator、编写 Appium 测试代码、解析测试失败原因，解决测试中常见的定位器和 UI 状态问题。",
+        "recommendation": "对移动端测试自动化团队有直接价值，可减少工程师在测试会话与检查工具间的切换成本，建议评估其在 CI/CD 流程中的集成潜力。",
+        "evidenceItemIds": [
+          "da57f8f017dd"
+        ]
+      },
+      {
+        "itemId": "f17ba6f8dbf9",
+        "title": "I am an AI agent that sells data via x402 micropayments",
+        "summary": "该方案展示AI Agent通过x402协议实现数据微支付的可行性，为AI服务变现提供新思路。",
+        "recommendation": "适合关注AI Agent商业化与支付集成的工程团队参考，可了解x402在自动化数据交易场景的落地实践。",
+        "evidenceItemIds": [
+          "f17ba6f8dbf9"
+        ]
+      },
+      {
+        "itemId": "b3462a1b6f51",
+        "title": "A Coding Guide to Build a Complete Single Cell RNA Sequencing Analysis Pipeline Using Scanpy for Clustering Visualization and Cell Type Annotation",
+        "summary": "该教程详细讲解使用Scanpy构建完整的单细胞RNA测序分析pipeline，涵盖数据质控、归一化、降维、聚类可视化与细胞类型注释全流程。",
+        "recommendation": "对需要处理单细胞转录组数据的生物信息学团队有直接参考价值，可快速搭建标准化分析流程。",
+        "evidenceItemIds": [
+          "b3462a1b6f51"
+        ]
+      },
+      {
+        "itemId": "53d557f697ca",
+        "title": "Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews",
+        "summary": "Listen Labs 是一个 AI 驱动的客户访谈平台，9 个月内 ARR 增长 15 倍至八位数，完成超百万次 AI 访谈，并获得 6900 万美元 B 轮融资。该平台通过 AI 面试官替代传统问卷，解决市场研究在规模化与深度之间的矛盾，并建立了防欺诈质量检测体系。",
+        "recommendation": "建议本周优先评估《Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews》相关方案，重点关注仓库成熟度与二次开发成本。",
+        "evidenceItemIds": [
+          "53d557f697ca"
+        ]
+      },
+      {
+        "itemId": "4309c341e311",
+        "title": "Agent Builder: chat, file uploads, and tool registry",
+        "summary": "该更新为 LangChain Agent Builder 增加了聊天交互、文件上传和工具注册能力，完善了 Agent 开发的基础设施。",
+        "recommendation": "建议本周优先评估《Agent Builder: chat, file uploads, and tool registry》相关方案，重点关注与现有工程链路的集成成本。",
+        "evidenceItemIds": [
+          "4309c341e311"
+        ]
+      },
+      {
+        "itemId": "cbcaf3d94b9e",
+        "title": "Scheduled reports for Insights Agent",
+        "summary": "LangChain 为 Insights Agent 新增定时报告功能，支持自动生成并发送周期性分析结果，便于团队持续跟踪 AI 应用的关键指标。",
+        "recommendation": "建议本周优先评估《Scheduled reports for Insights Agent》相关方案，重点关注仓库成熟度与二次开发成本。",
+        "evidenceItemIds": [
+          "cbcaf3d94b9e"
+        ]
+      },
+      {
+        "itemId": "e3d44e83a9fb",
+        "title": "Deep Agents v0.4",
+        "summary": "Deep Agents v0.4 是 LangChain 推出的深度 Agent 产品的重要版本更新。",
+        "recommendation": "对正在构建复杂 Agent 系统的工程团队值得关注，建议查看更新日志了解具体新能力。",
+        "evidenceItemIds": [
+          "e3d44e83a9fb"
+        ]
+      },
+      {
+        "itemId": "640ac7d5d99e",
+        "title": "Track costs across your entire agent stack",
+        "summary": "该更新提供全链路Agent成本追踪能力，帮助团队监控与分析Agent调用成本。",
+        "recommendation": "建议本周优先评估《Track costs across your entire agent stack》相关方案，重点关注多 Agent 协作策略与稳定性。",
+        "evidenceItemIds": [
+          "640ac7d5d99e"
+        ]
+      },
+      {
+        "itemId": "5e5b98b758c4",
+        "title": "How Descript enables multilingual video dubbing at scale",
+        "summary": "该技术展示了如何利用OpenAI模型实现大规模多语言视频配音，在保持语义准确的同时优化语音timing，使配音在不同语言下听起来自然流畅。",
+        "recommendation": "对于需要构建多语言内容分发能力的工程团队具有直接参考价值，特别是视频/音频内容的多语言本地化场景。",
+        "evidenceItemIds": [
+          "5e5b98b758c4"
+        ]
+      },
+      {
+        "itemId": "031877f72c23",
+        "title": "Beyond Accuracy: Quantifying the Production Fragility Caused by Excessive, Redundant, and Low-Signal Features in Regression",
+        "summary": "该研究量化了回归模型中特征过多、冗余和低信号特征导致的生产脆弱性风险，揭示了盲目增加特征对上游数据管道和外部系统的依赖性危害。",
+        "recommendation": "适合工程团队在模型上线前评估特征必要性，建议将特征依赖管理纳入MLOps流程以降低生产环境维护风险。",
+        "evidenceItemIds": [
+          "031877f72c23"
+        ]
+      },
+      {
+        "itemId": "5e327815c2c4",
+        "title": "Microsoft open sources its ‘farm of the future’ toolkit",
+        "summary": "Microsoft 开源了「未来农场」工具包，为农业数字化提供技术基座。",
+        "recommendation": "对农业 AI 或智能硬件团队有参考价值，可评估其数据采集与预测能力是否适配自身场景。",
+        "evidenceItemIds": [
+          "5e327815c2c4"
+        ]
+      },
+      {
+        "itemId": "d9aab484d2a1",
+        "title": "GPT-5.4 Thinking System Card",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d9aab484d2a1"
+        ]
+      },
+      {
+        "itemId": "fc29565ae47e",
+        "title": "Reasoning models struggle to control their chains of thought, and that’s good",
+        "summary": "OpenAI 的 CoT-Control 研究表明推理模型",
+        "recommendation": "建议本周优先评估《Reasoning models struggle to control their chains of thought, and that’s good》相关方案，重点关注实际落地收益与维护开销。",
+        "evidenceItemIds": [
+          "fc29565ae47e"
+        ]
+      },
+      {
+        "itemId": "6684b4cf5670",
+        "title": "Introducing GPT-5.4",
+        "summary": "Introducing GPT-5.4, OpenAI’s most most capable and efficient frontier model for professional work, with state-of-the-a…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "6684b4cf5670"
+        ]
+      },
+      {
+        "itemId": "ae65ce5361ab",
+        "title": "3 tiny gadgets I trust to block electrical surges, data-stealing software, and more",
+        "summary": "该文章介绍三款用于防护电气涌流和数据窃取软件的小工具，帮助用户保护电子设备安全。",
+        "recommendation": "对关注硬件安全和终端防护的工程团队有参考价值，可作为设备保护方案的补充选项。",
+        "evidenceItemIds": [
+          "ae65ce5361ab"
+        ]
+      },
+      {
+        "itemId": "4b1452f42be2",
+        "title": "文远知行与吉利远程深化战略合作，2026年交付2000台前装量产Robotaxi GXR",
+        "summary": "文远知行与吉利远程深化战略合作",
+        "recommendation": "建议本周优先评估《文远知行与吉利远程深化战略合作，2026年交付2000台前装量产Robotaxi GXR》相关方案，重点关注实际落地收益与维护开销。",
+        "evidenceItemIds": [
+          "4b1452f42be2"
         ]
       }
     ],
     "quickDigest": [
       {
         "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
-        "takeaway": "Railway, a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar…",
+        "takeaway": "Railway 获 1 亿美元融资打造 AI 原生云基础设施，部署速度不到 1 秒，比传统云便宜约 50%，已有 31% Fortune 500 企业使用。",
         "evidenceItemIds": [
           "af0473b3cd39"
         ]
       },
       {
         "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
-        "takeaway": "The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code, Anthropic's terminal-bas…",
+        "takeaway": "Goose是Block开发的开源免费AI编程代理，可在本地离线运行保护数据隐私，功能与收费$20-200/月的Claude Code相近但无需付费。",
         "evidenceItemIds": [
           "dca57667c39b"
         ]
       },
       {
         "title": "How Balyasny Asset Management built an AI research engine for investing",
-        "takeaway": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform …",
+        "takeaway": "该案例展示了Balyasny如何利用GPT-5.4、严格模型评估和Agent工作流构建AI投资研究系统，为大规模投资分析提供参考。",
         "evidenceItemIds": [
           "ed6c06ec1333"
         ]
       },
       {
         "title": "Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents",
-        "takeaway": "MongoDB is great until you read the SSPL. Then you're either paying Atlas prices, running an old 4.x build, or pretendi…",
+        "takeaway": "Salvobase 是 Go 编写的 MongoDB wire 协议兼容文档数据库，采用 Apache 2.0 许可，支持 CRUD、聚合管道、Prometheus 指标和 REST API，但无复制分片；核心亮点是由 AI agents 自主维护代码。",
         "evidenceItemIds": [
           "9b227c4cba37"
         ]
       },
       {
         "title": "Codex Security: now in research preview",
-        "takeaway": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex…",
+        "takeaway": "Codex Security 是 OpenAI 推出的 AI 应用安全代理，可分析项目上下文来检测、验证并修复复杂漏洞，具备更高置信度和更低误报率。",
         "evidenceItemIds": [
           "1e5772829392"
         ]
       },
       {
         "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
-        "takeaway": "Andrej Karpathy released autoresearch, a minimalist Python tool designed to enable AI agents to autonomously conduct ma…",
+        "takeaway": "Karpathy 开源的 autoresearch 是一个约 630 行代码的单文件 Python 工具，可让 AI Agent 在单卡 GPU 上自主执行机器学习实验",
         "evidenceItemIds": [
           "4195e551833f"
         ]
+      },
+      {
+        "title": "Sandvault – Run AI agents isolated in a sandboxed macOS user account",
+        "takeaway": "Sandvault 提供在沙盒化 macOS 用户账户中隔离运行 AI Agent 的能力，可有效限制恶意 Agent",
+        "evidenceItemIds": [
+          "eedb35ed84b1"
+        ]
+      },
+      {
+        "title": "Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation",
+        "takeaway": "该教程提供了一套完整的认知蓝图驱动运行时Agent框架，涵盖身份定义、目标规划、记忆管理、结果验证和工具调用，使Agent具备自主计划、执行和持续改进能力。",
+        "evidenceItemIds": [
+          "825c39404554"
+        ]
+      },
+      {
+        "title": "Show HN: AI image models hallucinate history, we built a method to fix it it",
+        "takeaway": "该项目提出 Triad Engine",
+        "evidenceItemIds": [
+          "f4420af4df91"
+        ]
+      },
+      {
+        "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+        "takeaway": "NousCoder-14B是一款仅用4天训练完成的开源编程模型，在LiveCodeBench上达67.87%准确率，训练过程与Atropos框架完全开源，支持本地部署用于代码辅助开发。",
+        "evidenceItemIds": [
+          "96c6faefc88a"
+        ]
       }
     ],
-    "summaryInputHash": "070c500315c011dcef03a584c153048aba0c22ee477761aded090c8fceb3719b",
+    "summaryInputHash": "6fd1cc34f42ff9751eb1f98b6a9f6868bc832045707346a0330944f3f94c6aae",
     "llmSummaryMeta": {
       "enabled": true,
       "provider": "minimax",
       "model": "MiniMax-M2.5",
       "promptVersion": "m5.1-v1",
-      "startedAt": "2026-03-09T05:46:26.659Z",
-      "finishedAt": "2026-03-09T05:47:07.928Z",
-      "durationMs": 41269,
-      "inputCount": 8,
-      "summarizedCount": 7,
-      "fallbackTriggered": true,
-      "fallbackReason": "llm_success_rate_below_threshold:88%<90%"
+      "startedAt": "2026-03-09T06:01:28.897Z",
+      "finishedAt": "2026-03-09T06:03:21.254Z",
+      "durationMs": 112357,
+      "inputCount": 30,
+      "summarizedCount": 28,
+      "fallbackTriggered": false
     },
     "highlights": [
       {
@@ -1156,18 +1606,18 @@
       "mediumImportanceCount": 5,
       "lowImportanceCount": 0,
       "categoryBreakdown": {
-        "open-source": 14,
+        "open-source": 13,
         "tooling": 6,
         "agent": 4,
         "research": 2,
         "industry-news": 0,
         "tutorial": 2,
-        "other": 20
+        "other": 21
       }
     },
     "warnings": [
-      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:88%<90%",
-      "LLM 条目失败明细（前 3/8）：llm_quality_invalid:recommendation_no_action_word"
+      "LLM 部分条目回退规则摘要：2/30（success=93%）",
+      "LLM 条目失败明细（前 3/30）：minimax_invalid_response:missing_content | minimax_invalid_response:missing_content"
     ],
     "reviewDeadlineAt": "2026-03-09T04:30:00.000Z"
   }
