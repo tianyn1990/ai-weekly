@@ -1,7 +1,7 @@
 {
-  "runId": "weekly-1773028550506",
-  "generatedAt": "2026-03-09T03:55:50.505Z",
-  "reviewStartedAt": "2026-03-09T03:55:50.505Z",
+  "runId": "weekly-1773028620022",
+  "generatedAt": "2026-03-09T01:00:00.000Z",
+  "reviewStartedAt": "2026-03-09T01:00:00.000Z",
   "reportDate": "2026-03-09",
   "mode": "weekly",
   "reviewStatus": "pending_review",
@@ -16,10 +16,10 @@
   "finalApproved": false,
   "rejected": false,
   "metrics": {
-    "collectedCount": 30,
-    "normalizedCount": 30,
-    "dedupedCount": 30,
-    "highImportanceCount": 24,
+    "collectedCount": 36,
+    "normalizedCount": 36,
+    "dedupedCount": 36,
+    "highImportanceCount": 30,
     "mediumImportanceCount": 6,
     "lowImportanceCount": 0,
     "categoryBreakdown": {
@@ -28,8 +28,8 @@
       "agent": 2,
       "research": 0,
       "industry-news": 1,
-      "tutorial": 0,
-      "other": 13
+      "tutorial": 1,
+      "other": 18
     }
   },
   "itemSummaries": [
@@ -205,12 +205,66 @@
       ]
     },
     {
+      "itemId": "ae65ce5361ab",
+      "title": "3 tiny gadgets I trust to block electrical surges, data-stealing software, and more",
+      "summary": "Looking for a simple way to protect your electronics from power surges and tracking software? These tiny gadgets can ma…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "ae65ce5361ab"
+      ]
+    },
+    {
+      "itemId": "e3eb17292326",
+      "title": "Sony WH-1000XM6 review: Still the king of ANC headphones? My verdict after months of testing",
+      "summary": "After a three-year hiatus and considerable anticipation, Sony's latest flagship headphones impress on nearly every fron…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e3eb17292326"
+      ]
+    },
+    {
+      "itemId": "b749f96c3016",
+      "title": "How to turn off HDMI-CEC on your TV - and why doing so is such a big deal",
+      "summary": "TVs often analyze what you watch to curate suggestions and serve you ads, even through HDMI-connected devices. But I've…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b749f96c3016"
+      ]
+    },
+    {
+      "itemId": "0a021947b595",
+      "title": "Apple AirPods Pro 3 review: I didn't think earbuds could pull off immersive ANC like this",
+      "summary": "After testing AirPods Pro 3 for months, one feature stood out above all the upgrades.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "0a021947b595"
+      ]
+    },
+    {
       "itemId": "e0c4a5e5922d",
       "title": "AI Needs Management Consultants After All",
       "summary": "Article URL: https://www.wsj.com/tech/ai/ai-needs-management-consultants-after-all-bd28ecb9 Comments URL: https://news.…",
       "recommendation": "综合价值较高",
       "evidenceItemIds": [
         "e0c4a5e5922d"
+      ]
+    },
+    {
+      "itemId": "fb5e26ecd779",
+      "title": "Skylight Calendar 2 review: How this smart tablet keeps my large family organized",
+      "summary": "The latest version of the popular digital calendar is perfect for large families. Here's how I use it effectively.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fb5e26ecd779"
+      ]
+    },
+    {
+      "itemId": "c74aea2bfbaf",
+      "title": "iPhone 17e vs. iPhone 17: I compared both models to uncover the $200 difference",
+      "summary": "Apple's latest iPhone 17e is shaping up to be a great midrange device, but how does it stack up against the base iPhone…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c74aea2bfbaf"
       ]
     },
     {
@@ -247,60 +301,6 @@
       "recommendation": "综合价值较高",
       "evidenceItemIds": [
         "94f5427c2731"
-      ]
-    },
-    {
-      "itemId": "87225dfc3e68",
-      "title": "A conversation with Kevin Scott: What’s next in AI",
-      "summary": "The post A conversation with Kevin Scott: What’s next in AI appeared first on The AI Blog.",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "87225dfc3e68"
-      ]
-    },
-    {
-      "itemId": "5896e047adc6",
-      "title": "From Hot Wheels to handling content: How brands are using Microsoft AI to be more productive and imaginative",
-      "summary": "The post From Hot Wheels to handling content: How brands are using Microsoft AI to be more productive and imaginative a…",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "5896e047adc6"
-      ]
-    },
-    {
-      "itemId": "fe93253782ea",
-      "title": "How data and AI will transform contact centres for financial services",
-      "summary": "The post How data and AI will transform contact centres for financial services appeared first on The AI Blog.",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "fe93253782ea"
-      ]
-    },
-    {
-      "itemId": "c61256096223",
-      "title": "AI-equipped drones study dolphins on the edge of extinction",
-      "summary": "The post AI-equipped drones study dolphins on the edge of extinction appeared first on The AI Blog.",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "c61256096223"
-      ]
-    },
-    {
-      "itemId": "455e21f8b151",
-      "title": "Online math tutoring service uses AI to help boost students’ skills and confidence",
-      "summary": "The post Online math tutoring service uses AI to help boost students’ skills and confidence appeared first on The AI Bl…",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "455e21f8b151"
-      ]
-    },
-    {
-      "itemId": "f45ebe032786",
-      "title": "央视点赞千问APP，“AI办事”让人工智能走进日常生活",
-      "summary": "该条目缺少可用摘要，请查看原文链接。",
-      "recommendation": "综合价值较高",
-      "evidenceItemIds": [
-        "f45ebe032786"
       ]
     }
   ],
@@ -376,11 +376,11 @@
       ]
     }
   ],
-  "summaryInputHash": "e4bb5f0136c96e1fe26ddd681501e5806a1b1313a48d5e6fd87482fd7d9b7406",
+  "summaryInputHash": "b9d451061d40fecd12ff1e44e2b197487186b3c40e915012e81c59f7ad224025",
   "llmSummaryMeta": {
     "enabled": false,
-    "startedAt": "2026-03-09T03:56:27.843Z",
-    "finishedAt": "2026-03-09T03:56:27.843Z",
+    "startedAt": "2026-03-09T03:57:28.630Z",
+    "finishedAt": "2026-03-09T03:57:28.630Z",
     "durationMs": 0,
     "inputCount": 30,
     "summarizedCount": 30,
@@ -497,7 +497,6 @@
   "warnings": [
     "[LangChain Changelog] 抓取失败: fetch failed",
     "[MarkTechPost] 抓取失败: fetch failed",
-    "[ZDNet AI] 抓取失败: fetch failed",
     "LLM 总结已回退规则模式：llm_summary_disabled"
   ],
   "snapshot": {
@@ -508,7 +507,7 @@
     "storageDbPath": "outputs/db/app.sqlite",
     "storageFallbackToFile": true,
     "sourceLimit": 6,
-    "outlineMarkdown": "### 重点推荐（大纲）\n- Railway secures $100 million to challenge AWS with AI-native cloud infrastructure\n- Claude Code costs up to $200 a month. Goose does the same thing for free.\n- How Balyasny Asset Management built an AI research engine for investing\n- Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents\n- Codex Security: now in research preview\n\n### 分类覆盖（大纲）\n- open-source: 11 条\n- tooling: 3 条\n- agent: 2 条\n- other: 13 条\n- industry-news: 1 条",
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Railway secures $100 million to challenge AWS with AI-native cloud infrastructure\n- Claude Code costs up to $200 a month. Goose does the same thing for free.\n- How Balyasny Asset Management built an AI research engine for investing\n- Show HN: Salvobase – MongoDB-compatible DB in Go maintained by AI agents\n- Codex Security: now in research preview\n\n### 分类覆盖（大纲）\n- open-source: 11 条\n- tooling: 3 条\n- agent: 2 条\n- other: 18 条\n- tutorial: 1 条\n- industry-news: 1 条",
     "rankedItems": [
       {
         "id": "af0473b3cd39",
@@ -758,6 +757,58 @@
         "recommendationReason": "综合价值较高"
       },
       {
+        "id": "ae65ce5361ab",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "3 tiny gadgets I trust to block electrical surges, data-stealing software, and more",
+        "link": "https://www.zdnet.com/article/3-tiny-gadgets-protect-your-devices-from-surges-malware/",
+        "contentSnippet": "Looking for a simple way to protect your electronics from power surges and tracking software? These tiny gadgets can make a big difference.",
+        "publishedAt": "2026-03-09T00:00:44.000Z",
+        "category": "other",
+        "score": 94,
+        "importance": "high",
+        "recommendationReason": "综合价值较高"
+      },
+      {
+        "id": "e3eb17292326",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Sony WH-1000XM6 review: Still the king of ANC headphones? My verdict after months of testing",
+        "link": "https://www.zdnet.com/article/sony-wh100xm6-review/",
+        "contentSnippet": "After a three-year hiatus and considerable anticipation, Sony's latest flagship headphones impress on nearly every front.",
+        "publishedAt": "2026-03-08T13:01:03.000Z",
+        "category": "other",
+        "score": 94,
+        "importance": "high",
+        "recommendationReason": "综合价值较高"
+      },
+      {
+        "id": "b749f96c3016",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "How to turn off HDMI-CEC on your TV - and why doing so is such a big deal",
+        "link": "https://www.zdnet.com/article/how-to-turn-off-hdmi-cec-on-your-tv/",
+        "contentSnippet": "TVs often analyze what you watch to curate suggestions and serve you ads, even through HDMI-connected devices. But I've found ways to regain control.",
+        "publishedAt": "2026-03-08T13:00:44.000Z",
+        "category": "tutorial",
+        "score": 94,
+        "importance": "high",
+        "recommendationReason": "综合价值较高"
+      },
+      {
+        "id": "0a021947b595",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Apple AirPods Pro 3 review: I didn't think earbuds could pull off immersive ANC like this",
+        "link": "https://www.zdnet.com/article/apple-airpods-pro-3-review/",
+        "contentSnippet": "After testing AirPods Pro 3 for months, one feature stood out above all the upgrades.",
+        "publishedAt": "2026-03-08T12:00:47.000Z",
+        "category": "other",
+        "score": 94,
+        "importance": "high",
+        "recommendationReason": "综合价值较高"
+      },
+      {
         "id": "e0c4a5e5922d",
         "sourceId": "hnrss-ai",
         "sourceName": "HNRSS AI",
@@ -767,6 +818,32 @@
         "publishedAt": "2026-03-09T03:14:06.000Z",
         "category": "industry-news",
         "score": 90,
+        "importance": "high",
+        "recommendationReason": "综合价值较高"
+      },
+      {
+        "id": "fb5e26ecd779",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Skylight Calendar 2 review: How this smart tablet keeps my large family organized",
+        "link": "https://www.zdnet.com/article/skylight-calendar-2-review/",
+        "contentSnippet": "The latest version of the popular digital calendar is perfect for large families. Here's how I use it effectively.",
+        "publishedAt": "2026-03-08T11:01:03.000Z",
+        "category": "other",
+        "score": 89,
+        "importance": "high",
+        "recommendationReason": "综合价值较高"
+      },
+      {
+        "id": "c74aea2bfbaf",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "iPhone 17e vs. iPhone 17: I compared both models to uncover the $200 difference",
+        "link": "https://www.zdnet.com/article/iphone-17e-vs-iphone-17/",
+        "contentSnippet": "Apple's latest iPhone 17e is shaping up to be a great midrange device, but how does it stack up against the base iPhone 17?",
+        "publishedAt": "2026-03-08T11:00:46.000Z",
+        "category": "other",
+        "score": 89,
         "importance": "high",
         "recommendationReason": "综合价值较高"
       },
@@ -1074,12 +1151,66 @@
         ]
       },
       {
+        "itemId": "ae65ce5361ab",
+        "title": "3 tiny gadgets I trust to block electrical surges, data-stealing software, and more",
+        "summary": "Looking for a simple way to protect your electronics from power surges and tracking software? These tiny gadgets can ma…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "ae65ce5361ab"
+        ]
+      },
+      {
+        "itemId": "e3eb17292326",
+        "title": "Sony WH-1000XM6 review: Still the king of ANC headphones? My verdict after months of testing",
+        "summary": "After a three-year hiatus and considerable anticipation, Sony's latest flagship headphones impress on nearly every fron…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e3eb17292326"
+        ]
+      },
+      {
+        "itemId": "b749f96c3016",
+        "title": "How to turn off HDMI-CEC on your TV - and why doing so is such a big deal",
+        "summary": "TVs often analyze what you watch to curate suggestions and serve you ads, even through HDMI-connected devices. But I've…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b749f96c3016"
+        ]
+      },
+      {
+        "itemId": "0a021947b595",
+        "title": "Apple AirPods Pro 3 review: I didn't think earbuds could pull off immersive ANC like this",
+        "summary": "After testing AirPods Pro 3 for months, one feature stood out above all the upgrades.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "0a021947b595"
+        ]
+      },
+      {
         "itemId": "e0c4a5e5922d",
         "title": "AI Needs Management Consultants After All",
         "summary": "Article URL: https://www.wsj.com/tech/ai/ai-needs-management-consultants-after-all-bd28ecb9 Comments URL: https://news.…",
         "recommendation": "综合价值较高",
         "evidenceItemIds": [
           "e0c4a5e5922d"
+        ]
+      },
+      {
+        "itemId": "fb5e26ecd779",
+        "title": "Skylight Calendar 2 review: How this smart tablet keeps my large family organized",
+        "summary": "The latest version of the popular digital calendar is perfect for large families. Here's how I use it effectively.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fb5e26ecd779"
+        ]
+      },
+      {
+        "itemId": "c74aea2bfbaf",
+        "title": "iPhone 17e vs. iPhone 17: I compared both models to uncover the $200 difference",
+        "summary": "Apple's latest iPhone 17e is shaping up to be a great midrange device, but how does it stack up against the base iPhone…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c74aea2bfbaf"
         ]
       },
       {
@@ -1116,60 +1247,6 @@
         "recommendation": "综合价值较高",
         "evidenceItemIds": [
           "94f5427c2731"
-        ]
-      },
-      {
-        "itemId": "87225dfc3e68",
-        "title": "A conversation with Kevin Scott: What’s next in AI",
-        "summary": "The post A conversation with Kevin Scott: What’s next in AI appeared first on The AI Blog.",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "87225dfc3e68"
-        ]
-      },
-      {
-        "itemId": "5896e047adc6",
-        "title": "From Hot Wheels to handling content: How brands are using Microsoft AI to be more productive and imaginative",
-        "summary": "The post From Hot Wheels to handling content: How brands are using Microsoft AI to be more productive and imaginative a…",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "5896e047adc6"
-        ]
-      },
-      {
-        "itemId": "fe93253782ea",
-        "title": "How data and AI will transform contact centres for financial services",
-        "summary": "The post How data and AI will transform contact centres for financial services appeared first on The AI Blog.",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "fe93253782ea"
-        ]
-      },
-      {
-        "itemId": "c61256096223",
-        "title": "AI-equipped drones study dolphins on the edge of extinction",
-        "summary": "The post AI-equipped drones study dolphins on the edge of extinction appeared first on The AI Blog.",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "c61256096223"
-        ]
-      },
-      {
-        "itemId": "455e21f8b151",
-        "title": "Online math tutoring service uses AI to help boost students’ skills and confidence",
-        "summary": "The post Online math tutoring service uses AI to help boost students’ skills and confidence appeared first on The AI Bl…",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "455e21f8b151"
-        ]
-      },
-      {
-        "itemId": "f45ebe032786",
-        "title": "央视点赞千问APP，“AI办事”让人工智能走进日常生活",
-        "summary": "该条目缺少可用摘要，请查看原文链接。",
-        "recommendation": "综合价值较高",
-        "evidenceItemIds": [
-          "f45ebe032786"
         ]
       }
     ],
@@ -1245,11 +1322,11 @@
         ]
       }
     ],
-    "summaryInputHash": "e4bb5f0136c96e1fe26ddd681501e5806a1b1313a48d5e6fd87482fd7d9b7406",
+    "summaryInputHash": "b9d451061d40fecd12ff1e44e2b197487186b3c40e915012e81c59f7ad224025",
     "llmSummaryMeta": {
       "enabled": false,
-      "startedAt": "2026-03-09T03:56:27.843Z",
-      "finishedAt": "2026-03-09T03:56:27.843Z",
+      "startedAt": "2026-03-09T03:57:28.630Z",
+      "finishedAt": "2026-03-09T03:57:28.630Z",
       "durationMs": 0,
       "inputCount": 30,
       "summarizedCount": 30,
@@ -1363,10 +1440,10 @@
       }
     ],
     "metrics": {
-      "collectedCount": 30,
-      "normalizedCount": 30,
-      "dedupedCount": 30,
-      "highImportanceCount": 24,
+      "collectedCount": 36,
+      "normalizedCount": 36,
+      "dedupedCount": 36,
+      "highImportanceCount": 30,
       "mediumImportanceCount": 6,
       "lowImportanceCount": 0,
       "categoryBreakdown": {
@@ -1375,14 +1452,13 @@
         "agent": 2,
         "research": 0,
         "industry-news": 1,
-        "tutorial": 0,
-        "other": 13
+        "tutorial": 1,
+        "other": 18
       }
     },
     "warnings": [
       "[LangChain Changelog] 抓取失败: fetch failed",
       "[MarkTechPost] 抓取失败: fetch failed",
-      "[ZDNet AI] 抓取失败: fetch failed",
       "LLM 总结已回退规则模式：llm_summary_disabled"
     ],
     "reviewDeadlineAt": "2026-03-09T04:30:00.000Z"
