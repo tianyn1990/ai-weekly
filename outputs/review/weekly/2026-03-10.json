@@ -1,7 +1,7 @@
 {
-  "runId": "weekly-1773073095373",
-  "generatedAt": "2026-03-09T16:18:14.725Z",
-  "reviewStartedAt": "2026-03-09T16:18:14.725Z",
+  "runId": "weekly-1773075126494",
+  "generatedAt": "2026-03-09T16:52:05.539Z",
+  "reviewStartedAt": "2026-03-09T16:52:05.539Z",
   "reportDate": "2026-03-10",
   "mode": "weekly",
   "reviewStatus": "pending_review",
@@ -19,22 +19,186 @@
     "collectedCount": 48,
     "normalizedCount": 48,
     "dedupedCount": 48,
-    "highImportanceCount": 2,
-    "mediumImportanceCount": 4,
-    "lowImportanceCount": 42,
+    "highImportanceCount": 7,
+    "mediumImportanceCount": 1,
+    "lowImportanceCount": 40,
     "categoryBreakdown": {
-      "open-source": 10,
+      "open-source": 11,
       "tooling": 7,
       "agent": 5,
       "research": 0,
-      "industry-news": 4,
-      "tutorial": 1,
-      "other": 21
+      "industry-news": 3,
+      "tutorial": 2,
+      "other": 20
     }
   },
-  "itemSummaries": [],
-  "quickDigest": [],
-  "leadSummary": "本期重点围绕open-source与tooling展开，建议优先关注《Railway secures $100 million to challenge AWS with AI-native cloud infrastructure》、《Claude Code costs up to $200 a month. Goose does the same thing for free.》、《How Balyasny Asset Management built an AI research engine for investing》，并结合现有工程路线评估接入优先级与落地成本。",
+  "itemSummaries": [
+    {
+      "itemId": "af0473b3cd39",
+      "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
+      "summary": "Railway获得1亿美元B轮融资，估值超10亿美元，致力于打造AI原生云基础设施，提供秒级部署能力，目前拥有200万开发者但仅30名员工，月处理万亿级请求。",
+      "recommendation": "建议本周优先评估《Railway secures $100 million to challenge AWS with AI-native cloud infrastructure》相关方案，重点关注仓库成熟度与二次开发成本。",
+      "evidenceItemIds": [
+        "af0473b3cd39"
+      ],
+      "domainTag": "open-source",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 100
+    },
+    {
+      "itemId": "dca57667c39b",
+      "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
+      "titleZh": "Claude Code月费高达200美元，而Goose免费提供相同功能",
+      "summary": "Claude Code每月收费高达200美元且存在严格使用限制，而Block开发的开源AI编程代理Goose提供完全免费、本地运行、无限制的替代方案，在GitHub已获26100星。",
+      "recommendation": "对于受够了云端AI编程工具定价和限制的开发者，Goose提供了真正免费的本地化选择，是值得尝试的开源替代方案。",
+      "evidenceItemIds": [
+        "dca57667c39b"
+      ],
+      "domainTag": "agent",
+      "intentTag": "comparison",
+      "actionability": 3,
+      "confidence": 0.95,
+      "llmScore": 88
+    },
+    {
+      "itemId": "ed6c06ec1333",
+      "title": "How Balyasny Asset Management built an AI research engine for investing",
+      "titleZh": "Balyasny资产管理公司如何构建AI投资研究引擎",
+      "summary": "Balyasny Asset Management利用GPT-5.4、严格模型评估和agent工作流构建AI研究引擎，实现大规模投资分析转型。",
+      "recommendation": "对于金融工程团队而言，该案例展示了如何在投资研究领域有效部署LLM和agent技术，具有重要参考价值。",
+      "evidenceItemIds": [
+        "ed6c06ec1333"
+      ],
+      "domainTag": "agent",
+      "intentTag": "case-study",
+      "actionability": 1,
+      "confidence": 0.9,
+      "llmScore": 85
+    },
+    {
+      "itemId": "570688bcf84f",
+      "title": "卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k",
+      "summary": "卡帕西开源Agent自进化训练框架S3，基于博士社群模拟实现智能体自我进化，5分钟完成一轮实验，在48小时内获得9.5k星标关注。",
+      "recommendation": "建议本周优先评估《卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k》相关方案，重点关注仓库成熟度与二次开发成本。",
+      "evidenceItemIds": [
+        "570688bcf84f"
+      ],
+      "domainTag": "open-source",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 100
+    },
+    {
+      "itemId": "1e5772829392",
+      "title": "Codex Security: now in research preview",
+      "summary": "OpenAI推出Codex Security，这是一款AI应用安全代理，可分析项目上下文来检测、验证和修补复杂漏洞，以更高的置信度和更低的噪音运行。",
+      "recommendation": "建议本周优先评估《Codex Security: now in research preview》相关方案，重点关注多 Agent 协作策略与稳定性。",
+      "evidenceItemIds": [
+        "1e5772829392"
+      ],
+      "domainTag": "agent",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 100
+    },
+    {
+      "itemId": "4195e551833f",
+      "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
+      "summary": "Andrej Karpathy 开源了 AutoResearch，一款约 630 行的单文件 Python 工具，可让 AI Agents 在单块 NVIDIA GPU 上自主运行机器学习实验。",
+      "recommendation": "建议本周优先评估《Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs…",
+      "evidenceItemIds": [
+        "4195e551833f"
+      ],
+      "domainTag": "open-source",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 100
+    },
+    {
+      "itemId": "d476bb6a9ab3",
+      "title": "The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning",
+      "summary": "Google研究团队指出当前LLM缺乏概率推理能力，即根据新证据更新",
+      "recommendation": "建议本周优先评估《The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning》相关方案，重点关注多 Agent 协作策略与稳定性。",
+      "evidenceItemIds": [
+        "d476bb6a9ab3"
+      ],
+      "domainTag": "agent",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 100
+    },
+    {
+      "itemId": "96c6faefc88a",
+      "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+      "summary": "Nous Research发布开源编程模型NousCoder-14B，仅用4天在48块Nvidia B200 GPU上训练完成，在LiveCodeBench v6达到67.87%准确率，完整开源训练栈和基准数据集。",
+      "recommendation": "工程团队值得关注：模型完全开源可本地部署，透明训练流程且性能接近顶级闭源方案，同时其数据饱和发现对后续技术选型有重要参考价值。",
+      "evidenceItemIds": [
+        "96c6faefc88a"
+      ],
+      "domainTag": "open-source",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 100
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "af0473b3cd39",
+      "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
+      "takeaway": "Railway获得1亿美元B轮融资，估值超10亿美元，致力于打造AI原生云基础设施，提供秒级部署能力，目前拥有200万开发者但仅30名员工，月处理万亿级请求。",
+      "evidenceItemIds": [
+        "af0473b3cd39"
+      ]
+    },
+    {
+      "itemId": "dca57667c39b",
+      "title": "Claude Code月费高达200美元，而Goose免费提供相同功能 (Claude Code costs up to $200 a month. Goose does the same thing for free.)",
+      "takeaway": "Claude Code每月收费高达200美元且存在严格使用限制，而Block开发的开源AI编程代理Goose提供完全免费、本地运行、无限制的替代方案，在GitHub已获26100星。",
+      "evidenceItemIds": [
+        "dca57667c39b"
+      ]
+    },
+    {
+      "itemId": "570688bcf84f",
+      "title": "卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k",
+      "takeaway": "卡帕西开源Agent自进化训练框架S3，基于博士社群模拟实现智能体自我进化，5分钟完成一轮实验，在48小时内获得9.5k星标关注。",
+      "evidenceItemIds": [
+        "570688bcf84f"
+      ]
+    },
+    {
+      "itemId": "1e5772829392",
+      "title": "Codex Security: now in research preview",
+      "takeaway": "OpenAI推出Codex Security，这是一款AI应用安全代理，可分析项目上下文来检测、验证和修补复杂漏洞，以更高的置信度和更低的噪音运行。",
+      "evidenceItemIds": [
+        "1e5772829392"
+      ]
+    },
+    {
+      "itemId": "4195e551833f",
+      "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
+      "takeaway": "Andrej Karpathy 开源了 AutoResearch，一款约 630 行的单文件 Python 工具，可让 AI Agents 在单块 NVIDIA GPU 上自主运行机器学习实验。",
+      "evidenceItemIds": [
+        "4195e551833f"
+      ]
+    },
+    {
+      "itemId": "d476bb6a9ab3",
+      "title": "The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning",
+      "takeaway": "Google研究团队指出当前LLM缺乏概率推理能力，即根据新证据更新",
+      "evidenceItemIds": [
+        "d476bb6a9ab3"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕open-source展开，建议优先关注《Railway secures $100 million to challenge AWS with AI-native cloud infrastructure》、《Claude Code月费高达200美元，而Goose免费提供相同功能》、《卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k》，并结合现有工程路线评估接入优先级与落地成本。",
   "categoryLeadSummaries": [
     {
       "category": "other",
@@ -50,7 +214,7 @@
     },
     {
       "category": "open-source",
-      "lead": "开源方向本期共 4 条，建议优先阅读《Railway secures $100 million to challenge AWS with AI-native cloud infrastructure》、《Claude Code costs up to $200 a month. Goose does the same thing for free.》，重点关注其工程可落地性与集成成本。",
+      "lead": "开源方向本期共 4 条，建议优先阅读《Railway secures $100 million to challenge AWS with AI-native cloud infrastructure》、《Claude Code月费高达200美元，而Goose免费提供相同功能》，重点关注其工程可落地性与集成成本。",
       "sourceItemIds": [
         "af0473b3cd39",
         "dca57667c39b",
@@ -62,12 +226,12 @@
     },
     {
       "category": "tooling",
-      "lead": "工具链方向本期共 4 条，建议优先阅读《How Balyasny Asset Management built an AI research engine for investing》、《Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation》，重点关注其工程可落地性与集成成本。",
+      "lead": "工具链方向本期共 4 条，建议优先阅读《Balyasny资产管理公司如何构建AI投资研究引擎》、《Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation》，重点关注其工程可落地性与集成成本。",
       "sourceItemIds": [
         "ed6c06ec1333",
         "825c39404554",
         "6e51fbd095d1",
-        "4309c341e311"
+        "547565b7ab4d"
       ],
       "fallbackTriggered": true,
       "reason": "minimax_invalid_response:missing_content"
@@ -78,29 +242,29 @@
       "sourceItemIds": [
         "1e5772829392",
         "d476bb6a9ab3",
-        "b2b8ca787c6a",
+        "1d02c63766ab",
         "e3d44e83a9fb"
       ],
       "fallbackTriggered": true,
       "reason": "minimax_invalid_response:missing_content"
     }
   ],
-  "summaryInputHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summaryInputHash": "8fdecd13f53ceabd36942be5910f956842cebb1d53baa8d4d62ec5b29134746d",
   "llmSummaryMeta": {
     "enabled": true,
     "provider": "minimax",
     "model": "MiniMax-M2.5",
     "promptVersion": "m5.2-v1",
-    "startedAt": "2026-03-09T16:18:30.247Z",
-    "finishedAt": "2026-03-09T16:19:02.362Z",
-    "durationMs": 32115,
-    "inputCount": 0,
-    "summarizedCount": 0,
+    "startedAt": "2026-03-09T16:52:18.323Z",
+    "finishedAt": "2026-03-09T16:55:57.938Z",
+    "durationMs": 219615,
+    "inputCount": 8,
+    "summarizedCount": 8,
     "fallbackTriggered": false,
-    "effectiveConcurrency": null,
-    "assistAppliedCount": 0,
+    "effectiveConcurrency": 1,
+    "assistAppliedCount": 8,
     "assistFallbackCount": 0,
-    "leadFallbackTriggered": false,
+    "leadFallbackTriggered": true,
     "failureStats": {
       "totalFailed": 0,
       "timeout": 0,
@@ -112,8 +276,8 @@
       "other": 0
     },
     "retryStats": {
-      "retryableTriggeredCount": 0,
-      "missingContentExtraRetryTriggeredCount": 0,
+      "retryableTriggeredCount": 3,
+      "missingContentExtraRetryTriggeredCount": 3,
       "compensationRetryItemCount": 0,
       "serialDegradeTriggered": false,
       "serialRetriedItemCount": 0,
@@ -146,12 +310,18 @@
       "score": 100,
       "importance": "high",
       "recommendationReason": "Agent 工程实践相关",
+      "domainTag": "open-source",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 100,
       "scoreBreakdown": {
         "ruleScore": 131,
         "ruleScoreNormalized": 100,
+        "llmScore": 100,
         "finalScore": 100,
         "fusionWeight": 0.65,
-        "usedLlm": false
+        "usedLlm": true
       }
     },
     {
@@ -163,35 +333,22 @@
       "contentSnippet": "The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code, Anthropic's terminal-based AI agent that can write, debug, and deploy code autonomously, has captured the imagination of software developers worldwide. But its pricing — ranging from $20 to $200 per month depending on usage — has sparked a growing rebellion among the very programmers it aims to serve. Now, a free alternative is gaining traction. Goose, an open-source AI agent developed by Block (the financial technology company formerly known as Square), offers nearly identical functionality to Claude Code but runs entirely on a user's local machine. No subscription fees. No cloud dependency. No rate limits that reset every five hours. \"Your data stays with you, period,\" said Parth Sareen, a software engineer who demonstrated the tool during a recent livestream. The comment captures the core appeal: Goose gives developers complete control over their AI-powered workflow, including the ability to work offline — even on an airplane. The project has exploded in popularity. Goose now boasts more than 26,100 stars on GitHub, the code-sharing platform, with 362 contributors and 102 releases since its launch. The latest version, 1.20.1, shipped on January 19, 2026, reflecting a development pace that rivals commercial products. For developers frustrated by Claude Code's pricing structure and usage caps, Goose represents something increasingly rare in the AI industry: a genuinely free, no-strings-attached option for serious work. Anthropic's new rate limits spark a developer revolt To understand why Goose matters, you need to understand the Claude Code pricing controversy. Anthropic, the San Francisco artificial intelligence company founded by former OpenAI executives, offers Claude Code as part of its subscription tiers. The free plan provides no access whatsoever. The Pro plan, at $17 per month with annual billing (or $20 monthly), limits users to just 10 to 40 prompts every five hours — a constraint that serious developers exhaust within minutes of intensive work. The Max plans, at $100 and $200 per month, offer more headroom: 50 to 200 prompts and 200 to 800 prompts respectively, plus access to Anthropic's most powerful model, Claude 4.5 Opus. But even these premium tiers come with restrictions that have inflamed the developer community. In late July, Anthropic announced new weekly rate limits. Under the system, Pro users receive 40 to 80 hours of Sonnet 4 usage per week. Max users at the $200 tier get 240 to 480 hours of Sonnet 4, plus 24 to 40 hours of Opus 4. Nearly five months later, the frustration has not subsided. The problem? Those \"hours\" are not actual hours. They represent token-based limits that vary wildly depending on codebase size, conversation length, and the complexity of the code being processed. Independent analysis suggests the actual per-session limits translate to roughly 44,000 tokens for Pro users and 220,000 tokens for the $200 Max plan. \"It's confusing and vague,\" one developer wrote in a widely shared analysis. \"When they say '24-40 hours of Opus 4,' that doesn't really tell you anything useful about what you're actually getting.\" The backlash on Reddit and developer forums has been fierce. Some users report hitting their daily limits within 30 minutes of intensive coding. Others have canceled their subscriptions entirely, calling the new restrictions \"a joke\" and \"unusable for real work.\" Anthropic has defended the changes, stating that the limits affect fewer than five percent of users and target people running Claude Code \"continuously in the background, 24/7.\" But the company has not clarified whether that figure refers to five percent of Max subscribers or five percent of all users — a distinction that matters enormously. How Block built a free AI coding agent that works offline Goose takes a radically different approach to the same problem. Built by Block, the payments company led by Jack Dorsey, Goose is what engineers call an \"on-machine AI agent.\" Unlike Claude Code, which sends your queries to Anthropic's servers for processing, Goose can run entirely on your local computer using open-source language models that you download and control yourself. The project's documentation describes it as going \"beyond code suggestions\" to \"install, execute, edit, and test with any LLM.\" That last phrase — \"any LLM\" — is the key differentiator. Goose is model-agnostic by design. You can connect Goose to Anthropic's Claude models if you have API access. You can use OpenAI's GPT-5 or Google's Gemini. You can route it through services like Groq or OpenRouter. Or — and this is where things get interesting — you can run it entirely locally using tools like Ollama, which let you download and execute open-source models on your own hardware. The practical implications are significant. With a local setup, there are no subscription fees, no usage caps, no rate limits, and no concerns about your code being sent to external servers. Your conversations with the AI never leave your machine. \"I use Ollama all the time on planes — it's a lot of fun!\" Sareen noted during a demonstration, highlighting how local models free developers from the constraints of internet connectivity. What Goose can do that traditional code assistants can't Goose operates as a command-line tool or desktop application that can autonomously perform complex development tasks. It can build entire projects from scratch, write and execute code, debug failures, orchestrate workflows across multiple files, and interact with external APIs — all without constant human oversight. The architecture relies on what the AI industry calls \"tool calling\" or \"function calling\" — the ability for a language model to request specific actions from external systems. When you ask Goose to create a new file, run a test suite, or check the status of a GitHub pull request, it doesn't just generate text describing what should happen. It actually executes those operations. This capability depends heavily on the underlying language model. Claude 4 models from Anthropic currently perform best at tool calling, according to the Berkeley Function-Calling Leaderboard, which ranks models on their ability to translate natural language requests into executable code and system commands. But newer open-source models are catching up quickly. Goose's documentation highlights several options with strong tool-calling support: Meta's Llama series, Alibaba's Qwen models, Google's Gemma variants, and DeepSeek's reasoning-focused architectures. The tool also integrates with the Model Context Protocol, or MCP, an emerging standard for connecting AI agents to external services. Through MCP, Goose can access databases, search engines, file systems, and third-party APIs — extending its capabilities far beyond what the base language model provides. Setting Up Goose with a Local Model For developers interested in a completely free, privacy-preserving setup, the process involves three main components: Goose itself, Ollama (a tool for running open-source models locally), and a compatible language model. Step 1: Install Ollama Ollama is an open-source project that dramatically simplifies the process of running large language models on personal hardware. It handles the complex work of downloading, optimizing, and serving models through a simple interface. Download and install Ollama from ollama.com. Once installed, you can pull models with a single command. For coding tasks, Qwen 2.5 offers strong tool-calling support: ollama run qwen2.5 The model downloads automatically and begins running on your machine. Step 2: Install Goose Goose is available as both a desktop application and a command-line interface. The desktop version provides a more visual experience, while the CLI appeals to developers who prefer working entirely in the terminal. Installation instructions vary by operating system but generally involve downloading from Goose's GitHub releases page or using a package manager. Block provides pre-built binaries for macOS (both Intel and Apple Silicon), Windows, and Linux. Step 3: Configure the Connection In Goose Desktop, navigate to Settings, then Configure Provider, and select Ollama. Confirm that the API Host is set to http://localhost:11434 (Ollama's default port) and click Submit. For the command-line version, run goose configure, select \"Configure Providers,\" choose Ollama, and enter the model name when prompted. That's it. Goose is now connected to a language model running entirely on your hardware, ready to execute complex coding tasks without any subscription fees or external dependencies. The RAM, processing power, and trade-offs you should know about The obvious question: what kind of computer do you need? Running large language models locally requires substantially more computational resources than typical software. The key constraint is memory — specifically, RAM on most systems, or VRAM if using a dedicated graphics card for acceleration. Block's documentation suggests that 32 gigabytes of RAM provides \"a solid baseline for larger models and outputs.\" For Mac users, this means the computer's unified memory is the primary bottleneck. For Windows and Linux users with discrete NVIDIA graphics cards, GPU memory (VRAM) matters more for acceleration. But you don't necessarily need expensive hardware to get started. Smaller models with fewer parameters run on much more modest systems. Qwen 2.5, for instance, comes in multiple sizes, and the smaller variants can operate effectively on machines with 16 gigabytes of RAM. \"You don't need to run the largest models to get excellent results,\" Sareen emphasized. The practical recommendation: start with a smaller model to test your workflow, then scale up as needed. For context, Apple's entry-level MacBook Air with 8 gigabytes of RAM would struggle with most capable coding models. But a MacBook Pro with 32 gigabytes — increasingly common among professional developers — handles them comfortably. Why keeping your code off the cloud matters more than ever Goose with a local LLM is not a perfect substitute for Claude Code. The comparison involves real trade-offs that developers should understand. Model Quality: Claude 4.5 Opus, Anthropic's flagship model, remains arguably the most capable AI for software engineering tasks. It excels at understanding complex codebases, following nuanced instructions, and producing high-quality code on the first attempt. Open-source models have improved dramatically, but a gap persists — particularly for the most challenging tasks. One developer who switched to the $200 Claude Code plan described the difference bluntly: \"When I say 'make this look modern,' Opus knows what I mean. Other models give me Bootstrap circa 2015.\" Context Window: Claude Sonnet 4.5, accessible through the API, offers a massive one-million-token context window — enough to load entire large codebases without chunking or context management issues. Most local models are limited to 4,096 or 8,192 tokens by default, though many can be configured for longer contexts at the cost of increased memory usage and slower processing. Speed: Cloud-based services like Claude Code run on dedicated server hardware optimized for AI inference. Local models, running on consumer laptops, typically process requests more slowly. The difference matters for iterative workflows where you're making rapid changes and waiting for AI feedback. Tooling Maturity: Claude Code benefits from Anthropic's dedicated engineering resources. Features like prompt caching (which can reduce costs by up to 90 percent for repeated contexts) and structured outputs are polished and well-documented. Goose, while actively developed with 102 releases to date, relies on community contributions and may lack equivalent refinement in specific areas. How Goose stacks up against Cursor, GitHub Copilot, and the paid AI coding market Goose enters a crowded market of AI coding tools, but occupies a distinctive position. Cursor, a popular AI-enhanced code editor, charges $20 per month for its Pro tier and $200 for Ultra—pricing that mirrors Claude Code's Max plans. Cursor provides approximately 4,500 Sonnet 4 requests per month at the Ultra level, a substantially different allocation model than Claude Code's hourly resets. Cline, Roo Code, and similar open-source projects offer AI coding assistance but with varying levels of autonomy and tool integration. Many focus on code completion rather than the agentic task execution that defines Goose and Claude Code. Amazon's CodeWhisperer, GitHub Copilot, and enterprise offerings from major cloud providers target large organizations with complex procurement processes and dedicated budgets. They are less relevant to individual developers and small teams seeking lightweight, flexible tools. Goose's combination of genuine autonomy, model agnosticism, local operation, and zero cost creates a unique value proposition. The tool is not trying to compete with commercial offerings on polish or model quality. It's competing on freedom — both financial and architectural. The $200-a-month era for AI coding tools may be ending The AI coding tools market is evolving quickly. Open-source models are improving at a pace that continually narrows the gap with proprietary alternatives. Moonshot AI's Kimi K2 and z.ai's GLM 4.5 now benchmark near Claude Sonnet 4 levels — and they're freely available. If this trajectory continues, the quality advantage that justifies Claude Code's premium pricing may erode. Anthropic would then face pressure to compete on features, user experience, and integration rather than raw model capability. For now, developers face a clear choice. Those who need the absolute best model quality, who can afford premium pricing, and who accept usage restrictions may prefer Claude Code. Those who prioritize cost, privacy, offline access, and flexibility have a genuine alternative in Goose. The fact that a $200-per-month commercial product has a zero-dollar open-source competitor with comparable core functionality is itself remarkable. It reflects both the maturation of open-source AI infrastructure and the appetite among developers for tools that respect their autonomy. Goose is not perfect. It requires more technical setup than commercial alternatives. It depends on hardware resources that not every developer possesses. Its model options, while improving rapidly, still trail the best proprietary offerings on complex tasks. But for a growing community of developers, those limitations are acceptable trade-offs for something increasingly rare in the AI landscape: a tool that truly belongs to them. Goose is available for download at github.com/block/goose. Ollama is available at ollama.com. Both projects are free and open source.",
       "publishedAt": "2026-01-19T14:00:00.000Z",
       "category": "open-source",
-      "score": 100,
+      "score": 92.2,
       "importance": "high",
       "recommendationReason": "Agent 工程实践相关",
+      "titleZh": "Claude Code月费高达200美元，而Goose免费提供相同功能",
+      "domainTag": "agent",
+      "intentTag": "comparison",
+      "actionability": 3,
+      "confidence": 0.95,
+      "llmScore": 88,
       "scoreBreakdown": {
         "ruleScore": 131,
         "ruleScoreNormalized": 100,
-        "finalScore": 100,
+        "llmScore": 88,
+        "finalScore": 92.2,
         "fusionWeight": 0.65,
-        "usedLlm": false
-      }
-    },
-    {
-      "id": "ed6c06ec1333",
-      "sourceId": "openai-news",
-      "sourceName": "OpenAI News",
-      "title": "How Balyasny Asset Management built an AI research engine for investing",
-      "link": "https://openai.com/index/balyasny-asset-management",
-      "contentSnippet": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform investment analysis at scale.",
-      "publishedAt": "2026-03-06T07:00:00.000Z",
-      "category": "tooling",
-      "score": 76.6,
-      "importance": "medium",
-      "recommendationReason": "Agent 工程实践相关",
-      "scoreBreakdown": {
-        "ruleScore": 120,
-        "ruleScoreNormalized": 76.59574468085107,
-        "finalScore": 76.6,
-        "fusionWeight": 0.65,
-        "usedLlm": false
+        "usedLlm": true
       }
     },
     {
@@ -203,15 +360,21 @@
       "contentSnippet": "下一步要模拟整个博士社群",
       "publishedAt": "2026-03-09T07:46:46.000Z",
       "category": "open-source",
-      "score": 74.47,
-      "importance": "medium",
+      "score": 91.06,
+      "importance": "high",
       "recommendationReason": "Agent 工程实践相关",
+      "domainTag": "open-source",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 100,
       "scoreBreakdown": {
         "ruleScore": 119,
         "ruleScoreNormalized": 74.46808510638297,
-        "finalScore": 74.47,
+        "llmScore": 100,
+        "finalScore": 91.06,
         "fusionWeight": 0.65,
-        "usedLlm": false
+        "usedLlm": true
       }
     },
     {
@@ -223,15 +386,21 @@
       "contentSnippet": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex vulnerabilities with higher confidence and less noise.",
       "publishedAt": "2026-03-06T10:00:00.000Z",
       "category": "agent",
-      "score": 72.34,
-      "importance": "medium",
+      "score": 90.32,
+      "importance": "high",
       "recommendationReason": "Agent 工程实践相关",
+      "domainTag": "agent",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 100,
       "scoreBreakdown": {
         "ruleScore": 118,
         "ruleScoreNormalized": 72.3404255319149,
-        "finalScore": 72.34,
+        "llmScore": 100,
+        "finalScore": 90.32,
         "fusionWeight": 0.65,
-        "usedLlm": false
+        "usedLlm": true
       }
     },
     {
@@ -243,15 +412,21 @@
       "contentSnippet": "Andrej Karpathy released autoresearch, a minimalist Python tool designed to enable AI agents to autonomously conduct machine learning experiments. The project is a stripped-down version of the nanochat LLM training core, condensed into a single-file repository of approximately ~630 lines of code. It is optimized for execution on a single NVIDIA GPU. The Autonomous Iteration […] The post Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs appeared first on MarkTechPost.",
       "publishedAt": "2026-03-09T02:47:38.000Z",
       "category": "open-source",
-      "score": 72.34,
-      "importance": "medium",
+      "score": 90.32,
+      "importance": "high",
       "recommendationReason": "Agent 工程实践相关",
+      "domainTag": "open-source",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 100,
       "scoreBreakdown": {
         "ruleScore": 118,
         "ruleScoreNormalized": 72.3404255319149,
-        "finalScore": 72.34,
+        "llmScore": 100,
+        "finalScore": 90.32,
         "fusionWeight": 0.65,
-        "usedLlm": false
+        "usedLlm": true
       }
     },
     {
@@ -263,15 +438,21 @@
       "contentSnippet": "Large Language Models (LLMs) are the world’s best mimics, but when it comes to the cold, hard logic of updating beliefs based on new evidence, they are surprisingly stubborn. A team of researchers from Google argue that the current crop of AI agents falls far short of ‘probabilistic reasoning’—the ability to maintain and update a […] The post The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning appeared first on MarkTechPost.",
       "publishedAt": "2026-03-09T08:23:31.000Z",
       "category": "agent",
-      "score": 61.7,
-      "importance": "low",
+      "score": 86.6,
+      "importance": "high",
       "recommendationReason": "Agent 工程实践相关",
+      "domainTag": "agent",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 100,
       "scoreBreakdown": {
         "ruleScore": 113,
         "ruleScoreNormalized": 61.702127659574465,
-        "finalScore": 61.7,
+        "llmScore": 100,
+        "finalScore": 86.6,
         "fusionWeight": 0.65,
-        "usedLlm": false
+        "usedLlm": true
       }
     },
     {
@@ -283,15 +464,48 @@
       "contentSnippet": "Nous Research, the open-source artificial intelligence startup backed by crypto venture firm Paradigm, released a new competitive programming model on Monday that it says matches or exceeds several larger proprietary systems — trained in just four days using 48 of Nvidia's latest B200 graphics processors. The model, called NousCoder-14B, is another entry in a crowded field of AI coding assistants, but arrives at a particularly charged moment: Claude Code, the agentic programming tool from rival Anthropic, has dominated social media discussion since New Year's Day, with developers posting breathless testimonials about its capabilities. The simultaneous developments underscore how quickly AI-assisted software development is evolving — and how fiercely companies large and small are competing to capture what many believe will become a foundational technology for how software gets written. type: embedded-entry-inline id: 74cSyrq6OUrp9SEQ5zOUSl NousCoder-14B achieves a 67.87 percent accuracy rate on LiveCodeBench v6, a standardized evaluation that tests models on competitive programming problems published between August 2024 and May 2025. That figure represents a 7.08 percentage point improvement over the base model it was trained from, Alibaba's Qwen3-14B, according to Nous Research's technical report published alongside the release. \"I gave Claude Code a description of the problem, it generated what we built last year in an hour,\" wrote Jaana Dogan, a principal engineer at Google responsible for the Gemini API, in a viral post on X last week that captured the prevailing mood around AI coding tools. Dogan was describing a distributed agent orchestration system her team had spent a year developing — a system Claude Code approximated from a three-paragraph prompt. The juxtaposition is instructive: while Anthropic's Claude Code has captured imaginations with demonstrations of end-to-end software development, Nous Research is betting that open-source alternatives trained on verifiable problems can close the gap — and that transparency in how these models are built matters as much as raw capability. How Nous Research built an AI coding model that anyone can replicate What distinguishes the NousCoder-14B release from many competitor announcements is its radical openness. Nous Research published not just the model weights but the complete reinforcement learning environment, benchmark suite, and training harness — built on the company's Atropos framework — enabling any researcher with sufficient compute to reproduce or extend the work. \"Open-sourcing the Atropos stack provides the necessary infrastructure for reproducible olympiad-level reasoning research,\" noted one observer on X, summarizing the significance for the academic and open-source communities. The model was trained by Joe Li, a researcher in residence at Nous Research and a former competitive programmer himself. Li's technical report reveals an unexpectedly personal dimension: he compared the model's improvement trajectory to his own journey on Codeforces, the competitive programming platform where participants earn ratings based on contest performance. Based on rough estimates mapping LiveCodeBench scores to Codeforces ratings, Li calculated that NousCoder-14B's improvemen t— from approximately the 1600-1750 rating range to 2100-2200 — mirrors a leap that took him nearly two years of sustained practice between ages 14 and 16. The model accomplished the equivalent in four days. \"Watching that final training run unfold was quite a surreal experience,\" Li wrote in the technical report. But Li was quick to note an important caveat that speaks to broader questions about AI efficiency: he solved roughly 1,000 problems during those two years, while the model required 24,000. Humans, at least for now, remain dramatically more sample-efficient learners. Inside the reinforcement learning system that trains on 24,000 competitive programming problems NousCoder-14B's training process offers a window into the increasingly sophisticated techniques researchers use to improve AI reasoning capabilities through reinforcement learning. The approach relies on what researchers call \"verifiable rewards\" — a system where the model generates code solutions, those solutions are executed against test cases, and the model receives a simple binary signal: correct or incorrect. This feedback loop, while conceptually straightforward, requires significant infrastructure to execute at scale. Nous Research used Modal, a cloud computing platform, to run sandboxed code execution in parallel. Each of the 24,000 training problems contains hundreds of test cases on average, and the system must verify that generated code produces correct outputs within time and memory constraints — 15 seconds and 4 gigabytes, respectively. The training employed a technique called DAPO (Dynamic Sampling Policy Optimization), which the researchers found performed slightly better than alternatives in their experiments. A key innovation involves \"dynamic sampling\" — discarding training examples where the model either solves all attempts or fails all attempts, since these provide no useful gradient signal for learning. The researchers also adopted \"iterative context extension,\" first training the model with a 32,000-token context window before expanding to 40,000 tokens. During evaluation, extending the context further to approximately 80,000 tokens produced the best results, with accuracy reaching 67.87 percent. Perhaps most significantly, the training pipeline overlaps inference and verification — as soon as the model generates a solution, it begins work on the next problem while the previous solution is being checked. This pipelining, combined with asynchronous training where multiple model instances work in parallel, maximizes hardware utilization on expensive GPU clusters. The looming data shortage that could slow AI coding model progress Buried in Li's technical report is a finding with significant implications for the future of AI development: the training dataset for NousCoder-14B encompasses \"a significant portion of all readily available, verifiable competitive programming problems in a standardized dataset format.\" In other words, for this particular domain, the researchers are approaching the limits of high-quality training data. \"The total number of competitive programming problems on the Internet is roughly the same order of magnitude,\" Li wrote, referring to the 24,000 problems used for training. \"This suggests that within the competitive programming domain, we have approached the limits of high-quality data.\" This observation echoes growing concern across the AI industry about data constraints. While compute continues to scale according to well-understood economic and engineering principles, training data is \"increasingly finite,\" as Li put it. \"It appears that some of the most important research that needs to be done in the future will be in the areas of synthetic data generation and data efficient algorithms and architectures,\" he concluded. The challenge is particularly acute for competitive programming because the domain requires problems with known correct solutions that can be verified automatically. Unlike natural language tasks where human evaluation or proxy metrics suffice, code either works or it doesn't — making synthetic data generation considerably more difficult. Li identified one potential avenue: training models not just to solve problems but to generate solvable problems, enabling a form of self-play similar to techniques that proved successful in game-playing AI systems. \"Once synthetic problem generation is solved, self-play becomes a very interesting direction,\" he wrote. A $65 million bet that open-source AI can compete with Big Tech Nous Research has carved out a distinctive position in the AI landscape: a company committed to open-source releases that compete with — and sometimes exceed — proprietary alternatives. The company raised $50 million in April 2025 in a round led by Paradigm, the cryptocurrency-focused venture firm founded by Coinbase co-founder Fred Ehrsam. Total funding reached $65 million, according to some reports. The investment reflected growing interest in decentralized approaches to AI training, an area where Nous Research has developed its Psyche platform. Previous releases include Hermes 4, a family of models that we reported \"outperform ChatGPT without content restrictions,\" and DeepHermes-3, which the company described as the first \"toggle-on reasoning model\" — allowing users to activate extended thinking capabilities on demand. The company has cultivated a distinctive aesthetic and community, prompting some skepticism about whether style might overshadow substance. \"Ofc i'm gonna believe an anime pfp company. stop benchmarkmaxxing ffs,\" wrote one critic on X, referring to Nous Research's anime-style branding and the industry practice of optimizing for benchmark performance. Others raised technical questions. \"Based on the benchmark, Nemotron is better,\" noted one commenter, referring to Nvidia's family of language models. Another asked whether NousCoder-14B is \"agentic focused or just 'one shot' coding\" — a distinction that matters for practical software development, where iterating on feedback typically produces better results than single attempts. What researchers say must happen next for AI coding tools to keep improving The release includes several directions for future work that hint at where AI coding research may be heading. Multi-turn reinforcement learning tops the list. Currently, the model receives only a final binary reward — pass or fail — after generating a solution. But competitive programming problems typically include public test cases that provide intermediate feedback: compilation errors, incorrect outputs, time limit violations. Training models to incorporate this feedback across multiple attempts could significantly improve performance. Controlling response length also remains a challenge. The researchers found that incorrect solutions tended to be longer than correct ones, and response lengths quickly saturated available context windows during training — a pattern that various algorithmic modifications failed to resolve. Perhaps most ambitiously, Li proposed \"problem generation and self-play\" — training models to both solve and create programming problems. This would address the data scarcity problem directly by enabling models to generate their own training curricula. \"Humans are great at generating interesting and useful problems for other competitive programmers, but it appears that there still exists a significant gap in LLM capabilities in creative problem generation,\" Li wrote. The model is available now on Hugging Face under an Apache 2.0 license. For researchers and developers who want to build on the work, Nous Research has published the complete Atropos training stack alongside it. What took Li two years of adolescent dedication to achieve—climbing from a 1600-level novice to a 2100-rated competitor on Codeforces—an AI replicated in 96 hours. He needed 1,000 problems. The model needed 24,000. But soon enough, these systems may learn to write their own problems, teach themselves, and leave human benchmarks behind entirely. The question is no longer whether machines can learn to code. It's whether they'll soon be better teachers than we ever were.",
       "publishedAt": "2026-01-07T20:00:00.000Z",
       "category": "open-source",
-      "score": 57.45,
-      "importance": "low",
+      "score": 85.11,
+      "importance": "high",
       "recommendationReason": "Agent 工程实践相关",
+      "domainTag": "open-source",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 100,
       "scoreBreakdown": {
         "ruleScore": 111,
         "ruleScoreNormalized": 57.446808510638306,
-        "finalScore": 57.45,
+        "llmScore": 100,
+        "finalScore": 85.11,
         "fusionWeight": 0.65,
-        "usedLlm": false
+        "usedLlm": true
+      }
+    },
+    {
+      "id": "ed6c06ec1333",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "How Balyasny Asset Management built an AI research engine for investing",
+      "link": "https://openai.com/index/balyasny-asset-management",
+      "contentSnippet": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform investment analysis at scale.",
+      "publishedAt": "2026-03-06T07:00:00.000Z",
+      "category": "tooling",
+      "score": 82.06,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "titleZh": "Balyasny资产管理公司如何构建AI投资研究引擎",
+      "domainTag": "agent",
+      "intentTag": "case-study",
+      "actionability": 1,
+      "confidence": 0.9,
+      "llmScore": 85,
+      "scoreBreakdown": {
+        "ruleScore": 120,
+        "ruleScoreNormalized": 76.59574468085107,
+        "llmScore": 85,
+        "finalScore": 82.06,
+        "fusionWeight": 0.65,
+        "usedLlm": true
       }
     }
   ],
@@ -305,7 +519,7 @@
     "storageDbPath": "outputs/db/app.sqlite",
     "storageFallbackToFile": true,
     "sourceLimit": 6,
-    "outlineMarkdown": "### 重点推荐（大纲）\n- Railway secures $100 million to challenge AWS with AI-native cloud infrastructure\n- Claude Code costs up to $200 a month. Goose does the same thing for free.\n- How Balyasny Asset Management built an AI research engine for investing\n- 卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k\n- Codex Security: now in research preview\n\n### 分类覆盖（大纲）\n- open-source: 10 条\n- tooling: 7 条\n- agent: 5 条\n- tutorial: 1 条\n- industry-news: 4 条\n- other: 21 条",
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Railway secures $100 million to challenge AWS with AI-native cloud infrastructure\n- Claude Code costs up to $200 a month. Goose does the same thing for free.\n- How Balyasny Asset Management built an AI research engine for investing\n- 卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k\n- Codex Security: now in research preview\n\n### 分类覆盖（大纲）\n- open-source: 11 条\n- tooling: 7 条\n- agent: 5 条\n- tutorial: 2 条\n- other: 20 条\n- industry-news: 3 条",
     "rankedItems": [
       {
         "id": "af0473b3cd39",
@@ -319,12 +533,18 @@
         "score": 100,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
+        "domainTag": "open-source",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 131,
           "ruleScoreNormalized": 100,
+          "llmScore": 100,
           "finalScore": 100,
           "fusionWeight": 0.65,
-          "usedLlm": false
+          "usedLlm": true
         }
       },
       {
@@ -336,35 +556,22 @@
         "contentSnippet": "The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code, Anthropic's terminal-based AI agent that can write, debug, and deploy code autonomously, has captured the imagination of software developers worldwide. But its pricing — ranging from $20 to $200 per month depending on usage — has sparked a growing rebellion among the very programmers it aims to serve. Now, a free alternative is gaining traction. Goose, an open-source AI agent developed by Block (the financial technology company formerly known as Square), offers nearly identical functionality to Claude Code but runs entirely on a user's local machine. No subscription fees. No cloud dependency. No rate limits that reset every five hours. \"Your data stays with you, period,\" said Parth Sareen, a software engineer who demonstrated the tool during a recent livestream. The comment captures the core appeal: Goose gives developers complete control over their AI-powered workflow, including the ability to work offline — even on an airplane. The project has exploded in popularity. Goose now boasts more than 26,100 stars on GitHub, the code-sharing platform, with 362 contributors and 102 releases since its launch. The latest version, 1.20.1, shipped on January 19, 2026, reflecting a development pace that rivals commercial products. For developers frustrated by Claude Code's pricing structure and usage caps, Goose represents something increasingly rare in the AI industry: a genuinely free, no-strings-attached option for serious work. Anthropic's new rate limits spark a developer revolt To understand why Goose matters, you need to understand the Claude Code pricing controversy. Anthropic, the San Francisco artificial intelligence company founded by former OpenAI executives, offers Claude Code as part of its subscription tiers. The free plan provides no access whatsoever. The Pro plan, at $17 per month with annual billing (or $20 monthly), limits users to just 10 to 40 prompts every five hours — a constraint that serious developers exhaust within minutes of intensive work. The Max plans, at $100 and $200 per month, offer more headroom: 50 to 200 prompts and 200 to 800 prompts respectively, plus access to Anthropic's most powerful model, Claude 4.5 Opus. But even these premium tiers come with restrictions that have inflamed the developer community. In late July, Anthropic announced new weekly rate limits. Under the system, Pro users receive 40 to 80 hours of Sonnet 4 usage per week. Max users at the $200 tier get 240 to 480 hours of Sonnet 4, plus 24 to 40 hours of Opus 4. Nearly five months later, the frustration has not subsided. The problem? Those \"hours\" are not actual hours. They represent token-based limits that vary wildly depending on codebase size, conversation length, and the complexity of the code being processed. Independent analysis suggests the actual per-session limits translate to roughly 44,000 tokens for Pro users and 220,000 tokens for the $200 Max plan. \"It's confusing and vague,\" one developer wrote in a widely shared analysis. \"When they say '24-40 hours of Opus 4,' that doesn't really tell you anything useful about what you're actually getting.\" The backlash on Reddit and developer forums has been fierce. Some users report hitting their daily limits within 30 minutes of intensive coding. Others have canceled their subscriptions entirely, calling the new restrictions \"a joke\" and \"unusable for real work.\" Anthropic has defended the changes, stating that the limits affect fewer than five percent of users and target people running Claude Code \"continuously in the background, 24/7.\" But the company has not clarified whether that figure refers to five percent of Max subscribers or five percent of all users — a distinction that matters enormously. How Block built a free AI coding agent that works offline Goose takes a radically different approach to the same problem. Built by Block, the payments company led by Jack Dorsey, Goose is what engineers call an \"on-machine AI agent.\" Unlike Claude Code, which sends your queries to Anthropic's servers for processing, Goose can run entirely on your local computer using open-source language models that you download and control yourself. The project's documentation describes it as going \"beyond code suggestions\" to \"install, execute, edit, and test with any LLM.\" That last phrase — \"any LLM\" — is the key differentiator. Goose is model-agnostic by design. You can connect Goose to Anthropic's Claude models if you have API access. You can use OpenAI's GPT-5 or Google's Gemini. You can route it through services like Groq or OpenRouter. Or — and this is where things get interesting — you can run it entirely locally using tools like Ollama, which let you download and execute open-source models on your own hardware. The practical implications are significant. With a local setup, there are no subscription fees, no usage caps, no rate limits, and no concerns about your code being sent to external servers. Your conversations with the AI never leave your machine. \"I use Ollama all the time on planes — it's a lot of fun!\" Sareen noted during a demonstration, highlighting how local models free developers from the constraints of internet connectivity. What Goose can do that traditional code assistants can't Goose operates as a command-line tool or desktop application that can autonomously perform complex development tasks. It can build entire projects from scratch, write and execute code, debug failures, orchestrate workflows across multiple files, and interact with external APIs — all without constant human oversight. The architecture relies on what the AI industry calls \"tool calling\" or \"function calling\" — the ability for a language model to request specific actions from external systems. When you ask Goose to create a new file, run a test suite, or check the status of a GitHub pull request, it doesn't just generate text describing what should happen. It actually executes those operations. This capability depends heavily on the underlying language model. Claude 4 models from Anthropic currently perform best at tool calling, according to the Berkeley Function-Calling Leaderboard, which ranks models on their ability to translate natural language requests into executable code and system commands. But newer open-source models are catching up quickly. Goose's documentation highlights several options with strong tool-calling support: Meta's Llama series, Alibaba's Qwen models, Google's Gemma variants, and DeepSeek's reasoning-focused architectures. The tool also integrates with the Model Context Protocol, or MCP, an emerging standard for connecting AI agents to external services. Through MCP, Goose can access databases, search engines, file systems, and third-party APIs — extending its capabilities far beyond what the base language model provides. Setting Up Goose with a Local Model For developers interested in a completely free, privacy-preserving setup, the process involves three main components: Goose itself, Ollama (a tool for running open-source models locally), and a compatible language model. Step 1: Install Ollama Ollama is an open-source project that dramatically simplifies the process of running large language models on personal hardware. It handles the complex work of downloading, optimizing, and serving models through a simple interface. Download and install Ollama from ollama.com. Once installed, you can pull models with a single command. For coding tasks, Qwen 2.5 offers strong tool-calling support: ollama run qwen2.5 The model downloads automatically and begins running on your machine. Step 2: Install Goose Goose is available as both a desktop application and a command-line interface. The desktop version provides a more visual experience, while the CLI appeals to developers who prefer working entirely in the terminal. Installation instructions vary by operating system but generally involve downloading from Goose's GitHub releases page or using a package manager. Block provides pre-built binaries for macOS (both Intel and Apple Silicon), Windows, and Linux. Step 3: Configure the Connection In Goose Desktop, navigate to Settings, then Configure Provider, and select Ollama. Confirm that the API Host is set to http://localhost:11434 (Ollama's default port) and click Submit. For the command-line version, run goose configure, select \"Configure Providers,\" choose Ollama, and enter the model name when prompted. That's it. Goose is now connected to a language model running entirely on your hardware, ready to execute complex coding tasks without any subscription fees or external dependencies. The RAM, processing power, and trade-offs you should know about The obvious question: what kind of computer do you need? Running large language models locally requires substantially more computational resources than typical software. The key constraint is memory — specifically, RAM on most systems, or VRAM if using a dedicated graphics card for acceleration. Block's documentation suggests that 32 gigabytes of RAM provides \"a solid baseline for larger models and outputs.\" For Mac users, this means the computer's unified memory is the primary bottleneck. For Windows and Linux users with discrete NVIDIA graphics cards, GPU memory (VRAM) matters more for acceleration. But you don't necessarily need expensive hardware to get started. Smaller models with fewer parameters run on much more modest systems. Qwen 2.5, for instance, comes in multiple sizes, and the smaller variants can operate effectively on machines with 16 gigabytes of RAM. \"You don't need to run the largest models to get excellent results,\" Sareen emphasized. The practical recommendation: start with a smaller model to test your workflow, then scale up as needed. For context, Apple's entry-level MacBook Air with 8 gigabytes of RAM would struggle with most capable coding models. But a MacBook Pro with 32 gigabytes — increasingly common among professional developers — handles them comfortably. Why keeping your code off the cloud matters more than ever Goose with a local LLM is not a perfect substitute for Claude Code. The comparison involves real trade-offs that developers should understand. Model Quality: Claude 4.5 Opus, Anthropic's flagship model, remains arguably the most capable AI for software engineering tasks. It excels at understanding complex codebases, following nuanced instructions, and producing high-quality code on the first attempt. Open-source models have improved dramatically, but a gap persists — particularly for the most challenging tasks. One developer who switched to the $200 Claude Code plan described the difference bluntly: \"When I say 'make this look modern,' Opus knows what I mean. Other models give me Bootstrap circa 2015.\" Context Window: Claude Sonnet 4.5, accessible through the API, offers a massive one-million-token context window — enough to load entire large codebases without chunking or context management issues. Most local models are limited to 4,096 or 8,192 tokens by default, though many can be configured for longer contexts at the cost of increased memory usage and slower processing. Speed: Cloud-based services like Claude Code run on dedicated server hardware optimized for AI inference. Local models, running on consumer laptops, typically process requests more slowly. The difference matters for iterative workflows where you're making rapid changes and waiting for AI feedback. Tooling Maturity: Claude Code benefits from Anthropic's dedicated engineering resources. Features like prompt caching (which can reduce costs by up to 90 percent for repeated contexts) and structured outputs are polished and well-documented. Goose, while actively developed with 102 releases to date, relies on community contributions and may lack equivalent refinement in specific areas. How Goose stacks up against Cursor, GitHub Copilot, and the paid AI coding market Goose enters a crowded market of AI coding tools, but occupies a distinctive position. Cursor, a popular AI-enhanced code editor, charges $20 per month for its Pro tier and $200 for Ultra—pricing that mirrors Claude Code's Max plans. Cursor provides approximately 4,500 Sonnet 4 requests per month at the Ultra level, a substantially different allocation model than Claude Code's hourly resets. Cline, Roo Code, and similar open-source projects offer AI coding assistance but with varying levels of autonomy and tool integration. Many focus on code completion rather than the agentic task execution that defines Goose and Claude Code. Amazon's CodeWhisperer, GitHub Copilot, and enterprise offerings from major cloud providers target large organizations with complex procurement processes and dedicated budgets. They are less relevant to individual developers and small teams seeking lightweight, flexible tools. Goose's combination of genuine autonomy, model agnosticism, local operation, and zero cost creates a unique value proposition. The tool is not trying to compete with commercial offerings on polish or model quality. It's competing on freedom — both financial and architectural. The $200-a-month era for AI coding tools may be ending The AI coding tools market is evolving quickly. Open-source models are improving at a pace that continually narrows the gap with proprietary alternatives. Moonshot AI's Kimi K2 and z.ai's GLM 4.5 now benchmark near Claude Sonnet 4 levels — and they're freely available. If this trajectory continues, the quality advantage that justifies Claude Code's premium pricing may erode. Anthropic would then face pressure to compete on features, user experience, and integration rather than raw model capability. For now, developers face a clear choice. Those who need the absolute best model quality, who can afford premium pricing, and who accept usage restrictions may prefer Claude Code. Those who prioritize cost, privacy, offline access, and flexibility have a genuine alternative in Goose. The fact that a $200-per-month commercial product has a zero-dollar open-source competitor with comparable core functionality is itself remarkable. It reflects both the maturation of open-source AI infrastructure and the appetite among developers for tools that respect their autonomy. Goose is not perfect. It requires more technical setup than commercial alternatives. It depends on hardware resources that not every developer possesses. Its model options, while improving rapidly, still trail the best proprietary offerings on complex tasks. But for a growing community of developers, those limitations are acceptable trade-offs for something increasingly rare in the AI landscape: a tool that truly belongs to them. Goose is available for download at github.com/block/goose. Ollama is available at ollama.com. Both projects are free and open source.",
         "publishedAt": "2026-01-19T14:00:00.000Z",
         "category": "open-source",
-        "score": 100,
+        "score": 92.2,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
+        "titleZh": "Claude Code月费高达200美元，而Goose免费提供相同功能",
+        "domainTag": "agent",
+        "intentTag": "comparison",
+        "actionability": 3,
+        "confidence": 0.95,
+        "llmScore": 88,
         "scoreBreakdown": {
           "ruleScore": 131,
           "ruleScoreNormalized": 100,
-          "finalScore": 100,
+          "llmScore": 88,
+          "finalScore": 92.2,
           "fusionWeight": 0.65,
-          "usedLlm": false
-        }
-      },
-      {
-        "id": "ed6c06ec1333",
-        "sourceId": "openai-news",
-        "sourceName": "OpenAI News",
-        "title": "How Balyasny Asset Management built an AI research engine for investing",
-        "link": "https://openai.com/index/balyasny-asset-management",
-        "contentSnippet": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform investment analysis at scale.",
-        "publishedAt": "2026-03-06T07:00:00.000Z",
-        "category": "tooling",
-        "score": 76.6,
-        "importance": "medium",
-        "recommendationReason": "Agent 工程实践相关",
-        "scoreBreakdown": {
-          "ruleScore": 120,
-          "ruleScoreNormalized": 76.59574468085107,
-          "finalScore": 76.6,
-          "fusionWeight": 0.65,
-          "usedLlm": false
+          "usedLlm": true
         }
       },
       {
@@ -376,15 +583,21 @@
         "contentSnippet": "下一步要模拟整个博士社群",
         "publishedAt": "2026-03-09T07:46:46.000Z",
         "category": "open-source",
-        "score": 74.47,
-        "importance": "medium",
+        "score": 91.06,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
+        "domainTag": "open-source",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 119,
           "ruleScoreNormalized": 74.46808510638297,
-          "finalScore": 74.47,
+          "llmScore": 100,
+          "finalScore": 91.06,
           "fusionWeight": 0.65,
-          "usedLlm": false
+          "usedLlm": true
         }
       },
       {
@@ -396,15 +609,21 @@
         "contentSnippet": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex vulnerabilities with higher confidence and less noise.",
         "publishedAt": "2026-03-06T10:00:00.000Z",
         "category": "agent",
-        "score": 72.34,
-        "importance": "medium",
+        "score": 90.32,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
+        "domainTag": "agent",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 118,
           "ruleScoreNormalized": 72.3404255319149,
-          "finalScore": 72.34,
+          "llmScore": 100,
+          "finalScore": 90.32,
           "fusionWeight": 0.65,
-          "usedLlm": false
+          "usedLlm": true
         }
       },
       {
@@ -416,15 +635,21 @@
         "contentSnippet": "Andrej Karpathy released autoresearch, a minimalist Python tool designed to enable AI agents to autonomously conduct machine learning experiments. The project is a stripped-down version of the nanochat LLM training core, condensed into a single-file repository of approximately ~630 lines of code. It is optimized for execution on a single NVIDIA GPU. The Autonomous Iteration […] The post Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs appeared first on MarkTechPost.",
         "publishedAt": "2026-03-09T02:47:38.000Z",
         "category": "open-source",
-        "score": 72.34,
-        "importance": "medium",
+        "score": 90.32,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
+        "domainTag": "open-source",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 118,
           "ruleScoreNormalized": 72.3404255319149,
-          "finalScore": 72.34,
+          "llmScore": 100,
+          "finalScore": 90.32,
           "fusionWeight": 0.65,
-          "usedLlm": false
+          "usedLlm": true
         }
       },
       {
@@ -436,15 +661,21 @@
         "contentSnippet": "Large Language Models (LLMs) are the world’s best mimics, but when it comes to the cold, hard logic of updating beliefs based on new evidence, they are surprisingly stubborn. A team of researchers from Google argue that the current crop of AI agents falls far short of ‘probabilistic reasoning’—the ability to maintain and update a […] The post The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning appeared first on MarkTechPost.",
         "publishedAt": "2026-03-09T08:23:31.000Z",
         "category": "agent",
-        "score": 61.7,
-        "importance": "low",
+        "score": 86.6,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
+        "domainTag": "agent",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 113,
           "ruleScoreNormalized": 61.702127659574465,
-          "finalScore": 61.7,
+          "llmScore": 100,
+          "finalScore": 86.6,
           "fusionWeight": 0.65,
-          "usedLlm": false
+          "usedLlm": true
         }
       },
       {
@@ -456,15 +687,48 @@
         "contentSnippet": "Nous Research, the open-source artificial intelligence startup backed by crypto venture firm Paradigm, released a new competitive programming model on Monday that it says matches or exceeds several larger proprietary systems — trained in just four days using 48 of Nvidia's latest B200 graphics processors. The model, called NousCoder-14B, is another entry in a crowded field of AI coding assistants, but arrives at a particularly charged moment: Claude Code, the agentic programming tool from rival Anthropic, has dominated social media discussion since New Year's Day, with developers posting breathless testimonials about its capabilities. The simultaneous developments underscore how quickly AI-assisted software development is evolving — and how fiercely companies large and small are competing to capture what many believe will become a foundational technology for how software gets written. type: embedded-entry-inline id: 74cSyrq6OUrp9SEQ5zOUSl NousCoder-14B achieves a 67.87 percent accuracy rate on LiveCodeBench v6, a standardized evaluation that tests models on competitive programming problems published between August 2024 and May 2025. That figure represents a 7.08 percentage point improvement over the base model it was trained from, Alibaba's Qwen3-14B, according to Nous Research's technical report published alongside the release. \"I gave Claude Code a description of the problem, it generated what we built last year in an hour,\" wrote Jaana Dogan, a principal engineer at Google responsible for the Gemini API, in a viral post on X last week that captured the prevailing mood around AI coding tools. Dogan was describing a distributed agent orchestration system her team had spent a year developing — a system Claude Code approximated from a three-paragraph prompt. The juxtaposition is instructive: while Anthropic's Claude Code has captured imaginations with demonstrations of end-to-end software development, Nous Research is betting that open-source alternatives trained on verifiable problems can close the gap — and that transparency in how these models are built matters as much as raw capability. How Nous Research built an AI coding model that anyone can replicate What distinguishes the NousCoder-14B release from many competitor announcements is its radical openness. Nous Research published not just the model weights but the complete reinforcement learning environment, benchmark suite, and training harness — built on the company's Atropos framework — enabling any researcher with sufficient compute to reproduce or extend the work. \"Open-sourcing the Atropos stack provides the necessary infrastructure for reproducible olympiad-level reasoning research,\" noted one observer on X, summarizing the significance for the academic and open-source communities. The model was trained by Joe Li, a researcher in residence at Nous Research and a former competitive programmer himself. Li's technical report reveals an unexpectedly personal dimension: he compared the model's improvement trajectory to his own journey on Codeforces, the competitive programming platform where participants earn ratings based on contest performance. Based on rough estimates mapping LiveCodeBench scores to Codeforces ratings, Li calculated that NousCoder-14B's improvemen t— from approximately the 1600-1750 rating range to 2100-2200 — mirrors a leap that took him nearly two years of sustained practice between ages 14 and 16. The model accomplished the equivalent in four days. \"Watching that final training run unfold was quite a surreal experience,\" Li wrote in the technical report. But Li was quick to note an important caveat that speaks to broader questions about AI efficiency: he solved roughly 1,000 problems during those two years, while the model required 24,000. Humans, at least for now, remain dramatically more sample-efficient learners. Inside the reinforcement learning system that trains on 24,000 competitive programming problems NousCoder-14B's training process offers a window into the increasingly sophisticated techniques researchers use to improve AI reasoning capabilities through reinforcement learning. The approach relies on what researchers call \"verifiable rewards\" — a system where the model generates code solutions, those solutions are executed against test cases, and the model receives a simple binary signal: correct or incorrect. This feedback loop, while conceptually straightforward, requires significant infrastructure to execute at scale. Nous Research used Modal, a cloud computing platform, to run sandboxed code execution in parallel. Each of the 24,000 training problems contains hundreds of test cases on average, and the system must verify that generated code produces correct outputs within time and memory constraints — 15 seconds and 4 gigabytes, respectively. The training employed a technique called DAPO (Dynamic Sampling Policy Optimization), which the researchers found performed slightly better than alternatives in their experiments. A key innovation involves \"dynamic sampling\" — discarding training examples where the model either solves all attempts or fails all attempts, since these provide no useful gradient signal for learning. The researchers also adopted \"iterative context extension,\" first training the model with a 32,000-token context window before expanding to 40,000 tokens. During evaluation, extending the context further to approximately 80,000 tokens produced the best results, with accuracy reaching 67.87 percent. Perhaps most significantly, the training pipeline overlaps inference and verification — as soon as the model generates a solution, it begins work on the next problem while the previous solution is being checked. This pipelining, combined with asynchronous training where multiple model instances work in parallel, maximizes hardware utilization on expensive GPU clusters. The looming data shortage that could slow AI coding model progress Buried in Li's technical report is a finding with significant implications for the future of AI development: the training dataset for NousCoder-14B encompasses \"a significant portion of all readily available, verifiable competitive programming problems in a standardized dataset format.\" In other words, for this particular domain, the researchers are approaching the limits of high-quality training data. \"The total number of competitive programming problems on the Internet is roughly the same order of magnitude,\" Li wrote, referring to the 24,000 problems used for training. \"This suggests that within the competitive programming domain, we have approached the limits of high-quality data.\" This observation echoes growing concern across the AI industry about data constraints. While compute continues to scale according to well-understood economic and engineering principles, training data is \"increasingly finite,\" as Li put it. \"It appears that some of the most important research that needs to be done in the future will be in the areas of synthetic data generation and data efficient algorithms and architectures,\" he concluded. The challenge is particularly acute for competitive programming because the domain requires problems with known correct solutions that can be verified automatically. Unlike natural language tasks where human evaluation or proxy metrics suffice, code either works or it doesn't — making synthetic data generation considerably more difficult. Li identified one potential avenue: training models not just to solve problems but to generate solvable problems, enabling a form of self-play similar to techniques that proved successful in game-playing AI systems. \"Once synthetic problem generation is solved, self-play becomes a very interesting direction,\" he wrote. A $65 million bet that open-source AI can compete with Big Tech Nous Research has carved out a distinctive position in the AI landscape: a company committed to open-source releases that compete with — and sometimes exceed — proprietary alternatives. The company raised $50 million in April 2025 in a round led by Paradigm, the cryptocurrency-focused venture firm founded by Coinbase co-founder Fred Ehrsam. Total funding reached $65 million, according to some reports. The investment reflected growing interest in decentralized approaches to AI training, an area where Nous Research has developed its Psyche platform. Previous releases include Hermes 4, a family of models that we reported \"outperform ChatGPT without content restrictions,\" and DeepHermes-3, which the company described as the first \"toggle-on reasoning model\" — allowing users to activate extended thinking capabilities on demand. The company has cultivated a distinctive aesthetic and community, prompting some skepticism about whether style might overshadow substance. \"Ofc i'm gonna believe an anime pfp company. stop benchmarkmaxxing ffs,\" wrote one critic on X, referring to Nous Research's anime-style branding and the industry practice of optimizing for benchmark performance. Others raised technical questions. \"Based on the benchmark, Nemotron is better,\" noted one commenter, referring to Nvidia's family of language models. Another asked whether NousCoder-14B is \"agentic focused or just 'one shot' coding\" — a distinction that matters for practical software development, where iterating on feedback typically produces better results than single attempts. What researchers say must happen next for AI coding tools to keep improving The release includes several directions for future work that hint at where AI coding research may be heading. Multi-turn reinforcement learning tops the list. Currently, the model receives only a final binary reward — pass or fail — after generating a solution. But competitive programming problems typically include public test cases that provide intermediate feedback: compilation errors, incorrect outputs, time limit violations. Training models to incorporate this feedback across multiple attempts could significantly improve performance. Controlling response length also remains a challenge. The researchers found that incorrect solutions tended to be longer than correct ones, and response lengths quickly saturated available context windows during training — a pattern that various algorithmic modifications failed to resolve. Perhaps most ambitiously, Li proposed \"problem generation and self-play\" — training models to both solve and create programming problems. This would address the data scarcity problem directly by enabling models to generate their own training curricula. \"Humans are great at generating interesting and useful problems for other competitive programmers, but it appears that there still exists a significant gap in LLM capabilities in creative problem generation,\" Li wrote. The model is available now on Hugging Face under an Apache 2.0 license. For researchers and developers who want to build on the work, Nous Research has published the complete Atropos training stack alongside it. What took Li two years of adolescent dedication to achieve—climbing from a 1600-level novice to a 2100-rated competitor on Codeforces—an AI replicated in 96 hours. He needed 1,000 problems. The model needed 24,000. But soon enough, these systems may learn to write their own problems, teach themselves, and leave human benchmarks behind entirely. The question is no longer whether machines can learn to code. It's whether they'll soon be better teachers than we ever were.",
         "publishedAt": "2026-01-07T20:00:00.000Z",
         "category": "open-source",
-        "score": 57.45,
-        "importance": "low",
+        "score": 85.11,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
+        "domainTag": "open-source",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 111,
           "ruleScoreNormalized": 57.446808510638306,
-          "finalScore": 57.45,
+          "llmScore": 100,
+          "finalScore": 85.11,
           "fusionWeight": 0.65,
-          "usedLlm": false
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "ed6c06ec1333",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How Balyasny Asset Management built an AI research engine for investing",
+        "link": "https://openai.com/index/balyasny-asset-management",
+        "contentSnippet": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform investment analysis at scale.",
+        "publishedAt": "2026-03-06T07:00:00.000Z",
+        "category": "tooling",
+        "score": 82.06,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "titleZh": "Balyasny资产管理公司如何构建AI投资研究引擎",
+        "domainTag": "agent",
+        "intentTag": "case-study",
+        "actionability": 1,
+        "confidence": 0.9,
+        "llmScore": 85,
+        "scoreBreakdown": {
+          "ruleScore": 120,
+          "ruleScoreNormalized": 76.59574468085107,
+          "llmScore": 85,
+          "finalScore": 82.06,
+          "fusionWeight": 0.65,
+          "usedLlm": true
         }
       },
       {
@@ -548,13 +812,33 @@
         }
       },
       {
-        "id": "b2b8ca787c6a",
+        "id": "547565b7ab4d",
         "sourceId": "hnrss-ai",
         "sourceName": "HNRSS AI",
-        "title": "Show HN: Ducktel – observability when the consumer is an AI agent, not a human",
-        "link": "https://github.com/davidgeorgehope/ducktel/blob/main/THESIS.MD",
-        "contentSnippet": "Receives OTLP, writes Parquet, exposes DuckDB SQL via CLI. No dashboards, no query builders, no alerting engine. An LLM agent shells out to ducktel query, gets JSON back, and does the reasoning itself. The thesis: everything observability platforms built above ingest+store was scaffolding for human cognition. When the consumer is an LLM, the scaffolding is just overhead. Comments URL: https://news.ycombinator.com/item?id=47310864 Points: 1 # Comments: 0",
-        "publishedAt": "2026-03-09T16:04:27.000Z",
+        "title": "Show HN: Local AI stack (Docker, Ollama) that lets you build apps without Python",
+        "link": "https://github.com/dashjoin/docker-compose",
+        "contentSnippet": "We built a local-first AI stack (Docker + Ollama) that lets you build LLM tools and workflows without writing Python. It supports: * Multimodal chat * Retrieval Augmented Generation (incl. automated & scheduled doc import) * MCP tool support (web search, file access, O365) * Custom tools implemented using JSONata & SQL Most local AI tools are chat UIs. We wanted something closer to a programmable AI platform that still runs locally. * leverage a low code platform to insert programmatic hooks in the chat * provide custom tools written in SQL or JSONata * embed LLMs in workflows and custom UIs * give fine grained role based access control to AI apps (who can see what and which tools is the LLM allowed to use) To summarize, it aims at being as flexible as custom Python code while being as easy to use as Open WebUI. Comments URL: https://news.ycombinator.com/item?id=47311395 Points: 1 # Comments: 0",
+        "publishedAt": "2026-03-09T16:37:18.000Z",
+        "category": "tooling",
+        "score": 44.68,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 44.680851063829785,
+          "finalScore": 44.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1d02c63766ab",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Can AI Agents Agree?",
+        "link": "https://arxiv.org/abs/2603.01213",
+        "contentSnippet": "Article URL: https://arxiv.org/abs/2603.01213 Comments URL: https://news.ycombinator.com/item?id=47311353 Points: 1 # Comments: 0",
+        "publishedAt": "2026-03-09T16:34:40.000Z",
         "category": "agent",
         "score": 44.68,
         "importance": "low",
@@ -708,26 +992,6 @@
         }
       },
       {
-        "id": "98a7825ac3b6",
-        "sourceId": "hnrss-ai",
-        "sourceName": "HNRSS AI",
-        "title": "Following AI generated reviews, Resident Evil AI guide books flood Amazon",
-        "link": "https://frvr.com/blog/following-ai-generated-reviews-resident-evil-requiem-ai-guide-books-flood-amazon-and-theyre-part-of-a-major-problem/",
-        "contentSnippet": "Article URL: https://frvr.com/blog/following-ai-generated-reviews-resident-evil-requiem-ai-guide-books-flood-amazon-and-theyre-part-of-a-major-problem/ Comments URL: https://news.ycombinator.com/item?id=47310758 Points: 2 # Comments: 0",
-        "publishedAt": "2026-03-09T15:57:48.000Z",
-        "category": "industry-news",
-        "score": 25.53,
-        "importance": "low",
-        "recommendationReason": "可直接学习实践",
-        "scoreBreakdown": {
-          "ruleScore": 96,
-          "ruleScoreNormalized": 25.53191489361702,
-          "finalScore": 25.53,
-          "fusionWeight": 0.65,
-          "usedLlm": false
-        }
-      },
-      {
         "id": "5e5b98b758c4",
         "sourceId": "openai-news",
         "sourceName": "OpenAI News",
@@ -808,6 +1072,26 @@
         }
       },
       {
+        "id": "e96ddebbc833",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "How to save money on YouTube TV: Consider these 12 cheaper packages (including live sports)",
+        "link": "https://www.zdnet.com/article/save-money-on-youtube-tv-choose-from-12-cheaper-packages/",
+        "contentSnippet": "The streaming service rolls out a dozen cheaper subscription plans - pick the one that fits your viewing habits.",
+        "publishedAt": "2026-03-09T16:52:26.000Z",
+        "category": "tutorial",
+        "score": 21.28,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 21.27659574468085,
+          "finalScore": 21.28,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
         "id": "1701310afee7",
         "sourceId": "zdnet-ai",
         "sourceName": "ZDNet AI",
@@ -854,7 +1138,7 @@
         "title": "Apple might launch a new class of 'Ultra' devices in 2026 - including a foldable iPhone",
         "link": "https://www.zdnet.com/article/apple-ultra-devices-2026-foldable-iphone-touchscreen-macbook/",
         "contentSnippet": "Perhaps Apple's long-rumored touchscreen MacBook will also be an 'Ultra' device.",
-        "publishedAt": "2026-03-09T15:57:51.000Z",
+        "publishedAt": "2026-03-09T15:57:00.000Z",
         "category": "other",
         "score": 21.28,
         "importance": "low",
@@ -895,26 +1179,6 @@
         "link": "https://www.zdnet.com/article/android-repair-mode-protect-data-during-phone-repair/",
         "contentSnippet": "Repair Mode lets technicians fix your Android phone without seeing your personal files or apps. Here's how.",
         "publishedAt": "2026-03-09T15:25:00.000Z",
-        "category": "other",
-        "score": 21.28,
-        "importance": "low",
-        "recommendationReason": "综合价值较高",
-        "scoreBreakdown": {
-          "ruleScore": 94,
-          "ruleScoreNormalized": 21.27659574468085,
-          "finalScore": 21.28,
-          "fusionWeight": 0.65,
-          "usedLlm": false
-        }
-      },
-      {
-        "id": "925bb9927a81",
-        "sourceId": "zdnet-ai",
-        "sourceName": "ZDNet AI",
-        "title": "Scosche FoundIt review: The first car charger with Apple and Google tracking spoiled me",
-        "link": "https://www.zdnet.com/article/scosche-foundit-car-charger-and-finder-tag-review/",
-        "contentSnippet": "The Scosche FoundIt 12V charger has dual USB ports and a built-in finder for Apple Find My and Google Find Hub.",
-        "publishedAt": "2026-03-09T15:00:50.000Z",
         "category": "other",
         "score": 21.28,
         "importance": "low",
@@ -1048,13 +1312,33 @@
         }
       },
       {
-        "id": "c6edf65cd7ef",
+        "id": "322fd6df5463",
         "sourceId": "hnrss-ai",
         "sourceName": "HNRSS AI",
-        "title": "Shaping the exploration of the motivation-space matters for AI safety",
-        "link": "https://www.lesswrong.com/posts/rhFXyfFSRKp3cX4Y9/shaping-the-exploration-of-the-motivation-space-matters-for",
-        "contentSnippet": "Article URL: https://www.lesswrong.com/posts/rhFXyfFSRKp3cX4Y9/shaping-the-exploration-of-the-motivation-space-matters-for Comments URL: https://news.ycombinator.com/item?id=47310907 Points: 1 # Comments: 0",
-        "publishedAt": "2026-03-09T16:06:46.000Z",
+        "title": "Show HN: I built a harness that blocks AI from building until ambiguity < 0.2",
+        "link": "https://github.com/Q00/ouroboros",
+        "contentSnippet": "Most AI coding failures happen before the first line of code. The human shows up with a half-formed idea, the model fills in the gaps with assumptions, and 3 hours later you have working code for the wrong problem. Ouroboros runs a Socratic interview before execution. It scores ambiguity: Ambiguity = 1 - Σ(clarity_i × weight_i) If the score is above 0.2, it keeps asking. No code until the spec is locked. Once running, it doesn't loop by count — it loops until convergence: Similarity = 0.5 * name_overlap + 0.3 * type_match + 0.2 * exact_match When similarity hits 0.95 across iterations, it stops. It also detects pathological patterns (stagnation, oscillation, wonder loops) and breaks them explicitly. Built on the Claude SDK with parallel sessions — each node in the AC tree gets its own bounded context so autocompact doesn't silently corrupt state mid-run. MIT licensed. Would be curious what this community thinks about the convergence threshold choices. Comments URL: https://news.ycombinator.com/item?id=47311496 Points: 1 # Comments: 0",
+        "publishedAt": "2026-03-09T16:44:19.000Z",
+        "category": "open-source",
+        "score": 12.77,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 12.76595744680851,
+          "finalScore": 12.77,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b0d5889a9033",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI Didn't Destroy Your Company, Your Processes Did",
+        "link": "https://linuxjedi.co.uk/ai-didnt-destroy-your-company-your-processes-did/",
+        "contentSnippet": "Article URL: https://linuxjedi.co.uk/ai-didnt-destroy-your-company-your-processes-did/ Comments URL: https://news.ycombinator.com/item?id=47311487 Points: 1 # Comments: 0",
+        "publishedAt": "2026-03-09T16:43:48.000Z",
         "category": "industry-news",
         "score": 12.77,
         "importance": "low",
@@ -1068,13 +1352,13 @@
         }
       },
       {
-        "id": "148c1dc1a884",
+        "id": "80f8395f7fba",
         "sourceId": "hnrss-ai",
         "sourceName": "HNRSS AI",
-        "title": "AI Mythology Stories Generator",
-        "link": "https://www.mythologystories.org",
-        "contentSnippet": "Article URL: https://www.mythologystories.org Comments URL: https://news.ycombinator.com/item?id=47310837 Points: 1 # Comments: 0",
-        "publishedAt": "2026-03-09T16:02:19.000Z",
+        "title": "Improving AI models' ability to explain their predictions",
+        "link": "https://news.mit.edu/2026/improving-ai-models-ability-explain-predictions-0309",
+        "contentSnippet": "Article URL: https://news.mit.edu/2026/improving-ai-models-ability-explain-predictions-0309 Comments URL: https://news.ycombinator.com/item?id=47311454 Points: 1 # Comments: 0",
+        "publishedAt": "2026-03-09T16:41:46.000Z",
         "category": "industry-news",
         "score": 12.77,
         "importance": "low",
@@ -1088,34 +1372,14 @@
         }
       },
       {
-        "id": "b95585bf69b1",
+        "id": "e44084698f0f",
         "sourceId": "hnrss-ai",
         "sourceName": "HNRSS AI",
-        "title": "Owning Code in the Age of AI",
-        "link": "https://blog.mozilla.ai/owning-code-in-the-age-of-ai/",
-        "contentSnippet": "Article URL: https://blog.mozilla.ai/owning-code-in-the-age-of-ai/ Comments URL: https://news.ycombinator.com/item?id=47310798 Points: 3 # Comments: 1",
-        "publishedAt": "2026-03-09T16:00:14.000Z",
+        "title": "Why I'm not worried about AI causing mass unemployment",
+        "link": "https://www.understandingai.org/p/software-didnt-eat-the-world",
+        "contentSnippet": "Article URL: https://www.understandingai.org/p/software-didnt-eat-the-world Comments URL: https://news.ycombinator.com/item?id=47311235 Points: 2 # Comments: 0",
+        "publishedAt": "2026-03-09T16:28:01.000Z",
         "category": "industry-news",
-        "score": 12.77,
-        "importance": "low",
-        "recommendationReason": "综合价值较高",
-        "scoreBreakdown": {
-          "ruleScore": 90,
-          "ruleScoreNormalized": 12.76595744680851,
-          "finalScore": 12.77,
-          "fusionWeight": 0.65,
-          "usedLlm": false
-        }
-      },
-      {
-        "id": "a44b1301e974",
-        "sourceId": "hnrss-ai",
-        "sourceName": "HNRSS AI",
-        "title": "How do you track and optimize your AI API spend?",
-        "link": "https://news.ycombinator.com/item?id=47310740",
-        "contentSnippet": "Running several projects that collectively hit $2k+/mo in API costs across OpenAI, Anthropic,& AWS Bedrock. Started doing monthly audits then found I was overspending by about 60%. Biggest wins so far: Model routing cut costs 55% with no quality loss on final output Prompt compression saved 70% on my most called endpoint Request deduplication on retries eliminated 15% of wasted calls Caching semantically similar queries knocked out another 20-30% But I feel like I'm still missing things, especially on the infrastructure side (GPU instance sizing, spot vs. on-demand, etc). So what tools or approaches are others using? Is anyone doing this systematically or is everyone just eyeballing their dashboards? Let me know! Comments URL: https://news.ycombinator.com/item?id=47310740 Points: 1 # Comments: 0",
-        "publishedAt": "2026-03-09T15:56:28.000Z",
-        "category": "tooling",
         "score": 12.77,
         "importance": "low",
         "recommendationReason": "综合价值较高",
@@ -1268,9 +1532,173 @@
         }
       }
     ],
-    "itemSummaries": [],
-    "quickDigest": [],
-    "leadSummary": "本期重点围绕open-source与tooling展开，建议优先关注《Railway secures $100 million to challenge AWS with AI-native cloud infrastructure》、《Claude Code costs up to $200 a month. Goose does the same thing for free.》、《How Balyasny Asset Management built an AI research engine for investing》，并结合现有工程路线评估接入优先级与落地成本。",
+    "itemSummaries": [
+      {
+        "itemId": "af0473b3cd39",
+        "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
+        "summary": "Railway获得1亿美元B轮融资，估值超10亿美元，致力于打造AI原生云基础设施，提供秒级部署能力，目前拥有200万开发者但仅30名员工，月处理万亿级请求。",
+        "recommendation": "建议本周优先评估《Railway secures $100 million to challenge AWS with AI-native cloud infrastructure》相关方案，重点关注仓库成熟度与二次开发成本。",
+        "evidenceItemIds": [
+          "af0473b3cd39"
+        ],
+        "domainTag": "open-source",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100
+      },
+      {
+        "itemId": "dca57667c39b",
+        "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
+        "titleZh": "Claude Code月费高达200美元，而Goose免费提供相同功能",
+        "summary": "Claude Code每月收费高达200美元且存在严格使用限制，而Block开发的开源AI编程代理Goose提供完全免费、本地运行、无限制的替代方案，在GitHub已获26100星。",
+        "recommendation": "对于受够了云端AI编程工具定价和限制的开发者，Goose提供了真正免费的本地化选择，是值得尝试的开源替代方案。",
+        "evidenceItemIds": [
+          "dca57667c39b"
+        ],
+        "domainTag": "agent",
+        "intentTag": "comparison",
+        "actionability": 3,
+        "confidence": 0.95,
+        "llmScore": 88
+      },
+      {
+        "itemId": "ed6c06ec1333",
+        "title": "How Balyasny Asset Management built an AI research engine for investing",
+        "titleZh": "Balyasny资产管理公司如何构建AI投资研究引擎",
+        "summary": "Balyasny Asset Management利用GPT-5.4、严格模型评估和agent工作流构建AI研究引擎，实现大规模投资分析转型。",
+        "recommendation": "对于金融工程团队而言，该案例展示了如何在投资研究领域有效部署LLM和agent技术，具有重要参考价值。",
+        "evidenceItemIds": [
+          "ed6c06ec1333"
+        ],
+        "domainTag": "agent",
+        "intentTag": "case-study",
+        "actionability": 1,
+        "confidence": 0.9,
+        "llmScore": 85
+      },
+      {
+        "itemId": "570688bcf84f",
+        "title": "卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k",
+        "summary": "卡帕西开源Agent自进化训练框架S3，基于博士社群模拟实现智能体自我进化，5分钟完成一轮实验，在48小时内获得9.5k星标关注。",
+        "recommendation": "建议本周优先评估《卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k》相关方案，重点关注仓库成熟度与二次开发成本。",
+        "evidenceItemIds": [
+          "570688bcf84f"
+        ],
+        "domainTag": "open-source",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100
+      },
+      {
+        "itemId": "1e5772829392",
+        "title": "Codex Security: now in research preview",
+        "summary": "OpenAI推出Codex Security，这是一款AI应用安全代理，可分析项目上下文来检测、验证和修补复杂漏洞，以更高的置信度和更低的噪音运行。",
+        "recommendation": "建议本周优先评估《Codex Security: now in research preview》相关方案，重点关注多 Agent 协作策略与稳定性。",
+        "evidenceItemIds": [
+          "1e5772829392"
+        ],
+        "domainTag": "agent",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100
+      },
+      {
+        "itemId": "4195e551833f",
+        "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
+        "summary": "Andrej Karpathy 开源了 AutoResearch，一款约 630 行的单文件 Python 工具，可让 AI Agents 在单块 NVIDIA GPU 上自主运行机器学习实验。",
+        "recommendation": "建议本周优先评估《Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs…",
+        "evidenceItemIds": [
+          "4195e551833f"
+        ],
+        "domainTag": "open-source",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100
+      },
+      {
+        "itemId": "d476bb6a9ab3",
+        "title": "The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning",
+        "summary": "Google研究团队指出当前LLM缺乏概率推理能力，即根据新证据更新",
+        "recommendation": "建议本周优先评估《The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning》相关方案，重点关注多 Agent 协作策略与稳定性。",
+        "evidenceItemIds": [
+          "d476bb6a9ab3"
+        ],
+        "domainTag": "agent",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100
+      },
+      {
+        "itemId": "96c6faefc88a",
+        "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+        "summary": "Nous Research发布开源编程模型NousCoder-14B，仅用4天在48块Nvidia B200 GPU上训练完成，在LiveCodeBench v6达到67.87%准确率，完整开源训练栈和基准数据集。",
+        "recommendation": "工程团队值得关注：模型完全开源可本地部署，透明训练流程且性能接近顶级闭源方案，同时其数据饱和发现对后续技术选型有重要参考价值。",
+        "evidenceItemIds": [
+          "96c6faefc88a"
+        ],
+        "domainTag": "open-source",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "af0473b3cd39",
+        "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
+        "takeaway": "Railway获得1亿美元B轮融资，估值超10亿美元，致力于打造AI原生云基础设施，提供秒级部署能力，目前拥有200万开发者但仅30名员工，月处理万亿级请求。",
+        "evidenceItemIds": [
+          "af0473b3cd39"
+        ]
+      },
+      {
+        "itemId": "dca57667c39b",
+        "title": "Claude Code月费高达200美元，而Goose免费提供相同功能 (Claude Code costs up to $200 a month. Goose does the same thing for free.)",
+        "takeaway": "Claude Code每月收费高达200美元且存在严格使用限制，而Block开发的开源AI编程代理Goose提供完全免费、本地运行、无限制的替代方案，在GitHub已获26100星。",
+        "evidenceItemIds": [
+          "dca57667c39b"
+        ]
+      },
+      {
+        "itemId": "570688bcf84f",
+        "title": "卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k",
+        "takeaway": "卡帕西开源Agent自进化训练框架S3，基于博士社群模拟实现智能体自我进化，5分钟完成一轮实验，在48小时内获得9.5k星标关注。",
+        "evidenceItemIds": [
+          "570688bcf84f"
+        ]
+      },
+      {
+        "itemId": "1e5772829392",
+        "title": "Codex Security: now in research preview",
+        "takeaway": "OpenAI推出Codex Security，这是一款AI应用安全代理，可分析项目上下文来检测、验证和修补复杂漏洞，以更高的置信度和更低的噪音运行。",
+        "evidenceItemIds": [
+          "1e5772829392"
+        ]
+      },
+      {
+        "itemId": "4195e551833f",
+        "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
+        "takeaway": "Andrej Karpathy 开源了 AutoResearch，一款约 630 行的单文件 Python 工具，可让 AI Agents 在单块 NVIDIA GPU 上自主运行机器学习实验。",
+        "evidenceItemIds": [
+          "4195e551833f"
+        ]
+      },
+      {
+        "itemId": "d476bb6a9ab3",
+        "title": "The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning",
+        "takeaway": "Google研究团队指出当前LLM缺乏概率推理能力，即根据新证据更新",
+        "evidenceItemIds": [
+          "d476bb6a9ab3"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕open-source展开，建议优先关注《Railway secures $100 million to challenge AWS with AI-native cloud infrastructure》、《Claude Code月费高达200美元，而Goose免费提供相同功能》、《卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k》，并结合现有工程路线评估接入优先级与落地成本。",
     "categoryLeadSummaries": [
       {
         "category": "other",
@@ -1286,7 +1714,7 @@
       },
       {
         "category": "open-source",
-        "lead": "开源方向本期共 4 条，建议优先阅读《Railway secures $100 million to challenge AWS with AI-native cloud infrastructure》、《Claude Code costs up to $200 a month. Goose does the same thing for free.》，重点关注其工程可落地性与集成成本。",
+        "lead": "开源方向本期共 4 条，建议优先阅读《Railway secures $100 million to challenge AWS with AI-native cloud infrastructure》、《Claude Code月费高达200美元，而Goose免费提供相同功能》，重点关注其工程可落地性与集成成本。",
         "sourceItemIds": [
           "af0473b3cd39",
           "dca57667c39b",
@@ -1298,12 +1726,12 @@
       },
       {
         "category": "tooling",
-        "lead": "工具链方向本期共 4 条，建议优先阅读《How Balyasny Asset Management built an AI research engine for investing》、《Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation》，重点关注其工程可落地性与集成成本。",
+        "lead": "工具链方向本期共 4 条，建议优先阅读《Balyasny资产管理公司如何构建AI投资研究引擎》、《Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation》，重点关注其工程可落地性与集成成本。",
         "sourceItemIds": [
           "ed6c06ec1333",
           "825c39404554",
           "6e51fbd095d1",
-          "4309c341e311"
+          "547565b7ab4d"
         ],
         "fallbackTriggered": true,
         "reason": "minimax_invalid_response:missing_content"
@@ -1314,29 +1742,29 @@
         "sourceItemIds": [
           "1e5772829392",
           "d476bb6a9ab3",
-          "b2b8ca787c6a",
+          "1d02c63766ab",
           "e3d44e83a9fb"
         ],
         "fallbackTriggered": true,
         "reason": "minimax_invalid_response:missing_content"
       }
     ],
-    "summaryInputHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "summaryInputHash": "8fdecd13f53ceabd36942be5910f956842cebb1d53baa8d4d62ec5b29134746d",
     "llmSummaryMeta": {
       "enabled": true,
       "provider": "minimax",
       "model": "MiniMax-M2.5",
       "promptVersion": "m5.2-v1",
-      "startedAt": "2026-03-09T16:18:30.247Z",
-      "finishedAt": "2026-03-09T16:19:02.362Z",
-      "durationMs": 32115,
-      "inputCount": 0,
-      "summarizedCount": 0,
+      "startedAt": "2026-03-09T16:52:18.323Z",
+      "finishedAt": "2026-03-09T16:55:57.938Z",
+      "durationMs": 219615,
+      "inputCount": 8,
+      "summarizedCount": 8,
       "fallbackTriggered": false,
-      "effectiveConcurrency": null,
-      "assistAppliedCount": 0,
+      "effectiveConcurrency": 1,
+      "assistAppliedCount": 8,
       "assistFallbackCount": 0,
-      "leadFallbackTriggered": false,
+      "leadFallbackTriggered": true,
       "failureStats": {
         "totalFailed": 0,
         "timeout": 0,
@@ -1348,8 +1776,8 @@
         "other": 0
       },
       "retryStats": {
-        "retryableTriggeredCount": 0,
-        "missingContentExtraRetryTriggeredCount": 0,
+        "retryableTriggeredCount": 3,
+        "missingContentExtraRetryTriggeredCount": 3,
         "compensationRetryItemCount": 0,
         "serialDegradeTriggered": false,
         "serialRetriedItemCount": 0,
@@ -1382,12 +1810,18 @@
         "score": 100,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
+        "domainTag": "open-source",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 131,
           "ruleScoreNormalized": 100,
+          "llmScore": 100,
           "finalScore": 100,
           "fusionWeight": 0.65,
-          "usedLlm": false
+          "usedLlm": true
         }
       },
       {
@@ -1399,35 +1833,22 @@
         "contentSnippet": "The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code, Anthropic's terminal-based AI agent that can write, debug, and deploy code autonomously, has captured the imagination of software developers worldwide. But its pricing — ranging from $20 to $200 per month depending on usage — has sparked a growing rebellion among the very programmers it aims to serve. Now, a free alternative is gaining traction. Goose, an open-source AI agent developed by Block (the financial technology company formerly known as Square), offers nearly identical functionality to Claude Code but runs entirely on a user's local machine. No subscription fees. No cloud dependency. No rate limits that reset every five hours. \"Your data stays with you, period,\" said Parth Sareen, a software engineer who demonstrated the tool during a recent livestream. The comment captures the core appeal: Goose gives developers complete control over their AI-powered workflow, including the ability to work offline — even on an airplane. The project has exploded in popularity. Goose now boasts more than 26,100 stars on GitHub, the code-sharing platform, with 362 contributors and 102 releases since its launch. The latest version, 1.20.1, shipped on January 19, 2026, reflecting a development pace that rivals commercial products. For developers frustrated by Claude Code's pricing structure and usage caps, Goose represents something increasingly rare in the AI industry: a genuinely free, no-strings-attached option for serious work. Anthropic's new rate limits spark a developer revolt To understand why Goose matters, you need to understand the Claude Code pricing controversy. Anthropic, the San Francisco artificial intelligence company founded by former OpenAI executives, offers Claude Code as part of its subscription tiers. The free plan provides no access whatsoever. The Pro plan, at $17 per month with annual billing (or $20 monthly), limits users to just 10 to 40 prompts every five hours — a constraint that serious developers exhaust within minutes of intensive work. The Max plans, at $100 and $200 per month, offer more headroom: 50 to 200 prompts and 200 to 800 prompts respectively, plus access to Anthropic's most powerful model, Claude 4.5 Opus. But even these premium tiers come with restrictions that have inflamed the developer community. In late July, Anthropic announced new weekly rate limits. Under the system, Pro users receive 40 to 80 hours of Sonnet 4 usage per week. Max users at the $200 tier get 240 to 480 hours of Sonnet 4, plus 24 to 40 hours of Opus 4. Nearly five months later, the frustration has not subsided. The problem? Those \"hours\" are not actual hours. They represent token-based limits that vary wildly depending on codebase size, conversation length, and the complexity of the code being processed. Independent analysis suggests the actual per-session limits translate to roughly 44,000 tokens for Pro users and 220,000 tokens for the $200 Max plan. \"It's confusing and vague,\" one developer wrote in a widely shared analysis. \"When they say '24-40 hours of Opus 4,' that doesn't really tell you anything useful about what you're actually getting.\" The backlash on Reddit and developer forums has been fierce. Some users report hitting their daily limits within 30 minutes of intensive coding. Others have canceled their subscriptions entirely, calling the new restrictions \"a joke\" and \"unusable for real work.\" Anthropic has defended the changes, stating that the limits affect fewer than five percent of users and target people running Claude Code \"continuously in the background, 24/7.\" But the company has not clarified whether that figure refers to five percent of Max subscribers or five percent of all users — a distinction that matters enormously. How Block built a free AI coding agent that works offline Goose takes a radically different approach to the same problem. Built by Block, the payments company led by Jack Dorsey, Goose is what engineers call an \"on-machine AI agent.\" Unlike Claude Code, which sends your queries to Anthropic's servers for processing, Goose can run entirely on your local computer using open-source language models that you download and control yourself. The project's documentation describes it as going \"beyond code suggestions\" to \"install, execute, edit, and test with any LLM.\" That last phrase — \"any LLM\" — is the key differentiator. Goose is model-agnostic by design. You can connect Goose to Anthropic's Claude models if you have API access. You can use OpenAI's GPT-5 or Google's Gemini. You can route it through services like Groq or OpenRouter. Or — and this is where things get interesting — you can run it entirely locally using tools like Ollama, which let you download and execute open-source models on your own hardware. The practical implications are significant. With a local setup, there are no subscription fees, no usage caps, no rate limits, and no concerns about your code being sent to external servers. Your conversations with the AI never leave your machine. \"I use Ollama all the time on planes — it's a lot of fun!\" Sareen noted during a demonstration, highlighting how local models free developers from the constraints of internet connectivity. What Goose can do that traditional code assistants can't Goose operates as a command-line tool or desktop application that can autonomously perform complex development tasks. It can build entire projects from scratch, write and execute code, debug failures, orchestrate workflows across multiple files, and interact with external APIs — all without constant human oversight. The architecture relies on what the AI industry calls \"tool calling\" or \"function calling\" — the ability for a language model to request specific actions from external systems. When you ask Goose to create a new file, run a test suite, or check the status of a GitHub pull request, it doesn't just generate text describing what should happen. It actually executes those operations. This capability depends heavily on the underlying language model. Claude 4 models from Anthropic currently perform best at tool calling, according to the Berkeley Function-Calling Leaderboard, which ranks models on their ability to translate natural language requests into executable code and system commands. But newer open-source models are catching up quickly. Goose's documentation highlights several options with strong tool-calling support: Meta's Llama series, Alibaba's Qwen models, Google's Gemma variants, and DeepSeek's reasoning-focused architectures. The tool also integrates with the Model Context Protocol, or MCP, an emerging standard for connecting AI agents to external services. Through MCP, Goose can access databases, search engines, file systems, and third-party APIs — extending its capabilities far beyond what the base language model provides. Setting Up Goose with a Local Model For developers interested in a completely free, privacy-preserving setup, the process involves three main components: Goose itself, Ollama (a tool for running open-source models locally), and a compatible language model. Step 1: Install Ollama Ollama is an open-source project that dramatically simplifies the process of running large language models on personal hardware. It handles the complex work of downloading, optimizing, and serving models through a simple interface. Download and install Ollama from ollama.com. Once installed, you can pull models with a single command. For coding tasks, Qwen 2.5 offers strong tool-calling support: ollama run qwen2.5 The model downloads automatically and begins running on your machine. Step 2: Install Goose Goose is available as both a desktop application and a command-line interface. The desktop version provides a more visual experience, while the CLI appeals to developers who prefer working entirely in the terminal. Installation instructions vary by operating system but generally involve downloading from Goose's GitHub releases page or using a package manager. Block provides pre-built binaries for macOS (both Intel and Apple Silicon), Windows, and Linux. Step 3: Configure the Connection In Goose Desktop, navigate to Settings, then Configure Provider, and select Ollama. Confirm that the API Host is set to http://localhost:11434 (Ollama's default port) and click Submit. For the command-line version, run goose configure, select \"Configure Providers,\" choose Ollama, and enter the model name when prompted. That's it. Goose is now connected to a language model running entirely on your hardware, ready to execute complex coding tasks without any subscription fees or external dependencies. The RAM, processing power, and trade-offs you should know about The obvious question: what kind of computer do you need? Running large language models locally requires substantially more computational resources than typical software. The key constraint is memory — specifically, RAM on most systems, or VRAM if using a dedicated graphics card for acceleration. Block's documentation suggests that 32 gigabytes of RAM provides \"a solid baseline for larger models and outputs.\" For Mac users, this means the computer's unified memory is the primary bottleneck. For Windows and Linux users with discrete NVIDIA graphics cards, GPU memory (VRAM) matters more for acceleration. But you don't necessarily need expensive hardware to get started. Smaller models with fewer parameters run on much more modest systems. Qwen 2.5, for instance, comes in multiple sizes, and the smaller variants can operate effectively on machines with 16 gigabytes of RAM. \"You don't need to run the largest models to get excellent results,\" Sareen emphasized. The practical recommendation: start with a smaller model to test your workflow, then scale up as needed. For context, Apple's entry-level MacBook Air with 8 gigabytes of RAM would struggle with most capable coding models. But a MacBook Pro with 32 gigabytes — increasingly common among professional developers — handles them comfortably. Why keeping your code off the cloud matters more than ever Goose with a local LLM is not a perfect substitute for Claude Code. The comparison involves real trade-offs that developers should understand. Model Quality: Claude 4.5 Opus, Anthropic's flagship model, remains arguably the most capable AI for software engineering tasks. It excels at understanding complex codebases, following nuanced instructions, and producing high-quality code on the first attempt. Open-source models have improved dramatically, but a gap persists — particularly for the most challenging tasks. One developer who switched to the $200 Claude Code plan described the difference bluntly: \"When I say 'make this look modern,' Opus knows what I mean. Other models give me Bootstrap circa 2015.\" Context Window: Claude Sonnet 4.5, accessible through the API, offers a massive one-million-token context window — enough to load entire large codebases without chunking or context management issues. Most local models are limited to 4,096 or 8,192 tokens by default, though many can be configured for longer contexts at the cost of increased memory usage and slower processing. Speed: Cloud-based services like Claude Code run on dedicated server hardware optimized for AI inference. Local models, running on consumer laptops, typically process requests more slowly. The difference matters for iterative workflows where you're making rapid changes and waiting for AI feedback. Tooling Maturity: Claude Code benefits from Anthropic's dedicated engineering resources. Features like prompt caching (which can reduce costs by up to 90 percent for repeated contexts) and structured outputs are polished and well-documented. Goose, while actively developed with 102 releases to date, relies on community contributions and may lack equivalent refinement in specific areas. How Goose stacks up against Cursor, GitHub Copilot, and the paid AI coding market Goose enters a crowded market of AI coding tools, but occupies a distinctive position. Cursor, a popular AI-enhanced code editor, charges $20 per month for its Pro tier and $200 for Ultra—pricing that mirrors Claude Code's Max plans. Cursor provides approximately 4,500 Sonnet 4 requests per month at the Ultra level, a substantially different allocation model than Claude Code's hourly resets. Cline, Roo Code, and similar open-source projects offer AI coding assistance but with varying levels of autonomy and tool integration. Many focus on code completion rather than the agentic task execution that defines Goose and Claude Code. Amazon's CodeWhisperer, GitHub Copilot, and enterprise offerings from major cloud providers target large organizations with complex procurement processes and dedicated budgets. They are less relevant to individual developers and small teams seeking lightweight, flexible tools. Goose's combination of genuine autonomy, model agnosticism, local operation, and zero cost creates a unique value proposition. The tool is not trying to compete with commercial offerings on polish or model quality. It's competing on freedom — both financial and architectural. The $200-a-month era for AI coding tools may be ending The AI coding tools market is evolving quickly. Open-source models are improving at a pace that continually narrows the gap with proprietary alternatives. Moonshot AI's Kimi K2 and z.ai's GLM 4.5 now benchmark near Claude Sonnet 4 levels — and they're freely available. If this trajectory continues, the quality advantage that justifies Claude Code's premium pricing may erode. Anthropic would then face pressure to compete on features, user experience, and integration rather than raw model capability. For now, developers face a clear choice. Those who need the absolute best model quality, who can afford premium pricing, and who accept usage restrictions may prefer Claude Code. Those who prioritize cost, privacy, offline access, and flexibility have a genuine alternative in Goose. The fact that a $200-per-month commercial product has a zero-dollar open-source competitor with comparable core functionality is itself remarkable. It reflects both the maturation of open-source AI infrastructure and the appetite among developers for tools that respect their autonomy. Goose is not perfect. It requires more technical setup than commercial alternatives. It depends on hardware resources that not every developer possesses. Its model options, while improving rapidly, still trail the best proprietary offerings on complex tasks. But for a growing community of developers, those limitations are acceptable trade-offs for something increasingly rare in the AI landscape: a tool that truly belongs to them. Goose is available for download at github.com/block/goose. Ollama is available at ollama.com. Both projects are free and open source.",
         "publishedAt": "2026-01-19T14:00:00.000Z",
         "category": "open-source",
-        "score": 100,
+        "score": 92.2,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
+        "titleZh": "Claude Code月费高达200美元，而Goose免费提供相同功能",
+        "domainTag": "agent",
+        "intentTag": "comparison",
+        "actionability": 3,
+        "confidence": 0.95,
+        "llmScore": 88,
         "scoreBreakdown": {
           "ruleScore": 131,
           "ruleScoreNormalized": 100,
-          "finalScore": 100,
+          "llmScore": 88,
+          "finalScore": 92.2,
           "fusionWeight": 0.65,
-          "usedLlm": false
-        }
-      },
-      {
-        "id": "ed6c06ec1333",
-        "sourceId": "openai-news",
-        "sourceName": "OpenAI News",
-        "title": "How Balyasny Asset Management built an AI research engine for investing",
-        "link": "https://openai.com/index/balyasny-asset-management",
-        "contentSnippet": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform investment analysis at scale.",
-        "publishedAt": "2026-03-06T07:00:00.000Z",
-        "category": "tooling",
-        "score": 76.6,
-        "importance": "medium",
-        "recommendationReason": "Agent 工程实践相关",
-        "scoreBreakdown": {
-          "ruleScore": 120,
-          "ruleScoreNormalized": 76.59574468085107,
-          "finalScore": 76.6,
-          "fusionWeight": 0.65,
-          "usedLlm": false
+          "usedLlm": true
         }
       },
       {
@@ -1439,15 +1860,21 @@
         "contentSnippet": "下一步要模拟整个博士社群",
         "publishedAt": "2026-03-09T07:46:46.000Z",
         "category": "open-source",
-        "score": 74.47,
-        "importance": "medium",
+        "score": 91.06,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
+        "domainTag": "open-source",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 119,
           "ruleScoreNormalized": 74.46808510638297,
-          "finalScore": 74.47,
+          "llmScore": 100,
+          "finalScore": 91.06,
           "fusionWeight": 0.65,
-          "usedLlm": false
+          "usedLlm": true
         }
       },
       {
@@ -1459,15 +1886,21 @@
         "contentSnippet": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex vulnerabilities with higher confidence and less noise.",
         "publishedAt": "2026-03-06T10:00:00.000Z",
         "category": "agent",
-        "score": 72.34,
-        "importance": "medium",
+        "score": 90.32,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
+        "domainTag": "agent",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 118,
           "ruleScoreNormalized": 72.3404255319149,
-          "finalScore": 72.34,
+          "llmScore": 100,
+          "finalScore": 90.32,
           "fusionWeight": 0.65,
-          "usedLlm": false
+          "usedLlm": true
         }
       },
       {
@@ -1479,15 +1912,21 @@
         "contentSnippet": "Andrej Karpathy released autoresearch, a minimalist Python tool designed to enable AI agents to autonomously conduct machine learning experiments. The project is a stripped-down version of the nanochat LLM training core, condensed into a single-file repository of approximately ~630 lines of code. It is optimized for execution on a single NVIDIA GPU. The Autonomous Iteration […] The post Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs appeared first on MarkTechPost.",
         "publishedAt": "2026-03-09T02:47:38.000Z",
         "category": "open-source",
-        "score": 72.34,
-        "importance": "medium",
+        "score": 90.32,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
+        "domainTag": "open-source",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 118,
           "ruleScoreNormalized": 72.3404255319149,
-          "finalScore": 72.34,
+          "llmScore": 100,
+          "finalScore": 90.32,
           "fusionWeight": 0.65,
-          "usedLlm": false
+          "usedLlm": true
         }
       },
       {
@@ -1499,15 +1938,21 @@
         "contentSnippet": "Large Language Models (LLMs) are the world’s best mimics, but when it comes to the cold, hard logic of updating beliefs based on new evidence, they are surprisingly stubborn. A team of researchers from Google argue that the current crop of AI agents falls far short of ‘probabilistic reasoning’—the ability to maintain and update a […] The post The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning appeared first on MarkTechPost.",
         "publishedAt": "2026-03-09T08:23:31.000Z",
         "category": "agent",
-        "score": 61.7,
-        "importance": "low",
+        "score": 86.6,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
+        "domainTag": "agent",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 113,
           "ruleScoreNormalized": 61.702127659574465,
-          "finalScore": 61.7,
+          "llmScore": 100,
+          "finalScore": 86.6,
           "fusionWeight": 0.65,
-          "usedLlm": false
+          "usedLlm": true
         }
       },
       {
@@ -1519,15 +1964,48 @@
         "contentSnippet": "Nous Research, the open-source artificial intelligence startup backed by crypto venture firm Paradigm, released a new competitive programming model on Monday that it says matches or exceeds several larger proprietary systems — trained in just four days using 48 of Nvidia's latest B200 graphics processors. The model, called NousCoder-14B, is another entry in a crowded field of AI coding assistants, but arrives at a particularly charged moment: Claude Code, the agentic programming tool from rival Anthropic, has dominated social media discussion since New Year's Day, with developers posting breathless testimonials about its capabilities. The simultaneous developments underscore how quickly AI-assisted software development is evolving — and how fiercely companies large and small are competing to capture what many believe will become a foundational technology for how software gets written. type: embedded-entry-inline id: 74cSyrq6OUrp9SEQ5zOUSl NousCoder-14B achieves a 67.87 percent accuracy rate on LiveCodeBench v6, a standardized evaluation that tests models on competitive programming problems published between August 2024 and May 2025. That figure represents a 7.08 percentage point improvement over the base model it was trained from, Alibaba's Qwen3-14B, according to Nous Research's technical report published alongside the release. \"I gave Claude Code a description of the problem, it generated what we built last year in an hour,\" wrote Jaana Dogan, a principal engineer at Google responsible for the Gemini API, in a viral post on X last week that captured the prevailing mood around AI coding tools. Dogan was describing a distributed agent orchestration system her team had spent a year developing — a system Claude Code approximated from a three-paragraph prompt. The juxtaposition is instructive: while Anthropic's Claude Code has captured imaginations with demonstrations of end-to-end software development, Nous Research is betting that open-source alternatives trained on verifiable problems can close the gap — and that transparency in how these models are built matters as much as raw capability. How Nous Research built an AI coding model that anyone can replicate What distinguishes the NousCoder-14B release from many competitor announcements is its radical openness. Nous Research published not just the model weights but the complete reinforcement learning environment, benchmark suite, and training harness — built on the company's Atropos framework — enabling any researcher with sufficient compute to reproduce or extend the work. \"Open-sourcing the Atropos stack provides the necessary infrastructure for reproducible olympiad-level reasoning research,\" noted one observer on X, summarizing the significance for the academic and open-source communities. The model was trained by Joe Li, a researcher in residence at Nous Research and a former competitive programmer himself. Li's technical report reveals an unexpectedly personal dimension: he compared the model's improvement trajectory to his own journey on Codeforces, the competitive programming platform where participants earn ratings based on contest performance. Based on rough estimates mapping LiveCodeBench scores to Codeforces ratings, Li calculated that NousCoder-14B's improvemen t— from approximately the 1600-1750 rating range to 2100-2200 — mirrors a leap that took him nearly two years of sustained practice between ages 14 and 16. The model accomplished the equivalent in four days. \"Watching that final training run unfold was quite a surreal experience,\" Li wrote in the technical report. But Li was quick to note an important caveat that speaks to broader questions about AI efficiency: he solved roughly 1,000 problems during those two years, while the model required 24,000. Humans, at least for now, remain dramatically more sample-efficient learners. Inside the reinforcement learning system that trains on 24,000 competitive programming problems NousCoder-14B's training process offers a window into the increasingly sophisticated techniques researchers use to improve AI reasoning capabilities through reinforcement learning. The approach relies on what researchers call \"verifiable rewards\" — a system where the model generates code solutions, those solutions are executed against test cases, and the model receives a simple binary signal: correct or incorrect. This feedback loop, while conceptually straightforward, requires significant infrastructure to execute at scale. Nous Research used Modal, a cloud computing platform, to run sandboxed code execution in parallel. Each of the 24,000 training problems contains hundreds of test cases on average, and the system must verify that generated code produces correct outputs within time and memory constraints — 15 seconds and 4 gigabytes, respectively. The training employed a technique called DAPO (Dynamic Sampling Policy Optimization), which the researchers found performed slightly better than alternatives in their experiments. A key innovation involves \"dynamic sampling\" — discarding training examples where the model either solves all attempts or fails all attempts, since these provide no useful gradient signal for learning. The researchers also adopted \"iterative context extension,\" first training the model with a 32,000-token context window before expanding to 40,000 tokens. During evaluation, extending the context further to approximately 80,000 tokens produced the best results, with accuracy reaching 67.87 percent. Perhaps most significantly, the training pipeline overlaps inference and verification — as soon as the model generates a solution, it begins work on the next problem while the previous solution is being checked. This pipelining, combined with asynchronous training where multiple model instances work in parallel, maximizes hardware utilization on expensive GPU clusters. The looming data shortage that could slow AI coding model progress Buried in Li's technical report is a finding with significant implications for the future of AI development: the training dataset for NousCoder-14B encompasses \"a significant portion of all readily available, verifiable competitive programming problems in a standardized dataset format.\" In other words, for this particular domain, the researchers are approaching the limits of high-quality training data. \"The total number of competitive programming problems on the Internet is roughly the same order of magnitude,\" Li wrote, referring to the 24,000 problems used for training. \"This suggests that within the competitive programming domain, we have approached the limits of high-quality data.\" This observation echoes growing concern across the AI industry about data constraints. While compute continues to scale according to well-understood economic and engineering principles, training data is \"increasingly finite,\" as Li put it. \"It appears that some of the most important research that needs to be done in the future will be in the areas of synthetic data generation and data efficient algorithms and architectures,\" he concluded. The challenge is particularly acute for competitive programming because the domain requires problems with known correct solutions that can be verified automatically. Unlike natural language tasks where human evaluation or proxy metrics suffice, code either works or it doesn't — making synthetic data generation considerably more difficult. Li identified one potential avenue: training models not just to solve problems but to generate solvable problems, enabling a form of self-play similar to techniques that proved successful in game-playing AI systems. \"Once synthetic problem generation is solved, self-play becomes a very interesting direction,\" he wrote. A $65 million bet that open-source AI can compete with Big Tech Nous Research has carved out a distinctive position in the AI landscape: a company committed to open-source releases that compete with — and sometimes exceed — proprietary alternatives. The company raised $50 million in April 2025 in a round led by Paradigm, the cryptocurrency-focused venture firm founded by Coinbase co-founder Fred Ehrsam. Total funding reached $65 million, according to some reports. The investment reflected growing interest in decentralized approaches to AI training, an area where Nous Research has developed its Psyche platform. Previous releases include Hermes 4, a family of models that we reported \"outperform ChatGPT without content restrictions,\" and DeepHermes-3, which the company described as the first \"toggle-on reasoning model\" — allowing users to activate extended thinking capabilities on demand. The company has cultivated a distinctive aesthetic and community, prompting some skepticism about whether style might overshadow substance. \"Ofc i'm gonna believe an anime pfp company. stop benchmarkmaxxing ffs,\" wrote one critic on X, referring to Nous Research's anime-style branding and the industry practice of optimizing for benchmark performance. Others raised technical questions. \"Based on the benchmark, Nemotron is better,\" noted one commenter, referring to Nvidia's family of language models. Another asked whether NousCoder-14B is \"agentic focused or just 'one shot' coding\" — a distinction that matters for practical software development, where iterating on feedback typically produces better results than single attempts. What researchers say must happen next for AI coding tools to keep improving The release includes several directions for future work that hint at where AI coding research may be heading. Multi-turn reinforcement learning tops the list. Currently, the model receives only a final binary reward — pass or fail — after generating a solution. But competitive programming problems typically include public test cases that provide intermediate feedback: compilation errors, incorrect outputs, time limit violations. Training models to incorporate this feedback across multiple attempts could significantly improve performance. Controlling response length also remains a challenge. The researchers found that incorrect solutions tended to be longer than correct ones, and response lengths quickly saturated available context windows during training — a pattern that various algorithmic modifications failed to resolve. Perhaps most ambitiously, Li proposed \"problem generation and self-play\" — training models to both solve and create programming problems. This would address the data scarcity problem directly by enabling models to generate their own training curricula. \"Humans are great at generating interesting and useful problems for other competitive programmers, but it appears that there still exists a significant gap in LLM capabilities in creative problem generation,\" Li wrote. The model is available now on Hugging Face under an Apache 2.0 license. For researchers and developers who want to build on the work, Nous Research has published the complete Atropos training stack alongside it. What took Li two years of adolescent dedication to achieve—climbing from a 1600-level novice to a 2100-rated competitor on Codeforces—an AI replicated in 96 hours. He needed 1,000 problems. The model needed 24,000. But soon enough, these systems may learn to write their own problems, teach themselves, and leave human benchmarks behind entirely. The question is no longer whether machines can learn to code. It's whether they'll soon be better teachers than we ever were.",
         "publishedAt": "2026-01-07T20:00:00.000Z",
         "category": "open-source",
-        "score": 57.45,
-        "importance": "low",
+        "score": 85.11,
+        "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
+        "domainTag": "open-source",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 100,
         "scoreBreakdown": {
           "ruleScore": 111,
           "ruleScoreNormalized": 57.446808510638306,
-          "finalScore": 57.45,
+          "llmScore": 100,
+          "finalScore": 85.11,
           "fusionWeight": 0.65,
-          "usedLlm": false
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "ed6c06ec1333",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How Balyasny Asset Management built an AI research engine for investing",
+        "link": "https://openai.com/index/balyasny-asset-management",
+        "contentSnippet": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform investment analysis at scale.",
+        "publishedAt": "2026-03-06T07:00:00.000Z",
+        "category": "tooling",
+        "score": 82.06,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "titleZh": "Balyasny资产管理公司如何构建AI投资研究引擎",
+        "domainTag": "agent",
+        "intentTag": "case-study",
+        "actionability": 1,
+        "confidence": 0.9,
+        "llmScore": 85,
+        "scoreBreakdown": {
+          "ruleScore": 120,
+          "ruleScoreNormalized": 76.59574468085107,
+          "llmScore": 85,
+          "finalScore": 82.06,
+          "fusionWeight": 0.65,
+          "usedLlm": true
         }
       }
     ],
@@ -1535,17 +2013,17 @@
       "collectedCount": 48,
       "normalizedCount": 48,
       "dedupedCount": 48,
-      "highImportanceCount": 2,
-      "mediumImportanceCount": 4,
-      "lowImportanceCount": 42,
+      "highImportanceCount": 7,
+      "mediumImportanceCount": 1,
+      "lowImportanceCount": 40,
       "categoryBreakdown": {
-        "open-source": 10,
+        "open-source": 11,
         "tooling": 7,
         "agent": 5,
         "research": 0,
-        "industry-news": 4,
-        "tutorial": 1,
-        "other": 21
+        "industry-news": 3,
+        "tutorial": 2,
+        "other": 20
       }
     },
     "warnings": [],
