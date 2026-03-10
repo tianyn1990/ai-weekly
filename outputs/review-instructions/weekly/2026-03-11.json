@@ -1,0 +1,16 @@
+{
+  "mode": "weekly",
+  "reportDate": "2026-03-11",
+  "instructions": [
+    {
+      "stage": "final_review",
+      "approved": false,
+      "action": "request_revision",
+      "decidedAt": "2026-03-10T18:17:30.304Z",
+      "source": "feishu_callback",
+      "operator": "ou_e19d72b55e637aab98b744b155bd66c7",
+      "reason": "终稿需调整",
+      "traceId": "9740f4467d6f9656dd514c2e325293f0"
+    }
+  ]
+}
