@@ -1,6 +1,6 @@
 {
-  "runId": "recheck-weekly-1773100310576",
-  "generatedAt": "2026-03-09T23:51:48.731Z",
+  "runId": "recheck-weekly-1773100935612",
+  "generatedAt": "2026-03-09T23:51:49.561Z",
   "reviewStartedAt": "2026-03-09T16:52:05.539Z",
   "reportDate": "2026-03-10",
   "mode": "weekly",
@@ -663,30 +663,30 @@
     "provider": "minimax",
     "model": "MiniMax-M2.5",
     "promptVersion": "m5.2-v1",
-    "startedAt": "2026-03-09T23:51:50.615Z",
-    "finishedAt": "2026-03-10T00:02:11.856Z",
-    "durationMs": 621241,
+    "startedAt": "2026-03-10T00:02:15.678Z",
+    "finishedAt": "2026-03-10T00:02:15.727Z",
+    "durationMs": 49,
     "inputCount": 48,
-    "summarizedCount": 3,
+    "summarizedCount": 0,
     "fallbackTriggered": true,
-    "fallbackReason": "llm_success_rate_below_threshold:38%<70%",
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
     "assistAppliedCount": 0,
     "assistFallbackCount": 48,
     "leadFallbackTriggered": true,
     "failureStats": {
-      "totalFailed": 5,
+      "totalFailed": 8,
       "timeout": 0,
       "http": 0,
       "business": 0,
       "missingContent": 0,
       "invalidJson": 0,
       "quality": 0,
-      "other": 5
+      "other": 8
     },
     "retryStats": {
-      "retryableTriggeredCount": 1,
-      "missingContentExtraRetryTriggeredCount": 1,
-      "compensationRetryItemCount": 5,
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 8,
       "serialDegradeTriggered": false,
       "serialRetriedItemCount": 0,
       "serialTriggerMaxConsecutiveMissingContent": 0
@@ -700,9 +700,9 @@
       "degradedRetriedItemCount": 0,
       "currentMode": "normal",
       "maxWindowMissingContentRate": 0,
-      "maxWindowSuccessRate": 0.16666666666666666,
+      "maxWindowSuccessRate": 0,
       "lastWindowMissingContentRate": 0,
-      "lastWindowSuccessRate": 0.16666666666666666
+      "lastWindowSuccessRate": 0
     },
     "effectiveConcurrency": 1
   },
@@ -916,7 +916,12 @@
     "LLM 条目失败明细（前 3/8）：fetch failed | fetch failed | fetch failed",
     "LLM 失败分类：missing_content=0, timeout=0, http=0, business=0, invalid_json=0, quality=0, other=5",
     "LLM 重试统计：retryable=1, missing_content_extra=1, compensation=5, serial_degrade=0, serial_retried=0",
-    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=17%"
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=17%",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/8）：fetch failed | fetch failed | fetch failed",
+    "LLM 失败分类：missing_content=0, timeout=0, http=0, business=0, invalid_json=0, quality=0, other=8",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=8, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%"
   ],
   "snapshot": {
     "timezone": "Asia/Shanghai",
@@ -2562,30 +2567,30 @@
       "provider": "minimax",
       "model": "MiniMax-M2.5",
       "promptVersion": "m5.2-v1",
-      "startedAt": "2026-03-09T23:51:50.615Z",
-      "finishedAt": "2026-03-10T00:02:11.856Z",
-      "durationMs": 621241,
+      "startedAt": "2026-03-10T00:02:15.678Z",
+      "finishedAt": "2026-03-10T00:02:15.727Z",
+      "durationMs": 49,
       "inputCount": 48,
-      "summarizedCount": 3,
+      "summarizedCount": 0,
       "fallbackTriggered": true,
-      "fallbackReason": "llm_success_rate_below_threshold:38%<70%",
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
       "assistAppliedCount": 0,
       "assistFallbackCount": 48,
       "leadFallbackTriggered": true,
       "failureStats": {
-        "totalFailed": 5,
+        "totalFailed": 8,
         "timeout": 0,
         "http": 0,
         "business": 0,
         "missingContent": 0,
         "invalidJson": 0,
         "quality": 0,
-        "other": 5
+        "other": 8
       },
       "retryStats": {
-        "retryableTriggeredCount": 1,
-        "missingContentExtraRetryTriggeredCount": 1,
-        "compensationRetryItemCount": 5,
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 8,
         "serialDegradeTriggered": false,
         "serialRetriedItemCount": 0,
         "serialTriggerMaxConsecutiveMissingContent": 0
@@ -2599,9 +2604,9 @@
         "degradedRetriedItemCount": 0,
         "currentMode": "normal",
         "maxWindowMissingContentRate": 0,
-        "maxWindowSuccessRate": 0.16666666666666666,
+        "maxWindowSuccessRate": 0,
         "lastWindowMissingContentRate": 0,
-        "lastWindowSuccessRate": 0.16666666666666666
+        "lastWindowSuccessRate": 0
       },
       "effectiveConcurrency": 1
     },
@@ -2831,7 +2836,12 @@
       "LLM 条目失败明细（前 3/8）：fetch failed | fetch failed | fetch failed",
       "LLM 失败分类：missing_content=0, timeout=0, http=0, business=0, invalid_json=0, quality=0, other=5",
       "LLM 重试统计：retryable=1, missing_content_extra=1, compensation=5, serial_degrade=0, serial_retried=0",
-      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=17%"
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=17%",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/8）：fetch failed | fetch failed | fetch failed",
+      "LLM 失败分类：missing_content=0, timeout=0, http=0, business=0, invalid_json=0, quality=0, other=8",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=8, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%"
     ],
     "reviewDeadlineAt": "2026-03-16T04:30:00.000Z"
   }
