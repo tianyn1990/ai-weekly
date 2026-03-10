@@ -6,6 +6,7 @@ import { loadSourceConfig } from "../config/source-config.js";
 import { rankItemsWithTuning } from "../core/scoring.js";
 import { createEmptyMetrics, createItemId, normalizeWhitespace, titleFingerprint } from "../core/utils.js";
 import type { ItemCategory, NormalizedItem, RankedItem, ReportState, ReviewInstruction, SourceConfig } from "../core/types.js";
+import { buildLlmClassifyScore } from "../llm/classify-score.js";
 import { buildLlmSummary, canReuseLlmSummary, type LlmSummaryAuditEvent } from "../llm/summary.js";
 import { buildReportMarkdown } from "../report/markdown.js";
 import { executeFeedbackRevision } from "../review/feedback-executor.js";
@@ -79,11 +80,34 @@ export async function dedupeItemsNode(state: ReportState): Promise<Partial<Repor
   return { items: deduped, metrics };
 }
 
-export async function classifyItemsNode(state: ReportState): Promise<Partial<ReportState>> {
-  // 首版采用规则分类，确保可解释性；后续可替换为 LLM 分类节点。
-  const items = state.items.map((item) => ({ ...item, category: resolveCategory(`${item.title} ${item.contentSnippet}`) }));
+export async function llmClassifyScoreNode(state: ReportState): Promise<Partial<ReportState>> {
+  // 先计算规则分类作为 baseline；即使 LLM 不可用，也能保证 rank 阶段有稳定输入。
+  const ruleClassifiedItems = state.items.map((item) => ({
+    ...item,
+    category: resolveCategory(`${item.title} ${item.contentSnippet}`),
+  }));
 
-  return { items };
+  const result = await buildLlmClassifyScore({
+    items: ruleClassifiedItems,
+    settings: {
+      enabled: state.llmClassifyScoreEnabled,
+      provider: state.llmSummaryProvider,
+      minimaxApiKey: state.llmSummaryMinimaxApiKey,
+      minimaxModel: state.llmSummaryMinimaxModel,
+      timeoutMs: state.llmClassifyScoreTimeoutMs,
+      batchSize: state.llmClassifyScoreBatchSize,
+      maxConcurrency: state.llmClassifyScoreMaxConcurrency,
+      globalMaxConcurrency: state.llmGlobalMaxConcurrency,
+      minConfidence: state.llmClassifyScoreMinConfidence,
+      promptVersion: state.llmClassifyScorePromptVersion,
+    },
+  });
+
+  return {
+    items: result.items,
+    llmClassifyScoreMeta: result.meta,
+    warnings: [...state.warnings, ...result.warnings],
+  };
 }
 
 export async function rankItemsNode(state: ReportState): Promise<Partial<ReportState>> {
@@ -102,18 +126,23 @@ export async function rankItemsNode(state: ReportState): Promise<Partial<ReportS
     topicKeywords: runtimeConfig.topics,
     searchTermKeywords: runtimeConfig.searchTerms,
   });
+  const fusedRanked = applyLlmFusionBeforeRank({
+    rankedItems: ranked,
+    rankFusionWeight: state.llmRankFusionWeight,
+    minConfidence: state.llmClassifyScoreMinConfidence,
+  });
   // highlights 用于报告顶部“重点推荐”，和“全覆盖正文”区分展示层次。
-  const highlights = pickHighlights(ranked, state.mode);
+  const highlights = pickHighlights(fusedRanked, state.mode);
 
   const metrics = {
     ...state.metrics,
-    highImportanceCount: ranked.filter((item) => item.importance === "high").length,
-    mediumImportanceCount: ranked.filter((item) => item.importance === "medium").length,
-    lowImportanceCount: ranked.filter((item) => item.importance === "low").length,
-    categoryBreakdown: buildCategoryBreakdown(ranked),
+    highImportanceCount: fusedRanked.filter((item) => item.importance === "high").length,
+    mediumImportanceCount: fusedRanked.filter((item) => item.importance === "medium").length,
+    lowImportanceCount: fusedRanked.filter((item) => item.importance === "low").length,
+    categoryBreakdown: buildCategoryBreakdown(fusedRanked),
   };
 
-  return { rankedItems: ranked, highlights, metrics };
+  return { rankedItems: fusedRanked, highlights, metrics };
 }
 
 export async function buildOutlineNode(state: ReportState): Promise<Partial<ReportState>> {
@@ -166,8 +195,6 @@ export async function llmSummarizeNode(state: ReportState): Promise<Partial<Repo
       maxItems: state.llmSummaryMaxItems,
       maxConcurrency: state.llmSummaryMaxConcurrency,
       globalMaxConcurrency: state.llmGlobalMaxConcurrency,
-      rankFusionWeight: state.llmRankFusionWeight,
-      assistMinConfidence: state.llmAssistMinConfidence,
       promptVersion: state.llmSummaryPromptVersion,
     },
   });
@@ -186,7 +213,8 @@ export async function llmSummarizeNode(state: ReportState): Promise<Partial<Repo
     auditWarning = `llm_summary_audit_failed:${error instanceof Error ? error.message : String(error)}`;
   }
 
-  const mergedRankedItems = result.rankedItems.length > 0 ? result.rankedItems : state.rankedItems;
+  // 摘要节点不再承担评分职责：仅补充可读性信息（如英文标题翻译），不改写 score/排序。
+  const mergedRankedItems = mergeTranslatedTitlesFromSummaries(state.rankedItems, result.itemSummaries);
   const mergedHighlights = pickHighlights(mergedRankedItems, state.mode);
   const mergedMetrics = {
     ...state.metrics,
@@ -207,6 +235,32 @@ export async function llmSummarizeNode(state: ReportState): Promise<Partial<Repo
     llmSummaryMeta: result.meta,
     warnings: [...state.warnings, ...result.warnings, ...(auditWarning ? [auditWarning] : [])],
   };
+}
+
+function mergeTranslatedTitlesFromSummaries(
+  rankedItems: RankedItem[],
+  itemSummaries: ReportState["itemSummaries"],
+): RankedItem[] {
+  const translatedTitleMap = new Map(
+    itemSummaries
+      .map((summary) => [summary.itemId, normalizeOptionalText(summary.titleZh)] as const)
+      .filter((entry): entry is [string, string] => Boolean(entry[1])),
+  );
+
+  if (translatedTitleMap.size === 0) {
+    return rankedItems;
+  }
+
+  return rankedItems.map((item) => {
+    const translatedTitle = translatedTitleMap.get(item.id);
+    if (!translatedTitle || translatedTitle === item.title) {
+      return item;
+    }
+    return {
+      ...item,
+      titleZh: translatedTitle,
+    };
+  });
 }
 
 export async function reviewOutlineNode(state: ReportState): Promise<Partial<ReportState>> {
@@ -408,6 +462,12 @@ export function createInitialState(params: {
   storageFallbackToFile?: boolean;
   sourceLimit: number;
   llmSummaryEnabled?: boolean;
+  llmClassifyScoreEnabled?: boolean;
+  llmClassifyScoreBatchSize?: number;
+  llmClassifyScoreTimeoutMs?: number;
+  llmClassifyScoreMaxConcurrency?: number;
+  llmClassifyScoreMinConfidence?: number;
+  llmClassifyScorePromptVersion?: string;
   llmSummaryProvider?: ReportState["llmSummaryProvider"];
   llmSummaryMinimaxApiKey?: string;
   llmSummaryMinimaxModel?: string;
@@ -442,6 +502,12 @@ export function createInitialState(params: {
     storageFallbackToFile: params.storageFallbackToFile ?? true,
     sourceLimit: params.sourceLimit,
     llmSummaryEnabled: params.llmSummaryEnabled ?? false,
+    llmClassifyScoreEnabled: params.llmClassifyScoreEnabled ?? true,
+    llmClassifyScoreBatchSize: params.llmClassifyScoreBatchSize ?? 10,
+    llmClassifyScoreTimeoutMs: params.llmClassifyScoreTimeoutMs ?? 60_000,
+    llmClassifyScoreMaxConcurrency: params.llmClassifyScoreMaxConcurrency ?? 2,
+    llmClassifyScoreMinConfidence: params.llmClassifyScoreMinConfidence ?? 0.6,
+    llmClassifyScorePromptVersion: params.llmClassifyScorePromptVersion ?? "m5.4-v1",
     llmSummaryProvider: params.llmSummaryProvider ?? "minimax",
     llmSummaryMinimaxApiKey: params.llmSummaryMinimaxApiKey,
     llmSummaryMinimaxModel: params.llmSummaryMinimaxModel ?? "MiniMax-M2.5",
@@ -488,9 +554,90 @@ export function createInitialState(params: {
       inputCount: 0,
       summarizedCount: 0,
       fallbackTriggered: false,
+      zhQualityStats: {
+        nonZhDetectedCount: 0,
+        zhRepairAttemptedCount: 0,
+        zhRepairSucceededCount: 0,
+        englishRetainedCount: 0,
+      },
+    },
+    llmClassifyScoreMeta: {
+      enabled: params.llmClassifyScoreEnabled ?? true,
+      inputCount: 0,
+      processedCount: 0,
+      fallbackCount: 0,
+      fallbackTriggered: false,
     },
     warnings: [],
   };
+}
+
+function applyLlmFusionBeforeRank(input: {
+  rankedItems: RankedItem[];
+  rankFusionWeight: number;
+  minConfidence: number;
+}): RankedItem[] {
+  if (input.rankedItems.length === 0) {
+    return [];
+  }
+
+  const ruleScores = input.rankedItems.map((item) => item.score);
+  const minRuleScore = Math.min(...ruleScores);
+  const maxRuleScore = Math.max(...ruleScores);
+  const fusionWeight = clampNumber(input.rankFusionWeight, 0, 1);
+  const minConfidence = clampNumber(input.minConfidence, 0, 1);
+
+  const merged = input.rankedItems.map((item) => {
+    const ruleScoreNormalized = normalizeRuleScore(item.score, minRuleScore, maxRuleScore);
+    const llmScore = typeof item.llmScore === "number" ? clampNumber(item.llmScore, 0, 100) : undefined;
+    const confidence = typeof item.confidence === "number" ? clampNumber(item.confidence, 0, 1) : undefined;
+    const usedLlm = typeof llmScore === "number" && typeof confidence === "number" && confidence >= minConfidence;
+    const finalScore = usedLlm
+      ? Number(((1 - fusionWeight) * ruleScoreNormalized + fusionWeight * llmScore).toFixed(2))
+      : Number(ruleScoreNormalized.toFixed(2));
+
+    return {
+      ...item,
+      score: finalScore,
+      importance: resolveImportanceByScore(finalScore),
+      scoreBreakdown: {
+        ruleScore: item.score,
+        ruleScoreNormalized,
+        llmScore,
+        finalScore,
+        fusionWeight,
+        usedLlm,
+      },
+    } satisfies RankedItem;
+  });
+
+  return [...merged].sort((a, b) => b.score - a.score);
+}
+
+function normalizeRuleScore(ruleScore: number, minScore: number, maxScore: number): number {
+  if (maxScore <= minScore) {
+    return clampNumber(ruleScore, 0, 100);
+  }
+  const normalized = ((ruleScore - minScore) / (maxScore - minScore)) * 100;
+  return clampNumber(normalized, 0, 100);
+}
+
+function resolveImportanceByScore(score: number): RankedItem["importance"] {
+  if (score >= 85) return "high";
+  if (score >= 65) return "medium";
+  return "low";
+}
+
+function clampNumber(input: number, min: number, max: number): number {
+  return Math.max(min, Math.min(max, input));
+}
+
+function normalizeOptionalText(input: string | undefined): string | undefined {
+  if (!input) {
+    return undefined;
+  }
+  const trimmed = input.trim();
+  return trimmed || undefined;
 }
 
 async function appendLlmSummaryAuditEvents(input: {
@@ -520,6 +667,12 @@ async function appendLlmSummaryAuditEvents(input: {
     });
   }
 }
+
+export const __test__ = {
+  applyLlmFusionBeforeRank,
+  mergeTranslatedTitlesFromSummaries,
+  resolvePendingStage,
+};
 
 function buildCategoryBreakdown(items: RankedItem[]): Record<ItemCategory, number> {
   const breakdown = createEmptyMetrics().categoryBreakdown;
@@ -574,11 +727,6 @@ export async function loadEnabledSources(input: {
   const sources = applyRuntimeSourceOverrides(await loadSourceConfig(input.sourceConfigPath), runtimeConfig);
   return sources.filter((source) => source.enabled);
 }
-
-// 供单元测试复用：便于验证审核阶段与发布判定是否符合预期。
-export const __test__ = {
-  resolvePendingStage,
-};
 
 async function resolveStageDecision(input: {
   state: ReportState;

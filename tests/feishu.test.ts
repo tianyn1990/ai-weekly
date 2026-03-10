@@ -171,6 +171,45 @@ describe("FeishuNotifier", () => {
     await fs.rm(tempDir, { recursive: true, force: true });
   });
 
+  it("发送日报发布结果时应发送结果卡片并包含发布链接", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-notifier-"));
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, tenant_access_token: "tenant_token", expire: 7200 }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, data: { message_id: "om_daily" } }), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const notifier = new FeishuNotifier({
+      appId: "cli_xxx",
+      appSecret: "secret_xxx",
+      reviewChatId: "oc_xxx",
+      reportPublicBaseUrl: "https://raw.githubusercontent.com/acme/ai-weekly/main",
+      notificationRoot: tempDir,
+    });
+
+    const sent = await notifier.notifyDailyPublishResult({
+      runId: "daily-run-1",
+      reportDate: "2026-03-10",
+      publishReason: "daily_auto_publish",
+      publishMarkdownPath: "outputs/published/daily/2026-03-10.md",
+    });
+    expect(sent).toBe(true);
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+
+    const body = JSON.parse(String(fetchMock.mock.calls[1]?.[1]?.body));
+    expect(body.msg_type).toBe("interactive");
+    const card = JSON.parse(body.content) as {
+      header?: { title?: { content?: string } };
+      elements: Array<{ tag: string; content?: string }>;
+    };
+    expect(card.header?.title?.content).toContain("AI 日报发布结果 2026-03-10");
+    const markdown = card.elements.find((item) => item.tag === "markdown")?.content ?? "";
+    expect(markdown).toContain(
+      "[查看已发布稿](https://raw.githubusercontent.com/acme/ai-weekly/main/outputs/published/daily/2026-03-10.md)",
+    );
+    await fs.rm(tempDir, { recursive: true, force: true });
+  });
+
   it("同一 run 再次待审核通知时应更新主卡而非重复新发", async () => {
     const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-notifier-"));
     const fetchMock = vi

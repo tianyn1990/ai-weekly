@@ -130,6 +130,53 @@ const llmSummaryMetaSchema = z.object({
       lastWindowSuccessRate: z.number(),
     })
     .optional(),
+  zhQualityStats: z
+    .object({
+      nonZhDetectedCount: z.number(),
+      zhRepairAttemptedCount: z.number(),
+      zhRepairSucceededCount: z.number(),
+      englishRetainedCount: z.number(),
+    })
+    .optional(),
+});
+
+const llmClassifyScoreMetaSchema = z.object({
+  enabled: z.boolean(),
+  provider: z.enum(["minimax"]).optional(),
+  model: z.string().optional(),
+  promptVersion: z.string().optional(),
+  startedAt: z.string().optional(),
+  finishedAt: z.string().optional(),
+  durationMs: z.number().optional(),
+  inputCount: z.number(),
+  processedCount: z.number(),
+  fallbackCount: z.number(),
+  fallbackTriggered: z.boolean(),
+  fallbackReason: z.string().optional(),
+  batchSize: z.number().optional(),
+  timeoutMs: z.number().optional(),
+  effectiveConcurrency: z.number().optional(),
+  llmAppliedCount: z.number().optional(),
+  llmScoreFallbackCount: z.number().optional(),
+  failureStats: z
+    .object({
+      totalFailed: z.number(),
+      timeout: z.number(),
+      http: z.number(),
+      business: z.number(),
+      missingContent: z.number(),
+      invalidJson: z.number(),
+      quality: z.number(),
+      other: z.number(),
+      lowConfidence: z.number(),
+    })
+    .optional(),
+  retryStats: z
+    .object({
+      batchRetryCount: z.number(),
+      splitRetryCount: z.number(),
+    })
+    .optional(),
 });
 
 export const reviewArtifactSchema = z.object({
@@ -158,6 +205,7 @@ export const reviewArtifactSchema = z.object({
   leadSummary: z.string().optional(),
   categoryLeadSummaries: z.array(categoryLeadSummarySchema).optional(),
   summaryInputHash: z.string().optional(),
+  llmClassifyScoreMeta: llmClassifyScoreMetaSchema.optional(),
   llmSummaryMeta: llmSummaryMetaSchema.optional(),
   highlights: z.array(rankedItemSchema),
   revisionAuditLogs: z
@@ -193,6 +241,7 @@ export const reviewArtifactSchema = z.object({
       leadSummary: z.string().optional(),
       categoryLeadSummaries: z.array(categoryLeadSummarySchema).optional(),
       summaryInputHash: z.string().optional(),
+      llmClassifyScoreMeta: llmClassifyScoreMetaSchema.optional(),
       llmSummaryMeta: llmSummaryMetaSchema.optional(),
       highlights: z.array(rankedItemSchema),
       metrics: metricsSchema,

@@ -4,9 +4,9 @@ import type { ReportState } from "../core/types.js";
 import {
   buildOutlineNode,
   buildReportNode,
-  classifyItemsNode,
   collectItemsNode,
   dedupeItemsNode,
+  llmClassifyScoreNode,
   llmSummarizeNode,
   normalizeItemsNode,
   publishOrWaitNode,
@@ -30,6 +30,12 @@ const ReportStateAnnotation = Annotation.Root({
   storageFallbackToFile: Annotation<boolean>(),
   sourceLimit: Annotation<number>(),
   llmSummaryEnabled: Annotation<boolean>(),
+  llmClassifyScoreEnabled: Annotation<boolean>(),
+  llmClassifyScoreBatchSize: Annotation<number>(),
+  llmClassifyScoreTimeoutMs: Annotation<number>(),
+  llmClassifyScoreMaxConcurrency: Annotation<number>(),
+  llmClassifyScoreMinConfidence: Annotation<number>(),
+  llmClassifyScorePromptVersion: Annotation<string>(),
   llmSummaryProvider: Annotation<ReportState["llmSummaryProvider"]>(),
   llmSummaryMinimaxApiKey: Annotation<string | undefined>(),
   llmSummaryMinimaxModel: Annotation<string>(),
@@ -105,6 +111,7 @@ const ReportStateAnnotation = Annotation.Root({
     value: (_left, right) => right,
     default: () => "",
   }),
+  llmClassifyScoreMeta: Annotation<ReportState["llmClassifyScoreMeta"]>(),
   llmSummaryMeta: Annotation<ReportState["llmSummaryMeta"]>(),
   warnings: Annotation<ReportState["warnings"]>({
     value: (_left, right) => right,
@@ -120,7 +127,7 @@ export function buildReportGraph() {
     .addNode("collect_items", collectItemsNode)
     .addNode("normalize_items", normalizeItemsNode)
     .addNode("dedupe_items", dedupeItemsNode)
-    .addNode("classify_items", classifyItemsNode)
+    .addNode("llm_classify_score", llmClassifyScoreNode)
     .addNode("rank_items", rankItemsNode)
     .addNode("build_outline", buildOutlineNode)
     .addNode("review_outline", reviewOutlineNode)
@@ -131,8 +138,8 @@ export function buildReportGraph() {
     .addEdge(START, "collect_items")
     .addEdge("collect_items", "normalize_items")
     .addEdge("normalize_items", "dedupe_items")
-    .addEdge("dedupe_items", "classify_items")
-    .addEdge("classify_items", "rank_items")
+    .addEdge("dedupe_items", "llm_classify_score")
+    .addEdge("llm_classify_score", "rank_items")
     .addEdge("rank_items", "build_outline")
     .addEdge("build_outline", "review_outline")
     .addEdge("review_outline", "review_final")

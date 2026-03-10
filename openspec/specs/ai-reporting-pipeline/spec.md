@@ -9,7 +9,7 @@
 #### Scenario: Run weekly report in mock mode
 - **WHEN** 用户执行 `pnpm run:weekly:mock`
 - **THEN** 系统完成一次 `weekly` 流程执行并输出报告文件
-- **AND** 处理链路包含 collect、normalize、dedupe、classify、rank、build_report 节点
+- **AND** 处理链路包含 collect、normalize、dedupe、llm_classify_score、rank、build_report 节点
 
 #### Scenario: Run daily report in live mode
 - **WHEN** 用户执行 `pnpm run:daily`
@@ -17,22 +17,17 @@
 - **AND** 即使部分来源失败，流程仍可结束并产出结果
 
 ### Requirement: Processing pipeline SHALL generate review artifacts with traceable metadata
-系统 SHALL 在每次执行后产出待审核报告文件与结构化元数据文件，且关键状态文件可按配置进入 Git 同步路径，便于人工审核与后续发布；当启用 LLM 能力时，产物 SHALL 记录总结与排序辅助的执行元数据、融合结果、回退状态，以及自适应降载诊断信息。
+系统 SHALL 在每次执行后产出待审核报告文件与结构化元数据文件，且关键状态文件可按配置进入 Git 同步路径，便于人工审核与后续发布；当启用 LLM 能力时，产物 SHALL 记录分类打分、总结、融合结果、回退状态与诊断信息。
 
-#### Scenario: Review artifact records LLM assist metadata and score breakdown
-- **WHEN** 本次 run 启用了 LLM 总结或排序辅助能力
-- **THEN** 结构化产物包含对应执行元信息（provider/model/promptVersion/并发/回退统计）
+#### Scenario: Review artifact records classify-score metadata and score breakdown
+- **WHEN** 本次 run 启用了前置 LLM 分类打分能力
+- **THEN** 结构化产物包含 `llmClassifyScoreMeta`（批次、并发、重试、失败分类、回退统计）
 - **AND** 条目可追溯规则分、LLM 分与融合后最终分
 
-#### Scenario: Review artifact records adaptive-degrade diagnostics
-- **WHEN** 本次 run 触发了自适应降载或恢复
-- **THEN** 结构化产物记录降载触发计数、恢复计数、窗口统计与生效并发
-- **AND** warning 中包含与该统计对应的可读摘要
-
-#### Scenario: Recheck path remains compatible with optional LLM assist fields
-- **WHEN** recheck 读取历史 artifact 且部分新字段缺失
+#### Scenario: Review artifact remains compatible when classify-score metadata is missing
+- **WHEN** recheck 或读取历史 artifact 时缺失 `llmClassifyScoreMeta`
 - **THEN** 系统使用兼容逻辑继续运行
-- **AND** 不因字段版本差异导致流程失败
+- **AND** 不因版本差异中断流程
 
 ### Requirement: Weekly review report SHALL include review deadline policy
 系统 SHALL 在周报待审核文稿中体现人工审核窗口和自动发布兜底规则。
@@ -51,12 +46,17 @@
 - **AND** 系统继续处理其他来源并输出最终报告
 
 ### Requirement: Classification SHALL include dedicated agent category
-系统 SHALL 在分类阶段提供独立 `agent` 分类，用于承载 Agent 工程实践相关内容，并与 `tooling` 分类分离。
+系统 SHALL 以前置 LLM 分类为主、规则分类为兜底，输出既有分类集合（含 `agent`），并在低置信度或异常场景回退到规则结果。
 
-#### Scenario: Agent-related content is classified into agent
-- **WHEN** 条目标题或摘要包含 `agent` 或 `agentic` 关键词
+#### Scenario: LLM classifies agent-related item as agent
+- **WHEN** 前置 LLM 分类阶段识别到 Agent 工程实践相关条目
 - **THEN** 条目分类结果为 `agent`
 - **AND** 分类统计中包含 `agent` 维度
+
+#### Scenario: Classification falls back to rules on low confidence or failure
+- **WHEN** LLM 分类结果低于置信度阈值或发生超时/解析失败
+- **THEN** 系统对该条目回退规则分类
+- **AND** 记录回退原因且不中断流程
 
 ### Requirement: Weekly pipeline SHALL support human review gates before publish
 系统 SHALL 在 weekly 模式提供审核断点，至少包含大纲审核与终稿审核两个阶段，并从持久化审核指令源读取审核动作；M4 阶段持久化源 SHALL 以 DB/API 为主，并维持结构化回流 payload 与 last-write-wins 决策策略。
@@ -275,17 +275,17 @@
 #### Scenario: Mention bot returns operation card
 - **WHEN** 用户在群内 @应用机器人并触发运维指令
 - **THEN** 系统返回包含常见操作按钮的运维卡片
-- **AND** 卡片至少支持 run/recheck/watchdog/reminder/status 查询
+- **AND** 卡片至少支持日报/周报 run、recheck、watchdog、reminder、status 查询
 
 #### Scenario: Operation card click enqueues async job
 - **WHEN** 用户点击运维卡片中的某个动作按钮
 - **THEN** 系统先返回“已接收”反馈并创建 operation job
 - **AND** 由后台 worker 异步执行该任务并回执最终结果
 
-#### Scenario: Manual run action uses real data by default
-- **WHEN** 用户在运维卡点击 `run_weekly`（生成周报）
-- **THEN** 后台任务使用真实数据源采集（`mock=false`）执行流程
-- **AND** 若需 mock 演练，应通过 CLI `--mock` 显式触发
+#### Scenario: Manual daily run action is available in operation card
+- **WHEN** 用户打开运维操作卡
+- **THEN** 卡片包含 `run_daily` 动作入口（生成日报）
+- **AND** 该动作沿用“入队异步执行 + 回执”流程
 
 ### Requirement: System SHALL auto-trigger recheck after accepted review action callback
 系统 SHALL 在审核动作回调成功写入后自动触发对应 recheck 流程，避免人工补执行命令。
@@ -443,22 +443,22 @@
 - **AND** 不出现因并发叠加导致的无限放大请求
 
 ### Requirement: Pipeline SHALL support LLM-assisted tagging and ranking fusion with safe fallback
-系统 SHALL 在规则排序之后引入 LLM item 级标签与评分辅助，并使用可配置融合策略生成最终排序；当 LLM 输出异常或置信度不足时，系统 SHALL 回退规则 baseline 且不阻断主流程。
+系统 SHALL 在排序前通过批量 LLM 节点为全量条目提供分类与打分辅助，并使用可配置融合策略生成最终排序；摘要节点 SHALL 不再承担打分职责。当 LLM 输出异常或置信度不足时，系统 SHALL 回退规则 baseline 且不阻断主流程。
 
-#### Scenario: Item-wise LLM assist returns structured tags and scores
-- **WHEN** 系统执行 LLM assist 阶段
-- **THEN** 每条候选输出结构化字段（domainTag、intentTag、actionability、confidence、llmScore）
-- **AND** 输出可映射到对应 itemId
+#### Scenario: Batch classify-score returns structured results for multiple items
+- **WHEN** 系统执行 `llm_classify_score` 阶段
+- **THEN** 每个批次返回多条 item 结构化结果（itemId、category、confidence、llmScore、reason）
+- **AND** 输出可稳定映射回原条目
 
-#### Scenario: Final ranking score is fused from rule and LLM scores
-- **WHEN** item 同时具备规则分与有效 LLM 分
-- **THEN** 系统按配置权重计算融合分并重排
-- **AND** 产物中保留 score breakdown 便于审计
+#### Scenario: Final ranking score is fused from rule and pre-rank LLM scores
+- **WHEN** item 同时具备规则分与有效前置 LLM 分
+- **THEN** 系统按配置权重（默认 `fusionWeight=0.65`）计算融合分并重排
+- **AND** 该融合结果覆盖全量候选条目
 
-#### Scenario: Low-confidence or invalid LLM output falls back to rule baseline
-- **WHEN** LLM 返回格式错误、校验失败或 confidence 低于阈值
-- **THEN** 该条目使用规则分作为最终分
-- **AND** 系统记录回退原因但继续完成 run
+#### Scenario: Summarize node does not perform scoring
+- **WHEN** 流水线进入 `llm_summarize` 阶段
+- **THEN** 节点仅生成摘要/导语/翻译/导读能力
+- **AND** 不再修改条目打分与排序融合结果
 
 ### Requirement: Pipeline SHALL provide lead summary for report readability with non-blocking fallback
 系统 SHALL 为每期报告生成“本期导语”区块（2-3 句），用于概括重点趋势；导语生成失败时 SHALL 回退到模板导语，不得阻断报告生成。
@@ -529,4 +529,30 @@
 - **WHEN** 分类导读生成失败或输出不合法
 - **THEN** 系统使用模板导读文案
 - **AND** 报告仍按原流程产出且不阻断审核/发布
+
+### Requirement: Pipeline SHALL support batch retry and split-degrade for classify-score stability
+系统 SHALL 对前置批量分类打分实现分层容错：批次重试、拆批降级、单条回退，保证主流程稳定。
+
+#### Scenario: Batch request retries once before split
+- **WHEN** 某批次 classify-score 请求失败
+- **THEN** 系统先对该批次重试一次
+- **AND** 若重试成功则继续后续流程
+
+#### Scenario: Failed batch degrades by split and eventually falls back per item
+- **WHEN** 批次重试后仍失败
+- **THEN** 系统执行二分拆批重试
+- **AND** 最终对仍失败的单条执行规则回退并继续流程
+
+### Requirement: Pipeline SHALL enforce few-shot constrained JSON output for classify-score
+系统 SHALL 在分类打分提示词中使用 few-shot 示例，并要求模型返回 JSON-only 结构化结果，以降低解析失败率。
+
+#### Scenario: Few-shot prompt increases format compliance
+- **WHEN** 系统构建 classify-score 请求提示词
+- **THEN** 提示词包含正例 few-shot 与字段约束
+- **AND** 模型返回结果可通过结构校验
+
+#### Scenario: Invalid format triggers retry path
+- **WHEN** 模型返回非 JSON 或字段缺失
+- **THEN** 系统按重试/拆批策略处理
+- **AND** 不因单批格式异常中断整体运行
 

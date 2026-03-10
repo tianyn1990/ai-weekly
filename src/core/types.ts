@@ -143,6 +143,52 @@ export interface LlmAdaptiveDegradeStats {
   lastWindowSuccessRate: number;
 }
 
+export interface LlmZhQualityStats {
+  nonZhDetectedCount: number;
+  zhRepairAttemptedCount: number;
+  zhRepairSucceededCount: number;
+  englishRetainedCount: number;
+}
+
+export interface LlmClassifyScoreFailureStats {
+  totalFailed: number;
+  timeout: number;
+  http: number;
+  business: number;
+  missingContent: number;
+  invalidJson: number;
+  quality: number;
+  other: number;
+  lowConfidence: number;
+}
+
+export interface LlmClassifyScoreRetryStats {
+  batchRetryCount: number;
+  splitRetryCount: number;
+}
+
+export interface LlmClassifyScoreMeta {
+  enabled: boolean;
+  provider?: "minimax";
+  model?: string;
+  promptVersion?: string;
+  startedAt?: string;
+  finishedAt?: string;
+  durationMs?: number;
+  inputCount: number;
+  processedCount: number;
+  fallbackCount: number;
+  fallbackTriggered: boolean;
+  fallbackReason?: string;
+  batchSize?: number;
+  timeoutMs?: number;
+  effectiveConcurrency?: number;
+  llmAppliedCount?: number;
+  llmScoreFallbackCount?: number;
+  failureStats?: LlmClassifyScoreFailureStats;
+  retryStats?: LlmClassifyScoreRetryStats;
+}
+
 export interface LlmSummaryMeta {
   enabled: boolean;
   provider?: "minimax";
@@ -162,6 +208,7 @@ export interface LlmSummaryMeta {
   failureStats?: LlmFailureStats;
   retryStats?: LlmRetryStats;
   adaptiveDegradeStats?: LlmAdaptiveDegradeStats;
+  zhQualityStats?: LlmZhQualityStats;
 }
 
 export interface ScoreBreakdown {
@@ -217,6 +264,12 @@ export interface NormalizedItem {
   contentSnippet: string;
   publishedAt: string;
   category: ItemCategory;
+  titleZh?: string;
+  llmScore?: number;
+  confidence?: number;
+  domainTag?: string;
+  intentTag?: string;
+  llmClassifyReason?: string;
 }
 
 export interface RankedItem extends NormalizedItem {
@@ -285,6 +338,12 @@ export interface ReportState {
   summaryInputHash: string;
   llmSummaryMeta: LlmSummaryMeta;
   llmSummaryEnabled: boolean;
+  llmClassifyScoreEnabled: boolean;
+  llmClassifyScoreBatchSize: number;
+  llmClassifyScoreTimeoutMs: number;
+  llmClassifyScoreMaxConcurrency: number;
+  llmClassifyScoreMinConfidence: number;
+  llmClassifyScorePromptVersion: string;
   llmSummaryProvider: "minimax";
   llmSummaryMinimaxApiKey?: string;
   llmSummaryMinimaxModel: string;
@@ -296,5 +355,6 @@ export interface ReportState {
   llmAssistMinConfidence: number;
   llmSummaryPromptVersion: string;
   llmFallbackAlertEnabled: boolean;
+  llmClassifyScoreMeta: LlmClassifyScoreMeta;
   warnings: string[];
 }

@@ -47,6 +47,13 @@ export interface FeishuPublishNotification {
   publishMarkdownPath: string;
 }
 
+export interface FeishuDailyPublishNotification {
+  runId: string;
+  reportDate: string;
+  publishReason: string;
+  publishMarkdownPath: string;
+}
+
 export interface FeishuLlmFallbackNotification {
   runId: string;
   reportDate: string;
@@ -297,6 +304,23 @@ export class FeishuNotifier {
     return this.sendText(text);
   }
 
+  async notifyDailyPublishResult(input: FeishuDailyPublishNotification): Promise<boolean> {
+    const publishUrl = this.buildPublicUrl(input.publishMarkdownPath);
+    const card = buildDailyPublishCard({
+      reportDate: input.reportDate,
+      publishUrl,
+      showDebug: this.config.debugVerbose === true,
+      debugFields: {
+        runId: input.runId,
+        publishReason: input.publishReason,
+        publishedFile: input.publishMarkdownPath,
+      },
+    });
+
+    const messageId = await this.sendInteractiveCard(card);
+    return Boolean(messageId);
+  }
+
   async notifyActionResult(input: FeishuActionResultNotification): Promise<boolean> {
     const operator = input.operator ?? "某位审核人";
     const actionLabel = toActionLabel(input.action);
@@ -336,7 +360,7 @@ export class FeishuNotifier {
     const operator = input.operator ?? "某位同学";
     const statusText = input.result === "success" ? "执行成功" : "执行失败";
     const text = [
-      "【AI 周报主动触发回执】",
+      "【AI 报告主动触发回执】",
       `${operator} 触发了：${toOperationLabel(input.operation)}`,
       `结果：${statusText}`,
       `详情：${input.detail}`,
@@ -1565,6 +1589,40 @@ function buildReviewMainCard(input: {
       {
         tag: "action",
         actions: buildStageActions(input.stage, input.reportDate),
+      },
+    ],
+  };
+}
+
+function buildDailyPublishCard(input: {
+  reportDate: string;
+  publishUrl: string | null;
+  showDebug: boolean;
+  debugFields: Record<string, string>;
+}) {
+  const contentLines = [
+    "**当前状态**：本轮已发布",
+    "**下一步**：日报无需人工审核，若需排障可通过“运维”面板再次触发。",
+    input.publishUrl ? `[查看已发布稿](${input.publishUrl})` : "已发布稿链接未配置",
+  ];
+  if (input.showDebug) {
+    const debugPairs = Object.entries(input.debugFields).map(([key, value]) => `- ${key}: ${value}`);
+    contentLines.push("", "**debug**", ...debugPairs);
+  }
+
+  return {
+    config: { wide_screen_mode: true },
+    header: {
+      template: "green",
+      title: {
+        tag: "plain_text",
+        content: `AI 日报发布结果 ${input.reportDate}`,
+      },
+    },
+    elements: [
+      {
+        tag: "markdown",
+        content: contentLines.join("\n"),
       },
     ],
   };

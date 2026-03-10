@@ -10,6 +10,7 @@ import type {
   LlmQuickDigestItem,
   LlmRetryStats,
   LlmSummaryMeta,
+  LlmZhQualityStats,
   RankedItem,
   ScoreBreakdown,
 } from "../core/types.js";
@@ -28,6 +29,12 @@ const minimaxSummarySchema = z.object({
 
 const minimaxLeadSchema = z.object({
   lead: z.string().min(1),
+});
+
+const minimaxZhRepairSchema = z.object({
+  summary: z.string().min(1),
+  recommendation: z.string().min(1),
+  titleZh: z.string().optional(),
 });
 
 export interface LlmSummarySettings {
@@ -101,6 +108,10 @@ interface RetryTelemetry {
   attempts: number;
   retryTriggered: boolean;
   missingContentExtraRetryTriggered: boolean;
+  nonZhDetected: boolean;
+  nonZhRepairAttempted: boolean;
+  nonZhRepairSucceeded: boolean;
+  nonZhRetainedEnglish: boolean;
 }
 
 interface SummaryQualityOptions {
@@ -138,8 +149,6 @@ export interface BuildLlmSummaryOutput extends LlmSummaryResult {
 const LLM_GLOBAL_FALLBACK_SUCCESS_RATE_THRESHOLD = 0.7;
 const LLM_GLOBAL_FALLBACK_MIN_FAILED_ITEMS = 3;
 const DEFAULT_GLOBAL_MAX_CONCURRENCY = 2;
-const DEFAULT_LLM_RANK_FUSION_WEIGHT = 0.65;
-const DEFAULT_LLM_ASSIST_MIN_CONFIDENCE = 0.5;
 const MISSING_CONTENT_EXTRA_RETRIES = 1;
 const MISSING_CONTENT_CONSECUTIVE_DEGRADE_THRESHOLD = 3;
 const ADAPTIVE_DEGRADE_WINDOW_SIZE = 6;
@@ -169,15 +178,11 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
   // 并发采用“双闸门”：节点并发配置 + 全局 provider 并发上限，避免多调用面叠加击穿 MiniMax。
   const globalConcurrency = Math.max(1, input.settings.globalMaxConcurrency ?? DEFAULT_GLOBAL_MAX_CONCURRENCY);
   const effectiveConcurrency = Math.max(1, Math.min(input.settings.maxConcurrency, globalConcurrency));
-  // 排序融合参数可运行时调节，便于在真实数据观察期快速收敛。
-  const rankFusionWeight = clampNumber(input.settings.rankFusionWeight ?? DEFAULT_LLM_RANK_FUSION_WEIGHT, 0, 1);
-  const assistMinConfidence = clampNumber(input.settings.assistMinConfidence ?? DEFAULT_LLM_ASSIST_MIN_CONFIDENCE, 0, 1);
 
   if (!input.settings.enabled) {
     const fallback = buildRuleFallback(input.rankedItems, {
       reason: "llm_summary_disabled",
       enabled: false,
-      rankFusionWeight,
     });
     return {
       ...fallback,
@@ -215,7 +220,6 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
       promptVersion: input.settings.promptVersion,
       startedAt,
       finishedAt: new Date().toISOString(),
-      rankFusionWeight,
     });
     auditEvents.push({
       eventType: "llm_summary_fallback",
@@ -342,6 +346,7 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
       serialRetriedItemCount,
       serialTriggerMaxConsecutiveMissingContent,
     });
+    const zhQualityStats = computeZhQualityStats(itemResults);
     if (adaptiveRetriedItemCount > 0) {
       adaptiveWarnings.push(formatAdaptiveRetryWarning(adaptiveRetriedItemCount));
     }
@@ -360,10 +365,10 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
         promptVersion: input.settings.promptVersion,
         startedAt,
         finishedAt,
-        rankFusionWeight,
         failureStats,
         retryStats,
         adaptiveDegradeStats,
+        zhQualityStats,
       });
       const mergedWarnings = [
         ...fallback.warnings,
@@ -372,6 +377,7 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
         formatFailureStatsWarning(failureStats),
         formatRetryStatsWarning(retryStats),
         formatAdaptiveDegradeWarning(adaptiveDegradeStats),
+        formatZhQualityWarning(zhQualityStats),
       ];
 
       auditEvents.push({
@@ -396,26 +402,21 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
           failureStats,
           retryStats,
           adaptiveDegradeStats,
+          zhQualityStats,
         },
         auditEvents,
       };
     }
 
-    const rankingAssist = applyLlmAssistToRanking({
-      rankedItems: input.rankedItems,
-      itemSummaries,
-      rankFusionWeight,
-      assistMinConfidence,
-    });
-    const quickDigest = buildQuickDigest(itemSummaries, rankingAssist.rankedItems.slice(0, selectedItems.length));
+    const quickDigest = buildQuickDigest(itemSummaries, input.rankedItems.slice(0, selectedItems.length));
     const lead = await buildLeadSummaryWithFallback({
       client,
-      rankedItems: rankingAssist.rankedItems,
+      rankedItems: input.rankedItems,
       quickDigest,
     });
     const categoryLeadSummaries = await buildCategoryLeadSummariesWithFallback({
       client,
-      rankedItems: rankingAssist.rankedItems,
+      rankedItems: input.rankedItems,
     });
     const finishedAt = new Date().toISOString();
     const durationMs = Date.now() - startedEpoch;
@@ -431,12 +432,13 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
       summarizedCount: llmSuccessCount,
       fallbackTriggered: false,
       effectiveConcurrency,
-      assistAppliedCount: rankingAssist.appliedCount,
-      assistFallbackCount: rankingAssist.fallbackCount,
+      assistAppliedCount: 0,
+      assistFallbackCount: 0,
       leadFallbackTriggered: lead.fallbackTriggered,
       failureStats,
       retryStats,
       adaptiveDegradeStats,
+      zhQualityStats,
     };
 
     auditEvents.push({
@@ -450,7 +452,7 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
     });
 
     return {
-      rankedItems: rankingAssist.rankedItems,
+      rankedItems: input.rankedItems,
       itemSummaries,
       quickDigest,
       leadSummary: lead.text,
@@ -467,12 +469,13 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
               formatFailureStatsWarning(failureStats),
               formatRetryStatsWarning(retryStats),
               formatAdaptiveDegradeWarning(adaptiveDegradeStats),
+              formatZhQualityWarning(zhQualityStats),
             ]
             : []),
           ...(adaptiveDegradeStats.triggerCount > 0 && llmFailureCount === 0
             ? [formatAdaptiveDegradeWarning(adaptiveDegradeStats)]
             : []),
-          ...rankingAssist.warnings,
+          ...(zhQualityStats.nonZhDetectedCount > 0 ? [formatZhQualityWarning(zhQualityStats)] : []),
         ],
       auditEvents,
     };
@@ -487,7 +490,6 @@ export async function buildLlmSummary(input: BuildLlmSummaryInput): Promise<Buil
       promptVersion: input.settings.promptVersion,
       startedAt,
       finishedAt,
-      rankFusionWeight,
     });
 
     auditEvents.push({
@@ -584,6 +586,10 @@ async function summarizeItemWithRetry(
     attempts: 0,
     retryTriggered: false,
     missingContentExtraRetryTriggered: false,
+    nonZhDetected: false,
+    nonZhRepairAttempted: false,
+    nonZhRepairSucceeded: false,
+    nonZhRetainedEnglish: false,
   };
   for (let attempt = 1; attempt <= effectiveMaxAttempts; attempt += 1) {
     telemetry.attempts = attempt;
@@ -593,6 +599,23 @@ async function summarizeItemWithRetry(
       const summary = normalizeItemSummary(item, raw, {
         allowTruncatedSummary: isLastAttempt,
       });
+      if (shouldRepairToChinese(summary)) {
+        telemetry.nonZhDetected = true;
+        // 非中文输出先走既有重试链，优先复用同 prompt 重试，不立刻触发额外修复请求。
+        if (!isLastAttempt) {
+          telemetry.retryTriggered = true;
+          await sleep(Math.min(RETRY_MAX_DELAY_MS, RETRY_BASE_DELAY_MS * attempt));
+          continue;
+        }
+        telemetry.nonZhRepairAttempted = true;
+        const repaired = await client.rewriteSummaryToChinese(item, summary);
+        if (repaired) {
+          telemetry.nonZhRepairSucceeded = true;
+          return { summary: repaired, telemetry };
+        }
+        // 修复失败时按约定保留英文原文，避免“伪中文模板”损伤信息准确性。
+        telemetry.nonZhRetainedEnglish = true;
+      }
       return { summary, telemetry };
     } catch (error) {
       lastError = error;
@@ -691,6 +714,32 @@ function isLikelyTruncatedSummary(input: string): boolean {
   return /[，、,:：;；]$/.test(text);
 }
 
+function shouldRepairToChinese(summary: Pick<LlmItemSummary, "summary" | "recommendation">): boolean {
+  return isLikelyNonChineseText(summary.summary) || isLikelyNonChineseText(summary.recommendation);
+}
+
+function isLikelyNonChineseText(input: string): boolean {
+  const text = normalizeQualityText(input);
+  if (!text) {
+    return false;
+  }
+  const cjkCount = (text.match(/[\u4e00-\u9fff]/g) ?? []).length;
+  const latinCount = (text.match(/[A-Za-z]/g) ?? []).length;
+  if (latinCount === 0) {
+    return false;
+  }
+  const totalCount = cjkCount + latinCount;
+  if (totalCount === 0) {
+    return false;
+  }
+  // 这里偏保守：只有“中文占比明显不足且英文字符足够多”才判为非中文，避免误杀中英混合术语。
+  if (cjkCount === 0 && latinCount >= 14) {
+    return true;
+  }
+  const zhRatio = cjkCount / totalCount;
+  return latinCount >= 14 && zhRatio < 0.35;
+}
+
 function normalizeRecoveredRecommendation(item: Pick<RankedItem, "title" | "category" | "importance">, summary: string, recommendation: string): string {
   const summaryText = stripWrappingQuotes(summary);
   const recommendationText = stripWrappingQuotes(recommendation);
@@ -725,6 +774,10 @@ function extractRetryTelemetry(error: unknown): RetryTelemetry {
     attempts: 1,
     retryTriggered: false,
     missingContentExtraRetryTriggered: false,
+    nonZhDetected: false,
+    nonZhRepairAttempted: false,
+    nonZhRepairSucceeded: false,
+    nonZhRetainedEnglish: false,
   };
 }
 
@@ -868,6 +921,10 @@ function formatRetryStatsWarning(stats: LlmRetryStats): string {
   return `LLM 重试统计：retryable=${stats.retryableTriggeredCount}, missing_content_extra=${stats.missingContentExtraRetryTriggeredCount}, compensation=${stats.compensationRetryItemCount}, serial_degrade=${stats.serialDegradeTriggered ? 1 : 0}, serial_retried=${stats.serialRetriedItemCount}`;
 }
 
+function formatZhQualityWarning(stats: LlmZhQualityStats): string {
+  return `LLM 中文质量：detected_non_zh=${stats.nonZhDetectedCount}, repair_attempted=${stats.zhRepairAttemptedCount}, repair_succeeded=${stats.zhRepairSucceededCount}, english_retained=${stats.englishRetainedCount}`;
+}
+
 function formatAdaptiveRetryWarning(retriedCount: number): string {
   return `LLM 自适应降载重试：retried=${retriedCount}`;
 }
@@ -890,6 +947,34 @@ function createInitialAdaptiveDegradeStats(): LlmAdaptiveDegradeStats {
     lastWindowMissingContentRate: 0,
     lastWindowSuccessRate: 0,
   };
+}
+
+function createEmptyZhQualityStats(): LlmZhQualityStats {
+  return {
+    nonZhDetectedCount: 0,
+    zhRepairAttemptedCount: 0,
+    zhRepairSucceededCount: 0,
+    englishRetainedCount: 0,
+  };
+}
+
+function computeZhQualityStats(results: ItemSummaryExecutionResult[]): LlmZhQualityStats {
+  const stats = createEmptyZhQualityStats();
+  for (const result of results) {
+    if (result.retryTelemetry.nonZhDetected) {
+      stats.nonZhDetectedCount += 1;
+    }
+    if (result.retryTelemetry.nonZhRepairAttempted) {
+      stats.zhRepairAttemptedCount += 1;
+    }
+    if (result.retryTelemetry.nonZhRepairSucceeded) {
+      stats.zhRepairSucceededCount += 1;
+    }
+    if (result.retryTelemetry.nonZhRetainedEnglish) {
+      stats.englishRetainedCount += 1;
+    }
+  }
+  return stats;
 }
 
 function computeAdaptiveWindowStats(results: ItemSummaryExecutionResult[], windowSize: number): AdaptiveWindowStats {
@@ -1034,9 +1119,11 @@ function buildQuickDigest(itemSummaries: LlmItemSummary[], rankedItems: RankedIt
     if (!summary) {
       continue;
     }
+    // quickDigest 标题优先复用 summary 产出的翻译标题，避免“摘要有翻译、速览无翻译”。
+    const displayTitle = formatDisplayTitle(item.title, summary.titleZh ?? item.titleZh);
     digests.push({
       itemId: item.id,
-      title: formatDisplayTitle(item.title, item.titleZh),
+      title: displayTitle,
       takeaway: summary.summary,
       evidenceItemIds: summary.evidenceItemIds,
     });
@@ -1049,7 +1136,6 @@ function buildRuleFallback(
   input: {
     reason: string;
     enabled: boolean;
-    rankFusionWeight: number;
     provider?: "minimax";
     model?: string;
     promptVersion?: string;
@@ -1058,23 +1144,12 @@ function buildRuleFallback(
     failureStats?: LlmFailureStats;
     retryStats?: LlmRetryStats;
     adaptiveDegradeStats?: LlmAdaptiveDegradeStats;
+    zhQualityStats?: LlmZhQualityStats;
   },
 ): LlmSummaryResult {
   const startedAt = input.startedAt ?? new Date().toISOString();
   const finishedAt = input.finishedAt ?? new Date().toISOString();
-  const rankedItems = items.map((item) => {
-    const breakdown: ScoreBreakdown = {
-      ruleScore: item.score,
-      ruleScoreNormalized: clampNumber(item.score, 0, 100),
-      finalScore: item.score,
-      fusionWeight: input.rankFusionWeight,
-      usedLlm: false,
-    };
-    return {
-      ...item,
-      scoreBreakdown: breakdown,
-    } satisfies RankedItem;
-  });
+  const rankedItems = [...items];
   const itemSummaries = rankedItems.map((item) => buildRuleSummaryForItem(item));
   const categoryLeadSummaries = buildTemplateCategoryLeadSummaries(rankedItems);
 
@@ -1099,11 +1174,12 @@ function buildRuleFallback(
       fallbackTriggered: true,
       fallbackReason: input.reason,
       assistAppliedCount: 0,
-      assistFallbackCount: items.length,
+      assistFallbackCount: 0,
       leadFallbackTriggered: true,
       failureStats: input.failureStats,
       retryStats: input.retryStats,
       adaptiveDegradeStats: input.adaptiveDegradeStats ?? createInitialAdaptiveDegradeStats(),
+      zhQualityStats: input.zhQualityStats ?? createEmptyZhQualityStats(),
     },
     warnings: [`LLM 总结已回退规则模式：${input.reason}`],
   };
@@ -1144,6 +1220,9 @@ function normalizeTranslatedTitle(originalTitle: string, translatedTitle: string
     return undefined;
   }
   if (normalized === originalTitle) {
+    return undefined;
+  }
+  if (!/[\u4e00-\u9fff]/.test(normalized)) {
     return undefined;
   }
   return normalized;
@@ -1420,6 +1499,7 @@ function buildSummaryPromptPayload(item: RankedItem, promptVersion: string, stri
     requiredKeys: ["summary", "recommendation", "evidenceItemIds", "confidence", "llmScore"],
     keyValueConstraints: [
       "summary/recommendation 只能是最终内容，不得包含 summary:/recommendation: 前缀文本",
+      "summary/recommendation 必须优先使用简体中文表达",
       "evidenceItemIds 必须包含当前 item.id",
     ],
   } as const;
@@ -1451,6 +1531,7 @@ function buildSummaryPromptPayload(item: RankedItem, promptVersion: string, stri
       quickRules: [
         "仅输出 JSON object",
         "不得输出 markdown/code fence/解释文本",
+        "summary/recommendation 优先使用简体中文",
         "evidenceItemIds 必须包含当前 item.id",
       ],
     };
@@ -1551,6 +1632,108 @@ class MiniMaxSummaryClient {
         return await this.requestSummary(item, true);
       }
       throw error;
+    }
+  }
+
+  async rewriteSummaryToChinese(item: RankedItem, summary: LlmItemSummary): Promise<LlmItemSummary | null> {
+    const url = `${this.options.apiBaseUrl.replace(/\/+$/, "")}/v1/messages`;
+    const body = {
+      model: this.options.model,
+      max_tokens: 300,
+      temperature: 0.1,
+      system:
+        "你是 AI 报告中文改写助手。仅可基于输入内容改写，不得新增事实。必须输出单个 JSON object，不允许 markdown、code fence 或解释。",
+      messages: [
+        {
+          role: "user",
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify({
+                promptVersion: this.options.promptVersion,
+                task: "请把以下 summary/recommendation 改写为简体中文，并保持语义一致。",
+                outputSchema: {
+                  summary: "一句到两句简体中文总结",
+                  recommendation: "一句简体中文推荐理由",
+                  titleZh: "若原标题为英文，给出中文标题；否则返回空字符串",
+                },
+                input: {
+                  itemId: item.id,
+                  title: item.title,
+                  titleZh: summary.titleZh ?? "",
+                  category: item.category,
+                  summary: summary.summary,
+                  recommendation: summary.recommendation,
+                },
+                outputContract: {
+                  format: "只输出 JSON object",
+                  rules: [
+                    "summary/recommendation 必须是简体中文",
+                    "不得新增输入中不存在的事实",
+                  ],
+                },
+              }),
+            },
+          ],
+        },
+      ],
+    };
+
+    const response = await fetchWithTimeout(
+      url,
+      {
+        method: "POST",
+        headers: {
+          "x-api-key": this.options.apiKey,
+          "anthropic-version": "2023-06-01",
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(body),
+      },
+      this.options.timeoutMs,
+    );
+    if (!response.ok) {
+      return null;
+    }
+    const payload = (await response.json().catch(() => null)) as
+      | {
+          error?: { message?: string; type?: string };
+          content?: Array<Record<string, unknown>> | string;
+          output_text?: string;
+          completion?: string;
+          message?: {
+            content?: string | Array<Record<string, unknown>>;
+          };
+          choices?: Array<{
+            text?: string;
+            message?: {
+              content?: string | Array<Record<string, unknown>>;
+            };
+          }>;
+        }
+      | null;
+    if (payload?.error?.message) {
+      return null;
+    }
+    const contentText = extractModelText(payload);
+    if (!contentText) {
+      return null;
+    }
+    try {
+      const json = parseJsonObjectFromText(contentText);
+      const repaired = minimaxZhRepairSchema.parse(json);
+      const merged = {
+        ...summary,
+        summary: repaired.summary,
+        recommendation: repaired.recommendation,
+        titleZh: normalizeTranslatedTitle(item.title, repaired.titleZh ?? summary.titleZh),
+      } satisfies LlmItemSummary;
+      if (shouldRepairToChinese(merged)) {
+        return null;
+      }
+      return merged;
+    } catch {
+      return null;
     }
   }
 

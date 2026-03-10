@@ -5,7 +5,7 @@
 ## 当前状态
 - 已完成 `docs/PRD.md`（冻结需求）。
 - 已完成 `docs/architecture.md`（系统设计）。
-- 已提供可运行流程：`collect -> normalize -> dedupe -> classify -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> llm_summarize -> build_report`。
+- 已提供可运行流程：`collect -> normalize -> dedupe -> llm_classify_score -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> llm_summarize -> build_report`。
 - 周报审核支持「持久化指令优先，CLI 参数 fallback」、pending 周报复检发布、watchdog 守护扫描（含锁与重试）。
 - 已完成 M3.2：Feishu 待审核通知、11:30 提醒命令、发布结果回执、本地回调服务（2B：本地 + 隧道）。
 - 已完成 M3.3：`request_revision` 回流修订执行、runtime config 全局沉淀、`reject` 终止当前 run 发布。
@@ -15,7 +15,7 @@
 - 已完成 M4.3：daemon 常驻自动调度 + @机器人主动触发面板 + 自动 Git 同步（可选 push 代理）。
 - 已完成 M4.4：macOS 初始化引导 + 一键服务托管（launchd 托管 daemon + Named Tunnel）。
 - 已完成 M5.1：MiniMax 逐条总结（daily/weekly）、4-12 条自适应“3 分钟速览”、失败自动回退与飞书合并告警。
-- 已完成 M5.2：LLM 辅助标签/排序融合、全局并发闸门（默认 2）、报告导语、英文标题中文化展示。
+- 已完成 M5.2：前置 LLM 批量分类与全量打分（含重试/拆批降级）、排序融合、报告导语与英文标题中文化展示。
 - 已完成 M5.3：窗口型自适应降载与恢复、run 级诊断元数据、分类导读（LLM + 模板回退）。
 - 分布式互斥暂缓，当前以单机 daemon 为部署基线。
 
@@ -126,7 +126,7 @@ tsx src/cli.ts run --mode weekly --mock --approve-outline --approve-final
 tsx src/cli.ts run --mode weekly --mock --generated-at 2026-03-09T05:00:00.000Z
 ```
 
-LLM 增强参数（M5.3，MiniMax）：
+LLM 增强参数（M5.2+，MiniMax）：
 ```bash
 # 方式 1：环境变量开启（推荐）
 export LLM_SUMMARY_ENABLED=true
@@ -134,28 +134,38 @@ export ANTHROPIC_BASE_URL=https://api.minimaxi.com/anthropic
 export ANTHROPIC_API_KEY=your_coding_plan_key
 # 或使用 MINIMAX_API_KEY（二选一）
 # export MINIMAX_API_KEY=your_coding_plan_key
-export LLM_SUMMARY_MAX_CONCURRENCY=2
 export LLM_GLOBAL_MAX_CONCURRENCY=2
+export LLM_CLASSIFY_SCORE_ENABLED=true
+export LLM_CLASSIFY_SCORE_BATCH_SIZE=10
+export LLM_CLASSIFY_SCORE_TIMEOUT_MS=60000
+export LLM_CLASSIFY_SCORE_MAX_CONCURRENCY=2
+export LLM_CLASSIFY_SCORE_MIN_CONFIDENCE=0.6
+export LLM_CLASSIFY_SCORE_PROMPT_VERSION=m5.4-v1
+export LLM_SUMMARY_MAX_CONCURRENCY=2
 export LLM_RANK_FUSION_WEIGHT=0.65
-export LLM_ASSIST_MIN_CONFIDENCE=0.5
 export LLM_SUMMARY_PROMPT_VERSION=m5.3-v1
 pnpm run run:weekly
 
 # 方式 2：命令行临时覆盖
 tsx src/cli.ts run --mode weekly \
+  --llm-classify-score-enabled \
+  --llm-classify-score-batch-size 10 \
+  --llm-classify-score-timeout-ms 60000 \
+  --llm-classify-score-max-concurrency 2 \
+  --llm-classify-score-min-confidence 0.6 \
+  --llm-classify-score-prompt-version m5.4-v1 \
   --llm-summary-enabled \
   --llm-summary-minimax-api-key your_key \
   --llm-summary-minimax-model MiniMax-M2.5 \
   --llm-global-max-concurrency 2 \
-  --llm-rank-fusion-weight 0.65 \
-  --llm-assist-min-confidence 0.5
+  --llm-rank-fusion-weight 0.65
 ```
 
 M5.3 输出增强说明：
 - 报告会新增“本期导语”区块（2-3 句）。
 - 报告会新增“分类导读”区块（主要分类 1 句导读，失败时模板回退）。
 - 英文标题会尝试显示为“中文标题（原标题）”。
-- 结构化产物会记录 `scoreBreakdown`（规则分/LLM 分/融合分）以及标签字段（`domainTag`/`intentTag`/`actionability`）。
+- 结构化产物会记录 `llmClassifyScoreMeta`（批量配置、重试与失败分类统计）以及 `scoreBreakdown`（规则分/LLM 分/融合分）。
 - 结构化产物会记录 `adaptiveDegradeStats`（降载触发/恢复、窗口统计）用于运行诊断。
 
 持久化审核指令（默认目录：`outputs/review-instructions/`）：

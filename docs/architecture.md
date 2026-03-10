@@ -7,7 +7,7 @@
 
 ## 2. 当前阶段边界（必须先对齐）
 ### 2.1 已实现（M1 ~ M3.1）
-- 基础 LangGraph 流水线：`collect -> normalize -> dedupe -> classify -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> llm_summarize -> build_report`。
+- 基础 LangGraph 流水线：`collect -> normalize -> dedupe -> llm_classify_score -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> llm_summarize -> build_report`。
 - 周报审核断点：大纲审核 + 终稿审核。
 - 超时自动发布：周一 12:30（Asia/Shanghai）未完成审核自动发布。
 - pending 复检发布：基于 review snapshot 重算状态并发布，不重跑采集链路。
@@ -72,11 +72,14 @@
 - 回退告警按 run 合并发送 1 条飞书消息，避免重复噪音。
 
 ### 2.10 已实现（M5.2）
-- 新增 LLM 辅助排序：在规则 baseline 之后融合 `llmScore`，默认提升 LLM 权重（可配置）。
-- 新增 LLM 标签输出：`domainTag`、`intentTag`、`actionability`、`confidence`。
-- 新增中文标题增强：英文标题可显示为“中文标题（原标题）”。
+- 新增前置 `llm_classify_score` 节点：在 `dedupe` 后、`rank` 前执行批量分类与全量打分。
+- 批量容错链路：批次重试 -> 二分拆批 -> 单条回退（不中断主流程）。
+- 排序融合改为前置节点驱动：`rank` 阶段按规则分与 `llmScore` 计算融合分（默认 `fusionWeight=0.65`）。
+- 新增全量标题翻译增强：`llm_classify_score` 输出 `titleZh`，报告展示优先使用“中文标题（原标题）”。
 - 新增报告导语：在报告顶部补充 2-3 句“本期导语”（失败时模板回退）。
 - 新增并发闸门：`effectiveConcurrency=min(nodeConcurrency, globalConcurrency)`，默认上限 2。
+- `llm_summarize` 去打分职责：仅负责摘要、导语、导读、翻译等可读性增强。
+- 新增中文质量闭环：`llm_summarize` 对非中文摘要先重试再执行中文修复；修复失败保留英文原文并记录统计。
 
 ### 2.11 已实现（M5.3）
 - 新增窗口型自适应降载：短窗口 `missing_content` 比例异常时，自动降载并优先重试失败条目。
@@ -93,7 +96,7 @@
 5. **Storage Layer**：SQLite（主）+ 文件（fallback）双轨持久化。
 6. **Automation Layer**：daemon scheduler + operation queue + git sync executor。
 7. **Service Ops Layer**：macOS bootstrap + launchd service lifecycle（本地运维收敛层）。
-8. **Intelligence Layer**：LLM item-wise summarize + ranking assist + lead summary（可回退、可审计）。
+8. **Intelligence Layer**：前置批量 classify+score + item-wise summarize + lead/category lead（可回退、可审计）。
 
 ## 4. 目录与模块责任
 ```text
@@ -118,7 +121,8 @@
     ├── audit/
     │   └── audit-store.ts           # 审计事件存储（DB）
     ├── llm/
-    │   └── summary.ts               # MiniMax 总结/辅助排序/导语生成 + 回退与证据校验
+    │   ├── classify-score.ts        # MiniMax 批量分类/全量打分（重试+拆批降级+回退）
+    │   └── summary.ts               # MiniMax 逐条总结/导语/导读/翻译 + 回退与证据校验
     ├── config/
     │   ├── source-config.ts          # 来源配置读取
     │   └── runtime-config.ts         # runtime 配置存储抽象（文件+DB）
@@ -167,7 +171,7 @@ START
   -> collect_items
   -> normalize_items
   -> dedupe_items
-  -> classify_items
+  -> llm_classify_score
   -> rank_items
   -> build_outline
   -> review_outline
@@ -181,6 +185,7 @@ START
 关键约束：
 - `publish_or_wait` 必须在 `build_report` 前执行，确保文案与状态一致。
 - 所有运行先写 `outputs/review`，满足条件才写 `outputs/published`。
+- `llm_classify_score` 负责全量打分与分类；`llm_summarize` 不再改写 score/排序结果。
 
 ### 5.2 pending 复检流程（已实现）
 ```text
@@ -485,10 +490,12 @@ DB 表：`operation_jobs`
 - `SERVICE_LOGS_TAIL`（`services:logs` 默认 tail 行数）
 - `LLM_SUMMARY_ENABLED`（是否启用 LLM 总结）
 - `MINIMAX_API_KEY` / `MINIMAX_MODEL`（MiniMax 调用配置）
+- `LLM_CLASSIFY_SCORE_ENABLED` / `LLM_CLASSIFY_SCORE_BATCH_SIZE` / `LLM_CLASSIFY_SCORE_TIMEOUT_MS`
+- `LLM_CLASSIFY_SCORE_MAX_CONCURRENCY` / `LLM_CLASSIFY_SCORE_MIN_CONFIDENCE` / `LLM_CLASSIFY_SCORE_PROMPT_VERSION`
 - `LLM_SUMMARY_TIMEOUT_MS` / `LLM_SUMMARY_MAX_ITEMS` / `LLM_SUMMARY_MAX_CONCURRENCY`
 - `LLM_GLOBAL_MAX_CONCURRENCY`（全局 LLM 并发闸门，默认 2）
 - `LLM_RANK_FUSION_WEIGHT`（规则分与 LLM 分融合权重）
-- `LLM_ASSIST_MIN_CONFIDENCE`（LLM 辅助分生效的最低置信度）
+- `LLM_ASSIST_MIN_CONFIDENCE`（历史兼容字段，新流程可忽略）
 - `LLM_SUMMARY_PROMPT_VERSION` / `LLM_FALLBACK_ALERT_ENABLED`
 
 实现约束：
@@ -517,7 +524,7 @@ DB 表：`operation_jobs`
 5. **M4.3（自动化）**：daemon 自动调度 + @机器人主动触发 + 自动 Git 同步【已完成】。
 6. **M4.4（运维）**：macOS 初始化引导 + 一键服务托管（launchd + Named Tunnel）【已完成】。
 7. **M5.1（智能）**：LLM 总结节点（MiniMax，逐条总结 + 速览聚合）【已完成】。
-8. **M5.2（智能）**：分类/打标/排序辅助 + 导语 + 标题翻译（规则 baseline + LLM 融合分）【已完成】。
+8. **M5.2（智能）**：前置批量分类/全量打分 + 排序融合 + 导语 + 标题翻译【已完成】。
 9. **M5.3（智能）**：自适应降载与 run 级诊断 + 分类导读（LLM + 模板回退）【已完成】。
 10. **暂缓项**：分布式互斥（多实例部署时再做）。
 

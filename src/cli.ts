@@ -42,6 +42,12 @@ interface CliArgs {
   storageFallbackToFile: boolean;
   sourceLimit: number;
   llmSummaryEnabled: boolean;
+  llmClassifyScoreEnabled: boolean;
+  llmClassifyScoreBatchSize: number;
+  llmClassifyScoreTimeoutMs: number;
+  llmClassifyScoreMaxConcurrency: number;
+  llmClassifyScoreMinConfidence: number;
+  llmClassifyScorePromptVersion: string;
   llmSummaryProvider: "minimax";
   llmSummaryMinimaxApiKey?: string;
   llmSummaryMinimaxModel: string;
@@ -176,6 +182,12 @@ async function runPipeline(args: CliArgs) {
     storageFallbackToFile: args.storageFallbackToFile,
     sourceLimit: args.sourceLimit,
     llmSummaryEnabled: args.llmSummaryEnabled,
+    llmClassifyScoreEnabled: args.llmClassifyScoreEnabled,
+    llmClassifyScoreBatchSize: args.llmClassifyScoreBatchSize,
+    llmClassifyScoreTimeoutMs: args.llmClassifyScoreTimeoutMs,
+    llmClassifyScoreMaxConcurrency: args.llmClassifyScoreMaxConcurrency,
+    llmClassifyScoreMinConfidence: args.llmClassifyScoreMinConfidence,
+    llmClassifyScorePromptVersion: args.llmClassifyScorePromptVersion,
     llmSummaryProvider: args.llmSummaryProvider,
     llmSummaryMinimaxApiKey: args.llmSummaryMinimaxApiKey,
     llmSummaryMinimaxModel: args.llmSummaryMinimaxModel,
@@ -880,6 +892,46 @@ function parseArgs(argv: string[]): CliArgs {
       continue;
     }
 
+    if (token === "--llm-classify-score-enabled") {
+      args.llmClassifyScoreEnabled = true;
+      continue;
+    }
+
+    if (token === "--llm-classify-score-disabled") {
+      args.llmClassifyScoreEnabled = false;
+      continue;
+    }
+
+    if (token === "--llm-classify-score-batch-size" && next) {
+      args.llmClassifyScoreBatchSize = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--llm-classify-score-timeout-ms" && next) {
+      args.llmClassifyScoreTimeoutMs = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--llm-classify-score-max-concurrency" && next) {
+      args.llmClassifyScoreMaxConcurrency = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--llm-classify-score-min-confidence" && next) {
+      args.llmClassifyScoreMinConfidence = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--llm-classify-score-prompt-version" && next) {
+      args.llmClassifyScorePromptVersion = next;
+      i += 1;
+      continue;
+    }
+
     if (token === "--llm-summary-provider" && next) {
       if (next !== "minimax") {
         throw new Error("--llm-summary-provider 当前仅支持 minimax");
@@ -1236,6 +1288,12 @@ function defaults(): CliArgs {
     storageFallbackToFile: process.env.STORAGE_FALLBACK_TO_FILE !== "false",
     sourceLimit: 6,
     llmSummaryEnabled: process.env.LLM_SUMMARY_ENABLED === "true",
+    llmClassifyScoreEnabled: process.env.LLM_CLASSIFY_SCORE_ENABLED !== "false",
+    llmClassifyScoreBatchSize: Number(process.env.LLM_CLASSIFY_SCORE_BATCH_SIZE ?? "10"),
+    llmClassifyScoreTimeoutMs: Number(process.env.LLM_CLASSIFY_SCORE_TIMEOUT_MS ?? "60000"),
+    llmClassifyScoreMaxConcurrency: Number(process.env.LLM_CLASSIFY_SCORE_MAX_CONCURRENCY ?? "2"),
+    llmClassifyScoreMinConfidence: Number(process.env.LLM_CLASSIFY_SCORE_MIN_CONFIDENCE ?? "0.6"),
+    llmClassifyScorePromptVersion: process.env.LLM_CLASSIFY_SCORE_PROMPT_VERSION ?? "m5.4-v1",
     llmSummaryProvider: process.env.LLM_SUMMARY_PROVIDER === "minimax" ? "minimax" : "minimax",
     llmSummaryMinimaxApiKey: process.env.MINIMAX_API_KEY ?? process.env.ANTHROPIC_API_KEY,
     llmSummaryMinimaxModel: process.env.MINIMAX_MODEL ?? "MiniMax-M2.5",
@@ -1316,6 +1374,7 @@ async function persistOutputs(result: ReportState, args: CliArgs, trigger: "run"
     // 优先尝试 Git 同步，再通知群组，尽量保证通知内链接在用户点击时已可访问。
     await autoSyncOutputsIfNeeded(args, `publish:${result.mode}:${result.reportDate}`);
     await notifyPublishResultIfNeeded(args, result, publishedPaths.mdPath);
+    await notifyDailyPublishResultIfNeeded(args, result, publishedPaths.mdPath);
     await notifyLlmFallbackIfNeeded(args, result);
     return;
   }
@@ -1376,6 +1435,7 @@ async function writeArtifacts(root: string, mode: ReportMode, datePart: string, 
         leadSummary: result.leadSummary,
         categoryLeadSummaries: result.categoryLeadSummaries,
         summaryInputHash: result.summaryInputHash,
+        llmClassifyScoreMeta: result.llmClassifyScoreMeta,
         llmSummaryMeta: result.llmSummaryMeta,
         highlights: result.highlights,
         revisionAuditLogs: result.revisionAuditLogs,
@@ -1395,6 +1455,7 @@ async function writeArtifacts(root: string, mode: ReportMode, datePart: string, 
           leadSummary: result.leadSummary,
           categoryLeadSummaries: result.categoryLeadSummaries,
           summaryInputHash: result.summaryInputHash,
+          llmClassifyScoreMeta: result.llmClassifyScoreMeta,
           llmSummaryMeta: result.llmSummaryMeta,
           highlights: result.highlights,
           metrics: result.metrics,
@@ -1462,6 +1523,30 @@ async function notifyPublishResultIfNeeded(args: CliArgs, result: ReportState, p
     console.log(`[feishu-notify] publish result sent: ${result.reportDate}`);
   } catch (error) {
     console.log(`[feishu-notify-warning] publish result failed: ${error instanceof Error ? error.message : String(error)}`);
+  }
+}
+
+async function notifyDailyPublishResultIfNeeded(args: CliArgs, result: ReportState, publishMarkdownPath: string) {
+  if (result.mode !== "daily") {
+    return;
+  }
+  const notifier = createFeishuNotifier(args);
+  if (!notifier.isEnabled()) {
+    return;
+  }
+
+  try {
+    await notifier.notifyDailyPublishResult({
+      runId: result.runId,
+      reportDate: result.reportDate,
+      publishReason: result.publishReason,
+      publishMarkdownPath,
+    });
+    console.log(`[feishu-notify] daily publish result sent: ${result.reportDate}`);
+  } catch (error) {
+    console.log(
+      `[feishu-notify-warning] daily publish result failed: ${error instanceof Error ? error.message : String(error)}`,
+    );
   }
 }
 
@@ -1629,6 +1714,12 @@ function buildRecheckStateFromArtifact(input: {
     storageFallbackToFile: artifact.snapshot.storageFallbackToFile ?? args.storageFallbackToFile,
     sourceLimit: artifact.snapshot.sourceLimit,
     llmSummaryEnabled: args.llmSummaryEnabled,
+    llmClassifyScoreEnabled: args.llmClassifyScoreEnabled,
+    llmClassifyScoreBatchSize: args.llmClassifyScoreBatchSize,
+    llmClassifyScoreTimeoutMs: args.llmClassifyScoreTimeoutMs,
+    llmClassifyScoreMaxConcurrency: args.llmClassifyScoreMaxConcurrency,
+    llmClassifyScoreMinConfidence: args.llmClassifyScoreMinConfidence,
+    llmClassifyScorePromptVersion: args.llmClassifyScorePromptVersion,
     llmSummaryProvider: args.llmSummaryProvider,
     llmSummaryMinimaxApiKey: args.llmSummaryMinimaxApiKey,
     llmSummaryMinimaxModel: args.llmSummaryMinimaxModel,
@@ -1657,6 +1748,14 @@ function buildRecheckStateFromArtifact(input: {
     leadSummary: artifact.snapshot.leadSummary ?? artifact.leadSummary ?? "",
     categoryLeadSummaries: artifact.snapshot.categoryLeadSummaries ?? artifact.categoryLeadSummaries ?? [],
     summaryInputHash: artifact.snapshot.summaryInputHash ?? artifact.summaryInputHash ?? "",
+    llmClassifyScoreMeta: artifact.snapshot.llmClassifyScoreMeta ??
+      artifact.llmClassifyScoreMeta ?? {
+        enabled: false,
+        inputCount: 0,
+        processedCount: 0,
+        fallbackCount: 0,
+        fallbackTriggered: false,
+      },
     llmSummaryMeta: artifact.snapshot.llmSummaryMeta ??
       artifact.llmSummaryMeta ?? {
         enabled: false,

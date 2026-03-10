@@ -1080,7 +1080,7 @@ describe("llm summary", () => {
     expect(peak).toBeLessThanOrEqual(2);
   });
 
-  it("应按规则分与 LLM 分融合重排", async () => {
+  it("摘要节点不应改写已有排序与评分", async () => {
     const items = [createItem(1), createItem(2)];
     const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
       const payload = JSON.parse(String(init?.body ?? "{}")) as {
@@ -1128,14 +1128,13 @@ describe("llm summary", () => {
         timeoutMs: 3000,
         maxItems: 2,
         maxConcurrency: 2,
-        rankFusionWeight: 1,
-        assistMinConfidence: 0.5,
         promptVersion: "m5.2-test",
       },
     });
 
-    expect(result.rankedItems[0]?.id).toBe("item-2");
-    expect(result.rankedItems[0]?.scoreBreakdown?.usedLlm).toBe(true);
+    expect(result.rankedItems.map((item) => item.id)).toEqual(items.map((item) => item.id));
+    expect(result.rankedItems[0]?.score).toBe(items[0]?.score);
+    expect(result.rankedItems[1]?.score).toBe(items[1]?.score);
   });
 
   it("英文标题翻译成功时应写入 titleZh", async () => {
@@ -1195,7 +1194,163 @@ describe("llm summary", () => {
       },
     });
 
-    const translated = result.rankedItems.find((item) => item.id === "item-1");
-    expect(translated?.titleZh).toContain("LangGraph 发布多 Agent 编排指南");
+    const translatedSummary = result.itemSummaries.find((summary) => summary.itemId === "item-1");
+    expect(translatedSummary?.titleZh).toContain("LangGraph 发布多 Agent 编排指南");
+  });
+
+  it("非中文摘要应触发中文修复并记录统计", async () => {
+    const englishItem: RankedItem = {
+      ...createItem(1),
+      title: "Anthropic Introduces Code Review via Claude Code",
+    };
+
+    let summaryCallCount = 0;
+    const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
+      const payload = JSON.parse(String(init?.body ?? "{}")) as {
+        messages?: Array<{ role: string; content?: Array<{ type?: string; text?: string }> }>;
+      };
+      const userText = payload.messages?.find((message) => message.role === "user")?.content?.[0]?.text ?? "{}";
+      const parsed = JSON.parse(userText) as { task?: string; item?: { id?: string } };
+
+      if (parsed.task?.includes("改写为简体中文")) {
+        return {
+          ok: true,
+          json: async () => ({
+            content: [
+              {
+                type: "text",
+                text: JSON.stringify({
+                  summary: "该能力聚焦代码审查自动化，强调多步推理在安全研究中的可用性。",
+                  recommendation: "建议安全工程团队评估该方案在高风险代码变更中的审查收益。",
+                  titleZh: "Anthropic 发布 Claude Code 代码审查能力",
+                }),
+              },
+            ],
+          }),
+        } satisfies Partial<Response> as Response;
+      }
+
+      if (parsed.item?.id) {
+        summaryCallCount += 1;
+        return {
+          ok: true,
+          json: async () => ({
+            content: [
+              {
+                type: "text",
+                text: JSON.stringify({
+                  summary: "This release focuses on automating secure code review with long reasoning loops.",
+                  recommendation: "Engineering teams should evaluate this feature in CI workflows.",
+                  evidenceItemIds: [parsed.item.id],
+                  confidence: 0.86,
+                  llmScore: 84,
+                  titleZh: "",
+                }),
+              },
+            ],
+          }),
+        } satisfies Partial<Response> as Response;
+      }
+
+      return {
+        ok: true,
+        json: async () => ({
+          content: [{ type: "text", text: JSON.stringify({ lead: "本期导语测试文本。" }) }],
+        }),
+      } satisfies Partial<Response> as Response;
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    const result = await buildLlmSummary({
+      rankedItems: [englishItem],
+      generatedAt: "2026-03-08T00:00:00.000Z",
+      settings: {
+        enabled: true,
+        provider: "minimax",
+        minimaxApiKey: "test-key",
+        minimaxModel: "MiniMax-M2.5",
+        timeoutMs: 3000,
+        maxItems: 1,
+        maxConcurrency: 1,
+        promptVersion: "m5.4-test",
+      },
+    });
+
+    expect(summaryCallCount).toBe(2);
+    expect(result.itemSummaries[0]?.summary).toContain("该能力聚焦代码审查自动化");
+    expect(result.meta.zhQualityStats?.nonZhDetectedCount).toBe(1);
+    expect(result.meta.zhQualityStats?.zhRepairAttemptedCount).toBe(1);
+    expect(result.meta.zhQualityStats?.zhRepairSucceededCount).toBe(1);
+    expect(result.meta.zhQualityStats?.englishRetainedCount).toBe(0);
+  });
+
+  it("中文修复失败时应保留英文原文而非强制模板化", async () => {
+    const englishItem: RankedItem = {
+      ...createItem(1),
+      title: "How Balyasny Asset Management built an AI research engine",
+    };
+
+    const fetchMock = vi.fn(async (_url: string, init?: RequestInit) => {
+      const payload = JSON.parse(String(init?.body ?? "{}")) as {
+        messages?: Array<{ role: string; content?: Array<{ type?: string; text?: string }> }>;
+      };
+      const userText = payload.messages?.find((message) => message.role === "user")?.content?.[0]?.text ?? "{}";
+      const parsed = JSON.parse(userText) as { task?: string; item?: { id?: string } };
+
+      if (parsed.task?.includes("改写为简体中文")) {
+        return {
+          ok: false,
+          status: 503,
+        } satisfies Partial<Response> as Response;
+      }
+      if (parsed.item?.id) {
+        return {
+          ok: true,
+          json: async () => ({
+            content: [
+              {
+                type: "text",
+                text: JSON.stringify({
+                  summary: "See how Balyasny built an AI research system with GPT-5.4 and strict evaluation loops.",
+                  recommendation: "This workflow can be reused by investment research teams.",
+                  evidenceItemIds: [parsed.item.id],
+                  confidence: 0.83,
+                  llmScore: 80,
+                  titleZh: "",
+                }),
+              },
+            ],
+          }),
+        } satisfies Partial<Response> as Response;
+      }
+      return {
+        ok: true,
+        json: async () => ({
+          content: [{ type: "text", text: JSON.stringify({ lead: "本期导语测试文本。" }) }],
+        }),
+      } satisfies Partial<Response> as Response;
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    const result = await buildLlmSummary({
+      rankedItems: [englishItem],
+      generatedAt: "2026-03-08T00:00:00.000Z",
+      settings: {
+        enabled: true,
+        provider: "minimax",
+        minimaxApiKey: "test-key",
+        minimaxModel: "MiniMax-M2.5",
+        timeoutMs: 3000,
+        maxItems: 1,
+        maxConcurrency: 1,
+        promptVersion: "m5.4-test",
+      },
+    });
+
+    expect(result.itemSummaries[0]?.summary).toContain("See how Balyasny built");
+    expect(result.meta.zhQualityStats?.nonZhDetectedCount).toBe(1);
+    expect(result.meta.zhQualityStats?.zhRepairAttemptedCount).toBe(1);
+    expect(result.meta.zhQualityStats?.zhRepairSucceededCount).toBe(0);
+    expect(result.meta.zhQualityStats?.englishRetainedCount).toBe(1);
   });
 });
