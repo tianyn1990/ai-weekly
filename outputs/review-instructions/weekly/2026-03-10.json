@@ -10,6 +10,16 @@
       "source": "feishu_callback",
       "reason": "大纲通过",
       "messageId": "om_x100b55db8f57f934b3d697c3bf9db5c"
+    },
+    {
+      "stage": "outline_review",
+      "approved": true,
+      "action": "approve_outline",
+      "decidedAt": "2026-03-10T02:12:36.617Z",
+      "source": "feishu_callback",
+      "operator": "ou_e19d72b55e637aab98b744b155bd66c7",
+      "reason": "大纲通过",
+      "traceId": "eb905f72197368fc5c27f09218750226"
     }
   ]
 }
