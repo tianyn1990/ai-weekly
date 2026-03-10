@@ -20,6 +20,15 @@
       "operator": "ou_e19d72b55e637aab98b744b155bd66c7",
       "reason": "大纲通过",
       "traceId": "eb905f72197368fc5c27f09218750226"
+    },
+    {
+      "stage": "final_review",
+      "approved": true,
+      "action": "approve_final",
+      "decidedAt": "2026-03-10T05:12:42.433Z",
+      "source": "feishu_callback",
+      "reason": "终稿通过",
+      "messageId": "om_x100b55c3bbdb40a0b4aca13d4d796de"
     }
   ]
 }

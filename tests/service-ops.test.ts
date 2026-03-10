@@ -153,4 +153,9 @@ describe("service-ops protection helpers", () => {
       }),
     ).toBe(true);
   });
+
+  it("应识别 env 源文件与 launchd 目标文件冲突", () => {
+    expect(__test__.isEnvSourceSameAsLaunchdTarget("/tmp/.env.launchd", "/tmp/.env.launchd")).toBe(true);
+    expect(__test__.isEnvSourceSameAsLaunchdTarget("/repo/.env.local", "/tmp/.env.launchd")).toBe(false);
+  });
 });

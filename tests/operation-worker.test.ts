@@ -63,4 +63,33 @@ describe("executeOperationJob", () => {
       }),
     );
   });
+
+  it("run_weekly 未提供 mock 字段时应默认使用真实数据（mock=false）", async () => {
+    const executor = {
+      runReport: vi.fn(async () => "run_ok"),
+      recheckWeekly: vi.fn(async () => "recheck_ok"),
+      runWatchdog: vi.fn(async () => "watchdog_ok"),
+      notifyWeeklyReminder: vi.fn(async () => "reminder_ok"),
+      queryWeeklyStatus: vi.fn(async () => "status_ok"),
+      runGitSync: vi.fn(async () => "git_ok"),
+    };
+
+    await executeOperationJob(
+      buildJob({
+        jobType: "run_weekly",
+        payload: {
+          mode: "weekly",
+          reportDate: "2026-03-09",
+        },
+      }),
+      executor,
+    );
+
+    expect(executor.runReport).toHaveBeenCalledWith(
+      expect.objectContaining({
+        mode: "weekly",
+        mock: false,
+      }),
+    );
+  });
 });

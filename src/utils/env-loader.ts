@@ -71,8 +71,16 @@ function parseEnvValue(input: string): string {
     return "";
   }
 
-  if ((input.startsWith("\"") && input.endsWith("\"")) || (input.startsWith("'") && input.endsWith("'"))) {
-    return input.slice(1, -1);
+  const first = input[0];
+  if (first === "\"" || first === "'") {
+    // 兼容 `KEY="value" # comment` 写法：优先提取首个成对引号内的值，忽略尾部注释。
+    for (let i = 1; i < input.length; i += 1) {
+      if (input[i] === first) {
+        return input.slice(1, i);
+      }
+    }
+    // 若引号不闭合，保持原行为，避免静默吞掉用户输入问题。
+    return input;
   }
 
   const hashIndex = input.indexOf(" #");
@@ -85,4 +93,3 @@ function parseEnvValue(input: string): string {
 export const __test__ = {
   parseEnvValue,
 };
-

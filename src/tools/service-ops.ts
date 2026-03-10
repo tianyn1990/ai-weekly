@@ -244,6 +244,14 @@ async function collectSetupChecks(args: CliArgs, runner: CommandRunner): Promise
     fix: `可通过 AI_WEEKLY_LAUNCHD_ENV_FILE 覆盖默认值（当前默认 ${DEFAULT_LAUNCHD_ENV_FILE}）。`,
   });
 
+  checks.push({
+    id: "env_source_target_conflict",
+    title: "env 源文件与 launchd 目标文件分离",
+    ok: !isEnvSourceSameAsLaunchdTarget(args.envFilePath, args.launchdEnvFilePath),
+    detail: `source=${args.envFilePath}, target=${args.launchdEnvFilePath}`,
+    fix: "请将 AI_WEEKLY_ENV_FILE 指向项目 .env.local，并保留 AI_WEEKLY_LAUNCHD_ENV_FILE 指向 ~/.config/ai-weekly/.env.launchd。",
+  });
+
   const pathProtected = isLikelyTccProtectedPath(args.envFilePath);
   checks.push({
     id: "env_source_path_risk",
@@ -315,9 +323,16 @@ async function ensureLaunchdEnvFile(args: CliArgs): Promise<string> {
   const targetPath = args.launchdEnvFilePath;
   await fs.mkdir(path.dirname(targetPath), { recursive: true });
 
-  const sourceExists = await fileExists(args.envFilePath);
+  const sourcePath = await resolveEffectiveEnvSourcePath(args);
+  if (sourcePath !== args.envFilePath) {
+    // 当用户误把 AI_WEEKLY_ENV_FILE 指到 launchd 文件时，自动回退到项目 .env.local，
+    // 防止“自复制”导致关键参数（例如 LLM 配置）被长期丢失。
+    console.log(`[services-warn] 检测到 env 源/目标冲突，已自动改用 ${sourcePath} 作为同步源。`);
+  }
+
+  const sourceExists = await fileExists(sourcePath);
   if (sourceExists) {
-    const sourceContent = await fs.readFile(args.envFilePath, "utf-8");
+    const sourceContent = await fs.readFile(sourcePath, "utf-8");
     // launchd 进程读取受保护目录（如 Documents）常会被 TCC 拦截，统一同步到 ~/.config 降低权限风险。
     await fs.writeFile(targetPath, sourceContent, "utf-8");
   } else if (!(await fileExists(targetPath))) {
@@ -329,7 +344,8 @@ async function ensureLaunchdEnvFile(args: CliArgs): Promise<string> {
 }
 
 async function ensureTunnelConfig(args: CliArgs, envOverride?: Record<string, string>) {
-  const env = envOverride ?? (await loadEnvFromFile(args.envFilePath));
+  const sourcePath = await resolveEffectiveEnvSourcePath(args);
+  const env = envOverride ?? (await loadEnvFromFile(sourcePath));
   if (await fileExists(args.tunnelConfigPath)) {
     return;
   }
@@ -376,6 +392,24 @@ function parseArgs(argv: string[], projectRoot: string, env: NodeJS.ProcessEnv):
     logsTail: parsePositiveInt(env.SERVICE_LOGS_TAIL, 80),
     launchdEnvFilePath: env.AI_WEEKLY_LAUNCHD_ENV_FILE ?? DEFAULT_LAUNCHD_ENV_FILE,
   };
+}
+
+async function resolveEffectiveEnvSourcePath(args: Pick<CliArgs, "projectRoot" | "envFilePath" | "launchdEnvFilePath">): Promise<string> {
+  if (!isEnvSourceSameAsLaunchdTarget(args.envFilePath, args.launchdEnvFilePath)) {
+    return args.envFilePath;
+  }
+
+  const projectEnvPath = path.join(args.projectRoot, ".env.local");
+  const projectEnvResolved = path.resolve(projectEnvPath);
+  const launchdEnvResolved = path.resolve(args.launchdEnvFilePath);
+  if (projectEnvResolved !== launchdEnvResolved && (await fileExists(projectEnvPath))) {
+    return projectEnvPath;
+  }
+  return args.envFilePath;
+}
+
+function isEnvSourceSameAsLaunchdTarget(envFilePath: string, launchdEnvFilePath: string): boolean {
+  return path.resolve(envFilePath) === path.resolve(launchdEnvFilePath);
 }
 
 async function loadEnvFromFile(filePath: string): Promise<Record<string, string>> {
@@ -814,6 +848,7 @@ if (isMainModule()) {
 export const __test__ = {
   parseArgs,
   parseEnvFile,
+  isEnvSourceSameAsLaunchdTarget,
   renderCloudflaredConfig,
   parseCloudflaredConfigSummary,
   renderLaunchAgentPlist,

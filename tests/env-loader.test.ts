@@ -36,6 +36,8 @@ describe("env-loader", () => {
       WITH_COMMENT: "value",
     });
     expect(__test__.parseEnvValue("\"x\"")).toBe("x");
+    expect(__test__.parseEnvValue("\"8\" # inline")).toBe("8");
+    expect(__test__.parseEnvValue("'9' # inline")).toBe("9");
   });
 
   it("override=true 时应覆盖已有环境变量", async () => {
@@ -71,4 +73,3 @@ describe("env-loader", () => {
     expect(process.env.MINIMAX_API_KEY).toBe("from_process");
   });
 });
-

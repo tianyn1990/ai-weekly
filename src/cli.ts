@@ -768,7 +768,8 @@ function buildOperationPayloadFromFeishuAction(
   if (operation === "run_daily") {
     return {
       mode: "daily",
-      mock: true,
+      // 飞书主动触发默认执行真实数据，mock 仅保留给 CLI 显式演练。
+      mock: false,
       reportDate,
       generatedAt,
     };
@@ -776,7 +777,8 @@ function buildOperationPayloadFromFeishuAction(
   if (operation === "run_weekly") {
     return {
       mode: "weekly",
-      mock: true,
+      // 飞书主动触发默认执行真实数据，mock 仅保留给 CLI 显式演练。
+      mock: false,
       reportDate,
       generatedAt,
     };

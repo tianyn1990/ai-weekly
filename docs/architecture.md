@@ -283,6 +283,8 @@ daemon start
 - callback 只做“鉴权 + 入队 + 快速反馈”，长任务由 worker 异步执行，避免飞书回调超时。
 - daemon 启动后先执行一次补偿扫描，处理休眠/重启导致的漏触发。
 - 主动触发入口为“@机器人 -> 运维操作卡 -> operation_jobs 入队”。
+- 运维操作卡按钮覆盖 `run_daily` 与 `run_weekly`，用于日报/周报的手工补跑。
+- 运维卡 `run_weekly` 默认使用真实数据链路（`mock=false`），避免和线上行为脱节；mock 仅保留给 CLI 显式演练。
 - 审核动作写入后自动入队 `recheck_weekly`，减少人工补命令。
 - 自动入队的 `recheck_weekly` 视为系统内部动作，不群发主动触发回执，避免干扰审核对话。
 

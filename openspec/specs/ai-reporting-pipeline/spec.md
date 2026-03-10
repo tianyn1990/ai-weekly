@@ -282,6 +282,11 @@
 - **THEN** 系统先返回“已接收”反馈并创建 operation job
 - **AND** 由后台 worker 异步执行该任务并回执最终结果
 
+#### Scenario: Manual run action uses real data by default
+- **WHEN** 用户在运维卡点击 `run_weekly`（生成周报）
+- **THEN** 后台任务使用真实数据源采集（`mock=false`）执行流程
+- **AND** 若需 mock 演练，应通过 CLI `--mock` 显式触发
+
 ### Requirement: System SHALL auto-trigger recheck after accepted review action callback
 系统 SHALL 在审核动作回调成功写入后自动触发对应 recheck 流程，避免人工补执行命令。
 

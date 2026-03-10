@@ -1605,7 +1605,7 @@ function buildOperationControlCard(reportDate: string) {
       template: "turquoise",
       title: {
         tag: "plain_text",
-        content: `AI 周报主动触发面板（${reportDate}）`,
+        content: `AI 报告主动触发面板（${reportDate}）`,
       },
     },
     elements: [
@@ -1620,7 +1620,10 @@ function buildOperationControlCard(reportDate: string) {
       {
         tag: "action",
         actions: [
-          makeOperationButton("生成周报（mock）", "run_weekly", reportDate, false, "primary"),
+          // 日报与周报都提供手工触发入口，方便运维按需补跑真实链路。
+          makeOperationButton("生成日报（真实）", "run_daily", reportDate, false, "default"),
+          // 运维卡默认走真实数据链路，避免手工触发与线上行为不一致。
+          makeOperationButton("生成周报（真实）", "run_weekly", reportDate, false, "primary"),
           makeOperationButton("执行 recheck", "recheck_weekly", reportDate, false, "default"),
           makeOperationButton("watchdog dry-run", "watchdog_weekly_dry_run", reportDate, true, "default"),
           makeOperationButton("发送审核提醒", "notify_weekly_reminder", reportDate, false, "default"),

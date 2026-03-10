@@ -58,7 +58,7 @@ pnpm run services:status
 
 6) 飞书内触发一次实际流程
 - 在群里 `@应用机器人` 并发送：`运维`。
-- 在操作卡点击：`生成周报（mock）`。
+- 在操作卡点击：`生成日报（真实）` 或 `生成周报（真实）`。
 
 7) 完成审核动作
 - 点击 `大纲通过`，再点击 `终稿通过并发布`。
@@ -295,12 +295,14 @@ pnpm run feishu:fullflow
 Feishu 主动触发（M4.3）：
 - 在群里 `@应用机器人` 并发送包含“运维/操作卡/ops/触发”等关键词的文本。
 - 机器人会下发“主动触发面板”卡片，支持按钮触发：
-  - 生成周报（mock）
+  - 生成日报（真实）
+  - 生成周报（真实）
   - recheck
   - watchdog dry-run
   - 发送审核提醒
   - 查询本期状态
 - 点击按钮后先“受理入队”，任务完成后再群内回执 success/failed。
+- 说明：该入口默认走真实数据采集链路；如需 mock 演练，请使用 CLI 显式加 `--mock`。
 
 M4.3 运维备忘（防遗漏）：
 - 常驻运行命令：`pnpm run run:daemon`
@@ -420,10 +422,11 @@ REVIEW_CHAT_ID=""   # 必填
 REPORT_PUBLIC_BASE_URL=""
 
 # Service Runner（M4.4）
-# 可选：显式指定 env 文件路径；不填默认 <repo>/.env.local
+# 可选：显式指定“源配置”路径（建议保持为项目 .env.local）
 AI_WEEKLY_ENV_FILE="/Users/<your-user>/Documents/github/ai-weekly/.env.local"
-# 可选：launchd 实际读取的 env 路径；不填默认 ~/.config/ai-weekly/.env.launchd
+# 可选：launchd “运行快照”路径；不填默认 ~/.config/ai-weekly/.env.launchd
 AI_WEEKLY_LAUNCHD_ENV_FILE="/Users/<your-user>/.config/ai-weekly/.env.launchd"
+# 重要：不要把 AI_WEEKLY_ENV_FILE 配成与 AI_WEEKLY_LAUNCHD_ENV_FILE 相同路径
 # Named Tunnel 固定模式（长期运行推荐）
 CLOUDFLARED_TUNNEL_NAME="ai-weekly-callback"
 CLOUDFLARED_CONFIG_PATH="/Users/<your-user>/.cloudflared/config.yml"

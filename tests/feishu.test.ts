@@ -995,8 +995,11 @@ describe("Feishu callback payload adapter", () => {
 
   it("运维操作卡应包含主动触发按钮", () => {
     const card = __test__.buildOperationControlCard("2026-03-09");
-    const actions = (card.elements[1] as { actions: Array<{ value: { operation: string } }> }).actions;
+    const actions = (card.elements[1] as { actions: Array<{ text: { content: string }; value: { operation: string } }> }).actions;
+    expect(actions[0]?.text.content).toBe("生成日报（真实）");
+    expect(actions[1]?.text.content).toBe("生成周报（真实）");
     expect(actions.map((item) => item.value.operation)).toEqual([
+      "run_daily",
       "run_weekly",
       "recheck_weekly",
       "watchdog_weekly_dry_run",
