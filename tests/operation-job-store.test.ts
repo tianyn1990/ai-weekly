@@ -129,4 +129,115 @@ describe("DbOperationJobStore", () => {
       await fs.rm(tempDir, { recursive: true, force: true });
     }
   });
+
+  it("应支持对 running 任务记录中止请求并在后续落为 cancelled", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-opjob-"));
+    const dbPath = path.join(tempDir, "app.sqlite");
+    try {
+      const store = new DbOperationJobStore(new SqliteEngine(dbPath));
+      const created = await store.enqueue({
+        jobType: "run_weekly",
+        payload: { reportDate: "2026-03-10" },
+        dedupeKey: "manual_op:run_weekly:2026-03-10",
+      });
+      const picked = await store.pickNextPending();
+      expect(picked?.id).toBe(created.jobId);
+
+      const cancel = await store.requestCancelCurrent({
+        operator: "ou_test",
+        reason: "manual_abort",
+      });
+      expect(cancel.found).toBe(true);
+      expect(cancel.status).toBe("running");
+      expect(cancel.jobId).toBe(created.jobId);
+      expect(cancel.alreadyRequested).toBe(false);
+
+      const secondCancel = await store.requestCancelCurrent({
+        operator: "ou_test",
+        reason: "manual_abort",
+      });
+      expect(secondCancel.found).toBe(true);
+      expect(secondCancel.alreadyRequested).toBe(true);
+      expect(secondCancel.status).toBe("cancelled");
+
+      const afterSecond = await store.getById(created.jobId);
+      expect(afterSecond?.status).toBe("cancelled");
+
+      const requested = await store.isCancelRequested(created.jobId);
+      expect(requested).toBe(true);
+
+      // 中止请求后应立即释放 dedupe 占位，允许后续同动作重新入队。
+      const reEnqueue = await store.enqueue({
+        jobType: "run_weekly",
+        payload: { reportDate: "2026-03-10" },
+        dedupeKey: "manual_op:run_weekly:2026-03-10",
+      });
+      expect(reEnqueue.created).toBe(true);
+
+      const changed = await store.markCancelled(created.jobId, "cancelled_by_operator");
+      expect(changed).toBe(false);
+      const final = await store.getById(created.jobId);
+      expect(final?.status).toBe("cancelled");
+      expect(final?.lastError).toContain("cancel_requested_by:");
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it("应优先取消 pending 任务并直接标记 cancelled", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-opjob-"));
+    const dbPath = path.join(tempDir, "app.sqlite");
+    try {
+      const store = new DbOperationJobStore(new SqliteEngine(dbPath));
+      const created = await store.enqueue({
+        jobType: "notify_weekly_reminder",
+        payload: { generatedAt: "2026-03-10T01:00:00.000Z" },
+        dedupeKey: "manual_op:notify_weekly_reminder:2026-03-10",
+      });
+
+      const cancel = await store.requestCancelCurrent({
+        operator: "ou_test",
+      });
+      expect(cancel.found).toBe(true);
+      expect(cancel.status).toBe("cancelled");
+      expect(cancel.jobId).toBe(created.jobId);
+
+      const final = await store.getById(created.jobId);
+      expect(final?.status).toBe("cancelled");
+      // pending 被中止后也应释放 dedupe 占位，支持同动作立刻重提。
+      const reEnqueue = await store.enqueue({
+        jobType: "notify_weekly_reminder",
+        payload: { generatedAt: "2026-03-10T01:00:00.000Z" },
+        dedupeKey: "manual_op:notify_weekly_reminder:2026-03-10",
+      });
+      expect(reEnqueue.created).toBe(true);
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it("listActive 仅返回 pending/running 任务", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-opjob-"));
+    const dbPath = path.join(tempDir, "app.sqlite");
+    try {
+      const store = new DbOperationJobStore(new SqliteEngine(dbPath));
+      const a = await store.enqueue({
+        jobType: "run_weekly",
+        payload: { reportDate: "2026-03-11" },
+      });
+      const b = await store.enqueue({
+        jobType: "run_daily",
+        payload: { reportDate: "2026-03-11" },
+      });
+      const picked = await store.pickNextPending();
+      expect(picked?.id).toBe(a.jobId);
+      await store.markSuccess(b.jobId);
+
+      const active = await store.listActive(20);
+      expect(active.some((item) => item.id === a.jobId && item.status === "running")).toBe(true);
+      expect(active.some((item) => item.id === b.jobId)).toBe(false);
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
 });

@@ -40,13 +40,32 @@ export interface OperationJobExecutor {
   runGitSync(input: z.infer<typeof gitSyncPayloadSchema>): Promise<string>;
 }
 
-export async function executeOperationJob(job: OperationJob, executor: OperationJobExecutor): Promise<string> {
+export interface OperationJobExecutionHooks {
+  // 在关键阶段上报进度，供飞书通知或审计链路消费。
+  onProgress?: (input: { stage: string; detail: string }) => Promise<void>;
+  // 协作式中止检查：在阶段边界调用，命中后由上层抛出中止错误并结束任务。
+  ensureNotCancelled?: () => Promise<void>;
+}
+
+export async function executeOperationJob(
+  job: OperationJob,
+  executor: OperationJobExecutor,
+  hooks: OperationJobExecutionHooks = {},
+): Promise<string> {
+  const checkpoint = async (stage: string, detail: string) => {
+    await hooks.ensureNotCancelled?.();
+    await hooks.onProgress?.({ stage, detail });
+    await hooks.ensureNotCancelled?.();
+  };
+
   if (job.jobType === "run_daily" || job.jobType === "run_weekly") {
     const parsed = runJobPayloadSchema.parse(job.payload);
+    await checkpoint("run_report", `开始执行 ${parsed.mode} 报告生成`);
     return executor.runReport(parsed);
   }
 
   if (job.jobType === "recheck_weekly") {
+    await checkpoint("recheck_weekly", "开始执行周报复检");
     return executor.recheckWeekly(recheckPayloadSchema.parse(job.payload));
   }
 
@@ -55,16 +74,20 @@ export async function executeOperationJob(job: OperationJob, executor: Operation
       ...job.payload,
       dryRun: job.jobType === "watchdog_weekly_dry_run" ? true : job.payload.dryRun,
     });
+    await checkpoint("watchdog_weekly", `开始执行 watchdog（dryRun=${parsed.dryRun}）`);
     return executor.runWatchdog(parsed);
   }
 
   if (job.jobType === "notify_weekly_reminder") {
+    await checkpoint("notify_weekly_reminder", "开始执行审核提醒");
     return executor.notifyWeeklyReminder(reminderPayloadSchema.parse(job.payload));
   }
 
   if (job.jobType === "query_weekly_status") {
+    await checkpoint("query_weekly_status", "开始查询本期状态");
     return executor.queryWeeklyStatus(queryStatusPayloadSchema.parse(job.payload));
   }
 
+  await checkpoint("git_sync", "开始执行 Git 同步");
   return executor.runGitSync(gitSyncPayloadSchema.parse(job.payload));
 }

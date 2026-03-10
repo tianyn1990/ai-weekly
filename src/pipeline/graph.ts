@@ -47,6 +47,12 @@ const ReportStateAnnotation = Annotation.Root({
   llmAssistMinConfidence: Annotation<number>(),
   llmSummaryPromptVersion: Annotation<string>(),
   llmFallbackAlertEnabled: Annotation<boolean>(),
+  revisionAgentEnabled: Annotation<boolean>(),
+  revisionAgentMaxSteps: Annotation<number>(),
+  revisionAgentMaxWallClockMs: Annotation<number>(),
+  revisionAgentMaxLlmCalls: Annotation<number>(),
+  revisionAgentMaxToolErrors: Annotation<number>(),
+  revisionAgentPlannerTimeoutMs: Annotation<number>(),
   reviewInstructionRoot: Annotation<string>(),
   approveOutline: Annotation<boolean>(),
   approveFinal: Annotation<boolean>(),
@@ -122,7 +128,7 @@ const ReportStateAnnotation = Annotation.Root({
 export type CompiledReportGraph = ReturnType<typeof buildReportGraph>;
 
 export function buildReportGraph() {
-  // M2 进入“可审核+可自动发布”的流程：先审大纲，再审终稿，最后统一发布决策。
+  // M5.5 起周报默认单阶段终稿审核；保留 review_outline 节点仅用于历史动作兼容。
   return new StateGraph(ReportStateAnnotation)
     .addNode("collect_items", collectItemsNode)
     .addNode("normalize_items", normalizeItemsNode)

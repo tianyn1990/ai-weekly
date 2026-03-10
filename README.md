@@ -5,7 +5,7 @@
 ## 当前状态
 - 已完成 `docs/PRD.md`（冻结需求）。
 - 已完成 `docs/architecture.md`（系统设计）。
-- 已提供可运行流程：`collect -> normalize -> dedupe -> llm_classify_score -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> llm_summarize -> build_report`。
+- 已提供可运行流程：`collect -> normalize -> dedupe -> llm_classify_score -> rank -> build_outline -> review_outline(兼容) -> review_final -> publish_or_wait -> llm_summarize -> build_report`。
 - 周报审核支持「持久化指令优先，CLI 参数 fallback」、pending 周报复检发布、watchdog 守护扫描（含锁与重试）。
 - 已完成 M3.2：Feishu 待审核通知、11:30 提醒命令、发布结果回执、本地回调服务（2B：本地 + 隧道）。
 - 已完成 M3.3：`request_revision` 回流修订执行、runtime config 全局沉淀、`reject` 终止当前 run 发布。
@@ -18,6 +18,7 @@
 - 已完成 M5.2：前置 LLM 批量分类与全量打分（含重试/拆批降级）、排序融合、报告导语与英文标题中文化展示。
 - 已完成 M5.3：窗口型自适应降载与恢复、run 级诊断元数据、分类导读（LLM + 模板回退）。
 - 已完成 M5.4：采集层支持 `rss + github_search` 混合来源，新增 GitHub 热门开源一手采集与来源诊断增强。
+- 已完成 M5.5：周报单阶段终稿审核 + 受限 ReAct 修订回路（自由文本、checkpoint 续跑、失败分型）。
 - 分布式互斥暂缓，当前以单机 daemon 为部署基线。
 
 ## 环境要求
@@ -63,7 +64,7 @@ pnpm run services:status
 - 在操作卡点击：`生成日报（真实）` 或 `生成周报（真实）`。
 
 7) 完成审核动作
-- 点击 `大纲通过`，再点击 `终稿通过并发布`。
+- 直接点击 `终稿通过并发布`（`大纲通过`仅保留历史兼容，不再是必经步骤）。
 
 8) 排障日志（如果步骤 5/6 异常）
 ```bash
@@ -128,8 +129,11 @@ tsx src/cli.ts run --mode weekly --mock --storage-backend db --storage-no-fallba
 
 审核相关参数：
 ```bash
-# 周报大纲+终稿审核通过，立即发布
-tsx src/cli.ts run --mode weekly --mock --approve-outline --approve-final
+# 周报终稿审核通过，立即发布（单阶段）
+tsx src/cli.ts run --mode weekly --mock --approve-final
+
+# 历史兼容：若传 --approve-outline，只会返回兼容提示，不再推进独立阶段
+tsx src/cli.ts run --mode weekly --mock --approve-outline
 
 # 指定生成时间（用于回放“周一 12:30 超时自动发布”场景）
 tsx src/cli.ts run --mode weekly --mock --generated-at 2026-03-09T05:00:00.000Z
@@ -170,6 +174,18 @@ tsx src/cli.ts run --mode weekly \
   --llm-rank-fusion-weight 0.65
 ```
 
+ReAct 修订护栏参数（M5.5）：
+```bash
+# 默认值：enabled=true, max-steps=20, max-wall-clock-ms=600000, max-llm-calls=30, max-tool-errors=5
+tsx src/cli.ts run --mode weekly --mock \
+  --revision-agent-enabled \
+  --revision-agent-max-steps 20 \
+  --revision-agent-max-wall-clock-ms 600000 \
+  --revision-agent-max-llm-calls 30 \
+  --revision-agent-max-tool-errors 5 \
+  --revision-agent-planner-timeout-ms 30000
+```
+
 M5.3 输出增强说明：
 - 报告会新增“本期导语”区块（2-3 句）。
 - 报告会新增“分类导读”区块（主要分类 1 句导读，失败时模板回退）。
@@ -184,7 +200,6 @@ M5.3 输出增强说明：
   "mode": "weekly",
   "reportDate": "2026-03-09",
   "instructions": [
-    { "stage": "outline_review", "approved": true, "decidedAt": "2026-03-09T01:00:00.000Z" },
     { "stage": "final_review", "approved": true, "decidedAt": "2026-03-09T02:00:00.000Z" }
   ]
 }
@@ -201,6 +216,10 @@ M5.3 输出增强说明：
       "action": "request_revision",
       "decidedAt": "2026-03-10T09:20:00.000Z",
       "feedback": {
+        "revisionRequest": "补充两条 agent 工程化案例，并删除重复条目；若超时可继续执行未完成任务。",
+        "revisionScope": "all",
+        "revisionIntent": "content_update",
+        "continueFromCheckpoint": true,
         "candidateAdditions": [
           { "title": "新增 Agent 实战案例", "link": "https://example.com/agent-case", "category": "agent" }
         ],
@@ -388,9 +407,9 @@ https://<your-public-domain>/feishu/review-callback?token=<FEISHU_CALLBACK_AUTH_
 飞书卡片动作 value 字段约定（建议）：
 ```json
 {
-  "action": "approve_outline | approve_final | request_revision | reject",
+  "action": "approve_final | request_revision | reject | approve_outline(兼容)",
   "reportDate": "2026-03-09",
-  "stage": "outline_review | final_review",
+  "stage": "final_review",
   "reason": "可选审核意见",
   "messageId": "可选"
 }
@@ -463,6 +482,14 @@ DAEMON_SCHEDULER_INTERVAL_MS="30000"
 DAEMON_WORKER_POLL_MS="2000"
 DAEMON_MARKER_ROOT="outputs/daemon/schedule-markers"
 
+# ReAct 修订 Agent（M5.5）
+REVISION_AGENT_ENABLED="true"
+REVISION_AGENT_MAX_STEPS="20"
+REVISION_AGENT_MAX_WALL_CLOCK_MS="600000"
+REVISION_AGENT_MAX_LLM_CALLS="30"
+REVISION_AGENT_MAX_TOOL_ERRORS="5"
+REVISION_AGENT_PLANNER_TIMEOUT_MS="30000"
+
 # 自动 Git 同步（默认关闭）
 AUTO_GIT_SYNC="false"
 GIT_SYNC_PUSH="false"
@@ -484,7 +511,7 @@ GIT_PUSH_NO_PROXY=""
 
 飞书交互体验（M4.2）：
 - 待审核卡片为单主卡入口，同一 `reportDate + runId` 优先更新原卡，避免重复发卡。
-- 卡片按钮按阶段收敛：大纲阶段只显示大纲动作，终稿阶段只显示终稿动作。
+- 周报卡片按钮按单阶段收敛：仅显示“终稿通过并发布 / 要求修订 / 拒绝本次”。
 - 重复点击命中幂等后，仅返回“忽略重复提交，请以最新状态卡为准”反馈，不重复群发动作回执。
 - 系统自动入队的 `recheck` 为内部动作，不再群发“主动触发回执”；群里仅回显人工主动触发任务。
 

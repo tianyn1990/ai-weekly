@@ -27,4 +27,18 @@ describe("feedback-schema", () => {
   it("无有效字段时应返回 undefined", () => {
     expect(normalizeFeedbackPayload({ action: "approve_final" })).toBeUndefined();
   });
+
+  it("应支持自由文本修订字段归一化", () => {
+    const payload = normalizeFeedbackPayload({
+      revision_request: "请补充两条开源工具资讯，并删除重复条目",
+      revision_scope: "all",
+      revision_intent: "content_update",
+      continue_from_checkpoint: true,
+    });
+
+    expect(payload?.revisionRequest).toBe("请补充两条开源工具资讯，并删除重复条目");
+    expect(payload?.revisionScope).toBe("all");
+    expect(payload?.revisionIntent).toBe("content_update");
+    expect(payload?.continueFromCheckpoint).toBe(true);
+  });
 });

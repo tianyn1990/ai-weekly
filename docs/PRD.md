@@ -1,8 +1,8 @@
-# AI 周报项目 PRD（v1.0）
+# AI 周报项目 PRD（v1.1）
 
 ## 0. 文档状态
-- 版本：v1.0
-- 状态：M5.4 已实现基线
+- 版本：v1.1
+- 状态：M5.5 已实现基线
 - 更新时间：2026-03-10
 
 ## 1. 目标与读者
@@ -66,20 +66,25 @@
 
 ## 7. 自动化与审核策略
 - 自动化目标：采集、去重、分类、排序、草稿生成全自动。
-- 人工介入：周报至少支持「大纲审核 + 最终稿审核」。
+- 人工介入：周报采用「单次终稿审核 + 修订回路」。
 - 超时兜底：超过审核截止时间（周一 12:30）自动发布。
 - 审核后重发：支持人工复审后再次发布修订版。
 - 审核通知渠道：飞书（Feishu）应用机器人（app-only），用于关键节点待办、提醒与结果回执。
 - 审核触发方式：支持通过飞书完成审核动作输入（通过/打回/需修改）。
 - 点击反馈闭环：飞书卡片点击后必须有即时结果反馈（success/error），并向群内回执当前审核状态。
 - 审核入口形态：同一 `reportDate + runId` 保持单主卡入口，阶段推进优先更新主卡，减少重复发卡噪音。
-- 阶段化交互：`outline_review` 与 `final_review` 仅展示当前阶段应执行动作，避免误触无关按钮。
+- 阶段化交互：周报主卡仅暴露 `final_review` 动作集合，历史 `outline_review` 仅做兼容映射。
 - 回执文案：默认使用业务化短句，技术字段仅在 debug 模式下按需展示。
 - 重复点击处理：重复回调需返回“已处理/忽略重复提交”，且不重复群发动作回执。
 - 后台常驻模式：系统支持 daemon 持续运行，自动调度日报/周报、提醒与 watchdog，无需人工手动执行命令。
 - 主动触发模式：支持在飞书群里 @应用机器人拉起“运维操作卡”，通过按钮主动触发 run/recheck/watchdog/reminder/status。
 - 主动触发默认数据策略：运维卡的“生成周报”默认使用真实数据采集链路；mock 仅作为 CLI 显式测试能力保留。
 - 主动触发覆盖范围：运维卡需同时提供“生成日报（真实）”与“生成周报（真实）”入口，统一走异步入队与回执流程。
+- 主动触发状态查询：`query_weekly_status` 必须走回调直读路径，不得被 operation 队列阻塞。
+- 主动触发可观测性：执行类动作必须输出阶段通知（queued/started/progress/finished）与失败分类回执。
+- 主动触发止损能力：运维卡需提供“中止本次运行”入口，支持对 running/pending 任务发起 cancel。
+- 运行冲突控制：当同类触发已在运行中时，需发送“冲突控制通知”，支持“中止当前任务 / 中止并重新开始”；至少覆盖日报与周报生成动作。
+- 中止时效要求：当任务处于长执行步骤时，系统需支持“硬中止当前步骤”并快速回执，不得长时间停留在“中止处理中”。
 - 自动推进：审核动作写入成功后，系统自动入队并执行 recheck。
 - 链接可读性：飞书通知需支持附加可点击的公网报告链接（当配置 `REPORT_PUBLIC_BASE_URL` 时）。
 - 状态远程可审阅：待审核与已发布产物支持自动 Git 同步，方便在仓库直接审核。
@@ -91,14 +96,20 @@
   - 数据源开关与权重调整
   - 分类/排序权重调整
 - 打回策略：支持将周报从终稿审核打回到修订阶段，修订后再次进入审核。
+- 修订输入策略：`request_revision` 支持自由文本主输入，并支持可选字段（修订范围、修订意图、checkpoint 续跑）。
+- 修订执行策略：采用受限 ReAct（Planner + Tool Executor），禁止整文自由改写，确保可审计。
 
 ### 7.1 审核动作字典（M3.2 必须）
-- `approve_outline`：大纲通过，进入终稿审核。
+- `approve_outline`：历史兼容动作，仅返回提示，不再作为新流程审核门。
 - `approve_final`：终稿通过，立即发布。
 - `request_revision`：要求修订，进入修订分支后再次终稿审核。
 - `reject`：终止本轮发布尝试，保留产物与审计记录。
 
 ### 7.2 审核意见回流指令（M3.3 必须）
+- `revision_request`：自由文本修订请求（主输入）。
+- `revision_scope`：修订范围（`all/category/item`）。
+- `revision_intent`：修订意图（`general_refine/content_update/...`）。
+- `continue_from_checkpoint`：是否从上次 checkpoint 续跑。
 - `candidate_additions`：人工新增候选条目（title/link/snippet/categoryHint）。
 - `candidate_removals`：人工删除候选条目（id/link）。
 - `new_topics`：新增主题词，用于后续检索和分组强化。
@@ -153,13 +164,14 @@
 - M5.2：前置 LLM 批量分类/全量打分 + 排序融合 + 报告导语 + 英文标题翻译（含全局并发闸门）【已完成】。
 - M5.3：自适应降载与运行诊断 + 分类导读（LLM + 模板回退）【已完成】。
 - M5.4：GitHub Search 一手开源采集 + 精选 RSS 扩展 + 诊断增强【已完成】。
+- M5.5：单阶段终稿审核 + ReAct 修订回路（自由文本、checkpoint 续跑、失败分型）【已完成】。
 - M6：月报/季报/年报聚合与趋势分析。
 
 ## 12. 可测试验收清单（新增）
 ### 12.1 M3.2（飞书协同）验收
 - [ ] 周报待审核生成后，飞书收到待办通知（包含 reportDate、审核截止、review 文件路径）。
-- [ ] 审核人在飞书执行 `approve_outline` 后，状态从 `outline_review` 进入 `final_review`。
 - [ ] 审核人在飞书执行 `approve_final` 后，状态变为 `approved` 且产物发布。
+- [ ] 历史 `approve_outline` 动作触发时，系统返回兼容提示，不阻断流程。
 - [ ] 截止前至少有一次飞书提醒；截止后发布结果可回执到飞书。
 - [ ] 飞书链路不可用时，CLI fallback 仍可完成审核与发布兜底。
 
@@ -222,7 +234,7 @@
 
 ### 12.6 M4.2（飞书交互重构）验收
 - [ ] 待审核通知采用阶段引导卡片，明确“当前状态 + 下一步 + 截止时间 + 可点击链接”。
-- [ ] `outline_review` 与 `final_review` 阶段按钮集合不同，且不展示跨阶段动作。
+- [ ] 周报主卡仅展示“终稿通过并发布 / 要求修订 / 拒绝本次”三类动作。
 - [ ] 同一 `reportDate + runId` 在阶段推进时优先更新主卡，不新增重复操作卡。
 - [ ] 主卡更新失败时自动降级新发，并保持流程可继续。
 - [ ] 重复回调只返回“忽略重复提交”反馈，不重复群发动作回执。
@@ -232,6 +244,9 @@
 - [ ] daemon 重启后可执行补偿扫描，避免错过关键时间窗口。
 - [ ] 飞书群内 @应用机器人可收到“运维操作卡”，并可按钮触发主动任务。
 - [ ] 主动触发任务采用“入队异步执行 + 完成回执”模式，避免回调超时。
+- [ ] `query_weekly_status` 在存在长任务时仍可即时返回（不入队）。
+- [ ] 执行类任务可看到阶段通知（已入队/开始执行/执行中/完成或失败）。
+- [ ] 运维卡“中止本次运行”可对 running/pending 任务生效，并返回明确结果回执。
 - [ ] 审核动作写入后可自动触发 recheck，无需人工补执行。
 - [ ] `outputs/review` / `outputs/published` / `outputs/review-instructions` / `outputs/runtime-config` 支持自动 Git 同步（可选 push 代理）。
 
@@ -242,3 +257,10 @@
 - [ ] 执行 `pnpm run services:restart` 可稳定重启双服务，`services:down` 可一致停止双服务。
 - [ ] `pnpm run services:logs` 可查看 daemon/tunnel 日志，便于排障。
 - [ ] `pnpm run feishu:tunnel` 仍可用于临时联调，且命令输出明确提示“URL 非稳定，不建议长期运行”。
+
+### 12.13 M5.5（单阶段审核 + ReAct 修订）验收
+- [ ] weekly 新 run 默认进入 `final_review`，不再进入新的 `outline_review` 阶段。
+- [ ] `request_revision` 支持自由文本意见，且支持 `revision_scope/revision_intent` 可选字段。
+- [ ] ReAct 修订节点受护栏约束：`REVISION_AGENT_MAX_STEPS`、`REVISION_AGENT_MAX_WALL_CLOCK_MS`、`REVISION_AGENT_MAX_LLM_CALLS`、`REVISION_AGENT_MAX_TOOL_ERRORS`。
+- [ ] 修订中断后可通过 `continue_from_checkpoint=true` 续跑未完成任务，已完成任务不重复执行。
+- [ ] 修订失败时返回结构化失败原因与后续建议（编辑后重试 / 继续执行 / 直接发布）。

@@ -52,8 +52,8 @@ export function decideReviewAndPublish(input: ReviewPolicyInput): ReviewPolicyRe
     };
   }
 
-  if (outlineApproved && finalApproved) {
-    // 周报双重审核通过后立即发布，状态标记为 approved。
+  if (finalApproved) {
+    // M5.5 起周报改为单阶段终稿审核：只要终稿通过即可发布。
     return {
       reviewStatus: "approved",
       reviewStage: "none",
@@ -91,15 +91,9 @@ export function decideReviewAndPublish(input: ReviewPolicyInput): ReviewPolicyRe
 }
 
 export function resolvePendingStage(outlineApproved: boolean, finalApproved: boolean): ReviewStage {
-  if (!outlineApproved) {
-    return "outline_review";
-  }
-
-  if (!finalApproved) {
-    return "final_review";
-  }
-
-  return "none";
+  // 兼容保留 outlineApproved 入参，但在单阶段模型下仅以 finalApproved 判定待审阶段。
+  void outlineApproved;
+  return finalApproved ? "none" : "final_review";
 }
 
 function isDeadlineReached(generatedAt: string, reviewDeadlineAt: string | null): boolean {

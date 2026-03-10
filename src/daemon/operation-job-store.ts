@@ -131,7 +131,7 @@ export class DbOperationJobStore {
         `
         UPDATE operation_jobs
         SET status = 'success', finished_at = $now, updated_at = $now, last_error = NULL
-        WHERE id = $id;
+        WHERE id = $id AND status IN ('running', 'pending');
         `,
         { $id: jobId, $now: now },
       );
@@ -141,12 +141,19 @@ export class DbOperationJobStore {
   async markFailed(jobId: number, errorMessage: string): Promise<{ requeued: boolean; retryCount: number }> {
     const now = new Date().toISOString();
     return this.engine.write((ctx) => {
-      const row = ctx.queryOne<{ retry_count: number; max_retries: number }>(
-        "SELECT retry_count, max_retries FROM operation_jobs WHERE id = $id LIMIT 1;",
+      const row = ctx.queryOne<{ retry_count: number; max_retries: number; status: string }>(
+        "SELECT retry_count, max_retries, status FROM operation_jobs WHERE id = $id LIMIT 1;",
         { $id: jobId },
       );
       if (!row) {
         return { requeued: false, retryCount: 0 };
+      }
+      if (row.status === "cancelled") {
+        // 已进入取消终态后，失败回写不应覆盖取消结果。
+        return { requeued: false, retryCount: row.retry_count };
+      }
+      if (row.status !== "running") {
+        return { requeued: false, retryCount: row.retry_count };
       }
 
       const nextRetry = row.retry_count + 1;
@@ -173,6 +180,124 @@ export class DbOperationJobStore {
       );
 
       return { requeued: shouldRequeue, retryCount: nextRetry };
+    });
+  }
+
+  async markCancelled(jobId: number, reason: string): Promise<boolean> {
+    const now = new Date().toISOString();
+    return this.engine.write((ctx) => {
+      const row = ctx.queryOne<{ status: string }>("SELECT status FROM operation_jobs WHERE id = $id LIMIT 1;", { $id: jobId });
+      if (!row) {
+        return false;
+      }
+      if (row.status === "cancelled" || row.status === "success" || row.status === "failed") {
+        return false;
+      }
+
+      ctx.run(
+        `
+        UPDATE operation_jobs
+        SET status = 'cancelled', dedupe_key = NULL, last_error = $reason, finished_at = $now, updated_at = $now
+        WHERE id = $id;
+        `,
+        { $id: jobId, $reason: reason, $now: now },
+      );
+      return true;
+    });
+  }
+
+  async requestCancelCurrent(input: { operator?: string; reason?: string }): Promise<{
+    found: boolean;
+    jobId?: number;
+    jobType?: OperationJobType;
+    status?: OperationJobStatus;
+    alreadyRequested?: boolean;
+  }> {
+    const now = new Date().toISOString();
+    const reason = formatCancelReason(input);
+    return this.engine.write((ctx) => {
+      // 先取 running，再回退 pending，保证“中止本次运行”优先作用于正在执行的任务。
+      const target = ctx.queryOne<{ id: number; job_type: string; status: string; last_error: string | null }>(
+        `
+        SELECT id, job_type, status, last_error
+        FROM operation_jobs
+        WHERE status IN ('running', 'pending')
+        ORDER BY CASE WHEN status = 'running' THEN 0 ELSE 1 END ASC, created_at ASC, id ASC
+        LIMIT 1;
+        `,
+      );
+      if (!target?.id) {
+        return { found: false };
+      }
+
+      if (target.status === "pending") {
+        ctx.run(
+          `
+          UPDATE operation_jobs
+          SET status = 'cancelled', dedupe_key = NULL, last_error = $reason, finished_at = $now, updated_at = $now
+          WHERE id = $id AND status = 'pending';
+          `,
+          { $id: target.id, $reason: reason, $now: now },
+        );
+        return {
+          found: true,
+          jobId: target.id,
+          jobType: target.job_type as OperationJobType,
+          status: "cancelled",
+        };
+      }
+
+      const alreadyRequested = isCancelRequestedMessage(target.last_error ?? undefined);
+      if (!alreadyRequested) {
+        ctx.run(
+          `
+          UPDATE operation_jobs
+          SET dedupe_key = NULL, last_error = $reason, updated_at = $now
+          WHERE id = $id AND status = 'running';
+          `,
+          { $id: target.id, $reason: reason, $now: now },
+        );
+      } else {
+        // 二次点击中止可视为“强制结束”意图：直接落终态，避免僵尸 running 长时间占用 dedupe 队列入口。
+        ctx.run(
+          `
+          UPDATE operation_jobs
+          SET status = 'cancelled', dedupe_key = NULL, finished_at = $now, updated_at = $now
+          WHERE id = $id AND status = 'running';
+          `,
+          { $id: target.id, $now: now },
+        );
+        return {
+          found: true,
+          jobId: target.id,
+          jobType: target.job_type as OperationJobType,
+          status: "cancelled",
+          alreadyRequested: true,
+        };
+      }
+      return {
+        found: true,
+        jobId: target.id,
+        jobType: target.job_type as OperationJobType,
+        status: "running",
+        alreadyRequested,
+      };
+    });
+  }
+
+  async isCancelRequested(jobId: number): Promise<boolean> {
+    return this.engine.read((ctx) => {
+      const row = ctx.queryOne<{ status: string; last_error: string | null }>(
+        "SELECT status, last_error FROM operation_jobs WHERE id = $id LIMIT 1;",
+        { $id: jobId },
+      );
+      if (!row) {
+        return false;
+      }
+      if (row.status === "cancelled") {
+        return true;
+      }
+      return isCancelRequestedMessage(row.last_error ?? undefined);
     });
   }
 
@@ -210,6 +335,33 @@ export class DbOperationJobStore {
       return rows.map((row) => toOperationJob(operationJobRowSchema.parse(row)));
     });
   }
+
+  async listActive(limit = 50): Promise<OperationJob[]> {
+    return this.engine.read((ctx) => {
+      const rows = ctx.queryMany<Record<string, unknown>>(
+        `
+        SELECT id, job_type, status, payload_json, dedupe_key, created_by, source, trace_id,
+               retry_count, max_retries, last_error, started_at, finished_at, created_at, updated_at
+        FROM operation_jobs
+        WHERE status IN ('pending', 'running')
+        ORDER BY created_at ASC, id ASC
+        LIMIT $limit;
+        `,
+        { $limit: Math.max(1, Math.min(500, limit)) },
+      );
+      return rows.map((row) => toOperationJob(operationJobRowSchema.parse(row)));
+    });
+  }
+}
+
+function formatCancelReason(input: { operator?: string; reason?: string }) {
+  const operator = input.operator?.trim() || "unknown";
+  const reason = input.reason?.trim() || "manual_cancel";
+  return `cancel_requested_by:${operator};reason=${reason}`;
+}
+
+function isCancelRequestedMessage(message: string | undefined): boolean {
+  return typeof message === "string" && message.startsWith("cancel_requested_by:");
 }
 
 function toOperationJob(row: z.infer<typeof operationJobRowSchema>): OperationJob {

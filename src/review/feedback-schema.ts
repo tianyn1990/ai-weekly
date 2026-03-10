@@ -49,8 +49,24 @@ const rankingWeightAdjustmentSchema: z.ZodType<FeedbackRankingWeightAdjustment> 
   weight: z.number().min(0).max(3),
 });
 
+const revisionScopeSchema = z.enum(["all", "category", "item"]);
+
+const revisionIntentSchema = z.enum([
+  "general_refine",
+  "content_update",
+  "structure_adjust",
+  "add_information",
+  "remove_information",
+  "other",
+]);
+
 export const reviewFeedbackPayloadSchema: z.ZodType<ReviewFeedbackPayload> = z
   .object({
+    // 自由文本修订入口：供 ReAct Planner 拆解多条任务。
+    revisionRequest: z.string().min(1).optional(),
+    revisionScope: revisionScopeSchema.optional(),
+    revisionIntent: revisionIntentSchema.optional(),
+    continueFromCheckpoint: z.boolean().optional(),
     candidateAdditions: z.array(candidateAdditionSchema).optional(),
     candidateRemovals: z.array(candidateRemovalSchema).optional(),
     newTopics: z.array(z.string().min(1)).optional(),
@@ -69,6 +85,7 @@ export const reviewFeedbackPayloadSchema: z.ZodType<ReviewFeedbackPayload> = z
         (value.sourceToggles && value.sourceToggles.length > 0) ||
         (value.sourceWeightAdjustments && value.sourceWeightAdjustments.length > 0) ||
         (value.rankingWeightAdjustments && value.rankingWeightAdjustments.length > 0) ||
+        value.revisionRequest ||
         value.editorNotes,
     );
     if (!hasDirective) {
@@ -86,6 +103,14 @@ export function normalizeFeedbackPayload(input: unknown): ReviewFeedbackPayload 
   }
 
   const normalized: ReviewFeedbackPayload = {
+    revisionRequest: readString(input, "revisionRequest") ?? readString(input, "revision_request"),
+    revisionScope: (readString(input, "revisionScope") ?? readString(input, "revision_scope")) as
+      | ReviewFeedbackPayload["revisionScope"]
+      | undefined,
+    revisionIntent: (readString(input, "revisionIntent") ?? readString(input, "revision_intent")) as
+      | ReviewFeedbackPayload["revisionIntent"]
+      | undefined,
+    continueFromCheckpoint: readBoolean(input, "continueFromCheckpoint", "continue_from_checkpoint"),
     candidateAdditions: readArray(input, "candidateAdditions", "candidate_additions"),
     candidateRemovals: readArray(input, "candidateRemovals", "candidate_removals"),
     newTopics: readStringArray(input, "newTopics", "new_topics"),
@@ -159,6 +184,11 @@ function readStringArray(input: Record<string, unknown>, camelKey: string, snake
 function readString(input: Record<string, unknown>, key: string): string | undefined {
   const value = input[key];
   return typeof value === "string" && value.length > 0 ? value : undefined;
+}
+
+function readBoolean(input: Record<string, unknown>, camelKey: string, snakeKey: string): boolean | undefined {
+  const value = input[camelKey] ?? input[snakeKey];
+  return typeof value === "boolean" ? value : undefined;
 }
 
 function isRecord(input: unknown): input is Record<string, unknown> {

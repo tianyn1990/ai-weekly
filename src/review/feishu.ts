@@ -102,9 +102,10 @@ export interface ReviewActionPayload {
 
 export interface FeishuOperationActionPayload {
   mode: "weekly";
-  operation: OperationJobType;
+  operation: FeishuOperationActionType;
   reportDate?: string;
   generatedAt?: string;
+  targetOperation?: OperationJobType;
   dryRun?: boolean;
   operator?: string;
   reason?: string;
@@ -119,6 +120,8 @@ export interface FeishuMentionEventPayload {
   traceId?: string;
   messageId?: string;
 }
+
+export type FeishuOperationActionType = OperationJobType | "cancel_current_operation" | "cancel_and_retry_operation";
 
 export interface StartFeishuCallbackServerInput {
   host: string;
@@ -163,7 +166,8 @@ export interface FeishuCallbackAuditEvent {
 // tenant token 在单进程内短期缓存，减少每条通知都请求鉴权接口的开销与限流风险。
 const tenantTokenCache = new Map<string, { token: string; expireAtMs: number }>();
 const REVIEW_ACTION_SEMANTIC_DEDUP_SECONDS = 120;
-const CALLBACK_EVENT_DEDUP_SECONDS = 120;
+const MENTION_EVENT_DEDUP_SECONDS = 900;
+const OPERATION_EVENT_DEDUP_SECONDS = 120;
 const ACTION_RECEIPT_DEDUP_SECONDS = 120;
 const MAIN_CARD_SAME_STAGE_NOOP_SECONDS = 45;
 
@@ -223,15 +227,17 @@ export class FeishuNotifier {
 
   async notifyReviewPending(input: FeishuReviewNotification): Promise<boolean> {
     const reviewUrl = this.buildPublicUrl(input.reviewMarkdownPath);
-    const stageLabel = input.reviewStage === "outline_review" ? "待大纲审核" : "待终稿审核";
+    // 历史 run 仍可能写入 outline_review，这里统一映射为 final_review，避免用户看到双阶段入口。
+    const effectiveStage = input.reviewStage === "outline_review" ? "final_review" : input.reviewStage;
+    const stageLabel = "待终稿审核";
     const deadlineLabel = input.reviewDeadlineAt
       ? dayjs(input.reviewDeadlineAt).format("YYYY-MM-DD HH:mm")
       : "未设置";
-    const guide = input.reviewStage === "outline_review" ? "请先快速浏览重点摘要，再点击“大纲通过”。" : "请确认内容可发布后，点击“终稿通过并发布”。";
+    const guide = "请确认内容可发布后，点击“终稿通过并发布”。";
 
     const card = buildReviewMainCard({
       reportDate: input.reportDate,
-      stage: input.reviewStage,
+      stage: effectiveStage,
       stageLabel,
       guide,
       deadlineLabel,
@@ -247,7 +253,7 @@ export class FeishuNotifier {
     const upserted = await this.upsertMainReviewCard({
       reportDate: input.reportDate,
       runId: input.runId,
-      stage: input.reviewStage,
+      stage: effectiveStage,
       card,
     });
 
@@ -329,6 +335,9 @@ export class FeishuNotifier {
         "【AI 周报审核动作回执】",
         `${operator} 的操作未生效：${actionLabel}。`,
         ...(input.errorMessage ? [`原因：${input.errorMessage}`] : []),
+        ...(input.action === "request_revision"
+          ? ["可继续操作：编辑修订意见后重试，或直接点击“终稿通过并发布”进行人工兜底。"]
+          : []),
       ].join("\n");
       return this.sendText(text);
     }
@@ -351,17 +360,40 @@ export class FeishuNotifier {
     return Boolean(messageId);
   }
 
+  async notifyOperationConflictControlCard(input: {
+    reportDate: string;
+    operation: OperationJobType;
+    runningJobId: number;
+    chatId?: string;
+  }): Promise<boolean> {
+    if (!hasAppConfig(this.config)) {
+      return false;
+    }
+
+    // 运行冲突时提供“中止/中止并重试”快捷入口，减少运维人工来回操作成本。
+    const card = buildOperationConflictControlCard({
+      reportDate: input.reportDate,
+      operation: input.operation,
+      runningJobId: input.runningJobId,
+    });
+    const messageId = await this.sendInteractiveCard(card, input.chatId);
+    return Boolean(messageId);
+  }
+
   async notifyOperationResult(input: {
     operator?: string;
-    operation: OperationJobType;
-    result: "success" | "failed";
+    operation: FeishuOperationActionType;
+    result: "queued" | "started" | "progress" | "success" | "failed" | "cancelled";
     detail: string;
+    jobId?: number;
   }): Promise<boolean> {
     const operator = input.operator ?? "某位同学";
-    const statusText = input.result === "success" ? "执行成功" : "执行失败";
+    const statusText = toOperationResultLabel(input.result);
+    const header = input.result === "success" || input.result === "failed" ? "【AI 报告主动触发回执】" : "【AI 报告主动触发进度】";
+    const jobLabel = input.jobId ? `（job=${input.jobId}）` : "";
     const text = [
-      "【AI 报告主动触发回执】",
-      `${operator} 触发了：${toOperationLabel(input.operation)}`,
+      header,
+      `${operator} 触发了：${toOperationLabel(input.operation)}${jobLabel}`,
       `结果：${statusText}`,
       `详情：${input.detail}`,
     ].join("\n");
@@ -615,7 +647,10 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
           reportDate: parsed.payload.chatId,
           actionOrOperation: parsed.payload.text,
         });
-        if (isRecentDuplicateEvent(mentionEventDedupeCache, mentionDedupeKey, CALLBACK_EVENT_DEDUP_SECONDS)) {
+        if (isRecentDuplicateEvent(mentionEventDedupeCache, mentionDedupeKey, MENTION_EVENT_DEDUP_SECONDS)) {
+          console.log(
+            `[feishu-callback] duplicated mention messageId=${parsed.payload.messageId ?? "none"}, traceId=${parsed.payload.traceId ?? "none"}`,
+          );
           res.writeHead(200, { "content-type": "application/json" });
           res.end(
             JSON.stringify({
@@ -647,6 +682,9 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
         }
 
         const mentionResult = await input.mentionHandler(parsed.payload);
+        console.log(
+          `[feishu-callback] accepted mention messageId=${parsed.payload.messageId ?? "none"}, traceId=${parsed.payload.traceId ?? "none"}, handled=${mentionResult.handled}`,
+        );
         res.writeHead(200, { "content-type": "application/json" });
         res.end(
           JSON.stringify({
@@ -668,7 +706,7 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
           reportDate: parsed.payload.reportDate,
           actionOrOperation: parsed.payload.operation,
         });
-        if (isRecentDuplicateEvent(operationEventDedupeCache, operationDedupeKey, CALLBACK_EVENT_DEDUP_SECONDS)) {
+        if (isRecentDuplicateEvent(operationEventDedupeCache, operationDedupeKey, OPERATION_EVENT_DEDUP_SECONDS)) {
           res.writeHead(200, { "content-type": "application/json" });
           res.end(
             JSON.stringify({
@@ -974,6 +1012,19 @@ const operationTypeSchema = z.enum([
   "watchdog_weekly_dry_run",
   "notify_weekly_reminder",
   "query_weekly_status",
+  "cancel_current_operation",
+  "cancel_and_retry_operation",
+  "git_sync",
+]);
+
+const operationJobTypeSchema = z.enum([
+  "run_daily",
+  "run_weekly",
+  "recheck_weekly",
+  "watchdog_weekly",
+  "watchdog_weekly_dry_run",
+  "notify_weekly_reminder",
+  "query_weekly_status",
   "git_sync",
 ]);
 
@@ -985,6 +1036,7 @@ const operationPayloadSchema = z.object({
     .regex(/^\d{4}-\d{2}-\d{2}$/)
     .optional(),
   generatedAt: z.string().datetime().optional(),
+  targetOperation: operationJobTypeSchema.optional(),
   dryRun: z.boolean().optional(),
   operator: z.string().min(1).optional(),
   reason: z.string().optional(),
@@ -1153,6 +1205,11 @@ function adaptFeishuCardActionPayload(input: unknown) {
     getString(value, "op_action") ??
     getString(value, "operation_action") ??
     getString(value, "operationAction");
+  const targetOperation =
+    getString(value, "targetOperation") ??
+    getString(value, "target_operation") ??
+    getString(value, "retryOperation") ??
+    getString(value, "retry_operation");
 
   const reportDate = getString(value, "reportDate") ?? getString(value, "report_date");
   const stage = getString(value, "stage");
@@ -1180,6 +1237,7 @@ function adaptFeishuCardActionPayload(input: unknown) {
       operation,
       ...(reportDate ? { reportDate } : {}),
       ...(decidedAt ? { generatedAt: decidedAt } : {}),
+      ...(targetOperation ? { targetOperation } : {}),
       ...(operator ? { operator } : {}),
       ...(reason ? { reason } : {}),
       ...(traceId ? { traceId } : {}),
@@ -1239,8 +1297,8 @@ function extractMentionEvent(input: unknown): FeishuMentionEventPayload | null {
     return null;
   }
 
-  // 只在明显的主动触发关键词出现时当作“运维操作卡请求”，避免污染普通群消息。
-  if (!/(运维|操作卡|ops|触发|recheck|watchdog)/i.test(text)) {
+  // 仅识别“明确命令式”文本，避免把系统回执里的“触发了/执行 recheck”误判成新的运维请求。
+  if (!isOperationPanelMentionText(text)) {
     return null;
   }
 
@@ -1418,7 +1476,7 @@ function inferActionStatusEcho(action: ReviewInstructionAction): FeishuActionSta
       reviewStatus: "pending_review",
       publishStatus: "pending",
       shouldPublish: false,
-      note: "大纲动作已记录，等待 recheck 进入终稿审核",
+      note: "已兼容历史大纲动作；当前流程为单阶段终稿审核。",
     };
   }
 
@@ -1453,7 +1511,7 @@ function inferActionStatusEcho(action: ReviewInstructionAction): FeishuActionSta
 
 function toActionLabel(action: ReviewInstructionAction) {
   if (action === "approve_outline") {
-    return "大纲通过";
+    return "大纲通过（兼容）";
   }
   if (action === "approve_final") {
     return "终稿通过并发布";
@@ -1464,7 +1522,9 @@ function toActionLabel(action: ReviewInstructionAction) {
   return "拒绝本次发布";
 }
 
-function toOperationLabel(operation: OperationJobType) {
+function toOperationLabel(operation: FeishuOperationActionType) {
+  if (operation === "cancel_current_operation") return "中止本次运行";
+  if (operation === "cancel_and_retry_operation") return "中止并重启任务";
   if (operation === "run_daily") return "生成日报";
   if (operation === "run_weekly") return "生成周报";
   if (operation === "recheck_weekly") return "执行 recheck";
@@ -1473,6 +1533,15 @@ function toOperationLabel(operation: OperationJobType) {
   if (operation === "notify_weekly_reminder") return "发送审核提醒";
   if (operation === "query_weekly_status") return "查询本期状态";
   return "执行 Git 同步";
+}
+
+function toOperationResultLabel(result: "queued" | "started" | "progress" | "success" | "failed" | "cancelled") {
+  if (result === "queued") return "已受理入队";
+  if (result === "started") return "开始执行";
+  if (result === "progress") return "执行中";
+  if (result === "success") return "执行成功";
+  if (result === "failed") return "执行失败";
+  return "已中止";
 }
 
 function resolveStatusEchoText(statusEcho: FeishuActionStatusEcho | undefined) {
@@ -1631,9 +1700,10 @@ function buildDailyPublishCard(input: {
 function buildStageActions(stage: FeishuMainCardRecord["stage"], reportDate: string) {
   if (stage === "outline_review") {
     return [
-      makeCardButton("大纲通过", "approve_outline", reportDate, "primary", "大纲通过"),
-      makeCardButton("要求修订", "request_revision", reportDate, "default", "大纲需调整"),
-      makeCardButton("拒绝本次", "reject", reportDate, "danger", "大纲拒绝"),
+      // 单阶段审核下兼容历史 outline 状态：统一渲染终稿动作，避免再次暴露旧动作按钮。
+      makeCardButton("终稿通过并发布", "approve_final", reportDate, "primary", "终稿通过"),
+      makeCardButton("要求修订", "request_revision", reportDate, "default", "终稿需调整"),
+      makeCardButton("拒绝本次", "reject", reportDate, "danger", "终稿拒绝"),
     ];
   }
   if (stage === "final_review") {
@@ -1671,7 +1741,7 @@ function buildOperationControlCard(reportDate: string) {
         tag: "markdown",
         content: [
           "**用途**：用于测试、补偿触发和排障。",
-          "**执行方式**：点击后先受理入队，后台异步执行，完成后群内回执结果。",
+          "**执行方式**：执行类动作会先受理入队并异步执行；状态查询与中止为即时控制动作。",
           `**默认 reportDate**：${reportDate}`,
         ].join("\n"),
       },
@@ -1686,6 +1756,55 @@ function buildOperationControlCard(reportDate: string) {
           makeOperationButton("watchdog dry-run", "watchdog_weekly_dry_run", reportDate, true, "default"),
           makeOperationButton("发送审核提醒", "notify_weekly_reminder", reportDate, false, "default"),
           makeOperationButton("查询本期状态", "query_weekly_status", reportDate, false, "default"),
+          makeOperationButton("中止本次运行", "cancel_current_operation", reportDate, false, "danger"),
+        ],
+      },
+    ],
+  };
+}
+
+function buildOperationConflictControlCard(input: {
+  reportDate: string;
+  operation: OperationJobType;
+  runningJobId: number;
+}) {
+  return {
+    config: { wide_screen_mode: true },
+    header: {
+      template: "orange",
+      title: {
+        tag: "plain_text",
+        content: `AI 报告运行冲突提示（${input.reportDate}）`,
+      },
+    },
+    elements: [
+      {
+        tag: "markdown",
+        content: [
+          `检测到同类任务正在执行（job=${input.runningJobId}）。`,
+          `当前动作：${toOperationLabel(input.operation)}`,
+          "你可以选择“中止当前任务”或“中止并重新开始”。",
+        ].join("\n"),
+      },
+      {
+        tag: "action",
+        actions: [
+          makeOperationButton("中止当前任务", "cancel_current_operation", input.reportDate, false, "danger"),
+          {
+            tag: "button",
+            type: "primary",
+            text: {
+              tag: "plain_text",
+              content: "中止并重新开始",
+            },
+            value: {
+              operation: "cancel_and_retry_operation",
+              targetOperation: input.operation,
+              reportDate: input.reportDate,
+              dryRun: false,
+              reason: `manual_operation:cancel_and_retry:${input.operation}`,
+            },
+          },
         ],
       },
     ],
@@ -1716,7 +1835,7 @@ function makeCardButton(
 
 function makeOperationButton(
   label: string,
-  operation: OperationJobType,
+  operation: FeishuOperationActionType,
   reportDate: string,
   dryRun: boolean,
   type: "primary" | "default" | "danger",
@@ -1746,13 +1865,49 @@ function buildCallbackEventDedupeKey(
     actionOrOperation: string;
   },
 ): string {
-  if (input.traceId) {
-    return `${kind}:trace:${input.traceId}`;
-  }
-  if (input.messageId) {
+  if (kind === "mention" && input.messageId) {
+    // mention 回调的重投经常会更换 traceId，但 messageId 通常稳定，优先 messageId 去重更稳妥。
     return `${kind}:message:${input.messageId}`;
   }
+  if (kind === "operation" && input.messageId) {
+    // operation 动作同样会出现 traceId 漂移，且同一张卡可点击多个按钮，
+    // 因此 messageId 需要拼上 operation + reportDate，避免不同按钮互相误判重复。
+    return `${kind}:message:${input.messageId}:${input.actionOrOperation}:${input.reportDate ?? "none"}`;
+  }
+  if (input.traceId) {
+    return `${kind}:trace:${input.traceId}:${input.actionOrOperation}:${input.reportDate ?? "none"}`;
+  }
+  if (input.messageId) {
+    return `${kind}:message:${input.messageId}:${input.actionOrOperation}:${input.reportDate ?? "none"}`;
+  }
   return `${kind}:semantic:${input.reportDate ?? "none"}:${input.actionOrOperation}`;
+}
+
+function isOperationPanelMentionText(input: string): boolean {
+  const normalized = input.replace(/\s+/g, " ").trim();
+  if (!normalized) {
+    return false;
+  }
+  const stripped = normalized
+    // 富文本 mention 常见形态：<at ...>机器人</at> 运维
+    .replace(/^<at[^>]*>.*?<\/at>\s*/i, "")
+    // 纯文本 mention 常见形态：@机器人 运维
+    .replace(/^@\S+\s*/, "")
+    .trim()
+    .toLowerCase();
+  if (!stripped) {
+    return false;
+  }
+
+  return (
+    stripped.startsWith("运维") ||
+    stripped.startsWith("操作卡") ||
+    stripped.includes("运维操作卡") ||
+    stripped.includes("运维面板") ||
+    /^ops(?:\s|$|[:：])/.test(stripped) ||
+    /^recheck(?:\s|$|[:：])/.test(stripped) ||
+    /^watchdog(?:\s|$|[:：])/.test(stripped)
+  );
 }
 
 function isRecentDuplicateEvent(cache: Map<string, number>, key: string, windowSeconds: number): boolean {
@@ -1828,7 +1983,9 @@ export const __test__ = {
   parseCallbackBody,
   adaptFeishuCardActionPayload,
   extractMentionEvent,
+  isOperationPanelMentionText,
   buildOperationControlCard,
+  buildOperationConflictControlCard,
   verifyCallbackAuth,
   inferActionStatusEcho,
   hasAppConfig,

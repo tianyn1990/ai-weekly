@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { spawn } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
 import dayjs from "dayjs";
@@ -13,7 +14,7 @@ import type { WatchdogCandidate } from "./pipeline/watchdog.js";
 import { runPendingWeeklyWatchdog } from "./pipeline/watchdog.js";
 import { startReviewApiServer } from "./review/api-server.js";
 import { FeishuNotifier, loadFeishuConfigFromEnv, startFeishuReviewCallbackServer } from "./review/feishu.js";
-import type { FeishuCallbackAuditEvent } from "./review/feishu.js";
+import type { FeishuCallbackAuditEvent, FeishuOperationActionPayload } from "./review/feishu.js";
 import { createReviewInstructionStore } from "./review/instruction-store.js";
 import { isWeeklyReminderWindowReached, shouldSendWeeklyReminderForArtifact } from "./review/reminder-policy.js";
 import { DbAuditStore } from "./audit/audit-store.js";
@@ -30,6 +31,10 @@ import { migrateFileToDb } from "./storage/migrate-file-to-db.js";
 import { acquireFileLock } from "./utils/file-lock.js";
 import { loadProjectEnv } from "./utils/env-loader.js";
 import { nowInTimezoneIso } from "./utils/time.js";
+
+const CLI_SUBPROCESS_BASE_ARGS = ["--import", "tsx"];
+const HARD_CANCEL_POLL_MS = 400;
+const HARD_CANCEL_SIGKILL_GRACE_MS = 4_000;
 
 interface CliArgs {
   command: "run";
@@ -59,6 +64,12 @@ interface CliArgs {
   llmAssistMinConfidence: number;
   llmSummaryPromptVersion: string;
   llmFallbackAlertEnabled: boolean;
+  revisionAgentEnabled: boolean;
+  revisionAgentMaxSteps: number;
+  revisionAgentMaxWallClockMs: number;
+  revisionAgentMaxLlmCalls: number;
+  revisionAgentMaxToolErrors: number;
+  revisionAgentPlannerTimeoutMs: number;
   timezone: string;
   outputRoot: string;
   publishRoot: string;
@@ -199,6 +210,12 @@ async function runPipeline(args: CliArgs) {
     llmAssistMinConfidence: args.llmAssistMinConfidence,
     llmSummaryPromptVersion: args.llmSummaryPromptVersion,
     llmFallbackAlertEnabled: args.llmFallbackAlertEnabled,
+    revisionAgentEnabled: args.revisionAgentEnabled,
+    revisionAgentMaxSteps: args.revisionAgentMaxSteps,
+    revisionAgentMaxWallClockMs: args.revisionAgentMaxWallClockMs,
+    revisionAgentMaxLlmCalls: args.revisionAgentMaxLlmCalls,
+    revisionAgentMaxToolErrors: args.revisionAgentMaxToolErrors,
+    revisionAgentPlannerTimeoutMs: args.revisionAgentPlannerTimeoutMs,
     generatedAt,
     reviewStartedAt: generatedAt,
     reportDate,
@@ -351,28 +368,14 @@ async function runDaemon(args: CliArgs) {
         maxRetries: 1,
       });
     },
-    operationHandler: async (payload) => {
-      const reportDate = payload.reportDate ?? dayjs().tz(args.timezone).format("YYYY-MM-DD");
-      const dedupeKey = buildManualOperationDedupeKey({
-        operation: payload.operation,
-        reportDate,
-      });
-      const enqueue = await jobStore.enqueue({
-        jobType: payload.operation,
-        payload: buildOperationPayloadFromFeishuAction(payload.operation, reportDate, payload),
-        dedupeKey,
-        createdBy: payload.operator,
-        source: "feishu_manual",
-        traceId: payload.traceId,
-        maxRetries: payload.operation === "watchdog_weekly" ? 0 : 1,
-      });
-      return {
-        accepted: true,
-        duplicated: !enqueue.created,
-        jobId: enqueue.jobId,
-        message: enqueue.created ? "已受理，任务已入队执行。" : "该任务已在队列中，忽略重复提交。",
-      };
-    },
+    operationHandler: async (payload) =>
+      await handleFeishuOperationAction({
+        args,
+        notifier,
+        jobStore,
+        payload,
+        enqueueMessage: "已受理，任务已入队执行。",
+      }),
     mentionHandler: async (payload) => {
       const reportDate = dayjs().tz(args.timezone).format("YYYY-MM-DD");
       const sent = await notifier.notifyOperationControlCard({
@@ -508,26 +511,13 @@ async function runServeFeishuCallback(args: CliArgs) {
           message: "当前存储模式不支持主动触发队列，请切换到 DB 模式。",
         };
       }
-      const reportDate = payload.reportDate ?? dayjs().tz(args.timezone).format("YYYY-MM-DD");
-      const dedupeKey = buildManualOperationDedupeKey({
-        operation: payload.operation,
-        reportDate,
+      return await handleFeishuOperationAction({
+        args,
+        notifier,
+        jobStore: operationJobStore,
+        payload,
+        enqueueMessage: "已受理，任务已入队执行（请启动 daemon worker 消费）。",
       });
-      const enqueue = await operationJobStore.enqueue({
-        jobType: payload.operation,
-        payload: buildOperationPayloadFromFeishuAction(payload.operation, reportDate, payload),
-        dedupeKey,
-        createdBy: payload.operator,
-        source: "feishu_manual",
-        traceId: payload.traceId,
-        maxRetries: 1,
-      });
-      return {
-        accepted: true,
-        duplicated: !enqueue.created,
-        jobId: enqueue.jobId,
-        message: enqueue.created ? "已受理，任务已入队执行（请启动 daemon worker 消费）。" : "该任务已在队列中，忽略重复提交。",
-      };
     },
     mentionHandler: async (payload) => {
       const reportDate = dayjs().tz(args.timezone).format("YYYY-MM-DD");
@@ -665,49 +655,60 @@ async function processOneOperationJob(args: CliArgs, jobStore: DbOperationJobSto
     return;
   }
 
+  const ensureNotCancelled = async () => {
+    const requested = await jobStore.isCancelRequested(job.id);
+    if (requested) {
+      throw new OperationCancelledError("cancel_requested_by_operator");
+    }
+  };
+
+  if (job.source === "feishu_manual") {
+    await notifyOperationStageBestEffort(notifier, {
+      operator: job.createdBy,
+      operation: job.jobType,
+      result: "started",
+      jobId: job.id,
+      detail: "任务开始执行。",
+    });
+  }
+
   try {
+    await ensureNotCancelled();
     const detail = await executeOperationJob(job, {
       runReport: async (payload) => {
-        const nextArgs: CliArgs = {
-          ...args,
-          mode: payload.mode,
-          mock: payload.mock,
-          reportDate: payload.reportDate,
-          generatedAt: payload.generatedAt,
-        };
-        await runPipeline(nextArgs);
+        await runQueuedCliSubprocess({
+          args,
+          jobStore,
+          jobId: job.id,
+          cliArgs: buildRunReportSubprocessArgs(args, payload),
+        });
         return `${payload.mode} run 已完成（reportDate=${payload.reportDate ?? "auto"}）`;
       },
       recheckWeekly: async (payload) => {
-        const nextArgs: CliArgs = {
-          ...args,
-          mode: "weekly",
-          recheckPending: true,
-          reportDate: payload.reportDate,
-          generatedAt: payload.generatedAt,
-        };
-        await runRecheckPending(nextArgs);
+        await runQueuedCliSubprocess({
+          args,
+          jobStore,
+          jobId: job.id,
+          cliArgs: buildRecheckSubprocessArgs(args, payload),
+        });
         return `recheck 已完成（reportDate=${payload.reportDate}）`;
       },
       runWatchdog: async (payload) => {
-        const nextArgs: CliArgs = {
-          ...args,
-          mode: "weekly",
-          watchPendingWeekly: true,
-          dryRun: payload.dryRun,
-          generatedAt: payload.generatedAt,
-        };
-        await runWatchPendingWeekly(nextArgs);
+        await runQueuedCliSubprocess({
+          args,
+          jobStore,
+          jobId: job.id,
+          cliArgs: buildWatchdogSubprocessArgs(args, payload),
+        });
         return `watchdog 已完成（dryRun=${payload.dryRun}）`;
       },
       notifyWeeklyReminder: async (payload) => {
-        const nextArgs: CliArgs = {
-          ...args,
-          mode: "weekly",
-          notifyReviewReminder: true,
-          generatedAt: payload.generatedAt,
-        };
-        await runNotifyReviewReminder(nextArgs);
+        await runQueuedCliSubprocess({
+          args,
+          jobStore,
+          jobId: job.id,
+          cliArgs: buildReminderSubprocessArgs(args, payload),
+        });
         return "提醒任务已执行";
       },
       queryWeeklyStatus: async (payload) => {
@@ -721,7 +722,36 @@ async function processOneOperationJob(args: CliArgs, jobStore: DbOperationJobSto
         }
         return `git 同步完成（committed=${result.committed}, pushed=${result.pushed}, sha=${result.commitSha ?? "none"}）`;
       },
+    }, {
+      ensureNotCancelled,
+      onProgress: async ({ detail: progressDetail }) => {
+        if (job.source !== "feishu_manual") {
+          return;
+        }
+        await notifyOperationStageBestEffort(notifier, {
+          operator: job.createdBy,
+          operation: job.jobType,
+          result: "progress",
+          detail: progressDetail,
+          jobId: job.id,
+        });
+      },
     });
+
+    // 任务执行完成后再次检查取消标记，避免“执行完成后被覆盖成 success”。
+    if (await jobStore.isCancelRequested(job.id)) {
+      await jobStore.markCancelled(job.id, "cancelled_by_operator");
+      if (job.source === "feishu_manual") {
+        await notifyOperationStageBestEffort(notifier, {
+          operator: job.createdBy,
+          operation: job.jobType,
+          result: "cancelled",
+          detail: "已按操作员请求中止。",
+          jobId: job.id,
+        });
+      }
+      return;
+    }
 
     await jobStore.markSuccess(job.id);
     if (job.source === "feishu_manual") {
@@ -731,27 +761,406 @@ async function processOneOperationJob(args: CliArgs, jobStore: DbOperationJobSto
           operation: job.jobType,
           result: "success",
           detail,
+          jobId: job.id,
         })
         .catch((error) => {
           console.log(`[daemon-notify-warning] ${error instanceof Error ? error.message : String(error)}`);
         });
     }
   } catch (error) {
+    if (error instanceof OperationCancelledError || (await jobStore.isCancelRequested(job.id))) {
+      await jobStore.markCancelled(job.id, "cancelled_by_operator");
+      if (job.source === "feishu_manual") {
+        await notifyOperationStageBestEffort(notifier, {
+          operator: job.createdBy,
+          operation: job.jobType,
+          result: "cancelled",
+          detail: "已按操作员请求中止。",
+          jobId: job.id,
+        });
+      }
+      return;
+    }
+
     const message = error instanceof Error ? error.message : String(error);
     const failed = await jobStore.markFailed(job.id, message);
     if (!failed.requeued && job.source === "feishu_manual") {
+      const classified = classifyOperationFailure(message);
       await notifier
         .notifyOperationResult({
           operator: job.createdBy,
           operation: job.jobType,
           result: "failed",
-          detail: message,
+          detail: `${classified.category}: ${classified.detail}`,
+          jobId: job.id,
         })
         .catch((notifyError) => {
           console.log(`[daemon-notify-warning] ${notifyError instanceof Error ? notifyError.message : String(notifyError)}`);
         });
+    } else if (failed.requeued && job.source === "feishu_manual") {
+      await notifyOperationStageBestEffort(notifier, {
+        operator: job.createdBy,
+        operation: job.jobType,
+        result: "queued",
+        detail: `任务失败后已重试入队（retry=${failed.retryCount}/${job.maxRetries}）。`,
+        jobId: job.id,
+      });
     }
   }
+}
+
+function buildSharedSubprocessArgs(args: CliArgs): string[] {
+  const shared: string[] = [
+    "src/cli.ts",
+    "run",
+    "--source-config",
+    args.sourceConfigPath,
+    "--runtime-config-path",
+    args.runtimeConfigPath,
+    "--storage-backend",
+    args.storageBackend,
+    "--storage-db-path",
+    args.storageDbPath,
+    "--timezone",
+    args.timezone,
+    "--output-root",
+    args.outputRoot,
+    "--publish-root",
+    args.publishRoot,
+    "--review-instruction-root",
+    args.reviewInstructionRoot,
+    "--watch-lock-file",
+    args.watchLockFile,
+    "--watch-max-retries",
+    String(args.watchMaxRetries),
+    "--watch-retry-delay-ms",
+    String(args.watchRetryDelayMs),
+    "--watch-summary-root",
+    args.watchSummaryRoot,
+    "--notification-root",
+    args.notificationRoot,
+  ];
+  if (!args.storageFallbackToFile) {
+    shared.push("--storage-no-fallback");
+  }
+  return shared;
+}
+
+function buildRunReportSubprocessArgs(
+  args: CliArgs,
+  payload: {
+    mode: "daily" | "weekly";
+    mock: boolean;
+    reportDate?: string;
+    generatedAt?: string;
+  },
+) {
+  const cliArgs = [...buildSharedSubprocessArgs(args), "--mode", payload.mode];
+  if (payload.mock) {
+    cliArgs.push("--mock");
+  }
+  if (payload.reportDate) {
+    cliArgs.push("--report-date", payload.reportDate);
+  }
+  if (payload.generatedAt) {
+    cliArgs.push("--generated-at", payload.generatedAt);
+  }
+  return cliArgs;
+}
+
+function buildRecheckSubprocessArgs(
+  args: CliArgs,
+  payload: {
+    reportDate: string;
+    generatedAt?: string;
+  },
+) {
+  const cliArgs = [...buildSharedSubprocessArgs(args), "--mode", "weekly", "--recheck-pending", "--report-date", payload.reportDate];
+  if (payload.generatedAt) {
+    cliArgs.push("--generated-at", payload.generatedAt);
+  }
+  return cliArgs;
+}
+
+function buildWatchdogSubprocessArgs(
+  args: CliArgs,
+  payload: {
+    dryRun: boolean;
+    generatedAt?: string;
+  },
+) {
+  const cliArgs = [...buildSharedSubprocessArgs(args), "--mode", "weekly", "--watch-pending-weekly"];
+  if (payload.dryRun) {
+    cliArgs.push("--dry-run");
+  }
+  if (payload.generatedAt) {
+    cliArgs.push("--generated-at", payload.generatedAt);
+  }
+  return cliArgs;
+}
+
+function buildReminderSubprocessArgs(
+  args: CliArgs,
+  payload: {
+    generatedAt?: string;
+  },
+) {
+  const cliArgs = [...buildSharedSubprocessArgs(args), "--mode", "weekly", "--notify-review-reminder"];
+  if (payload.generatedAt) {
+    cliArgs.push("--generated-at", payload.generatedAt);
+  }
+  return cliArgs;
+}
+
+async function runQueuedCliSubprocess(input: {
+  args: CliArgs;
+  jobStore: DbOperationJobStore;
+  jobId: number;
+  cliArgs: string[];
+}) {
+  await new Promise<void>((resolve, reject) => {
+    const child = spawn(process.execPath, [...CLI_SUBPROCESS_BASE_ARGS, ...input.cliArgs], {
+      cwd: process.cwd(),
+      env: process.env,
+      stdio: ["ignore", "pipe", "pipe"],
+    });
+
+    let stderrText = "";
+    let cancelRequested = false;
+    let killTimer: NodeJS.Timeout | null = null;
+    let pollInFlight = false;
+
+    child.stdout?.on("data", () => {
+      // 子进程详细日志仍由其自身 stdout 输出到父进程；这里不再二次转发避免噪音。
+    });
+    child.stderr?.on("data", (chunk) => {
+      stderrText = `${stderrText}${String(chunk)}`.slice(-2_000);
+    });
+
+    const pollTimer = setInterval(() => {
+      if (pollInFlight || cancelRequested) {
+        return;
+      }
+      pollInFlight = true;
+      input.jobStore
+        .isCancelRequested(input.jobId)
+        .then((requested) => {
+          if (!requested || cancelRequested) {
+            return;
+          }
+          cancelRequested = true;
+          child.kill("SIGTERM");
+          killTimer = setTimeout(() => {
+            if (!child.killed) {
+              child.kill("SIGKILL");
+            }
+          }, HARD_CANCEL_SIGKILL_GRACE_MS);
+        })
+        .catch((error) => {
+          console.log(`[daemon-cancel-poll-warning] ${error instanceof Error ? error.message : String(error)}`);
+        })
+        .finally(() => {
+          pollInFlight = false;
+        });
+    }, HARD_CANCEL_POLL_MS);
+
+    child.once("error", (error) => {
+      clearInterval(pollTimer);
+      if (killTimer) {
+        clearTimeout(killTimer);
+      }
+      reject(error);
+    });
+
+    child.once("close", (code, signal) => {
+      clearInterval(pollTimer);
+      if (killTimer) {
+        clearTimeout(killTimer);
+      }
+
+      if (cancelRequested) {
+        reject(new OperationCancelledError("cancel_requested_by_operator"));
+        return;
+      }
+
+      if (code === 0) {
+        resolve();
+        return;
+      }
+
+      const reason = stderrText.trim() || `code=${code ?? "null"},signal=${signal ?? "none"}`;
+      reject(new Error(`subprocess_exit_failed:${reason}`));
+    });
+  });
+}
+
+async function handleFeishuOperationAction(input: {
+  args: CliArgs;
+  notifier: FeishuNotifier;
+  jobStore: DbOperationJobStore;
+  payload: FeishuOperationActionPayload;
+  enqueueMessage: string;
+}) {
+  const reportDate = input.payload.reportDate ?? dayjs().tz(input.args.timezone).format("YYYY-MM-DD");
+  if (input.payload.operation === "query_weekly_status") {
+    const detail = await queryWeeklyStatusDetail(input.args.outputRoot, reportDate, input.jobStore);
+    await notifyOperationStageBestEffort(input.notifier, {
+      operator: input.payload.operator,
+      operation: input.payload.operation,
+      result: "success",
+      detail,
+    });
+    return {
+      accepted: true,
+      message: detail,
+    };
+  }
+
+  if (input.payload.operation === "cancel_current_operation") {
+    const cancelled = await input.jobStore.requestCancelCurrent({
+      operator: input.payload.operator,
+      reason: input.payload.reason,
+    });
+    if (!cancelled.found) {
+      return {
+        accepted: true,
+        message: "当前没有可中止的任务。",
+      };
+    }
+
+    const detail =
+      cancelled.status === "cancelled"
+        ? cancelled.alreadyRequested
+          ? `已强制中止运行中任务（job=${cancelled.jobId}）。`
+          : `已中止待执行任务（job=${cancelled.jobId}）。`
+        : `已记录中止请求，任务将在当前阶段结束后停止（job=${cancelled.jobId}）。`;
+    await notifyOperationStageBestEffort(input.notifier, {
+      operator: input.payload.operator,
+      operation: input.payload.operation,
+      result: "cancelled",
+      detail,
+      jobId: cancelled.jobId,
+    });
+    return {
+      accepted: true,
+      duplicated: cancelled.alreadyRequested ?? false,
+      jobId: cancelled.jobId,
+      message: detail,
+    };
+  }
+
+  if (input.payload.operation === "cancel_and_retry_operation") {
+    const targetOperation = input.payload.targetOperation;
+    if (!targetOperation) {
+      return {
+        accepted: false,
+        message: "缺少 targetOperation，无法执行“中止并重新开始”。",
+      };
+    }
+    const cancelled = await input.jobStore.requestCancelCurrent({
+      operator: input.payload.operator,
+      reason: input.payload.reason ?? `cancel_and_retry:${targetOperation}`,
+    });
+    const restartEnqueue = await input.jobStore.enqueue({
+      jobType: targetOperation,
+      payload: buildOperationPayloadFromFeishuAction(targetOperation, reportDate, input.payload),
+      // “中止并重启”是显式运维意图，使用唯一 key 绕过去重窗口，确保可以创建新任务。
+      dedupeKey: `manual_restart:${targetOperation}:${reportDate}:${Date.now()}`,
+      createdBy: input.payload.operator,
+      source: "feishu_manual",
+      traceId: input.payload.traceId,
+      maxRetries: targetOperation === "watchdog_weekly" ? 0 : 1,
+    });
+    await notifyOperationStageBestEffort(input.notifier, {
+      operator: input.payload.operator,
+      operation: targetOperation,
+      result: "queued",
+      detail: cancelled.found
+        ? `已发起中止并重启，新的任务已入队（job=${restartEnqueue.jobId}）。`
+        : `未检测到运行中任务，已直接创建新任务（job=${restartEnqueue.jobId}）。`,
+      jobId: restartEnqueue.jobId,
+    });
+    return {
+      accepted: true,
+      jobId: restartEnqueue.jobId,
+      message: `已创建重启任务（job=${restartEnqueue.jobId}）。`,
+    };
+  }
+
+  if (!isQueueExecutableOperation(input.payload.operation)) {
+    return {
+      accepted: false,
+      message: `暂不支持该运维动作：${input.payload.operation}`,
+    };
+  }
+
+  const dedupeKey = buildManualOperationDedupeKey({
+    operation: input.payload.operation,
+    reportDate,
+  });
+  const enqueue = await input.jobStore.enqueue({
+    jobType: input.payload.operation,
+    payload: buildOperationPayloadFromFeishuAction(input.payload.operation, reportDate, input.payload),
+    dedupeKey,
+    createdBy: input.payload.operator,
+    source: "feishu_manual",
+    traceId: input.payload.traceId,
+    maxRetries: input.payload.operation === "watchdog_weekly" ? 0 : 1,
+  });
+  if (enqueue.created) {
+    await notifyOperationStageBestEffort(input.notifier, {
+      operator: input.payload.operator,
+      operation: input.payload.operation,
+      result: "queued",
+      detail: "任务已受理并进入队列。",
+      jobId: enqueue.jobId,
+    });
+  } else {
+    const existed = await input.jobStore.getById(enqueue.jobId);
+    if (existed && (existed.status === "running" || existed.status === "pending")) {
+      await notifyOperationStageBestEffort(input.notifier, {
+        operator: input.payload.operator,
+        operation: input.payload.operation,
+        result: "progress",
+        detail: `检测到同类任务正在${existed.status === "running" ? "执行" : "排队"}（job=${existed.id}）。`,
+        jobId: existed.id,
+      });
+      await input.notifier
+        .notifyOperationConflictControlCard({
+          reportDate,
+          operation: input.payload.operation,
+          runningJobId: existed.id,
+        })
+        .catch((error) => {
+          console.log(`[daemon-notify-warning] ${error instanceof Error ? error.message : String(error)}`);
+        });
+      return {
+        accepted: true,
+        duplicated: true,
+        jobId: enqueue.jobId,
+        message: `检测到同类任务正在执行（job=${existed.id}），已发送“中止/中止并重启”控制卡。`,
+      };
+    }
+  }
+  return {
+    accepted: true,
+    duplicated: !enqueue.created,
+    jobId: enqueue.jobId,
+    message: enqueue.created ? input.enqueueMessage : "该任务已在队列中，忽略重复提交。",
+  };
+}
+
+function isQueueExecutableOperation(operation: FeishuOperationActionPayload["operation"]): operation is OperationJobType {
+  return (
+    operation === "run_daily" ||
+    operation === "run_weekly" ||
+    operation === "recheck_weekly" ||
+    operation === "watchdog_weekly" ||
+    operation === "watchdog_weekly_dry_run" ||
+    operation === "notify_weekly_reminder" ||
+    operation === "query_weekly_status" ||
+    operation === "git_sync"
+  );
 }
 
 async function runAutoGitSync(args: CliArgs, reason: string) {
@@ -816,6 +1225,78 @@ function buildOperationPayloadFromFeishuAction(
   return {
     reason: `manual_trigger:${reportDate}`,
   };
+}
+
+async function queryWeeklyStatusDetail(outputRoot: string, reportDate: string, jobStore: DbOperationJobStore): Promise<string> {
+  const active = await jobStore.listActive(100);
+  const matched = active.filter((job) => getOperationReportDate(job.payload) === reportDate);
+  const running = matched.find((job) => job.status === "running");
+  const pendingCount = matched.filter((job) => job.status === "pending").length;
+
+  try {
+    const artifact = await loadReviewArtifact(outputRoot, "weekly", reportDate);
+    const queueSummary = running
+      ? `, queue=running(${running.jobType}#${running.id}), pending=${pendingCount}`
+      : pendingCount > 0
+        ? `, queue=pending(${pendingCount})`
+        : "";
+    return `status: review=${artifact.reviewStatus}, stage=${artifact.reviewStage}, publish=${artifact.publishStatus}${queueSummary}`;
+  } catch {
+    if (running) {
+      return `status: reportDate=${reportDate} 正在执行（${running.jobType}#${running.id}），pending=${pendingCount}`;
+    }
+    if (pendingCount > 0) {
+      return `status: reportDate=${reportDate} 队列中有待执行任务（pending=${pendingCount}）`;
+    }
+    return `status: reportDate=${reportDate} 暂无可用周报产物`;
+  }
+}
+
+function getOperationReportDate(payload: Record<string, unknown>): string | undefined {
+  const value = payload.reportDate;
+  if (typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    return value;
+  }
+  return undefined;
+}
+
+class OperationCancelledError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "OperationCancelledError";
+  }
+}
+
+function classifyOperationFailure(message: string): { category: string; detail: string } {
+  const text = message.toLowerCase();
+  if (text.includes("timeout") || text.includes("timed out")) {
+    return { category: "timeout", detail: message };
+  }
+  if (text.includes("http_") || text.includes("http ") || text.includes("fetch failed") || text.includes("econn")) {
+    return { category: "upstream_http_error", detail: message };
+  }
+  if (text.includes("sqlite") || text.includes("db") || text.includes("database")) {
+    return { category: "db_error", detail: message };
+  }
+  if (text.includes("zod") || text.includes("validation") || text.includes("invalid")) {
+    return { category: "validation_error", detail: message };
+  }
+  return { category: "unknown", detail: message };
+}
+
+async function notifyOperationStageBestEffort(
+  notifier: FeishuNotifier,
+  input: {
+    operator?: string;
+    operation: FeishuOperationActionPayload["operation"];
+    result: "queued" | "started" | "progress" | "success" | "failed" | "cancelled";
+    detail: string;
+    jobId?: number;
+  },
+) {
+  await notifier.notifyOperationResult(input).catch((error) => {
+    console.log(`[daemon-notify-warning] ${error instanceof Error ? error.message : String(error)}`);
+  });
 }
 
 function parseArgs(argv: string[]): CliArgs {
@@ -973,6 +1454,47 @@ function parseArgs(argv: string[]): CliArgs {
 
     if (token === "--llm-summary-prompt-version" && next) {
       args.llmSummaryPromptVersion = next;
+      i += 1;
+      continue;
+    }
+
+    // 修订 Agent 护栏统一由 CLI/ENV 注入到 state，便于线上排障时临时调参。
+    if (token === "--revision-agent-enabled") {
+      args.revisionAgentEnabled = true;
+      continue;
+    }
+
+    if (token === "--revision-agent-disabled") {
+      args.revisionAgentEnabled = false;
+      continue;
+    }
+
+    if (token === "--revision-agent-max-steps" && next) {
+      args.revisionAgentMaxSteps = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--revision-agent-max-wall-clock-ms" && next) {
+      args.revisionAgentMaxWallClockMs = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--revision-agent-max-llm-calls" && next) {
+      args.revisionAgentMaxLlmCalls = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--revision-agent-max-tool-errors" && next) {
+      args.revisionAgentMaxToolErrors = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--revision-agent-planner-timeout-ms" && next) {
+      args.revisionAgentPlannerTimeoutMs = Number(next);
       i += 1;
       continue;
     }
@@ -1305,6 +1827,13 @@ function defaults(): CliArgs {
     llmAssistMinConfidence: Number(process.env.LLM_ASSIST_MIN_CONFIDENCE ?? "0.5"),
     llmSummaryPromptVersion: process.env.LLM_SUMMARY_PROMPT_VERSION ?? "m5.3-v1",
     llmFallbackAlertEnabled: process.env.LLM_FALLBACK_ALERT_ENABLED !== "false",
+    // ReAct 修订默认开启；当 provider 波动时可通过环境变量一键降级回结构化修订。
+    revisionAgentEnabled: process.env.REVISION_AGENT_ENABLED !== "false",
+    revisionAgentMaxSteps: Number(process.env.REVISION_AGENT_MAX_STEPS ?? "20"),
+    revisionAgentMaxWallClockMs: Number(process.env.REVISION_AGENT_MAX_WALL_CLOCK_MS ?? "600000"),
+    revisionAgentMaxLlmCalls: Number(process.env.REVISION_AGENT_MAX_LLM_CALLS ?? "30"),
+    revisionAgentMaxToolErrors: Number(process.env.REVISION_AGENT_MAX_TOOL_ERRORS ?? "5"),
+    revisionAgentPlannerTimeoutMs: Number(process.env.REVISION_AGENT_PLANNER_TIMEOUT_MS ?? "30000"),
     timezone: "Asia/Shanghai",
     outputRoot: "outputs/review",
     publishRoot: "outputs/published",
@@ -1731,6 +2260,12 @@ function buildRecheckStateFromArtifact(input: {
     llmAssistMinConfidence: args.llmAssistMinConfidence,
     llmSummaryPromptVersion: args.llmSummaryPromptVersion,
     llmFallbackAlertEnabled: args.llmFallbackAlertEnabled,
+    revisionAgentEnabled: args.revisionAgentEnabled,
+    revisionAgentMaxSteps: args.revisionAgentMaxSteps,
+    revisionAgentMaxWallClockMs: args.revisionAgentMaxWallClockMs,
+    revisionAgentMaxLlmCalls: args.revisionAgentMaxLlmCalls,
+    revisionAgentMaxToolErrors: args.revisionAgentMaxToolErrors,
+    revisionAgentPlannerTimeoutMs: args.revisionAgentPlannerTimeoutMs,
     generatedAt,
     reviewStartedAt: artifact.reviewStartedAt ?? artifact.generatedAt,
     reportDate,

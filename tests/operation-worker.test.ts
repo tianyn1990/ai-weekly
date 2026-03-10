@@ -92,4 +92,50 @@ describe("executeOperationJob", () => {
       }),
     );
   });
+
+  it("应在执行前触发进度 hook，并在 hook 抛错时中断执行", async () => {
+    const executor = {
+      runReport: vi.fn(async () => "run_ok"),
+      recheckWeekly: vi.fn(async () => "recheck_ok"),
+      runWatchdog: vi.fn(async () => "watchdog_ok"),
+      notifyWeeklyReminder: vi.fn(async () => "reminder_ok"),
+      queryWeeklyStatus: vi.fn(async () => "status_ok"),
+      runGitSync: vi.fn(async () => "git_ok"),
+    };
+    const onProgress = vi.fn(async () => undefined);
+
+    await executeOperationJob(
+      buildJob({
+        jobType: "run_daily",
+        payload: {
+          mode: "daily",
+        },
+      }),
+      executor,
+      {
+        onProgress,
+      },
+    );
+    expect(onProgress).toHaveBeenCalledWith(
+      expect.objectContaining({
+        stage: "run_report",
+      }),
+    );
+
+    await expect(
+      executeOperationJob(
+        buildJob({
+          jobType: "recheck_weekly",
+          payload: { reportDate: "2026-03-09" },
+        }),
+        executor,
+        {
+          ensureNotCancelled: async () => {
+            throw new Error("cancelled_by_operator");
+          },
+        },
+      ),
+    ).rejects.toThrow("cancelled_by_operator");
+    expect(executor.recheckWeekly).toHaveBeenCalledTimes(0);
+  });
 });

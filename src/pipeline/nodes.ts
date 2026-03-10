@@ -10,6 +10,7 @@ import { buildLlmClassifyScore } from "../llm/classify-score.js";
 import { buildLlmSummary, canReuseLlmSummary, type LlmSummaryAuditEvent } from "../llm/summary.js";
 import { buildReportMarkdown } from "../report/markdown.js";
 import { executeFeedbackRevision } from "../review/feedback-executor.js";
+import { executeRevisionWithAgent } from "../review/revision-agent.js";
 import { createReviewInstructionStore } from "../review/instruction-store.js";
 import { collectGithubSearchItems } from "../sources/github-source.js";
 import { collectMockItems } from "../sources/mock-source.js";
@@ -285,18 +286,20 @@ export async function reviewOutlineNode(state: ReportState): Promise<Partial<Rep
     };
   }
 
+  // M5.5 起周报默认走单阶段终稿审核；这里保留 outline 节点仅用于兼容历史回调动作。
   const reviewDeadlineAt = state.reviewDeadlineAt ?? computeWeeklyReviewDeadline(state.generatedAt, state.timezone);
   const decision = await resolveStageDecision({
     state,
     stage: "outline_review",
-    fallbackApproved: state.approveOutline,
+    // 单阶段下 outline 不再作为阻塞门，默认视为通过。
+    fallbackApproved: true,
   });
   if (decision.action === "reject") {
     return buildRejectedResult("outline_review", decision.source, decision.reason);
   }
 
   if (decision.action === "request_revision") {
-    const revised = await executeFeedbackRevision({
+    const revised = await executeRevisionWithAgent({
       mode: state.mode,
       generatedAt: state.generatedAt,
       sourceConfigPath: state.sourceConfigPath,
@@ -307,7 +310,41 @@ export async function reviewOutlineNode(state: ReportState): Promise<Partial<Rep
       rankedItems: state.rankedItems,
       metrics: state.metrics,
       instruction: decision.instruction,
+      revisionAuditLogs: state.revisionAuditLogs,
+      settings: {
+        enabled: state.revisionAgentEnabled,
+        maxSteps: state.revisionAgentMaxSteps,
+        maxWallClockMs: state.revisionAgentMaxWallClockMs,
+        maxLlmCalls: state.revisionAgentMaxLlmCalls,
+        maxToolErrors: state.revisionAgentMaxToolErrors,
+        plannerTimeoutMs: state.revisionAgentPlannerTimeoutMs,
+      },
+      llm: {
+        provider: state.llmSummaryProvider,
+        apiKey: state.llmSummaryMinimaxApiKey,
+        model: state.llmSummaryMinimaxModel,
+      },
+    }).catch(async (error) => {
+      // ReAct 节点异常时保持 fail-soft，回退到已稳定的结构化修订执行器，避免阻断审核链路。
+      const fallback = await executeFeedbackRevision({
+        mode: state.mode,
+        generatedAt: state.generatedAt,
+        sourceConfigPath: state.sourceConfigPath,
+        runtimeConfigPath: state.runtimeConfigPath,
+        storageBackend: state.storageBackend,
+        storageDbPath: state.storageDbPath,
+        storageFallbackToFile: state.storageFallbackToFile,
+        rankedItems: state.rankedItems,
+        metrics: state.metrics,
+        instruction: decision.instruction,
+      });
+      return {
+        ...fallback,
+        warnings: [`revision_agent_failed:${error instanceof Error ? error.message : String(error)}`],
+        hasPendingTasks: false,
+      };
     });
+    const revisionWarnings = revised.warnings.length > 0 ? revised.warnings : [];
     return {
       rankedItems: revised.rankedItems,
       highlights: revised.highlights,
@@ -321,20 +358,28 @@ export async function reviewOutlineNode(state: ReportState): Promise<Partial<Rep
       reviewStatus: "pending_review",
       reviewReason: `大纲阶段回流修订已执行（${decision.source}）`,
       revisionAuditLogs: [...state.revisionAuditLogs, revised.auditLog],
-      ...(decision.warning ? { warnings: [...state.warnings, decision.warning] } : {}),
+      ...((decision.warning || revisionWarnings.length > 0)
+        ? { warnings: [...state.warnings, ...(decision.warning ? [decision.warning] : []), ...revisionWarnings] }
+        : {}),
     };
   }
 
-  const outlineApproved = decision.approved;
+  const compatWarnings: string[] = [];
+  if (decision.action === "approve_outline") {
+    // 历史按钮仍可能回调 approve_outline，这里仅做兼容提示，不再形成独立审核阶段。
+    compatWarnings.push("检测到历史动作 approve_outline：当前已切换为单阶段终稿审核，已自动兼容处理。");
+  }
 
   return {
-    outlineApproved,
+    outlineApproved: true,
     rejected: false,
     reviewDeadlineAt,
-    reviewStage: outlineApproved ? "final_review" : "outline_review",
+    reviewStage: "final_review",
     reviewStatus: "pending_review",
-    reviewReason: outlineApproved ? `大纲已通过（${decision.source}）` : `等待大纲审核（${decision.source}）`,
-    ...(decision.warning ? { warnings: [...state.warnings, decision.warning] } : {}),
+    reviewReason: `单阶段终稿审核等待处理（${decision.source}）`,
+    ...(decision.warning || compatWarnings.length > 0
+      ? { warnings: [...state.warnings, ...(decision.warning ? [decision.warning] : []), ...compatWarnings] }
+      : {}),
   };
 }
 
@@ -378,16 +423,6 @@ export async function reviewFinalNode(state: ReportState): Promise<Partial<Repor
     };
   }
 
-  if (!state.outlineApproved) {
-    return {
-      finalApproved: false,
-      rejected: false,
-      reviewStage: "outline_review",
-      reviewStatus: "pending_review",
-      reviewReason: "大纲未通过，终稿审核尚未开始",
-    };
-  }
-
   const decision = await resolveStageDecision({
     state,
     stage: "final_review",
@@ -398,7 +433,7 @@ export async function reviewFinalNode(state: ReportState): Promise<Partial<Repor
   }
 
   if (decision.action === "request_revision") {
-    const revised = await executeFeedbackRevision({
+    const revised = await executeRevisionWithAgent({
       mode: state.mode,
       generatedAt: state.generatedAt,
       sourceConfigPath: state.sourceConfigPath,
@@ -409,7 +444,41 @@ export async function reviewFinalNode(state: ReportState): Promise<Partial<Repor
       rankedItems: state.rankedItems,
       metrics: state.metrics,
       instruction: decision.instruction,
+      revisionAuditLogs: state.revisionAuditLogs,
+      settings: {
+        enabled: state.revisionAgentEnabled,
+        maxSteps: state.revisionAgentMaxSteps,
+        maxWallClockMs: state.revisionAgentMaxWallClockMs,
+        maxLlmCalls: state.revisionAgentMaxLlmCalls,
+        maxToolErrors: state.revisionAgentMaxToolErrors,
+        plannerTimeoutMs: state.revisionAgentPlannerTimeoutMs,
+      },
+      llm: {
+        provider: state.llmSummaryProvider,
+        apiKey: state.llmSummaryMinimaxApiKey,
+        model: state.llmSummaryMinimaxModel,
+      },
+    }).catch(async (error) => {
+      // 终稿阶段同样采用 fail-soft，确保“要求修订”失败不会导致主流程不可用。
+      const fallback = await executeFeedbackRevision({
+        mode: state.mode,
+        generatedAt: state.generatedAt,
+        sourceConfigPath: state.sourceConfigPath,
+        runtimeConfigPath: state.runtimeConfigPath,
+        storageBackend: state.storageBackend,
+        storageDbPath: state.storageDbPath,
+        storageFallbackToFile: state.storageFallbackToFile,
+        rankedItems: state.rankedItems,
+        metrics: state.metrics,
+        instruction: decision.instruction,
+      });
+      return {
+        ...fallback,
+        warnings: [`revision_agent_failed:${error instanceof Error ? error.message : String(error)}`],
+        hasPendingTasks: false,
+      };
     });
+    const revisionWarnings = revised.warnings.length > 0 ? revised.warnings : [];
     return {
       rankedItems: revised.rankedItems,
       highlights: revised.highlights,
@@ -421,7 +490,9 @@ export async function reviewFinalNode(state: ReportState): Promise<Partial<Repor
       reviewStatus: "pending_review",
       reviewReason: `终稿阶段回流修订已执行（${decision.source}）`,
       revisionAuditLogs: [...state.revisionAuditLogs, revised.auditLog],
-      ...(decision.warning ? { warnings: [...state.warnings, decision.warning] } : {}),
+      ...((decision.warning || revisionWarnings.length > 0)
+        ? { warnings: [...state.warnings, ...(decision.warning ? [decision.warning] : []), ...revisionWarnings] }
+        : {}),
     };
   }
 
@@ -486,6 +557,12 @@ export function createInitialState(params: {
   llmAssistMinConfidence?: number;
   llmSummaryPromptVersion?: string;
   llmFallbackAlertEnabled?: boolean;
+  revisionAgentEnabled?: boolean;
+  revisionAgentMaxSteps?: number;
+  revisionAgentMaxWallClockMs?: number;
+  revisionAgentMaxLlmCalls?: number;
+  revisionAgentMaxToolErrors?: number;
+  revisionAgentPlannerTimeoutMs?: number;
   generatedAt: string;
   reviewStartedAt?: string;
   reportDate: string;
@@ -526,6 +603,12 @@ export function createInitialState(params: {
     llmAssistMinConfidence: params.llmAssistMinConfidence ?? 0.5,
     llmSummaryPromptVersion: params.llmSummaryPromptVersion ?? "m5.3-v1",
     llmFallbackAlertEnabled: params.llmFallbackAlertEnabled ?? true,
+    revisionAgentEnabled: params.revisionAgentEnabled ?? true,
+    revisionAgentMaxSteps: params.revisionAgentMaxSteps ?? 20,
+    revisionAgentMaxWallClockMs: params.revisionAgentMaxWallClockMs ?? 600_000,
+    revisionAgentMaxLlmCalls: params.revisionAgentMaxLlmCalls ?? 30,
+    revisionAgentMaxToolErrors: params.revisionAgentMaxToolErrors ?? 5,
+    revisionAgentPlannerTimeoutMs: params.revisionAgentPlannerTimeoutMs ?? 30_000,
     reviewInstructionRoot: params.reviewInstructionRoot,
     rawItems: [],
     items: [],
@@ -535,13 +618,14 @@ export function createInitialState(params: {
     reportMarkdown: "",
     approveOutline: params.approveOutline,
     approveFinal: params.approveFinal,
-    outlineApproved: false,
+    // 单阶段审核默认不再等待 outline 动作，保留字段仅用于历史兼容。
+    outlineApproved: true,
     finalApproved: false,
     rejected: false,
     reviewStatus: params.mode === "daily" ? "not_required" : "pending_review",
-    reviewStage: params.mode === "daily" ? "none" : "outline_review",
+    reviewStage: params.mode === "daily" ? "none" : "final_review",
     reviewDeadlineAt: params.mode === "weekly" ? computeWeeklyReviewDeadline(params.generatedAt, params.timezone) : null,
-    reviewReason: params.mode === "daily" ? "日报模式默认直出" : "等待审核",
+    reviewReason: params.mode === "daily" ? "日报模式默认直出" : "等待终稿审核",
     publishStatus: "pending",
     shouldPublish: false,
     publishedAt: null,

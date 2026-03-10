@@ -51,12 +51,26 @@ export interface FeedbackSourceWeightAdjustment {
 
 export type RankingWeightDimension = "source" | "freshness" | "keyword";
 
+export type RevisionScope = "all" | "category" | "item";
+
+export type RevisionIntent =
+  | "general_refine"
+  | "content_update"
+  | "structure_adjust"
+  | "add_information"
+  | "remove_information"
+  | "other";
+
 export interface FeedbackRankingWeightAdjustment {
   dimension: RankingWeightDimension;
   weight: number;
 }
 
 export interface ReviewFeedbackPayload {
+  revisionRequest?: string;
+  revisionScope?: RevisionScope;
+  revisionIntent?: RevisionIntent;
+  continueFromCheckpoint?: boolean;
   candidateAdditions?: FeedbackCandidateAddition[];
   candidateRemovals?: FeedbackCandidateRemoval[];
   newTopics?: string[];
@@ -369,6 +383,12 @@ export interface ReportState {
   llmAssistMinConfidence: number;
   llmSummaryPromptVersion: string;
   llmFallbackAlertEnabled: boolean;
+  revisionAgentEnabled: boolean;
+  revisionAgentMaxSteps: number;
+  revisionAgentMaxWallClockMs: number;
+  revisionAgentMaxLlmCalls: number;
+  revisionAgentMaxToolErrors: number;
+  revisionAgentPlannerTimeoutMs: number;
   llmClassifyScoreMeta: LlmClassifyScoreMeta;
   warnings: string[];
 }

@@ -1,14 +1,14 @@
-# AI 周报系统设计（v1.0）
+# AI 周报系统设计（v1.1）
 
 ## 1. 文档目标与范围
-- 目标：定义 AI 日报/周报系统在 **M5.4 已完成** 基线下的完整技术架构。
+- 目标：定义 AI 日报/周报系统在 **M5.5 已完成** 基线下的完整技术架构。
 - 范围：覆盖采集、处理、审核、发布、协同通知、审核意见回流、可观测与运维策略。
 - 非目标：不描述前端管理后台 UI 细节；不覆盖分布式部署实现细节（当前暂缓）。
 
 ## 2. 当前阶段边界（必须先对齐）
 ### 2.1 已实现（M1 ~ M3.1）
-- 基础 LangGraph 流水线：`collect -> normalize -> dedupe -> llm_classify_score -> rank -> build_outline -> review_outline -> review_final -> publish_or_wait -> llm_summarize -> build_report`。
-- 周报审核断点：大纲审核 + 终稿审核。
+- 基础 LangGraph 流水线：`collect -> normalize -> dedupe -> llm_classify_score -> rank -> build_outline -> review_outline(兼容) -> review_final -> publish_or_wait -> llm_summarize -> build_report`。
+- 周报审核断点：单阶段 `final_review`（`review_outline` 仅保留历史动作兼容）。
 - 超时自动发布：周一 12:30（Asia/Shanghai）未完成审核自动发布。
 - pending 复检发布：基于 review snapshot 重算状态并发布，不重跑采集链路。
 - watchdog 巡检：批量扫描 pending 周报，支持 dry-run。
@@ -42,7 +42,7 @@
 - 可点击链接：支持通过 `REPORT_PUBLIC_BASE_URL` 把本地产物路径转换为飞书可点击 URL。
 
 ### 2.6 已实现（M4.2）
-- 阶段引导式主卡：按 `outline_review/final_review/结束态` 渲染不同状态文案与按钮集合。
+- 阶段引导式主卡：周报统一以 `final_review/结束态` 渲染；历史 `outline_review` 仅做兼容映射。
 - 单轮单主卡：同一 `reportDate + runId` 复用同一消息入口，阶段变化优先 PATCH 更新卡片。
 - 更新失败降级：主卡更新失败时自动新发卡片并覆盖记录，保证审核入口可用。
 - 回执去噪：动作回执改为业务化短句；重复回调仅返回 toast，不重复群发。
@@ -94,10 +94,17 @@
 - 默认来源扩展：新增 InfoQ AI/ML 与 Google AI Blog RSS；保留不稳定来源默认禁用策略。
 - 诊断增强：`source:diagnose` 可识别 `github_search` 启用状态，并在 token 缺失时给出运维建议。
 
+### 2.13 已实现（M5.5）
+- 周报审核状态机改为单阶段 `final_review`，发布判定不再依赖 outline 通过。
+- 新增受限 ReAct 修订执行器：`revision-agent.ts`（Planner -> Tool Executor -> 审计输出）。
+- `request_revision` 支持自由文本主输入，并支持 `revisionScope/revisionIntent/continueFromCheckpoint`。
+- 修订执行增加护栏：`maxSteps/maxWallClockMs/maxLlmCalls/maxToolErrors`，默认总超时 10 分钟。
+- 失败分型与恢复：支持 `planning_failed/step_limit_reached/wall_clock_timeout` 等分类，以及 checkpoint 续跑。
+
 ## 3. 架构全景
 系统分为八层：
 1. **Ingestion Layer**：按来源抓取原始条目（RSS + GitHub Search API 适配器）。
-2. **Processing Layer (LangGraph)**：标准化、去重、分类、排序、大纲/正文生成。
+2. **Processing Layer (LangGraph)**：标准化、去重、分类、排序、大纲/正文生成（含单阶段审核兼容节点）。
 3. **Review Orchestration Layer**：审核状态机、超时发布判定、pending 复检。
 4. **Collaboration Layer**：Feishu 通知、审核动作回写、审核意见回流修订。
 5. **Storage Layer**：SQLite（主）+ 文件（fallback）双轨持久化。
@@ -147,7 +154,8 @@
     │   ├── instruction-store.ts      # 审核指令存储抽象（文件+DB）
     │   ├── api-server.ts             # Review API 服务
     │   ├── feedback-schema.ts        # 回流 payload 归一化与校验
-    │   ├── feedback-executor.ts      # request_revision 回流执行器
+    │   ├── feedback-executor.ts      # 结构化回流执行器（稳定 fallback）
+    │   ├── revision-agent.ts         # 受限 ReAct 修订执行器（Planner + 白名单工具）
     │   ├── feishu.ts                 # Feishu 通知与回调服务（2B）
     │   └── reminder-policy.ts        # 周一 11:30 提醒判定策略
     ├── report/
@@ -182,7 +190,7 @@ START
   -> llm_classify_score
   -> rank_items
   -> build_outline
-  -> review_outline
+  -> review_outline (compat)
   -> review_final
   -> publish_or_wait
   -> llm_summarize
@@ -198,7 +206,7 @@ START
 ### 5.2 pending 复检流程（已实现）
 ```text
 load_review_snapshot
-  -> review_outline
+  -> review_outline (compat)
   -> review_final
   -> publish_or_wait
   -> build_report
@@ -255,7 +263,7 @@ pending review detected (run/recheck/watchdog)
   -> load main-card record by reportDate
   -> if same runId then PATCH card
   -> else send new card and persist messageId
-  -> stage-specific buttons rendered
+  -> single-stage buttons rendered (final review)
 
 callback action received
   -> auth verify + payload adapt + idempotency dedupe
@@ -272,8 +280,10 @@ callback action received
 ### 5.6 审核意见回流修订流程（M3.3 已实现）
 ```text
 request_revision
-  -> parse structured directives
-  -> execute feedback (candidate add/remove + runtime config merge)
+  -> parse feedback (free text + optional structured fields)
+  -> react planner (LLM)
+  -> restricted tool execution (whitelist)
+  -> fallback executor (if agent failed)
   -> rerank + rebuild outline/report
   -> back to final_review
 ```
@@ -281,6 +291,26 @@ request_revision
 你要求的“回流不等于取消”在此落地：
 - `request_revision`：进入修订分支，不终止流程。
 - `reject`：终止当前 run 发布尝试，但保留产物与审计记录，新 run 可重新进入审核流。
+
+### 5.6.1 ReAct 修订回路（M5.5 已实现）
+```text
+revision_request received
+  -> resolve plan source
+      - continueFromCheckpoint ? load checkpoint tasks : run planner
+  -> while pending tasks:
+      - apply whitelisted tool
+      - collect warnings / failure category
+      - stop on maxSteps / maxWallClock / maxToolErrors
+  -> executeFeedbackRevision (stable fallback merge)
+  -> apply item patches
+  -> write revisionAuditLog (+ optional react_checkpoint)
+```
+
+设计要点：
+- Planner 输出必须是严格 JSON（schema 校验通过后才执行）。
+- 仅允许白名单工具改动结构化快照，禁止整篇 Markdown 自由重写。
+- 护栏触发后保留 checkpoint，支持下一次 `continueFromCheckpoint=true` 续跑。
+- Agent 异常时 fail-soft 回退到 `feedback-executor`，不阻断审核主流程。
 
 ### 5.7 daemon 自动化与主动触发流程（M4.3 已实现）
 ```text
@@ -293,11 +323,19 @@ daemon start
 ```
 
 设计要点：
-- callback 只做“鉴权 + 入队 + 快速反馈”，长任务由 worker 异步执行，避免飞书回调超时。
+- callback 对动作做分流：
+  - 读类 `query_weekly_status` 走同步直读，不入队；
+  - 执行类动作继续入队异步执行。
 - daemon 启动后先执行一次补偿扫描，处理休眠/重启导致的漏触发。
 - 主动触发入口为“@机器人 -> 运维操作卡 -> operation_jobs 入队”。
 - 运维操作卡按钮覆盖 `run_daily` 与 `run_weekly`，用于日报/周报的手工补跑。
 - 运维卡 `run_weekly` 默认使用真实数据链路（`mock=false`），避免和线上行为脱节；mock 仅保留给 CLI 显式演练。
+- 运维卡新增“中止本次运行”按钮：对 running/pending 任务执行协作式 cancel（阶段边界生效）。
+- 当检测到同类任务已在运行中，系统发送冲突控制卡，提供“中止当前任务 / 中止并重新开始”；该策略对 `run_daily` 与 `run_weekly` 同时生效。
+- 执行类长任务通过子进程运行，cancel 时由主 worker 发送 `SIGTERM`，超时后升级 `SIGKILL`，确保“当前步骤可硬中止”。
+- cancel 生效后立即清空被取消任务的 dedupe 占位，避免后续同类任务被错误拦截。
+- 执行类动作新增阶段通知：`queued -> started -> progress -> success/failed/cancelled`。
+- 失败回执统一输出错误分类（timeout/http/db/validation/unknown），便于快速排障。
 - 审核动作写入后自动入队 `recheck_weekly`，减少人工补命令。
 - 自动入队的 `recheck_weekly` 视为系统内部动作，不群发主动触发回执，避免干扰审核对话。
 
@@ -323,11 +361,11 @@ pnpm run services:up
 ## 6. 状态机模型
 ### 6.1 审核状态
 - `reviewStatus`: `not_required | pending_review | approved | timeout_published | rejected`
-- `reviewStage`: `outline_review | final_review | none`
+- `reviewStage`: `final_review | none`（历史 artifact 可能出现 `outline_review`，仅兼容读取）
 - `publishStatus`: `pending | published`
 
 ### 6.2 关键事件
-- `approve_outline`
+- `approve_outline`（兼容动作）
 - `approve_final`
 - `request_revision`
 - `reject`
@@ -335,7 +373,7 @@ pnpm run services:up
 - `watchdog_recheck`
 
 ### 6.3 关键状态转移（简化）
-- `pending_review + outline_review + approve_outline -> pending_review + final_review`
+- `pending_review + final_review + approve_outline -> pending_review + final_review(兼容提示)`
 - `pending_review + final_review + approve_final -> approved + published`
 - `pending_review + any + deadline_reached -> timeout_published + published`
 - `pending_review + final_review + request_revision -> pending_review + final_review(修订后)`
@@ -360,7 +398,7 @@ pnpm run services:up
 
 M3.2 扩展：
 - `source`: `cli | feishu_callback`
-- `action`: `approve_outline | approve_final | request_revision | reject`
+- `action`: `approve_outline(兼容) | approve_final | request_revision | reject`
 - `traceId` / `messageId`（便于追踪 Feishu 回调）
 - `feedback`（结构化回流 payload）
 
@@ -375,6 +413,10 @@ DB 表：`review_instructions`
 
 ### 7.3 审核意见回流指令（M3.3 已实现）
 `feedback` 字段支持：
+- `revisionRequest`：自由文本修订请求（主输入）
+- `revisionScope`：修订范围（`all/category/item`）
+- `revisionIntent`：修订意图（`general_refine/content_update/...`）
+- `continueFromCheckpoint`：从 checkpoint 继续执行未完成任务
 - `candidateAdditions`：新增候选条目
 - `candidateRemovals`：删除候选条目
 - `newTopics`：新增主题词
@@ -428,14 +470,16 @@ DB 表：`operation_jobs`
 - 失败后按 `max_retries` 自动回队，超限标记为 `failed`。
 
 ## 8. 策略层设计（回流如何生效）
-为避免“自由文本难执行”，回流策略统一结构化并分三层（已落地）：
-1. **条目层**：新增、删除、置顶、降权。
-2. **检索层**：主题词/搜索词/来源启停与权重调整。
-3. **输出层**：章节结构、重点推荐数量、语气风格控制。
+回流策略采用“自由文本 -> ReAct 规划 -> 受限工具执行 -> 结构化落盘”：
+1. **Planner 层**：把自然语言拆分为 `tasks[]`（operation/target/payload/confidence）。
+2. **Tool 层**：按白名单执行条目层、检索层、配置层改动。
+3. **Validation 层**：校验目标命中、字段合法性与护栏预算。
+4. **Fallback 层**：异常时回退 `feedback-executor`，保证流程可继续。
 
 执行原则：
-- 先应用条目层（增删候选），再应用检索层（来源/权重/关键词），最后渲染输出层。
-- 所有自动调整写入 `revisionAuditLogs`，并将 runtime 配置变更落盘。
+- 优先执行可精确定位任务；低置信度任务转为 `ambiguous_target` 并要求人工澄清。
+- 所有自动调整写入 `revisionAuditLogs`，必要时落盘 `react_checkpoint` 供后续续跑。
+- runtime 配置变更继续复用既有版本化存储，保持可追溯。
 
 ## 9. 可观测性、容错与告警
 - 节点指标：每节点输入量/输出量/耗时。
@@ -505,6 +549,12 @@ DB 表：`operation_jobs`
 - `LLM_RANK_FUSION_WEIGHT`（规则分与 LLM 分融合权重）
 - `LLM_ASSIST_MIN_CONFIDENCE`（历史兼容字段，新流程可忽略）
 - `LLM_SUMMARY_PROMPT_VERSION` / `LLM_FALLBACK_ALERT_ENABLED`
+- `REVISION_AGENT_ENABLED`
+- `REVISION_AGENT_MAX_STEPS`（默认 20）
+- `REVISION_AGENT_MAX_WALL_CLOCK_MS`（默认 600000，即 10 分钟）
+- `REVISION_AGENT_MAX_LLM_CALLS`（默认 30）
+- `REVISION_AGENT_MAX_TOOL_ERRORS`（默认 5）
+- `REVISION_AGENT_PLANNER_TIMEOUT_MS`（默认 30000）
 
 实现约束：
 - `services:up` 会把 `AI_WEEKLY_ENV_FILE` 同步到 `AI_WEEKLY_LAUNCHD_ENV_FILE`，确保 launchd 读取路径稳定，规避 macOS TCC 对 `Documents/Desktop` 的权限拦截。

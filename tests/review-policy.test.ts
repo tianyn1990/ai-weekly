@@ -67,7 +67,7 @@ describe("review-policy", () => {
   });
 
   it("待审核阶段应根据 outline/final 状态返回正确节点", () => {
-    expect(resolvePendingStage(false, false)).toBe("outline_review");
+    expect(resolvePendingStage(false, false)).toBe("final_review");
     expect(resolvePendingStage(true, false)).toBe("final_review");
     expect(resolvePendingStage(true, true)).toBe("none");
   });

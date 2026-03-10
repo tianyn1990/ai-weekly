@@ -31,7 +31,7 @@ describe("pipeline graph review flow", () => {
       const result = await graph.invoke(state as any);
 
       expect(result.reviewStatus).toBe("pending_review");
-      expect(result.reviewStage).toBe("outline_review");
+      expect(result.reviewStage).toBe("final_review");
       expect(result.shouldPublish).toBe(false);
       expect(result.publishStatus).toBe("pending");
     } finally {

@@ -54,9 +54,12 @@ pnpm run:weekly:mock
 - M5 复盘 01（MiniMax 逐条总结 + 4-12 速览 + 回退告警）：`docs/learning-sessions/m5-session-01-llm-summary-minimax.md`
 - M5 复盘 02（LLM 辅助排序/打标 + 导语 + 标题翻译 + 全局并发闸门）：`docs/learning-sessions/m5-session-02-llm-assist-ranking-and-lead.md`
 - M5 复盘 03（自适应降载 + run 级诊断 + 分类导读）：`docs/learning-sessions/m5-session-03-llm-stability-observability-and-category-lead.md`
+- M5 复盘 04（飞书运维新增“生成日报（真实）”入口）：`docs/learning-sessions/m5-session-04-feishu-manual-daily-run-entry.md`
 - M5 复盘 05（前置批量分类/全量打分 + 摘要节点去打分）：`docs/learning-sessions/m5-session-05-llm-batch-classify-score-pre-rank.md`
 - M5 复盘 06（全量标题翻译前置 + 中文质量修复链 + 英文保留策略）：`docs/learning-sessions/m5-session-06-llm-zh-quality-loop.md`
 - M5 复盘 07（GitHub Search 一手采集 + 混合来源诊断增强）：`docs/learning-sessions/m5-session-07-github-source-and-curated-rss.md`
+- M5 复盘 08（单阶段终稿审核 + 受限 ReAct 修订回路）：`docs/learning-sessions/m5-session-08-single-final-review-and-react-revision-loop.md`
+- M5 复盘 09（运维动作分流 + 阶段通知 + 中止控制）：`docs/learning-sessions/m5-session-09-operation-progress-and-cancel-control.md`
 
 ## 6. 执行优先级约束
 - 优先保证「可运行 + 可理解 + 可复盘」三件事同时成立。
@@ -74,11 +77,13 @@ pnpm run:weekly:mock
 9. M5.2：前置批量分类/全量打分 + 排序融合 + 导语 + 标题翻译【已完成】。
 10. M5.3：自适应降载与运行诊断 + 分类导读（LLM + 模板回退）【已完成】。
 11. M5.4：GitHub Search 一手开源采集 + 精选 RSS 扩展 + 诊断增强【已完成】。
-12. 分布式互斥：暂缓，待多实例部署再启动。
+12. M5.5：单阶段终稿审核 + 受限 ReAct 修订回路（自由文本、checkpoint、失败分型）【已完成】。
+13. 分布式互斥：暂缓，待多实例部署再启动。
 
 ## 8. M4.3 运行备忘（防遗忘）
 - 常驻运行入口：`pnpm run run:daemon`。
 - 主动触发入口：飞书群内 @应用机器人并发送“运维/操作卡/ops/触发”关键词。
+- 主动触发分流：`query_weekly_status` 为同步直读；执行类动作为异步入队；“中止本次运行”为协作式 cancel。
 - 自动同步配置与代理说明以 `README.md` 为准；每次变更同步策略时需同步更新 `README.md` 与 `docs/architecture.md`。
 
 ## 9. M4.4 运行备忘（防遗忘）
