@@ -1,18 +1,18 @@
 {
-  "runId": "weekly-1773075126494",
-  "generatedAt": "2026-03-09T16:52:05.539Z",
+  "runId": "recheck-weekly-1773100310576",
+  "generatedAt": "2026-03-09T23:51:48.731Z",
   "reviewStartedAt": "2026-03-09T16:52:05.539Z",
   "reportDate": "2026-03-10",
   "mode": "weekly",
   "reviewStatus": "pending_review",
-  "reviewStage": "outline_review",
+  "reviewStage": "final_review",
   "reviewDeadlineAt": "2026-03-16T04:30:00.000Z",
   "reviewReason": "仍在审核窗口内，等待人工审核",
   "publishStatus": "pending",
   "shouldPublish": false,
   "publishReason": "waiting_for_manual_review",
   "publishedAt": null,
-  "outlineApproved": false,
+  "outlineApproved": true,
   "finalApproved": false,
   "rejected": false,
   "metrics": {
@@ -36,8 +36,8 @@
     {
       "itemId": "af0473b3cd39",
       "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
-      "summary": "Railway获得1亿美元B轮融资，估值超10亿美元，致力于打造AI原生云基础设施，提供秒级部署能力，目前拥有200万开发者但仅30名员工，月处理万亿级请求。",
-      "recommendation": "建议本周优先评估《Railway secures $100 million to challenge AWS with AI-native cloud infrastructure》相关方案，重点关注仓库成熟度与二次开发成本。",
+      "summary": "Railway, a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar…",
+      "recommendation": "Agent 工程实践相关",
       "evidenceItemIds": [
         "af0473b3cd39"
       ],
@@ -51,8 +51,8 @@
       "itemId": "dca57667c39b",
       "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
       "titleZh": "Claude Code月费高达200美元，而Goose免费提供相同功能",
-      "summary": "Claude Code每月收费高达200美元且存在严格使用限制，而Block开发的开源AI编程代理Goose提供完全免费、本地运行、无限制的替代方案，在GitHub已获26100星。",
-      "recommendation": "对于受够了云端AI编程工具定价和限制的开发者，Goose提供了真正免费的本地化选择，是值得尝试的开源替代方案。",
+      "summary": "The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code, Anthropic's terminal-bas…",
+      "recommendation": "Agent 工程实践相关",
       "evidenceItemIds": [
         "dca57667c39b"
       ],
@@ -63,25 +63,10 @@
       "llmScore": 88
     },
     {
-      "itemId": "ed6c06ec1333",
-      "title": "How Balyasny Asset Management built an AI research engine for investing",
-      "titleZh": "Balyasny资产管理公司如何构建AI投资研究引擎",
-      "summary": "Balyasny Asset Management利用GPT-5.4、严格模型评估和agent工作流构建AI研究引擎，实现大规模投资分析转型。",
-      "recommendation": "对于金融工程团队而言，该案例展示了如何在投资研究领域有效部署LLM和agent技术，具有重要参考价值。",
-      "evidenceItemIds": [
-        "ed6c06ec1333"
-      ],
-      "domainTag": "agent",
-      "intentTag": "case-study",
-      "actionability": 1,
-      "confidence": 0.9,
-      "llmScore": 85
-    },
-    {
       "itemId": "570688bcf84f",
       "title": "卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k",
-      "summary": "卡帕西开源Agent自进化训练框架S3，基于博士社群模拟实现智能体自我进化，5分钟完成一轮实验，在48小时内获得9.5k星标关注。",
-      "recommendation": "建议本周优先评估《卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k》相关方案，重点关注仓库成熟度与二次开发成本。",
+      "summary": "下一步要模拟整个博士社群",
+      "recommendation": "Agent 工程实践相关",
       "evidenceItemIds": [
         "570688bcf84f"
       ],
@@ -94,8 +79,8 @@
     {
       "itemId": "1e5772829392",
       "title": "Codex Security: now in research preview",
-      "summary": "OpenAI推出Codex Security，这是一款AI应用安全代理，可分析项目上下文来检测、验证和修补复杂漏洞，以更高的置信度和更低的噪音运行。",
-      "recommendation": "建议本周优先评估《Codex Security: now in research preview》相关方案，重点关注多 Agent 协作策略与稳定性。",
+      "summary": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex…",
+      "recommendation": "Agent 工程实践相关",
       "evidenceItemIds": [
         "1e5772829392"
       ],
@@ -108,8 +93,8 @@
     {
       "itemId": "4195e551833f",
       "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
-      "summary": "Andrej Karpathy 开源了 AutoResearch，一款约 630 行的单文件 Python 工具，可让 AI Agents 在单块 NVIDIA GPU 上自主运行机器学习实验。",
-      "recommendation": "建议本周优先评估《Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs…",
+      "summary": "Andrej Karpathy released autoresearch, a minimalist Python tool designed to enable AI agents to autonomously conduct ma…",
+      "recommendation": "Agent 工程实践相关",
       "evidenceItemIds": [
         "4195e551833f"
       ],
@@ -122,8 +107,8 @@
     {
       "itemId": "d476bb6a9ab3",
       "title": "The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning",
-      "summary": "Google研究团队指出当前LLM缺乏概率推理能力，即根据新证据更新",
-      "recommendation": "建议本周优先评估《The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning》相关方案，重点关注多 Agent 协作策略与稳定性。",
+      "summary": "Large Language Models (LLMs) are the world’s best mimics, but when it comes to the cold, hard logic of updating beliefs…",
+      "recommendation": "Agent 工程实践相关",
       "evidenceItemIds": [
         "d476bb6a9ab3"
       ],
@@ -136,8 +121,8 @@
     {
       "itemId": "96c6faefc88a",
       "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
-      "summary": "Nous Research发布开源编程模型NousCoder-14B，仅用4天在48块Nvidia B200 GPU上训练完成，在LiveCodeBench v6达到67.87%准确率，完整开源训练栈和基准数据集。",
-      "recommendation": "工程团队值得关注：模型完全开源可本地部署，透明训练流程且性能接近顶级闭源方案，同时其数据饱和发现对后续技术选型有重要参考价值。",
+      "summary": "Nous Research, the open-source artificial intelligence startup backed by crypto venture firm Paradigm, released a new c…",
+      "recommendation": "Agent 工程实践相关",
       "evidenceItemIds": [
         "96c6faefc88a"
       ],
@@ -146,13 +131,388 @@
       "actionability": 1,
       "confidence": 0.6,
       "llmScore": 100
+    },
+    {
+      "itemId": "ed6c06ec1333",
+      "title": "How Balyasny Asset Management built an AI research engine for investing",
+      "titleZh": "Balyasny资产管理公司如何构建AI投资研究引擎",
+      "summary": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "ed6c06ec1333"
+      ],
+      "domainTag": "agent",
+      "intentTag": "case-study",
+      "actionability": 1,
+      "confidence": 0.9,
+      "llmScore": 85
+    },
+    {
+      "itemId": "825c39404554",
+      "title": "Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation",
+      "summary": "In this tutorial, we build a complete cognitive blueprint and runtime agent framework. We define structured blueprints …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "825c39404554"
+      ]
+    },
+    {
+      "itemId": "6e51fbd095d1",
+      "title": "How to Build Progress Monitoring Using Advanced tqdm for Async, Parallel, Pandas, Logging, and High-Performance Workflows",
+      "summary": "In this tutorial, we explore tqdm in depth and demonstrate how we build powerful, real-time progress tracking into mode…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "6e51fbd095d1"
+      ]
+    },
+    {
+      "itemId": "fee0cde1972e",
+      "title": "Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI",
+      "summary": "Salesforce on Tuesday launched an entirely rebuilt version of Slackbot, the company's workplace assistant, transforming…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "fee0cde1972e"
+      ]
+    },
+    {
+      "itemId": "d1b65307276f",
+      "title": "Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required",
+      "summary": "Anthropic released Cowork on Monday, a new AI agent capability that extends the power of its wildly successful Claude C…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "d1b65307276f"
+      ]
+    },
+    {
+      "itemId": "547565b7ab4d",
+      "title": "Show HN: Local AI stack (Docker, Ollama) that lets you build apps without Python",
+      "summary": "We built a local-first AI stack (Docker + Ollama) that lets you build LLM tools and workflows without writing Python. I…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "547565b7ab4d"
+      ]
+    },
+    {
+      "itemId": "1d02c63766ab",
+      "title": "Can AI Agents Agree?",
+      "summary": "Article URL: https://arxiv.org/abs/2603.01213 Comments URL: https://news.ycombinator.com/item?id=47311353 Points: 1 # C…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "1d02c63766ab"
+      ]
+    },
+    {
+      "itemId": "b3462a1b6f51",
+      "title": "A Coding Guide to Build a Complete Single Cell RNA Sequencing Analysis Pipeline Using Scanpy for Clustering Visualization and Cell Type Annotation",
+      "summary": "In this tutorial, we build a complete pipeline for single-cell RNA sequencing analysis using Scanpy. We start by instal…",
+      "recommendation": "可直接学习实践",
+      "evidenceItemIds": [
+        "b3462a1b6f51"
+      ]
+    },
+    {
+      "itemId": "53d557f697ca",
+      "title": "Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews",
+      "summary": "Alfred Wahlforss was running out of options. His startup, Listen Labs, needed to hire over 100 engineers, but competing…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "53d557f697ca"
+      ]
+    },
+    {
+      "itemId": "4309c341e311",
+      "title": "Agent Builder: chat, file uploads, and tool registry",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "4309c341e311"
+      ]
+    },
+    {
+      "itemId": "cbcaf3d94b9e",
+      "title": "Scheduled reports for Insights Agent",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "cbcaf3d94b9e"
+      ]
+    },
+    {
+      "itemId": "e3d44e83a9fb",
+      "title": "Deep Agents v0.4",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "e3d44e83a9fb"
+      ]
+    },
+    {
+      "itemId": "640ac7d5d99e",
+      "title": "Track costs across your entire agent stack",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "640ac7d5d99e"
+      ]
+    },
+    {
+      "itemId": "5e327815c2c4",
+      "title": "Microsoft open sources its ‘farm of the future’ toolkit",
+      "summary": "The post Microsoft open sources its ‘farm of the future’ toolkit appeared first on The AI Blog.",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "5e327815c2c4"
+      ]
+    },
+    {
+      "itemId": "5e5b98b758c4",
+      "title": "How Descript enables multilingual video dubbing at scale",
+      "summary": "Descript uses OpenAI models to scale multilingual video dubbing, optimizing translations for both meaning and timing so…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5e5b98b758c4"
+      ]
+    },
+    {
+      "itemId": "6684b4cf5670",
+      "title": "Introducing GPT-5.4",
+      "summary": "Introducing GPT-5.4, OpenAI’s most most capable and efficient frontier model for professional work, with state-of-the-a…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "6684b4cf5670"
+      ]
+    },
+    {
+      "itemId": "d9aab484d2a1",
+      "title": "GPT-5.4 Thinking System Card",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d9aab484d2a1"
+      ]
+    },
+    {
+      "itemId": "fc29565ae47e",
+      "title": "Reasoning models struggle to control their chains of thought, and that’s good",
+      "summary": "OpenAI introduces CoT-Control and finds reasoning models struggle to control their chains of thought, reinforcing monit…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fc29565ae47e"
+      ]
+    },
+    {
+      "itemId": "e96ddebbc833",
+      "title": "How to save money on YouTube TV: Consider these 12 cheaper packages (including live sports)",
+      "summary": "The streaming service rolls out a dozen cheaper subscription plans - pick the one that fits your viewing habits.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e96ddebbc833"
+      ]
+    },
+    {
+      "itemId": "1701310afee7",
+      "title": "You can still save up to $1,300 on the Samsung Galaxy S26 Ultra at AT&T - here's the details",
+      "summary": "Samsung's new Galaxy S26 lineup is here, and AT&T wants you to upgrade your phone for 'free.' Here's the catch.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1701310afee7"
+      ]
+    },
+    {
+      "itemId": "238a92f941b7",
+      "title": "I'm a tech professional, and an AI job scam almost fooled me - here's how I caught on",
+      "summary": "With a bit of vigilance, I avoided an employment disaster. Here's how you can, too.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "238a92f941b7"
+      ]
+    },
+    {
+      "itemId": "818365036ce5",
+      "title": "Apple might launch a new class of 'Ultra' devices in 2026 - including a foldable iPhone",
+      "summary": "Perhaps Apple's long-rumored touchscreen MacBook will also be an 'Ultra' device.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "818365036ce5"
+      ]
+    },
+    {
+      "itemId": "a4d2cf16a280",
+      "title": "I've used Tor browser for years, but now I'm using it on my Android phone - here's why",
+      "summary": "If you're looking for the safest way to browse on your Android phone, Tor Browser is it.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a4d2cf16a280"
+      ]
+    },
+    {
+      "itemId": "78e61ae4bc39",
+      "title": "Getting your Android phone repaired? Turn on this setting first - and lock down your data",
+      "summary": "Repair Mode lets technicians fix your Android phone without seeing your personal files or apps. Here's how.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "78e61ae4bc39"
+      ]
+    },
+    {
+      "itemId": "031877f72c23",
+      "title": "Beyond Accuracy: Quantifying the Production Fragility Caused by Excessive, Redundant, and Low-Signal Features in Regression",
+      "summary": "At first glance, adding more features to a model seems like an obvious way to improve performance. If a model can learn…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "031877f72c23"
+      ]
+    },
+    {
+      "itemId": "2a29e91dd6fd",
+      "title": "首个物理AI数据基座平台“无垠”落户浙江，专治机器人数据荒，家庭工业商业场景全覆盖",
+      "summary": "打通训练到商业化落地",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2a29e91dd6fd"
+      ]
+    },
+    {
+      "itemId": "057bdace89b8",
+      "title": "打败GPT-5.2，嵌入真实工业生产，这个大模型什么来头？",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "057bdace89b8"
+      ]
+    },
+    {
+      "itemId": "33d321c1dbfc",
+      "title": "企业微信支持接入OpenClaw，仅需3步即可快速上手",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "33d321c1dbfc"
+      ]
+    },
+    {
+      "itemId": "a05dfa39f05d",
+      "title": "“最美PM”宋紫薇获红杉蚂蚁投资，创业方向略有调整，转向AI护肤",
+      "summary": "暂避大厂锋芒",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a05dfa39f05d"
+      ]
+    },
+    {
+      "itemId": "4b1452f42be2",
+      "title": "文远知行与吉利远程深化战略合作，2026年交付2000台前装量产Robotaxi GXR",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "4b1452f42be2"
+      ]
+    },
+    {
+      "itemId": "322fd6df5463",
+      "title": "Show HN: I built a harness that blocks AI from building until ambiguity < 0.2",
+      "summary": "Most AI coding failures happen before the first line of code. The human shows up with a half-formed idea, the model fil…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "322fd6df5463"
+      ]
+    },
+    {
+      "itemId": "b0d5889a9033",
+      "title": "AI Didn't Destroy Your Company, Your Processes Did",
+      "summary": "Article URL: https://linuxjedi.co.uk/ai-didnt-destroy-your-company-your-processes-did/ Comments URL: https://news.ycomb…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b0d5889a9033"
+      ]
+    },
+    {
+      "itemId": "80f8395f7fba",
+      "title": "Improving AI models' ability to explain their predictions",
+      "summary": "Article URL: https://news.mit.edu/2026/improving-ai-models-ability-explain-predictions-0309 Comments URL: https://news.…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "80f8395f7fba"
+      ]
+    },
+    {
+      "itemId": "e44084698f0f",
+      "title": "Why I'm not worried about AI causing mass unemployment",
+      "summary": "Article URL: https://www.understandingai.org/p/software-didnt-eat-the-world Comments URL: https://news.ycombinator.com/…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e44084698f0f"
+      ]
+    },
+    {
+      "itemId": "8a9ed6e50795",
+      "title": "Pin a baseline experiment in LangSmith",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "8a9ed6e50795"
+      ]
+    },
+    {
+      "itemId": "98f4c30944aa",
+      "title": "Customize trace previews in LangSmith",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "98f4c30944aa"
+      ]
+    },
+    {
+      "itemId": "87225dfc3e68",
+      "title": "A conversation with Kevin Scott: What’s next in AI",
+      "summary": "The post A conversation with Kevin Scott: What’s next in AI appeared first on The AI Blog.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "87225dfc3e68"
+      ]
+    },
+    {
+      "itemId": "5896e047adc6",
+      "title": "From Hot Wheels to handling content: How brands are using Microsoft AI to be more productive and imaginative",
+      "summary": "The post From Hot Wheels to handling content: How brands are using Microsoft AI to be more productive and imaginative a…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5896e047adc6"
+      ]
+    },
+    {
+      "itemId": "fe93253782ea",
+      "title": "How data and AI will transform contact centres for financial services",
+      "summary": "The post How data and AI will transform contact centres for financial services appeared first on The AI Blog.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fe93253782ea"
+      ]
+    },
+    {
+      "itemId": "c61256096223",
+      "title": "AI-equipped drones study dolphins on the edge of extinction",
+      "summary": "The post AI-equipped drones study dolphins on the edge of extinction appeared first on The AI Blog.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c61256096223"
+      ]
+    },
+    {
+      "itemId": "455e21f8b151",
+      "title": "Online math tutoring service uses AI to help boost students’ skills and confidence",
+      "summary": "The post Online math tutoring service uses AI to help boost students’ skills and confidence appeared first on The AI Bl…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "455e21f8b151"
+      ]
     }
   ],
   "quickDigest": [
     {
       "itemId": "af0473b3cd39",
       "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
-      "takeaway": "Railway获得1亿美元B轮融资，估值超10亿美元，致力于打造AI原生云基础设施，提供秒级部署能力，目前拥有200万开发者但仅30名员工，月处理万亿级请求。",
+      "takeaway": "Railway, a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar…",
       "evidenceItemIds": [
         "af0473b3cd39"
       ]
@@ -160,7 +520,7 @@
     {
       "itemId": "dca57667c39b",
       "title": "Claude Code月费高达200美元，而Goose免费提供相同功能 (Claude Code costs up to $200 a month. Goose does the same thing for free.)",
-      "takeaway": "Claude Code每月收费高达200美元且存在严格使用限制，而Block开发的开源AI编程代理Goose提供完全免费、本地运行、无限制的替代方案，在GitHub已获26100星。",
+      "takeaway": "The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code, Anthropic's terminal-bas…",
       "evidenceItemIds": [
         "dca57667c39b"
       ]
@@ -168,7 +528,7 @@
     {
       "itemId": "570688bcf84f",
       "title": "卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k",
-      "takeaway": "卡帕西开源Agent自进化训练框架S3，基于博士社群模拟实现智能体自我进化，5分钟完成一轮实验，在48小时内获得9.5k星标关注。",
+      "takeaway": "下一步要模拟整个博士社群",
       "evidenceItemIds": [
         "570688bcf84f"
       ]
@@ -176,7 +536,7 @@
     {
       "itemId": "1e5772829392",
       "title": "Codex Security: now in research preview",
-      "takeaway": "OpenAI推出Codex Security，这是一款AI应用安全代理，可分析项目上下文来检测、验证和修补复杂漏洞，以更高的置信度和更低的噪音运行。",
+      "takeaway": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex…",
       "evidenceItemIds": [
         "1e5772829392"
       ]
@@ -184,7 +544,7 @@
     {
       "itemId": "4195e551833f",
       "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
-      "takeaway": "Andrej Karpathy 开源了 AutoResearch，一款约 630 行的单文件 Python 工具，可让 AI Agents 在单块 NVIDIA GPU 上自主运行机器学习实验。",
+      "takeaway": "Andrej Karpathy released autoresearch, a minimalist Python tool designed to enable AI agents to autonomously conduct ma…",
       "evidenceItemIds": [
         "4195e551833f"
       ]
@@ -192,9 +552,57 @@
     {
       "itemId": "d476bb6a9ab3",
       "title": "The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning",
-      "takeaway": "Google研究团队指出当前LLM缺乏概率推理能力，即根据新证据更新",
+      "takeaway": "Large Language Models (LLMs) are the world’s best mimics, but when it comes to the cold, hard logic of updating beliefs…",
       "evidenceItemIds": [
         "d476bb6a9ab3"
+      ]
+    },
+    {
+      "itemId": "96c6faefc88a",
+      "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+      "takeaway": "Nous Research, the open-source artificial intelligence startup backed by crypto venture firm Paradigm, released a new c…",
+      "evidenceItemIds": [
+        "96c6faefc88a"
+      ]
+    },
+    {
+      "itemId": "ed6c06ec1333",
+      "title": "Balyasny资产管理公司如何构建AI投资研究引擎 (How Balyasny Asset Management built an AI research engine for investing)",
+      "takeaway": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform …",
+      "evidenceItemIds": [
+        "ed6c06ec1333"
+      ]
+    },
+    {
+      "itemId": "825c39404554",
+      "title": "Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation",
+      "takeaway": "In this tutorial, we build a complete cognitive blueprint and runtime agent framework. We define structured blueprints …",
+      "evidenceItemIds": [
+        "825c39404554"
+      ]
+    },
+    {
+      "itemId": "6e51fbd095d1",
+      "title": "How to Build Progress Monitoring Using Advanced tqdm for Async, Parallel, Pandas, Logging, and High-Performance Workflows",
+      "takeaway": "In this tutorial, we explore tqdm in depth and demonstrate how we build powerful, real-time progress tracking into mode…",
+      "evidenceItemIds": [
+        "6e51fbd095d1"
+      ]
+    },
+    {
+      "itemId": "fee0cde1972e",
+      "title": "Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI",
+      "takeaway": "Salesforce on Tuesday launched an entirely rebuilt version of Slackbot, the company's workplace assistant, transforming…",
+      "evidenceItemIds": [
+        "fee0cde1972e"
+      ]
+    },
+    {
+      "itemId": "d1b65307276f",
+      "title": "Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required",
+      "takeaway": "Anthropic released Cowork on Monday, a new AI agent capability that extends the power of its wildly successful Claude C…",
+      "evidenceItemIds": [
+        "d1b65307276f"
       ]
     }
   ],
@@ -210,7 +618,7 @@
         "1701310afee7"
       ],
       "fallbackTriggered": true,
-      "reason": "minimax_invalid_response:missing_content"
+      "reason": "template_fallback_only"
     },
     {
       "category": "open-source",
@@ -222,7 +630,7 @@
         "4195e551833f"
       ],
       "fallbackTriggered": true,
-      "reason": "minimax_invalid_response:missing_content"
+      "reason": "template_fallback_only"
     },
     {
       "category": "tooling",
@@ -234,7 +642,7 @@
         "547565b7ab4d"
       ],
       "fallbackTriggered": true,
-      "reason": "minimax_invalid_response:missing_content"
+      "reason": "template_fallback_only"
     },
     {
       "category": "agent",
@@ -246,39 +654,39 @@
         "e3d44e83a9fb"
       ],
       "fallbackTriggered": true,
-      "reason": "minimax_invalid_response:missing_content"
+      "reason": "template_fallback_only"
     }
   ],
-  "summaryInputHash": "8fdecd13f53ceabd36942be5910f956842cebb1d53baa8d4d62ec5b29134746d",
+  "summaryInputHash": "b07b85f4e9769ea19e4314bcbc0a0db18810d35124b96139643f801fdea5477c",
   "llmSummaryMeta": {
     "enabled": true,
     "provider": "minimax",
     "model": "MiniMax-M2.5",
     "promptVersion": "m5.2-v1",
-    "startedAt": "2026-03-09T16:52:18.323Z",
-    "finishedAt": "2026-03-09T16:55:57.938Z",
-    "durationMs": 219615,
-    "inputCount": 8,
-    "summarizedCount": 8,
-    "fallbackTriggered": false,
-    "effectiveConcurrency": 1,
-    "assistAppliedCount": 8,
-    "assistFallbackCount": 0,
+    "startedAt": "2026-03-09T23:51:50.615Z",
+    "finishedAt": "2026-03-10T00:02:11.856Z",
+    "durationMs": 621241,
+    "inputCount": 48,
+    "summarizedCount": 3,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:38%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 48,
     "leadFallbackTriggered": true,
     "failureStats": {
-      "totalFailed": 0,
+      "totalFailed": 5,
       "timeout": 0,
       "http": 0,
       "business": 0,
       "missingContent": 0,
       "invalidJson": 0,
       "quality": 0,
-      "other": 0
+      "other": 5
     },
     "retryStats": {
-      "retryableTriggeredCount": 3,
-      "missingContentExtraRetryTriggeredCount": 3,
-      "compensationRetryItemCount": 0,
+      "retryableTriggeredCount": 1,
+      "missingContentExtraRetryTriggeredCount": 1,
+      "compensationRetryItemCount": 5,
       "serialDegradeTriggered": false,
       "serialRetriedItemCount": 0,
       "serialTriggerMaxConsecutiveMissingContent": 0
@@ -292,10 +700,11 @@
       "degradedRetriedItemCount": 0,
       "currentMode": "normal",
       "maxWindowMissingContentRate": 0,
-      "maxWindowSuccessRate": 1,
+      "maxWindowSuccessRate": 0.16666666666666666,
       "lastWindowMissingContentRate": 0,
-      "lastWindowSuccessRate": 1
-    }
+      "lastWindowSuccessRate": 0.16666666666666666
+    },
+    "effectiveConcurrency": 1
   },
   "highlights": [
     {
@@ -316,12 +725,11 @@
       "confidence": 0.6,
       "llmScore": 100,
       "scoreBreakdown": {
-        "ruleScore": 131,
+        "ruleScore": 100,
         "ruleScoreNormalized": 100,
-        "llmScore": 100,
         "finalScore": 100,
         "fusionWeight": 0.65,
-        "usedLlm": true
+        "usedLlm": false
       }
     },
     {
@@ -329,6 +737,7 @@
       "sourceId": "venturebeat-ai",
       "sourceName": "VentureBeat AI",
       "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
+      "titleZh": "Claude Code月费高达200美元，而Goose免费提供相同功能",
       "link": "https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free",
       "contentSnippet": "The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code, Anthropic's terminal-based AI agent that can write, debug, and deploy code autonomously, has captured the imagination of software developers worldwide. But its pricing — ranging from $20 to $200 per month depending on usage — has sparked a growing rebellion among the very programmers it aims to serve. Now, a free alternative is gaining traction. Goose, an open-source AI agent developed by Block (the financial technology company formerly known as Square), offers nearly identical functionality to Claude Code but runs entirely on a user's local machine. No subscription fees. No cloud dependency. No rate limits that reset every five hours. \"Your data stays with you, period,\" said Parth Sareen, a software engineer who demonstrated the tool during a recent livestream. The comment captures the core appeal: Goose gives developers complete control over their AI-powered workflow, including the ability to work offline — even on an airplane. The project has exploded in popularity. Goose now boasts more than 26,100 stars on GitHub, the code-sharing platform, with 362 contributors and 102 releases since its launch. The latest version, 1.20.1, shipped on January 19, 2026, reflecting a development pace that rivals commercial products. For developers frustrated by Claude Code's pricing structure and usage caps, Goose represents something increasingly rare in the AI industry: a genuinely free, no-strings-attached option for serious work. Anthropic's new rate limits spark a developer revolt To understand why Goose matters, you need to understand the Claude Code pricing controversy. Anthropic, the San Francisco artificial intelligence company founded by former OpenAI executives, offers Claude Code as part of its subscription tiers. The free plan provides no access whatsoever. The Pro plan, at $17 per month with annual billing (or $20 monthly), limits users to just 10 to 40 prompts every five hours — a constraint that serious developers exhaust within minutes of intensive work. The Max plans, at $100 and $200 per month, offer more headroom: 50 to 200 prompts and 200 to 800 prompts respectively, plus access to Anthropic's most powerful model, Claude 4.5 Opus. But even these premium tiers come with restrictions that have inflamed the developer community. In late July, Anthropic announced new weekly rate limits. Under the system, Pro users receive 40 to 80 hours of Sonnet 4 usage per week. Max users at the $200 tier get 240 to 480 hours of Sonnet 4, plus 24 to 40 hours of Opus 4. Nearly five months later, the frustration has not subsided. The problem? Those \"hours\" are not actual hours. They represent token-based limits that vary wildly depending on codebase size, conversation length, and the complexity of the code being processed. Independent analysis suggests the actual per-session limits translate to roughly 44,000 tokens for Pro users and 220,000 tokens for the $200 Max plan. \"It's confusing and vague,\" one developer wrote in a widely shared analysis. \"When they say '24-40 hours of Opus 4,' that doesn't really tell you anything useful about what you're actually getting.\" The backlash on Reddit and developer forums has been fierce. Some users report hitting their daily limits within 30 minutes of intensive coding. Others have canceled their subscriptions entirely, calling the new restrictions \"a joke\" and \"unusable for real work.\" Anthropic has defended the changes, stating that the limits affect fewer than five percent of users and target people running Claude Code \"continuously in the background, 24/7.\" But the company has not clarified whether that figure refers to five percent of Max subscribers or five percent of all users — a distinction that matters enormously. How Block built a free AI coding agent that works offline Goose takes a radically different approach to the same problem. Built by Block, the payments company led by Jack Dorsey, Goose is what engineers call an \"on-machine AI agent.\" Unlike Claude Code, which sends your queries to Anthropic's servers for processing, Goose can run entirely on your local computer using open-source language models that you download and control yourself. The project's documentation describes it as going \"beyond code suggestions\" to \"install, execute, edit, and test with any LLM.\" That last phrase — \"any LLM\" — is the key differentiator. Goose is model-agnostic by design. You can connect Goose to Anthropic's Claude models if you have API access. You can use OpenAI's GPT-5 or Google's Gemini. You can route it through services like Groq or OpenRouter. Or — and this is where things get interesting — you can run it entirely locally using tools like Ollama, which let you download and execute open-source models on your own hardware. The practical implications are significant. With a local setup, there are no subscription fees, no usage caps, no rate limits, and no concerns about your code being sent to external servers. Your conversations with the AI never leave your machine. \"I use Ollama all the time on planes — it's a lot of fun!\" Sareen noted during a demonstration, highlighting how local models free developers from the constraints of internet connectivity. What Goose can do that traditional code assistants can't Goose operates as a command-line tool or desktop application that can autonomously perform complex development tasks. It can build entire projects from scratch, write and execute code, debug failures, orchestrate workflows across multiple files, and interact with external APIs — all without constant human oversight. The architecture relies on what the AI industry calls \"tool calling\" or \"function calling\" — the ability for a language model to request specific actions from external systems. When you ask Goose to create a new file, run a test suite, or check the status of a GitHub pull request, it doesn't just generate text describing what should happen. It actually executes those operations. This capability depends heavily on the underlying language model. Claude 4 models from Anthropic currently perform best at tool calling, according to the Berkeley Function-Calling Leaderboard, which ranks models on their ability to translate natural language requests into executable code and system commands. But newer open-source models are catching up quickly. Goose's documentation highlights several options with strong tool-calling support: Meta's Llama series, Alibaba's Qwen models, Google's Gemma variants, and DeepSeek's reasoning-focused architectures. The tool also integrates with the Model Context Protocol, or MCP, an emerging standard for connecting AI agents to external services. Through MCP, Goose can access databases, search engines, file systems, and third-party APIs — extending its capabilities far beyond what the base language model provides. Setting Up Goose with a Local Model For developers interested in a completely free, privacy-preserving setup, the process involves three main components: Goose itself, Ollama (a tool for running open-source models locally), and a compatible language model. Step 1: Install Ollama Ollama is an open-source project that dramatically simplifies the process of running large language models on personal hardware. It handles the complex work of downloading, optimizing, and serving models through a simple interface. Download and install Ollama from ollama.com. Once installed, you can pull models with a single command. For coding tasks, Qwen 2.5 offers strong tool-calling support: ollama run qwen2.5 The model downloads automatically and begins running on your machine. Step 2: Install Goose Goose is available as both a desktop application and a command-line interface. The desktop version provides a more visual experience, while the CLI appeals to developers who prefer working entirely in the terminal. Installation instructions vary by operating system but generally involve downloading from Goose's GitHub releases page or using a package manager. Block provides pre-built binaries for macOS (both Intel and Apple Silicon), Windows, and Linux. Step 3: Configure the Connection In Goose Desktop, navigate to Settings, then Configure Provider, and select Ollama. Confirm that the API Host is set to http://localhost:11434 (Ollama's default port) and click Submit. For the command-line version, run goose configure, select \"Configure Providers,\" choose Ollama, and enter the model name when prompted. That's it. Goose is now connected to a language model running entirely on your hardware, ready to execute complex coding tasks without any subscription fees or external dependencies. The RAM, processing power, and trade-offs you should know about The obvious question: what kind of computer do you need? Running large language models locally requires substantially more computational resources than typical software. The key constraint is memory — specifically, RAM on most systems, or VRAM if using a dedicated graphics card for acceleration. Block's documentation suggests that 32 gigabytes of RAM provides \"a solid baseline for larger models and outputs.\" For Mac users, this means the computer's unified memory is the primary bottleneck. For Windows and Linux users with discrete NVIDIA graphics cards, GPU memory (VRAM) matters more for acceleration. But you don't necessarily need expensive hardware to get started. Smaller models with fewer parameters run on much more modest systems. Qwen 2.5, for instance, comes in multiple sizes, and the smaller variants can operate effectively on machines with 16 gigabytes of RAM. \"You don't need to run the largest models to get excellent results,\" Sareen emphasized. The practical recommendation: start with a smaller model to test your workflow, then scale up as needed. For context, Apple's entry-level MacBook Air with 8 gigabytes of RAM would struggle with most capable coding models. But a MacBook Pro with 32 gigabytes — increasingly common among professional developers — handles them comfortably. Why keeping your code off the cloud matters more than ever Goose with a local LLM is not a perfect substitute for Claude Code. The comparison involves real trade-offs that developers should understand. Model Quality: Claude 4.5 Opus, Anthropic's flagship model, remains arguably the most capable AI for software engineering tasks. It excels at understanding complex codebases, following nuanced instructions, and producing high-quality code on the first attempt. Open-source models have improved dramatically, but a gap persists — particularly for the most challenging tasks. One developer who switched to the $200 Claude Code plan described the difference bluntly: \"When I say 'make this look modern,' Opus knows what I mean. Other models give me Bootstrap circa 2015.\" Context Window: Claude Sonnet 4.5, accessible through the API, offers a massive one-million-token context window — enough to load entire large codebases without chunking or context management issues. Most local models are limited to 4,096 or 8,192 tokens by default, though many can be configured for longer contexts at the cost of increased memory usage and slower processing. Speed: Cloud-based services like Claude Code run on dedicated server hardware optimized for AI inference. Local models, running on consumer laptops, typically process requests more slowly. The difference matters for iterative workflows where you're making rapid changes and waiting for AI feedback. Tooling Maturity: Claude Code benefits from Anthropic's dedicated engineering resources. Features like prompt caching (which can reduce costs by up to 90 percent for repeated contexts) and structured outputs are polished and well-documented. Goose, while actively developed with 102 releases to date, relies on community contributions and may lack equivalent refinement in specific areas. How Goose stacks up against Cursor, GitHub Copilot, and the paid AI coding market Goose enters a crowded market of AI coding tools, but occupies a distinctive position. Cursor, a popular AI-enhanced code editor, charges $20 per month for its Pro tier and $200 for Ultra—pricing that mirrors Claude Code's Max plans. Cursor provides approximately 4,500 Sonnet 4 requests per month at the Ultra level, a substantially different allocation model than Claude Code's hourly resets. Cline, Roo Code, and similar open-source projects offer AI coding assistance but with varying levels of autonomy and tool integration. Many focus on code completion rather than the agentic task execution that defines Goose and Claude Code. Amazon's CodeWhisperer, GitHub Copilot, and enterprise offerings from major cloud providers target large organizations with complex procurement processes and dedicated budgets. They are less relevant to individual developers and small teams seeking lightweight, flexible tools. Goose's combination of genuine autonomy, model agnosticism, local operation, and zero cost creates a unique value proposition. The tool is not trying to compete with commercial offerings on polish or model quality. It's competing on freedom — both financial and architectural. The $200-a-month era for AI coding tools may be ending The AI coding tools market is evolving quickly. Open-source models are improving at a pace that continually narrows the gap with proprietary alternatives. Moonshot AI's Kimi K2 and z.ai's GLM 4.5 now benchmark near Claude Sonnet 4 levels — and they're freely available. If this trajectory continues, the quality advantage that justifies Claude Code's premium pricing may erode. Anthropic would then face pressure to compete on features, user experience, and integration rather than raw model capability. For now, developers face a clear choice. Those who need the absolute best model quality, who can afford premium pricing, and who accept usage restrictions may prefer Claude Code. Those who prioritize cost, privacy, offline access, and flexibility have a genuine alternative in Goose. The fact that a $200-per-month commercial product has a zero-dollar open-source competitor with comparable core functionality is itself remarkable. It reflects both the maturation of open-source AI infrastructure and the appetite among developers for tools that respect their autonomy. Goose is not perfect. It requires more technical setup than commercial alternatives. It depends on hardware resources that not every developer possesses. Its model options, while improving rapidly, still trail the best proprietary offerings on complex tasks. But for a growing community of developers, those limitations are acceptable trade-offs for something increasingly rare in the AI landscape: a tool that truly belongs to them. Goose is available for download at github.com/block/goose. Ollama is available at ollama.com. Both projects are free and open source.",
       "publishedAt": "2026-01-19T14:00:00.000Z",
@@ -336,19 +745,17 @@
       "score": 92.2,
       "importance": "high",
       "recommendationReason": "Agent 工程实践相关",
-      "titleZh": "Claude Code月费高达200美元，而Goose免费提供相同功能",
       "domainTag": "agent",
       "intentTag": "comparison",
       "actionability": 3,
       "confidence": 0.95,
       "llmScore": 88,
       "scoreBreakdown": {
-        "ruleScore": 131,
-        "ruleScoreNormalized": 100,
-        "llmScore": 88,
+        "ruleScore": 92.2,
+        "ruleScoreNormalized": 92.2,
         "finalScore": 92.2,
         "fusionWeight": 0.65,
-        "usedLlm": true
+        "usedLlm": false
       }
     },
     {
@@ -369,12 +776,11 @@
       "confidence": 0.6,
       "llmScore": 100,
       "scoreBreakdown": {
-        "ruleScore": 119,
-        "ruleScoreNormalized": 74.46808510638297,
-        "llmScore": 100,
+        "ruleScore": 91.06,
+        "ruleScoreNormalized": 91.06,
         "finalScore": 91.06,
         "fusionWeight": 0.65,
-        "usedLlm": true
+        "usedLlm": false
       }
     },
     {
@@ -395,12 +801,11 @@
       "confidence": 0.6,
       "llmScore": 100,
       "scoreBreakdown": {
-        "ruleScore": 118,
-        "ruleScoreNormalized": 72.3404255319149,
-        "llmScore": 100,
+        "ruleScore": 90.32,
+        "ruleScoreNormalized": 90.32,
         "finalScore": 90.32,
         "fusionWeight": 0.65,
-        "usedLlm": true
+        "usedLlm": false
       }
     },
     {
@@ -421,12 +826,11 @@
       "confidence": 0.6,
       "llmScore": 100,
       "scoreBreakdown": {
-        "ruleScore": 118,
-        "ruleScoreNormalized": 72.3404255319149,
-        "llmScore": 100,
+        "ruleScore": 90.32,
+        "ruleScoreNormalized": 90.32,
         "finalScore": 90.32,
         "fusionWeight": 0.65,
-        "usedLlm": true
+        "usedLlm": false
       }
     },
     {
@@ -447,12 +851,11 @@
       "confidence": 0.6,
       "llmScore": 100,
       "scoreBreakdown": {
-        "ruleScore": 113,
-        "ruleScoreNormalized": 61.702127659574465,
-        "llmScore": 100,
+        "ruleScore": 86.6,
+        "ruleScoreNormalized": 86.6,
         "finalScore": 86.6,
         "fusionWeight": 0.65,
-        "usedLlm": true
+        "usedLlm": false
       }
     },
     {
@@ -473,12 +876,11 @@
       "confidence": 0.6,
       "llmScore": 100,
       "scoreBreakdown": {
-        "ruleScore": 111,
-        "ruleScoreNormalized": 57.446808510638306,
-        "llmScore": 100,
+        "ruleScore": 85.11,
+        "ruleScoreNormalized": 85.11,
         "finalScore": 85.11,
         "fusionWeight": 0.65,
-        "usedLlm": true
+        "usedLlm": false
       }
     },
     {
@@ -486,6 +888,7 @@
       "sourceId": "openai-news",
       "sourceName": "OpenAI News",
       "title": "How Balyasny Asset Management built an AI research engine for investing",
+      "titleZh": "Balyasny资产管理公司如何构建AI投资研究引擎",
       "link": "https://openai.com/index/balyasny-asset-management",
       "contentSnippet": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform investment analysis at scale.",
       "publishedAt": "2026-03-06T07:00:00.000Z",
@@ -493,24 +896,28 @@
       "score": 82.06,
       "importance": "medium",
       "recommendationReason": "Agent 工程实践相关",
-      "titleZh": "Balyasny资产管理公司如何构建AI投资研究引擎",
       "domainTag": "agent",
       "intentTag": "case-study",
       "actionability": 1,
       "confidence": 0.9,
       "llmScore": 85,
       "scoreBreakdown": {
-        "ruleScore": 120,
-        "ruleScoreNormalized": 76.59574468085107,
-        "llmScore": 85,
+        "ruleScore": 82.06,
+        "ruleScoreNormalized": 82.06,
         "finalScore": 82.06,
         "fusionWeight": 0.65,
-        "usedLlm": true
+        "usedLlm": false
       }
     }
   ],
   "revisionAuditLogs": [],
-  "warnings": [],
+  "warnings": [
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:38%<70%",
+    "LLM 条目失败明细（前 3/8）：fetch failed | fetch failed | fetch failed",
+    "LLM 失败分类：missing_content=0, timeout=0, http=0, business=0, invalid_json=0, quality=0, other=5",
+    "LLM 重试统计：retryable=1, missing_content_extra=1, compensation=5, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=17%"
+  ],
   "snapshot": {
     "timezone": "Asia/Shanghai",
     "sourceConfigPath": "data/sources.yaml",
@@ -539,12 +946,11 @@
         "confidence": 0.6,
         "llmScore": 100,
         "scoreBreakdown": {
-          "ruleScore": 131,
+          "ruleScore": 100,
           "ruleScoreNormalized": 100,
-          "llmScore": 100,
           "finalScore": 100,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -552,6 +958,7 @@
         "sourceId": "venturebeat-ai",
         "sourceName": "VentureBeat AI",
         "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
+        "titleZh": "Claude Code月费高达200美元，而Goose免费提供相同功能",
         "link": "https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free",
         "contentSnippet": "The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code, Anthropic's terminal-based AI agent that can write, debug, and deploy code autonomously, has captured the imagination of software developers worldwide. But its pricing — ranging from $20 to $200 per month depending on usage — has sparked a growing rebellion among the very programmers it aims to serve. Now, a free alternative is gaining traction. Goose, an open-source AI agent developed by Block (the financial technology company formerly known as Square), offers nearly identical functionality to Claude Code but runs entirely on a user's local machine. No subscription fees. No cloud dependency. No rate limits that reset every five hours. \"Your data stays with you, period,\" said Parth Sareen, a software engineer who demonstrated the tool during a recent livestream. The comment captures the core appeal: Goose gives developers complete control over their AI-powered workflow, including the ability to work offline — even on an airplane. The project has exploded in popularity. Goose now boasts more than 26,100 stars on GitHub, the code-sharing platform, with 362 contributors and 102 releases since its launch. The latest version, 1.20.1, shipped on January 19, 2026, reflecting a development pace that rivals commercial products. For developers frustrated by Claude Code's pricing structure and usage caps, Goose represents something increasingly rare in the AI industry: a genuinely free, no-strings-attached option for serious work. Anthropic's new rate limits spark a developer revolt To understand why Goose matters, you need to understand the Claude Code pricing controversy. Anthropic, the San Francisco artificial intelligence company founded by former OpenAI executives, offers Claude Code as part of its subscription tiers. The free plan provides no access whatsoever. The Pro plan, at $17 per month with annual billing (or $20 monthly), limits users to just 10 to 40 prompts every five hours — a constraint that serious developers exhaust within minutes of intensive work. The Max plans, at $100 and $200 per month, offer more headroom: 50 to 200 prompts and 200 to 800 prompts respectively, plus access to Anthropic's most powerful model, Claude 4.5 Opus. But even these premium tiers come with restrictions that have inflamed the developer community. In late July, Anthropic announced new weekly rate limits. Under the system, Pro users receive 40 to 80 hours of Sonnet 4 usage per week. Max users at the $200 tier get 240 to 480 hours of Sonnet 4, plus 24 to 40 hours of Opus 4. Nearly five months later, the frustration has not subsided. The problem? Those \"hours\" are not actual hours. They represent token-based limits that vary wildly depending on codebase size, conversation length, and the complexity of the code being processed. Independent analysis suggests the actual per-session limits translate to roughly 44,000 tokens for Pro users and 220,000 tokens for the $200 Max plan. \"It's confusing and vague,\" one developer wrote in a widely shared analysis. \"When they say '24-40 hours of Opus 4,' that doesn't really tell you anything useful about what you're actually getting.\" The backlash on Reddit and developer forums has been fierce. Some users report hitting their daily limits within 30 minutes of intensive coding. Others have canceled their subscriptions entirely, calling the new restrictions \"a joke\" and \"unusable for real work.\" Anthropic has defended the changes, stating that the limits affect fewer than five percent of users and target people running Claude Code \"continuously in the background, 24/7.\" But the company has not clarified whether that figure refers to five percent of Max subscribers or five percent of all users — a distinction that matters enormously. How Block built a free AI coding agent that works offline Goose takes a radically different approach to the same problem. Built by Block, the payments company led by Jack Dorsey, Goose is what engineers call an \"on-machine AI agent.\" Unlike Claude Code, which sends your queries to Anthropic's servers for processing, Goose can run entirely on your local computer using open-source language models that you download and control yourself. The project's documentation describes it as going \"beyond code suggestions\" to \"install, execute, edit, and test with any LLM.\" That last phrase — \"any LLM\" — is the key differentiator. Goose is model-agnostic by design. You can connect Goose to Anthropic's Claude models if you have API access. You can use OpenAI's GPT-5 or Google's Gemini. You can route it through services like Groq or OpenRouter. Or — and this is where things get interesting — you can run it entirely locally using tools like Ollama, which let you download and execute open-source models on your own hardware. The practical implications are significant. With a local setup, there are no subscription fees, no usage caps, no rate limits, and no concerns about your code being sent to external servers. Your conversations with the AI never leave your machine. \"I use Ollama all the time on planes — it's a lot of fun!\" Sareen noted during a demonstration, highlighting how local models free developers from the constraints of internet connectivity. What Goose can do that traditional code assistants can't Goose operates as a command-line tool or desktop application that can autonomously perform complex development tasks. It can build entire projects from scratch, write and execute code, debug failures, orchestrate workflows across multiple files, and interact with external APIs — all without constant human oversight. The architecture relies on what the AI industry calls \"tool calling\" or \"function calling\" — the ability for a language model to request specific actions from external systems. When you ask Goose to create a new file, run a test suite, or check the status of a GitHub pull request, it doesn't just generate text describing what should happen. It actually executes those operations. This capability depends heavily on the underlying language model. Claude 4 models from Anthropic currently perform best at tool calling, according to the Berkeley Function-Calling Leaderboard, which ranks models on their ability to translate natural language requests into executable code and system commands. But newer open-source models are catching up quickly. Goose's documentation highlights several options with strong tool-calling support: Meta's Llama series, Alibaba's Qwen models, Google's Gemma variants, and DeepSeek's reasoning-focused architectures. The tool also integrates with the Model Context Protocol, or MCP, an emerging standard for connecting AI agents to external services. Through MCP, Goose can access databases, search engines, file systems, and third-party APIs — extending its capabilities far beyond what the base language model provides. Setting Up Goose with a Local Model For developers interested in a completely free, privacy-preserving setup, the process involves three main components: Goose itself, Ollama (a tool for running open-source models locally), and a compatible language model. Step 1: Install Ollama Ollama is an open-source project that dramatically simplifies the process of running large language models on personal hardware. It handles the complex work of downloading, optimizing, and serving models through a simple interface. Download and install Ollama from ollama.com. Once installed, you can pull models with a single command. For coding tasks, Qwen 2.5 offers strong tool-calling support: ollama run qwen2.5 The model downloads automatically and begins running on your machine. Step 2: Install Goose Goose is available as both a desktop application and a command-line interface. The desktop version provides a more visual experience, while the CLI appeals to developers who prefer working entirely in the terminal. Installation instructions vary by operating system but generally involve downloading from Goose's GitHub releases page or using a package manager. Block provides pre-built binaries for macOS (both Intel and Apple Silicon), Windows, and Linux. Step 3: Configure the Connection In Goose Desktop, navigate to Settings, then Configure Provider, and select Ollama. Confirm that the API Host is set to http://localhost:11434 (Ollama's default port) and click Submit. For the command-line version, run goose configure, select \"Configure Providers,\" choose Ollama, and enter the model name when prompted. That's it. Goose is now connected to a language model running entirely on your hardware, ready to execute complex coding tasks without any subscription fees or external dependencies. The RAM, processing power, and trade-offs you should know about The obvious question: what kind of computer do you need? Running large language models locally requires substantially more computational resources than typical software. The key constraint is memory — specifically, RAM on most systems, or VRAM if using a dedicated graphics card for acceleration. Block's documentation suggests that 32 gigabytes of RAM provides \"a solid baseline for larger models and outputs.\" For Mac users, this means the computer's unified memory is the primary bottleneck. For Windows and Linux users with discrete NVIDIA graphics cards, GPU memory (VRAM) matters more for acceleration. But you don't necessarily need expensive hardware to get started. Smaller models with fewer parameters run on much more modest systems. Qwen 2.5, for instance, comes in multiple sizes, and the smaller variants can operate effectively on machines with 16 gigabytes of RAM. \"You don't need to run the largest models to get excellent results,\" Sareen emphasized. The practical recommendation: start with a smaller model to test your workflow, then scale up as needed. For context, Apple's entry-level MacBook Air with 8 gigabytes of RAM would struggle with most capable coding models. But a MacBook Pro with 32 gigabytes — increasingly common among professional developers — handles them comfortably. Why keeping your code off the cloud matters more than ever Goose with a local LLM is not a perfect substitute for Claude Code. The comparison involves real trade-offs that developers should understand. Model Quality: Claude 4.5 Opus, Anthropic's flagship model, remains arguably the most capable AI for software engineering tasks. It excels at understanding complex codebases, following nuanced instructions, and producing high-quality code on the first attempt. Open-source models have improved dramatically, but a gap persists — particularly for the most challenging tasks. One developer who switched to the $200 Claude Code plan described the difference bluntly: \"When I say 'make this look modern,' Opus knows what I mean. Other models give me Bootstrap circa 2015.\" Context Window: Claude Sonnet 4.5, accessible through the API, offers a massive one-million-token context window — enough to load entire large codebases without chunking or context management issues. Most local models are limited to 4,096 or 8,192 tokens by default, though many can be configured for longer contexts at the cost of increased memory usage and slower processing. Speed: Cloud-based services like Claude Code run on dedicated server hardware optimized for AI inference. Local models, running on consumer laptops, typically process requests more slowly. The difference matters for iterative workflows where you're making rapid changes and waiting for AI feedback. Tooling Maturity: Claude Code benefits from Anthropic's dedicated engineering resources. Features like prompt caching (which can reduce costs by up to 90 percent for repeated contexts) and structured outputs are polished and well-documented. Goose, while actively developed with 102 releases to date, relies on community contributions and may lack equivalent refinement in specific areas. How Goose stacks up against Cursor, GitHub Copilot, and the paid AI coding market Goose enters a crowded market of AI coding tools, but occupies a distinctive position. Cursor, a popular AI-enhanced code editor, charges $20 per month for its Pro tier and $200 for Ultra—pricing that mirrors Claude Code's Max plans. Cursor provides approximately 4,500 Sonnet 4 requests per month at the Ultra level, a substantially different allocation model than Claude Code's hourly resets. Cline, Roo Code, and similar open-source projects offer AI coding assistance but with varying levels of autonomy and tool integration. Many focus on code completion rather than the agentic task execution that defines Goose and Claude Code. Amazon's CodeWhisperer, GitHub Copilot, and enterprise offerings from major cloud providers target large organizations with complex procurement processes and dedicated budgets. They are less relevant to individual developers and small teams seeking lightweight, flexible tools. Goose's combination of genuine autonomy, model agnosticism, local operation, and zero cost creates a unique value proposition. The tool is not trying to compete with commercial offerings on polish or model quality. It's competing on freedom — both financial and architectural. The $200-a-month era for AI coding tools may be ending The AI coding tools market is evolving quickly. Open-source models are improving at a pace that continually narrows the gap with proprietary alternatives. Moonshot AI's Kimi K2 and z.ai's GLM 4.5 now benchmark near Claude Sonnet 4 levels — and they're freely available. If this trajectory continues, the quality advantage that justifies Claude Code's premium pricing may erode. Anthropic would then face pressure to compete on features, user experience, and integration rather than raw model capability. For now, developers face a clear choice. Those who need the absolute best model quality, who can afford premium pricing, and who accept usage restrictions may prefer Claude Code. Those who prioritize cost, privacy, offline access, and flexibility have a genuine alternative in Goose. The fact that a $200-per-month commercial product has a zero-dollar open-source competitor with comparable core functionality is itself remarkable. It reflects both the maturation of open-source AI infrastructure and the appetite among developers for tools that respect their autonomy. Goose is not perfect. It requires more technical setup than commercial alternatives. It depends on hardware resources that not every developer possesses. Its model options, while improving rapidly, still trail the best proprietary offerings on complex tasks. But for a growing community of developers, those limitations are acceptable trade-offs for something increasingly rare in the AI landscape: a tool that truly belongs to them. Goose is available for download at github.com/block/goose. Ollama is available at ollama.com. Both projects are free and open source.",
         "publishedAt": "2026-01-19T14:00:00.000Z",
@@ -559,19 +966,17 @@
         "score": 92.2,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
-        "titleZh": "Claude Code月费高达200美元，而Goose免费提供相同功能",
         "domainTag": "agent",
         "intentTag": "comparison",
         "actionability": 3,
         "confidence": 0.95,
         "llmScore": 88,
         "scoreBreakdown": {
-          "ruleScore": 131,
-          "ruleScoreNormalized": 100,
-          "llmScore": 88,
+          "ruleScore": 92.2,
+          "ruleScoreNormalized": 92.2,
           "finalScore": 92.2,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -592,12 +997,11 @@
         "confidence": 0.6,
         "llmScore": 100,
         "scoreBreakdown": {
-          "ruleScore": 119,
-          "ruleScoreNormalized": 74.46808510638297,
-          "llmScore": 100,
+          "ruleScore": 91.06,
+          "ruleScoreNormalized": 91.06,
           "finalScore": 91.06,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -618,12 +1022,11 @@
         "confidence": 0.6,
         "llmScore": 100,
         "scoreBreakdown": {
-          "ruleScore": 118,
-          "ruleScoreNormalized": 72.3404255319149,
-          "llmScore": 100,
+          "ruleScore": 90.32,
+          "ruleScoreNormalized": 90.32,
           "finalScore": 90.32,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -644,12 +1047,11 @@
         "confidence": 0.6,
         "llmScore": 100,
         "scoreBreakdown": {
-          "ruleScore": 118,
-          "ruleScoreNormalized": 72.3404255319149,
-          "llmScore": 100,
+          "ruleScore": 90.32,
+          "ruleScoreNormalized": 90.32,
           "finalScore": 90.32,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -670,12 +1072,11 @@
         "confidence": 0.6,
         "llmScore": 100,
         "scoreBreakdown": {
-          "ruleScore": 113,
-          "ruleScoreNormalized": 61.702127659574465,
-          "llmScore": 100,
+          "ruleScore": 86.6,
+          "ruleScoreNormalized": 86.6,
           "finalScore": 86.6,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -696,12 +1097,11 @@
         "confidence": 0.6,
         "llmScore": 100,
         "scoreBreakdown": {
-          "ruleScore": 111,
-          "ruleScoreNormalized": 57.446808510638306,
-          "llmScore": 100,
+          "ruleScore": 85.11,
+          "ruleScoreNormalized": 85.11,
           "finalScore": 85.11,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -709,6 +1109,7 @@
         "sourceId": "openai-news",
         "sourceName": "OpenAI News",
         "title": "How Balyasny Asset Management built an AI research engine for investing",
+        "titleZh": "Balyasny资产管理公司如何构建AI投资研究引擎",
         "link": "https://openai.com/index/balyasny-asset-management",
         "contentSnippet": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform investment analysis at scale.",
         "publishedAt": "2026-03-06T07:00:00.000Z",
@@ -716,19 +1117,17 @@
         "score": 82.06,
         "importance": "medium",
         "recommendationReason": "Agent 工程实践相关",
-        "titleZh": "Balyasny资产管理公司如何构建AI投资研究引擎",
         "domainTag": "agent",
         "intentTag": "case-study",
         "actionability": 1,
         "confidence": 0.9,
         "llmScore": 85,
         "scoreBreakdown": {
-          "ruleScore": 120,
-          "ruleScoreNormalized": 76.59574468085107,
-          "llmScore": 85,
+          "ruleScore": 82.06,
+          "ruleScoreNormalized": 82.06,
           "finalScore": 82.06,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -744,8 +1143,8 @@
         "importance": "low",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
-          "ruleScore": 109,
-          "ruleScoreNormalized": 53.191489361702125,
+          "ruleScore": 53.19,
+          "ruleScoreNormalized": 53.19,
           "finalScore": 53.19,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -764,8 +1163,8 @@
         "importance": "low",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
-          "ruleScore": 109,
-          "ruleScoreNormalized": 53.191489361702125,
+          "ruleScore": 53.19,
+          "ruleScoreNormalized": 53.19,
           "finalScore": 53.19,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -784,8 +1183,8 @@
         "importance": "low",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
-          "ruleScore": 109,
-          "ruleScoreNormalized": 53.191489361702125,
+          "ruleScore": 53.19,
+          "ruleScoreNormalized": 53.19,
           "finalScore": 53.19,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -804,8 +1203,8 @@
         "importance": "low",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
-          "ruleScore": 109,
-          "ruleScoreNormalized": 53.191489361702125,
+          "ruleScore": 53.19,
+          "ruleScoreNormalized": 53.19,
           "finalScore": 53.19,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -824,8 +1223,8 @@
         "importance": "low",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
-          "ruleScore": 105,
-          "ruleScoreNormalized": 44.680851063829785,
+          "ruleScore": 44.68,
+          "ruleScoreNormalized": 44.68,
           "finalScore": 44.68,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -844,8 +1243,8 @@
         "importance": "low",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
-          "ruleScore": 105,
-          "ruleScoreNormalized": 44.680851063829785,
+          "ruleScore": 44.68,
+          "ruleScoreNormalized": 44.68,
           "finalScore": 44.68,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -864,8 +1263,8 @@
         "importance": "low",
         "recommendationReason": "可直接学习实践",
         "scoreBreakdown": {
-          "ruleScore": 104,
-          "ruleScoreNormalized": 42.5531914893617,
+          "ruleScore": 42.55,
+          "ruleScoreNormalized": 42.55,
           "finalScore": 42.55,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -884,8 +1283,8 @@
         "importance": "low",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
-          "ruleScore": 103,
-          "ruleScoreNormalized": 40.42553191489361,
+          "ruleScore": 40.43,
+          "ruleScoreNormalized": 40.43,
           "finalScore": 40.43,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -904,8 +1303,8 @@
         "importance": "low",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
-          "ruleScore": 101,
-          "ruleScoreNormalized": 36.17021276595745,
+          "ruleScore": 36.17,
+          "ruleScoreNormalized": 36.17,
           "finalScore": 36.17,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -924,8 +1323,8 @@
         "importance": "low",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
-          "ruleScore": 101,
-          "ruleScoreNormalized": 36.17021276595745,
+          "ruleScore": 36.17,
+          "ruleScoreNormalized": 36.17,
           "finalScore": 36.17,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -944,8 +1343,8 @@
         "importance": "low",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
-          "ruleScore": 101,
-          "ruleScoreNormalized": 36.17021276595745,
+          "ruleScore": 36.17,
+          "ruleScoreNormalized": 36.17,
           "finalScore": 36.17,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -964,8 +1363,8 @@
         "importance": "low",
         "recommendationReason": "Agent 工程实践相关",
         "scoreBreakdown": {
-          "ruleScore": 101,
-          "ruleScoreNormalized": 36.17021276595745,
+          "ruleScore": 36.17,
+          "ruleScoreNormalized": 36.17,
           "finalScore": 36.17,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -984,8 +1383,8 @@
         "importance": "low",
         "recommendationReason": "开源生态更新",
         "scoreBreakdown": {
-          "ruleScore": 96,
-          "ruleScoreNormalized": 25.53191489361702,
+          "ruleScore": 25.53,
+          "ruleScoreNormalized": 25.53,
           "finalScore": 25.53,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1004,8 +1403,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 95,
-          "ruleScoreNormalized": 23.404255319148938,
+          "ruleScore": 23.4,
+          "ruleScoreNormalized": 23.4,
           "finalScore": 23.4,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1024,8 +1423,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 95,
-          "ruleScoreNormalized": 23.404255319148938,
+          "ruleScore": 23.4,
+          "ruleScoreNormalized": 23.4,
           "finalScore": 23.4,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1044,8 +1443,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 95,
-          "ruleScoreNormalized": 23.404255319148938,
+          "ruleScore": 23.4,
+          "ruleScoreNormalized": 23.4,
           "finalScore": 23.4,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1064,8 +1463,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 95,
-          "ruleScoreNormalized": 23.404255319148938,
+          "ruleScore": 23.4,
+          "ruleScoreNormalized": 23.4,
           "finalScore": 23.4,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1084,8 +1483,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 94,
-          "ruleScoreNormalized": 21.27659574468085,
+          "ruleScore": 21.28,
+          "ruleScoreNormalized": 21.28,
           "finalScore": 21.28,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1104,8 +1503,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 94,
-          "ruleScoreNormalized": 21.27659574468085,
+          "ruleScore": 21.28,
+          "ruleScoreNormalized": 21.28,
           "finalScore": 21.28,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1124,8 +1523,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 94,
-          "ruleScoreNormalized": 21.27659574468085,
+          "ruleScore": 21.28,
+          "ruleScoreNormalized": 21.28,
           "finalScore": 21.28,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1144,8 +1543,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 94,
-          "ruleScoreNormalized": 21.27659574468085,
+          "ruleScore": 21.28,
+          "ruleScoreNormalized": 21.28,
           "finalScore": 21.28,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1164,8 +1563,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 94,
-          "ruleScoreNormalized": 21.27659574468085,
+          "ruleScore": 21.28,
+          "ruleScoreNormalized": 21.28,
           "finalScore": 21.28,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1184,8 +1583,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 94,
-          "ruleScoreNormalized": 21.27659574468085,
+          "ruleScore": 21.28,
+          "ruleScoreNormalized": 21.28,
           "finalScore": 21.28,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1204,8 +1603,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 93,
-          "ruleScoreNormalized": 19.148936170212767,
+          "ruleScore": 19.15,
+          "ruleScoreNormalized": 19.15,
           "finalScore": 19.15,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1224,8 +1623,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 92,
-          "ruleScoreNormalized": 17.02127659574468,
+          "ruleScore": 17.02,
+          "ruleScoreNormalized": 17.02,
           "finalScore": 17.02,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1244,8 +1643,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 92,
-          "ruleScoreNormalized": 17.02127659574468,
+          "ruleScore": 17.02,
+          "ruleScoreNormalized": 17.02,
           "finalScore": 17.02,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1264,8 +1663,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 92,
-          "ruleScoreNormalized": 17.02127659574468,
+          "ruleScore": 17.02,
+          "ruleScoreNormalized": 17.02,
           "finalScore": 17.02,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1284,8 +1683,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 92,
-          "ruleScoreNormalized": 17.02127659574468,
+          "ruleScore": 17.02,
+          "ruleScoreNormalized": 17.02,
           "finalScore": 17.02,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1304,8 +1703,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 92,
-          "ruleScoreNormalized": 17.02127659574468,
+          "ruleScore": 17.02,
+          "ruleScoreNormalized": 17.02,
           "finalScore": 17.02,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1324,8 +1723,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 90,
-          "ruleScoreNormalized": 12.76595744680851,
+          "ruleScore": 12.77,
+          "ruleScoreNormalized": 12.77,
           "finalScore": 12.77,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1344,8 +1743,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 90,
-          "ruleScoreNormalized": 12.76595744680851,
+          "ruleScore": 12.77,
+          "ruleScoreNormalized": 12.77,
           "finalScore": 12.77,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1364,8 +1763,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 90,
-          "ruleScoreNormalized": 12.76595744680851,
+          "ruleScore": 12.77,
+          "ruleScoreNormalized": 12.77,
           "finalScore": 12.77,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1384,8 +1783,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 90,
-          "ruleScoreNormalized": 12.76595744680851,
+          "ruleScore": 12.77,
+          "ruleScoreNormalized": 12.77,
           "finalScore": 12.77,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1404,8 +1803,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 86,
-          "ruleScoreNormalized": 4.25531914893617,
+          "ruleScore": 4.26,
+          "ruleScoreNormalized": 4.26,
           "finalScore": 4.26,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1424,8 +1823,8 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 86,
-          "ruleScoreNormalized": 4.25531914893617,
+          "ruleScore": 4.26,
+          "ruleScoreNormalized": 4.26,
           "finalScore": 4.26,
           "fusionWeight": 0.65,
           "usedLlm": false
@@ -1444,7 +1843,7 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 84,
+          "ruleScore": 0,
           "ruleScoreNormalized": 0,
           "finalScore": 0,
           "fusionWeight": 0.65,
@@ -1464,7 +1863,7 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 84,
+          "ruleScore": 0,
           "ruleScoreNormalized": 0,
           "finalScore": 0,
           "fusionWeight": 0.65,
@@ -1484,7 +1883,7 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 84,
+          "ruleScore": 0,
           "ruleScoreNormalized": 0,
           "finalScore": 0,
           "fusionWeight": 0.65,
@@ -1504,7 +1903,7 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 84,
+          "ruleScore": 0,
           "ruleScoreNormalized": 0,
           "finalScore": 0,
           "fusionWeight": 0.65,
@@ -1524,7 +1923,7 @@
         "importance": "low",
         "recommendationReason": "综合价值较高",
         "scoreBreakdown": {
-          "ruleScore": 84,
+          "ruleScore": 0,
           "ruleScoreNormalized": 0,
           "finalScore": 0,
           "fusionWeight": 0.65,
@@ -1536,8 +1935,8 @@
       {
         "itemId": "af0473b3cd39",
         "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
-        "summary": "Railway获得1亿美元B轮融资，估值超10亿美元，致力于打造AI原生云基础设施，提供秒级部署能力，目前拥有200万开发者但仅30名员工，月处理万亿级请求。",
-        "recommendation": "建议本周优先评估《Railway secures $100 million to challenge AWS with AI-native cloud infrastructure》相关方案，重点关注仓库成熟度与二次开发成本。",
+        "summary": "Railway, a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar…",
+        "recommendation": "Agent 工程实践相关",
         "evidenceItemIds": [
           "af0473b3cd39"
         ],
@@ -1551,8 +1950,8 @@
         "itemId": "dca57667c39b",
         "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
         "titleZh": "Claude Code月费高达200美元，而Goose免费提供相同功能",
-        "summary": "Claude Code每月收费高达200美元且存在严格使用限制，而Block开发的开源AI编程代理Goose提供完全免费、本地运行、无限制的替代方案，在GitHub已获26100星。",
-        "recommendation": "对于受够了云端AI编程工具定价和限制的开发者，Goose提供了真正免费的本地化选择，是值得尝试的开源替代方案。",
+        "summary": "The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code, Anthropic's terminal-bas…",
+        "recommendation": "Agent 工程实践相关",
         "evidenceItemIds": [
           "dca57667c39b"
         ],
@@ -1563,25 +1962,10 @@
         "llmScore": 88
       },
       {
-        "itemId": "ed6c06ec1333",
-        "title": "How Balyasny Asset Management built an AI research engine for investing",
-        "titleZh": "Balyasny资产管理公司如何构建AI投资研究引擎",
-        "summary": "Balyasny Asset Management利用GPT-5.4、严格模型评估和agent工作流构建AI研究引擎，实现大规模投资分析转型。",
-        "recommendation": "对于金融工程团队而言，该案例展示了如何在投资研究领域有效部署LLM和agent技术，具有重要参考价值。",
-        "evidenceItemIds": [
-          "ed6c06ec1333"
-        ],
-        "domainTag": "agent",
-        "intentTag": "case-study",
-        "actionability": 1,
-        "confidence": 0.9,
-        "llmScore": 85
-      },
-      {
         "itemId": "570688bcf84f",
         "title": "卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k",
-        "summary": "卡帕西开源Agent自进化训练框架S3，基于博士社群模拟实现智能体自我进化，5分钟完成一轮实验，在48小时内获得9.5k星标关注。",
-        "recommendation": "建议本周优先评估《卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k》相关方案，重点关注仓库成熟度与二次开发成本。",
+        "summary": "下一步要模拟整个博士社群",
+        "recommendation": "Agent 工程实践相关",
         "evidenceItemIds": [
           "570688bcf84f"
         ],
@@ -1594,8 +1978,8 @@
       {
         "itemId": "1e5772829392",
         "title": "Codex Security: now in research preview",
-        "summary": "OpenAI推出Codex Security，这是一款AI应用安全代理，可分析项目上下文来检测、验证和修补复杂漏洞，以更高的置信度和更低的噪音运行。",
-        "recommendation": "建议本周优先评估《Codex Security: now in research preview》相关方案，重点关注多 Agent 协作策略与稳定性。",
+        "summary": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex…",
+        "recommendation": "Agent 工程实践相关",
         "evidenceItemIds": [
           "1e5772829392"
         ],
@@ -1608,8 +1992,8 @@
       {
         "itemId": "4195e551833f",
         "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
-        "summary": "Andrej Karpathy 开源了 AutoResearch，一款约 630 行的单文件 Python 工具，可让 AI Agents 在单块 NVIDIA GPU 上自主运行机器学习实验。",
-        "recommendation": "建议本周优先评估《Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs…",
+        "summary": "Andrej Karpathy released autoresearch, a minimalist Python tool designed to enable AI agents to autonomously conduct ma…",
+        "recommendation": "Agent 工程实践相关",
         "evidenceItemIds": [
           "4195e551833f"
         ],
@@ -1622,8 +2006,8 @@
       {
         "itemId": "d476bb6a9ab3",
         "title": "The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning",
-        "summary": "Google研究团队指出当前LLM缺乏概率推理能力，即根据新证据更新",
-        "recommendation": "建议本周优先评估《The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning》相关方案，重点关注多 Agent 协作策略与稳定性。",
+        "summary": "Large Language Models (LLMs) are the world’s best mimics, but when it comes to the cold, hard logic of updating beliefs…",
+        "recommendation": "Agent 工程实践相关",
         "evidenceItemIds": [
           "d476bb6a9ab3"
         ],
@@ -1636,8 +2020,8 @@
       {
         "itemId": "96c6faefc88a",
         "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
-        "summary": "Nous Research发布开源编程模型NousCoder-14B，仅用4天在48块Nvidia B200 GPU上训练完成，在LiveCodeBench v6达到67.87%准确率，完整开源训练栈和基准数据集。",
-        "recommendation": "工程团队值得关注：模型完全开源可本地部署，透明训练流程且性能接近顶级闭源方案，同时其数据饱和发现对后续技术选型有重要参考价值。",
+        "summary": "Nous Research, the open-source artificial intelligence startup backed by crypto venture firm Paradigm, released a new c…",
+        "recommendation": "Agent 工程实践相关",
         "evidenceItemIds": [
           "96c6faefc88a"
         ],
@@ -1646,13 +2030,388 @@
         "actionability": 1,
         "confidence": 0.6,
         "llmScore": 100
+      },
+      {
+        "itemId": "ed6c06ec1333",
+        "title": "How Balyasny Asset Management built an AI research engine for investing",
+        "titleZh": "Balyasny资产管理公司如何构建AI投资研究引擎",
+        "summary": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "ed6c06ec1333"
+        ],
+        "domainTag": "agent",
+        "intentTag": "case-study",
+        "actionability": 1,
+        "confidence": 0.9,
+        "llmScore": 85
+      },
+      {
+        "itemId": "825c39404554",
+        "title": "Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation",
+        "summary": "In this tutorial, we build a complete cognitive blueprint and runtime agent framework. We define structured blueprints …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "825c39404554"
+        ]
+      },
+      {
+        "itemId": "6e51fbd095d1",
+        "title": "How to Build Progress Monitoring Using Advanced tqdm for Async, Parallel, Pandas, Logging, and High-Performance Workflows",
+        "summary": "In this tutorial, we explore tqdm in depth and demonstrate how we build powerful, real-time progress tracking into mode…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "6e51fbd095d1"
+        ]
+      },
+      {
+        "itemId": "fee0cde1972e",
+        "title": "Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI",
+        "summary": "Salesforce on Tuesday launched an entirely rebuilt version of Slackbot, the company's workplace assistant, transforming…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "fee0cde1972e"
+        ]
+      },
+      {
+        "itemId": "d1b65307276f",
+        "title": "Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required",
+        "summary": "Anthropic released Cowork on Monday, a new AI agent capability that extends the power of its wildly successful Claude C…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "d1b65307276f"
+        ]
+      },
+      {
+        "itemId": "547565b7ab4d",
+        "title": "Show HN: Local AI stack (Docker, Ollama) that lets you build apps without Python",
+        "summary": "We built a local-first AI stack (Docker + Ollama) that lets you build LLM tools and workflows without writing Python. I…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "547565b7ab4d"
+        ]
+      },
+      {
+        "itemId": "1d02c63766ab",
+        "title": "Can AI Agents Agree?",
+        "summary": "Article URL: https://arxiv.org/abs/2603.01213 Comments URL: https://news.ycombinator.com/item?id=47311353 Points: 1 # C…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "1d02c63766ab"
+        ]
+      },
+      {
+        "itemId": "b3462a1b6f51",
+        "title": "A Coding Guide to Build a Complete Single Cell RNA Sequencing Analysis Pipeline Using Scanpy for Clustering Visualization and Cell Type Annotation",
+        "summary": "In this tutorial, we build a complete pipeline for single-cell RNA sequencing analysis using Scanpy. We start by instal…",
+        "recommendation": "可直接学习实践",
+        "evidenceItemIds": [
+          "b3462a1b6f51"
+        ]
+      },
+      {
+        "itemId": "53d557f697ca",
+        "title": "Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews",
+        "summary": "Alfred Wahlforss was running out of options. His startup, Listen Labs, needed to hire over 100 engineers, but competing…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "53d557f697ca"
+        ]
+      },
+      {
+        "itemId": "4309c341e311",
+        "title": "Agent Builder: chat, file uploads, and tool registry",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "4309c341e311"
+        ]
+      },
+      {
+        "itemId": "cbcaf3d94b9e",
+        "title": "Scheduled reports for Insights Agent",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "cbcaf3d94b9e"
+        ]
+      },
+      {
+        "itemId": "e3d44e83a9fb",
+        "title": "Deep Agents v0.4",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "e3d44e83a9fb"
+        ]
+      },
+      {
+        "itemId": "640ac7d5d99e",
+        "title": "Track costs across your entire agent stack",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "640ac7d5d99e"
+        ]
+      },
+      {
+        "itemId": "5e327815c2c4",
+        "title": "Microsoft open sources its ‘farm of the future’ toolkit",
+        "summary": "The post Microsoft open sources its ‘farm of the future’ toolkit appeared first on The AI Blog.",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "5e327815c2c4"
+        ]
+      },
+      {
+        "itemId": "5e5b98b758c4",
+        "title": "How Descript enables multilingual video dubbing at scale",
+        "summary": "Descript uses OpenAI models to scale multilingual video dubbing, optimizing translations for both meaning and timing so…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5e5b98b758c4"
+        ]
+      },
+      {
+        "itemId": "6684b4cf5670",
+        "title": "Introducing GPT-5.4",
+        "summary": "Introducing GPT-5.4, OpenAI’s most most capable and efficient frontier model for professional work, with state-of-the-a…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "6684b4cf5670"
+        ]
+      },
+      {
+        "itemId": "d9aab484d2a1",
+        "title": "GPT-5.4 Thinking System Card",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d9aab484d2a1"
+        ]
+      },
+      {
+        "itemId": "fc29565ae47e",
+        "title": "Reasoning models struggle to control their chains of thought, and that’s good",
+        "summary": "OpenAI introduces CoT-Control and finds reasoning models struggle to control their chains of thought, reinforcing monit…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fc29565ae47e"
+        ]
+      },
+      {
+        "itemId": "e96ddebbc833",
+        "title": "How to save money on YouTube TV: Consider these 12 cheaper packages (including live sports)",
+        "summary": "The streaming service rolls out a dozen cheaper subscription plans - pick the one that fits your viewing habits.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e96ddebbc833"
+        ]
+      },
+      {
+        "itemId": "1701310afee7",
+        "title": "You can still save up to $1,300 on the Samsung Galaxy S26 Ultra at AT&T - here's the details",
+        "summary": "Samsung's new Galaxy S26 lineup is here, and AT&T wants you to upgrade your phone for 'free.' Here's the catch.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1701310afee7"
+        ]
+      },
+      {
+        "itemId": "238a92f941b7",
+        "title": "I'm a tech professional, and an AI job scam almost fooled me - here's how I caught on",
+        "summary": "With a bit of vigilance, I avoided an employment disaster. Here's how you can, too.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "238a92f941b7"
+        ]
+      },
+      {
+        "itemId": "818365036ce5",
+        "title": "Apple might launch a new class of 'Ultra' devices in 2026 - including a foldable iPhone",
+        "summary": "Perhaps Apple's long-rumored touchscreen MacBook will also be an 'Ultra' device.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "818365036ce5"
+        ]
+      },
+      {
+        "itemId": "a4d2cf16a280",
+        "title": "I've used Tor browser for years, but now I'm using it on my Android phone - here's why",
+        "summary": "If you're looking for the safest way to browse on your Android phone, Tor Browser is it.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a4d2cf16a280"
+        ]
+      },
+      {
+        "itemId": "78e61ae4bc39",
+        "title": "Getting your Android phone repaired? Turn on this setting first - and lock down your data",
+        "summary": "Repair Mode lets technicians fix your Android phone without seeing your personal files or apps. Here's how.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "78e61ae4bc39"
+        ]
+      },
+      {
+        "itemId": "031877f72c23",
+        "title": "Beyond Accuracy: Quantifying the Production Fragility Caused by Excessive, Redundant, and Low-Signal Features in Regression",
+        "summary": "At first glance, adding more features to a model seems like an obvious way to improve performance. If a model can learn…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "031877f72c23"
+        ]
+      },
+      {
+        "itemId": "2a29e91dd6fd",
+        "title": "首个物理AI数据基座平台“无垠”落户浙江，专治机器人数据荒，家庭工业商业场景全覆盖",
+        "summary": "打通训练到商业化落地",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2a29e91dd6fd"
+        ]
+      },
+      {
+        "itemId": "057bdace89b8",
+        "title": "打败GPT-5.2，嵌入真实工业生产，这个大模型什么来头？",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "057bdace89b8"
+        ]
+      },
+      {
+        "itemId": "33d321c1dbfc",
+        "title": "企业微信支持接入OpenClaw，仅需3步即可快速上手",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "33d321c1dbfc"
+        ]
+      },
+      {
+        "itemId": "a05dfa39f05d",
+        "title": "“最美PM”宋紫薇获红杉蚂蚁投资，创业方向略有调整，转向AI护肤",
+        "summary": "暂避大厂锋芒",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a05dfa39f05d"
+        ]
+      },
+      {
+        "itemId": "4b1452f42be2",
+        "title": "文远知行与吉利远程深化战略合作，2026年交付2000台前装量产Robotaxi GXR",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "4b1452f42be2"
+        ]
+      },
+      {
+        "itemId": "322fd6df5463",
+        "title": "Show HN: I built a harness that blocks AI from building until ambiguity < 0.2",
+        "summary": "Most AI coding failures happen before the first line of code. The human shows up with a half-formed idea, the model fil…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "322fd6df5463"
+        ]
+      },
+      {
+        "itemId": "b0d5889a9033",
+        "title": "AI Didn't Destroy Your Company, Your Processes Did",
+        "summary": "Article URL: https://linuxjedi.co.uk/ai-didnt-destroy-your-company-your-processes-did/ Comments URL: https://news.ycomb…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b0d5889a9033"
+        ]
+      },
+      {
+        "itemId": "80f8395f7fba",
+        "title": "Improving AI models' ability to explain their predictions",
+        "summary": "Article URL: https://news.mit.edu/2026/improving-ai-models-ability-explain-predictions-0309 Comments URL: https://news.…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "80f8395f7fba"
+        ]
+      },
+      {
+        "itemId": "e44084698f0f",
+        "title": "Why I'm not worried about AI causing mass unemployment",
+        "summary": "Article URL: https://www.understandingai.org/p/software-didnt-eat-the-world Comments URL: https://news.ycombinator.com/…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e44084698f0f"
+        ]
+      },
+      {
+        "itemId": "8a9ed6e50795",
+        "title": "Pin a baseline experiment in LangSmith",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "8a9ed6e50795"
+        ]
+      },
+      {
+        "itemId": "98f4c30944aa",
+        "title": "Customize trace previews in LangSmith",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "98f4c30944aa"
+        ]
+      },
+      {
+        "itemId": "87225dfc3e68",
+        "title": "A conversation with Kevin Scott: What’s next in AI",
+        "summary": "The post A conversation with Kevin Scott: What’s next in AI appeared first on The AI Blog.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "87225dfc3e68"
+        ]
+      },
+      {
+        "itemId": "5896e047adc6",
+        "title": "From Hot Wheels to handling content: How brands are using Microsoft AI to be more productive and imaginative",
+        "summary": "The post From Hot Wheels to handling content: How brands are using Microsoft AI to be more productive and imaginative a…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5896e047adc6"
+        ]
+      },
+      {
+        "itemId": "fe93253782ea",
+        "title": "How data and AI will transform contact centres for financial services",
+        "summary": "The post How data and AI will transform contact centres for financial services appeared first on The AI Blog.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fe93253782ea"
+        ]
+      },
+      {
+        "itemId": "c61256096223",
+        "title": "AI-equipped drones study dolphins on the edge of extinction",
+        "summary": "The post AI-equipped drones study dolphins on the edge of extinction appeared first on The AI Blog.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c61256096223"
+        ]
+      },
+      {
+        "itemId": "455e21f8b151",
+        "title": "Online math tutoring service uses AI to help boost students’ skills and confidence",
+        "summary": "The post Online math tutoring service uses AI to help boost students’ skills and confidence appeared first on The AI Bl…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "455e21f8b151"
+        ]
       }
     ],
     "quickDigest": [
       {
         "itemId": "af0473b3cd39",
         "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
-        "takeaway": "Railway获得1亿美元B轮融资，估值超10亿美元，致力于打造AI原生云基础设施，提供秒级部署能力，目前拥有200万开发者但仅30名员工，月处理万亿级请求。",
+        "takeaway": "Railway, a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar…",
         "evidenceItemIds": [
           "af0473b3cd39"
         ]
@@ -1660,7 +2419,7 @@
       {
         "itemId": "dca57667c39b",
         "title": "Claude Code月费高达200美元，而Goose免费提供相同功能 (Claude Code costs up to $200 a month. Goose does the same thing for free.)",
-        "takeaway": "Claude Code每月收费高达200美元且存在严格使用限制，而Block开发的开源AI编程代理Goose提供完全免费、本地运行、无限制的替代方案，在GitHub已获26100星。",
+        "takeaway": "The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code, Anthropic's terminal-bas…",
         "evidenceItemIds": [
           "dca57667c39b"
         ]
@@ -1668,7 +2427,7 @@
       {
         "itemId": "570688bcf84f",
         "title": "卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k",
-        "takeaway": "卡帕西开源Agent自进化训练框架S3，基于博士社群模拟实现智能体自我进化，5分钟完成一轮实验，在48小时内获得9.5k星标关注。",
+        "takeaway": "下一步要模拟整个博士社群",
         "evidenceItemIds": [
           "570688bcf84f"
         ]
@@ -1676,7 +2435,7 @@
       {
         "itemId": "1e5772829392",
         "title": "Codex Security: now in research preview",
-        "takeaway": "OpenAI推出Codex Security，这是一款AI应用安全代理，可分析项目上下文来检测、验证和修补复杂漏洞，以更高的置信度和更低的噪音运行。",
+        "takeaway": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex…",
         "evidenceItemIds": [
           "1e5772829392"
         ]
@@ -1684,7 +2443,7 @@
       {
         "itemId": "4195e551833f",
         "title": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
-        "takeaway": "Andrej Karpathy 开源了 AutoResearch，一款约 630 行的单文件 Python 工具，可让 AI Agents 在单块 NVIDIA GPU 上自主运行机器学习实验。",
+        "takeaway": "Andrej Karpathy released autoresearch, a minimalist Python tool designed to enable AI agents to autonomously conduct ma…",
         "evidenceItemIds": [
           "4195e551833f"
         ]
@@ -1692,9 +2451,57 @@
       {
         "itemId": "d476bb6a9ab3",
         "title": "The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning",
-        "takeaway": "Google研究团队指出当前LLM缺乏概率推理能力，即根据新证据更新",
+        "takeaway": "Large Language Models (LLMs) are the world’s best mimics, but when it comes to the cold, hard logic of updating beliefs…",
         "evidenceItemIds": [
           "d476bb6a9ab3"
+        ]
+      },
+      {
+        "itemId": "96c6faefc88a",
+        "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+        "takeaway": "Nous Research, the open-source artificial intelligence startup backed by crypto venture firm Paradigm, released a new c…",
+        "evidenceItemIds": [
+          "96c6faefc88a"
+        ]
+      },
+      {
+        "itemId": "ed6c06ec1333",
+        "title": "Balyasny资产管理公司如何构建AI投资研究引擎 (How Balyasny Asset Management built an AI research engine for investing)",
+        "takeaway": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform …",
+        "evidenceItemIds": [
+          "ed6c06ec1333"
+        ]
+      },
+      {
+        "itemId": "825c39404554",
+        "title": "Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation",
+        "takeaway": "In this tutorial, we build a complete cognitive blueprint and runtime agent framework. We define structured blueprints …",
+        "evidenceItemIds": [
+          "825c39404554"
+        ]
+      },
+      {
+        "itemId": "6e51fbd095d1",
+        "title": "How to Build Progress Monitoring Using Advanced tqdm for Async, Parallel, Pandas, Logging, and High-Performance Workflows",
+        "takeaway": "In this tutorial, we explore tqdm in depth and demonstrate how we build powerful, real-time progress tracking into mode…",
+        "evidenceItemIds": [
+          "6e51fbd095d1"
+        ]
+      },
+      {
+        "itemId": "fee0cde1972e",
+        "title": "Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI",
+        "takeaway": "Salesforce on Tuesday launched an entirely rebuilt version of Slackbot, the company's workplace assistant, transforming…",
+        "evidenceItemIds": [
+          "fee0cde1972e"
+        ]
+      },
+      {
+        "itemId": "d1b65307276f",
+        "title": "Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required",
+        "takeaway": "Anthropic released Cowork on Monday, a new AI agent capability that extends the power of its wildly successful Claude C…",
+        "evidenceItemIds": [
+          "d1b65307276f"
         ]
       }
     ],
@@ -1710,7 +2517,7 @@
           "1701310afee7"
         ],
         "fallbackTriggered": true,
-        "reason": "minimax_invalid_response:missing_content"
+        "reason": "template_fallback_only"
       },
       {
         "category": "open-source",
@@ -1722,7 +2529,7 @@
           "4195e551833f"
         ],
         "fallbackTriggered": true,
-        "reason": "minimax_invalid_response:missing_content"
+        "reason": "template_fallback_only"
       },
       {
         "category": "tooling",
@@ -1734,7 +2541,7 @@
           "547565b7ab4d"
         ],
         "fallbackTriggered": true,
-        "reason": "minimax_invalid_response:missing_content"
+        "reason": "template_fallback_only"
       },
       {
         "category": "agent",
@@ -1746,39 +2553,39 @@
           "e3d44e83a9fb"
         ],
         "fallbackTriggered": true,
-        "reason": "minimax_invalid_response:missing_content"
+        "reason": "template_fallback_only"
       }
     ],
-    "summaryInputHash": "8fdecd13f53ceabd36942be5910f956842cebb1d53baa8d4d62ec5b29134746d",
+    "summaryInputHash": "b07b85f4e9769ea19e4314bcbc0a0db18810d35124b96139643f801fdea5477c",
     "llmSummaryMeta": {
       "enabled": true,
       "provider": "minimax",
       "model": "MiniMax-M2.5",
       "promptVersion": "m5.2-v1",
-      "startedAt": "2026-03-09T16:52:18.323Z",
-      "finishedAt": "2026-03-09T16:55:57.938Z",
-      "durationMs": 219615,
-      "inputCount": 8,
-      "summarizedCount": 8,
-      "fallbackTriggered": false,
-      "effectiveConcurrency": 1,
-      "assistAppliedCount": 8,
-      "assistFallbackCount": 0,
+      "startedAt": "2026-03-09T23:51:50.615Z",
+      "finishedAt": "2026-03-10T00:02:11.856Z",
+      "durationMs": 621241,
+      "inputCount": 48,
+      "summarizedCount": 3,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:38%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 48,
       "leadFallbackTriggered": true,
       "failureStats": {
-        "totalFailed": 0,
+        "totalFailed": 5,
         "timeout": 0,
         "http": 0,
         "business": 0,
         "missingContent": 0,
         "invalidJson": 0,
         "quality": 0,
-        "other": 0
+        "other": 5
       },
       "retryStats": {
-        "retryableTriggeredCount": 3,
-        "missingContentExtraRetryTriggeredCount": 3,
-        "compensationRetryItemCount": 0,
+        "retryableTriggeredCount": 1,
+        "missingContentExtraRetryTriggeredCount": 1,
+        "compensationRetryItemCount": 5,
         "serialDegradeTriggered": false,
         "serialRetriedItemCount": 0,
         "serialTriggerMaxConsecutiveMissingContent": 0
@@ -1792,10 +2599,11 @@
         "degradedRetriedItemCount": 0,
         "currentMode": "normal",
         "maxWindowMissingContentRate": 0,
-        "maxWindowSuccessRate": 1,
+        "maxWindowSuccessRate": 0.16666666666666666,
         "lastWindowMissingContentRate": 0,
-        "lastWindowSuccessRate": 1
-      }
+        "lastWindowSuccessRate": 0.16666666666666666
+      },
+      "effectiveConcurrency": 1
     },
     "highlights": [
       {
@@ -1816,12 +2624,11 @@
         "confidence": 0.6,
         "llmScore": 100,
         "scoreBreakdown": {
-          "ruleScore": 131,
+          "ruleScore": 100,
           "ruleScoreNormalized": 100,
-          "llmScore": 100,
           "finalScore": 100,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -1829,6 +2636,7 @@
         "sourceId": "venturebeat-ai",
         "sourceName": "VentureBeat AI",
         "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
+        "titleZh": "Claude Code月费高达200美元，而Goose免费提供相同功能",
         "link": "https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free",
         "contentSnippet": "The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code, Anthropic's terminal-based AI agent that can write, debug, and deploy code autonomously, has captured the imagination of software developers worldwide. But its pricing — ranging from $20 to $200 per month depending on usage — has sparked a growing rebellion among the very programmers it aims to serve. Now, a free alternative is gaining traction. Goose, an open-source AI agent developed by Block (the financial technology company formerly known as Square), offers nearly identical functionality to Claude Code but runs entirely on a user's local machine. No subscription fees. No cloud dependency. No rate limits that reset every five hours. \"Your data stays with you, period,\" said Parth Sareen, a software engineer who demonstrated the tool during a recent livestream. The comment captures the core appeal: Goose gives developers complete control over their AI-powered workflow, including the ability to work offline — even on an airplane. The project has exploded in popularity. Goose now boasts more than 26,100 stars on GitHub, the code-sharing platform, with 362 contributors and 102 releases since its launch. The latest version, 1.20.1, shipped on January 19, 2026, reflecting a development pace that rivals commercial products. For developers frustrated by Claude Code's pricing structure and usage caps, Goose represents something increasingly rare in the AI industry: a genuinely free, no-strings-attached option for serious work. Anthropic's new rate limits spark a developer revolt To understand why Goose matters, you need to understand the Claude Code pricing controversy. Anthropic, the San Francisco artificial intelligence company founded by former OpenAI executives, offers Claude Code as part of its subscription tiers. The free plan provides no access whatsoever. The Pro plan, at $17 per month with annual billing (or $20 monthly), limits users to just 10 to 40 prompts every five hours — a constraint that serious developers exhaust within minutes of intensive work. The Max plans, at $100 and $200 per month, offer more headroom: 50 to 200 prompts and 200 to 800 prompts respectively, plus access to Anthropic's most powerful model, Claude 4.5 Opus. But even these premium tiers come with restrictions that have inflamed the developer community. In late July, Anthropic announced new weekly rate limits. Under the system, Pro users receive 40 to 80 hours of Sonnet 4 usage per week. Max users at the $200 tier get 240 to 480 hours of Sonnet 4, plus 24 to 40 hours of Opus 4. Nearly five months later, the frustration has not subsided. The problem? Those \"hours\" are not actual hours. They represent token-based limits that vary wildly depending on codebase size, conversation length, and the complexity of the code being processed. Independent analysis suggests the actual per-session limits translate to roughly 44,000 tokens for Pro users and 220,000 tokens for the $200 Max plan. \"It's confusing and vague,\" one developer wrote in a widely shared analysis. \"When they say '24-40 hours of Opus 4,' that doesn't really tell you anything useful about what you're actually getting.\" The backlash on Reddit and developer forums has been fierce. Some users report hitting their daily limits within 30 minutes of intensive coding. Others have canceled their subscriptions entirely, calling the new restrictions \"a joke\" and \"unusable for real work.\" Anthropic has defended the changes, stating that the limits affect fewer than five percent of users and target people running Claude Code \"continuously in the background, 24/7.\" But the company has not clarified whether that figure refers to five percent of Max subscribers or five percent of all users — a distinction that matters enormously. How Block built a free AI coding agent that works offline Goose takes a radically different approach to the same problem. Built by Block, the payments company led by Jack Dorsey, Goose is what engineers call an \"on-machine AI agent.\" Unlike Claude Code, which sends your queries to Anthropic's servers for processing, Goose can run entirely on your local computer using open-source language models that you download and control yourself. The project's documentation describes it as going \"beyond code suggestions\" to \"install, execute, edit, and test with any LLM.\" That last phrase — \"any LLM\" — is the key differentiator. Goose is model-agnostic by design. You can connect Goose to Anthropic's Claude models if you have API access. You can use OpenAI's GPT-5 or Google's Gemini. You can route it through services like Groq or OpenRouter. Or — and this is where things get interesting — you can run it entirely locally using tools like Ollama, which let you download and execute open-source models on your own hardware. The practical implications are significant. With a local setup, there are no subscription fees, no usage caps, no rate limits, and no concerns about your code being sent to external servers. Your conversations with the AI never leave your machine. \"I use Ollama all the time on planes — it's a lot of fun!\" Sareen noted during a demonstration, highlighting how local models free developers from the constraints of internet connectivity. What Goose can do that traditional code assistants can't Goose operates as a command-line tool or desktop application that can autonomously perform complex development tasks. It can build entire projects from scratch, write and execute code, debug failures, orchestrate workflows across multiple files, and interact with external APIs — all without constant human oversight. The architecture relies on what the AI industry calls \"tool calling\" or \"function calling\" — the ability for a language model to request specific actions from external systems. When you ask Goose to create a new file, run a test suite, or check the status of a GitHub pull request, it doesn't just generate text describing what should happen. It actually executes those operations. This capability depends heavily on the underlying language model. Claude 4 models from Anthropic currently perform best at tool calling, according to the Berkeley Function-Calling Leaderboard, which ranks models on their ability to translate natural language requests into executable code and system commands. But newer open-source models are catching up quickly. Goose's documentation highlights several options with strong tool-calling support: Meta's Llama series, Alibaba's Qwen models, Google's Gemma variants, and DeepSeek's reasoning-focused architectures. The tool also integrates with the Model Context Protocol, or MCP, an emerging standard for connecting AI agents to external services. Through MCP, Goose can access databases, search engines, file systems, and third-party APIs — extending its capabilities far beyond what the base language model provides. Setting Up Goose with a Local Model For developers interested in a completely free, privacy-preserving setup, the process involves three main components: Goose itself, Ollama (a tool for running open-source models locally), and a compatible language model. Step 1: Install Ollama Ollama is an open-source project that dramatically simplifies the process of running large language models on personal hardware. It handles the complex work of downloading, optimizing, and serving models through a simple interface. Download and install Ollama from ollama.com. Once installed, you can pull models with a single command. For coding tasks, Qwen 2.5 offers strong tool-calling support: ollama run qwen2.5 The model downloads automatically and begins running on your machine. Step 2: Install Goose Goose is available as both a desktop application and a command-line interface. The desktop version provides a more visual experience, while the CLI appeals to developers who prefer working entirely in the terminal. Installation instructions vary by operating system but generally involve downloading from Goose's GitHub releases page or using a package manager. Block provides pre-built binaries for macOS (both Intel and Apple Silicon), Windows, and Linux. Step 3: Configure the Connection In Goose Desktop, navigate to Settings, then Configure Provider, and select Ollama. Confirm that the API Host is set to http://localhost:11434 (Ollama's default port) and click Submit. For the command-line version, run goose configure, select \"Configure Providers,\" choose Ollama, and enter the model name when prompted. That's it. Goose is now connected to a language model running entirely on your hardware, ready to execute complex coding tasks without any subscription fees or external dependencies. The RAM, processing power, and trade-offs you should know about The obvious question: what kind of computer do you need? Running large language models locally requires substantially more computational resources than typical software. The key constraint is memory — specifically, RAM on most systems, or VRAM if using a dedicated graphics card for acceleration. Block's documentation suggests that 32 gigabytes of RAM provides \"a solid baseline for larger models and outputs.\" For Mac users, this means the computer's unified memory is the primary bottleneck. For Windows and Linux users with discrete NVIDIA graphics cards, GPU memory (VRAM) matters more for acceleration. But you don't necessarily need expensive hardware to get started. Smaller models with fewer parameters run on much more modest systems. Qwen 2.5, for instance, comes in multiple sizes, and the smaller variants can operate effectively on machines with 16 gigabytes of RAM. \"You don't need to run the largest models to get excellent results,\" Sareen emphasized. The practical recommendation: start with a smaller model to test your workflow, then scale up as needed. For context, Apple's entry-level MacBook Air with 8 gigabytes of RAM would struggle with most capable coding models. But a MacBook Pro with 32 gigabytes — increasingly common among professional developers — handles them comfortably. Why keeping your code off the cloud matters more than ever Goose with a local LLM is not a perfect substitute for Claude Code. The comparison involves real trade-offs that developers should understand. Model Quality: Claude 4.5 Opus, Anthropic's flagship model, remains arguably the most capable AI for software engineering tasks. It excels at understanding complex codebases, following nuanced instructions, and producing high-quality code on the first attempt. Open-source models have improved dramatically, but a gap persists — particularly for the most challenging tasks. One developer who switched to the $200 Claude Code plan described the difference bluntly: \"When I say 'make this look modern,' Opus knows what I mean. Other models give me Bootstrap circa 2015.\" Context Window: Claude Sonnet 4.5, accessible through the API, offers a massive one-million-token context window — enough to load entire large codebases without chunking or context management issues. Most local models are limited to 4,096 or 8,192 tokens by default, though many can be configured for longer contexts at the cost of increased memory usage and slower processing. Speed: Cloud-based services like Claude Code run on dedicated server hardware optimized for AI inference. Local models, running on consumer laptops, typically process requests more slowly. The difference matters for iterative workflows where you're making rapid changes and waiting for AI feedback. Tooling Maturity: Claude Code benefits from Anthropic's dedicated engineering resources. Features like prompt caching (which can reduce costs by up to 90 percent for repeated contexts) and structured outputs are polished and well-documented. Goose, while actively developed with 102 releases to date, relies on community contributions and may lack equivalent refinement in specific areas. How Goose stacks up against Cursor, GitHub Copilot, and the paid AI coding market Goose enters a crowded market of AI coding tools, but occupies a distinctive position. Cursor, a popular AI-enhanced code editor, charges $20 per month for its Pro tier and $200 for Ultra—pricing that mirrors Claude Code's Max plans. Cursor provides approximately 4,500 Sonnet 4 requests per month at the Ultra level, a substantially different allocation model than Claude Code's hourly resets. Cline, Roo Code, and similar open-source projects offer AI coding assistance but with varying levels of autonomy and tool integration. Many focus on code completion rather than the agentic task execution that defines Goose and Claude Code. Amazon's CodeWhisperer, GitHub Copilot, and enterprise offerings from major cloud providers target large organizations with complex procurement processes and dedicated budgets. They are less relevant to individual developers and small teams seeking lightweight, flexible tools. Goose's combination of genuine autonomy, model agnosticism, local operation, and zero cost creates a unique value proposition. The tool is not trying to compete with commercial offerings on polish or model quality. It's competing on freedom — both financial and architectural. The $200-a-month era for AI coding tools may be ending The AI coding tools market is evolving quickly. Open-source models are improving at a pace that continually narrows the gap with proprietary alternatives. Moonshot AI's Kimi K2 and z.ai's GLM 4.5 now benchmark near Claude Sonnet 4 levels — and they're freely available. If this trajectory continues, the quality advantage that justifies Claude Code's premium pricing may erode. Anthropic would then face pressure to compete on features, user experience, and integration rather than raw model capability. For now, developers face a clear choice. Those who need the absolute best model quality, who can afford premium pricing, and who accept usage restrictions may prefer Claude Code. Those who prioritize cost, privacy, offline access, and flexibility have a genuine alternative in Goose. The fact that a $200-per-month commercial product has a zero-dollar open-source competitor with comparable core functionality is itself remarkable. It reflects both the maturation of open-source AI infrastructure and the appetite among developers for tools that respect their autonomy. Goose is not perfect. It requires more technical setup than commercial alternatives. It depends on hardware resources that not every developer possesses. Its model options, while improving rapidly, still trail the best proprietary offerings on complex tasks. But for a growing community of developers, those limitations are acceptable trade-offs for something increasingly rare in the AI landscape: a tool that truly belongs to them. Goose is available for download at github.com/block/goose. Ollama is available at ollama.com. Both projects are free and open source.",
         "publishedAt": "2026-01-19T14:00:00.000Z",
@@ -1836,19 +2644,17 @@
         "score": 92.2,
         "importance": "high",
         "recommendationReason": "Agent 工程实践相关",
-        "titleZh": "Claude Code月费高达200美元，而Goose免费提供相同功能",
         "domainTag": "agent",
         "intentTag": "comparison",
         "actionability": 3,
         "confidence": 0.95,
         "llmScore": 88,
         "scoreBreakdown": {
-          "ruleScore": 131,
-          "ruleScoreNormalized": 100,
-          "llmScore": 88,
+          "ruleScore": 92.2,
+          "ruleScoreNormalized": 92.2,
           "finalScore": 92.2,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -1869,12 +2675,11 @@
         "confidence": 0.6,
         "llmScore": 100,
         "scoreBreakdown": {
-          "ruleScore": 119,
-          "ruleScoreNormalized": 74.46808510638297,
-          "llmScore": 100,
+          "ruleScore": 91.06,
+          "ruleScoreNormalized": 91.06,
           "finalScore": 91.06,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -1895,12 +2700,11 @@
         "confidence": 0.6,
         "llmScore": 100,
         "scoreBreakdown": {
-          "ruleScore": 118,
-          "ruleScoreNormalized": 72.3404255319149,
-          "llmScore": 100,
+          "ruleScore": 90.32,
+          "ruleScoreNormalized": 90.32,
           "finalScore": 90.32,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -1921,12 +2725,11 @@
         "confidence": 0.6,
         "llmScore": 100,
         "scoreBreakdown": {
-          "ruleScore": 118,
-          "ruleScoreNormalized": 72.3404255319149,
-          "llmScore": 100,
+          "ruleScore": 90.32,
+          "ruleScoreNormalized": 90.32,
           "finalScore": 90.32,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -1947,12 +2750,11 @@
         "confidence": 0.6,
         "llmScore": 100,
         "scoreBreakdown": {
-          "ruleScore": 113,
-          "ruleScoreNormalized": 61.702127659574465,
-          "llmScore": 100,
+          "ruleScore": 86.6,
+          "ruleScoreNormalized": 86.6,
           "finalScore": 86.6,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -1973,12 +2775,11 @@
         "confidence": 0.6,
         "llmScore": 100,
         "scoreBreakdown": {
-          "ruleScore": 111,
-          "ruleScoreNormalized": 57.446808510638306,
-          "llmScore": 100,
+          "ruleScore": 85.11,
+          "ruleScoreNormalized": 85.11,
           "finalScore": 85.11,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       },
       {
@@ -1986,6 +2787,7 @@
         "sourceId": "openai-news",
         "sourceName": "OpenAI News",
         "title": "How Balyasny Asset Management built an AI research engine for investing",
+        "titleZh": "Balyasny资产管理公司如何构建AI投资研究引擎",
         "link": "https://openai.com/index/balyasny-asset-management",
         "contentSnippet": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform investment analysis at scale.",
         "publishedAt": "2026-03-06T07:00:00.000Z",
@@ -1993,19 +2795,17 @@
         "score": 82.06,
         "importance": "medium",
         "recommendationReason": "Agent 工程实践相关",
-        "titleZh": "Balyasny资产管理公司如何构建AI投资研究引擎",
         "domainTag": "agent",
         "intentTag": "case-study",
         "actionability": 1,
         "confidence": 0.9,
         "llmScore": 85,
         "scoreBreakdown": {
-          "ruleScore": 120,
-          "ruleScoreNormalized": 76.59574468085107,
-          "llmScore": 85,
+          "ruleScore": 82.06,
+          "ruleScoreNormalized": 82.06,
           "finalScore": 82.06,
           "fusionWeight": 0.65,
-          "usedLlm": true
+          "usedLlm": false
         }
       }
     ],
@@ -2026,7 +2826,13 @@
         "other": 20
       }
     },
-    "warnings": [],
+    "warnings": [
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:38%<70%",
+      "LLM 条目失败明细（前 3/8）：fetch failed | fetch failed | fetch failed",
+      "LLM 失败分类：missing_content=0, timeout=0, http=0, business=0, invalid_json=0, quality=0, other=5",
+      "LLM 重试统计：retryable=1, missing_content_extra=1, compensation=5, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=17%"
+    ],
     "reviewDeadlineAt": "2026-03-16T04:30:00.000Z"
   }
 }

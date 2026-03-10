@@ -1,0 +1,15 @@
+{
+  "mode": "weekly",
+  "reportDate": "2026-03-10",
+  "instructions": [
+    {
+      "stage": "outline_review",
+      "approved": true,
+      "action": "approve_outline",
+      "decidedAt": "2026-03-09T23:51:48.570Z",
+      "source": "feishu_callback",
+      "reason": "大纲通过",
+      "messageId": "om_x100b55db8f57f934b3d697c3bf9db5c"
+    }
+  ]
+}
