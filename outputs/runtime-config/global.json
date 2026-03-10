@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "updatedAt": "2026-03-10T01:00:00.000Z",
+  "topics": [],
+  "searchTerms": [],
+  "sourceToggles": {},
+  "sourceWeights": {},
+  "rankingWeights": {
+    "source": 1,
+    "freshness": 1,
+    "keyword": 1
+  }
+}
