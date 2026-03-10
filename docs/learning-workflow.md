@@ -21,6 +21,7 @@
 - Graph 定义：`src/pipeline/graph.ts`
 - Node 实现：`src/pipeline/nodes.ts`
 - RSS 采集：`src/sources/rss-source.ts`
+- GitHub 采集：`src/sources/github-source.ts`
 - Markdown 输出：`src/report/markdown.ts`
 - 来源配置：`data/sources.yaml`
 
@@ -55,6 +56,7 @@ pnpm run:weekly:mock
 - M5 复盘 03（自适应降载 + run 级诊断 + 分类导读）：`docs/learning-sessions/m5-session-03-llm-stability-observability-and-category-lead.md`
 - M5 复盘 05（前置批量分类/全量打分 + 摘要节点去打分）：`docs/learning-sessions/m5-session-05-llm-batch-classify-score-pre-rank.md`
 - M5 复盘 06（全量标题翻译前置 + 中文质量修复链 + 英文保留策略）：`docs/learning-sessions/m5-session-06-llm-zh-quality-loop.md`
+- M5 复盘 07（GitHub Search 一手采集 + 混合来源诊断增强）：`docs/learning-sessions/m5-session-07-github-source-and-curated-rss.md`
 
 ## 6. 执行优先级约束
 - 优先保证「可运行 + 可理解 + 可复盘」三件事同时成立。
@@ -71,7 +73,8 @@ pnpm run:weekly:mock
 8. M5.1：LLM 总结节点（MiniMax，逐条总结 + 速览聚合）【已完成】。
 9. M5.2：前置批量分类/全量打分 + 排序融合 + 导语 + 标题翻译【已完成】。
 10. M5.3：自适应降载与运行诊断 + 分类导读（LLM + 模板回退）【已完成】。
-11. 分布式互斥：暂缓，待多实例部署再启动。
+11. M5.4：GitHub Search 一手开源采集 + 精选 RSS 扩展 + 诊断增强【已完成】。
+12. 分布式互斥：暂缓，待多实例部署再启动。
 
 ## 8. M4.3 运行备忘（防遗忘）
 - 常驻运行入口：`pnpm run run:daemon`。

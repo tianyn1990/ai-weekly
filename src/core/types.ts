@@ -1,6 +1,6 @@
 export type ReportMode = "daily" | "weekly";
 
-export type SourceType = "rss";
+export type SourceType = "rss" | "github_search";
 
 export type ItemCategory =
   | "open-source"
@@ -236,15 +236,29 @@ export interface ReviewInstruction {
   feedback?: ReviewFeedbackPayload;
 }
 
-export interface SourceConfig {
+export interface BaseSourceConfig {
   id: string;
   name: string;
   type: SourceType;
-  url: string;
   language: "zh" | "en" | "mixed";
   weight: number;
   enabled: boolean;
 }
+
+export interface RssSourceConfig extends BaseSourceConfig {
+  type: "rss";
+  url: string;
+}
+
+export interface GithubSearchSourceConfig extends BaseSourceConfig {
+  type: "github_search";
+  query: string;
+  sort?: "stars" | "forks" | "updated";
+  order?: "asc" | "desc";
+  perPage?: number;
+}
+
+export type SourceConfig = RssSourceConfig | GithubSearchSourceConfig;
 
 export interface RawItem {
   sourceId: string;

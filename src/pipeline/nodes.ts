@@ -11,6 +11,7 @@ import { buildLlmSummary, canReuseLlmSummary, type LlmSummaryAuditEvent } from "
 import { buildReportMarkdown } from "../report/markdown.js";
 import { executeFeedbackRevision } from "../review/feedback-executor.js";
 import { createReviewInstructionStore } from "../review/instruction-store.js";
+import { collectGithubSearchItems } from "../sources/github-source.js";
 import { collectMockItems } from "../sources/mock-source.js";
 import { collectRssItems } from "../sources/rss-source.js";
 import { SqliteEngine } from "../storage/sqlite-engine.js";
@@ -33,7 +34,13 @@ export async function collectItemsNode(state: ReportState): Promise<Partial<Repo
   });
   const runtimeConfig = (await runtimeConfigStore.getCurrent()).config;
   const sources = applyRuntimeSourceOverrides(await loadSourceConfig(state.sourceConfigPath), runtimeConfig);
-  const { items, warnings } = await collectRssItems(sources, state.sourceLimit);
+  // 采集层按来源类型并行抓取，既复用 RSS 链路，也支持 GitHub Search 等 API 适配器。
+  const [rssResult, githubResult] = await Promise.all([
+    collectRssItems(sources, state.sourceLimit),
+    collectGithubSearchItems(sources, state.sourceLimit),
+  ]);
+  const items = [...rssResult.items, ...githubResult.items];
+  const warnings = [...rssResult.warnings, ...githubResult.warnings];
   const metrics = { ...state.metrics, collectedCount: items.length };
   return { rawItems: items, metrics, warnings };
 }

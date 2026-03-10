@@ -36,8 +36,46 @@ awk '
 {print}
 ' "${BASE_ENV_FILE}" > "${DIAG_ENV_FILE}"
 
+# 若启用了 github_search 且未配置 token，提前给出诊断建议，避免用户误以为“偶发失败”。
+HAS_GITHUB_SEARCH_ENABLED="$(
+  node -e 'const fs=require("fs");const YAML=require("yaml");const list=YAML.parse(fs.readFileSync("data/sources.yaml","utf8"))||[];process.stdout.write(list.some((s)=>s && s.enabled && s.type==="github_search")?"1":"0");'
+)"
+HAS_GITHUB_TOKEN="$(
+  DIAG_ENV_FILE="${DIAG_ENV_FILE}" node - <<'NODE'
+const fs = require("fs");
+const filePath = process.env.DIAG_ENV_FILE;
+const content = fs.readFileSync(filePath, "utf8");
+const lines = content.split(/\r?\n/);
+let tokenFromFile = "";
+for (const rawLine of lines) {
+  const line = rawLine.trim();
+  if (!line || line.startsWith("#")) continue;
+  const index = line.indexOf("=");
+  if (index <= 0) continue;
+  const key = line.slice(0, index).trim();
+  if (key !== "GITHUB_TOKEN") continue;
+  const valueRaw = line.slice(index + 1).trim();
+  if (valueRaw.startsWith("\"")) {
+    const end = valueRaw.indexOf("\"", 1);
+    tokenFromFile = end > 0 ? valueRaw.slice(1, end).trim() : valueRaw.trim();
+  } else if (valueRaw.startsWith("'")) {
+    const end = valueRaw.indexOf("'", 1);
+    tokenFromFile = end > 0 ? valueRaw.slice(1, end).trim() : valueRaw.trim();
+  } else {
+    tokenFromFile = valueRaw.split(" #")[0].trim();
+  }
+  break;
+}
+const tokenFromEnv = (process.env.GITHUB_TOKEN || "").trim();
+process.stdout.write(tokenFromFile || tokenFromEnv ? "1" : "0");
+NODE
+)"
+
 echo "[source-diagnose] env=${DIAG_ENV_FILE}"
 echo "[source-diagnose] mode=${MODE}, reportDate=${REPORT_DATE}, generatedAt=${GENERATED_AT}"
+if [[ "${HAS_GITHUB_SEARCH_ENABLED}" == "1" && "${HAS_GITHUB_TOKEN}" != "1" ]]; then
+  echo "[source-diagnose-advice] 检测到已启用 github_search，但未配置 GITHUB_TOKEN；可运行但更容易触发限流。"
+fi
 echo "[source-diagnose] run pipeline with mock=false ..."
 
 AI_WEEKLY_ENV_FILE="${DIAG_ENV_FILE}" \
@@ -64,4 +102,3 @@ echo "[source-diagnose-warning] 检测到抓取失败来源，请检查 data/sou
 if [[ "${FAIL_ON_WARNING}" == "true" ]]; then
   exit 2
 fi
-

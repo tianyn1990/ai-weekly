@@ -1,7 +1,7 @@
 # AI 周报系统设计（v1.0）
 
 ## 1. 文档目标与范围
-- 目标：定义 AI 日报/周报系统在 **M5.3 已完成** 基线下的完整技术架构。
+- 目标：定义 AI 日报/周报系统在 **M5.4 已完成** 基线下的完整技术架构。
 - 范围：覆盖采集、处理、审核、发布、协同通知、审核意见回流、可观测与运维策略。
 - 非目标：不描述前端管理后台 UI 细节；不覆盖分布式部署实现细节（当前暂缓）。
 
@@ -87,9 +87,16 @@
 - 新增 run 级诊断元数据：`adaptiveDegradeStats`（trigger/recover/currentMode/windowStats）。
 - 新增分类导读：按主要分类生成 1 句导读，失败回退模板文案。
 
+### 2.12 已实现（M5.4）
+- 采集层新增 `github_search` 适配器：支持通过 GitHub Search API 拉取热门开源仓库并映射标准候选条目。
+- 支持 `rss + github_search` 混合来源配置，兼容历史 RSS-only 配置。
+- GitHub 鉴权策略：支持 `GITHUB_TOKEN`（可选），缺失时仍可执行并输出限流风险提示。
+- 默认来源扩展：新增 InfoQ AI/ML 与 Google AI Blog RSS；保留不稳定来源默认禁用策略。
+- 诊断增强：`source:diagnose` 可识别 `github_search` 启用状态，并在 token 缺失时给出运维建议。
+
 ## 3. 架构全景
 系统分为八层：
-1. **Ingestion Layer**：按来源抓取原始条目（RSS/后续扩展 API）。
+1. **Ingestion Layer**：按来源抓取原始条目（RSS + GitHub Search API 适配器）。
 2. **Processing Layer (LangGraph)**：标准化、去重、分类、排序、大纲/正文生成。
 3. **Review Orchestration Layer**：审核状态机、超时发布判定、pending 复检。
 4. **Collaboration Layer**：Feishu 通知、审核动作回写、审核意见回流修订。
@@ -148,6 +155,7 @@
     ├── tools/
     │   └── service-ops.ts            # macOS 初始化与服务托管命令
     ├── sources/
+    │   ├── github-source.ts
     │   ├── rss-source.ts
     │   └── mock-source.ts
     └── utils/
@@ -526,7 +534,8 @@ DB 表：`operation_jobs`
 7. **M5.1（智能）**：LLM 总结节点（MiniMax，逐条总结 + 速览聚合）【已完成】。
 8. **M5.2（智能）**：前置批量分类/全量打分 + 排序融合 + 导语 + 标题翻译【已完成】。
 9. **M5.3（智能）**：自适应降载与 run 级诊断 + 分类导读（LLM + 模板回退）【已完成】。
-10. **暂缓项**：分布式互斥（多实例部署时再做）。
+10. **M5.4（数据源）**：GitHub Search 一手开源采集 + 精选 RSS 扩展 + 诊断增强【已完成】。
+11. **暂缓项**：分布式互斥（多实例部署时再做）。
 
 ## 13. 里程碑后的质量门禁
 - 无来源断言容忍度：0。

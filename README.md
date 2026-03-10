@@ -17,6 +17,7 @@
 - 已完成 M5.1：MiniMax 逐条总结（daily/weekly）、4-12 条自适应“3 分钟速览”、失败自动回退与飞书合并告警。
 - 已完成 M5.2：前置 LLM 批量分类与全量打分（含重试/拆批降级）、排序融合、报告导语与英文标题中文化展示。
 - 已完成 M5.3：窗口型自适应降载与恢复、run 级诊断元数据、分类导读（LLM + 模板回退）。
+- 已完成 M5.4：采集层支持 `rss + github_search` 混合来源，新增 GitHub 热门开源一手采集与来源诊断增强。
 - 分布式互斥暂缓，当前以单机 daemon 为部署基线。
 
 ## 环境要求
@@ -37,6 +38,7 @@ cp .env.local.example .env.local
 ```
 - 至少填好：`FEISHU_APP_ID`、`FEISHU_APP_SECRET`、`REVIEW_CHAT_ID`、`FEISHU_CALLBACK_AUTH_TOKEN`。
 - 若你已完成 Cloudflare Named Tunnel，补充：`CLOUDFLARED_TUNNEL_NAME`、`CLOUDFLARED_CONFIG_PATH`。
+- 若启用了 `github_search` 来源，建议补充：`GITHUB_TOKEN`（未配置仍可运行，但更容易触发限流）。
 - 说明：`src/cli.ts` 与 `src/tools/feishu-ops.ts` 启动时会自动加载 `.env.local`（或 `AI_WEEKLY_ENV_FILE` 指定文件）并覆盖同名进程变量，避免全局 shell 变量污染当前项目。
 
 3) 执行初始化自检（会给出缺失项修复建议）
@@ -92,6 +94,11 @@ pnpm run:weekly
 pnpm run run:daemon
 ```
 
+来源配置说明：
+- 配置文件：`data/sources.yaml`
+- 支持类型：`rss`、`github_search`
+- `github_search` 推荐配置 `GITHUB_TOKEN`，提高 API 配额稳定性
+
 仅用于“数据源健康诊断”时，建议使用一键诊断命令（自动关闭 LLM/通知/自动 git 同步）：
 ```bash
 pnpm run source:diagnose
@@ -99,6 +106,8 @@ pnpm run source:diagnose
 # MODE=daily pnpm run source:diagnose
 # SOURCE_DIAG_FAIL_ON_WARNING=true pnpm run source:diagnose
 ```
+
+当启用 `github_search` 且未配置 `GITHUB_TOKEN` 时，诊断会输出 advisory 提示（流程仍会继续执行）。
 
 可选参数：
 ```bash
@@ -430,6 +439,8 @@ REVIEW_CHAT_ID=""   # 必填
 # 可选：用于把本地文件路径转换为飞书可点击 URL
 # 例如 https://raw.githubusercontent.com/<org>/<repo>/<branch>
 REPORT_PUBLIC_BASE_URL=""
+# 可选但强烈建议：github_search 数据源鉴权 token
+GITHUB_TOKEN=""
 
 # Service Runner（M4.4）
 # 可选：显式指定“源配置”路径（建议保持为项目 .env.local）
@@ -532,7 +543,7 @@ pnpm test
 ```
 
 ## 设计取舍
-- 首版先用 RSS + 规则分类，优先保证流程稳定与可追溯。
+- 采集层采用 `rss + github_search` 双适配器：媒体资讯与开源一手信号并行，且维持 fail-soft。
 - 总结能力采用“逐条 LLM + 聚合速览”，避免全量单 prompt 导致上下文劣化。
 - LLM 调用失败时自动回退规则摘要，且不阻断审核/发布主流程。
 

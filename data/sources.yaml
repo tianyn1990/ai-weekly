@@ -14,6 +14,17 @@
   weight: 86
   enabled: true
 
+- id: github-hot-open-source
+  name: GitHub 热门开源（AI）
+  type: github_search
+  query: "topic:ai stars:>500 archived:false"
+  sort: updated
+  order: desc
+  perPage: 10
+  language: mixed
+  weight: 88
+  enabled: true
+
 - id: huggingface-blog
   name: Hugging Face Blog
   type: rss
@@ -28,6 +39,22 @@
   url: https://blogs.microsoft.com/ai/feed/
   language: en
   weight: 84
+  enabled: true
+
+- id: google-ai-blog
+  name: Google AI Blog
+  type: rss
+  url: https://blog.google/innovation-and-ai/technology/ai/rss/
+  language: en
+  weight: 82
+  enabled: true
+
+- id: infoq-ai-news
+  name: InfoQ AI/ML News
+  type: rss
+  url: https://feed.infoq.com/ai-ml-data-eng/news/
+  language: en
+  weight: 80
   enabled: true
 
 - id: marktechpost
