@@ -11,6 +11,27 @@
       "operator": "ou_e19d72b55e637aab98b744b155bd66c7",
       "reason": "终稿需调整",
       "traceId": "9740f4467d6f9656dd514c2e325293f0"
+    },
+    {
+      "stage": "final_review",
+      "approved": false,
+      "action": "request_revision",
+      "decidedAt": "2026-03-11T10:39:14.929Z",
+      "source": "feishu_callback",
+      "operator": "ou_e19d72b55e637aab98b744b155bd66c7",
+      "reason": "终稿需调整",
+      "traceId": "31bd70f791cccc7c2c05900d5e6775c4"
+    },
+    {
+      "stage": "final_review",
+      "approved": true,
+      "action": "approve_final",
+      "decidedAt": "2026-03-11T11:05:35.920Z",
+      "source": "feishu_callback",
+      "operator": "ou_e19d72b55e637aab98b744b155bd66c7",
+      "reason": "修订失败后人工放行",
+      "traceId": "b8981654180183b8568cff49544d090a"
     }
   ]
+}  ]
 }
