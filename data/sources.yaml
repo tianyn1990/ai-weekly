@@ -17,10 +17,16 @@
 - id: github-hot-open-source
   name: GitHub 热门开源（AI）
   type: github_search
-  query: "topic:ai stars:>500 archived:false"
+  query: "topic:artificial-intelligence archived:false stars:>=200"
+  queryMode: dual
+  activeWindowDays: 7
+  newRepoWindowDays: 14
+  cooldownDays: 10
+  breakoutMinStars: 200000
+  breakoutRecentHours: 24
   sort: updated
   order: desc
-  perPage: 10
+  perPage: 20
   language: mixed
   weight: 88
   enabled: true

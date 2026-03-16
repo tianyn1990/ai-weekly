@@ -99,6 +99,31 @@ pnpm run run:daemon
 - 配置文件：`data/sources.yaml`
 - 支持类型：`rss`、`github_search`
 - `github_search` 推荐配置 `GITHUB_TOKEN`，提高 API 配额稳定性
+- `github_search` 默认采用 dual-query（`active_window + new_repo_window`）：
+  - `activeWindowDays`：近期活跃窗口（默认 7 天，基于 `pushed`）
+  - `newRepoWindowDays`：近期新仓窗口（默认 14 天，基于 `created`）
+  - `cooldownDays`：跨天去重窗口（默认 10 天）
+  - `breakoutMinStars + breakoutRecentHours`：突破 cooldown 的高强度动态阈值
+
+示例（AI 领域 Trending-like 配置）：
+```yaml
+- id: github-hot-open-source
+  name: GitHub 热门开源（AI）
+  type: github_search
+  query: "topic:artificial-intelligence archived:false stars:>=200"
+  queryMode: dual
+  activeWindowDays: 7
+  newRepoWindowDays: 14
+  cooldownDays: 10
+  breakoutMinStars: 200000
+  breakoutRecentHours: 24
+  sort: updated
+  order: desc
+  perPage: 20
+  language: mixed
+  weight: 88
+  enabled: true
+```
 
 仅用于“数据源健康诊断”时，建议使用一键诊断命令（自动关闭 LLM/通知/自动 git 同步）：
 ```bash
@@ -109,6 +134,7 @@ pnpm run source:diagnose
 ```
 
 当启用 `github_search` 且未配置 `GITHUB_TOKEN` 时，诊断会输出 advisory 提示（流程仍会继续执行）。
+同时会输出 GitHub 结构化诊断统计：`queryMode/sourceCount/collected/merged/kept/selected/history/suppressed/breakout`，用于解释“为什么某条被入选或过滤”。
 
 可选参数：
 ```bash
@@ -174,16 +200,18 @@ tsx src/cli.ts run --mode weekly \
   --llm-rank-fusion-weight 0.65
 ```
 
-ReAct 修订护栏参数（M5.5）：
+ReAct 修订与自动 recheck 护栏参数（M5.5+）：
 ```bash
 # 默认值：enabled=true, max-steps=20, max-wall-clock-ms=600000, max-llm-calls=30, max-tool-errors=5
+# 自动 recheck（飞书审核动作触发）默认总超时：600000ms
 tsx src/cli.ts run --mode weekly --mock \
   --revision-agent-enabled \
   --revision-agent-max-steps 20 \
   --revision-agent-max-wall-clock-ms 600000 \
   --revision-agent-max-llm-calls 30 \
   --revision-agent-max-tool-errors 5 \
-  --revision-agent-planner-timeout-ms 30000
+  --revision-agent-planner-timeout-ms 30000 \
+  --revision-recheck-max-wall-clock-ms 600000
 ```
 
 M5.3 输出增强说明：
@@ -191,6 +219,7 @@ M5.3 输出增强说明：
 - 报告会新增“分类导读”区块（主要分类 1 句导读，失败时模板回退）。
 - 英文标题会尝试显示为“中文标题（原标题）”。
 - 结构化产物会记录 `llmClassifyScoreMeta`（批量配置、重试与失败分类统计）以及 `scoreBreakdown`（规则分/LLM 分/融合分）。
+- 结构化产物会记录 `githubSelectionMeta`（双查询命中、cooldown 抑制、breakout 放行、最终入选统计）。
 - 结构化产物会记录 `adaptiveDegradeStats`（降载触发/恢复、窗口统计）用于运行诊断。
 
 持久化审核指令（默认目录：`outputs/review-instructions/`）：
@@ -341,6 +370,7 @@ Feishu 主动触发（M4.3）：
   - 查询本期状态
 - 点击按钮后先“受理入队”，任务完成后再群内回执 success/failed。
 - 说明：该入口默认走真实数据采集链路；如需 mock 演练，请使用 CLI 显式加 `--mock`。
+- 进度可观测：每个 `job` 会维护一张“运行进度卡”并持续更新当前节点（默认 milestone 粒度，不刷屏）。
 
 M4.3 运维备忘（防遗漏）：
 - 常驻运行命令：`pnpm run run:daemon`
@@ -482,6 +512,13 @@ DAEMON_SCHEDULER_INTERVAL_MS="30000"
 DAEMON_WORKER_POLL_MS="2000"
 DAEMON_MARKER_ROOT="outputs/daemon/schedule-markers"
 
+# 运维进度通知粒度（M5.6）
+# off | milestone | verbose（默认 milestone）
+OP_PROGRESS_NOTIFY_LEVEL="milestone"
+OP_PROGRESS_CARD_ENABLED="true"
+OP_PROGRESS_NOTIFY_THROTTLE_MS="15000"
+OP_PROGRESS_NOTIFY_MAX_UPDATES="20"
+
 # ReAct 修订 Agent（M5.5）
 REVISION_AGENT_ENABLED="true"
 REVISION_AGENT_MAX_STEPS="20"
@@ -511,9 +548,9 @@ GIT_PUSH_NO_PROXY=""
 
 飞书交互体验（M4.2）：
 - 待审核卡片为单主卡入口，同一 `reportDate + runId` 优先更新原卡，避免重复发卡。
-- 周报卡片按钮按单阶段收敛：仅显示“终稿通过并发布 / 要求修订 / 拒绝本次”。
+- 周报卡片按单阶段收敛：支持“终稿通过并发布 / 提交修订并重跑 / 拒绝本次”，并内置修订表单字段（`revision_request/revision_scope/revision_intent/continue_from_checkpoint`）。
 - 重复点击命中幂等后，仅返回“忽略重复提交，请以最新状态卡为准”反馈，不重复群发动作回执。
-- 系统自动入队的 `recheck` 为内部动作，不再群发“主动触发回执”；群里仅回显人工主动触发任务。
+- 审核动作自动触发的 `recheck` 也可见生命周期进度（`queued/started/progress/success|failed|cancelled`），失败或中断时会下发“修订恢复卡”（编辑后重试/继续执行/直接发布）。
 
 Feishu 联调自动化命令：
 ```bash

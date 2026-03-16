@@ -35,15 +35,33 @@ export async function collectItemsNode(state: ReportState): Promise<Partial<Repo
   });
   const runtimeConfig = (await runtimeConfigStore.getCurrent()).config;
   const sources = applyRuntimeSourceOverrides(await loadSourceConfig(state.sourceConfigPath), runtimeConfig);
+  const githubCooldownDays = resolveGithubMaxCooldownDays(sources);
+  const historyWarnings: string[] = [];
+  const githubHistoryByRepo = await loadGithubSelectionHistory({
+    dbPath: state.storageDbPath,
+    generatedAt: state.generatedAt,
+    cooldownDays: githubCooldownDays,
+  }).catch((error) => {
+    historyWarnings.push(`github_history_read_failed:${error instanceof Error ? error.message : String(error)}`);
+    return new Map<string, string>();
+  });
   // 采集层按来源类型并行抓取，既复用 RSS 链路，也支持 GitHub Search 等 API 适配器。
   const [rssResult, githubResult] = await Promise.all([
     collectRssItems(sources, state.sourceLimit),
-    collectGithubSearchItems(sources, state.sourceLimit),
+    collectGithubSearchItems(sources, state.sourceLimit, {
+      nowIso: state.generatedAt,
+      historyByRepoLastSelectedAt: githubHistoryByRepo,
+    }),
   ]);
   const items = [...rssResult.items, ...githubResult.items];
-  const warnings = [...rssResult.warnings, ...githubResult.warnings];
+  const warnings = [...rssResult.warnings, ...githubResult.warnings, ...historyWarnings];
   const metrics = { ...state.metrics, collectedCount: items.length };
-  return { rawItems: items, metrics, warnings };
+  return {
+    rawItems: items,
+    metrics,
+    warnings,
+    githubSelectionMeta: githubResult.meta,
+  };
 }
 
 export async function normalizeItemsNode(state: ReportState): Promise<Partial<ReportState>> {
@@ -141,6 +159,7 @@ export async function rankItemsNode(state: ReportState): Promise<Partial<ReportS
   });
   // highlights 用于报告顶部“重点推荐”，和“全覆盖正文”区分展示层次。
   const highlights = pickHighlights(fusedRanked, state.mode);
+  const githubSelectedCount = highlights.filter((item) => isGithubTrendingLikeItem(item)).length;
 
   const metrics = {
     ...state.metrics,
@@ -150,7 +169,35 @@ export async function rankItemsNode(state: ReportState): Promise<Partial<ReportS
     categoryBreakdown: buildCategoryBreakdown(fusedRanked),
   };
 
-  return { rankedItems: fusedRanked, highlights, metrics };
+  let githubAuditWarning: string | undefined;
+  try {
+    await appendGithubSelectionAuditEvents({
+      dbPath: state.storageDbPath,
+      runId: state.runId,
+      reportDate: state.reportDate,
+      mode: state.mode,
+      generatedAt: state.generatedAt,
+      highlights,
+    });
+  } catch (error) {
+    // GitHub 审计写入失败不应阻断排序主链路，仅落 warning 供排障。
+    githubAuditWarning = `github_selection_audit_failed:${error instanceof Error ? error.message : String(error)}`;
+  }
+
+  const nextGithubSelectionMeta = state.githubSelectionMeta
+    ? {
+        ...state.githubSelectionMeta,
+        selectedRepoCount: githubSelectedCount,
+      }
+    : undefined;
+
+  return {
+    rankedItems: fusedRanked,
+    highlights,
+    metrics,
+    githubSelectionMeta: nextGithubSelectionMeta,
+    ...(githubAuditWarning ? { warnings: [...state.warnings, githubAuditWarning] } : {}),
+  };
 }
 
 export async function buildOutlineNode(state: ReportState): Promise<Partial<ReportState>> {
@@ -659,6 +706,7 @@ export function createInitialState(params: {
       fallbackCount: 0,
       fallbackTriggered: false,
     },
+    githubSelectionMeta: undefined,
     warnings: [],
   };
 }
@@ -756,6 +804,122 @@ async function appendLlmSummaryAuditEvents(input: {
       source: "pipeline",
       createdAt: new Date().toISOString(),
     });
+  }
+}
+
+async function loadGithubSelectionHistory(input: {
+  dbPath: string;
+  generatedAt: string;
+  cooldownDays: number;
+}): Promise<Map<string, string>> {
+  if (input.cooldownDays <= 0) {
+    return new Map();
+  }
+  const toMs = Date.parse(input.generatedAt);
+  const safeTo = Number.isFinite(toMs) ? toMs : Date.now();
+  const fromIso = new Date(safeTo - input.cooldownDays * 24 * 60 * 60 * 1000).toISOString();
+  const store = new DbAuditStore(new SqliteEngine(input.dbPath));
+  const events = await store.query({
+    eventType: "github_hot_selected",
+    from: fromIso,
+    to: new Date(safeTo).toISOString(),
+    limit: 500,
+  });
+
+  const history = new Map<string, string>();
+  for (const event of events) {
+    const repoFullName = normalizeOptionalText(typeof event.payload.repoFullName === "string" ? event.payload.repoFullName : undefined);
+    if (!repoFullName || history.has(repoFullName)) {
+      continue;
+    }
+    const selectedAt = normalizeOptionalText(typeof event.payload.selectedAt === "string" ? event.payload.selectedAt : undefined);
+    if (!selectedAt) {
+      continue;
+    }
+    history.set(repoFullName, selectedAt);
+  }
+  return history;
+}
+
+async function appendGithubSelectionAuditEvents(input: {
+  dbPath: string;
+  runId: string;
+  reportDate: string;
+  mode: ReportState["mode"];
+  generatedAt: string;
+  highlights: RankedItem[];
+}) {
+  const githubHighlights = input.highlights.filter((item) => isGithubTrendingLikeItem(item));
+  if (githubHighlights.length === 0) {
+    return;
+  }
+  const store = new DbAuditStore(new SqliteEngine(input.dbPath));
+  for (const item of githubHighlights) {
+    const repoFullName = extractGithubRepoFullName(item);
+    if (!repoFullName) {
+      continue;
+    }
+    await store.append({
+      eventType: "github_hot_selected",
+      entityType: "report_run",
+      entityId: input.reportDate,
+      payload: {
+        runId: input.runId,
+        reportDate: input.reportDate,
+        mode: input.mode,
+        selectedAt: input.generatedAt,
+        sourceId: item.sourceId,
+        repoFullName,
+        link: item.link,
+        score: item.score,
+        importance: item.importance,
+      },
+      source: "pipeline",
+      createdAt: new Date().toISOString(),
+    });
+  }
+}
+
+function resolveGithubMaxCooldownDays(sources: SourceConfig[]): number {
+  const githubSources = sources.filter((source): source is Extract<SourceConfig, { type: "github_search" }> => source.type === "github_search");
+  if (githubSources.length === 0) {
+    return 0;
+  }
+  return githubSources.reduce((max, source) => Math.max(max, source.cooldownDays ?? 10), 0);
+}
+
+function isGithubTrendingLikeItem(item: Pick<RankedItem, "sourceId" | "link">): boolean {
+  if (item.sourceId.includes("github")) {
+    return true;
+  }
+  try {
+    const host = new URL(item.link).hostname.toLowerCase();
+    return host === "github.com" || host.endsWith(".github.com");
+  } catch {
+    return false;
+  }
+}
+
+function extractGithubRepoFullName(item: Pick<RankedItem, "title" | "link">): string | undefined {
+  const title = normalizeOptionalText(item.title);
+  if (title) {
+    const [owner, repo, ...rest] = title.split("/");
+    if (owner && repo && rest.length === 0 && !owner.includes(" ") && !repo.includes(" ")) {
+      return `${owner}/${repo}`;
+    }
+  }
+  try {
+    const parsed = new URL(item.link);
+    const [owner, repo] = parsed.pathname
+      .split("/")
+      .filter(Boolean)
+      .slice(0, 2);
+    if (!owner || !repo) {
+      return undefined;
+    }
+    return `${owner}/${repo}`;
+  } catch {
+    return undefined;
   }
 }
 

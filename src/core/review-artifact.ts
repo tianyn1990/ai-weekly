@@ -179,6 +179,29 @@ const llmClassifyScoreMetaSchema = z.object({
     .optional(),
 });
 
+const githubCollectionQueryStatSchema = z.object({
+  sourceId: z.string(),
+  sourceName: z.string(),
+  queryPath: z.enum(["single", "active_window", "new_repo_window"]),
+  query: z.string(),
+  fetchedCount: z.number(),
+  failedReason: z.string().optional(),
+});
+
+const githubSelectionMetaSchema = z.object({
+  sourceCount: z.number(),
+  queryMode: z.enum(["single", "dual", "mixed"]),
+  queryStats: z.array(githubCollectionQueryStatSchema),
+  collectedRepoCount: z.number(),
+  mergedRepoCount: z.number(),
+  historicalRepoCount: z.number(),
+  cooldownDays: z.number(),
+  cooldownSuppressedCount: z.number(),
+  breakoutAllowedCount: z.number(),
+  keptRepoCount: z.number(),
+  selectedRepoCount: z.number(),
+});
+
 export const reviewArtifactSchema = z.object({
   runId: z.string(),
   generatedAt: z.string(),
@@ -206,6 +229,7 @@ export const reviewArtifactSchema = z.object({
   categoryLeadSummaries: z.array(categoryLeadSummarySchema).optional(),
   summaryInputHash: z.string().optional(),
   llmClassifyScoreMeta: llmClassifyScoreMetaSchema.optional(),
+  githubSelectionMeta: githubSelectionMetaSchema.optional(),
   llmSummaryMeta: llmSummaryMetaSchema.optional(),
   highlights: z.array(rankedItemSchema),
   revisionAuditLogs: z
@@ -242,6 +266,7 @@ export const reviewArtifactSchema = z.object({
       categoryLeadSummaries: z.array(categoryLeadSummarySchema).optional(),
       summaryInputHash: z.string().optional(),
       llmClassifyScoreMeta: llmClassifyScoreMetaSchema.optional(),
+      githubSelectionMeta: githubSelectionMetaSchema.optional(),
       llmSummaryMeta: llmSummaryMetaSchema.optional(),
       highlights: z.array(rankedItemSchema),
       metrics: metricsSchema,

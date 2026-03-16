@@ -157,4 +157,55 @@ describe("buildReportMarkdown", () => {
     expect(markdown).toContain("标签：agent / release | 可执行性=3");
     expect(markdown).toContain("证据：[LangGraph 发布编排能力 (LangGraph introduces orchestration)](https://example.com/item)");
   });
+
+  it("GitHub 仓库条目应标注为项目热度动态（Trending-like）", () => {
+    const metrics = createEmptyMetrics();
+    const githubItem: RankedItem = {
+      ...createItem("google-gemini/gemini-cli", "agent"),
+      sourceId: "github-hot-open-source",
+      sourceName: "GitHub 热门开源（AI）",
+      link: "https://github.com/google-gemini/gemini-cli",
+    };
+
+    const markdown = buildReportMarkdown({
+      mode: "daily",
+      timezone: "Asia/Shanghai",
+      generatedAt: "2026-03-11T02:00:00.000Z",
+      quickDigest: [
+        {
+          itemId: githubItem.id,
+          title: githubItem.title,
+          takeaway: "重点摘要",
+          evidenceItemIds: [githubItem.id],
+        },
+      ],
+      itemSummaries: [
+        {
+          itemId: githubItem.id,
+          title: githubItem.title,
+          summary: "摘要",
+          recommendation: "推荐",
+          evidenceItemIds: [githubItem.id],
+        },
+      ],
+      llmSummaryMeta: {
+        enabled: true,
+        inputCount: 1,
+        summarizedCount: 1,
+        fallbackTriggered: false,
+      },
+      highlights: [githubItem],
+      rankedItems: [githubItem],
+      metrics,
+      outlineMarkdown: "",
+      reviewStatus: "not_required",
+      reviewStage: "none",
+      reviewDeadlineAt: null,
+      publishStatus: "published",
+      publishReason: "daily_direct_publish",
+      revisionAuditLogs: [],
+    });
+
+    expect(markdown).toContain("动态类型：项目热度动态（Trending-like）");
+  });
 });

@@ -2,8 +2,8 @@
 
 ## 0. 文档状态
 - 版本：v1.1
-- 状态：M5.5 已实现基线
-- 更新时间：2026-03-10
+- 状态：M5.8 已实现基线
+- 更新时间：2026-03-11
 
 ## 1. 目标与读者
 - 主要读者：前端开发团队、Agent 开发团队。
@@ -82,6 +82,9 @@
 - 主动触发覆盖范围：运维卡需同时提供“生成日报（真实）”与“生成周报（真实）”入口，统一走异步入队与回执流程。
 - 主动触发状态查询：`query_weekly_status` 必须走回调直读路径，不得被 operation 队列阻塞。
 - 主动触发可观测性：执行类动作必须输出阶段通知（queued/started/progress/finished）与失败分类回执。
+- 主动触发节点可见性：`run_daily/run_weekly` 需可观测到 pipeline 关键节点进度（默认 milestone 粒度）。
+- 主动触发降噪策略：节点进度默认通过“单任务进度卡 PATCH 更新”呈现，避免每个节点单独发群消息。
+- 主动触发进度配置：支持 `off/milestone/verbose` 三档通知粒度与节流/上限参数，便于在稳定性与可见性间切换。
 - 主动触发止损能力：运维卡需提供“中止本次运行”入口，支持对 running/pending 任务发起 cancel。
 - 运行冲突控制：当同类触发已在运行中时，需发送“冲突控制通知”，支持“中止当前任务 / 中止并重新开始”；至少覆盖日报与周报生成动作。
 - 中止时效要求：当任务处于长执行步骤时，系统需支持“硬中止当前步骤”并快速回执，不得长时间停留在“中止处理中”。
@@ -97,7 +100,11 @@
   - 分类/排序权重调整
 - 打回策略：支持将周报从终稿审核打回到修订阶段，修订后再次进入审核。
 - 修订输入策略：`request_revision` 支持自由文本主输入，并支持可选字段（修订范围、修订意图、checkpoint 续跑）。
+- 修订入口形态：终稿审核主卡需内置修订表单，至少包含 `revision_request`（必填）与 `revision_scope/revision_intent/continue_from_checkpoint`（可选）。
 - 修订执行策略：采用受限 ReAct（Planner + Tool Executor），禁止整文自由改写，确保可审计。
+- 自动修订可见性：飞书回调自动触发的 `recheck_weekly` 必须回显 `queued/started/progress/success|failed|cancelled` 生命周期。
+- 修订失败恢复：修订失败或中断时，飞书需提供恢复入口（编辑后重试 / 继续执行 checkpoint / 直接通过并发布）。
+- 自动修订超时护栏：自动 `recheck_weekly` 需要 wall-clock timeout 防止长时间 running（默认 10 分钟，可配置）。
 
 ### 7.1 审核动作字典（M3.2 必须）
 - `approve_outline`：历史兼容动作，仅返回提示，不再作为新流程审核门。
@@ -140,6 +147,7 @@
 - M5.2 中文质量策略：摘要/重点若检测为非中文，优先触发重试与中文修复；修复失败时保留英文原文（不强制模板中文）。
 - M5.3 稳定性策略：当短窗口 `missing_content` 异常聚集时，自动降载并优先重试失败条目；窗口恢复后自动恢复并发。
 - M5.4 数据源策略：支持 `rss + github_search` 混合采集；GitHub 限流/鉴权失败走 warning 回退，不阻断主流程。
+- M5.8 GitHub 热度策略：`github_search` 默认采用双查询（活跃窗口 + 新仓窗口）与跨天 cooldown，减少老项目重复曝光；保留 breakout 机制放行高强度新动态。
 - LLM 失败策略：必须回退到规则摘要，不得阻断审核/发布。
 
 ## 10. 学习交付要求
@@ -165,6 +173,7 @@
 - M5.3：自适应降载与运行诊断 + 分类导读（LLM + 模板回退）【已完成】。
 - M5.4：GitHub Search 一手开源采集 + 精选 RSS 扩展 + 诊断增强【已完成】。
 - M5.5：单阶段终稿审核 + ReAct 修订回路（自由文本、checkpoint 续跑、失败分型）【已完成】。
+- M5.8：GitHub AI 数据源新鲜度优化（dual-query + cooldown + Trending-like 语义 + 诊断增强）【已完成】。
 - M6：月报/季报/年报聚合与趋势分析。
 
 ## 12. 可测试验收清单（新增）
@@ -225,6 +234,13 @@
 - [ ] `data/sources.yaml` 支持 `rss + github_search` 混合配置，且旧版 RSS-only 配置继续可用。
 - [ ] 默认来源新增 InfoQ AI/ML 与 Google AI Blog 后，`source:diagnose` 可识别其健康状态。
 
+### 12.13 M5.8（GitHub 新鲜度与 Trending-like 语义）验收
+- [ ] `github_search` 支持 dual-query（`active_window` + `new_repo_window`）并集采集。
+- [ ] 支持跨天 cooldown，命中后默认抑制同仓库重复入选。
+- [ ] 支持 breakout 放行高强度动态（参数可配置），并记录放行次数。
+- [ ] 报告中 GitHub 仓库条目标注“项目热度动态（Trending-like）”，避免与新闻首发语义混淆。
+- [ ] 结构化产物包含 `githubSelectionMeta`，可追踪采集命中、过滤与入选统计。
+
 ### 12.5 M4.1（飞书协同增强）验收
 - [ ] 默认通道为 app-only，仅配置 `FEISHU_APP_ID/FEISHU_APP_SECRET/REVIEW_CHAT_ID` 即可完成待审核/提醒/发布回执。
 - [ ] 飞书卡片点击后，用户可立即看到 success/error 反馈（toast）。
@@ -261,6 +277,9 @@
 ### 12.13 M5.5（单阶段审核 + ReAct 修订）验收
 - [ ] weekly 新 run 默认进入 `final_review`，不再进入新的 `outline_review` 阶段。
 - [ ] `request_revision` 支持自由文本意见，且支持 `revision_scope/revision_intent` 可选字段。
+- [ ] 终稿审核主卡内置修订表单，`revision_request` 缺失时回调层拒绝受理（400）。
 - [ ] ReAct 修订节点受护栏约束：`REVISION_AGENT_MAX_STEPS`、`REVISION_AGENT_MAX_WALL_CLOCK_MS`、`REVISION_AGENT_MAX_LLM_CALLS`、`REVISION_AGENT_MAX_TOOL_ERRORS`。
 - [ ] 修订中断后可通过 `continue_from_checkpoint=true` 续跑未完成任务，已完成任务不重复执行。
 - [ ] 修订失败时返回结构化失败原因与后续建议（编辑后重试 / 继续执行 / 直接发布）。
+- [ ] 飞书回调自动触发的 `recheck_weekly` 可见生命周期进度，并在失败/中断时下发修订恢复卡。
+- [ ] 自动 `recheck_weekly` 超时后以 `subprocess_timeout` 分类终止并回执。

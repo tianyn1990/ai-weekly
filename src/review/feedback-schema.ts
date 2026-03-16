@@ -86,6 +86,8 @@ export const reviewFeedbackPayloadSchema: z.ZodType<ReviewFeedbackPayload> = z
         (value.sourceWeightAdjustments && value.sourceWeightAdjustments.length > 0) ||
         (value.rankingWeightAdjustments && value.rankingWeightAdjustments.length > 0) ||
         value.revisionRequest ||
+        // 允许“仅继续执行 checkpoint”的恢复路径，不强制再次填写 revisionRequest。
+        value.continueFromCheckpoint === true ||
         value.editorNotes,
     );
     if (!hasDirective) {
@@ -182,15 +184,47 @@ function readStringArray(input: Record<string, unknown>, camelKey: string, snake
 }
 
 function readString(input: Record<string, unknown>, key: string): string | undefined {
-  const value = input[key];
+  const value = normalizeFeishuFormScalar(input[key]);
   return typeof value === "string" && value.length > 0 ? value : undefined;
 }
 
 function readBoolean(input: Record<string, unknown>, camelKey: string, snakeKey: string): boolean | undefined {
-  const value = input[camelKey] ?? input[snakeKey];
-  return typeof value === "boolean" ? value : undefined;
+  const value = normalizeFeishuFormScalar(input[camelKey] ?? input[snakeKey]);
+  if (typeof value === "boolean") {
+    return value;
+  }
+  if (typeof value === "string") {
+    if (value === "true" || value === "1") {
+      return true;
+    }
+    if (value === "false" || value === "0") {
+      return false;
+    }
+  }
+  return undefined;
 }
 
 function isRecord(input: unknown): input is Record<string, unknown> {
   return typeof input === "object" && input !== null;
+}
+
+/**
+ * 飞书表单回调里，字段值可能是 string/boolean，也可能是对象或单元素数组。
+ * 这里统一做“尽力还原”为标量，降低回调适配复杂度并保持 schema 校验边界清晰。
+ */
+function normalizeFeishuFormScalar(input: unknown): unknown {
+  if (Array.isArray(input)) {
+    if (input.length === 0) {
+      return undefined;
+    }
+    return normalizeFeishuFormScalar(input[0]);
+  }
+  if (!isRecord(input)) {
+    return input;
+  }
+  const candidate = input.value ?? input.key ?? input.text ?? input.label ?? input.name;
+  if (candidate === undefined) {
+    return undefined;
+  }
+  return normalizeFeishuFormScalar(candidate);
 }

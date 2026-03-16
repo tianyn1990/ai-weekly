@@ -1,6 +1,7 @@
 export type ReportMode = "daily" | "weekly";
 
 export type SourceType = "rss" | "github_search";
+export type GithubQueryMode = "single" | "dual";
 
 export type ItemCategory =
   | "open-source"
@@ -270,6 +271,12 @@ export interface GithubSearchSourceConfig extends BaseSourceConfig {
   sort?: "stars" | "forks" | "updated";
   order?: "asc" | "desc";
   perPage?: number;
+  queryMode?: GithubQueryMode;
+  activeWindowDays?: number;
+  newRepoWindowDays?: number;
+  cooldownDays?: number;
+  breakoutMinStars?: number;
+  breakoutRecentHours?: number;
 }
 
 export type SourceConfig = RssSourceConfig | GithubSearchSourceConfig;
@@ -311,6 +318,29 @@ export interface RankedItem extends NormalizedItem {
   confidence?: number;
   llmScore?: number;
   scoreBreakdown?: ScoreBreakdown;
+}
+
+export interface GithubCollectionQueryStat {
+  sourceId: string;
+  sourceName: string;
+  queryPath: "single" | "active_window" | "new_repo_window";
+  query: string;
+  fetchedCount: number;
+  failedReason?: string;
+}
+
+export interface GithubSelectionMeta {
+  sourceCount: number;
+  queryMode: "single" | "dual" | "mixed";
+  queryStats: GithubCollectionQueryStat[];
+  collectedRepoCount: number;
+  mergedRepoCount: number;
+  historicalRepoCount: number;
+  cooldownDays: number;
+  cooldownSuppressedCount: number;
+  breakoutAllowedCount: number;
+  keptRepoCount: number;
+  selectedRepoCount: number;
 }
 
 export interface PipelineMetrics {
@@ -390,5 +420,6 @@ export interface ReportState {
   revisionAgentMaxToolErrors: number;
   revisionAgentPlannerTimeoutMs: number;
   llmClassifyScoreMeta: LlmClassifyScoreMeta;
+  githubSelectionMeta?: GithubSelectionMeta;
   warnings: string[];
 }

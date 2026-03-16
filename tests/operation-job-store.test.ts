@@ -216,6 +216,65 @@ describe("DbOperationJobStore", () => {
     }
   });
 
+  it("应支持按指定 jobId 精确中止（running -> 请求/强制中止）", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-opjob-"));
+    const dbPath = path.join(tempDir, "app.sqlite");
+    try {
+      const store = new DbOperationJobStore(new SqliteEngine(dbPath));
+      const first = await store.enqueue({
+        jobType: "run_weekly",
+        payload: { reportDate: "2026-03-11" },
+        dedupeKey: "manual_op:run_weekly:2026-03-11",
+      });
+      const second = await store.enqueue({
+        jobType: "run_daily",
+        payload: { reportDate: "2026-03-11" },
+        dedupeKey: "manual_op:run_daily:2026-03-11",
+      });
+      const picked = await store.pickNextPending();
+      expect(picked?.id).toBe(first.jobId);
+
+      const cancelById = await store.requestCancelByJobId({
+        jobId: first.jobId,
+        operator: "ou_test",
+      });
+      expect(cancelById.found).toBe(true);
+      expect(cancelById.status).toBe("running");
+      expect(cancelById.jobId).toBe(first.jobId);
+      expect(cancelById.reportDate).toBe("2026-03-11");
+
+      const forceCancelById = await store.requestCancelByJobId({
+        jobId: first.jobId,
+        operator: "ou_test",
+      });
+      expect(forceCancelById.found).toBe(true);
+      expect(forceCancelById.status).toBe("cancelled");
+      expect(forceCancelById.alreadyRequested).toBe(true);
+
+      const afterFirst = await store.getById(first.jobId);
+      expect(afterFirst?.status).toBe("cancelled");
+      const untouchedSecond = await store.getById(second.jobId);
+      expect(untouchedSecond?.status).toBe("pending");
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it("按不存在 jobId 中止应返回 found=false", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-opjob-"));
+    const dbPath = path.join(tempDir, "app.sqlite");
+    try {
+      const store = new DbOperationJobStore(new SqliteEngine(dbPath));
+      const result = await store.requestCancelByJobId({
+        jobId: 99999,
+        operator: "ou_test",
+      });
+      expect(result.found).toBe(false);
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+
   it("listActive 仅返回 pending/running 任务", async () => {
     const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-opjob-"));
     const dbPath = path.join(tempDir, "app.sqlite");
@@ -236,6 +295,68 @@ describe("DbOperationJobStore", () => {
       const active = await store.listActive(20);
       expect(active.some((item) => item.id === a.jobId && item.status === "running")).toBe(true);
       expect(active.some((item) => item.id === b.jobId)).toBe(false);
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it("应记录并回读运行态进度快照（用于 query_status 直读）", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-opjob-"));
+    const dbPath = path.join(tempDir, "app.sqlite");
+    try {
+      const store = new DbOperationJobStore(new SqliteEngine(dbPath));
+      const created = await store.enqueue({
+        jobType: "run_weekly",
+        payload: { reportDate: "2026-03-11" },
+        dedupeKey: "manual_op:run_weekly:2026-03-11",
+      });
+      await store.pickNextPending();
+
+      const changed = await store.updateRuntimeProgress(created.jobId, {
+        phase: "pipeline",
+        stage: "llm_summarize",
+        nodeKey: "llm_summarize",
+        nodeState: "end",
+        detail: "完成节点 llm_summarize",
+        updatedAt: "2026-03-11T03:00:00.000Z",
+        elapsedMs: 4200,
+        ok: true,
+      });
+      expect(changed).toBe(true);
+
+      const loaded = await store.getById(created.jobId);
+      expect(loaded?.runtimeProgress).toMatchObject({
+        phase: "pipeline",
+        stage: "llm_summarize",
+        nodeKey: "llm_summarize",
+        nodeState: "end",
+      });
+      expect(loaded?.runtimeProgressEventCount).toBe(1);
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it("findRecentByDedupeKey 应返回窗口内最近任务", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-opjob-"));
+    const dbPath = path.join(tempDir, "app.sqlite");
+    try {
+      const store = new DbOperationJobStore(new SqliteEngine(dbPath));
+      await store.enqueue({
+        jobType: "run_weekly",
+        payload: { reportDate: "2026-03-11" },
+        dedupeKey: "manual_restart:run_weekly:2026-03-11",
+      });
+      const second = await store.enqueue({
+        jobType: "run_weekly",
+        payload: { reportDate: "2026-03-11" },
+        dedupeKey: "manual_restart:run_weekly:2026-03-11:alt",
+      });
+
+      const recent = await store.findRecentByDedupeKey("manual_restart:run_weekly:2026-03-11");
+      expect(recent?.jobType).toBe("run_weekly");
+      expect(recent?.payload.reportDate).toBe("2026-03-11");
+      expect(recent?.id).not.toBe(second.jobId);
     } finally {
       await fs.rm(tempDir, { recursive: true, force: true });
     }

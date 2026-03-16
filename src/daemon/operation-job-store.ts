@@ -1,9 +1,28 @@
 import { z } from "zod";
 
 import { SqliteEngine } from "../storage/sqlite-engine.js";
-import type { EnqueueOperationJobInput, OperationJob, OperationJobStatus, OperationJobType } from "./types.js";
+import type {
+  EnqueueOperationJobInput,
+  OperationJob,
+  OperationJobStatus,
+  OperationJobType,
+  OperationRuntimeProgress,
+} from "./types.js";
 
 const OPERATION_DEDUPE_COOLDOWN_SECONDS = 120;
+const RUNTIME_PROGRESS_KEY = "__runtimeProgress";
+const RUNTIME_PROGRESS_EVENT_COUNT_KEY = "__runtimeProgressEventCount";
+
+const operationRuntimeProgressSchema = z.object({
+  phase: z.enum(["operation", "pipeline"]),
+  stage: z.string().min(1),
+  detail: z.string(),
+  updatedAt: z.string().datetime(),
+  elapsedMs: z.number().nonnegative().optional(),
+  nodeKey: z.string().optional(),
+  nodeState: z.enum(["start", "end"]).optional(),
+  ok: z.boolean().optional(),
+});
 
 const operationJobRowSchema = z.object({
   id: z.number(),
@@ -206,20 +225,61 @@ export class DbOperationJobStore {
     });
   }
 
+  async updateRuntimeProgress(jobId: number, progress: OperationRuntimeProgress): Promise<boolean> {
+    const now = new Date().toISOString();
+    return this.engine.write((ctx) => {
+      const row = ctx.queryOne<{ status: string; payload_json: string }>(
+        "SELECT status, payload_json FROM operation_jobs WHERE id = $id LIMIT 1;",
+        { $id: jobId },
+      );
+      if (!row) {
+        return false;
+      }
+      if (row.status !== "running" && row.status !== "pending") {
+        return false;
+      }
+
+      const payload = parsePayloadJson(row.payload_json);
+      const currentCount =
+        typeof payload[RUNTIME_PROGRESS_EVENT_COUNT_KEY] === "number" &&
+        Number.isFinite(payload[RUNTIME_PROGRESS_EVENT_COUNT_KEY])
+          ? Number(payload[RUNTIME_PROGRESS_EVENT_COUNT_KEY])
+          : 0;
+      // 运行态进度落在 payload_json 内，避免引入额外 migration 成本且保持旧数据兼容。
+      payload[RUNTIME_PROGRESS_KEY] = progress;
+      payload[RUNTIME_PROGRESS_EVENT_COUNT_KEY] = currentCount + 1;
+
+      ctx.run(
+        `
+        UPDATE operation_jobs
+        SET payload_json = $payloadJson, updated_at = $now
+        WHERE id = $id;
+        `,
+        {
+          $id: jobId,
+          $payloadJson: JSON.stringify(payload),
+          $now: now,
+        },
+      );
+      return true;
+    });
+  }
+
   async requestCancelCurrent(input: { operator?: string; reason?: string }): Promise<{
     found: boolean;
     jobId?: number;
     jobType?: OperationJobType;
     status?: OperationJobStatus;
     alreadyRequested?: boolean;
+    reportDate?: string;
   }> {
     const now = new Date().toISOString();
     const reason = formatCancelReason(input);
     return this.engine.write((ctx) => {
       // 先取 running，再回退 pending，保证“中止本次运行”优先作用于正在执行的任务。
-      const target = ctx.queryOne<{ id: number; job_type: string; status: string; last_error: string | null }>(
+      const target = ctx.queryOne<{ id: number; job_type: string; status: string; last_error: string | null; payload_json: string }>(
         `
-        SELECT id, job_type, status, last_error
+        SELECT id, job_type, status, last_error, payload_json
         FROM operation_jobs
         WHERE status IN ('running', 'pending')
         ORDER BY CASE WHEN status = 'running' THEN 0 ELSE 1 END ASC, created_at ASC, id ASC
@@ -229,6 +289,9 @@ export class DbOperationJobStore {
       if (!target?.id) {
         return { found: false };
       }
+
+      const targetPayload = parsePayloadJson(target.payload_json);
+      const reportDate = getPayloadReportDate(targetPayload);
 
       if (target.status === "pending") {
         ctx.run(
@@ -244,6 +307,7 @@ export class DbOperationJobStore {
           jobId: target.id,
           jobType: target.job_type as OperationJobType,
           status: "cancelled",
+          reportDate,
         };
       }
 
@@ -273,6 +337,7 @@ export class DbOperationJobStore {
           jobType: target.job_type as OperationJobType,
           status: "cancelled",
           alreadyRequested: true,
+          reportDate,
         };
       }
       return {
@@ -281,6 +346,104 @@ export class DbOperationJobStore {
         jobType: target.job_type as OperationJobType,
         status: "running",
         alreadyRequested,
+        reportDate,
+      };
+    });
+  }
+
+  async requestCancelByJobId(input: {
+    jobId: number;
+    operator?: string;
+    reason?: string;
+  }): Promise<{
+    found: boolean;
+    jobId?: number;
+    jobType?: OperationJobType;
+    status?: OperationJobStatus;
+    alreadyRequested?: boolean;
+    reportDate?: string;
+  }> {
+    const now = new Date().toISOString();
+    const reason = formatCancelReason(input);
+    return this.engine.write((ctx) => {
+      const target = ctx.queryOne<{ id: number; job_type: string; status: string; last_error: string | null; payload_json: string }>(
+        `
+        SELECT id, job_type, status, last_error, payload_json
+        FROM operation_jobs
+        WHERE id = $id
+        LIMIT 1;
+        `,
+        { $id: input.jobId },
+      );
+      if (!target) {
+        return { found: false };
+      }
+      const targetPayload = parsePayloadJson(target.payload_json);
+      const reportDate = getPayloadReportDate(targetPayload);
+
+      if (target.status === "pending") {
+        ctx.run(
+          `
+          UPDATE operation_jobs
+          SET status = 'cancelled', dedupe_key = NULL, last_error = $reason, finished_at = $now, updated_at = $now
+          WHERE id = $id AND status = 'pending';
+          `,
+          { $id: target.id, $reason: reason, $now: now },
+        );
+        return {
+          found: true,
+          jobId: target.id,
+          jobType: target.job_type as OperationJobType,
+          status: "cancelled",
+          reportDate,
+        };
+      }
+
+      if (target.status === "running") {
+        const alreadyRequested = isCancelRequestedMessage(target.last_error ?? undefined);
+        if (!alreadyRequested) {
+          ctx.run(
+            `
+            UPDATE operation_jobs
+            SET dedupe_key = NULL, last_error = $reason, updated_at = $now
+            WHERE id = $id AND status = 'running';
+            `,
+            { $id: target.id, $reason: reason, $now: now },
+          );
+          return {
+            found: true,
+            jobId: target.id,
+            jobType: target.job_type as OperationJobType,
+            status: "running",
+            alreadyRequested,
+            reportDate,
+          };
+        }
+        ctx.run(
+          `
+          UPDATE operation_jobs
+          SET status = 'cancelled', dedupe_key = NULL, finished_at = $now, updated_at = $now
+          WHERE id = $id AND status = 'running';
+          `,
+          { $id: target.id, $now: now },
+        );
+        return {
+          found: true,
+          jobId: target.id,
+          jobType: target.job_type as OperationJobType,
+          status: "cancelled",
+          alreadyRequested: true,
+          reportDate,
+        };
+      }
+
+      return {
+        found: true,
+        jobId: target.id,
+        jobType: target.job_type as OperationJobType,
+        status: target.status as OperationJobStatus,
+        alreadyRequested: true,
+        reportDate,
       };
     });
   }
@@ -352,6 +515,31 @@ export class DbOperationJobStore {
       return rows.map((row) => toOperationJob(operationJobRowSchema.parse(row)));
     });
   }
+
+  async findRecentByDedupeKey(dedupeKey: string): Promise<OperationJob | null> {
+    const dedupeCreatedAfter = new Date(Date.now() - OPERATION_DEDUPE_COOLDOWN_SECONDS * 1000).toISOString();
+    return this.engine.read((ctx) => {
+      const row = ctx.queryOne<Record<string, unknown>>(
+        `
+        SELECT id, job_type, status, payload_json, dedupe_key, created_by, source, trace_id,
+               retry_count, max_retries, last_error, started_at, finished_at, created_at, updated_at
+        FROM operation_jobs
+        WHERE dedupe_key = $dedupeKey
+          AND created_at >= $dedupeCreatedAfter
+        ORDER BY created_at DESC, id DESC
+        LIMIT 1;
+        `,
+        {
+          $dedupeKey: dedupeKey,
+          $dedupeCreatedAfter: dedupeCreatedAfter,
+        },
+      );
+      if (!row) {
+        return null;
+      }
+      return toOperationJob(operationJobRowSchema.parse(row));
+    });
+  }
 }
 
 function formatCancelReason(input: { operator?: string; reason?: string }) {
@@ -365,11 +553,14 @@ function isCancelRequestedMessage(message: string | undefined): boolean {
 }
 
 function toOperationJob(row: z.infer<typeof operationJobRowSchema>): OperationJob {
+  const payload = parsePayloadJson(row.payload_json);
+  const runtimeProgress = parseRuntimeProgress(payload[RUNTIME_PROGRESS_KEY]);
+  const runtimeProgressEventCount = parseRuntimeProgressEventCount(payload[RUNTIME_PROGRESS_EVENT_COUNT_KEY]);
   return {
     id: row.id,
     jobType: row.job_type as OperationJobType,
     status: row.status as OperationJobStatus,
-    payload: JSON.parse(row.payload_json) as Record<string, unknown>,
+    payload,
     dedupeKey: row.dedupe_key ?? undefined,
     createdBy: row.created_by ?? undefined,
     source: row.source ?? undefined,
@@ -381,5 +572,46 @@ function toOperationJob(row: z.infer<typeof operationJobRowSchema>): OperationJo
     finishedAt: row.finished_at ?? undefined,
     createdAt: row.created_at,
     updatedAt: row.updated_at,
+    runtimeProgress,
+    runtimeProgressEventCount,
   };
+}
+
+function parsePayloadJson(input: string): Record<string, unknown> {
+  try {
+    const parsed = JSON.parse(input) as unknown;
+    if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
+      return parsed as Record<string, unknown>;
+    }
+    return {};
+  } catch {
+    return {};
+  }
+}
+
+function getPayloadReportDate(payload: Record<string, unknown>): string | undefined {
+  const raw = payload.reportDate;
+  if (typeof raw !== "string") {
+    return undefined;
+  }
+  return /^\d{4}-\d{2}-\d{2}$/.test(raw) ? raw : undefined;
+}
+
+function parseRuntimeProgress(input: unknown): OperationRuntimeProgress | undefined {
+  if (!input || typeof input !== "object" || Array.isArray(input)) {
+    return undefined;
+  }
+  const parsed = operationRuntimeProgressSchema.safeParse(input);
+  if (!parsed.success) {
+    return undefined;
+  }
+  return parsed.data;
+}
+
+function parseRuntimeProgressEventCount(input: unknown): number | undefined {
+  if (typeof input !== "number" || !Number.isFinite(input)) {
+    return undefined;
+  }
+  const rounded = Math.floor(input);
+  return rounded >= 0 ? rounded : undefined;
 }

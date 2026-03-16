@@ -239,6 +239,117 @@ describe("FeishuNotifier", () => {
     const actions = card.elements.find((item) => item.tag === "action")?.actions ?? [];
     expect(actions[0]?.value?.operation).toBe("cancel_current_operation");
     expect(actions[1]?.value?.operation).toBe("cancel_and_retry_operation");
+    expect(actions[0]?.value?.targetJobId).toBe(77);
+    expect(actions[1]?.value?.targetJobId).toBe(77);
+    await fs.rm(tempDir, { recursive: true, force: true });
+  });
+
+  it("应支持单任务进度卡 upsert（首次发送 + 后续更新）", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-notifier-"));
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, tenant_access_token: "tenant_token", expire: 7200 }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, data: { message_id: "om_progress_1" } }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0 }), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const notifier = new FeishuNotifier({
+      appId: "cli_xxx",
+      appSecret: "secret_xxx",
+      reviewChatId: "oc_xxx",
+      notificationRoot: tempDir,
+    });
+
+    const first = await notifier.upsertOperationProgressCard({
+      jobId: 101,
+      operation: "run_weekly",
+      reportDate: "2026-03-11",
+      lifecycle: "queued",
+      detail: "任务已受理并进入队列。",
+      stage: "queued",
+      phase: "operation",
+    });
+    expect(first).toBe(true);
+
+    const second = await notifier.upsertOperationProgressCard({
+      jobId: 101,
+      operation: "run_weekly",
+      reportDate: "2026-03-11",
+      lifecycle: "progress",
+      detail: "完成节点 llm_summarize",
+      phase: "pipeline",
+      stage: "llm_summarize",
+      nodeKey: "llm_summarize",
+      nodeState: "end",
+      elapsedMs: 3200,
+    });
+    expect(second).toBe(true);
+
+    // 预期调用顺序：取 token -> 发新卡 -> PATCH 更新同一张卡（token 走缓存）。
+    expect(fetchMock).toHaveBeenCalledTimes(3);
+    expect(String(fetchMock.mock.calls[1]?.[0])).toContain("/im/v1/messages");
+    expect(String(fetchMock.mock.calls[2]?.[0])).toContain("/im/v1/messages/om_progress_1");
+    await fs.rm(tempDir, { recursive: true, force: true });
+  });
+
+  it("进度卡应包含查询与中止操作按钮", async () => {
+    const card = __test__.buildOperationProgressCard({
+      jobId: 9,
+      operation: "run_daily",
+      reportDate: "2026-03-11",
+      lifecycle: "progress",
+      detail: "完成节点 build_report",
+      phase: "pipeline",
+      stage: "build_report",
+      nodeKey: "build_report",
+      nodeState: "end",
+      elapsedMs: 1200,
+    });
+    const actions = (card.elements.find((item) => item.tag === "action") as { actions: Array<{ value?: Record<string, unknown> }> } | undefined)
+      ?.actions ?? [];
+    expect(actions.map((item) => item.value?.operation)).toEqual(["query_weekly_status", "cancel_current_operation"]);
+    expect(actions[1]?.value?.targetJobId).toBe(9);
+  });
+
+  it("进度卡应忽略乱序回退更新（progress 后的 queued 不覆盖）", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-notifier-"));
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, tenant_access_token: "tenant_token", expire: 7200 }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0, data: { message_id: "om_progress_guard" } }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ code: 0 }), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const notifier = new FeishuNotifier({
+      appId: "cli_xxx",
+      appSecret: "secret_xxx",
+      reviewChatId: "oc_xxx",
+      notificationRoot: tempDir,
+    });
+
+    await notifier.upsertOperationProgressCard({
+      jobId: 201,
+      operation: "run_weekly",
+      reportDate: "2026-03-11",
+      lifecycle: "progress",
+      detail: "完成节点 collect_items",
+      phase: "pipeline",
+      stage: "collect_items",
+      nodeKey: "collect_items",
+      nodeState: "end",
+    });
+    await notifier.upsertOperationProgressCard({
+      jobId: 201,
+      operation: "run_weekly",
+      reportDate: "2026-03-11",
+      lifecycle: "queued",
+      detail: "任务已受理并进入队列。",
+      phase: "operation",
+      stage: "queued",
+    });
+
+    // 第二次 queued 为低序位事件，应被吞掉，不应再触发 PATCH。
+    expect(fetchMock).toHaveBeenCalledTimes(2);
     await fs.rm(tempDir, { recursive: true, force: true });
   });
 
@@ -300,9 +411,20 @@ describe("FeishuNotifier", () => {
       reviewMarkdownPath: "outputs/review/weekly/2026-03-09.md",
     });
     const outlineBody = JSON.parse(String(fetchMock.mock.calls[1]?.[1]?.body));
-    const outlineCard = JSON.parse(outlineBody.content) as { elements: Array<{ tag: string; actions?: Array<{ value?: { action?: string } }> }> };
+    const outlineCard = JSON.parse(outlineBody.content) as {
+      elements: Array<{
+        tag: string;
+        actions?: Array<{ value?: { action?: string }; action_type?: string }>;
+        elements?: Array<{ tag?: string; action_type?: string; value?: Record<string, unknown> }>;
+      }>;
+    };
     const outlineActions = outlineCard.elements.find((item) => item.tag === "action")?.actions ?? [];
-    expect(outlineActions.map((item) => item.value?.action)).toEqual(["approve_final", "request_revision", "reject"]);
+    expect(outlineActions.map((item) => item.value?.action)).toEqual(["approve_final", "reject"]);
+    const outlineForm = outlineCard.elements.find((item) => item.tag === "form");
+    expect(outlineForm).toBeTruthy();
+    const outlineSubmit = outlineForm?.elements?.find((item) => item.tag === "button");
+    expect(outlineSubmit?.action_type).toBe("form_submit");
+    expect(outlineSubmit?.value?.action).toBe("request_revision");
 
     await notifier.notifyReviewPending({
       runId: "weekly-run-2",
@@ -312,9 +434,20 @@ describe("FeishuNotifier", () => {
       reviewMarkdownPath: "outputs/review/weekly/2026-03-09.md",
     });
     const finalBody = JSON.parse(String(fetchMock.mock.calls[2]?.[1]?.body));
-    const finalCard = JSON.parse(finalBody.content) as { elements: Array<{ tag: string; actions?: Array<{ value?: { action?: string } }> }> };
+    const finalCard = JSON.parse(finalBody.content) as {
+      elements: Array<{
+        tag: string;
+        actions?: Array<{ value?: { action?: string } }>;
+        elements?: Array<{ tag?: string; action_type?: string; value?: Record<string, unknown> }>;
+      }>;
+    };
     const finalActions = finalCard.elements.find((item) => item.tag === "action")?.actions ?? [];
-    expect(finalActions.map((item) => item.value?.action)).toEqual(["approve_final", "request_revision", "reject"]);
+    expect(finalActions.map((item) => item.value?.action)).toEqual(["approve_final", "reject"]);
+    const finalForm = finalCard.elements.find((item) => item.tag === "form");
+    expect(finalForm).toBeTruthy();
+    const finalSubmit = finalForm?.elements?.find((item) => item.tag === "button");
+    expect(finalSubmit?.action_type).toBe("form_submit");
+    expect(finalSubmit?.value?.action).toBe("request_revision");
 
     await fs.rm(tempDir, { recursive: true, force: true });
   });
@@ -504,6 +637,41 @@ describe("Feishu callback server", () => {
         expect(response.status).toBe(401);
         const payload = await response.json();
         expect(payload.toast?.type).toBe("error");
+      } finally {
+        await server.close();
+      }
+    } finally {
+      await fs.rm(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it("request_revision 缺少 reason 与 feedback 时应返回 400", async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ai-weekly-feishu-"));
+    try {
+      const store = new FileReviewInstructionStore(tempDir);
+      const server = await startFeishuReviewCallbackServer({
+        host: "127.0.0.1",
+        port: 0,
+        path: "/feishu/review-callback",
+        authToken: "token-123",
+        store,
+      });
+
+      try {
+        const response = await fetch(`http://127.0.0.1:${server.port}/feishu/review-callback?token=token-123`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            mode: "weekly",
+            reportDate: "2026-03-09",
+            action: "request_revision",
+          }),
+        });
+        expect(response.status).toBe(400);
+        const payload = await response.json();
+        expect(String(payload.error)).toContain("invalid_request_revision_feedback");
       } finally {
         await server.close();
       }
@@ -1263,6 +1431,46 @@ describe("Feishu callback payload adapter", () => {
     expect(parsed.payload.reason).toBe("补充来源");
   });
 
+  it("应合并 action.value 与 form_value，保留动作元数据并消费修订表单字段", () => {
+    const parsed = __test__.parseCallbackBody(
+      JSON.stringify({
+        event: {
+          operator_id: {
+            open_id: "ou_test",
+          },
+          action: {
+            value: {
+              action: "request_revision",
+              reportDate: "2026-03-10",
+              reason: "终稿需调整",
+            },
+            form_value: {
+              revision_request: "请补充两条开源资讯，并修正重点推荐顺序",
+              revision_scope: "item",
+              revision_intent: "content_update",
+              continue_from_checkpoint: "true",
+            },
+          },
+        },
+      }),
+    );
+
+    if ("challenge" in parsed) {
+      throw new Error("unexpected challenge");
+    }
+    expect(parsed.kind).toBe("review_action");
+    if (parsed.kind !== "review_action") {
+      throw new Error("unexpected kind");
+    }
+    expect(parsed.payload.reason).toBe("终稿需调整");
+    expect(parsed.payload.feedback).toMatchObject({
+      revisionRequest: "请补充两条开源资讯，并修正重点推荐顺序",
+      revisionScope: "item",
+      revisionIntent: "content_update",
+      continueFromCheckpoint: true,
+    });
+  });
+
   it("应解析 mention 事件并输出 mention_event", () => {
     const parsed = __test__.parseCallbackBody(
       JSON.stringify({
@@ -1291,6 +1499,34 @@ describe("Feishu callback payload adapter", () => {
       throw new Error("unexpected challenge");
     }
     expect(parsed.kind).toBe("mention_event");
+  });
+
+  it("当 operator 字段缺失时应从 sender.sender_id 回退提取操作者", () => {
+    const parsed = __test__.parseCallbackBody(
+      JSON.stringify({
+        event: {
+          sender: {
+            sender_id: {
+              open_id: "ou_sender_001",
+            },
+          },
+          action: {
+            value: {
+              operation: "query_weekly_status",
+              reportDate: "2026-03-11",
+            },
+          },
+        },
+      }),
+    );
+    if ("challenge" in parsed) {
+      throw new Error("unexpected challenge");
+    }
+    expect(parsed.kind).toBe("operation_action");
+    if (parsed.kind !== "operation_action") {
+      throw new Error("unexpected kind");
+    }
+    expect(parsed.payload.operator).toBe("ou_sender_001");
   });
 
   it("应忽略回执类文本，避免误触发主动触发面板", () => {
@@ -1342,8 +1578,10 @@ describe("Feishu callback payload adapter", () => {
     const actions = card.elements.find((item) => item.tag === "action")?.actions ?? [];
     expect(actions.map((item) => item.text?.content)).toEqual(["中止当前任务", "中止并重新开始"]);
     expect(actions[0]?.value?.operation).toBe("cancel_current_operation");
+    expect(actions[0]?.value?.targetJobId).toBe(88);
     expect(actions[1]?.value?.operation).toBe("cancel_and_retry_operation");
     expect(actions[1]?.value?.targetOperation).toBe("run_daily");
+    expect(actions[1]?.value?.targetJobId).toBe(88);
   });
 
   it("应解析运维卡中的中止动作", () => {
@@ -1358,6 +1596,7 @@ describe("Feishu callback payload adapter", () => {
               operation: "cancel_current_operation",
               reportDate: "2026-03-10",
               reason: "manual_stop",
+              targetJobId: "66",
             },
           },
         },
@@ -1372,6 +1611,7 @@ describe("Feishu callback payload adapter", () => {
       throw new Error("unexpected kind");
     }
     expect(parsed.payload.operation).toBe("cancel_current_operation");
+    expect(parsed.payload.targetJobId).toBe(66);
   });
 
   it("应解析运维卡中的中止并重启动作", () => {
@@ -1385,6 +1625,7 @@ describe("Feishu callback payload adapter", () => {
             value: {
               operation: "cancel_and_retry_operation",
               targetOperation: "run_weekly",
+              targetJobId: 65,
               reportDate: "2026-03-10",
               reason: "retry_with_fresh_run",
             },
@@ -1402,6 +1643,7 @@ describe("Feishu callback payload adapter", () => {
     }
     expect(parsed.payload.operation).toBe("cancel_and_retry_operation");
     expect(parsed.payload.targetOperation).toBe("run_weekly");
+    expect(parsed.payload.targetJobId).toBe(65);
   });
 
   it("应输出点击动作的状态回显推断", () => {
@@ -1409,5 +1651,49 @@ describe("Feishu callback payload adapter", () => {
     expect(status.reviewStatus).toBe("approved");
     expect(status.publishStatus).toBe("published");
     expect(status.shouldPublish).toBe(true);
+  });
+
+  it("request_revision 缺少 reason 与 feedback 时应在回调边界拒绝", () => {
+    expect(() =>
+      __test__.validateRevisionReviewPayload({
+        mode: "weekly",
+        reportDate: "2026-03-10",
+        action: "request_revision",
+      }),
+    ).toThrow("invalid_request_revision_feedback:feedback_required");
+  });
+
+  it("request_revision 仅携带 reason（无 feedback）时应在回调边界拒绝", () => {
+    expect(() =>
+      __test__.validateRevisionReviewPayload({
+        mode: "weekly",
+        reportDate: "2026-03-10",
+        action: "request_revision",
+        reason: "终稿需调整",
+      }),
+    ).toThrow("invalid_request_revision_feedback:feedback_required");
+  });
+
+  it("修订恢复卡应包含表单提交与继续执行/直接发布动作", () => {
+    const card = __test__.buildRevisionRecoveryCard({
+      reportDate: "2026-03-10",
+      failureCategory: "subprocess_timeout",
+      failureSummary: "subprocess_timeout:600000ms",
+      operator: "ou_test",
+    }) as {
+      elements: Array<{
+        tag: string;
+        actions?: Array<{ value?: Record<string, unknown> }>;
+        elements?: Array<{ tag?: string; action_type?: string; value?: Record<string, unknown> }>;
+      }>;
+    };
+    const form = card.elements.find((item) => item.tag === "form");
+    const submit = form?.elements?.find((item) => item.tag === "button");
+    expect(submit?.action_type).toBe("form_submit");
+    expect(submit?.value?.action).toBe("request_revision");
+    const actions = card.elements.find((item) => item.tag === "action")?.actions ?? [];
+    expect(actions).toHaveLength(2);
+    expect(actions[0]?.value?.continue_from_checkpoint).toBe(true);
+    expect(actions[1]?.value?.action).toBe("approve_final");
   });
 });

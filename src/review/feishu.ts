@@ -87,6 +87,43 @@ export interface FeishuActionResultNotification {
   errorMessage?: string;
 }
 
+interface FeishuOperationProgressCardRecord {
+  jobId: number;
+  reportDate: string;
+  messageId: string;
+  updatedAt: string;
+  updateCount: number;
+  // 记录最近一次进度序位，避免乱序事件把卡片状态“回写”到更早阶段。
+  lastOrder?: number;
+  lastLifecycle?: FeishuOperationProgressCardInput["lifecycle"];
+  lastPhase?: FeishuOperationProgressCardInput["phase"];
+  lastStage?: string;
+  lastNodeKey?: string;
+  lastNodeState?: "start" | "end";
+}
+
+export interface FeishuOperationProgressCardInput {
+  jobId: number;
+  operation: FeishuOperationActionType;
+  reportDate: string;
+  operator?: string;
+  lifecycle: "queued" | "started" | "progress" | "success" | "failed" | "cancelled";
+  detail: string;
+  phase?: "operation" | "pipeline";
+  stage?: string;
+  nodeKey?: string;
+  nodeState?: "start" | "end";
+  elapsedMs?: number;
+  updateCount?: number;
+}
+
+export interface FeishuRevisionRecoveryNotification {
+  reportDate: string;
+  failureCategory: string;
+  failureSummary: string;
+  operator?: string;
+}
+
 export interface ReviewActionPayload {
   mode: "weekly";
   reportDate: string;
@@ -106,6 +143,7 @@ export interface FeishuOperationActionPayload {
   reportDate?: string;
   generatedAt?: string;
   targetOperation?: OperationJobType;
+  targetJobId?: number;
   dryRun?: boolean;
   operator?: string;
   reason?: string;
@@ -350,6 +388,15 @@ export class FeishuNotifier {
     return this.sendText(text);
   }
 
+  async notifyRevisionRecovery(input: FeishuRevisionRecoveryNotification): Promise<boolean> {
+    if (!hasAppConfig(this.config)) {
+      return false;
+    }
+    const card = buildRevisionRecoveryCard(input);
+    const messageId = await this.sendInteractiveCard(card);
+    return Boolean(messageId);
+  }
+
   async notifyOperationControlCard(input: { chatId?: string; reportDate: string }): Promise<boolean> {
     if (!hasAppConfig(this.config)) {
       return false;
@@ -378,6 +425,59 @@ export class FeishuNotifier {
     });
     const messageId = await this.sendInteractiveCard(card, input.chatId);
     return Boolean(messageId);
+  }
+
+  async upsertOperationProgressCard(input: FeishuOperationProgressCardInput): Promise<boolean> {
+    if (!hasAppConfig(this.config)) {
+      return false;
+    }
+    const card = buildOperationProgressCard(input);
+    const incomingOrder = computeOperationProgressOrder(input);
+    const record = await this.readOperationProgressCardRecord(input.jobId);
+    if (record) {
+      const lastOrder = typeof record.lastOrder === "number" ? record.lastOrder : Number.NEGATIVE_INFINITY;
+      // 进度事件可能乱序到达，低序位事件直接丢弃，避免卡片“执行中 -> 已入队”回退。
+      if (incomingOrder < lastOrder) {
+        return true;
+      }
+      try {
+        await this.updateInteractiveCard(record.messageId, card);
+        await this.writeOperationProgressCardRecord({
+          ...record,
+          updatedAt: new Date().toISOString(),
+          reportDate: input.reportDate,
+          updateCount: typeof input.updateCount === "number" ? input.updateCount : record.updateCount + 1,
+          lastOrder: incomingOrder,
+          lastLifecycle: input.lifecycle,
+          lastPhase: input.phase,
+          lastStage: input.stage,
+          lastNodeKey: input.nodeKey,
+          lastNodeState: input.nodeState,
+        });
+        return true;
+      } catch {
+        // 进度卡 messageId 失效时降级发新卡，避免任务“执行中但无可见入口”。
+      }
+    }
+
+    const messageId = await this.sendInteractiveCard(card);
+    if (!messageId) {
+      return false;
+    }
+    await this.writeOperationProgressCardRecord({
+      jobId: input.jobId,
+      reportDate: input.reportDate,
+      messageId,
+      updatedAt: new Date().toISOString(),
+      updateCount: typeof input.updateCount === "number" ? input.updateCount : 1,
+      lastOrder: incomingOrder,
+      lastLifecycle: input.lifecycle,
+      lastPhase: input.phase,
+      lastStage: input.stage,
+      lastNodeKey: input.nodeKey,
+      lastNodeState: input.nodeState,
+    });
+    return true;
   }
 
   async notifyOperationResult(input: {
@@ -571,6 +671,11 @@ export class FeishuNotifier {
     return path.join(root, "main-cards", "weekly", `${reportDate}.json`);
   }
 
+  private getOperationProgressCardRecordPath(jobId: number) {
+    const root = this.config.notificationRoot ?? "outputs/notifications/feishu";
+    return path.join(root, "operation-progress-cards", `${jobId}.json`);
+  }
+
   private async readMainCardRecord(reportDate: string): Promise<FeishuMainCardRecord | null> {
     const filePath = this.getMainCardRecordPath(reportDate);
     try {
@@ -590,6 +695,26 @@ export class FeishuNotifier {
 
   private async writeMainCardRecord(record: FeishuMainCardRecord) {
     const filePath = this.getMainCardRecordPath(record.reportDate);
+    await fs.mkdir(path.dirname(filePath), { recursive: true });
+    await fs.writeFile(filePath, JSON.stringify(record, null, 2), "utf-8");
+  }
+
+  private async readOperationProgressCardRecord(jobId: number): Promise<FeishuOperationProgressCardRecord | null> {
+    const filePath = this.getOperationProgressCardRecordPath(jobId);
+    try {
+      const content = await fs.readFile(filePath, "utf-8");
+      const parsed = JSON.parse(content) as FeishuOperationProgressCardRecord;
+      return parsed.jobId === jobId ? parsed : null;
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+        return null;
+      }
+      throw error;
+    }
+  }
+
+  private async writeOperationProgressCardRecord(record: FeishuOperationProgressCardRecord) {
+    const filePath = this.getOperationProgressCardRecordPath(record.jobId);
     await fs.mkdir(path.dirname(filePath), { recursive: true });
     await fs.writeFile(filePath, JSON.stringify(record, null, 2), "utf-8");
   }
@@ -742,6 +867,7 @@ export async function startFeishuReviewCallbackServer(input: StartFeishuCallback
       }
 
       const reviewPayload = parsed.payload;
+      validateRevisionReviewPayload(reviewPayload);
       const instruction = buildReviewInstructionFromAction(reviewPayload);
 
       // 飞书可能因网络抖动重试同一次点击事件，这里在写入前做幂等判重，避免重复回执刷屏。
@@ -1037,6 +1163,17 @@ const operationPayloadSchema = z.object({
     .optional(),
   generatedAt: z.string().datetime().optional(),
   targetOperation: operationJobTypeSchema.optional(),
+  targetJobId: z
+    .preprocess((value) => {
+      if (typeof value === "number" && Number.isFinite(value)) {
+        return Math.trunc(value);
+      }
+      if (typeof value === "string" && /^\d+$/.test(value)) {
+        return Number(value);
+      }
+      return value;
+    }, z.number().int().positive())
+    .optional(),
   dryRun: z.boolean().optional(),
   operator: z.string().min(1).optional(),
   reason: z.string().optional(),
@@ -1177,6 +1314,38 @@ function isApprovedAction(action: ReviewInstructionAction): boolean {
   return action === "approve_outline" || action === "approve_final";
 }
 
+/**
+ * 回调边界做一次 request_revision 输入校验：
+ * - 表单路径必须有 feedback；
+ * - 不再接受 reason-only，避免“未填写意见却触发重跑”；
+ * - 允许 continueFromCheckpoint 单独触发恢复执行。
+ */
+function validateRevisionReviewPayload(payload: ReviewActionPayload) {
+  if (payload.action !== "request_revision") {
+    return;
+  }
+  const feedback = payload.feedback;
+  if (feedback) {
+    const hasFeedbackDirective = Boolean(
+      (feedback.revisionRequest ?? "").trim() ||
+        feedback.continueFromCheckpoint === true ||
+        (feedback.candidateAdditions?.length ?? 0) > 0 ||
+        (feedback.candidateRemovals?.length ?? 0) > 0 ||
+        (feedback.newTopics?.length ?? 0) > 0 ||
+        (feedback.newSearchTerms?.length ?? 0) > 0 ||
+        (feedback.sourceToggles?.length ?? 0) > 0 ||
+        (feedback.sourceWeightAdjustments?.length ?? 0) > 0 ||
+        (feedback.rankingWeightAdjustments?.length ?? 0) > 0 ||
+        (feedback.editorNotes ?? "").trim(),
+    );
+    if (!hasFeedbackDirective) {
+      throw new Error("invalid_request_revision_feedback:missing_directive");
+    }
+    return;
+  }
+  throw new Error("invalid_request_revision_feedback:feedback_required");
+}
+
 function extractChallenge(input: unknown): string | undefined {
   const direct = challengeSchema.safeParse(input);
   if (direct.success) {
@@ -1210,6 +1379,11 @@ function adaptFeishuCardActionPayload(input: unknown) {
     getString(value, "target_operation") ??
     getString(value, "retryOperation") ??
     getString(value, "retry_operation");
+  const targetJobId =
+    parseOptionalPositiveInteger(value.targetJobId) ??
+    parseOptionalPositiveInteger(value.target_job_id) ??
+    parseOptionalPositiveInteger(value.runningJobId) ??
+    parseOptionalPositiveInteger(value.running_job_id);
 
   const reportDate = getString(value, "reportDate") ?? getString(value, "report_date");
   const stage = getString(value, "stage");
@@ -1238,6 +1412,7 @@ function adaptFeishuCardActionPayload(input: unknown) {
       ...(reportDate ? { reportDate } : {}),
       ...(decidedAt ? { generatedAt: decidedAt } : {}),
       ...(targetOperation ? { targetOperation } : {}),
+      ...(typeof targetJobId === "number" ? { targetJobId } : {}),
       ...(operator ? { operator } : {}),
       ...(reason ? { reason } : {}),
       ...(traceId ? { traceId } : {}),
@@ -1317,23 +1492,42 @@ function extractMentionEvent(input: unknown): FeishuMentionEventPayload | null {
 }
 
 function extractActionValueObject(root: Record<string, unknown>): Record<string, unknown> | null {
-  const candidates: unknown[] = [
-    asRecord(root.action)?.value,
-    asRecord(root.action)?.form_value,
-    asRecord(root.event)?.action ? asRecord(asRecord(root.event)?.action)?.value : undefined,
-    asRecord(root.event)?.action ? asRecord(asRecord(root.event)?.action)?.form_value : undefined,
-    asRecord(asRecord(root.event)?.context)?.action ? asRecord(asRecord(asRecord(root.event)?.context)?.action)?.value : undefined,
-    asRecord(root.data)?.value,
+  const eventAction = asRecord(asRecord(root.event)?.action);
+  const rootAction = asRecord(root.action);
+  const contextAction = asRecord(asRecord(asRecord(root.event)?.context)?.action);
+  const candidatePairs: Array<{ value?: unknown; formValue?: unknown }> = [
+    { value: rootAction?.value, formValue: rootAction?.form_value },
+    { value: eventAction?.value, formValue: eventAction?.form_value },
+    { value: contextAction?.value, formValue: contextAction?.form_value },
+    { value: asRecord(root.data)?.value },
   ];
 
-  for (const candidate of candidates) {
-    const objectValue = parsePossibleObject(candidate);
-    if (objectValue) {
-      return objectValue;
+  for (const pair of candidatePairs) {
+    const merged = mergeActionValueAndFormValue(pair.value, pair.formValue);
+    if (merged) {
+      return merged;
     }
   }
 
   return null;
+}
+
+/**
+ * Feishu card action 常见形态是 `value + form_value` 并存：
+ * - value: 固定动作元数据（action/reportDate/reason）
+ * - form_value: 用户输入
+ * 若只取其一会丢字段，因此这里统一 merge 并让 form_value 覆盖同名键。
+ */
+function mergeActionValueAndFormValue(value: unknown, formValue: unknown): Record<string, unknown> | null {
+  const valueObject = parsePossibleObject(value);
+  const formObject = parsePossibleObject(formValue);
+  if (!valueObject && !formObject) {
+    return null;
+  }
+  return {
+    ...(valueObject ?? {}),
+    ...(formObject ?? {}),
+  };
 }
 
 function parsePossibleObject(input: unknown): Record<string, unknown> | null {
@@ -1353,11 +1547,31 @@ function parsePossibleObject(input: unknown): Record<string, unknown> | null {
 }
 
 function resolveOperator(root: Record<string, unknown>, eventRecord?: Record<string, unknown>) {
+  const directStringCandidate =
+    getString(root, "operator") ??
+    getString(root, "open_id") ??
+    getString(root, "user_id") ??
+    getString(eventRecord, "operator") ??
+    getString(eventRecord, "operator_id") ??
+    getString(eventRecord, "open_id") ??
+    getString(eventRecord, "user_id") ??
+    getString(asRecord(eventRecord?.sender), "open_id") ??
+    getString(asRecord(eventRecord?.sender), "user_id") ??
+    getString(asRecord(root.sender), "open_id") ??
+    getString(asRecord(root.sender), "user_id");
+  if (directStringCandidate) {
+    return directStringCandidate;
+  }
+
   const candidates = [
     asRecord(root.operator),
+    asRecord(root.sender),
     asRecord(eventRecord?.operator),
     asRecord(eventRecord?.operator_id),
     asRecord(eventRecord?.user),
+    asRecord(eventRecord?.sender),
+    asRecord(asRecord(eventRecord?.sender)?.sender_id),
+    asRecord(asRecord(root.sender)?.sender_id),
   ].filter((item): item is Record<string, unknown> => Boolean(item));
 
   for (const candidate of candidates) {
@@ -1368,6 +1582,19 @@ function resolveOperator(root: Record<string, unknown>, eventRecord?: Record<str
       getString(candidate, "user_id");
     if (value) {
       return value;
+    }
+  }
+  return undefined;
+}
+
+function parseOptionalPositiveInteger(input: unknown): number | undefined {
+  if (typeof input === "number" && Number.isFinite(input) && input > 0) {
+    return Math.trunc(input);
+  }
+  if (typeof input === "string" && /^\d+$/.test(input)) {
+    const parsed = Number(input);
+    if (Number.isFinite(parsed) && parsed > 0) {
+      return parsed;
     }
   }
   return undefined;
@@ -1641,6 +1868,27 @@ function buildReviewMainCard(input: {
     contentLines.push("", "**debug**", ...debugPairs);
   }
 
+  const elements: Array<Record<string, unknown>> = [
+    {
+      tag: "markdown",
+      content: contentLines.join("\n"),
+    },
+  ];
+  if (input.stage === "outline_review" || input.stage === "final_review") {
+    elements.push(
+      ...buildRevisionFormElements({
+        mode: "main",
+        reportDate: input.reportDate,
+        submitLabel: "提交修订并复检",
+        submitReason: "终稿需调整",
+      }),
+    );
+  }
+  elements.push({
+    tag: "action",
+    actions: buildStageActions(input.stage, input.reportDate),
+  });
+
   return {
     config: { wide_screen_mode: true },
     header: {
@@ -1650,16 +1898,7 @@ function buildReviewMainCard(input: {
         content: `AI 周报审核任务 ${input.reportDate}`,
       },
     },
-    elements: [
-      {
-        tag: "markdown",
-        content: contentLines.join("\n"),
-      },
-      {
-        tag: "action",
-        actions: buildStageActions(input.stage, input.reportDate),
-      },
-    ],
+    elements,
   };
 }
 
@@ -1702,14 +1941,12 @@ function buildStageActions(stage: FeishuMainCardRecord["stage"], reportDate: str
     return [
       // 单阶段审核下兼容历史 outline 状态：统一渲染终稿动作，避免再次暴露旧动作按钮。
       makeCardButton("终稿通过并发布", "approve_final", reportDate, "primary", "终稿通过"),
-      makeCardButton("要求修订", "request_revision", reportDate, "default", "终稿需调整"),
       makeCardButton("拒绝本次", "reject", reportDate, "danger", "终稿拒绝"),
     ];
   }
   if (stage === "final_review") {
     return [
       makeCardButton("终稿通过并发布", "approve_final", reportDate, "primary", "终稿通过"),
-      makeCardButton("要求修订", "request_revision", reportDate, "default", "终稿需调整"),
       makeCardButton("拒绝本次", "reject", reportDate, "danger", "终稿拒绝"),
     ];
   }
@@ -1724,6 +1961,154 @@ function buildStageActions(stage: FeishuMainCardRecord["stage"], reportDate: str
       },
     },
   ];
+}
+
+function buildRevisionFormElements(input: {
+  mode: "main" | "recovery";
+  reportDate: string;
+  submitLabel: string;
+  submitReason: string;
+}) {
+  const formName = input.mode === "main" ? "revision_form_main" : "revision_form_recovery";
+  return [
+    {
+      tag: "markdown",
+      content:
+        input.mode === "main"
+          ? "**修订表单**：填写修订意见后点击“提交修订并复检”，系统会自动触发 recheck。"
+          : "**修订恢复**：可先编辑意见重试，或直接继续未完成 checkpoint。",
+    },
+    {
+      // 表单类组件必须收敛到 form 容器内，才能稳定展示并通过 form_submit 回传 form_value。
+      tag: "form",
+      name: formName,
+      elements: [
+        {
+          tag: "input",
+          name: "revision_request",
+          required: true,
+          label: {
+            tag: "plain_text",
+            content: "修订意见",
+          },
+          placeholder: {
+            tag: "plain_text",
+            content: "请输入修订意见（可写多条，建议写清楚修改位置与目标）",
+          },
+        },
+        {
+          tag: "select_static",
+          name: "revision_scope",
+          label: {
+            tag: "plain_text",
+            content: "修订范围",
+          },
+          placeholder: {
+            tag: "plain_text",
+            content: "修订范围（可选）",
+          },
+          options: [
+            { text: { tag: "plain_text", content: "全部内容" }, value: "all" },
+            { text: { tag: "plain_text", content: "按分类" }, value: "category" },
+            { text: { tag: "plain_text", content: "按条目" }, value: "item" },
+          ],
+          initial_option: { text: { tag: "plain_text", content: "全部内容" }, value: "all" },
+        },
+        {
+          tag: "select_static",
+          name: "revision_intent",
+          label: {
+            tag: "plain_text",
+            content: "修订意图",
+          },
+          placeholder: {
+            tag: "plain_text",
+            content: "修订意图（可选）",
+          },
+          options: [
+            { text: { tag: "plain_text", content: "通用润色" }, value: "general_refine" },
+            { text: { tag: "plain_text", content: "内容更新" }, value: "content_update" },
+            { text: { tag: "plain_text", content: "结构调整" }, value: "structure_adjust" },
+            { text: { tag: "plain_text", content: "补充信息" }, value: "add_information" },
+            { text: { tag: "plain_text", content: "删减信息" }, value: "remove_information" },
+            { text: { tag: "plain_text", content: "其他" }, value: "other" },
+          ],
+          initial_option: { text: { tag: "plain_text", content: "通用润色" }, value: "general_refine" },
+        },
+        {
+          tag: "select_static",
+          name: "continue_from_checkpoint",
+          label: {
+            tag: "plain_text",
+            content: "继续 checkpoint",
+          },
+          placeholder: {
+            tag: "plain_text",
+            content: "是否继续上次 checkpoint（可选）",
+          },
+          options: [
+            { text: { tag: "plain_text", content: "否（默认）" }, value: "false" },
+            { text: { tag: "plain_text", content: "是（继续未完成任务）" }, value: "true" },
+          ],
+          initial_option: { text: { tag: "plain_text", content: "否（默认）" }, value: "false" },
+        },
+        makeRevisionSubmitButton(input.submitLabel, input.reportDate, "primary", input.submitReason),
+      ],
+    },
+  ];
+}
+
+function buildRevisionRecoveryCard(input: FeishuRevisionRecoveryNotification) {
+  const contentLines = [
+    `**reportDate**：${input.reportDate}`,
+    `**失败分类**：${input.failureCategory}`,
+    `**失败摘要**：${input.failureSummary}`,
+    input.operator ? `**触发人**：${input.operator}` : null,
+  ].filter(Boolean);
+
+  return {
+    config: { wide_screen_mode: true },
+    header: {
+      template: "orange",
+      title: {
+        tag: "plain_text",
+        content: `AI 修订恢复建议（${input.reportDate}）`,
+      },
+    },
+    elements: [
+      {
+        tag: "markdown",
+        content: contentLines.join("\n"),
+      },
+      ...buildRevisionFormElements({
+        mode: "recovery",
+        reportDate: input.reportDate,
+        submitLabel: "编辑后复检",
+        submitReason: `修订重试:${input.failureCategory}`,
+      }),
+      {
+        tag: "action",
+        actions: [
+          {
+            tag: "button",
+            type: "default",
+            text: {
+              tag: "plain_text",
+              content: "继续执行（checkpoint）",
+            },
+            value: {
+              action: "request_revision",
+              reportDate: input.reportDate,
+              stage: "final_review",
+              reason: `continue_checkpoint:${input.failureCategory}`,
+              continue_from_checkpoint: true,
+            },
+          },
+          makeCardButton("直接通过并发布", "approve_final", input.reportDate, "default", "修订失败后人工放行"),
+        ],
+      },
+    ],
+  };
 }
 
 function buildOperationControlCard(reportDate: string) {
@@ -1789,7 +2174,9 @@ function buildOperationConflictControlCard(input: {
       {
         tag: "action",
         actions: [
-          makeOperationButton("中止当前任务", "cancel_current_operation", input.reportDate, false, "danger"),
+          makeOperationButton("中止当前任务", "cancel_current_operation", input.reportDate, false, "danger", {
+            targetJobId: input.runningJobId,
+          }),
           {
             tag: "button",
             type: "primary",
@@ -1800,11 +2187,69 @@ function buildOperationConflictControlCard(input: {
             value: {
               operation: "cancel_and_retry_operation",
               targetOperation: input.operation,
+              targetJobId: input.runningJobId,
               reportDate: input.reportDate,
               dryRun: false,
               reason: `manual_operation:cancel_and_retry:${input.operation}`,
             },
           },
+        ],
+      },
+    ],
+  };
+}
+
+function buildOperationProgressCard(input: FeishuOperationProgressCardInput) {
+  const lines: string[] = [
+    `**任务**：${toOperationLabel(input.operation)}（job=${input.jobId}）`,
+    `**状态**：${toOperationResultLabel(input.lifecycle)}`,
+    `**reportDate**：${input.reportDate}`,
+  ];
+  if (input.operator) {
+    lines.push(`**触发人**：${input.operator}`);
+  }
+  if (input.phase) {
+    lines.push(`**阶段**：${input.phase}`);
+  }
+  if (input.stage) {
+    lines.push(`**stage**：${input.stage}`);
+  }
+  if (input.nodeKey) {
+    lines.push(`**节点**：${input.nodeKey}${input.nodeState ? ` (${input.nodeState})` : ""}`);
+  }
+  if (typeof input.elapsedMs === "number") {
+    lines.push(`**耗时**：${Math.max(0, Math.round(input.elapsedMs / 1000))}s`);
+  }
+  lines.push(`**详情**：${input.detail}`);
+
+  return {
+    config: { wide_screen_mode: true },
+    header: {
+      template:
+        input.lifecycle === "failed"
+          ? "red"
+          : input.lifecycle === "cancelled"
+            ? "orange"
+            : input.lifecycle === "success"
+              ? "green"
+              : "turquoise",
+      title: {
+        tag: "plain_text",
+        content: `AI 报告运行进度（job=${input.jobId}）`,
+      },
+    },
+    elements: [
+      {
+        tag: "markdown",
+        content: lines.join("\n"),
+      },
+      {
+        tag: "action",
+        actions: [
+          makeOperationButton("查询本期状态", "query_weekly_status", input.reportDate, false, "default"),
+          makeOperationButton("中止本次运行", "cancel_current_operation", input.reportDate, false, "danger", {
+            targetJobId: input.jobId,
+          }),
         ],
       },
     ],
@@ -1833,12 +2278,40 @@ function makeCardButton(
   };
 }
 
+function makeRevisionSubmitButton(
+  label: string,
+  reportDate: string,
+  type: "primary" | "default" | "danger",
+  fallbackReason: string,
+) {
+  return {
+    tag: "button",
+    type,
+    name: "submit_revision",
+    action_type: "form_submit",
+    text: {
+      tag: "plain_text",
+      content: label,
+    },
+    value: {
+      action: "request_revision",
+      stage: "final_review",
+      reportDate,
+      // 当 form_value 丢失时，仍保留 reason-only 兼容路径。
+      reason: fallbackReason,
+    },
+  };
+}
+
 function makeOperationButton(
   label: string,
   operation: FeishuOperationActionType,
   reportDate: string,
   dryRun: boolean,
   type: "primary" | "default" | "danger",
+  options?: {
+    targetJobId?: number;
+  },
 ) {
   return {
     tag: "button",
@@ -1852,8 +2325,48 @@ function makeOperationButton(
       reportDate,
       dryRun,
       reason: `manual_operation:${operation}`,
+      ...(typeof options?.targetJobId === "number" ? { targetJobId: options.targetJobId } : {}),
     },
   };
+}
+
+function computeOperationProgressOrder(input: FeishuOperationProgressCardInput): number {
+  const lifecycleRank: Record<FeishuOperationProgressCardInput["lifecycle"], number> = {
+    queued: 100,
+    started: 200,
+    progress: 300,
+    success: 900,
+    failed: 900,
+    cancelled: 900,
+  };
+  const phaseRank: Record<NonNullable<FeishuOperationProgressCardInput["phase"]>, number> = {
+    operation: 10,
+    pipeline: 20,
+  };
+  const nodeRank = getPipelineNodeOrder(input.nodeKey);
+  const nodeStateRank = input.nodeState === "end" ? 2 : input.nodeState === "start" ? 1 : 0;
+  const phaseScore = input.phase ? phaseRank[input.phase] ?? 0 : 0;
+  return lifecycleRank[input.lifecycle] * 1_000_000 + phaseScore * 10_000 + nodeRank * 10 + nodeStateRank;
+}
+
+function getPipelineNodeOrder(nodeKey?: string): number {
+  if (!nodeKey) {
+    return 0;
+  }
+  const order: Record<string, number> = {
+    collect_items: 1,
+    normalize_items: 2,
+    dedupe_items: 3,
+    llm_classify_score: 4,
+    rank_items: 5,
+    build_outline: 6,
+    review_outline: 7,
+    review_final: 8,
+    publish_or_wait: 9,
+    llm_summarize: 10,
+    build_report: 11,
+  };
+  return order[nodeKey] ?? 0;
 }
 
 function buildCallbackEventDedupeKey(
@@ -1986,6 +2499,9 @@ export const __test__ = {
   isOperationPanelMentionText,
   buildOperationControlCard,
   buildOperationConflictControlCard,
+  buildOperationProgressCard,
+  buildRevisionRecoveryCard,
+  validateRevisionReviewPayload,
   verifyCallbackAuth,
   inferActionStatusEcho,
   hasAppConfig,

@@ -82,6 +82,13 @@ AI_WEEKLY_ENV_FILE="${DIAG_ENV_FILE}" \
   npx tsx src/cli.ts run --mode "${MODE}" --report-date "${REPORT_DATE}" --generated-at "${GENERATED_AT}" 2>&1 | tee "${LOG_FILE}"
 
 echo "[source-diagnose] log=${LOG_FILE}"
+ARTIFACT_JSON="outputs/review/${MODE}/${REPORT_DATE}.json"
+if [[ -f "${ARTIFACT_JSON}" ]]; then
+  echo "[source-diagnose] github diagnostics:"
+  node -e 'const fs=require("fs");const p=process.argv[1];const j=JSON.parse(fs.readFileSync(p,"utf8"));const m=j.githubSelectionMeta||j.snapshot?.githubSelectionMeta; if(!m){console.log("  (none)"); process.exit(0);} const failed=(m.queryStats||[]).filter((q)=>q.failedReason).length; console.log(`  queryMode=${m.queryMode}, sourceCount=${m.sourceCount}, collected=${m.collectedRepoCount}, merged=${m.mergedRepoCount}, kept=${m.keptRepoCount}, selected=${m.selectedRepoCount}`); console.log(`  history=${m.historicalRepoCount}, cooldownDays=${m.cooldownDays}, suppressed=${m.cooldownSuppressedCount}, breakout=${m.breakoutAllowedCount}, failedQueries=${failed}`);' "${ARTIFACT_JSON}"
+else
+  echo "[source-diagnose] github diagnostics: artifact not found (${ARTIFACT_JSON})"
+fi
 echo "[source-diagnose] failed sources:"
 
 if command -v rg >/dev/null 2>&1; then

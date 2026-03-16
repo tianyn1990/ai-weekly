@@ -42,7 +42,11 @@ export interface OperationJobExecutor {
 
 export interface OperationJobExecutionHooks {
   // 在关键阶段上报进度，供飞书通知或审计链路消费。
-  onProgress?: (input: { stage: string; detail: string }) => Promise<void>;
+  onProgress?: (input: {
+    phase: "operation";
+    stage: string;
+    detail: string;
+  }) => Promise<void>;
   // 协作式中止检查：在阶段边界调用，命中后由上层抛出中止错误并结束任务。
   ensureNotCancelled?: () => Promise<void>;
 }
@@ -54,7 +58,7 @@ export async function executeOperationJob(
 ): Promise<string> {
   const checkpoint = async (stage: string, detail: string) => {
     await hooks.ensureNotCancelled?.();
-    await hooks.onProgress?.({ stage, detail });
+    await hooks.onProgress?.({ phase: "operation", stage, detail });
     await hooks.ensureNotCancelled?.();
   };
 

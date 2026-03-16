@@ -1,7 +1,7 @@
 # AI 周报系统设计（v1.1）
 
 ## 1. 文档目标与范围
-- 目标：定义 AI 日报/周报系统在 **M5.5 已完成** 基线下的完整技术架构。
+- 目标：定义 AI 日报/周报系统在 **M5.8 已完成** 基线下的完整技术架构。
 - 范围：覆盖采集、处理、审核、发布、协同通知、审核意见回流、可观测与运维策略。
 - 非目标：不描述前端管理后台 UI 细节；不覆盖分布式部署实现细节（当前暂缓）。
 
@@ -100,6 +100,23 @@
 - `request_revision` 支持自由文本主输入，并支持 `revisionScope/revisionIntent/continueFromCheckpoint`。
 - 修订执行增加护栏：`maxSteps/maxWallClockMs/maxLlmCalls/maxToolErrors`，默认总超时 10 分钟。
 - 失败分型与恢复：支持 `planning_failed/step_limit_reached/wall_clock_timeout` 等分类，以及 checkpoint 续跑。
+
+### 2.14 已实现（M5.6）
+- 运维执行链路新增节点级进度事件协议：子进程输出结构化 `[op-progress]{json}`，主 worker 解析并消费。
+- 新增进度粒度配置：`off/milestone/verbose`（默认 `milestone`）。
+- 新增单任务进度卡：同一 `jobId` 持续 PATCH 更新，不为每个节点重复发新卡。
+- 新增降噪策略：进度事件去重、节流窗口、单任务更新上限。
+- `query_weekly_status` 直读增强：可回显运行中任务的 `phase/stage/node/elapsed/lastError`。
+- 自动 `recheck_weekly` 可见性补齐：`feishu_callback_auto` 任务也进入生命周期进度回执（queued/started/progress/success|failed|cancelled）。
+- 修订失败恢复闭环：`recheck_weekly` 失败/中断时下发恢复卡（编辑后重试/继续 checkpoint/直接发布）。
+- 自动 `recheck_weekly` 超时治理：新增 wall-clock timeout 护栏，超时归类 `subprocess_timeout` 并终止子进程。
+
+### 2.15 已实现（M5.8）
+- GitHub 采集策略升级为 dual-query：同一 source 执行 `active_window(pushed)` 与 `new_repo_window(created)` 两路查询并集去重。
+- 跨天新鲜度治理：基于审计事件 `github_hot_selected` 执行 repo 级 cooldown 抑制，降低“老项目重复入选”。
+- breakout 放行策略：在 cooldown 窗口内，满足高强度动态阈值（stars + recent update）时允许入选。
+- 语义分层：报告中 GitHub 仓库条目增加“项目热度动态（Trending-like）”标识，避免与新闻流混淆。
+- 可观测性增强：新增 `githubSelectionMeta`（query 命中、merge、cooldown、breakout、selected 统计），并被 `source:diagnose` 读取展示。
 
 ## 3. 架构全景
 系统分为八层：
@@ -337,7 +354,8 @@ daemon start
 - 执行类动作新增阶段通知：`queued -> started -> progress -> success/failed/cancelled`。
 - 失败回执统一输出错误分类（timeout/http/db/validation/unknown），便于快速排障。
 - 审核动作写入后自动入队 `recheck_weekly`，减少人工补命令。
-- 自动入队的 `recheck_weekly` 视为系统内部动作，不群发主动触发回执，避免干扰审核对话。
+- 自动入队的 `recheck_weekly` 会同步更新单任务进度卡与关键里程碑回执，避免“修订已触发但用户无感知”。
+- `request_revision` 回调入口采用“动作元数据 + form_value 合并解析”，保证修订表单字段不丢失。
 
 ### 5.8 macOS 初始化与服务托管流程（M4.4 已实现）
 ```text
@@ -555,6 +573,11 @@ DB 表：`operation_jobs`
 - `REVISION_AGENT_MAX_LLM_CALLS`（默认 30）
 - `REVISION_AGENT_MAX_TOOL_ERRORS`（默认 5）
 - `REVISION_AGENT_PLANNER_TIMEOUT_MS`（默认 30000）
+- `REVISION_RECHECK_MAX_WALL_CLOCK_MS`（自动 `recheck_weekly` 子进程总超时，默认 600000）
+- `OP_PROGRESS_NOTIFY_LEVEL`（`off/milestone/verbose`，默认 `milestone`）
+- `OP_PROGRESS_CARD_ENABLED`（是否启用单任务进度卡，默认 `true`）
+- `OP_PROGRESS_NOTIFY_THROTTLE_MS`（进度事件节流窗口，默认 `15000`）
+- `OP_PROGRESS_NOTIFY_MAX_UPDATES`（单任务进度卡最大更新次数，默认 `20`）
 
 实现约束：
 - `services:up` 会把 `AI_WEEKLY_ENV_FILE` 同步到 `AI_WEEKLY_LAUNCHD_ENV_FILE`，确保 launchd 读取路径稳定，规避 macOS TCC 对 `Documents/Desktop` 的权限拦截。
@@ -585,7 +608,9 @@ DB 表：`operation_jobs`
 8. **M5.2（智能）**：前置批量分类/全量打分 + 排序融合 + 导语 + 标题翻译【已完成】。
 9. **M5.3（智能）**：自适应降载与 run 级诊断 + 分类导读（LLM + 模板回退）【已完成】。
 10. **M5.4（数据源）**：GitHub Search 一手开源采集 + 精选 RSS 扩展 + 诊断增强【已完成】。
-11. **暂缓项**：分布式互斥（多实例部署时再做）。
+11. **M5.5（审核）**：单阶段终稿审核 + ReAct 修订回路【已完成】。
+12. **M5.6（运维可观测）**：节点级进度事件 + 单任务进度卡 + 粒度治理【已完成】。
+13. **暂缓项**：分布式互斥（多实例部署时再做）。
 
 ## 13. 里程碑后的质量门禁
 - 无来源断言容忍度：0。

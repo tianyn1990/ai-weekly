@@ -60,6 +60,9 @@ pnpm run:weekly:mock
 - M5 复盘 07（GitHub Search 一手采集 + 混合来源诊断增强）：`docs/learning-sessions/m5-session-07-github-source-and-curated-rss.md`
 - M5 复盘 08（单阶段终稿审核 + 受限 ReAct 修订回路）：`docs/learning-sessions/m5-session-08-single-final-review-and-react-revision-loop.md`
 - M5 复盘 09（运维动作分流 + 阶段通知 + 中止控制）：`docs/learning-sessions/m5-session-09-operation-progress-and-cancel-control.md`
+- M5 复盘 10（节点级进度可观测 + 单任务进度卡 + 粒度治理）：`docs/learning-sessions/m5-session-10-operation-node-progress-granularity.md`
+- M5 复盘 11（修订表单化 + 自动 recheck 可见性 + 失败恢复卡）：`docs/learning-sessions/m5-session-11-feishu-revision-form-and-auto-recheck-visibility.md`
+- M5 复盘 12（GitHub 新鲜度治理：dual-query + cooldown + Trending-like 语义）：`docs/learning-sessions/m5-session-12-github-source-freshness-and-trending-alignment.md`
 
 ## 6. 执行优先级约束
 - 优先保证「可运行 + 可理解 + 可复盘」三件事同时成立。
@@ -78,7 +81,10 @@ pnpm run:weekly:mock
 10. M5.3：自适应降载与运行诊断 + 分类导读（LLM + 模板回退）【已完成】。
 11. M5.4：GitHub Search 一手开源采集 + 精选 RSS 扩展 + 诊断增强【已完成】。
 12. M5.5：单阶段终稿审核 + 受限 ReAct 修订回路（自由文本、checkpoint、失败分型）【已完成】。
-13. 分布式互斥：暂缓，待多实例部署再启动。
+13. M5.6：节点级进度可观测 + 单任务进度卡 + 通知粒度治理【已完成】。
+14. M5.7：修订表单化 + 自动 recheck 可见性 + 超时/恢复闭环【已完成】。
+15. M5.8：GitHub 数据源新鲜度治理（dual-query + cooldown + Trending-like 语义）【已完成】。
+16. 分布式互斥：暂缓，待多实例部署再启动。
 
 ## 8. M4.3 运行备忘（防遗忘）
 - 常驻运行入口：`pnpm run run:daemon`。

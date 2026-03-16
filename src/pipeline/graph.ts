@@ -1,6 +1,7 @@
 import { Annotation, END, START, StateGraph } from "@langchain/langgraph";
 
 import type { ReportState } from "../core/types.js";
+import { emitPipelineProgressEvent } from "../utils/operation-progress.js";
 import {
   buildOutlineNode,
   buildReportNode,
@@ -118,6 +119,7 @@ const ReportStateAnnotation = Annotation.Root({
     default: () => "",
   }),
   llmClassifyScoreMeta: Annotation<ReportState["llmClassifyScoreMeta"]>(),
+  githubSelectionMeta: Annotation<ReportState["githubSelectionMeta"]>(),
   llmSummaryMeta: Annotation<ReportState["llmSummaryMeta"]>(),
   warnings: Annotation<ReportState["warnings"]>({
     value: (_left, right) => right,
@@ -128,19 +130,55 @@ const ReportStateAnnotation = Annotation.Root({
 export type CompiledReportGraph = ReturnType<typeof buildReportGraph>;
 
 export function buildReportGraph() {
+  const withNodeProgress = (
+    nodeKey: string,
+    node: (state: ReportState) => Promise<Partial<ReportState>>,
+  ) => {
+    return async (state: ReportState) => {
+      const startedAt = Date.now();
+      emitPipelineProgressEvent({
+        nodeKey,
+        nodeState: "start",
+        detail: `进入节点 ${nodeKey}`,
+      });
+
+      try {
+        const result = await node(state);
+        emitPipelineProgressEvent({
+          nodeKey,
+          nodeState: "end",
+          detail: `完成节点 ${nodeKey}`,
+          elapsedMs: Date.now() - startedAt,
+          ok: true,
+        });
+        return result;
+      } catch (error) {
+        // 节点失败同样上报 end 事件，便于运维侧区分“卡住”与“已失败”。
+        emitPipelineProgressEvent({
+          nodeKey,
+          nodeState: "end",
+          detail: `节点失败 ${nodeKey}: ${error instanceof Error ? error.message : String(error)}`,
+          elapsedMs: Date.now() - startedAt,
+          ok: false,
+        });
+        throw error;
+      }
+    };
+  };
+
   // M5.5 起周报默认单阶段终稿审核；保留 review_outline 节点仅用于历史动作兼容。
   return new StateGraph(ReportStateAnnotation)
-    .addNode("collect_items", collectItemsNode)
-    .addNode("normalize_items", normalizeItemsNode)
-    .addNode("dedupe_items", dedupeItemsNode)
-    .addNode("llm_classify_score", llmClassifyScoreNode)
-    .addNode("rank_items", rankItemsNode)
-    .addNode("build_outline", buildOutlineNode)
-    .addNode("review_outline", reviewOutlineNode)
-    .addNode("review_final", reviewFinalNode)
-    .addNode("publish_or_wait", publishOrWaitNode)
-    .addNode("llm_summarize", llmSummarizeNode)
-    .addNode("build_report", buildReportNode)
+    .addNode("collect_items", withNodeProgress("collect_items", collectItemsNode))
+    .addNode("normalize_items", withNodeProgress("normalize_items", normalizeItemsNode))
+    .addNode("dedupe_items", withNodeProgress("dedupe_items", dedupeItemsNode))
+    .addNode("llm_classify_score", withNodeProgress("llm_classify_score", llmClassifyScoreNode))
+    .addNode("rank_items", withNodeProgress("rank_items", rankItemsNode))
+    .addNode("build_outline", withNodeProgress("build_outline", buildOutlineNode))
+    .addNode("review_outline", withNodeProgress("review_outline", reviewOutlineNode))
+    .addNode("review_final", withNodeProgress("review_final", reviewFinalNode))
+    .addNode("publish_or_wait", withNodeProgress("publish_or_wait", publishOrWaitNode))
+    .addNode("llm_summarize", withNodeProgress("llm_summarize", llmSummarizeNode))
+    .addNode("build_report", withNodeProgress("build_report", buildReportNode))
     .addEdge(START, "collect_items")
     .addEdge("collect_items", "normalize_items")
     .addEdge("normalize_items", "dedupe_items")

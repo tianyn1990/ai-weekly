@@ -51,6 +51,12 @@ describe("source-config", () => {
         sort: "updated",
         order: "desc",
         perPage: 10,
+        queryMode: "dual",
+        activeWindowDays: 7,
+        newRepoWindowDays: 14,
+        cooldownDays: 10,
+        breakoutMinStars: 200000,
+        breakoutRecentHours: 24,
       });
     } finally {
       await fs.rm(tempDir, { recursive: true, force: true });

@@ -100,6 +100,10 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
       const displayTitle = resolveDisplayTitleById(rankedItems, digest.itemId, digest.title);
       lines.push(`- ${displayTitle}`);
       lines.push(`  - 重点：${digest.takeaway}`);
+      const matched = digest.itemId ? rankedItems.find((item) => item.id === digest.itemId) : undefined;
+      if (matched && isGithubTrendingLikeItem(matched)) {
+        lines.push("  - 动态类型：项目热度动态（Trending-like）");
+      }
       lines.push(`  - 证据：${formatEvidenceRefs(digest.evidenceItemIds, evidenceItemMap)}`);
     }
   }
@@ -116,6 +120,10 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
       lines.push(`- ${displayTitle}`);
       lines.push(`  - 摘要：${summary.summary}`);
       lines.push(`  - 推荐：${summary.recommendation}`);
+      const matched = rankedItems.find((item) => item.id === summary.itemId);
+      if (matched && isGithubTrendingLikeItem(matched)) {
+        lines.push("  - 动态类型：项目热度动态（Trending-like）");
+      }
       if (summary.domainTag || summary.intentTag || typeof summary.actionability === "number") {
         const tags = [summary.domainTag, summary.intentTag].filter(Boolean).join(" / ");
         const actionability = typeof summary.actionability === "number" ? ` | 可执行性=${summary.actionability}` : "";
@@ -159,6 +167,9 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
     lines.push(`- [${resolveDisplayTitle(item)}](${item.link})`);
     lines.push(`  - 重要级别：${item.importance} | 评分：${item.score}`);
     lines.push(`  - 推荐理由：${item.recommendationReason}`);
+    if (isGithubTrendingLikeItem(item)) {
+      lines.push("  - 动态类型：项目热度动态（Trending-like）");
+    }
   }
   lines.push("");
 
@@ -184,6 +195,9 @@ export function buildReportMarkdown(input: BuildMarkdownInput): string {
       const publishedAt = dayjs(item.publishedAt).tz(timezone).format("YYYY-MM-DD HH:mm");
       lines.push(`- [${resolveDisplayTitle(item)}](${item.link})`);
       lines.push(`  - 来源：${item.sourceName} | 发布时间：${publishedAt}`);
+      if (isGithubTrendingLikeItem(item)) {
+        lines.push("  - 动态类型：项目热度动态（Trending-like）");
+      }
       lines.push(`  - 评分：${item.score} | 推荐级别：${item.importance}`);
       lines.push(`  - 摘要：${shorten(item.contentSnippet, 140)}`);
     }
@@ -266,6 +280,18 @@ function resolveDisplayTitleById(items: RankedItem[], itemId: string | undefined
     return fallbackTitle;
   }
   return resolveDisplayTitle(matched);
+}
+
+function isGithubTrendingLikeItem(item: Pick<RankedItem, "sourceId" | "link">): boolean {
+  if (item.sourceId.includes("github")) {
+    return true;
+  }
+  try {
+    const host = new URL(item.link).hostname.toLowerCase();
+    return host === "github.com" || host.endsWith(".github.com");
+  } catch {
+    return false;
+  }
 }
 
 function formatEvidenceRefs(evidenceItemIds: string[], evidenceItemMap: Map<string, RankedItem>): string {

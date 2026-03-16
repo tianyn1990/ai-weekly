@@ -2,11 +2,12 @@
 import { spawn } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import dayjs from "dayjs";
 
 import type { ReviewArtifact } from "./core/review-artifact.js";
 import { reviewArtifactSchema } from "./core/review-artifact.js";
-import type { ReportMode, ReportState } from "./core/types.js";
+import type { ReportMode, ReportState, ReviewInstruction } from "./core/types.js";
 import { buildReportGraph } from "./pipeline/graph.js";
 import { createInitialState, loadEnabledSources } from "./pipeline/nodes.js";
 import { recheckPendingWeeklyReport } from "./pipeline/recheck.js";
@@ -20,21 +21,44 @@ import { isWeeklyReminderWindowReached, shouldSendWeeklyReminderForArtifact } fr
 import { DbAuditStore } from "./audit/audit-store.js";
 import { createRuntimeConfigStore } from "./config/runtime-config.js";
 import { DbOperationJobStore } from "./daemon/operation-job-store.js";
-import { buildManualOperationDedupeKey } from "./daemon/operation-dedupe.js";
+import { buildManualOperationDedupeKey, buildManualRestartOperationDedupeKey } from "./daemon/operation-dedupe.js";
 import { FileScheduleMarkerStore } from "./daemon/schedule-marker-store.js";
 import { computeDueScheduledJobs } from "./daemon/scheduler.js";
 import { executeOperationJob } from "./daemon/worker.js";
-import type { OperationJobType } from "./daemon/types.js";
+import type { OperationJob, OperationJobStatus, OperationJobType, OperationRuntimeProgress } from "./daemon/types.js";
 import { autoSyncToGit } from "./git/auto-sync.js";
 import { SqliteEngine } from "./storage/sqlite-engine.js";
 import { migrateFileToDb } from "./storage/migrate-file-to-db.js";
 import { acquireFileLock } from "./utils/file-lock.js";
 import { loadProjectEnv } from "./utils/env-loader.js";
+import {
+  OPERATION_PROGRESS_MILESTONE_NODES,
+  type OperationProgressNotifyLevel,
+  parsePipelineProgressLine,
+} from "./utils/operation-progress.js";
 import { nowInTimezoneIso } from "./utils/time.js";
 
 const CLI_SUBPROCESS_BASE_ARGS = ["--import", "tsx"];
 const HARD_CANCEL_POLL_MS = 400;
 const HARD_CANCEL_SIGKILL_GRACE_MS = 4_000;
+const RECHECK_SUBPROCESS_DEFAULT_TIMEOUT_MS = 600_000;
+const OPERATION_PROGRESS_DEFAULT_THROTTLE_MS = 15_000;
+const OPERATION_PROGRESS_DEFAULT_MAX_UPDATES = 20;
+
+interface OperationNotifyEvent {
+  operator?: string;
+  operation: OperationJobType | "query_weekly_status" | "cancel_current_operation" | "cancel_and_retry_operation";
+  lifecycle: "queued" | "started" | "progress" | "success" | "failed" | "cancelled";
+  detail: string;
+  jobId?: number;
+  reportDate?: string;
+  progress?: OperationRuntimeProgress;
+}
+
+interface OperationProgressNotifyRuntime {
+  dedupeCache: Map<string, number>;
+  jobUpdateCount: Map<number, number>;
+}
 
 interface CliArgs {
   command: "run";
@@ -70,6 +94,7 @@ interface CliArgs {
   revisionAgentMaxLlmCalls: number;
   revisionAgentMaxToolErrors: number;
   revisionAgentPlannerTimeoutMs: number;
+  revisionRecheckMaxWallClockMs: number;
   timezone: string;
   outputRoot: string;
   publishRoot: string;
@@ -115,6 +140,10 @@ interface CliArgs {
   reviewApiPort: number;
   reviewApiAuthToken?: string;
   notificationRoot: string;
+  opProgressNotifyLevel: OperationProgressNotifyLevel;
+  opProgressCardEnabled: boolean;
+  opProgressNotifyThrottleMs: number;
+  opProgressNotifyMaxUpdates: number;
   reportDate?: string;
   generatedAt?: string;
 }
@@ -335,6 +364,7 @@ async function runDaemon(args: CliArgs) {
   const markerStore = new FileScheduleMarkerStore(args.daemonMarkerRoot);
   const notifier = createFeishuNotifier(args);
   const callbackAuditLogger = createFeishuCallbackAuditLogger(args);
+  const progressNotifyRuntime = createOperationProgressNotifyRuntime();
 
   const callbackServer = await startFeishuReviewCallbackServer({
     host: args.feishuCallbackHost,
@@ -352,20 +382,12 @@ async function runDaemon(args: CliArgs) {
     auditLogger: callbackAuditLogger,
     statusEchoProvider: async ({ reportDate }) => await loadStatusEchoFromArtifact(args.outputRoot, reportDate),
     onReviewAccepted: async ({ instruction }) => {
-      const dedupeKey = instruction.traceId
-        ? `auto_recheck:${instruction.traceId}`
-        : `auto_recheck:${instruction.reportDate}:${instruction.action ?? "unknown"}:${instruction.decidedAt}`;
-      await jobStore.enqueue({
-        jobType: "recheck_weekly",
-        payload: {
-          reportDate: instruction.reportDate,
-          generatedAt: new Date().toISOString(),
-        },
-        dedupeKey,
-        createdBy: instruction.operator,
-        source: "feishu_callback_auto",
-        traceId: instruction.traceId,
-        maxRetries: 1,
+      await enqueueAutoRecheckAfterReviewAccepted({
+        args,
+        notifier,
+        jobStore,
+        progressNotifyRuntime,
+        instruction,
       });
     },
     operationHandler: async (payload) =>
@@ -373,6 +395,7 @@ async function runDaemon(args: CliArgs) {
         args,
         notifier,
         jobStore,
+        progressNotifyRuntime,
         payload,
         enqueueMessage: "已受理，任务已入队执行。",
       }),
@@ -430,7 +453,7 @@ async function runDaemon(args: CliArgs) {
     }
     workerRunning = true;
     try {
-      await processOneOperationJob(args, jobStore, notifier);
+      await processOneOperationJob(args, jobStore, notifier, progressNotifyRuntime);
     } finally {
       workerRunning = false;
     }
@@ -473,6 +496,7 @@ async function runServeFeishuCallback(args: CliArgs) {
   const notifier = createFeishuNotifier(args);
   const callbackAuditLogger = createFeishuCallbackAuditLogger(args);
   const operationJobStore = args.storageBackend === "db" ? new DbOperationJobStore(new SqliteEngine(args.storageDbPath)) : null;
+  const progressNotifyRuntime = createOperationProgressNotifyRuntime();
   const server = await startFeishuReviewCallbackServer({
     host: args.feishuCallbackHost,
     port: args.feishuCallbackPort,
@@ -488,20 +512,12 @@ async function runServeFeishuCallback(args: CliArgs) {
       if (!operationJobStore) {
         return;
       }
-      const dedupeKey = instruction.traceId
-        ? `auto_recheck:${instruction.traceId}`
-        : `auto_recheck:${instruction.reportDate}:${instruction.action ?? "unknown"}:${instruction.decidedAt}`;
-      await operationJobStore.enqueue({
-        jobType: "recheck_weekly",
-        payload: {
-          reportDate: instruction.reportDate,
-          generatedAt: new Date().toISOString(),
-        },
-        dedupeKey,
-        createdBy: instruction.operator,
-        source: "feishu_callback_auto",
-        traceId: instruction.traceId,
-        maxRetries: 1,
+      await enqueueAutoRecheckAfterReviewAccepted({
+        args,
+        notifier,
+        jobStore: operationJobStore,
+        progressNotifyRuntime,
+        instruction,
       });
     },
     operationHandler: async (payload) => {
@@ -515,6 +531,7 @@ async function runServeFeishuCallback(args: CliArgs) {
         args,
         notifier,
         jobStore: operationJobStore,
+        progressNotifyRuntime,
         payload,
         enqueueMessage: "已受理，任务已入队执行（请启动 daemon worker 消费）。",
       });
@@ -649,7 +666,12 @@ async function runNotifyReviewReminder(args: CliArgs) {
   console.log(`[feishu-reminder-summary] sent=${sent}, skipped=${skipped}, invalid=${loaded.precheckFailures.length}`);
 }
 
-async function processOneOperationJob(args: CliArgs, jobStore: DbOperationJobStore, notifier: FeishuNotifier) {
+async function processOneOperationJob(
+  args: CliArgs,
+  jobStore: DbOperationJobStore,
+  notifier: FeishuNotifier,
+  progressNotifyRuntime: OperationProgressNotifyRuntime,
+) {
   const job = await jobStore.pickNextPending();
   if (!job) {
     return;
@@ -662,13 +684,23 @@ async function processOneOperationJob(args: CliArgs, jobStore: DbOperationJobSto
     }
   };
 
-  if (job.source === "feishu_manual") {
-    await notifyOperationStageBestEffort(notifier, {
+  const shouldNotifyLifecycle = shouldNotifyFeishuJobSource(job.source);
+  const reportDate = getOperationReportDate(job.payload);
+
+  if (shouldNotifyLifecycle) {
+    await jobStore.updateRuntimeProgress(job.id, {
+      phase: "operation",
+      stage: "started",
+      detail: "任务开始执行。",
+      updatedAt: new Date().toISOString(),
+    });
+    await notifyOperationEventBestEffort(args, notifier, progressNotifyRuntime, {
       operator: job.createdBy,
       operation: job.jobType,
-      result: "started",
+      lifecycle: "started",
       jobId: job.id,
       detail: "任务开始执行。",
+      reportDate,
     });
   }
 
@@ -681,6 +713,39 @@ async function processOneOperationJob(args: CliArgs, jobStore: DbOperationJobSto
           jobStore,
           jobId: job.id,
           cliArgs: buildRunReportSubprocessArgs(args, payload),
+          onPipelineProgress: async (progress) => {
+            await jobStore.updateRuntimeProgress(job.id, {
+              phase: "pipeline",
+              stage: progress.nodeKey,
+              nodeKey: progress.nodeKey,
+              nodeState: progress.nodeState,
+              detail: progress.detail,
+              updatedAt: progress.createdAt,
+              elapsedMs: progress.elapsedMs,
+              ok: progress.ok,
+            });
+            if (!shouldNotifyLifecycle) {
+              return;
+            }
+            await notifyOperationEventBestEffort(args, notifier, progressNotifyRuntime, {
+              operator: job.createdBy,
+              operation: job.jobType,
+              lifecycle: "progress",
+              jobId: job.id,
+              reportDate,
+              detail: progress.detail,
+              progress: {
+                phase: "pipeline",
+                stage: progress.nodeKey,
+                nodeKey: progress.nodeKey,
+                nodeState: progress.nodeState,
+                detail: progress.detail,
+                updatedAt: progress.createdAt,
+                elapsedMs: progress.elapsedMs,
+                ok: progress.ok,
+              },
+            });
+          },
         });
         return `${payload.mode} run 已完成（reportDate=${payload.reportDate ?? "auto"}）`;
       },
@@ -690,6 +755,41 @@ async function processOneOperationJob(args: CliArgs, jobStore: DbOperationJobSto
           jobStore,
           jobId: job.id,
           cliArgs: buildRecheckSubprocessArgs(args, payload),
+          maxWallClockMs:
+            job.source === "feishu_callback_auto" ? Math.max(1_000, args.revisionRecheckMaxWallClockMs) : undefined,
+          onPipelineProgress: async (progress) => {
+            await jobStore.updateRuntimeProgress(job.id, {
+              phase: "pipeline",
+              stage: progress.nodeKey,
+              nodeKey: progress.nodeKey,
+              nodeState: progress.nodeState,
+              detail: progress.detail,
+              updatedAt: progress.createdAt,
+              elapsedMs: progress.elapsedMs,
+              ok: progress.ok,
+            });
+            if (!shouldNotifyLifecycle) {
+              return;
+            }
+            await notifyOperationEventBestEffort(args, notifier, progressNotifyRuntime, {
+              operator: job.createdBy,
+              operation: job.jobType,
+              lifecycle: "progress",
+              jobId: job.id,
+              reportDate,
+              detail: progress.detail,
+              progress: {
+                phase: "pipeline",
+                stage: progress.nodeKey,
+                nodeKey: progress.nodeKey,
+                nodeState: progress.nodeState,
+                detail: progress.detail,
+                updatedAt: progress.createdAt,
+                elapsedMs: progress.elapsedMs,
+                ok: progress.ok,
+              },
+            });
+          },
         });
         return `recheck 已完成（reportDate=${payload.reportDate}）`;
       },
@@ -699,6 +799,39 @@ async function processOneOperationJob(args: CliArgs, jobStore: DbOperationJobSto
           jobStore,
           jobId: job.id,
           cliArgs: buildWatchdogSubprocessArgs(args, payload),
+          onPipelineProgress: async (progress) => {
+            await jobStore.updateRuntimeProgress(job.id, {
+              phase: "pipeline",
+              stage: progress.nodeKey,
+              nodeKey: progress.nodeKey,
+              nodeState: progress.nodeState,
+              detail: progress.detail,
+              updatedAt: progress.createdAt,
+              elapsedMs: progress.elapsedMs,
+              ok: progress.ok,
+            });
+            if (!shouldNotifyLifecycle) {
+              return;
+            }
+            await notifyOperationEventBestEffort(args, notifier, progressNotifyRuntime, {
+              operator: job.createdBy,
+              operation: job.jobType,
+              lifecycle: "progress",
+              jobId: job.id,
+              reportDate,
+              detail: progress.detail,
+              progress: {
+                phase: "pipeline",
+                stage: progress.nodeKey,
+                nodeKey: progress.nodeKey,
+                nodeState: progress.nodeState,
+                detail: progress.detail,
+                updatedAt: progress.createdAt,
+                elapsedMs: progress.elapsedMs,
+                ok: progress.ok,
+              },
+            });
+          },
         });
         return `watchdog 已完成（dryRun=${payload.dryRun}）`;
       },
@@ -724,16 +857,25 @@ async function processOneOperationJob(args: CliArgs, jobStore: DbOperationJobSto
       },
     }, {
       ensureNotCancelled,
-      onProgress: async ({ detail: progressDetail }) => {
-        if (job.source !== "feishu_manual") {
+      onProgress: async ({ stage, detail: progressDetail }) => {
+        const progress: OperationRuntimeProgress = {
+          phase: "operation",
+          stage,
+          detail: progressDetail,
+          updatedAt: new Date().toISOString(),
+        };
+        await jobStore.updateRuntimeProgress(job.id, progress);
+        if (!shouldNotifyLifecycle) {
           return;
         }
-        await notifyOperationStageBestEffort(notifier, {
+        await notifyOperationEventBestEffort(args, notifier, progressNotifyRuntime, {
           operator: job.createdBy,
           operation: job.jobType,
-          result: "progress",
+          lifecycle: "progress",
           detail: progressDetail,
           jobId: job.id,
+          reportDate,
+          progress,
         });
       },
     });
@@ -741,42 +883,66 @@ async function processOneOperationJob(args: CliArgs, jobStore: DbOperationJobSto
     // 任务执行完成后再次检查取消标记，避免“执行完成后被覆盖成 success”。
     if (await jobStore.isCancelRequested(job.id)) {
       await jobStore.markCancelled(job.id, "cancelled_by_operator");
-      if (job.source === "feishu_manual") {
-        await notifyOperationStageBestEffort(notifier, {
+      if (shouldNotifyLifecycle) {
+        await notifyOperationEventBestEffort(args, notifier, progressNotifyRuntime, {
           operator: job.createdBy,
           operation: job.jobType,
-          result: "cancelled",
+          lifecycle: "cancelled",
           detail: "已按操作员请求中止。",
           jobId: job.id,
+          reportDate,
+        });
+        await notifyRevisionRecoveryAfterInterruption(notifier, {
+          job,
+          reportDate,
+          failureCategory: "cancelled",
+          failureSummary: "任务已按操作员请求中止，可编辑修订意见后重试或继续 checkpoint。",
         });
       }
       return;
     }
 
     await jobStore.markSuccess(job.id);
-    if (job.source === "feishu_manual") {
-      await notifier
-        .notifyOperationResult({
-          operator: job.createdBy,
-          operation: job.jobType,
-          result: "success",
-          detail,
-          jobId: job.id,
-        })
-        .catch((error) => {
-          console.log(`[daemon-notify-warning] ${error instanceof Error ? error.message : String(error)}`);
-        });
+    if (shouldNotifyLifecycle) {
+      await jobStore.updateRuntimeProgress(job.id, {
+        phase: "operation",
+        stage: "success",
+        detail,
+        updatedAt: new Date().toISOString(),
+      });
+      await notifyOperationEventBestEffort(args, notifier, progressNotifyRuntime, {
+        operator: job.createdBy,
+        operation: job.jobType,
+        lifecycle: "success",
+        detail,
+        jobId: job.id,
+        reportDate,
+      });
     }
   } catch (error) {
     if (error instanceof OperationCancelledError || (await jobStore.isCancelRequested(job.id))) {
       await jobStore.markCancelled(job.id, "cancelled_by_operator");
-      if (job.source === "feishu_manual") {
-        await notifyOperationStageBestEffort(notifier, {
+      if (shouldNotifyLifecycle) {
+        await jobStore.updateRuntimeProgress(job.id, {
+          phase: "operation",
+          stage: "cancelled",
+          detail: "已按操作员请求中止。",
+          updatedAt: new Date().toISOString(),
+          ok: false,
+        });
+        await notifyOperationEventBestEffort(args, notifier, progressNotifyRuntime, {
           operator: job.createdBy,
           operation: job.jobType,
-          result: "cancelled",
+          lifecycle: "cancelled",
           detail: "已按操作员请求中止。",
           jobId: job.id,
+          reportDate,
+        });
+        await notifyRevisionRecoveryAfterInterruption(notifier, {
+          job,
+          reportDate,
+          failureCategory: "cancelled",
+          failureSummary: "任务已按操作员请求中止，可编辑修订意见后重试或继续 checkpoint。",
         });
       }
       return;
@@ -784,26 +950,44 @@ async function processOneOperationJob(args: CliArgs, jobStore: DbOperationJobSto
 
     const message = error instanceof Error ? error.message : String(error);
     const failed = await jobStore.markFailed(job.id, message);
-    if (!failed.requeued && job.source === "feishu_manual") {
+    if (!failed.requeued && shouldNotifyLifecycle) {
       const classified = classifyOperationFailure(message);
-      await notifier
-        .notifyOperationResult({
-          operator: job.createdBy,
-          operation: job.jobType,
-          result: "failed",
-          detail: `${classified.category}: ${classified.detail}`,
-          jobId: job.id,
-        })
-        .catch((notifyError) => {
-          console.log(`[daemon-notify-warning] ${notifyError instanceof Error ? notifyError.message : String(notifyError)}`);
-        });
-    } else if (failed.requeued && job.source === "feishu_manual") {
-      await notifyOperationStageBestEffort(notifier, {
+      await jobStore.updateRuntimeProgress(job.id, {
+        phase: "operation",
+        stage: "failed",
+        detail: `${classified.category}: ${classified.detail}`,
+        updatedAt: new Date().toISOString(),
+        ok: false,
+      });
+      await notifyOperationEventBestEffort(args, notifier, progressNotifyRuntime, {
         operator: job.createdBy,
         operation: job.jobType,
-        result: "queued",
+        lifecycle: "failed",
+        detail: `${classified.category}: ${classified.detail}`,
+        jobId: job.id,
+        reportDate,
+      });
+      await notifyRevisionRecoveryAfterInterruption(notifier, {
+        job,
+        reportDate,
+        failureCategory: classified.category,
+        failureSummary: classified.detail,
+      });
+    } else if (failed.requeued && shouldNotifyLifecycle) {
+      await jobStore.updateRuntimeProgress(job.id, {
+        phase: "operation",
+        stage: "requeued",
+        detail: `任务失败后已重试入队（retry=${failed.retryCount}/${job.maxRetries}）。`,
+        updatedAt: new Date().toISOString(),
+        ok: false,
+      });
+      await notifyOperationEventBestEffort(args, notifier, progressNotifyRuntime, {
+        operator: job.createdBy,
+        operation: job.jobType,
+        lifecycle: "queued",
         detail: `任务失败后已重试入队（retry=${failed.retryCount}/${job.maxRetries}）。`,
         jobId: job.id,
+        reportDate,
       });
     }
   }
@@ -917,21 +1101,79 @@ async function runQueuedCliSubprocess(input: {
   jobStore: DbOperationJobStore;
   jobId: number;
   cliArgs: string[];
+  maxWallClockMs?: number;
+  onPipelineProgress?: (progress: {
+    nodeKey: string;
+    nodeState: "start" | "end";
+    detail: string;
+    createdAt: string;
+    elapsedMs?: number;
+    ok?: boolean;
+  }) => Promise<void>;
 }) {
   await new Promise<void>((resolve, reject) => {
     const child = spawn(process.execPath, [...CLI_SUBPROCESS_BASE_ARGS, ...input.cliArgs], {
       cwd: process.cwd(),
-      env: process.env,
+      // 仅在队列子进程开启节点级进度输出，避免常规 CLI 运行日志被额外污染。
+      env: {
+        ...process.env,
+        OP_PROGRESS_PIPE_STDOUT: "true",
+      },
       stdio: ["ignore", "pipe", "pipe"],
     });
 
     let stderrText = "";
+    let stdoutBuffer = "";
     let cancelRequested = false;
+    let timeoutTriggered = false;
     let killTimer: NodeJS.Timeout | null = null;
+    let wallClockTimer: NodeJS.Timeout | null = null;
     let pollInFlight = false;
 
-    child.stdout?.on("data", () => {
-      // 子进程详细日志仍由其自身 stdout 输出到父进程；这里不再二次转发避免噪音。
+    if (typeof input.maxWallClockMs === "number" && Number.isFinite(input.maxWallClockMs) && input.maxWallClockMs > 0) {
+      // 自动 recheck 可能因外部依赖抖动进入长时间无响应，这里加总时长护栏防止任务僵死。
+      wallClockTimer = setTimeout(() => {
+        timeoutTriggered = true;
+        child.kill("SIGTERM");
+        killTimer = setTimeout(() => {
+          if (!child.killed) {
+            child.kill("SIGKILL");
+          }
+        }, HARD_CANCEL_SIGKILL_GRACE_MS);
+      }, input.maxWallClockMs);
+    }
+
+    const consumeProgressLine = (line: string) => {
+      const parsed = parsePipelineProgressLine(line);
+      if (!parsed) {
+        return;
+      }
+      void input
+        .onPipelineProgress?.({
+          nodeKey: parsed.nodeKey,
+          nodeState: parsed.nodeState,
+          detail: parsed.detail,
+          createdAt: parsed.createdAt,
+          elapsedMs: parsed.elapsedMs,
+          ok: parsed.ok,
+        })
+        .catch((error) => {
+          // 进度回调失败不应影响主任务执行，仅记录 warning 用于排障。
+          console.log(`[daemon-progress-warning] ${error instanceof Error ? error.message : String(error)}`);
+        });
+    };
+
+    child.stdout?.on("data", (chunk) => {
+      stdoutBuffer += String(chunk);
+      while (true) {
+        const newlineIndex = stdoutBuffer.indexOf("\n");
+        if (newlineIndex < 0) {
+          break;
+        }
+        const line = stdoutBuffer.slice(0, newlineIndex).trim();
+        stdoutBuffer = stdoutBuffer.slice(newlineIndex + 1);
+        consumeProgressLine(line);
+      }
     });
     child.stderr?.on("data", (chunk) => {
       stderrText = `${stderrText}${String(chunk)}`.slice(-2_000);
@@ -969,6 +1211,9 @@ async function runQueuedCliSubprocess(input: {
       if (killTimer) {
         clearTimeout(killTimer);
       }
+      if (wallClockTimer) {
+        clearTimeout(wallClockTimer);
+      }
       reject(error);
     });
 
@@ -977,9 +1222,23 @@ async function runQueuedCliSubprocess(input: {
       if (killTimer) {
         clearTimeout(killTimer);
       }
+      if (wallClockTimer) {
+        clearTimeout(wallClockTimer);
+      }
+      if (stdoutBuffer.trim()) {
+        consumeProgressLine(stdoutBuffer.trim());
+      }
 
       if (cancelRequested) {
         reject(new OperationCancelledError("cancel_requested_by_operator"));
+        return;
+      }
+      if (timeoutTriggered) {
+        reject(
+          new OperationSubprocessTimeoutError(
+            `subprocess_timeout:${typeof input.maxWallClockMs === "number" ? input.maxWallClockMs : "unknown"}ms`,
+          ),
+        );
         return;
       }
 
@@ -994,20 +1253,61 @@ async function runQueuedCliSubprocess(input: {
   });
 }
 
+async function enqueueAutoRecheckAfterReviewAccepted(input: {
+  args: CliArgs;
+  notifier: FeishuNotifier;
+  jobStore: DbOperationJobStore;
+  progressNotifyRuntime: OperationProgressNotifyRuntime;
+  instruction: ReviewInstruction;
+}) {
+  const dedupeKey = input.instruction.traceId
+    ? `auto_recheck:${input.instruction.traceId}`
+    : `auto_recheck:${input.instruction.reportDate}:${input.instruction.action ?? "unknown"}:${input.instruction.decidedAt}`;
+  const enqueue = await input.jobStore.enqueue({
+    jobType: "recheck_weekly",
+    payload: {
+      reportDate: input.instruction.reportDate,
+      generatedAt: new Date().toISOString(),
+    },
+    dedupeKey,
+    createdBy: input.instruction.operator,
+    source: "feishu_callback_auto",
+    traceId: input.instruction.traceId,
+    maxRetries: 1,
+  });
+
+  await input.jobStore.updateRuntimeProgress(enqueue.jobId, {
+    phase: "operation",
+    stage: "queued",
+    detail: enqueue.created ? "修订已受理，自动 recheck 已入队。" : "检测到相同自动修订任务已在队列中，复用现有任务。",
+    updatedAt: new Date().toISOString(),
+  });
+
+  await notifyOperationEventBestEffort(input.args, input.notifier, input.progressNotifyRuntime, {
+    operator: input.instruction.operator,
+    operation: "recheck_weekly",
+    lifecycle: "queued",
+    detail: enqueue.created ? "修订已受理，自动 recheck 已入队。" : "检测到相同自动修订任务已在队列中，复用现有任务。",
+    jobId: enqueue.jobId,
+    reportDate: input.instruction.reportDate,
+  });
+}
+
 async function handleFeishuOperationAction(input: {
   args: CliArgs;
   notifier: FeishuNotifier;
   jobStore: DbOperationJobStore;
+  progressNotifyRuntime: OperationProgressNotifyRuntime;
   payload: FeishuOperationActionPayload;
   enqueueMessage: string;
 }) {
   const reportDate = input.payload.reportDate ?? dayjs().tz(input.args.timezone).format("YYYY-MM-DD");
   if (input.payload.operation === "query_weekly_status") {
     const detail = await queryWeeklyStatusDetail(input.args.outputRoot, reportDate, input.jobStore);
-    await notifyOperationStageBestEffort(input.notifier, {
+    await notifyOperationEventBestEffort(input.args, input.notifier, input.progressNotifyRuntime, {
       operator: input.payload.operator,
       operation: input.payload.operation,
-      result: "success",
+      lifecycle: "success",
       detail,
     });
     return {
@@ -1017,14 +1317,25 @@ async function handleFeishuOperationAction(input: {
   }
 
   if (input.payload.operation === "cancel_current_operation") {
-    const cancelled = await input.jobStore.requestCancelCurrent({
-      operator: input.payload.operator,
-      reason: input.payload.reason,
-    });
+    // 若按钮携带 targetJobId，优先精确命中该任务，避免“当前运行任务”漂移导致误中止。
+    const cancelled =
+      typeof input.payload.targetJobId === "number"
+        ? await input.jobStore.requestCancelByJobId({
+            jobId: input.payload.targetJobId,
+            operator: input.payload.operator,
+            reason: input.payload.reason,
+          })
+        : await input.jobStore.requestCancelCurrent({
+            operator: input.payload.operator,
+            reason: input.payload.reason,
+          });
     if (!cancelled.found) {
       return {
         accepted: true,
-        message: "当前没有可中止的任务。",
+        message:
+          typeof input.payload.targetJobId === "number"
+            ? `未找到指定任务（job=${input.payload.targetJobId}）。`
+            : "当前没有可中止的任务。",
       };
     }
 
@@ -1033,13 +1344,31 @@ async function handleFeishuOperationAction(input: {
         ? cancelled.alreadyRequested
           ? `已强制中止运行中任务（job=${cancelled.jobId}）。`
           : `已中止待执行任务（job=${cancelled.jobId}）。`
-        : `已记录中止请求，任务将在当前阶段结束后停止（job=${cancelled.jobId}）。`;
-    await notifyOperationStageBestEffort(input.notifier, {
+        : cancelled.status === "running"
+          ? `已记录中止请求，任务将在当前阶段结束后停止（job=${cancelled.jobId}）。`
+          : `任务已是终态（job=${cancelled.jobId}, status=${cancelled.status}），无需重复中止。`;
+    if (cancelled.jobId) {
+      const progressStage =
+        cancelled.status === "cancelled"
+          ? "cancelled"
+          : cancelled.status === "running"
+            ? "cancel_requested"
+            : `terminal_${cancelled.status}`;
+      await input.jobStore.updateRuntimeProgress(cancelled.jobId, {
+        phase: "operation",
+        stage: progressStage,
+        detail,
+        updatedAt: new Date().toISOString(),
+        ok: cancelled.status === "cancelled" ? false : undefined,
+      });
+    }
+    await notifyOperationEventBestEffort(input.args, input.notifier, input.progressNotifyRuntime, {
       operator: input.payload.operator,
-      operation: input.payload.operation,
-      result: "cancelled",
+      operation: cancelled.jobType ?? input.payload.operation,
+      lifecycle: "cancelled",
       detail,
       jobId: cancelled.jobId,
+      reportDate: cancelled.reportDate ?? reportDate,
     });
     return {
       accepted: true,
@@ -1057,28 +1386,65 @@ async function handleFeishuOperationAction(input: {
         message: "缺少 targetOperation，无法执行“中止并重新开始”。",
       };
     }
-    const cancelled = await input.jobStore.requestCancelCurrent({
-      operator: input.payload.operator,
-      reason: input.payload.reason ?? `cancel_and_retry:${targetOperation}`,
+    const restartDedupeKey = buildManualRestartOperationDedupeKey({
+      operation: targetOperation,
+      reportDate,
     });
+    const existingRestart = await input.jobStore.findRecentByDedupeKey(restartDedupeKey);
+    if (existingRestart && (existingRestart.status === "pending" || existingRestart.status === "running")) {
+      await notifyOperationEventBestEffort(input.args, input.notifier, input.progressNotifyRuntime, {
+        operator: input.payload.operator,
+        operation: targetOperation,
+        lifecycle: "queued",
+        detail: `检测到已有重启任务在${existingRestart.status === "running" ? "执行" : "排队"}（job=${existingRestart.id}），已忽略重复重启。`,
+        jobId: existingRestart.id,
+        reportDate,
+      });
+      return {
+        accepted: true,
+        duplicated: true,
+        jobId: existingRestart.id,
+        message: `已存在重启任务（job=${existingRestart.id}），忽略重复“中止并重新开始”。`,
+      };
+    }
+
+    // 中止并重启同样优先 targetJobId，保证与冲突卡上的“当前任务”一致。
+    const cancelled =
+      typeof input.payload.targetJobId === "number"
+        ? await input.jobStore.requestCancelByJobId({
+            jobId: input.payload.targetJobId,
+            operator: input.payload.operator,
+            reason: input.payload.reason ?? `cancel_and_retry:${targetOperation}`,
+          })
+        : await input.jobStore.requestCancelCurrent({
+            operator: input.payload.operator,
+            reason: input.payload.reason ?? `cancel_and_retry:${targetOperation}`,
+          });
     const restartEnqueue = await input.jobStore.enqueue({
       jobType: targetOperation,
       payload: buildOperationPayloadFromFeishuAction(targetOperation, reportDate, input.payload),
-      // “中止并重启”是显式运维意图，使用唯一 key 绕过去重窗口，确保可以创建新任务。
-      dedupeKey: `manual_restart:${targetOperation}:${reportDate}:${Date.now()}`,
+      // “中止并重启”使用稳定 key，在短窗口内幂等，防止重复点击产生任务膨胀。
+      dedupeKey: restartDedupeKey,
       createdBy: input.payload.operator,
       source: "feishu_manual",
       traceId: input.payload.traceId,
       maxRetries: targetOperation === "watchdog_weekly" ? 0 : 1,
     });
-    await notifyOperationStageBestEffort(input.notifier, {
+    await notifyOperationEventBestEffort(input.args, input.notifier, input.progressNotifyRuntime, {
       operator: input.payload.operator,
       operation: targetOperation,
-      result: "queued",
+      lifecycle: "queued",
       detail: cancelled.found
         ? `已发起中止并重启，新的任务已入队（job=${restartEnqueue.jobId}）。`
         : `未检测到运行中任务，已直接创建新任务（job=${restartEnqueue.jobId}）。`,
       jobId: restartEnqueue.jobId,
+      reportDate,
+    });
+    await input.jobStore.updateRuntimeProgress(restartEnqueue.jobId, {
+      phase: "operation",
+      stage: "queued",
+      detail: cancelled.found ? "已发起中止并重启，新任务已入队。" : "未检测到运行中任务，新任务已入队。",
+      updatedAt: new Date().toISOString(),
     });
     return {
       accepted: true,
@@ -1108,22 +1474,36 @@ async function handleFeishuOperationAction(input: {
     maxRetries: input.payload.operation === "watchdog_weekly" ? 0 : 1,
   });
   if (enqueue.created) {
-    await notifyOperationStageBestEffort(input.notifier, {
+    await input.jobStore.updateRuntimeProgress(enqueue.jobId, {
+      phase: "operation",
+      stage: "queued",
+      detail: "任务已受理并进入队列。",
+      updatedAt: new Date().toISOString(),
+    });
+    await notifyOperationEventBestEffort(input.args, input.notifier, input.progressNotifyRuntime, {
       operator: input.payload.operator,
       operation: input.payload.operation,
-      result: "queued",
+      lifecycle: "queued",
       detail: "任务已受理并进入队列。",
       jobId: enqueue.jobId,
+      reportDate,
     });
   } else {
     const existed = await input.jobStore.getById(enqueue.jobId);
-    if (existed && (existed.status === "running" || existed.status === "pending")) {
-      await notifyOperationStageBestEffort(input.notifier, {
+    if (existed && shouldNotifyOperationConflict(existed, enqueue.jobId)) {
+      await notifyOperationEventBestEffort(input.args, input.notifier, input.progressNotifyRuntime, {
         operator: input.payload.operator,
         operation: input.payload.operation,
-        result: "progress",
+        lifecycle: "progress",
         detail: `检测到同类任务正在${existed.status === "running" ? "执行" : "排队"}（job=${existed.id}）。`,
         jobId: existed.id,
+        reportDate,
+        progress: {
+          phase: "operation",
+          stage: "conflict_detected",
+          detail: `同类任务状态=${existed.status}`,
+          updatedAt: new Date().toISOString(),
+        },
       });
       await input.notifier
         .notifyOperationConflictControlCard({
@@ -1139,6 +1519,15 @@ async function handleFeishuOperationAction(input: {
         duplicated: true,
         jobId: enqueue.jobId,
         message: `检测到同类任务正在执行（job=${existed.id}），已发送“中止/中止并重启”控制卡。`,
+      };
+    }
+    if (existed && isOperationJobActive(existed.status)) {
+      // 同一任务重复回调（例如飞书重投）只返回幂等结果，不再发送冲突卡，避免“自己和自己冲突”的误导提示。
+      return {
+        accepted: true,
+        duplicated: true,
+        jobId: enqueue.jobId,
+        message: `该任务已在${existed.status === "running" ? "执行" : "排队"}中（job=${existed.id}），忽略重复提交。`,
       };
     }
   }
@@ -1161,6 +1550,19 @@ function isQueueExecutableOperation(operation: FeishuOperationActionPayload["ope
     operation === "query_weekly_status" ||
     operation === "git_sync"
   );
+}
+
+function isOperationJobActive(status: OperationJobStatus): boolean {
+  return status === "running" || status === "pending";
+}
+
+function shouldNotifyOperationConflict(
+  job: Pick<OperationJob, "id" | "status">,
+  enqueueJobId: number,
+): boolean {
+  // 仅当“重复点击命中了另一个活跃任务”才提示冲突；
+  // 同 jobId 的回调重投属于幂等重复，不应提示冲突。
+  return isOperationJobActive(job.status) && job.id !== enqueueJobId;
 }
 
 async function runAutoGitSync(args: CliArgs, reason: string) {
@@ -1232,18 +1634,19 @@ async function queryWeeklyStatusDetail(outputRoot: string, reportDate: string, j
   const matched = active.filter((job) => getOperationReportDate(job.payload) === reportDate);
   const running = matched.find((job) => job.status === "running");
   const pendingCount = matched.filter((job) => job.status === "pending").length;
+  const runningProgressSummary = running ? formatRunningProgressSummary(running) : "";
 
   try {
     const artifact = await loadReviewArtifact(outputRoot, "weekly", reportDate);
     const queueSummary = running
-      ? `, queue=running(${running.jobType}#${running.id}), pending=${pendingCount}`
+      ? `, queue=running(${running.jobType}#${running.id}), pending=${pendingCount}${runningProgressSummary}`
       : pendingCount > 0
         ? `, queue=pending(${pendingCount})`
         : "";
     return `status: review=${artifact.reviewStatus}, stage=${artifact.reviewStage}, publish=${artifact.publishStatus}${queueSummary}`;
   } catch {
     if (running) {
-      return `status: reportDate=${reportDate} 正在执行（${running.jobType}#${running.id}），pending=${pendingCount}`;
+      return `status: reportDate=${reportDate} 正在执行（${running.jobType}#${running.id}），pending=${pendingCount}${runningProgressSummary}`;
     }
     if (pendingCount > 0) {
       return `status: reportDate=${reportDate} 队列中有待执行任务（pending=${pendingCount}）`;
@@ -1260,6 +1663,35 @@ function getOperationReportDate(payload: Record<string, unknown>): string | unde
   return undefined;
 }
 
+function formatRunningProgressSummary(job: {
+  runtimeProgress?: OperationRuntimeProgress;
+  startedAt?: string;
+  lastError?: string;
+}): string {
+  const progress = job.runtimeProgress;
+  if (!progress) {
+    return "";
+  }
+  const now = Date.now();
+  const elapsedFromStart =
+    typeof progress.elapsedMs === "number"
+      ? progress.elapsedMs
+      : job.startedAt
+        ? Math.max(0, now - new Date(job.startedAt).getTime())
+        : undefined;
+  const phasePart = progress.phase ? `, phase=${progress.phase}` : "";
+  const stagePart = progress.stage ? `, stage=${progress.stage}` : "";
+  const nodePart = progress.nodeKey ? `, node=${progress.nodeKey}${progress.nodeState ? `(${progress.nodeState})` : ""}` : "";
+  const elapsedPart = typeof elapsedFromStart === "number" ? `, elapsed=${Math.round(elapsedFromStart / 1000)}s` : "";
+  const errorPart = progress.ok === false ? ", nodeResult=failed" : "";
+  const lastErrorPart = job.lastError ? `, lastError=${shortStatusError(job.lastError)}` : "";
+  return `${phasePart}${stagePart}${nodePart}${elapsedPart}${errorPart}${lastErrorPart}`;
+}
+
+function shortStatusError(message: string): string {
+  return message.length <= 80 ? message : `${message.slice(0, 77)}...`;
+}
+
 class OperationCancelledError extends Error {
   constructor(message: string) {
     super(message);
@@ -1267,8 +1699,22 @@ class OperationCancelledError extends Error {
   }
 }
 
+class OperationSubprocessTimeoutError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "OperationSubprocessTimeoutError";
+  }
+}
+
+function shouldNotifyFeishuJobSource(source: string | undefined): boolean {
+  return source === "feishu_manual" || source === "feishu_callback_auto";
+}
+
 function classifyOperationFailure(message: string): { category: string; detail: string } {
   const text = message.toLowerCase();
+  if (text.includes("subprocess_timeout")) {
+    return { category: "subprocess_timeout", detail: message };
+  }
   if (text.includes("timeout") || text.includes("timed out")) {
     return { category: "timeout", detail: message };
   }
@@ -1284,19 +1730,161 @@ function classifyOperationFailure(message: string): { category: string; detail: 
   return { category: "unknown", detail: message };
 }
 
-async function notifyOperationStageBestEffort(
+async function notifyRevisionRecoveryAfterInterruption(
   notifier: FeishuNotifier,
   input: {
-    operator?: string;
-    operation: FeishuOperationActionPayload["operation"];
-    result: "queued" | "started" | "progress" | "success" | "failed" | "cancelled";
-    detail: string;
-    jobId?: number;
+    job: { jobType: OperationJobType; createdBy?: string };
+    reportDate?: string;
+    failureCategory: string;
+    failureSummary: string;
   },
 ) {
-  await notifier.notifyOperationResult(input).catch((error) => {
-    console.log(`[daemon-notify-warning] ${error instanceof Error ? error.message : String(error)}`);
-  });
+  if (input.job.jobType !== "recheck_weekly" || !input.reportDate) {
+    return;
+  }
+  await notifier
+    .notifyRevisionRecovery({
+      reportDate: input.reportDate,
+      operator: input.job.createdBy,
+      failureCategory: input.failureCategory,
+      failureSummary: input.failureSummary.length > 200 ? `${input.failureSummary.slice(0, 197)}...` : input.failureSummary,
+    })
+    .catch((error) => {
+      console.log(`[daemon-notify-warning] ${error instanceof Error ? error.message : String(error)}`);
+    });
+}
+
+function createOperationProgressNotifyRuntime(): OperationProgressNotifyRuntime {
+  return {
+    dedupeCache: new Map<string, number>(),
+    jobUpdateCount: new Map<number, number>(),
+  };
+}
+
+// 运维通知统一入口：生命周期走文本回执，progress 走粒度控制 + 进度卡更新。
+async function notifyOperationEventBestEffort(
+  args: CliArgs,
+  notifier: FeishuNotifier,
+  runtime: OperationProgressNotifyRuntime,
+  event: OperationNotifyEvent,
+) {
+  const lifecycle = event.lifecycle;
+  if (lifecycle === "progress") {
+    if (!event.progress) {
+      return;
+    }
+    if (shouldSkipProgressByNotifyLevel(args.opProgressNotifyLevel, event.progress)) {
+      return;
+    }
+    if (isThrottledProgressEvent(args, runtime, event)) {
+      return;
+    }
+    await upsertOperationProgressCardBestEffort(args, notifier, runtime, event);
+    return;
+  }
+
+  await notifier
+    .notifyOperationResult({
+      operator: event.operator,
+      operation: event.operation,
+      result: lifecycle,
+      detail: event.detail,
+      jobId: event.jobId,
+    })
+    .catch((error) => {
+      console.log(`[daemon-notify-warning] ${error instanceof Error ? error.message : String(error)}`);
+    });
+
+  await upsertOperationProgressCardBestEffort(args, notifier, runtime, event);
+}
+
+function shouldSkipProgressByNotifyLevel(level: OperationProgressNotifyLevel, progress: OperationRuntimeProgress): boolean {
+  if (level === "off") {
+    return true;
+  }
+  if (level === "verbose") {
+    return false;
+  }
+  if (progress.phase === "operation") {
+    // operation phase 的事件频率较低，milestone 模式默认保留。
+    return false;
+  }
+  const nodeKey = progress.nodeKey;
+  if (!nodeKey || !OPERATION_PROGRESS_MILESTONE_NODES.has(nodeKey)) {
+    return true;
+  }
+  // milestone 模式仅在节点结束时上报，避免 start/end 双倍消息。
+  return progress.nodeState !== "end";
+}
+
+function isThrottledProgressEvent(args: CliArgs, runtime: OperationProgressNotifyRuntime, event: OperationNotifyEvent): boolean {
+  if (!event.progress || !event.jobId) {
+    return false;
+  }
+  const now = Date.now();
+  const throttleMs = Number.isFinite(args.opProgressNotifyThrottleMs)
+    ? Math.max(0, args.opProgressNotifyThrottleMs)
+    : OPERATION_PROGRESS_DEFAULT_THROTTLE_MS;
+  const signature = [
+    event.jobId,
+    event.lifecycle,
+    event.progress.phase,
+    event.progress.stage,
+    event.progress.nodeKey ?? "none",
+    event.progress.nodeState ?? "none",
+  ].join(":");
+
+  for (const [key, timestamp] of runtime.dedupeCache.entries()) {
+    if (now - timestamp > throttleMs) {
+      runtime.dedupeCache.delete(key);
+    }
+  }
+  const last = runtime.dedupeCache.get(signature);
+  if (typeof last === "number" && now - last <= throttleMs) {
+    return true;
+  }
+  runtime.dedupeCache.set(signature, now);
+  return false;
+}
+
+// 高频进度默认写入单任务卡片，终态也会更新卡片，保证群里始终只有一个可追踪入口。
+async function upsertOperationProgressCardBestEffort(
+  args: CliArgs,
+  notifier: FeishuNotifier,
+  runtime: OperationProgressNotifyRuntime,
+  event: OperationNotifyEvent,
+) {
+  if (!args.opProgressCardEnabled || !event.jobId || !event.reportDate) {
+    return;
+  }
+  const maxUpdates = Number.isFinite(args.opProgressNotifyMaxUpdates)
+    ? Math.max(1, args.opProgressNotifyMaxUpdates)
+    : OPERATION_PROGRESS_DEFAULT_MAX_UPDATES;
+  const currentCount = runtime.jobUpdateCount.get(event.jobId) ?? 0;
+  if (currentCount >= maxUpdates && event.lifecycle !== "success" && event.lifecycle !== "failed" && event.lifecycle !== "cancelled") {
+    return;
+  }
+  const nextCount = currentCount + 1;
+  runtime.jobUpdateCount.set(event.jobId, nextCount);
+
+  await notifier
+    .upsertOperationProgressCard({
+      jobId: event.jobId,
+      operation: event.operation,
+      reportDate: event.reportDate,
+      operator: event.operator,
+      lifecycle: event.lifecycle,
+      detail: event.detail,
+      phase: event.progress?.phase,
+      stage: event.progress?.stage ?? event.lifecycle,
+      nodeKey: event.progress?.nodeKey,
+      nodeState: event.progress?.nodeState,
+      elapsedMs: event.progress?.elapsedMs,
+      updateCount: nextCount,
+    })
+    .catch((error) => {
+      console.log(`[daemon-progress-card-warning] ${error instanceof Error ? error.message : String(error)}`);
+    });
 }
 
 function parseArgs(argv: string[]): CliArgs {
@@ -1495,6 +2083,12 @@ function parseArgs(argv: string[]): CliArgs {
 
     if (token === "--revision-agent-planner-timeout-ms" && next) {
       args.revisionAgentPlannerTimeoutMs = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--revision-recheck-max-wall-clock-ms" && next) {
+      args.revisionRecheckMaxWallClockMs = Number(next);
       i += 1;
       continue;
     }
@@ -1781,6 +2375,32 @@ function parseArgs(argv: string[]): CliArgs {
       continue;
     }
 
+    if (token === "--op-progress-notify-level" && next) {
+      if (next !== "off" && next !== "milestone" && next !== "verbose") {
+        throw new Error("--op-progress-notify-level 只支持 off/milestone/verbose");
+      }
+      args.opProgressNotifyLevel = next;
+      i += 1;
+      continue;
+    }
+
+    if (token === "--op-progress-card-disabled") {
+      args.opProgressCardEnabled = false;
+      continue;
+    }
+
+    if (token === "--op-progress-notify-throttle-ms" && next) {
+      args.opProgressNotifyThrottleMs = Number(next);
+      i += 1;
+      continue;
+    }
+
+    if (token === "--op-progress-notify-max-updates" && next) {
+      args.opProgressNotifyMaxUpdates = Number(next);
+      i += 1;
+      continue;
+    }
+
     if (token === "--report-date" && next) {
       args.reportDate = next;
       i += 1;
@@ -1834,6 +2454,9 @@ function defaults(): CliArgs {
     revisionAgentMaxLlmCalls: Number(process.env.REVISION_AGENT_MAX_LLM_CALLS ?? "30"),
     revisionAgentMaxToolErrors: Number(process.env.REVISION_AGENT_MAX_TOOL_ERRORS ?? "5"),
     revisionAgentPlannerTimeoutMs: Number(process.env.REVISION_AGENT_PLANNER_TIMEOUT_MS ?? "30000"),
+    revisionRecheckMaxWallClockMs: Number(
+      process.env.REVISION_RECHECK_MAX_WALL_CLOCK_MS ?? String(RECHECK_SUBPROCESS_DEFAULT_TIMEOUT_MS),
+    ),
     timezone: "Asia/Shanghai",
     outputRoot: "outputs/review",
     publishRoot: "outputs/published",
@@ -1883,6 +2506,13 @@ function defaults(): CliArgs {
     reviewApiPort: Number(process.env.REVIEW_API_PORT ?? "8790"),
     reviewApiAuthToken: process.env.REVIEW_API_AUTH_TOKEN,
     notificationRoot: "outputs/notifications/feishu",
+    opProgressNotifyLevel:
+      process.env.OP_PROGRESS_NOTIFY_LEVEL === "off" || process.env.OP_PROGRESS_NOTIFY_LEVEL === "verbose"
+        ? process.env.OP_PROGRESS_NOTIFY_LEVEL
+        : "milestone",
+    opProgressCardEnabled: process.env.OP_PROGRESS_CARD_ENABLED !== "false",
+    opProgressNotifyThrottleMs: Number(process.env.OP_PROGRESS_NOTIFY_THROTTLE_MS ?? OPERATION_PROGRESS_DEFAULT_THROTTLE_MS),
+    opProgressNotifyMaxUpdates: Number(process.env.OP_PROGRESS_NOTIFY_MAX_UPDATES ?? OPERATION_PROGRESS_DEFAULT_MAX_UPDATES),
   };
 }
 
@@ -1965,6 +2595,7 @@ async function writeArtifacts(root: string, mode: ReportMode, datePart: string, 
         categoryLeadSummaries: result.categoryLeadSummaries,
         summaryInputHash: result.summaryInputHash,
         llmClassifyScoreMeta: result.llmClassifyScoreMeta,
+        githubSelectionMeta: result.githubSelectionMeta,
         llmSummaryMeta: result.llmSummaryMeta,
         highlights: result.highlights,
         revisionAuditLogs: result.revisionAuditLogs,
@@ -1985,6 +2616,7 @@ async function writeArtifacts(root: string, mode: ReportMode, datePart: string, 
           categoryLeadSummaries: result.categoryLeadSummaries,
           summaryInputHash: result.summaryInputHash,
           llmClassifyScoreMeta: result.llmClassifyScoreMeta,
+          githubSelectionMeta: result.githubSelectionMeta,
           llmSummaryMeta: result.llmSummaryMeta,
           highlights: result.highlights,
           metrics: result.metrics,
@@ -2291,6 +2923,7 @@ function buildRecheckStateFromArtifact(input: {
         fallbackCount: 0,
         fallbackTriggered: false,
       },
+    githubSelectionMeta: artifact.snapshot.githubSelectionMeta ?? artifact.githubSelectionMeta,
     llmSummaryMeta: artifact.snapshot.llmSummaryMeta ??
       artifact.llmSummaryMeta ?? {
         enabled: false,
@@ -2377,7 +3010,28 @@ function printRunResult(prefix: "done" | "recheck", result: ReportState) {
   }
 }
 
-main().catch((error) => {
-  console.error(`[error] ${error instanceof Error ? error.message : String(error)}`);
-  process.exitCode = 1;
-});
+function isCliEntrypoint(moduleUrl: string, argv1: string | undefined): boolean {
+  if (!argv1) {
+    return false;
+  }
+  try {
+    return moduleUrl === pathToFileURL(argv1).href;
+  } catch {
+    return false;
+  }
+}
+
+if (isCliEntrypoint(import.meta.url, process.argv[1])) {
+  main().catch((error) => {
+    console.error(`[error] ${error instanceof Error ? error.message : String(error)}`);
+    process.exitCode = 1;
+  });
+}
+
+export const __test__ = {
+  classifyOperationFailure,
+  shouldNotifyFeishuJobSource,
+  shouldNotifyOperationConflict,
+  runQueuedCliSubprocess,
+  isCliEntrypoint,
+};

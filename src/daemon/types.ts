@@ -10,6 +10,21 @@ export type OperationJobType =
 
 export type OperationJobStatus = "pending" | "running" | "success" | "failed" | "cancelled";
 
+export type OperationProgressPhase = "operation" | "pipeline";
+
+export type OperationPipelineNodeState = "start" | "end";
+
+export interface OperationRuntimeProgress {
+  phase: OperationProgressPhase;
+  stage: string;
+  detail: string;
+  updatedAt: string;
+  elapsedMs?: number;
+  nodeKey?: string;
+  nodeState?: OperationPipelineNodeState;
+  ok?: boolean;
+}
+
 export interface OperationJob {
   id: number;
   jobType: OperationJobType;
@@ -26,6 +41,8 @@ export interface OperationJob {
   finishedAt?: string;
   createdAt: string;
   updatedAt: string;
+  runtimeProgress?: OperationRuntimeProgress;
+  runtimeProgressEventCount?: number;
 }
 
 export interface EnqueueOperationJobInput {
