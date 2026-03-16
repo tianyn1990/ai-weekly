@@ -59,17 +59,17 @@
 - **AND** 记录回退原因且不中断流程
 
 ### Requirement: Weekly pipeline SHALL support human review gates before publish
-系统 SHALL 在 weekly 模式提供审核断点，至少包含大纲审核与终稿审核两个阶段，并从持久化审核指令源读取审核动作；M4 阶段持久化源 SHALL 以 DB/API 为主，并维持结构化回流 payload 与 last-write-wins 决策策略。
+系统 SHALL 在 weekly 模式提供单阶段终稿审核断点（`final_review`），并从持久化审核指令源读取审核动作；持久化源 SHALL 以 DB/API 为主，并维持结构化回流 payload 与 last-write-wins 决策策略。
 
-#### Scenario: Read latest review action from DB/API in recheck path
-- **WHEN** recheck 或 watchdog 需要判定某 reportDate 的审核状态
-- **THEN** 系统优先从 DB/API 读取最新有效审核动作
-- **AND** 若启用 fallback 且 DB 不可用，可回退到文件路径读取
+#### Scenario: Weekly run enters single final review stage
+- **WHEN** 生成 weekly 待审核稿
+- **THEN** 系统状态进入 `final_review`
+- **AND** 不再创建新的 `outline_review` 审核阶段
 
-#### Scenario: Instruction source remains compatible with CLI fallback
-- **WHEN** 外部回调不可用或 API 写入失败
-- **THEN** 系统允许 CLI 参数作为兼容兜底
-- **AND** 不破坏既有超时自动发布策略
+#### Scenario: Historical outline action remains compatible
+- **WHEN** 系统收到历史动作 `approve_outline`
+- **THEN** 系统返回兼容提示并引导使用终稿通过动作
+- **AND** 不因历史动作导致流程崩溃或状态异常
 
 ### Requirement: Weekly pipeline SHALL auto-publish timeout review version at deadline
 系统 SHALL 在周一 12:30（Asia/Shanghai）未完成审核时自动发布当前待审核版本，并标记为超时发布。
@@ -127,23 +127,18 @@
 - **AND** 回执包含关键上下文（action、reportDate、结果摘要）
 
 ### Requirement: Weekly pipeline SHALL execute feedback-driven revision loop
-系统 SHALL 支持审核意见回流修订能力，在保留原有待审核快照基础上执行结构化调整，并在修订完成后重新进入终稿审核。
+系统 SHALL 支持以“自由文本修订意见”为主输入的回流修订能力；修订执行 SHALL 采用受限 ReAct 循环（LLM 规划 + 工具执行 + 校验），并在完成后重新进入终稿审核。
 
-#### Scenario: Execute structured revision directives after request_revision
-- **WHEN** 审核人提交 `request_revision` 且包含结构化回流指令
-- **THEN** 系统基于当前待审核快照执行候选增删与规则调整
-- **AND** 系统输出修订审计摘要
-- **AND** 报告状态进入 `final_review`
+#### Scenario: Free-text revision request is decomposed into multiple executable tasks
+- **WHEN** 审核人提交一段包含多条诉求的修订意见
+- **THEN** 系统将意见拆分为多个可执行任务
+- **AND** 每个任务可映射到明确目标与操作类型
 
-#### Scenario: Persist global tuning from revision directives
-- **WHEN** 回流指令包含来源启停、来源权重或排序权重调整
-- **THEN** 系统将该调整写入全局配置存储
-- **AND** 后续周期 run 读取并生效
-
-#### Scenario: Keep editor notes as non-executable audit metadata
-- **WHEN** 回流指令包含 `editor_notes`
-- **THEN** 系统记录该备注到审计日志
-- **AND** 不将其作为自动执行动作
+#### Scenario: Revision execution keeps report structure auditable
+- **WHEN** 系统执行修订任务
+- **THEN** 系统基于结构化快照执行 patch 与重建
+- **AND** 输出 before/after 差异与审计日志
+- **AND** 不通过“整篇 Markdown 直接重写”方式完成修订
 
 ### Requirement: Reject action SHALL terminate current run publication attempt
 系统 SHALL 在收到 `reject` 动作后终止当前 run 的发布尝试，并要求新建 run 才能重新进入发布流程。
@@ -211,27 +206,17 @@
 - **AND** 系统输出降级告警用于后续排查
 
 ### Requirement: Feishu review interaction SHALL provide stage-guided and user-readable experience
-系统 SHALL 提供以审核者为中心的飞书交互体验，确保用户可快速理解当前阶段、下一步动作与流程结果。
+系统 SHALL 提供以审核者为中心的飞书交互体验；在单阶段审核模型下，主卡 SHALL 聚焦终稿审核动作，并在修订失败或中断时提供可恢复操作入口。
 
-#### Scenario: Outline stage card shows only relevant actions and guidance
-- **WHEN** 周报处于 `outline_review` 阶段
-- **THEN** 主卡仅展示大纲阶段相关动作
-- **AND** 主卡明确展示“当前状态、下一步建议、截止时间、查看待审核稿链接”
-
-#### Scenario: Final stage card shows only final-review actions
+#### Scenario: Final review card shows single-stage actions only
 - **WHEN** 周报处于 `final_review` 阶段
-- **THEN** 主卡仅展示终稿阶段相关动作
-- **AND** 不展示与当前阶段无关的按钮
+- **THEN** 主卡仅展示“终稿通过并发布 / 要求修订 / 拒绝本次”
+- **AND** 主卡展示当前状态、下一步建议、截止时间与稿件链接
 
-#### Scenario: Action receipt uses concise business wording
-- **WHEN** 用户在飞书点击审核动作且系统处理完成
-- **THEN** toast 与群内回执使用业务化短句描述结果
-- **AND** 默认不展示 traceId/messageId 等技术字段
-
-#### Scenario: Duplicate callback should not spam group receipts
-- **WHEN** 同一审核事件被重复回调且命中幂等判重
-- **THEN** 系统返回“重复已忽略”反馈
-- **AND** 群内不重复发送同类动作回执
+#### Scenario: Revision failure card provides recovery actions
+- **WHEN** 修订流程失败或被护栏中断
+- **THEN** 系统回执失败原因分类与已完成动作摘要
+- **AND** 卡片提供“编辑后重试 / 继续执行 / 直接通过审核发布”入口
 
 ### Requirement: Feishu callback SHALL provide explicit click feedback and status echo
 系统 SHALL 在处理飞书卡片点击动作后向点击人提供明确反馈，并向群内输出当前状态回执，避免“点击后无感知”。
@@ -270,7 +255,7 @@
 - **AND** 不重复执行已完成且无变更价值的任务
 
 ### Requirement: System SHALL support manual operations via Feishu mention and operation card
-系统 SHALL 支持在 Feishu 群内通过 @应用机器人获取主动触发操作卡，并通过卡片按钮触发常见运维动作；其中读类状态查询 SHALL 走直读路径，不得被异步队列阻塞。
+系统 SHALL 支持在 Feishu 群内通过 @应用机器人获取主动触发操作卡，并通过卡片按钮触发常见运维动作；其中读类状态查询 SHALL 走直读路径，不得被异步队列阻塞，并应返回运行中任务的关键进度上下文。
 
 #### Scenario: Mention bot returns operation card
 - **WHEN** 用户在群内 @应用机器人并触发运维指令
@@ -282,11 +267,12 @@
 - **THEN** 系统先返回“已接收”反馈并创建 operation job
 - **AND** 由后台 worker 异步执行该任务并回执最终结果
 
-#### Scenario: Query status is served synchronously without queueing
+#### Scenario: Query status is served synchronously with running-progress context
 - **WHEN** 用户点击 `query_status` 动作
 - **THEN** 系统在回调处理链路内直接读取并返回当前状态
 - **AND** 不创建 operation job
 - **AND** 即使当前队列有长任务运行，状态查询仍可立即响应
+- **AND** 若存在运行中任务，返回内容包含当前阶段/节点、运行耗时与最近错误摘要
 
 #### Scenario: Manual daily run action is available in operation card
 - **WHEN** 用户打开运维操作卡
@@ -296,12 +282,12 @@
 ### Requirement: System SHALL auto-trigger recheck after accepted review action callback
 系统 SHALL 在审核动作回调成功写入后自动触发对应 recheck 流程，避免人工补执行命令。
 
-#### Scenario: Approve outline callback auto advances to final review
-- **WHEN** 回调写入 `approve_outline` 且动作受理成功
-- **THEN** 系统自动触发该 reportDate 的 recheck job
-- **AND** 周报状态推进到 `final_review`（若无冲突动作）
+#### Scenario: Request revision callback auto-triggers revision recheck
+- **WHEN** 回调写入 `request_revision` 且动作受理成功
+- **THEN** 系统自动入队并执行修订流程
+- **AND** 修订完成后状态仍回到 `final_review`
 
-#### Scenario: Approve final callback auto publishes after recheck
+#### Scenario: Approve final callback auto-publishes after recheck
 - **WHEN** 回调写入 `approve_final` 且动作受理成功
 - **THEN** 系统自动触发 recheck job
 - **AND** 在发布条件满足时完成发布并输出发布回执
@@ -607,17 +593,37 @@
 - **AND** 用户可据此快速调整 `data/sources.yaml` 或环境配置
 
 ### Requirement: Operation jobs SHALL provide staged progress, failure notification, and cancel control
-系统 SHALL 为运维执行类动作提供可观测的阶段通知、明确的失败通知与可中止控制，确保长任务可追踪、可止损。
+系统 SHALL 为运维执行类动作提供可观测的阶段通知、明确的失败通知与可中止控制，确保长任务可追踪、可止损；进度通知 SHALL 支持可配置粒度，并以单任务进度卡承载高频更新。
 
 #### Scenario: Accepted execution action emits queued and started notifications
 - **WHEN** 用户点击执行类运维动作且受理成功
 - **THEN** 系统先回执 `queued`（已受理入队）
 - **AND** worker 开始执行时发送 `started` 通知
 
-#### Scenario: Long-running operation emits bounded progress updates
-- **WHEN** 执行类任务跨越多个关键阶段
-- **THEN** 系统在关键阶段发送 `progress` 通知
-- **AND** 通知数量受控，避免群内刷屏
+#### Scenario: Off level emits lifecycle-only notifications
+- **WHEN** `OP_PROGRESS_NOTIFY_LEVEL=off`
+- **THEN** 系统仅发送生命周期关键通知（queued/started/终态）
+- **AND** 不发送节点级 `progress` 通知
+
+#### Scenario: Milestone level emits bounded key-node progress updates
+- **WHEN** `OP_PROGRESS_NOTIFY_LEVEL=milestone` 且执行类任务跨越关键节点
+- **THEN** 系统在关键节点发送 `progress` 更新
+- **AND** 更新数量受控，避免群内刷屏
+
+#### Scenario: Verbose level emits pipeline node start/end progress for run jobs
+- **WHEN** `OP_PROGRESS_NOTIFY_LEVEL=verbose` 且执行 `run_daily` 或 `run_weekly`
+- **THEN** 系统对 pipeline 节点输出 `start/end` 进度事件
+- **AND** 节点至少覆盖 collect、normalize、dedupe、llm_classify_score、rank、llm_summarize、build_report、publish_or_wait
+
+#### Scenario: Progress updates are upserted to a single live card per job
+- **WHEN** 同一 `jobId` 在执行过程中产生多个进度事件
+- **THEN** 系统优先 PATCH 同一张进度卡
+- **AND** 不为每个进度事件重复发送新卡片
+
+#### Scenario: Progress notifications are throttled and deduplicated
+- **WHEN** 同一阶段或同一节点短时间重复上报
+- **THEN** 系统按去重键与节流窗口合并通知
+- **AND** 单任务更新次数超过上限后仅保留终态通知
 
 #### Scenario: Failed operation emits reasoned failure notification
 - **WHEN** 执行类任务失败
@@ -645,4 +651,128 @@
 - **THEN** 系统返回“任务已在运行中”提示
 - **AND** 发送冲突控制通知，包含“中止当前任务”与“中止并重新开始”操作入口
 - **AND** 该能力对 `run_daily` 与 `run_weekly` 均生效
+
+### Requirement: Auto recheck SHALL be protected by bounded wall-clock timeout
+系统 SHALL 对自动 recheck 子进程执行设置总时长护栏，超过阈值时安全中断并输出可诊断失败分类，避免任务长期 `running` 无终态。
+
+#### Scenario: Auto recheck is terminated when wall-clock timeout is exceeded
+- **WHEN** 自动 recheck 运行时间超过配置阈值
+- **THEN** 系统终止该任务并标记失败
+- **AND** 失败分类包含 `subprocess_timeout`
+- **AND** 飞书回执包含可读错误摘要
+
+#### Scenario: Timeout handling remains compatible with manual cancel
+- **WHEN** 任务已收到人工中止请求且同时接近超时阈值
+- **THEN** 系统仅落一个终态（`cancelled` 或 `failed`）
+- **AND** 不产生重复终态通知
+
+### Requirement: Revision feedback contract SHALL be explicit and validated at callback boundary
+系统 SHALL 在回调边界校验修订 feedback contract，确保 `revisionRequest` 与可选字段结构合法，非法输入应即时失败并返回可读提示。
+
+#### Scenario: Invalid revision feedback is rejected at callback layer
+- **WHEN** 回调提交的 `feedback` 不满足 schema（例如字段类型错误或缺失必要信息）
+- **THEN** 系统拒绝受理该动作
+- **AND** 返回可读错误提示，且不写入无效审核指令
+
+#### Scenario: Valid revision feedback is persisted for audit and replay
+- **WHEN** 回调提交的 `feedback` 通过校验
+- **THEN** 系统将其随审核指令持久化
+- **AND** 后续 recheck 与审计查询可重放该输入上下文
+
+### Requirement: Revision ReAct agent SHALL run within configurable bounded budget
+系统 SHALL 为修订 ReAct 节点提供可配置运行护栏，至少包含最大步数、总流程超时、最大 LLM 调用次数与最大工具错误次数，超限后安全中断并保留可恢复上下文。
+
+#### Scenario: Agent stops when wall-clock timeout is reached
+- **WHEN** 修订 ReAct 流程运行时长超过 `REVISION_AGENT_MAX_WALL_CLOCK_MS`
+- **THEN** 系统中断本次修订执行
+- **AND** 返回 `wall_clock_timeout` 失败分类
+- **AND** 默认总流程超时为 600000ms（10 分钟）
+
+#### Scenario: Agent stops when step budget is exhausted
+- **WHEN** ReAct 执行步数达到 `REVISION_AGENT_MAX_STEPS`
+- **THEN** 系统中断执行并返回 `step_limit_reached`
+- **AND** 默认最大步数为 20（可配置）
+
+### Requirement: Revision planner SHALL produce strict JSON plan with retry and validation
+修订 Planner SHALL 以严格 JSON contract 输出任务计划，禁止 markdown/code fence/解释文本；当发生超时、限流、5xx、可修复 JSON 失败时 SHALL 执行重试与退避，重试失败后返回可读失败原因。
+
+#### Scenario: Planner output passes JSON schema and maps to executable tasks
+- **WHEN** Planner 成功返回修订计划
+- **THEN** 计划可通过 `JSON.parse` 与 schema 校验
+- **AND** 每个任务包含目标定位、操作类型、参数与置信度
+
+#### Scenario: Planner retries on transient provider failures
+- **WHEN** Planner 调用出现 timeout/429/5xx 或可修复 JSON 失败
+- **THEN** 系统执行重试与退避
+- **AND** 若最终失败返回 `planning_failed` 及原因摘要
+
+### Requirement: Revision workflow SHALL support recoverable failure handling and operator override
+系统 SHALL 在修订失败或部分失败时提供可恢复机制与人工覆盖路径，确保流程不中断且可继续推进。
+
+#### Scenario: Operator can edit prompt and retry failed revision
+- **WHEN** 修订执行失败且用户选择“编辑后重试”
+- **THEN** 系统允许用户修改意见文本并重新发起修订
+- **AND** 新请求沿用同一报告上下文进行执行
+
+#### Scenario: Operator can continue from checkpoint
+- **WHEN** 修订在中途因护栏或临时错误中断
+- **THEN** 系统允许从最近 checkpoint 继续执行未完成任务
+- **AND** 已成功任务不重复执行
+
+#### Scenario: Operator can bypass revision and directly approve publish
+- **WHEN** 修订失败但审核人确认可直接发布
+- **THEN** 系统允许执行“终稿通过并发布”动作
+- **AND** 审计日志记录该人工覆盖决策与失败上下文
+
+### Requirement: GitHub AI source SHALL use freshness-bounded dual-query candidate strategy
+系统 SHALL 对 GitHub AI 数据源采用“双查询并集”候选策略，以平衡近期活跃项目与近期新项目，并避免单一 `updated` 排序带来的偏置。
+
+#### Scenario: Build candidate pool with pushed-window and created-window
+- **WHEN** 系统执行 GitHub AI 数据源采集
+- **THEN** 系统同时执行基于 `pushed` 时间窗口的活跃查询与基于 `created` 时间窗口的新仓查询
+- **AND** 系统对两路结果并集去重后进入后续处理
+
+#### Scenario: Keep fail-soft when one query path fails
+- **WHEN** 双查询中任一路发生超时或 HTTP 异常
+- **THEN** 系统继续使用可用查询结果完成本次采集
+- **AND** 系统在 warnings 中记录失败路径与错误摘要
+
+### Requirement: GitHub repository entries SHALL support cross-day cooldown with breakout policy
+系统 SHALL 对 GitHub 仓库条目实施跨天冷却策略，降低同一仓库短周期重复曝光；在显著动态信号出现时，系统 SHALL 允许突破冷却。
+
+#### Scenario: Suppress repeated repository within cooldown window
+- **WHEN** 某仓库在冷却窗口内已被日报或周报入选
+- **THEN** 本次运行默认不再将该仓库纳入重点入选列表
+- **AND** 系统记录过滤原因为 cooldown 命中
+
+#### Scenario: Allow breakout when significant update signal is detected
+- **WHEN** 冷却窗口内的仓库命中显著动态信号（如 release 或高强度活跃信号）
+- **THEN** 系统允许该仓库突破冷却并参与本次排序
+- **AND** 系统记录突破原因，便于后续审计
+
+### Requirement: Report output SHALL separate GitHub dynamics with Trending-like semantics
+系统 SHALL 在输出语义上将 GitHub 仓库动态与新闻型来源区分，采用 Trending-like 视角表达“项目热度动态”，避免语义混淆。
+
+#### Scenario: Daily report distinguishes repository dynamics from news stream
+- **WHEN** 日报包含 GitHub 仓库条目
+- **THEN** 报告在结构或标记上明确其为“项目动态/热度动态”而非新闻首发
+- **AND** 用户可从条目中识别其来源与动态类型
+
+#### Scenario: Weekly report keeps explainable mixed-view output
+- **WHEN** 周报输出跨来源条目
+- **THEN** GitHub 仓库条目保留 Trending-like 语义标识
+- **AND** 不影响既有审核、发布与回执流程
+
+### Requirement: Source diagnostics SHALL expose GitHub filtering and ranking observability
+系统 SHALL 对 GitHub 采集与筛选链路提供结构化可观测性，便于解释“某条为何入选或被过滤”。
+
+#### Scenario: Diagnose command outputs GitHub query and filter stats
+- **WHEN** 用户执行 source diagnose
+- **THEN** 输出中包含 GitHub 查询命中数、去重数、cooldown 过滤数、突破冷却数与最终入选数
+- **AND** 输出当前关键参数（窗口大小、阈值）
+
+#### Scenario: Run artifact records GitHub selection diagnostics
+- **WHEN** 系统完成一次 daily 或 weekly 运行
+- **THEN** 结构化产物包含 GitHub 选择诊断信息
+- **AND** 可用于复盘该周期候选与入选差异
 
