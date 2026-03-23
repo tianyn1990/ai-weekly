@@ -1,0 +1,2194 @@
+{
+  "runId": "daily-1774230165333",
+  "generatedAt": "2026-03-23T01:42:45.238Z",
+  "reviewStartedAt": "2026-03-23T01:42:45.238Z",
+  "reportDate": "2026-03-23",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-03-23T01:42:45.238Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 24,
+    "normalizedCount": 24,
+    "dedupedCount": 24,
+    "highImportanceCount": 2,
+    "mediumImportanceCount": 8,
+    "lowImportanceCount": 14,
+    "categoryBreakdown": {
+      "open-source": 1,
+      "tooling": 6,
+      "agent": 2,
+      "research": 5,
+      "industry-news": 5,
+      "tutorial": 3,
+      "other": 2
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "7f1f49f7759b",
+      "title": "Implementing Deep Q-Learning (DQN) from Scratch Using RLax JAX Haiku and Optax to Train a CartPole Reinforcement Learning Agent",
+      "titleZh": "使用 RLax JAX Haiku Optax 从零实现深度 Q 学习 DQN",
+      "summary": "In this tutorial, we implement a reinforcement learning agent using RLax, a research-oriented library developed by Goog…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "7f1f49f7759b"
+      ],
+      "domainTag": "rl",
+      "intentTag": "research",
+      "confidence": 0.89,
+      "llmScore": 84
+    },
+    {
+      "itemId": "d580a619910e",
+      "title": "Meet GitAgent: The Docker for AI Agents that is Finally Solving the Fragmentation between LangChain, AutoGen, and Claude Code",
+      "summary": "GitAgent 是一个新兴的 AI Agent 工具，旨在统一当前碎片化的 AI Agent 框架生态，解决 LangChain、AutoGen、CrewAI 等五大框架之间的互操作性问题。",
+      "recommendation": "工程团队应关注 GitAgent，它有望成为 AI Agent 领域的「Docker」，统一不同框架的开发体验，降低框架锁定风险。",
+      "evidenceItemIds": [
+        "d580a619910e"
+      ],
+      "domainTag": "tooling",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 85.22
+    },
+    {
+      "itemId": "79f05d166b91",
+      "title": "Stripe Engineers Deploy Minions, Autonomous Agents Producing Thousands of Pull Requests Weekly",
+      "summary": "Stripe推出名为Minions的自主编程代理，每周可生成超过1300个",
+      "recommendation": "建议近期纳入评估《Stripe Engineers Deploy Minions, Autonomous Agents Producing Thousands of Pull Requests Weekly》相关方案，重点关注多 Agent 协作策略与稳定性。",
+      "evidenceItemIds": [
+        "79f05d166b91"
+      ],
+      "domainTag": "agent",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 80.26
+    },
+    {
+      "itemId": "bc6f8d91d0a9",
+      "title": "Where Do Humans Fit in AI-Assisted Software Development?",
+      "summary": "Kief Morris",
+      "recommendation": "建议近期纳入评估《Where Do Humans Fit in AI-Assisted Software Development?》相关方案，重点关注多 Agent 协作策略与稳定性。",
+      "evidenceItemIds": [
+        "bc6f8d91d0a9"
+      ],
+      "domainTag": "agent",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 74.7
+    },
+    {
+      "itemId": "67138cda251d",
+      "title": "A Coding Implementation to Build an Uncertainty-Aware LLM System with Confidence Estimation, Self-Evaluation, and Automatic Web Research",
+      "titleZh": "构建不确定性感知的LLM系统实战教程",
+      "summary": "In this tutorial, we build an uncertainty-aware large language model system that not only generates answers but also es…",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "67138cda251d"
+      ],
+      "domainTag": "llm",
+      "intentTag": "tutorial",
+      "confidence": 0.94,
+      "llmScore": 82
+    },
+    {
+      "itemId": "e27c3af43785",
+      "title": "QCon London 2026: Morgan Stanley Rethinks Its API Program for the MCP Era",
+      "titleZh": "QCon London 2026：摩根士丹利为 MCP 时代重新设计 API 计划",
+      "summary": "Morgan Stanley engineers Jim Gough and Andreea Niculcea showed how they're retooling the bank's API program for AI agen…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "e27c3af43785"
+      ],
+      "domainTag": "api",
+      "intentTag": "tooling",
+      "confidence": 0.91,
+      "llmScore": 85
+    },
+    {
+      "itemId": "f01ed047a904",
+      "title": "How BM25 and RAG Retrieve Information Differently?",
+      "summary": "本文对比了传统BM25检索算法与新型RAG检索方式在信息查找上的核心差异，BM25基于词频和文档长度等三要素评分，而RAG结合大语言模型实现更智能的语义检索。",
+      "recommendation": "建议近期纳入评估《How BM25 and RAG Retrieve Information Differently?》相关方案，重点关注实践步骤的可复现性。",
+      "evidenceItemIds": [
+        "f01ed047a904"
+      ],
+      "domainTag": "tutorial",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 71.69
+    },
+    {
+      "itemId": "f04841e1c045",
+      "title": "A Coding Implementation for Building and Analyzing Crystal Structures Using Pymatgen for Symmetry Analysis, Phase Diagrams, Surface Generation, and Materials Project Integration",
+      "summary": "本教程介绍使用Python的pymatgen库进行晶体结构构建与分析，涵盖硅、氯化钠、LiFePO₄等材料的晶格性质、对称性分析、原子配位环境和氧化态应用。",
+      "recommendation": "适合计算材料科学领域开发者学习pymatgen基础操作，特别是需要材料项目集成和相图分析的工程团队。",
+      "evidenceItemIds": [
+        "f04841e1c045"
+      ],
+      "domainTag": "tutorial",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 71.33
+    },
+    {
+      "itemId": "18d15cdba70b",
+      "title": "Safely Deploying ML Models to Production: Four Controlled Strategies (A/B, Canary, Interleaved, Shadow Testing)",
+      "titleZh": "安全部署ML模型到生产环境：四种受控策略（A/B、金丝雀、交错、影子测试）",
+      "summary": "本文介绍了四种安全的ML模型部署策略：A/B测试、金丝雀发布、交错测试和影子测试，帮助在生产环境中逐步验证模型效果并降低风险。",
+      "recommendation": "工程团队在部署新ML模型时应采用受控策略，避免直接替换导致线上事故，建议从影子测试开始逐步验证。",
+      "evidenceItemIds": [
+        "18d15cdba70b"
+      ],
+      "domainTag": "tooling",
+      "intentTag": "tutorial",
+      "actionability": 3,
+      "confidence": 0.85,
+      "llmScore": 76
+    },
+    {
+      "itemId": "82a52730840e",
+      "title": "AWS Expands Aurora DSQL with Playground, New Tool Integrations, and Driver Connectors",
+      "summary": "AWS为Aurora DSQL推出多项更新，包括新的交互式Playground（可直接在浏览器中免费体验）、新工具集成和驱动连接器，旨在提升可用性和开发者体验。",
+      "recommendation": "Aurora DSQL的Playground降低了试用门槛，建议数据库工程师和云架构师关注其无服务器架构与新集成能力。",
+      "evidenceItemIds": [
+        "82a52730840e"
+      ],
+      "domainTag": "tooling",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 65.6
+    },
+    {
+      "itemId": "6d18c69e3424",
+      "title": "QCon London 2026: Refreshing Stale Code Intelligence",
+      "summary": "QCon London 2026会议上，Jeff Smith指出AI编码模型虽能快速生成代码，但因缺乏仓库特定知识而日益“过时”，难以产出可用于生产的代码。",
+      "recommendation": "建议按需关注并跟踪《QCon London 2026: Refreshing Stale Code Intelligence》相关方案，重点关注仓库成熟度与二次开发成本。",
+      "evidenceItemIds": [
+        "6d18c69e3424"
+      ],
+      "domainTag": "open-source",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 56.79
+    },
+    {
+      "itemId": "5d0c534d762d",
+      "title": "浙大团队破解多模态模型「盲目自信」：先校准置信度，再分配算力丨CVPR’26",
+      "summary": "浙大团队在CVPR 2026发表研究，针对多模态模型在图像模糊时仍",
+      "recommendation": "建议按需关注并跟踪《浙大团队破解多模态模型「盲目自信」：先校准置信度，再分配算力丨CVPR’26》相关方案，重点关注实验结论到业务场景的可迁移性。",
+      "evidenceItemIds": [
+        "5d0c534d762d"
+      ],
+      "domainTag": "research",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 55.43
+    },
+    {
+      "itemId": "518c0f24fc5f",
+      "title": "精准识别「界门纲目科属种」！北大彭宇新团队用细粒度树先验提升泛化，破解生物类别分层识别难题",
+      "titleZh": "北大彭宇新团队用细粒度树先验破解生物类别分层识别难题",
+      "summary": "让生成式模型具备完整类别树认知，迈向通用视觉理解",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "518c0f24fc5f"
+      ],
+      "domainTag": "research",
+      "intentTag": "paper",
+      "confidence": 0.95,
+      "llmScore": 85
+    },
+    {
+      "itemId": "10f4932eeddf",
+      "title": "Cursor admits its new coding model was built on top of Moonshot AI's Kimi",
+      "titleZh": "Cursor承认新版编码模型基于月之暗面AI的Kimi构建",
+      "summary": "Cursor（AI编程工具）承认其新版编码模型基于中国AI公司月之暗面（Moonshot AI）的Kimi模型构建，引发关于AI模型授权与合规性的讨论。",
+      "recommendation": "关注AI编程工具的技术授权动态，了解主流工具的底层模型来源及其合规风险，对工程团队选择编程辅助工具有参考价值。",
+      "evidenceItemIds": [
+        "10f4932eeddf"
+      ],
+      "domainTag": "tooling",
+      "intentTag": "case-study",
+      "actionability": 1,
+      "confidence": 0.85,
+      "llmScore": 68
+    },
+    {
+      "itemId": "44fcd6d60cfd",
+      "title": "Ask HN: How do you compare cloud and AI costs across providers?",
+      "titleZh": "Ask HN：如何比较不同云服务商和AI提供商的成本？",
+      "summary": "Hacker News用户发起讨论，询问如何比较不同云服务商（AWS、GCP、OCI、Azure）及AI/LLM提供商的当前成本与未来成本，期望了解业界实践和工具方案。",
+      "recommendation": "工程团队可关注此类跨云成本对比工具的社区需求，对于多云部署和AI成本优化的工具开发具有参考价值。",
+      "evidenceItemIds": [
+        "44fcd6d60cfd"
+      ],
+      "domainTag": "tooling",
+      "intentTag": "opinion",
+      "actionability": 1,
+      "confidence": 0.85,
+      "llmScore": 62
+    },
+    {
+      "itemId": "403959ad80eb",
+      "title": "AI Model Discovers 22 Firefox Vulnerabilities in Two Weeks",
+      "summary": "Claude Opus 4.6 AI模型在两周内发现了22个Firefox漏洞，其中14个为高危漏洞，并成功编写了2个漏洞的利用代码。",
+      "recommendation": "该案例展示了AI在安全测试中的强大能力，工程团队应关注AI辅助漏洞发现的趋势及其对开发流程的影响。",
+      "evidenceItemIds": [
+        "403959ad80eb"
+      ],
+      "domainTag": "other",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 52.66
+    },
+    {
+      "itemId": "52e90fbb79dd",
+      "title": "Self-Recursive Ethics in a Longitudinal AI Ethics Monitor Log: Documented",
+      "summary": "Article URL: https://zenodo.org/records/19164044 Comments URL: https://news.ycombinator.com/item?id=47484277 Points: 1 …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "52e90fbb79dd"
+      ],
+      "domainTag": "ai-ethics",
+      "intentTag": "research",
+      "confidence": 0.88,
+      "llmScore": 68
+    },
+    {
+      "itemId": "bfa250d804d6",
+      "title": "上海凭什么敢自封“开发者之城”？看完这场大会议程我悟了",
+      "summary": "上海将于3月27日举办开发者大会，主题与WAIC人工智能大会深度联动，为参会者提供直通WAIC的机会",
+      "recommendation": "建议按需关注并跟踪《上海凭什么敢自封“开发者之城”？看完这场大会议程我悟了》相关方案，重点关注对业务路线图与资源投入的影响。",
+      "evidenceItemIds": [
+        "bfa250d804d6"
+      ],
+      "domainTag": "industry-news",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 48.93
+    },
+    {
+      "itemId": "dfbbc2afae9a",
+      "title": "What would you do if you have AI software that may be transformers alternative?",
+      "titleZh": "如果你有一个可能替代transformers的AI软件，你会怎么做？",
+      "summary": "开发者询问其开发的AI软件能否成为Transformer架构的替代品，该软件自称在速度和智能方面有10倍提升，采用C/C#/F#实现，代码量约10-15k行。",
+      "recommendation": "关注非Transformer架构的演进趋势，适合对新型高效模型架构感兴趣的工程团队了解行业前沿探索。",
+      "evidenceItemIds": [
+        "dfbbc2afae9a"
+      ],
+      "domainTag": "research",
+      "intentTag": "opinion",
+      "actionability": 1,
+      "confidence": 0.7,
+      "llmScore": 48
+    },
+    {
+      "itemId": "820ffbfa70f1",
+      "title": "阶跃星辰率先适配微信生态，StepClaw“龙虾”即插即养即用",
+      "summary": "个人聊天场景全面激活",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "820ffbfa70f1"
+      ],
+      "domainTag": "industry",
+      "intentTag": "news",
+      "confidence": 0.9,
+      "llmScore": 66
+    },
+    {
+      "itemId": "ad641d7e5570",
+      "title": "英伟达GTC现场的隐形AI巨头：老黄机器人demo背后都是它",
+      "summary": "英伟达GTC 2026大会上，光轮智能",
+      "recommendation": "建议按需关注并跟踪《英伟达GTC现场的隐形AI巨头：老黄机器人demo背后都是它》相关方案，重点关注对业务路线图与资源投入的影响。",
+      "evidenceItemIds": [
+        "ad641d7e5570"
+      ],
+      "domainTag": "industry-news",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 46.8
+    },
+    {
+      "itemId": "8c33f3a38032",
+      "title": "Show HN: AI models AI capex",
+      "summary": "开发者展示了利用Claude构建的AI资本支出分析仪表板，通过深度研究和Python建模估算AI收入与成本，结论是基础情况下2024年前难以盈亏平衡。",
+      "recommendation": "建议按需关注并跟踪《Show HN: AI models AI capex》相关方案，重点关注实验结论到业务场景的可迁移性。",
+      "evidenceItemIds": [
+        "8c33f3a38032"
+      ],
+      "domainTag": "research",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 46.57
+    },
+    {
+      "itemId": "e7206c722522",
+      "title": "Ask HN: How much are you spending on AI coding at work?",
+      "summary": "Hacker News上关于AI编码",
+      "recommendation": "建议按需关注并跟踪《Ask HN: How much are you spending on AI coding at work?》相关方案，重点关注与现有工程链路的集成成本。",
+      "evidenceItemIds": [
+        "e7206c722522"
+      ],
+      "domainTag": "tooling",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 45.27
+    },
+    {
+      "itemId": "60934291420d",
+      "title": "大厂抢郭达雅进行时！DeepSeek核心成员还是个“综艺巨佬”",
+      "summary": "DeepSeek核心成员郭达雅成为大厂竞相争夺的对象，该成员同时具有综艺背景，引发行业关注。",
+      "recommendation": "了解AI人才流动趋势的参考案例，可观察头部AI公司对核心人才的重视程度。",
+      "evidenceItemIds": [
+        "60934291420d"
+      ],
+      "domainTag": "other",
+      "intentTag": "news",
+      "actionability": 1,
+      "confidence": 0.6,
+      "llmScore": 33.98
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "7f1f49f7759b",
+      "title": "使用 RLax JAX Haiku Optax 从零实现深度 Q 学习 DQN (Implementing Deep Q-Learning (DQN) from Scratch Using RLax JAX Haiku and Optax to Train a CartPole Reinforcement Learning Agent)",
+      "takeaway": "In this tutorial, we implement a reinforcement learning agent using RLax, a research-oriented library developed by Goog…",
+      "evidenceItemIds": [
+        "7f1f49f7759b"
+      ]
+    },
+    {
+      "itemId": "d580a619910e",
+      "title": "认识 GitAgent：解决 LangChain、AutoGen、Claude Code 碎片化的 AI Agent 容器 (Meet GitAgent: The Docker for AI Agents that is Finally Solving the Fragmentation between LangChain, AutoGen, and Claude Code)",
+      "takeaway": "GitAgent 是一个新兴的 AI Agent 工具，旨在统一当前碎片化的 AI Agent 框架生态，解决 LangChain、AutoGen、CrewAI 等五大框架之间的互操作性问题。",
+      "evidenceItemIds": [
+        "d580a619910e"
+      ]
+    },
+    {
+      "itemId": "79f05d166b91",
+      "title": "Stripe 工程师部署 Minions：每周生成上千条 PR 的自主代理 (Stripe Engineers Deploy Minions, Autonomous Agents Producing Thousands of Pull Requests Weekly)",
+      "takeaway": "Stripe推出名为Minions的自主编程代理，每周可生成超过1300个",
+      "evidenceItemIds": [
+        "79f05d166b91"
+      ]
+    },
+    {
+      "itemId": "bc6f8d91d0a9",
+      "title": "人类在 AI 辅助软件开发中扮演什么角色？ (Where Do Humans Fit in AI-Assisted Software Development?)",
+      "takeaway": "Kief Morris",
+      "evidenceItemIds": [
+        "bc6f8d91d0a9"
+      ]
+    },
+    {
+      "itemId": "67138cda251d",
+      "title": "构建不确定性感知的LLM系统实战教程 (A Coding Implementation to Build an Uncertainty-Aware LLM System with Confidence Estimation, Self-Evaluation, and Automatic Web Research)",
+      "takeaway": "In this tutorial, we build an uncertainty-aware large language model system that not only generates answers but also es…",
+      "evidenceItemIds": [
+        "67138cda251d"
+      ]
+    },
+    {
+      "itemId": "e27c3af43785",
+      "title": "QCon London 2026：摩根士丹利为 MCP 时代重新设计 API 计划 (QCon London 2026: Morgan Stanley Rethinks Its API Program for the MCP Era)",
+      "takeaway": "Morgan Stanley engineers Jim Gough and Andreea Niculcea showed how they're retooling the bank's API program for AI agen…",
+      "evidenceItemIds": [
+        "e27c3af43785"
+      ]
+    },
+    {
+      "itemId": "f01ed047a904",
+      "title": "BM25 与 RAG 如何不同地检索信息？ (How BM25 and RAG Retrieve Information Differently?)",
+      "takeaway": "本文对比了传统BM25检索算法与新型RAG检索方式在信息查找上的核心差异，BM25基于词频和文档长度等三要素评分，而RAG结合大语言模型实现更智能的语义检索。",
+      "evidenceItemIds": [
+        "f01ed047a904"
+      ]
+    },
+    {
+      "itemId": "f04841e1c045",
+      "title": "使用 Pymatgen 构建和分析晶体结构：对称性分析、相图、表面生成 (A Coding Implementation for Building and Analyzing Crystal Structures Using Pymatgen for Symmetry Analysis, Phase Diagrams, Surface Generation, and Materials Project Integration)",
+      "takeaway": "本教程介绍使用Python的pymatgen库进行晶体结构构建与分析，涵盖硅、氯化钠、LiFePO₄等材料的晶格性质、对称性分析、原子配位环境和氧化态应用。",
+      "evidenceItemIds": [
+        "f04841e1c045"
+      ]
+    },
+    {
+      "itemId": "18d15cdba70b",
+      "title": "安全部署ML模型到生产环境：四种受控策略（A/B、金丝雀、交错、影子测试） (Safely Deploying ML Models to Production: Four Controlled Strategies (A/B, Canary, Interleaved, Shadow Testing))",
+      "takeaway": "本文介绍了四种安全的ML模型部署策略：A/B测试、金丝雀发布、交错测试和影子测试，帮助在生产环境中逐步验证模型效果并降低风险。",
+      "evidenceItemIds": [
+        "18d15cdba70b"
+      ]
+    },
+    {
+      "itemId": "82a52730840e",
+      "title": "AWS 扩展 Aurora DSQL：新增 Playground、工具集成和驱动连接器 (AWS Expands Aurora DSQL with Playground, New Tool Integrations, and Driver Connectors)",
+      "takeaway": "AWS为Aurora DSQL推出多项更新，包括新的交互式Playground（可直接在浏览器中免费体验）、新工具集成和驱动连接器，旨在提升可用性和开发者体验。",
+      "evidenceItemIds": [
+        "82a52730840e"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕research与tooling展开，建议优先关注《使用 RLax JAX Haiku Optax 从零实现深度 Q 学习 DQN》、《认识 GitAgent：解决 LangChain、AutoGen、Claude Code 碎片化的 AI Agent 容器》、《Stripe 工程师部署 Minions：每周生成上千条 PR 的自主代理》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "tooling",
+      "lead": "工具链方向本期共 4 条，建议优先阅读《认识 GitAgent：解决 LangChain、AutoGen、Claude Code 碎片化的 AI Agent 容器》、《QCon London 2026：摩根士丹利为 MCP 时代重新设计 API 计划》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "d580a619910e",
+        "e27c3af43785",
+        "18d15cdba70b",
+        "82a52730840e"
+      ],
+      "fallbackTriggered": true,
+      "reason": "minimax_invalid_response:missing_content"
+    },
+    {
+      "category": "research",
+      "lead": "研究方向本期共 4 条，建议优先阅读《使用 RLax JAX Haiku Optax 从零实现深度 Q 学习 DQN》、《浙大团队破解多模态模型「盲目自信」：先校准置信度，再分配算力丨CVPR’26》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "7f1f49f7759b",
+        "5d0c534d762d",
+        "518c0f24fc5f",
+        "52e90fbb79dd"
+      ],
+      "fallbackTriggered": true,
+      "reason": "minimax_invalid_response:missing_content"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《Cursor admits its new coding model was built on top of Moonshot AI's Kimi》、《上海开发者大会3月开幕锁定WAIC直通卡》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "10f4932eeddf",
+        "bfa250d804d6",
+        "dfbbc2afae9a",
+        "820ffbfa70f1"
+      ],
+      "fallbackTriggered": true,
+      "reason": "minimax_invalid_response:missing_content"
+    },
+    {
+      "category": "tutorial",
+      "lead": "教程实践本期共 3 条，建议优先阅读《构建不确定性感知的LLM系统实战教程》、《BM25 与 RAG 如何不同地检索信息？》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "67138cda251d",
+        "f01ed047a904",
+        "f04841e1c045"
+      ],
+      "fallbackTriggered": true,
+      "reason": "minimax_invalid_response:missing_content"
+    }
+  ],
+  "summaryInputHash": "f9948b93e07ad1bf4bf11fc6d1ed76640ad022e3c3d157945d0fdcf373c25d6f",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-03-23T01:47:30.042Z",
+    "finishedAt": "2026-03-23T01:48:48.161Z",
+    "durationMs": 78122,
+    "inputCount": 24,
+    "processedCount": 24,
+    "fallbackCount": 0,
+    "fallbackTriggered": false,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 24,
+    "llmScoreFallbackCount": 0,
+    "failureStats": {
+      "totalFailed": 0,
+      "timeout": 0,
+      "http": 0,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 0,
+      "splitRetryCount": 0
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-03-16",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-03-09",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 8,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-03-23T01:48:48.851Z",
+    "finishedAt": "2026-03-23T01:56:12.066Z",
+    "durationMs": 443232,
+    "inputCount": 24,
+    "summarizedCount": 18,
+    "fallbackTriggered": false,
+    "effectiveConcurrency": 1,
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 6,
+      "timeout": 0,
+      "http": 0,
+      "business": 0,
+      "missingContent": 6,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 12,
+      "missingContentExtraRetryTriggeredCount": 12,
+      "compensationRetryItemCount": 0,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 2
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0.16666666666666666,
+      "maxWindowSuccessRate": 0.8333333333333334,
+      "lastWindowMissingContentRate": 0.16666666666666666,
+      "lastWindowSuccessRate": 0.8333333333333334
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 5,
+      "zhRepairAttemptedCount": 2,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 2
+    }
+  },
+  "highlights": [
+    {
+      "id": "7f1f49f7759b",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Implementing Deep Q-Learning (DQN) from Scratch Using RLax JAX Haiku and Optax to Train a CartPole Reinforcement Learning Agent",
+      "link": "https://www.marktechpost.com/2026/03/22/implementing-deep-q-learning-dqn-from-scratch-using-rlax-jax-haiku-and-optax-to-train-a-cartpole-reinforcement-learning-agent/",
+      "contentSnippet": "In this tutorial, we implement a reinforcement learning agent using RLax, a research-oriented library developed by Google DeepMind for building reinforcement learning algorithms with JAX. We combine RLax with JAX, Haiku, and Optax to construct a Deep Q-Learning (DQN) agent that learns to solve the CartPole environment. Instead of using a fully packaged RL framework, […] The post Implementing Deep Q-Learning (DQN) from Scratch Using RLax JAX Haiku and Optax to Train a CartPole Reinforcement Learning Agent appeared first on MarkTechPost.",
+      "publishedAt": "2026-03-22T21:54:00.000Z",
+      "category": "research",
+      "llmScore": 84,
+      "confidence": 0.89,
+      "domainTag": "rl",
+      "intentTag": "research",
+      "titleZh": "使用 RLax JAX Haiku Optax 从零实现深度 Q 学习 DQN",
+      "llmClassifyReason": "深度强化学习 DQN 实现，基于 JAX/RLax 的算法研究。",
+      "score": 89.6,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 119,
+        "ruleScoreNormalized": 100,
+        "llmScore": 84,
+        "finalScore": 89.6,
+        "fusionWeight": 0.65,
+        "usedLlm": true
+      }
+    },
+    {
+      "id": "d580a619910e",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Meet GitAgent: The Docker for AI Agents that is Finally Solving the Fragmentation between LangChain, AutoGen, and Claude Code",
+      "link": "https://www.marktechpost.com/2026/03/22/meet-gitagent-the-docker-for-ai-agents-that-is-finally-solving-the-fragmentation-between-langchain-autogen-and-claude-code/",
+      "contentSnippet": "The current state of AI agent development is characterized by significant architectural fragmentation. Software devs building autonomous systems must generally commit to one of several competing ecosystems: LangChain, AutoGen, CrewAI, OpenAI Assistants, or the more recent Claude Code. Each of these ‘Five Frameworks’ utilizes a proprietary method for defining agent logic, memory persistence, and tool […] The post Meet GitAgent: The Docker for AI Agents that is Finally Solving the Fragmentation between LangChain, AutoGen, and Claude Code appeared first on MarkTechPost.",
+      "publishedAt": "2026-03-22T21:21:48.000Z",
+      "category": "tooling",
+      "llmScore": 86,
+      "confidence": 0.91,
+      "domainTag": "agent",
+      "intentTag": "tooling",
+      "titleZh": "认识 GitAgent：解决 LangChain、AutoGen、Claude Code 碎片化的 AI Agent 容器",
+      "llmClassifyReason": "解决 Agent 生态碎片化的工具，聚焦工程实践。",
+      "score": 85.22,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 113,
+        "ruleScoreNormalized": 83.78378378378379,
+        "llmScore": 86,
+        "finalScore": 85.22,
+        "fusionWeight": 0.65,
+        "usedLlm": true
+      }
+    },
+    {
+      "id": "79f05d166b91",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Stripe Engineers Deploy Minions, Autonomous Agents Producing Thousands of Pull Requests Weekly",
+      "link": "https://www.infoq.com/news/2026/03/stripe-autonomous-coding-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Stripe engineers describe Minions, autonomous coding agents generating over 1,300 pull requests per week. Tasks can originate from Slack, bug reports, or feature requests. Using LLMs, blueprints, and CI/CD pipelines, Minions produce production-ready changes while maintaining reliability and human review. By Leela Kumili",
+      "publishedAt": "2026-03-20T14:26:00.000Z",
+      "category": "agent",
+      "llmScore": 90,
+      "confidence": 0.92,
+      "domainTag": "agent",
+      "intentTag": "production",
+      "titleZh": "Stripe 工程师部署 Minions：每周生成上千条 PR 的自主代理",
+      "llmClassifyReason": "Stripe 生产级自主代理实践，每周千级 PR，工程价值极高。",
+      "score": 80.26,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 105,
+        "ruleScoreNormalized": 62.16216216216216,
+        "llmScore": 90,
+        "finalScore": 80.26,
+        "fusionWeight": 0.65,
+        "usedLlm": true
+      }
+    },
+    {
+      "id": "bc6f8d91d0a9",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Where Do Humans Fit in AI-Assisted Software Development?",
+      "link": "https://www.infoq.com/news/2026/03/mf-aiassisted-dev/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "An article on Martin Fowler’s blog by Kief Morris examines the role of humans in AI-assisted software engineering, arguing developers are unlikely to move fully “out of the loop.” Instead, teams may work “on the loop,” designing tests, specifications, and feedback mechanisms to guide AI agents, as industry discussions focus on how such systems should be verified and governed. By Matt Foster",
+      "publishedAt": "2026-03-19T07:32:00.000Z",
+      "category": "agent",
+      "llmScore": 80,
+      "confidence": 0.9,
+      "domainTag": "agent",
+      "intentTag": "analysis",
+      "titleZh": "人类在 AI 辅助软件开发中扮演什么角色？",
+      "llmClassifyReason": "探讨人类在 AI 辅助开发中的角色，Agent 实践反思。",
+      "score": 74.7,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 106,
+        "ruleScoreNormalized": 64.86486486486487,
+        "llmScore": 80,
+        "finalScore": 74.7,
+        "fusionWeight": 0.65,
+        "usedLlm": true
+      }
+    },
+    {
+      "id": "67138cda251d",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "A Coding Implementation to Build an Uncertainty-Aware LLM System with Confidence Estimation, Self-Evaluation, and Automatic Web Research",
+      "link": "https://www.marktechpost.com/2026/03/21/a-coding-implementation-to-build-an-uncertainty-aware-llm-system-with-confidence-estimation-self-evaluation-and-automatic-web-research/",
+      "contentSnippet": "In this tutorial, we build an uncertainty-aware large language model system that not only generates answers but also estimates the confidence in those answers. We implement a three-stage reasoning pipeline in which the model first produces an answer along with a self-reported confidence score and a justification. We then introduce a self-evaluation step that allows […] The post A Coding Implementation to Build an Uncertainty-Aware LLM System with Confidence Estimation, Self-Evaluation, and Automatic Web Research appeared first on MarkTechPost.",
+      "publishedAt": "2026-03-21T21:39:10.000Z",
+      "category": "tutorial",
+      "llmScore": 82,
+      "confidence": 0.94,
+      "domainTag": "llm",
+      "intentTag": "tutorial",
+      "titleZh": "构建不确定性感知的LLM系统实战教程",
+      "llmClassifyReason": "构建不确定性感知LLM系统的完整教程，含代码实现。",
+      "score": 74.11,
+      "importance": "medium",
+      "recommendationReason": "评测与性能信息",
+      "scoreBreakdown": {
+        "ruleScore": 104,
+        "ruleScoreNormalized": 59.45945945945946,
+        "llmScore": 82,
+        "finalScore": 74.11,
+        "fusionWeight": 0.65,
+        "usedLlm": true
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Google AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[VentureBeat AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[ZDNet AI] 抓取失败: This operation was aborted",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+    "LLM 部分条目回退规则摘要：6/24（success=75%）",
+    "LLM 条目失败明细（前 3/24）：minimax_invalid_response:missing_content | minimax_invalid_response:missing_content | minimax_invalid_response:missing_content",
+    "LLM 失败分类：missing_content=6, timeout=0, http=0, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=12, missing_content_extra=12, compensation=0, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=17%, window_success=83%",
+    "LLM 中文质量：detected_non_zh=5, repair_attempted=2, repair_succeeded=0, english_retained=2",
+    "LLM 中文质量：detected_non_zh=5, repair_attempted=2, repair_succeeded=0, english_retained=2"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "outputs/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "outputs/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Implementing Deep Q-Learning (DQN) from Scratch Using RLax JAX Haiku and Optax to Train a CartPole Reinforcement Learning Agent\n- Meet GitAgent: The Docker for AI Agents that is Finally Solving the Fragmentation between LangChain, AutoGen, and Claude Code\n- Stripe Engineers Deploy Minions, Autonomous Agents Producing Thousands of Pull Requests Weekly\n- Where Do Humans Fit in AI-Assisted Software Development?\n- A Coding Implementation to Build an Uncertainty-Aware LLM System with Confidence Estimation, Self-Evaluation, and Automatic Web Research\n\n### 分类覆盖（大纲）\n- research: 5 条\n- tooling: 6 条\n- agent: 2 条\n- tutorial: 3 条\n- open-source: 1 条\n- industry-news: 5 条\n- other: 2 条",
+    "rankedItems": [
+      {
+        "id": "7f1f49f7759b",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Implementing Deep Q-Learning (DQN) from Scratch Using RLax JAX Haiku and Optax to Train a CartPole Reinforcement Learning Agent",
+        "link": "https://www.marktechpost.com/2026/03/22/implementing-deep-q-learning-dqn-from-scratch-using-rlax-jax-haiku-and-optax-to-train-a-cartpole-reinforcement-learning-agent/",
+        "contentSnippet": "In this tutorial, we implement a reinforcement learning agent using RLax, a research-oriented library developed by Google DeepMind for building reinforcement learning algorithms with JAX. We combine RLax with JAX, Haiku, and Optax to construct a Deep Q-Learning (DQN) agent that learns to solve the CartPole environment. Instead of using a fully packaged RL framework, […] The post Implementing Deep Q-Learning (DQN) from Scratch Using RLax JAX Haiku and Optax to Train a CartPole Reinforcement Learning Agent appeared first on MarkTechPost.",
+        "publishedAt": "2026-03-22T21:54:00.000Z",
+        "category": "research",
+        "llmScore": 84,
+        "confidence": 0.89,
+        "domainTag": "rl",
+        "intentTag": "research",
+        "titleZh": "使用 RLax JAX Haiku Optax 从零实现深度 Q 学习 DQN",
+        "llmClassifyReason": "深度强化学习 DQN 实现，基于 JAX/RLax 的算法研究。",
+        "score": 89.6,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 119,
+          "ruleScoreNormalized": 100,
+          "llmScore": 84,
+          "finalScore": 89.6,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "d580a619910e",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet GitAgent: The Docker for AI Agents that is Finally Solving the Fragmentation between LangChain, AutoGen, and Claude Code",
+        "link": "https://www.marktechpost.com/2026/03/22/meet-gitagent-the-docker-for-ai-agents-that-is-finally-solving-the-fragmentation-between-langchain-autogen-and-claude-code/",
+        "contentSnippet": "The current state of AI agent development is characterized by significant architectural fragmentation. Software devs building autonomous systems must generally commit to one of several competing ecosystems: LangChain, AutoGen, CrewAI, OpenAI Assistants, or the more recent Claude Code. Each of these ‘Five Frameworks’ utilizes a proprietary method for defining agent logic, memory persistence, and tool […] The post Meet GitAgent: The Docker for AI Agents that is Finally Solving the Fragmentation between LangChain, AutoGen, and Claude Code appeared first on MarkTechPost.",
+        "publishedAt": "2026-03-22T21:21:48.000Z",
+        "category": "tooling",
+        "llmScore": 86,
+        "confidence": 0.91,
+        "domainTag": "agent",
+        "intentTag": "tooling",
+        "titleZh": "认识 GitAgent：解决 LangChain、AutoGen、Claude Code 碎片化的 AI Agent 容器",
+        "llmClassifyReason": "解决 Agent 生态碎片化的工具，聚焦工程实践。",
+        "score": 85.22,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 83.78378378378379,
+          "llmScore": 86,
+          "finalScore": 85.22,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "79f05d166b91",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Stripe Engineers Deploy Minions, Autonomous Agents Producing Thousands of Pull Requests Weekly",
+        "link": "https://www.infoq.com/news/2026/03/stripe-autonomous-coding-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Stripe engineers describe Minions, autonomous coding agents generating over 1,300 pull requests per week. Tasks can originate from Slack, bug reports, or feature requests. Using LLMs, blueprints, and CI/CD pipelines, Minions produce production-ready changes while maintaining reliability and human review. By Leela Kumili",
+        "publishedAt": "2026-03-20T14:26:00.000Z",
+        "category": "agent",
+        "llmScore": 90,
+        "confidence": 0.92,
+        "domainTag": "agent",
+        "intentTag": "production",
+        "titleZh": "Stripe 工程师部署 Minions：每周生成上千条 PR 的自主代理",
+        "llmClassifyReason": "Stripe 生产级自主代理实践，每周千级 PR，工程价值极高。",
+        "score": 80.26,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 62.16216216216216,
+          "llmScore": 90,
+          "finalScore": 80.26,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "bc6f8d91d0a9",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Where Do Humans Fit in AI-Assisted Software Development?",
+        "link": "https://www.infoq.com/news/2026/03/mf-aiassisted-dev/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "An article on Martin Fowler’s blog by Kief Morris examines the role of humans in AI-assisted software engineering, arguing developers are unlikely to move fully “out of the loop.” Instead, teams may work “on the loop,” designing tests, specifications, and feedback mechanisms to guide AI agents, as industry discussions focus on how such systems should be verified and governed. By Matt Foster",
+        "publishedAt": "2026-03-19T07:32:00.000Z",
+        "category": "agent",
+        "llmScore": 80,
+        "confidence": 0.9,
+        "domainTag": "agent",
+        "intentTag": "analysis",
+        "titleZh": "人类在 AI 辅助软件开发中扮演什么角色？",
+        "llmClassifyReason": "探讨人类在 AI 辅助开发中的角色，Agent 实践反思。",
+        "score": 74.7,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 106,
+          "ruleScoreNormalized": 64.86486486486487,
+          "llmScore": 80,
+          "finalScore": 74.7,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "67138cda251d",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "A Coding Implementation to Build an Uncertainty-Aware LLM System with Confidence Estimation, Self-Evaluation, and Automatic Web Research",
+        "link": "https://www.marktechpost.com/2026/03/21/a-coding-implementation-to-build-an-uncertainty-aware-llm-system-with-confidence-estimation-self-evaluation-and-automatic-web-research/",
+        "contentSnippet": "In this tutorial, we build an uncertainty-aware large language model system that not only generates answers but also estimates the confidence in those answers. We implement a three-stage reasoning pipeline in which the model first produces an answer along with a self-reported confidence score and a justification. We then introduce a self-evaluation step that allows […] The post A Coding Implementation to Build an Uncertainty-Aware LLM System with Confidence Estimation, Self-Evaluation, and Automatic Web Research appeared first on MarkTechPost.",
+        "publishedAt": "2026-03-21T21:39:10.000Z",
+        "category": "tutorial",
+        "llmScore": 82,
+        "confidence": 0.94,
+        "domainTag": "llm",
+        "intentTag": "tutorial",
+        "titleZh": "构建不确定性感知的LLM系统实战教程",
+        "llmClassifyReason": "构建不确定性感知LLM系统的完整教程，含代码实现。",
+        "score": 74.11,
+        "importance": "medium",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 104,
+          "ruleScoreNormalized": 59.45945945945946,
+          "llmScore": 82,
+          "finalScore": 74.11,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "e27c3af43785",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "QCon London 2026: Morgan Stanley Rethinks Its API Program for the MCP Era",
+        "link": "https://www.infoq.com/news/2026/03/morgan-stanley-apis-mcp-calm/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Morgan Stanley engineers Jim Gough and Andreea Niculcea showed how they're retooling the bank's API program for AI agents using MCP and FINOS CALM. Live demos covered compliance guardrails, deployment gates, and zero-downtime rollouts across 100+ APIs. First API deployment shrank from two years to two weeks. They also demoed Google's A2A protocol running alongside MCP. By Steef-Jan Wiggers",
+        "publishedAt": "2026-03-19T15:11:00.000Z",
+        "category": "tooling",
+        "llmScore": 85,
+        "confidence": 0.91,
+        "domainTag": "api",
+        "intentTag": "tooling",
+        "titleZh": "QCon London 2026：摩根士丹利为 MCP 时代重新设计 API 计划",
+        "llmClassifyReason": "金融行业 API 工具实践，兼顾 MCP 与合规，生产参考性强。",
+        "score": 72.28,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 48.64864864864865,
+          "llmScore": 85,
+          "finalScore": 72.28,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "f01ed047a904",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "How BM25 and RAG Retrieve Information Differently?",
+        "link": "https://www.marktechpost.com/2026/03/22/how-bm25-and-rag-retrieve-information-differently/",
+        "contentSnippet": "When you type a query into a search engine, something has to decide which documents are actually relevant — and how to rank them. BM25 (Best Matching 25), the algorithm powering search engines like Elasticsearch and Lucene, has been the dominant answer to that question for decades. It scores documents by looking at three things: […] The post How BM25 and RAG Retrieve Information Differently? appeared first on MarkTechPost.",
+        "publishedAt": "2026-03-23T01:33:41.000Z",
+        "category": "tutorial",
+        "llmScore": 87,
+        "confidence": 0.93,
+        "domainTag": "search",
+        "intentTag": "tutorial",
+        "titleZh": "BM25 与 RAG 如何不同地检索信息？",
+        "llmClassifyReason": "BM25 与 RAG 检索对比教程，教育属性明确。",
+        "score": 71.69,
+        "importance": "medium",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 43.24324324324324,
+          "llmScore": 87,
+          "finalScore": 71.69,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "f04841e1c045",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "A Coding Implementation for Building and Analyzing Crystal Structures Using Pymatgen for Symmetry Analysis, Phase Diagrams, Surface Generation, and Materials Project Integration",
+        "link": "https://www.marktechpost.com/2026/03/21/a-coding-implementation-for-building-and-analyzing-crystal-structures-using-pymatgen-for-symmetry-analysis-phase-diagrams-surface-generation-and-materials-project-integration/",
+        "contentSnippet": "In this tutorial, we explore the capabilities of the pymatgen library for computational materials science using Python. We begin by constructing crystal structures such as silicon, sodium chloride, and a LiFePO₄-like material, and then investigate their lattice properties, densities, and compositions. Also, we analyze symmetry using space-group detection, examine atomic coordination environments, and apply oxidation-state […] The post A Coding Implementation for Building and Analyzing Crystal Structures Using Pymatgen for Symmetry Analysis, Phase Diagrams, Surface Generation, and Materials Project Integration appeared first on MarkTechPost.",
+        "publishedAt": "2026-03-22T04:46:37.000Z",
+        "category": "tutorial",
+        "llmScore": 85,
+        "confidence": 0.92,
+        "domainTag": "materials",
+        "intentTag": "tutorial",
+        "titleZh": "使用 Pymatgen 构建和分析晶体结构：对称性分析、相图、表面生成",
+        "llmClassifyReason": "Pymatgen 计算材料科学教程，结构分析实战。",
+        "score": 71.33,
+        "importance": "medium",
+        "recommendationReason": "可直接学习实践",
+        "scoreBreakdown": {
+          "ruleScore": 99,
+          "ruleScoreNormalized": 45.94594594594595,
+          "llmScore": 85,
+          "finalScore": 71.33,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "18d15cdba70b",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Safely Deploying ML Models to Production: Four Controlled Strategies (A/B, Canary, Interleaved, Shadow Testing)",
+        "link": "https://www.marktechpost.com/2026/03/21/safely-deploying-ml-models-to-production-four-controlled-strategies-a-b-canary-interleaved-shadow-testing/",
+        "contentSnippet": "Deploying a new machine learning model to production is one of the most critical stages of the ML lifecycle. Even if a model performs well on validation and test datasets, directly replacing the existing production model can be risky. Offline evaluation rarely captures the full complexity of real-world environments—data distributions may shift, user behavior can […] The post Safely Deploying ML Models to Production: Four Controlled Strategies (A/B, Canary, Interleaved, Shadow Testing) appeared first on MarkTechPost.",
+        "publishedAt": "2026-03-21T23:02:13.000Z",
+        "category": "tooling",
+        "llmScore": 85,
+        "confidence": 0.91,
+        "domainTag": "mlops",
+        "intentTag": "guide",
+        "titleZh": "安全部署ML模型到生产环境：四种受控策略（A/B、金丝雀、交错、影子测试）",
+        "llmClassifyReason": "ML模型生产部署的具体策略指南，工程实践价值突出。",
+        "score": 70.39,
+        "importance": "medium",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 43.24324324324324,
+          "llmScore": 85,
+          "finalScore": 70.39,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "82a52730840e",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "AWS Expands Aurora DSQL with Playground, New Tool Integrations, and Driver Connectors",
+        "link": "https://www.infoq.com/news/2026/03/aurora-dsql-playground-updates/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Amazon has announced several updates for Aurora DSQL, focusing on usability, integrations, and developer tooling. The improvements include a new interactive Aurora DSQL Playground that lets developers explore and experiment with the database directly in the browser, without registration or associated costs. By Renato Losio",
+        "publishedAt": "2026-03-22T08:59:00.000Z",
+        "category": "tooling",
+        "llmScore": 82,
+        "confidence": 0.95,
+        "domainTag": "database",
+        "intentTag": "tooling",
+        "titleZh": "AWS 扩展 Aurora DSQL：新增 Playground、工具集成和驱动连接器",
+        "llmClassifyReason": "AWS 数据库工具更新，属于开发者工具链内容。",
+        "score": 65.6,
+        "importance": "medium",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 35.13513513513514,
+          "llmScore": 82,
+          "finalScore": 65.6,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "6d18c69e3424",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "QCon London 2026: Refreshing Stale Code Intelligence",
+        "link": "https://www.infoq.com/news/2026/03/stale-code-intelligence/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "At QCon London 2026, Jeff Smith discussed the growing mismatch between AI coding models and real-world software development. While AI tools are enabling developers to generate code faster than ever, Smith argued that the models themselves are increasingly “stale” because they lack the repository-specific knowledge required to produce production-ready contributions. By Daniel Dominguez",
+        "publishedAt": "2026-03-19T10:43:00.000Z",
+        "category": "open-source",
+        "llmScore": 83,
+        "confidence": 0.88,
+        "domainTag": "devtools",
+        "intentTag": "analysis",
+        "titleZh": "QCon London 2026：刷新陈旧的代码智能",
+        "llmClassifyReason": "代码智能与开发工具相关，属于开源生态范畴。",
+        "score": 56.79,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 85,
+          "ruleScoreNormalized": 8.108108108108109,
+          "llmScore": 83,
+          "finalScore": 56.79,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "5d0c534d762d",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "浙大团队破解多模态模型「盲目自信」：先校准置信度，再分配算力丨CVPR’26",
+        "link": "https://www.qbitai.com/2026/03/391014.html",
+        "contentSnippet": "图都糊成一团了，模型还说“我很确定”？",
+        "publishedAt": "2026-03-22T07:17:19.000Z",
+        "category": "research",
+        "llmScore": 78,
+        "confidence": 0.92,
+        "domainTag": "research",
+        "intentTag": "paper",
+        "llmClassifyReason": "浙大团队CVPR'26研究，关于多模态模型置信度校准。",
+        "score": 55.43,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 13.513513513513514,
+          "llmScore": 78,
+          "finalScore": 55.43,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "518c0f24fc5f",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "精准识别「界门纲目科属种」！北大彭宇新团队用细粒度树先验提升泛化，破解生物类别分层识别难题",
+        "link": "https://www.qbitai.com/2026/03/390945.html",
+        "contentSnippet": "让生成式模型具备完整类别树认知，迈向通用视觉理解",
+        "publishedAt": "2026-03-21T09:48:18.000Z",
+        "category": "research",
+        "llmScore": 85,
+        "confidence": 0.95,
+        "domainTag": "research",
+        "intentTag": "paper",
+        "titleZh": "北大彭宇新团队用细粒度树先验破解生物类别分层识别难题",
+        "llmClassifyReason": "北大视觉理解研究的技术细节，具备学术创新价值。",
+        "score": 55.25,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "llmScore": 85,
+          "finalScore": 55.25,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "10f4932eeddf",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Cursor admits its new coding model was built on top of Moonshot AI's Kimi",
+        "link": "https://techcrunch.com/2026/03/22/cursor-admits-its-new-coding-model-was-built-on-top-of-moonshot-ais-kimi/",
+        "contentSnippet": "Article URL: https://techcrunch.com/2026/03/22/cursor-admits-its-new-coding-model-was-built-on-top-of-moonshot-ais-kimi/ Comments URL: https://news.ycombinator.com/item?id=47484339 Points: 1 # Comments: 0",
+        "publishedAt": "2026-03-23T01:21:59.000Z",
+        "category": "industry-news",
+        "llmScore": 72,
+        "confidence": 0.95,
+        "domainTag": "industry",
+        "intentTag": "news",
+        "titleZh": "Cursor承认新版编码模型基于月之暗面AI的Kimi构建",
+        "llmClassifyReason": "明确的行业动态新闻，Cursor模型来源的公开披露。",
+        "score": 54.37,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.62162162162162,
+          "llmScore": 72,
+          "finalScore": 54.37,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "44fcd6d60cfd",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Ask HN: How do you compare cloud and AI costs across providers?",
+        "link": "https://news.ycombinator.com/item?id=47484047",
+        "contentSnippet": "Hey, I’ve been thinking a lot about how hard it is to understand and compare costs across cloud providers (AWS, GCP, OCI, Azure) and now also AI/LLMs. Most tools show historical spend, but not really: what the same workload would cost elsewhere or how different AI providers compare for the same usage Curious how people here handle this today. Do you rely on internal tooling, spreadsheets, or something else? I’ve been experimenting with a small tool for this, but still trying to understand if this is a real pain or just my bubble. Would love to hear how you approach this. Comments URL: https://news.ycombinator.com/item?id=47484047 Points: 2 # Comments: 0",
+        "publishedAt": "2026-03-23T00:42:42.000Z",
+        "category": "tooling",
+        "llmScore": 72,
+        "confidence": 0.87,
+        "domainTag": "tooling",
+        "intentTag": "discussion",
+        "titleZh": "Ask HN：如何比较不同云服务商和AI提供商的成本？",
+        "llmClassifyReason": "云和AI成本比较工具相关讨论，解决实际使用成本问题。",
+        "score": 54.37,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.62162162162162,
+          "llmScore": 72,
+          "finalScore": 54.37,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "403959ad80eb",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "AI Model Discovers 22 Firefox Vulnerabilities in Two Weeks",
+        "link": "https://www.infoq.com/news/2026/03/claude-ai-firefox-vulnerability/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Claude Opus 4.6 discovered 22 Firefox vulnerabilities in two weeks, including 14 high-severity bugs, as nearly 20% of all critical Firefox vulnerabilities were fixed in 2025. The AI also wrote working exploits for two bugs, demonstrating emerging capabilities that give defenders a temporary advantage but signal an accelerating arms race in cybersecurity. By Steef-Jan Wiggers",
+        "publishedAt": "2026-03-19T10:15:00.000Z",
+        "category": "other",
+        "llmScore": 65,
+        "confidence": 0.85,
+        "domainTag": "security",
+        "intentTag": "research",
+        "titleZh": "AI 模型两周内发现 22 个 Firefox 漏洞",
+        "llmClassifyReason": "安全研究案例，非工程实践或工具类内容。",
+        "score": 52.66,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 93,
+          "ruleScoreNormalized": 29.72972972972973,
+          "llmScore": 65,
+          "finalScore": 52.66,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "52e90fbb79dd",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Self-Recursive Ethics in a Longitudinal AI Ethics Monitor Log: Documented",
+        "link": "https://zenodo.org/records/19164044",
+        "contentSnippet": "Article URL: https://zenodo.org/records/19164044 Comments URL: https://news.ycombinator.com/item?id=47484277 Points: 1 # Comments: 0",
+        "publishedAt": "2026-03-23T01:13:40.000Z",
+        "category": "research",
+        "llmScore": 68,
+        "confidence": 0.88,
+        "domainTag": "ai-ethics",
+        "intentTag": "research",
+        "llmClassifyReason": "AI伦理研究文档，涉及自递归伦理监控，属于学术研究范畴。",
+        "score": 51.77,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.62162162162162,
+          "llmScore": 68,
+          "finalScore": 51.77,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "bfa250d804d6",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "上海凭什么敢自封“开发者之城”？看完这场大会议程我悟了",
+        "link": "https://www.qbitai.com/2026/03/390977.html",
+        "contentSnippet": "3月27日开幕，提前锁定WAIC“直通卡”",
+        "publishedAt": "2026-03-22T05:26:54.000Z",
+        "category": "industry-news",
+        "llmScore": 68,
+        "confidence": 0.88,
+        "domainTag": "industry",
+        "intentTag": "event",
+        "titleZh": "上海开发者大会3月开幕锁定WAIC直通卡",
+        "llmClassifyReason": "WAIC大会报道，属于行业会议动态。",
+        "score": 48.93,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 13.513513513513514,
+          "llmScore": 68,
+          "finalScore": 48.93,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "dfbbc2afae9a",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "What would you do if you have AI software that may be transformers alternative?",
+        "link": "https://news.ycombinator.com/item?id=47484267",
+        "contentSnippet": "Assuming your software meets some of these: * Better than potential successors of SOTA transformers: Mamba, Hyenna, RWKV, xLSTM; * Gemini/claude estimate potential ip values in the millions; * All implemented in C (ok this may be a minus) but also ported to C# and F# - so no python nor rust; * humble code size: 10-15k lines of code but i mean come on gpt-1 was under 1000 lines...in python. In short: the problem: transformers are slow and could be smarter; solution: you have fast and smart alternative. 10x! Comments URL: https://news.ycombinator.com/item?id=47484267 Points: 2 # Comments: 0",
+        "publishedAt": "2026-03-23T01:11:53.000Z",
+        "category": "industry-news",
+        "llmScore": 62,
+        "confidence": 0.82,
+        "domainTag": "research",
+        "intentTag": "discussion",
+        "titleZh": "如果你有一个可能替代transformers的AI软件，你会怎么做？",
+        "llmClassifyReason": "社区讨论关于transformer潜在替代方案，属行业话题讨论。",
+        "score": 47.87,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.62162162162162,
+          "llmScore": 62,
+          "finalScore": 47.87,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "820ffbfa70f1",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "阶跃星辰率先适配微信生态，StepClaw“龙虾”即插即养即用",
+        "link": "https://www.qbitai.com/2026/03/391010.html",
+        "contentSnippet": "个人聊天场景全面激活",
+        "publishedAt": "2026-03-22T07:09:01.000Z",
+        "category": "industry-news",
+        "llmScore": 66,
+        "confidence": 0.9,
+        "domainTag": "industry",
+        "intentTag": "news",
+        "llmClassifyReason": "阶跃星辰适配微信生态的行业产品动态。",
+        "score": 47.63,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 13.513513513513514,
+          "llmScore": 66,
+          "finalScore": 47.63,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "ad641d7e5570",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "英伟达GTC现场的隐形AI巨头：老黄机器人demo背后都是它",
+        "link": "https://www.qbitai.com/2026/03/390924.html",
+        "contentSnippet": "光轮智能，正在定义Physical AI的基础设施",
+        "publishedAt": "2026-03-21T09:39:22.000Z",
+        "category": "industry-news",
+        "llmScore": 72,
+        "confidence": 0.9,
+        "domainTag": "industry",
+        "intentTag": "news",
+        "titleZh": "英伟达GTC现场光轮智能展示Physical AI基础设施",
+        "llmClassifyReason": "英伟达GTC现场光轮智能的Physical AI基础设施报道。",
+        "score": 46.8,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "llmScore": 72,
+          "finalScore": 46.8,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "8c33f3a38032",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: AI models AI capex",
+        "link": "https://ai-capex-sens-wxc4b.ondigitalocean.app/",
+        "contentSnippet": "Bernie interviewed Claude recently (https://www.youtube.com/watch?v=h3AtWdeu_G0). The one-shotted responses were predictably a little sycophantic, but some responses were a little surprising. Made me think I'm kinda doing something similar in a more permissive timeframe, I have a harness over Claude that \"persistently\" studies AI spending, it does deep research, responds to my inputs, persists notes, writes code, etc. It's not really \"introspection\" or \"Cogito, ergo sum\", but I found that over tens of millions of tokens of iterations the system was able to create something novel. I am showing off one of the dashboards it created based on the deep research and Python modelling conducted: https://ai-capex-sens-wxc4b.ondigitalocean.app/ --- TLDR; AI hype is one thing, but how else would you actually go pedal to the metal spending the GDP of a middle income country on new AI data centers? Basically, theres hundreds of billions of dollars in cloud business from enterprise contracts, boring IT stuff but its where a lot of the money in tech comes from and its real. Beyond the pontification about superintelligence is a similar reality for AI in the eyes of the hyperscalers that scaled the cloud business in the past, hundreds of billions to trillions in business from enterprise contracts (cloud replaced on-prem servers, AI replaces or augments knowledge workers). The model estimates AI revenue from automatable knowledge-work spend, stress it with adoption/pricing assumptions, and run it against capex + operating + financing costs under delays/shocks. In the base case, it doesn’t break even by 2032, but of course there's other sources of revenue so this isn't all that doomer or surprising that its risky to spend so much. However, its nice to have numbers and sensitivity to back that conclusion up instead of hand waving it. --- There's been a lot of AI mania over vibe coding, but the main conclusion I got from running this harness is we can in fact use AI harnesses to simply think and make better decisions too. In this case, the AI is reducing the burden of injecting rigor into writing and decision making. Comments URL: https://news.ycombinator.com/item?id=47484145 Points: 1 # Comments: 0",
+        "publishedAt": "2026-03-23T00:54:08.000Z",
+        "category": "research",
+        "llmScore": 60,
+        "confidence": 0.79,
+        "domainTag": "research",
+        "intentTag": "discussion",
+        "llmClassifyReason": "关于AI模型CAPEX的讨论，偏向成本研究分析。",
+        "score": 46.57,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.62162162162162,
+          "llmScore": 60,
+          "finalScore": 46.57,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "e7206c722522",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Ask HN: How much are you spending on AI coding at work?",
+        "link": "https://news.ycombinator.com/item?id=47484203",
+        "contentSnippet": "Jensen Huang recently said that he thinks an engineer who makes $500k should spend at least $250k a year on “tokens” which is an astounding figure. I personally don’t know how I could spend that much if I tried. Obviously he has a huge financial incentive to convince people that $250k per engineer is reasonable, but it got me thinking that it’s time for a survey. How much are you and your coworkers spending on AI coding tools at work? I’m talking about Cursor, Claude Code, etc. Not all AI-powered SaaS, just the stuff that’s metered by token. Comments URL: https://news.ycombinator.com/item?id=47484203 Points: 3 # Comments: 1",
+        "publishedAt": "2026-03-23T01:02:24.000Z",
+        "category": "tooling",
+        "llmScore": 58,
+        "confidence": 0.85,
+        "domainTag": "tooling",
+        "intentTag": "discussion",
+        "llmClassifyReason": "HN社区关于AI编码成本的讨论，涉及工具定价。",
+        "score": 45.27,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.62162162162162,
+          "llmScore": 58,
+          "finalScore": 45.27,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "60934291420d",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "大厂抢郭达雅进行时！DeepSeek核心成员还是个“综艺巨佬”",
+        "link": "https://www.qbitai.com/2026/03/390990.html",
+        "contentSnippet": "郭达雅将花落谁家？",
+        "publishedAt": "2026-03-22T07:03:33.000Z",
+        "category": "other",
+        "llmScore": 45,
+        "confidence": 0.85,
+        "domainTag": "industry",
+        "intentTag": "gossip",
+        "llmClassifyReason": "行业八卦与人物动态，信息密度与工程价值较低。",
+        "score": 33.98,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 13.513513513513514,
+          "llmScore": 45,
+          "finalScore": 33.98,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "7f1f49f7759b",
+        "title": "Implementing Deep Q-Learning (DQN) from Scratch Using RLax JAX Haiku and Optax to Train a CartPole Reinforcement Learning Agent",
+        "titleZh": "使用 RLax JAX Haiku Optax 从零实现深度 Q 学习 DQN",
+        "summary": "In this tutorial, we implement a reinforcement learning agent using RLax, a research-oriented library developed by Goog…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "7f1f49f7759b"
+        ],
+        "domainTag": "rl",
+        "intentTag": "research",
+        "confidence": 0.89,
+        "llmScore": 84
+      },
+      {
+        "itemId": "d580a619910e",
+        "title": "Meet GitAgent: The Docker for AI Agents that is Finally Solving the Fragmentation between LangChain, AutoGen, and Claude Code",
+        "summary": "GitAgent 是一个新兴的 AI Agent 工具，旨在统一当前碎片化的 AI Agent 框架生态，解决 LangChain、AutoGen、CrewAI 等五大框架之间的互操作性问题。",
+        "recommendation": "工程团队应关注 GitAgent，它有望成为 AI Agent 领域的「Docker」，统一不同框架的开发体验，降低框架锁定风险。",
+        "evidenceItemIds": [
+          "d580a619910e"
+        ],
+        "domainTag": "tooling",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 85.22
+      },
+      {
+        "itemId": "79f05d166b91",
+        "title": "Stripe Engineers Deploy Minions, Autonomous Agents Producing Thousands of Pull Requests Weekly",
+        "summary": "Stripe推出名为Minions的自主编程代理，每周可生成超过1300个",
+        "recommendation": "建议近期纳入评估《Stripe Engineers Deploy Minions, Autonomous Agents Producing Thousands of Pull Requests Weekly》相关方案，重点关注多 Agent 协作策略与稳定性。",
+        "evidenceItemIds": [
+          "79f05d166b91"
+        ],
+        "domainTag": "agent",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 80.26
+      },
+      {
+        "itemId": "bc6f8d91d0a9",
+        "title": "Where Do Humans Fit in AI-Assisted Software Development?",
+        "summary": "Kief Morris",
+        "recommendation": "建议近期纳入评估《Where Do Humans Fit in AI-Assisted Software Development?》相关方案，重点关注多 Agent 协作策略与稳定性。",
+        "evidenceItemIds": [
+          "bc6f8d91d0a9"
+        ],
+        "domainTag": "agent",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 74.7
+      },
+      {
+        "itemId": "67138cda251d",
+        "title": "A Coding Implementation to Build an Uncertainty-Aware LLM System with Confidence Estimation, Self-Evaluation, and Automatic Web Research",
+        "titleZh": "构建不确定性感知的LLM系统实战教程",
+        "summary": "In this tutorial, we build an uncertainty-aware large language model system that not only generates answers but also es…",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "67138cda251d"
+        ],
+        "domainTag": "llm",
+        "intentTag": "tutorial",
+        "confidence": 0.94,
+        "llmScore": 82
+      },
+      {
+        "itemId": "e27c3af43785",
+        "title": "QCon London 2026: Morgan Stanley Rethinks Its API Program for the MCP Era",
+        "titleZh": "QCon London 2026：摩根士丹利为 MCP 时代重新设计 API 计划",
+        "summary": "Morgan Stanley engineers Jim Gough and Andreea Niculcea showed how they're retooling the bank's API program for AI agen…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "e27c3af43785"
+        ],
+        "domainTag": "api",
+        "intentTag": "tooling",
+        "confidence": 0.91,
+        "llmScore": 85
+      },
+      {
+        "itemId": "f01ed047a904",
+        "title": "How BM25 and RAG Retrieve Information Differently?",
+        "summary": "本文对比了传统BM25检索算法与新型RAG检索方式在信息查找上的核心差异，BM25基于词频和文档长度等三要素评分，而RAG结合大语言模型实现更智能的语义检索。",
+        "recommendation": "建议近期纳入评估《How BM25 and RAG Retrieve Information Differently?》相关方案，重点关注实践步骤的可复现性。",
+        "evidenceItemIds": [
+          "f01ed047a904"
+        ],
+        "domainTag": "tutorial",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 71.69
+      },
+      {
+        "itemId": "f04841e1c045",
+        "title": "A Coding Implementation for Building and Analyzing Crystal Structures Using Pymatgen for Symmetry Analysis, Phase Diagrams, Surface Generation, and Materials Project Integration",
+        "summary": "本教程介绍使用Python的pymatgen库进行晶体结构构建与分析，涵盖硅、氯化钠、LiFePO₄等材料的晶格性质、对称性分析、原子配位环境和氧化态应用。",
+        "recommendation": "适合计算材料科学领域开发者学习pymatgen基础操作，特别是需要材料项目集成和相图分析的工程团队。",
+        "evidenceItemIds": [
+          "f04841e1c045"
+        ],
+        "domainTag": "tutorial",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 71.33
+      },
+      {
+        "itemId": "18d15cdba70b",
+        "title": "Safely Deploying ML Models to Production: Four Controlled Strategies (A/B, Canary, Interleaved, Shadow Testing)",
+        "titleZh": "安全部署ML模型到生产环境：四种受控策略（A/B、金丝雀、交错、影子测试）",
+        "summary": "本文介绍了四种安全的ML模型部署策略：A/B测试、金丝雀发布、交错测试和影子测试，帮助在生产环境中逐步验证模型效果并降低风险。",
+        "recommendation": "工程团队在部署新ML模型时应采用受控策略，避免直接替换导致线上事故，建议从影子测试开始逐步验证。",
+        "evidenceItemIds": [
+          "18d15cdba70b"
+        ],
+        "domainTag": "tooling",
+        "intentTag": "tutorial",
+        "actionability": 3,
+        "confidence": 0.85,
+        "llmScore": 76
+      },
+      {
+        "itemId": "82a52730840e",
+        "title": "AWS Expands Aurora DSQL with Playground, New Tool Integrations, and Driver Connectors",
+        "summary": "AWS为Aurora DSQL推出多项更新，包括新的交互式Playground（可直接在浏览器中免费体验）、新工具集成和驱动连接器，旨在提升可用性和开发者体验。",
+        "recommendation": "Aurora DSQL的Playground降低了试用门槛，建议数据库工程师和云架构师关注其无服务器架构与新集成能力。",
+        "evidenceItemIds": [
+          "82a52730840e"
+        ],
+        "domainTag": "tooling",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 65.6
+      },
+      {
+        "itemId": "6d18c69e3424",
+        "title": "QCon London 2026: Refreshing Stale Code Intelligence",
+        "summary": "QCon London 2026会议上，Jeff Smith指出AI编码模型虽能快速生成代码，但因缺乏仓库特定知识而日益“过时”，难以产出可用于生产的代码。",
+        "recommendation": "建议按需关注并跟踪《QCon London 2026: Refreshing Stale Code Intelligence》相关方案，重点关注仓库成熟度与二次开发成本。",
+        "evidenceItemIds": [
+          "6d18c69e3424"
+        ],
+        "domainTag": "open-source",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 56.79
+      },
+      {
+        "itemId": "5d0c534d762d",
+        "title": "浙大团队破解多模态模型「盲目自信」：先校准置信度，再分配算力丨CVPR’26",
+        "summary": "浙大团队在CVPR 2026发表研究，针对多模态模型在图像模糊时仍",
+        "recommendation": "建议按需关注并跟踪《浙大团队破解多模态模型「盲目自信」：先校准置信度，再分配算力丨CVPR’26》相关方案，重点关注实验结论到业务场景的可迁移性。",
+        "evidenceItemIds": [
+          "5d0c534d762d"
+        ],
+        "domainTag": "research",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 55.43
+      },
+      {
+        "itemId": "518c0f24fc5f",
+        "title": "精准识别「界门纲目科属种」！北大彭宇新团队用细粒度树先验提升泛化，破解生物类别分层识别难题",
+        "titleZh": "北大彭宇新团队用细粒度树先验破解生物类别分层识别难题",
+        "summary": "让生成式模型具备完整类别树认知，迈向通用视觉理解",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "518c0f24fc5f"
+        ],
+        "domainTag": "research",
+        "intentTag": "paper",
+        "confidence": 0.95,
+        "llmScore": 85
+      },
+      {
+        "itemId": "10f4932eeddf",
+        "title": "Cursor admits its new coding model was built on top of Moonshot AI's Kimi",
+        "titleZh": "Cursor承认新版编码模型基于月之暗面AI的Kimi构建",
+        "summary": "Cursor（AI编程工具）承认其新版编码模型基于中国AI公司月之暗面（Moonshot AI）的Kimi模型构建，引发关于AI模型授权与合规性的讨论。",
+        "recommendation": "关注AI编程工具的技术授权动态，了解主流工具的底层模型来源及其合规风险，对工程团队选择编程辅助工具有参考价值。",
+        "evidenceItemIds": [
+          "10f4932eeddf"
+        ],
+        "domainTag": "tooling",
+        "intentTag": "case-study",
+        "actionability": 1,
+        "confidence": 0.85,
+        "llmScore": 68
+      },
+      {
+        "itemId": "44fcd6d60cfd",
+        "title": "Ask HN: How do you compare cloud and AI costs across providers?",
+        "titleZh": "Ask HN：如何比较不同云服务商和AI提供商的成本？",
+        "summary": "Hacker News用户发起讨论，询问如何比较不同云服务商（AWS、GCP、OCI、Azure）及AI/LLM提供商的当前成本与未来成本，期望了解业界实践和工具方案。",
+        "recommendation": "工程团队可关注此类跨云成本对比工具的社区需求，对于多云部署和AI成本优化的工具开发具有参考价值。",
+        "evidenceItemIds": [
+          "44fcd6d60cfd"
+        ],
+        "domainTag": "tooling",
+        "intentTag": "opinion",
+        "actionability": 1,
+        "confidence": 0.85,
+        "llmScore": 62
+      },
+      {
+        "itemId": "403959ad80eb",
+        "title": "AI Model Discovers 22 Firefox Vulnerabilities in Two Weeks",
+        "summary": "Claude Opus 4.6 AI模型在两周内发现了22个Firefox漏洞，其中14个为高危漏洞，并成功编写了2个漏洞的利用代码。",
+        "recommendation": "该案例展示了AI在安全测试中的强大能力，工程团队应关注AI辅助漏洞发现的趋势及其对开发流程的影响。",
+        "evidenceItemIds": [
+          "403959ad80eb"
+        ],
+        "domainTag": "other",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 52.66
+      },
+      {
+        "itemId": "52e90fbb79dd",
+        "title": "Self-Recursive Ethics in a Longitudinal AI Ethics Monitor Log: Documented",
+        "summary": "Article URL: https://zenodo.org/records/19164044 Comments URL: https://news.ycombinator.com/item?id=47484277 Points: 1 …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "52e90fbb79dd"
+        ],
+        "domainTag": "ai-ethics",
+        "intentTag": "research",
+        "confidence": 0.88,
+        "llmScore": 68
+      },
+      {
+        "itemId": "bfa250d804d6",
+        "title": "上海凭什么敢自封“开发者之城”？看完这场大会议程我悟了",
+        "summary": "上海将于3月27日举办开发者大会，主题与WAIC人工智能大会深度联动，为参会者提供直通WAIC的机会",
+        "recommendation": "建议按需关注并跟踪《上海凭什么敢自封“开发者之城”？看完这场大会议程我悟了》相关方案，重点关注对业务路线图与资源投入的影响。",
+        "evidenceItemIds": [
+          "bfa250d804d6"
+        ],
+        "domainTag": "industry-news",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 48.93
+      },
+      {
+        "itemId": "dfbbc2afae9a",
+        "title": "What would you do if you have AI software that may be transformers alternative?",
+        "titleZh": "如果你有一个可能替代transformers的AI软件，你会怎么做？",
+        "summary": "开发者询问其开发的AI软件能否成为Transformer架构的替代品，该软件自称在速度和智能方面有10倍提升，采用C/C#/F#实现，代码量约10-15k行。",
+        "recommendation": "关注非Transformer架构的演进趋势，适合对新型高效模型架构感兴趣的工程团队了解行业前沿探索。",
+        "evidenceItemIds": [
+          "dfbbc2afae9a"
+        ],
+        "domainTag": "research",
+        "intentTag": "opinion",
+        "actionability": 1,
+        "confidence": 0.7,
+        "llmScore": 48
+      },
+      {
+        "itemId": "820ffbfa70f1",
+        "title": "阶跃星辰率先适配微信生态，StepClaw“龙虾”即插即养即用",
+        "summary": "个人聊天场景全面激活",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "820ffbfa70f1"
+        ],
+        "domainTag": "industry",
+        "intentTag": "news",
+        "confidence": 0.9,
+        "llmScore": 66
+      },
+      {
+        "itemId": "ad641d7e5570",
+        "title": "英伟达GTC现场的隐形AI巨头：老黄机器人demo背后都是它",
+        "summary": "英伟达GTC 2026大会上，光轮智能",
+        "recommendation": "建议按需关注并跟踪《英伟达GTC现场的隐形AI巨头：老黄机器人demo背后都是它》相关方案，重点关注对业务路线图与资源投入的影响。",
+        "evidenceItemIds": [
+          "ad641d7e5570"
+        ],
+        "domainTag": "industry-news",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 46.8
+      },
+      {
+        "itemId": "8c33f3a38032",
+        "title": "Show HN: AI models AI capex",
+        "summary": "开发者展示了利用Claude构建的AI资本支出分析仪表板，通过深度研究和Python建模估算AI收入与成本，结论是基础情况下2024年前难以盈亏平衡。",
+        "recommendation": "建议按需关注并跟踪《Show HN: AI models AI capex》相关方案，重点关注实验结论到业务场景的可迁移性。",
+        "evidenceItemIds": [
+          "8c33f3a38032"
+        ],
+        "domainTag": "research",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 46.57
+      },
+      {
+        "itemId": "e7206c722522",
+        "title": "Ask HN: How much are you spending on AI coding at work?",
+        "summary": "Hacker News上关于AI编码",
+        "recommendation": "建议按需关注并跟踪《Ask HN: How much are you spending on AI coding at work?》相关方案，重点关注与现有工程链路的集成成本。",
+        "evidenceItemIds": [
+          "e7206c722522"
+        ],
+        "domainTag": "tooling",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 45.27
+      },
+      {
+        "itemId": "60934291420d",
+        "title": "大厂抢郭达雅进行时！DeepSeek核心成员还是个“综艺巨佬”",
+        "summary": "DeepSeek核心成员郭达雅成为大厂竞相争夺的对象，该成员同时具有综艺背景，引发行业关注。",
+        "recommendation": "了解AI人才流动趋势的参考案例，可观察头部AI公司对核心人才的重视程度。",
+        "evidenceItemIds": [
+          "60934291420d"
+        ],
+        "domainTag": "other",
+        "intentTag": "news",
+        "actionability": 1,
+        "confidence": 0.6,
+        "llmScore": 33.98
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "7f1f49f7759b",
+        "title": "使用 RLax JAX Haiku Optax 从零实现深度 Q 学习 DQN (Implementing Deep Q-Learning (DQN) from Scratch Using RLax JAX Haiku and Optax to Train a CartPole Reinforcement Learning Agent)",
+        "takeaway": "In this tutorial, we implement a reinforcement learning agent using RLax, a research-oriented library developed by Goog…",
+        "evidenceItemIds": [
+          "7f1f49f7759b"
+        ]
+      },
+      {
+        "itemId": "d580a619910e",
+        "title": "认识 GitAgent：解决 LangChain、AutoGen、Claude Code 碎片化的 AI Agent 容器 (Meet GitAgent: The Docker for AI Agents that is Finally Solving the Fragmentation between LangChain, AutoGen, and Claude Code)",
+        "takeaway": "GitAgent 是一个新兴的 AI Agent 工具，旨在统一当前碎片化的 AI Agent 框架生态，解决 LangChain、AutoGen、CrewAI 等五大框架之间的互操作性问题。",
+        "evidenceItemIds": [
+          "d580a619910e"
+        ]
+      },
+      {
+        "itemId": "79f05d166b91",
+        "title": "Stripe 工程师部署 Minions：每周生成上千条 PR 的自主代理 (Stripe Engineers Deploy Minions, Autonomous Agents Producing Thousands of Pull Requests Weekly)",
+        "takeaway": "Stripe推出名为Minions的自主编程代理，每周可生成超过1300个",
+        "evidenceItemIds": [
+          "79f05d166b91"
+        ]
+      },
+      {
+        "itemId": "bc6f8d91d0a9",
+        "title": "人类在 AI 辅助软件开发中扮演什么角色？ (Where Do Humans Fit in AI-Assisted Software Development?)",
+        "takeaway": "Kief Morris",
+        "evidenceItemIds": [
+          "bc6f8d91d0a9"
+        ]
+      },
+      {
+        "itemId": "67138cda251d",
+        "title": "构建不确定性感知的LLM系统实战教程 (A Coding Implementation to Build an Uncertainty-Aware LLM System with Confidence Estimation, Self-Evaluation, and Automatic Web Research)",
+        "takeaway": "In this tutorial, we build an uncertainty-aware large language model system that not only generates answers but also es…",
+        "evidenceItemIds": [
+          "67138cda251d"
+        ]
+      },
+      {
+        "itemId": "e27c3af43785",
+        "title": "QCon London 2026：摩根士丹利为 MCP 时代重新设计 API 计划 (QCon London 2026: Morgan Stanley Rethinks Its API Program for the MCP Era)",
+        "takeaway": "Morgan Stanley engineers Jim Gough and Andreea Niculcea showed how they're retooling the bank's API program for AI agen…",
+        "evidenceItemIds": [
+          "e27c3af43785"
+        ]
+      },
+      {
+        "itemId": "f01ed047a904",
+        "title": "BM25 与 RAG 如何不同地检索信息？ (How BM25 and RAG Retrieve Information Differently?)",
+        "takeaway": "本文对比了传统BM25检索算法与新型RAG检索方式在信息查找上的核心差异，BM25基于词频和文档长度等三要素评分，而RAG结合大语言模型实现更智能的语义检索。",
+        "evidenceItemIds": [
+          "f01ed047a904"
+        ]
+      },
+      {
+        "itemId": "f04841e1c045",
+        "title": "使用 Pymatgen 构建和分析晶体结构：对称性分析、相图、表面生成 (A Coding Implementation for Building and Analyzing Crystal Structures Using Pymatgen for Symmetry Analysis, Phase Diagrams, Surface Generation, and Materials Project Integration)",
+        "takeaway": "本教程介绍使用Python的pymatgen库进行晶体结构构建与分析，涵盖硅、氯化钠、LiFePO₄等材料的晶格性质、对称性分析、原子配位环境和氧化态应用。",
+        "evidenceItemIds": [
+          "f04841e1c045"
+        ]
+      },
+      {
+        "itemId": "18d15cdba70b",
+        "title": "安全部署ML模型到生产环境：四种受控策略（A/B、金丝雀、交错、影子测试） (Safely Deploying ML Models to Production: Four Controlled Strategies (A/B, Canary, Interleaved, Shadow Testing))",
+        "takeaway": "本文介绍了四种安全的ML模型部署策略：A/B测试、金丝雀发布、交错测试和影子测试，帮助在生产环境中逐步验证模型效果并降低风险。",
+        "evidenceItemIds": [
+          "18d15cdba70b"
+        ]
+      },
+      {
+        "itemId": "82a52730840e",
+        "title": "AWS 扩展 Aurora DSQL：新增 Playground、工具集成和驱动连接器 (AWS Expands Aurora DSQL with Playground, New Tool Integrations, and Driver Connectors)",
+        "takeaway": "AWS为Aurora DSQL推出多项更新，包括新的交互式Playground（可直接在浏览器中免费体验）、新工具集成和驱动连接器，旨在提升可用性和开发者体验。",
+        "evidenceItemIds": [
+          "82a52730840e"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕research与tooling展开，建议优先关注《使用 RLax JAX Haiku Optax 从零实现深度 Q 学习 DQN》、《认识 GitAgent：解决 LangChain、AutoGen、Claude Code 碎片化的 AI Agent 容器》、《Stripe 工程师部署 Minions：每周生成上千条 PR 的自主代理》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "tooling",
+        "lead": "工具链方向本期共 4 条，建议优先阅读《认识 GitAgent：解决 LangChain、AutoGen、Claude Code 碎片化的 AI Agent 容器》、《QCon London 2026：摩根士丹利为 MCP 时代重新设计 API 计划》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "d580a619910e",
+          "e27c3af43785",
+          "18d15cdba70b",
+          "82a52730840e"
+        ],
+        "fallbackTriggered": true,
+        "reason": "minimax_invalid_response:missing_content"
+      },
+      {
+        "category": "research",
+        "lead": "研究方向本期共 4 条，建议优先阅读《使用 RLax JAX Haiku Optax 从零实现深度 Q 学习 DQN》、《浙大团队破解多模态模型「盲目自信」：先校准置信度，再分配算力丨CVPR’26》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "7f1f49f7759b",
+          "5d0c534d762d",
+          "518c0f24fc5f",
+          "52e90fbb79dd"
+        ],
+        "fallbackTriggered": true,
+        "reason": "minimax_invalid_response:missing_content"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《Cursor admits its new coding model was built on top of Moonshot AI's Kimi》、《上海开发者大会3月开幕锁定WAIC直通卡》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "10f4932eeddf",
+          "bfa250d804d6",
+          "dfbbc2afae9a",
+          "820ffbfa70f1"
+        ],
+        "fallbackTriggered": true,
+        "reason": "minimax_invalid_response:missing_content"
+      },
+      {
+        "category": "tutorial",
+        "lead": "教程实践本期共 3 条，建议优先阅读《构建不确定性感知的LLM系统实战教程》、《BM25 与 RAG 如何不同地检索信息？》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "67138cda251d",
+          "f01ed047a904",
+          "f04841e1c045"
+        ],
+        "fallbackTriggered": true,
+        "reason": "minimax_invalid_response:missing_content"
+      }
+    ],
+    "summaryInputHash": "f9948b93e07ad1bf4bf11fc6d1ed76640ad022e3c3d157945d0fdcf373c25d6f",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-03-23T01:47:30.042Z",
+      "finishedAt": "2026-03-23T01:48:48.161Z",
+      "durationMs": 78122,
+      "inputCount": 24,
+      "processedCount": 24,
+      "fallbackCount": 0,
+      "fallbackTriggered": false,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 24,
+      "llmScoreFallbackCount": 0,
+      "failureStats": {
+        "totalFailed": 0,
+        "timeout": 0,
+        "http": 0,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 0,
+        "splitRetryCount": 0
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-03-16",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-03-09",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 8,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-03-23T01:48:48.851Z",
+      "finishedAt": "2026-03-23T01:56:12.066Z",
+      "durationMs": 443232,
+      "inputCount": 24,
+      "summarizedCount": 18,
+      "fallbackTriggered": false,
+      "effectiveConcurrency": 1,
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 6,
+        "timeout": 0,
+        "http": 0,
+        "business": 0,
+        "missingContent": 6,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 12,
+        "missingContentExtraRetryTriggeredCount": 12,
+        "compensationRetryItemCount": 0,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 2
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0.16666666666666666,
+        "maxWindowSuccessRate": 0.8333333333333334,
+        "lastWindowMissingContentRate": 0.16666666666666666,
+        "lastWindowSuccessRate": 0.8333333333333334
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 5,
+        "zhRepairAttemptedCount": 2,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 2
+      }
+    },
+    "highlights": [
+      {
+        "id": "7f1f49f7759b",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Implementing Deep Q-Learning (DQN) from Scratch Using RLax JAX Haiku and Optax to Train a CartPole Reinforcement Learning Agent",
+        "link": "https://www.marktechpost.com/2026/03/22/implementing-deep-q-learning-dqn-from-scratch-using-rlax-jax-haiku-and-optax-to-train-a-cartpole-reinforcement-learning-agent/",
+        "contentSnippet": "In this tutorial, we implement a reinforcement learning agent using RLax, a research-oriented library developed by Google DeepMind for building reinforcement learning algorithms with JAX. We combine RLax with JAX, Haiku, and Optax to construct a Deep Q-Learning (DQN) agent that learns to solve the CartPole environment. Instead of using a fully packaged RL framework, […] The post Implementing Deep Q-Learning (DQN) from Scratch Using RLax JAX Haiku and Optax to Train a CartPole Reinforcement Learning Agent appeared first on MarkTechPost.",
+        "publishedAt": "2026-03-22T21:54:00.000Z",
+        "category": "research",
+        "llmScore": 84,
+        "confidence": 0.89,
+        "domainTag": "rl",
+        "intentTag": "research",
+        "titleZh": "使用 RLax JAX Haiku Optax 从零实现深度 Q 学习 DQN",
+        "llmClassifyReason": "深度强化学习 DQN 实现，基于 JAX/RLax 的算法研究。",
+        "score": 89.6,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 119,
+          "ruleScoreNormalized": 100,
+          "llmScore": 84,
+          "finalScore": 89.6,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "d580a619910e",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet GitAgent: The Docker for AI Agents that is Finally Solving the Fragmentation between LangChain, AutoGen, and Claude Code",
+        "link": "https://www.marktechpost.com/2026/03/22/meet-gitagent-the-docker-for-ai-agents-that-is-finally-solving-the-fragmentation-between-langchain-autogen-and-claude-code/",
+        "contentSnippet": "The current state of AI agent development is characterized by significant architectural fragmentation. Software devs building autonomous systems must generally commit to one of several competing ecosystems: LangChain, AutoGen, CrewAI, OpenAI Assistants, or the more recent Claude Code. Each of these ‘Five Frameworks’ utilizes a proprietary method for defining agent logic, memory persistence, and tool […] The post Meet GitAgent: The Docker for AI Agents that is Finally Solving the Fragmentation between LangChain, AutoGen, and Claude Code appeared first on MarkTechPost.",
+        "publishedAt": "2026-03-22T21:21:48.000Z",
+        "category": "tooling",
+        "llmScore": 86,
+        "confidence": 0.91,
+        "domainTag": "agent",
+        "intentTag": "tooling",
+        "titleZh": "认识 GitAgent：解决 LangChain、AutoGen、Claude Code 碎片化的 AI Agent 容器",
+        "llmClassifyReason": "解决 Agent 生态碎片化的工具，聚焦工程实践。",
+        "score": 85.22,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 83.78378378378379,
+          "llmScore": 86,
+          "finalScore": 85.22,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "79f05d166b91",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Stripe Engineers Deploy Minions, Autonomous Agents Producing Thousands of Pull Requests Weekly",
+        "link": "https://www.infoq.com/news/2026/03/stripe-autonomous-coding-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Stripe engineers describe Minions, autonomous coding agents generating over 1,300 pull requests per week. Tasks can originate from Slack, bug reports, or feature requests. Using LLMs, blueprints, and CI/CD pipelines, Minions produce production-ready changes while maintaining reliability and human review. By Leela Kumili",
+        "publishedAt": "2026-03-20T14:26:00.000Z",
+        "category": "agent",
+        "llmScore": 90,
+        "confidence": 0.92,
+        "domainTag": "agent",
+        "intentTag": "production",
+        "titleZh": "Stripe 工程师部署 Minions：每周生成上千条 PR 的自主代理",
+        "llmClassifyReason": "Stripe 生产级自主代理实践，每周千级 PR，工程价值极高。",
+        "score": 80.26,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 62.16216216216216,
+          "llmScore": 90,
+          "finalScore": 80.26,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "bc6f8d91d0a9",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Where Do Humans Fit in AI-Assisted Software Development?",
+        "link": "https://www.infoq.com/news/2026/03/mf-aiassisted-dev/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "An article on Martin Fowler’s blog by Kief Morris examines the role of humans in AI-assisted software engineering, arguing developers are unlikely to move fully “out of the loop.” Instead, teams may work “on the loop,” designing tests, specifications, and feedback mechanisms to guide AI agents, as industry discussions focus on how such systems should be verified and governed. By Matt Foster",
+        "publishedAt": "2026-03-19T07:32:00.000Z",
+        "category": "agent",
+        "llmScore": 80,
+        "confidence": 0.9,
+        "domainTag": "agent",
+        "intentTag": "analysis",
+        "titleZh": "人类在 AI 辅助软件开发中扮演什么角色？",
+        "llmClassifyReason": "探讨人类在 AI 辅助开发中的角色，Agent 实践反思。",
+        "score": 74.7,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 106,
+          "ruleScoreNormalized": 64.86486486486487,
+          "llmScore": 80,
+          "finalScore": 74.7,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      },
+      {
+        "id": "67138cda251d",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "A Coding Implementation to Build an Uncertainty-Aware LLM System with Confidence Estimation, Self-Evaluation, and Automatic Web Research",
+        "link": "https://www.marktechpost.com/2026/03/21/a-coding-implementation-to-build-an-uncertainty-aware-llm-system-with-confidence-estimation-self-evaluation-and-automatic-web-research/",
+        "contentSnippet": "In this tutorial, we build an uncertainty-aware large language model system that not only generates answers but also estimates the confidence in those answers. We implement a three-stage reasoning pipeline in which the model first produces an answer along with a self-reported confidence score and a justification. We then introduce a self-evaluation step that allows […] The post A Coding Implementation to Build an Uncertainty-Aware LLM System with Confidence Estimation, Self-Evaluation, and Automatic Web Research appeared first on MarkTechPost.",
+        "publishedAt": "2026-03-21T21:39:10.000Z",
+        "category": "tutorial",
+        "llmScore": 82,
+        "confidence": 0.94,
+        "domainTag": "llm",
+        "intentTag": "tutorial",
+        "titleZh": "构建不确定性感知的LLM系统实战教程",
+        "llmClassifyReason": "构建不确定性感知LLM系统的完整教程，含代码实现。",
+        "score": 74.11,
+        "importance": "medium",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 104,
+          "ruleScoreNormalized": 59.45945945945946,
+          "llmScore": 82,
+          "finalScore": 74.11,
+          "fusionWeight": 0.65,
+          "usedLlm": true
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 24,
+      "normalizedCount": 24,
+      "dedupedCount": 24,
+      "highImportanceCount": 2,
+      "mediumImportanceCount": 8,
+      "lowImportanceCount": 14,
+      "categoryBreakdown": {
+        "open-source": 1,
+        "tooling": 6,
+        "agent": 2,
+        "research": 5,
+        "industry-news": 5,
+        "tutorial": 3,
+        "other": 2
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Google AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[VentureBeat AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[ZDNet AI] 抓取失败: This operation was aborted",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+      "LLM 部分条目回退规则摘要：6/24（success=75%）",
+      "LLM 条目失败明细（前 3/24）：minimax_invalid_response:missing_content | minimax_invalid_response:missing_content | minimax_invalid_response:missing_content",
+      "LLM 失败分类：missing_content=6, timeout=0, http=0, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=12, missing_content_extra=12, compensation=0, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=17%, window_success=83%",
+      "LLM 中文质量：detected_non_zh=5, repair_attempted=2, repair_succeeded=0, english_retained=2",
+      "LLM 中文质量：detected_non_zh=5, repair_attempted=2, repair_succeeded=0, english_retained=2"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
