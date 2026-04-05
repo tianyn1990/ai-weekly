@@ -52,6 +52,7 @@ pnpm run setup:macos
 pnpm run services:up
 ```
 - 说明：该命令会自动把 `AI_WEEKLY_ENV_FILE` 同步到 `~/.config/ai-weekly/.env.launchd`，规避 macOS 对 `Documents/Desktop` 的读取限制。
+- 说明：`launchd` 模式还会把 DB、scheduler marker、notification、watchdog 等内部状态默认迁移到 `~/.local/state/ai-weekly/runtime`，降低后台读写 `Documents` 时被 TCC 拦截的概率；日报/周报产物仍写回仓库 `outputs/review` 与 `outputs/published`，保持 GitHub 发布链路不变。
 
 5) 检查运行状态（必须看这一条）
 ```bash
@@ -70,6 +71,10 @@ pnpm run services:status
 ```bash
 pnpm run services:logs
 ```
+
+常见故障提示：
+- 若 `services:status` 显示 `running` 但日报未继续生成，优先执行 `pnpm run services:restart`，并检查日志中是否仍有 `EPERM: operation not permitted, open 'outputs/db/app.sqlite'` 一类报错。
+- 若需要自定义 launchd 运行态目录，可设置 `AI_WEEKLY_RUNTIME_ROOT`，例如 `~/.local/state/ai-weekly/runtime-dev`。
 
 说明：
 - `pnpm run feishu:tunnel` 是临时联调模式，URL 可能变化；长期运行请使用 `services:up`。

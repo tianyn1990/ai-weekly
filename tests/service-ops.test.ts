@@ -17,12 +17,14 @@ describe("service-ops parseArgs", () => {
       FEISHU_CALLBACK_PORT: "9876",
       CLOUDFLARED_TUNNEL_NAME: "my-tunnel",
       AI_WEEKLY_LAUNCHD_ENV_FILE: "/tmp/.env.launchd",
+      AI_WEEKLY_RUNTIME_ROOT: "/tmp/ai-weekly-runtime",
     });
     expect(args.command).toBe("status");
     expect(args.callbackHost).toBe("0.0.0.0");
     expect(args.callbackPort).toBe(9876);
     expect(args.tunnelName).toBe("my-tunnel");
     expect(args.launchdEnvFilePath).toBe("/tmp/.env.launchd");
+    expect(args.runtimeRoot).toBe("/tmp/ai-weekly-runtime");
   });
 
   it("端口与日志行数非法时应回退默认值", () => {
@@ -115,6 +117,17 @@ state = exited
 `);
     expect(stopped.state).toBe("stopped");
   });
+
+  it("daemon 启动命令应直接运行 dist 产物", () => {
+    const command = __test__.buildDaemonCommand(
+      {
+        projectRoot: "/repo",
+      } as any,
+      "/tmp/.env.launchd",
+    );
+    expect(command).toContain("dist/cli.js run --daemon");
+    expect(command).not.toContain("pnpm run run:daemon");
+  });
 });
 
 describe("service-ops protection helpers", () => {
@@ -157,5 +170,37 @@ describe("service-ops protection helpers", () => {
   it("应识别 env 源文件与 launchd 目标文件冲突", () => {
     expect(__test__.isEnvSourceSameAsLaunchdTarget("/tmp/.env.launchd", "/tmp/.env.launchd")).toBe(true);
     expect(__test__.isEnvSourceSameAsLaunchdTarget("/repo/.env.local", "/tmp/.env.launchd")).toBe(false);
+  });
+
+  it("应为 launchd 生成低风险 runtime 路径覆盖", () => {
+    const managed = __test__.buildManagedLaunchdEnv(
+      {
+        STORAGE_DB_PATH: "outputs/db/app.sqlite",
+        DAEMON_MARKER_ROOT: "outputs/daemon/schedule-markers",
+        FEISHU_NOTIFICATION_ROOT: "/tmp/custom-feishu",
+      },
+      {
+        runtimeRoot: "/Users/hetao/.local/state/ai-weekly/runtime",
+        launchdEnvFilePath: "/Users/hetao/.config/ai-weekly/.env.launchd",
+      },
+    );
+    expect(managed.AI_WEEKLY_ENV_FILE).toBe("/Users/hetao/.config/ai-weekly/.env.launchd");
+    expect(managed.STORAGE_DB_PATH).toBe("/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite");
+    expect(managed.DAEMON_MARKER_ROOT).toBe("/Users/hetao/.local/state/ai-weekly/runtime/daemon/schedule-markers");
+    expect(managed.FEISHU_NOTIFICATION_ROOT).toBe("/tmp/custom-feishu");
+    expect(managed.GIT_SYNC_INCLUDE_PATHS).toBe("outputs/review,outputs/published");
+  });
+
+  it("应把受管 launchd 配置附加到 env 文件末尾", () => {
+    const merged = __test__.mergeLaunchdEnvContent({
+      sourceContent: 'AUTO_GIT_SYNC="true"\n',
+      managedEnv: {
+        STORAGE_DB_PATH: "/tmp/runtime/db/app.sqlite",
+        DAEMON_MARKER_ROOT: "/tmp/runtime/daemon/schedule-markers",
+      },
+    });
+    expect(merged).toContain('AUTO_GIT_SYNC="true"');
+    expect(merged).toContain("# --- managed by service-ops: launchd runtime paths ---");
+    expect(merged).toContain('STORAGE_DB_PATH="/tmp/runtime/db/app.sqlite"');
   });
 });

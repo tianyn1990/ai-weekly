@@ -62,6 +62,7 @@
 - 一键服务托管：新增 `services:up/down/restart/status/logs`，通过 launchd 托管 daemon + Named Tunnel。
 - 联合健康检查：`services:status` 同时输出本地 health 与公网 callback health，降低排障成本。
 - 模式边界显式化：保留 `feishu:tunnel` 作为临时调试模式，并在脚本中输出非稳定 URL 提示。
+- launchd 运行态隔离：`services:up` 会为 launchd 生成受管 env 覆盖，把 DB、scheduler marker、notification、watchdog、runtime config 等内部状态迁移到 `~/.local/state/ai-weekly/runtime`（可通过 `AI_WEEKLY_RUNTIME_ROOT` 覆盖），避免后台进程直接读写 `Documents` 下的内部状态目录触发 macOS TCC `EPERM`；`outputs/review` 与 `outputs/published` 仍保留在仓库内，维持 Git 发布与公网链接语义。
 
 ### 2.9 已实现（M5.1）
 - 新增 `llm_summarize` 节点，位于 `publish_or_wait -> build_report` 之间。

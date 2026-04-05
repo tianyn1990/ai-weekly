@@ -51,6 +51,7 @@ pnpm run:weekly:mock
 - M4 复盘 03（Feishu 审核交互重构：阶段主卡 + 单卡更新 + 去噪回执）：`docs/learning-sessions/m4-session-03-feishu-review-ux-guided-flow.md`
 - M4 复盘 04（daemon 自动化 + @机器人主动触发 + 自动 Git 同步）：`docs/learning-sessions/m4-session-04-daemon-and-manual-ops.md`
 - M4 复盘 05（macOS 初始化引导 + 一键服务托管）：`docs/learning-sessions/m4-session-05-macos-bootstrap-and-service-runner.md`
+- M4 复盘 06（launchd runtime root 隔离 + TCC 权限修复）：`docs/learning-sessions/m4-session-06-launchd-runtime-root-tcc-fix.md`
 - M5 复盘 01（MiniMax 逐条总结 + 4-12 速览 + 回退告警）：`docs/learning-sessions/m5-session-01-llm-summary-minimax.md`
 - M5 复盘 02（LLM 辅助排序/打标 + 导语 + 标题翻译 + 全局并发闸门）：`docs/learning-sessions/m5-session-02-llm-assist-ranking-and-lead.md`
 - M5 复盘 03（自适应降载 + run 级诊断 + 分类导读）：`docs/learning-sessions/m5-session-03-llm-stability-observability-and-category-lead.md`
