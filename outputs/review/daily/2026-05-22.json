@@ -1,0 +1,1990 @@
+{
+  "runId": "daily-1779412887934",
+  "generatedAt": "2026-05-22T01:21:27.896Z",
+  "reviewStartedAt": "2026-05-22T01:21:27.896Z",
+  "reportDate": "2026-05-22",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-05-22T01:21:27.896Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 30,
+    "normalizedCount": 30,
+    "dedupedCount": 30,
+    "highImportanceCount": 1,
+    "mediumImportanceCount": 1,
+    "lowImportanceCount": 28,
+    "categoryBreakdown": {
+      "open-source": 4,
+      "tooling": 3,
+      "agent": 3,
+      "research": 0,
+      "industry-news": 1,
+      "tutorial": 0,
+      "other": 19
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "be8bf2dc2b04",
+      "title": "Anthropic Introduces MCP Tunnels for Private Agent Access to Internal Systems",
+      "summary": "Anthropic has expanded its Claude Managed Agents platform with two enterprise-focused capabilities: self-hosted sandbox…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "be8bf2dc2b04"
+      ]
+    },
+    {
+      "itemId": "be6c13a1b6e6",
+      "title": "Anthropic's Code with Claude Announces Managed Agents, Proactive Workflows, Capability Curve",
+      "summary": "Anthropic hosted \"Code with Claude 2026\" in San Francisco, featuring livestream sessions focused on Claude Code, the Cl…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "be6c13a1b6e6"
+      ]
+    },
+    {
+      "itemId": "5c2b25e91cd2",
+      "title": "Designing a Multi-Agent System for Engineering Support at Scale: a Case Study from Grab",
+      "summary": "Grab’s Central Data Team built a multi-agent AI system to automate repetitive engineering support tasks across its data…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "5c2b25e91cd2"
+      ]
+    },
+    {
+      "itemId": "232dd292d597",
+      "title": "39万！雷军发布小米最贵SUV",
+      "summary": "特斯拉前厂长宋钢加盟后首秀",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "232dd292d597"
+      ]
+    },
+    {
+      "itemId": "b3981256aa9f",
+      "title": "Agent Builder is now LangSmith Fleet",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "b3981256aa9f"
+      ]
+    },
+    {
+      "itemId": "4309c341e311",
+      "title": "Agent Builder: chat, file uploads, and tool registry",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "4309c341e311"
+      ]
+    },
+    {
+      "itemId": "cbcaf3d94b9e",
+      "title": "Scheduled reports for Insights Agent",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "cbcaf3d94b9e"
+      ]
+    },
+    {
+      "itemId": "e3d44e83a9fb",
+      "title": "Deep Agents v0.4",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "e3d44e83a9fb"
+      ]
+    },
+    {
+      "itemId": "dd3196417ee4",
+      "title": "Bintrail: MySQL Time-Travel Queries Using Indexed Binlogs",
+      "summary": "Bintrail is a recently introduced layer that brings point-in-time queries and row-history lookups to MySQL, the only ma…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "dd3196417ee4"
+      ]
+    },
+    {
+      "itemId": "30d258975940",
+      "title": "Six Sessions at QCon AI Boston 2026 That Take Productionizing AI Seriously",
+      "summary": "QCon AI Boston 2026 is close to selling out. Six sessions where speakers engage directly with the gap between AI workin…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "30d258975940"
+      ]
+    },
+    {
+      "itemId": "32f228673f9d",
+      "title": "腾讯混元开源全新翻译模型Hy-MT2 ，上线小程序「腾讯Hy翻译」",
+      "summary": "最大提升体现在指令遵循能力上",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "32f228673f9d"
+      ]
+    },
+    {
+      "itemId": "5e327815c2c4",
+      "title": "Microsoft open sources its ‘farm of the future’ toolkit",
+      "summary": "The post Microsoft open sources its ‘farm of the future’ toolkit appeared first on The AI Blog.",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "5e327815c2c4"
+      ]
+    },
+    {
+      "itemId": "4fdbea351235",
+      "title": "We’re announcing new community investments in Missouri.",
+      "summary": "We’re helping build the state’s next-generation workforce and investing in energy programs.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "4fdbea351235"
+      ]
+    },
+    {
+      "itemId": "3d8e8d789d40",
+      "title": "100 things we announced at I/O 2026",
+      "summary": "This year at Google I/O 2026, we announced Gemini Omni, Google Antigravity, Universal Cart and so much more. Here are t…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3d8e8d789d40"
+      ]
+    },
+    {
+      "itemId": "92f30ac7c83e",
+      "title": "A new experiment brings better group meetings to Google Beam",
+      "summary": "See and hear your colleagues in true-to-life size and sound, making hybrid meetings feel more inclusive and connected.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "92f30ac7c83e"
+      ]
+    },
+    {
+      "itemId": "2af90981f595",
+      "title": "I/O 2026",
+      "summary": "At Google I/O 2026, we shared how we’re making AI more helpful for everyone. See everything we announced.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2af90981f595"
+      ]
+    },
+    {
+      "itemId": "d2029680a697",
+      "title": "How AI Mode is changing the way people search in the U.S.",
+      "summary": "One year after launch, see how AI Mode’s users are shifting from keywords to natural language queries.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d2029680a697"
+      ]
+    },
+    {
+      "itemId": "6848efd79da6",
+      "title": "New ways to create and get things done in Google Workspace",
+      "summary": "Announcing new voice capabilities in Gmail, Docs and Keep, a new design tool called Google Pics and updates to AI Inbox.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "6848efd79da6"
+      ]
+    },
+    {
+      "itemId": "4f1bd42357e8",
+      "title": "联想集团Q4营收利润双创新高，兑现历史最佳财年",
+      "summary": "调整后净利润同比增长42.1%",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "4f1bd42357e8"
+      ]
+    },
+    {
+      "itemId": "f04fe7e63fdc",
+      "title": "Agoda Builds Multimodal Content System to Bridge Images and Reviews in Travel Discovery",
+      "summary": "Agoda Multimodal Content System https://example.com/agoda-multimodal-content-system Agoda unifies hotel images and gues…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f04fe7e63fdc"
+      ]
+    },
+    {
+      "itemId": "052a4a256537",
+      "title": "菲尔兹奖得主都看懵了：OpenAI非数学模型首次自主突破80年未解数学难题",
+      "summary": "125页“令人恐惧”的推演",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "052a4a256537"
+      ]
+    },
+    {
+      "itemId": "8ed4be37856d",
+      "title": "风行在线CEO易正朝：先全员Coding，再All in众创丨AIGC2026",
+      "summary": "AI会放大“自嗨”，解药只有交付结果",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "8ed4be37856d"
+      ]
+    },
+    {
+      "itemId": "69ed0677a2e0",
+      "title": "Artificial Analysis放榜：千问3.7问鼎国产模型冠军，全球前五",
+      "summary": "Qwen3.7-Max即将上线阿里云百炼对外提供API服务",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "69ed0677a2e0"
+      ]
+    },
+    {
+      "itemId": "8a9ed6e50795",
+      "title": "Pin a baseline experiment in LangSmith",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "8a9ed6e50795"
+      ]
+    },
+    {
+      "itemId": "98f4c30944aa",
+      "title": "Customize trace previews in LangSmith",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "98f4c30944aa"
+      ]
+    },
+    {
+      "itemId": "87225dfc3e68",
+      "title": "A conversation with Kevin Scott: What’s next in AI",
+      "summary": "The post A conversation with Kevin Scott: What’s next in AI appeared first on The AI Blog.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "87225dfc3e68"
+      ]
+    },
+    {
+      "itemId": "5896e047adc6",
+      "title": "From Hot Wheels to handling content: How brands are using Microsoft AI to be more productive and imaginative",
+      "summary": "The post From Hot Wheels to handling content: How brands are using Microsoft AI to be more productive and imaginative a…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5896e047adc6"
+      ]
+    },
+    {
+      "itemId": "fe93253782ea",
+      "title": "How data and AI will transform contact centres for financial services",
+      "summary": "The post How data and AI will transform contact centres for financial services appeared first on The AI Blog.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fe93253782ea"
+      ]
+    },
+    {
+      "itemId": "c61256096223",
+      "title": "AI-equipped drones study dolphins on the edge of extinction",
+      "summary": "The post AI-equipped drones study dolphins on the edge of extinction appeared first on The AI Blog.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c61256096223"
+      ]
+    },
+    {
+      "itemId": "455e21f8b151",
+      "title": "Online math tutoring service uses AI to help boost students’ skills and confidence",
+      "summary": "The post Online math tutoring service uses AI to help boost students’ skills and confidence appeared first on The AI Bl…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "455e21f8b151"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "be8bf2dc2b04",
+      "title": "Anthropic Introduces MCP Tunnels for Private Agent Access to Internal Systems",
+      "takeaway": "Anthropic has expanded its Claude Managed Agents platform with two enterprise-focused capabilities: self-hosted sandbox…",
+      "evidenceItemIds": [
+        "be8bf2dc2b04"
+      ]
+    },
+    {
+      "itemId": "be6c13a1b6e6",
+      "title": "Anthropic's Code with Claude Announces Managed Agents, Proactive Workflows, Capability Curve",
+      "takeaway": "Anthropic hosted \"Code with Claude 2026\" in San Francisco, featuring livestream sessions focused on Claude Code, the Cl…",
+      "evidenceItemIds": [
+        "be6c13a1b6e6"
+      ]
+    },
+    {
+      "itemId": "5c2b25e91cd2",
+      "title": "Designing a Multi-Agent System for Engineering Support at Scale: a Case Study from Grab",
+      "takeaway": "Grab’s Central Data Team built a multi-agent AI system to automate repetitive engineering support tasks across its data…",
+      "evidenceItemIds": [
+        "5c2b25e91cd2"
+      ]
+    },
+    {
+      "itemId": "232dd292d597",
+      "title": "39万！雷军发布小米最贵SUV",
+      "takeaway": "特斯拉前厂长宋钢加盟后首秀",
+      "evidenceItemIds": [
+        "232dd292d597"
+      ]
+    },
+    {
+      "itemId": "b3981256aa9f",
+      "title": "Agent Builder is now LangSmith Fleet",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "b3981256aa9f"
+      ]
+    },
+    {
+      "itemId": "4309c341e311",
+      "title": "Agent Builder: chat, file uploads, and tool registry",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "4309c341e311"
+      ]
+    },
+    {
+      "itemId": "cbcaf3d94b9e",
+      "title": "Scheduled reports for Insights Agent",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "cbcaf3d94b9e"
+      ]
+    },
+    {
+      "itemId": "e3d44e83a9fb",
+      "title": "Deep Agents v0.4",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "e3d44e83a9fb"
+      ]
+    },
+    {
+      "itemId": "dd3196417ee4",
+      "title": "Bintrail: MySQL Time-Travel Queries Using Indexed Binlogs",
+      "takeaway": "Bintrail is a recently introduced layer that brings point-in-time queries and row-history lookups to MySQL, the only ma…",
+      "evidenceItemIds": [
+        "dd3196417ee4"
+      ]
+    },
+    {
+      "itemId": "30d258975940",
+      "title": "Six Sessions at QCon AI Boston 2026 That Take Productionizing AI Seriously",
+      "takeaway": "QCon AI Boston 2026 is close to selling out. Six sessions where speakers engage directly with the gap between AI workin…",
+      "evidenceItemIds": [
+        "30d258975940"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕agent与open-source展开，建议优先关注《Anthropic Introduces MCP Tunnels for Private Agent Access to Internal Systems》、《Anthropic's Code with Claude Announces Managed Agents, Proactive Workflows, Capability Curve》、《Designing a Multi-Agent System for Engineering Support at Scale: a Case Study from Grab》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Bintrail: MySQL Time-Travel Queries Using Indexed Binlogs》、《Six Sessions at QCon AI Boston 2026 That Take Productionizing AI Seriously》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "dd3196417ee4",
+        "30d258975940",
+        "4fdbea351235",
+        "3d8e8d789d40"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 4 条，建议优先阅读《Anthropic's Code with Claude Announces Managed Agents, Proactive Workflows, Capability Curve》、《Scheduled reports for Insights Agent》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "be6c13a1b6e6",
+        "cbcaf3d94b9e",
+        "32f228673f9d",
+        "5e327815c2c4"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 3 条，建议优先阅读《Anthropic Introduces MCP Tunnels for Private Agent Access to Internal Systems》、《Agent Builder is now LangSmith Fleet》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "be8bf2dc2b04",
+        "b3981256aa9f",
+        "e3d44e83a9fb"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "tooling",
+      "lead": "工具链方向本期共 3 条，建议优先阅读《Designing a Multi-Agent System for Engineering Support at Scale: a Case Study from Grab》、《Agent Builder: chat, file uploads, and tool registry》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "5c2b25e91cd2",
+        "4309c341e311",
+        "6848efd79da6"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "e7ce2d5e86f2890605e9757f7f72ee8e198a4eb0d1642d2e01f080c1845ff21d",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-05-22T01:42:21.416Z",
+    "finishedAt": "2026-05-22T01:44:50.811Z",
+    "durationMs": 149395,
+    "inputCount": 30,
+    "processedCount": 30,
+    "fallbackCount": 30,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 30,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 57,
+      "splitRetryCount": 27
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-05-15",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-05-08",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-05-22T01:44:50.910Z",
+    "finishedAt": "2026-05-22T01:45:08.515Z",
+    "durationMs": 17605,
+    "inputCount": 30,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "be8bf2dc2b04",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Anthropic Introduces MCP Tunnels for Private Agent Access to Internal Systems",
+      "link": "https://www.infoq.com/news/2026/05/claude-mcp-tunnels/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Anthropic has expanded its Claude Managed Agents platform with two enterprise-focused capabilities: self-hosted sandboxes and MCP tunnels. The release aims to address a recurring challenge in enterprise AI deployments, where organizations want to use autonomous agents but cannot allow execution environments or internal systems to leave their security perimeter. By Robert Krzaczyński",
+      "publishedAt": "2026-05-19T19:20:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 123,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "be6c13a1b6e6",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Anthropic's Code with Claude Announces Managed Agents, Proactive Workflows, Capability Curve",
+      "link": "https://www.infoq.com/news/2026/05/code-with-claude/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Anthropic hosted \"Code with Claude 2026\" in San Francisco, featuring livestream sessions focused on Claude Code, the Claude API platform, and other projects. Key topics included developer experience, autonomy features, model step-changes, and the impact of AI on product architecture. Discussions included insights from GitHub, Vercel, and AI-native startups on engineering strategies and challenges. By Andrew Hoblitzell",
+      "publishedAt": "2026-05-18T13:14:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 71.79,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 112,
+        "ruleScoreNormalized": 71.7948717948718,
+        "finalScore": 71.79,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "5c2b25e91cd2",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Designing a Multi-Agent System for Engineering Support at Scale: a Case Study from Grab",
+      "link": "https://www.infoq.com/news/2026/05/grab-multi-agent-support-system/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Grab’s Central Data Team built a multi-agent AI system to automate repetitive engineering support tasks across its data warehouse platform. The system separates investigation and enhancement workflows using specialized agents coordinated via an orchestration layer. It reduces operational load, improves resolution speed, and shifts engineering effort from firefighting to platform engineering work. By Leela Kumili",
+      "publishedAt": "2026-05-20T14:38:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 53.85,
+      "importance": "low",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 105,
+        "ruleScoreNormalized": 53.84615384615385,
+        "finalScore": 53.85,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "232dd292d597",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "39万！雷军发布小米最贵SUV",
+      "link": "https://www.qbitai.com/2026/05/422088.html",
+      "contentSnippet": "特斯拉前厂长宋钢加盟后首秀",
+      "publishedAt": "2026-05-22T00:50:05.000Z",
+      "category": "industry-news",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 46.15,
+      "importance": "low",
+      "recommendationReason": "模型或产品发布",
+      "scoreBreakdown": {
+        "ruleScore": 102,
+        "ruleScoreNormalized": 46.15384615384615,
+        "finalScore": 46.15,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "b3981256aa9f",
+      "sourceId": "langchain-blog",
+      "sourceName": "LangChain Changelog",
+      "title": "Agent Builder is now LangSmith Fleet",
+      "link": "https://changelog.langchain.com/announcements/agent-builder-is-now-langsmith-fleet?utm_source=LaunchNotes&utm_medium=rss",
+      "contentSnippet": "",
+      "publishedAt": "2026-03-19T17:05:31.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 43.59,
+      "importance": "low",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 101,
+        "ruleScoreNormalized": 43.58974358974359,
+        "finalScore": 43.59,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[MarkTechPost] 抓取失败: HTTP 403",
+    "[VentureBeat AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[ZDNet AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[HNRSS AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：30/30",
+    "LLM 分类打分回退明细（前 3/30）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"065ee822fd7fb718951cc5468812dbdc\"} | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"065ee8221d1877356bcbd418d3c6656d\"} | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"065ee823656b8a82f9e6f78bb5fbde4a\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=30：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=57, split_retry=27",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Anthropic Introduces MCP Tunnels for Private Agent Access to Internal Systems\n- Anthropic's Code with Claude Announces Managed Agents, Proactive Workflows, Capability Curve\n- Designing a Multi-Agent System for Engineering Support at Scale: a Case Study from Grab\n- 39万！雷军发布小米最贵SUV\n- Agent Builder is now LangSmith Fleet\n\n### 分类覆盖（大纲）\n- agent: 3 条\n- open-source: 4 条\n- tooling: 3 条\n- industry-news: 1 条\n- other: 19 条",
+    "rankedItems": [
+      {
+        "id": "be8bf2dc2b04",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Anthropic Introduces MCP Tunnels for Private Agent Access to Internal Systems",
+        "link": "https://www.infoq.com/news/2026/05/claude-mcp-tunnels/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Anthropic has expanded its Claude Managed Agents platform with two enterprise-focused capabilities: self-hosted sandboxes and MCP tunnels. The release aims to address a recurring challenge in enterprise AI deployments, where organizations want to use autonomous agents but cannot allow execution environments or internal systems to leave their security perimeter. By Robert Krzaczyński",
+        "publishedAt": "2026-05-19T19:20:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "be6c13a1b6e6",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Anthropic's Code with Claude Announces Managed Agents, Proactive Workflows, Capability Curve",
+        "link": "https://www.infoq.com/news/2026/05/code-with-claude/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Anthropic hosted \"Code with Claude 2026\" in San Francisco, featuring livestream sessions focused on Claude Code, the Claude API platform, and other projects. Key topics included developer experience, autonomy features, model step-changes, and the impact of AI on product architecture. Discussions included insights from GitHub, Vercel, and AI-native startups on engineering strategies and challenges. By Andrew Hoblitzell",
+        "publishedAt": "2026-05-18T13:14:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 71.79,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 112,
+          "ruleScoreNormalized": 71.7948717948718,
+          "finalScore": 71.79,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5c2b25e91cd2",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Designing a Multi-Agent System for Engineering Support at Scale: a Case Study from Grab",
+        "link": "https://www.infoq.com/news/2026/05/grab-multi-agent-support-system/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Grab’s Central Data Team built a multi-agent AI system to automate repetitive engineering support tasks across its data warehouse platform. The system separates investigation and enhancement workflows using specialized agents coordinated via an orchestration layer. It reduces operational load, improves resolution speed, and shifts engineering effort from firefighting to platform engineering work. By Leela Kumili",
+        "publishedAt": "2026-05-20T14:38:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 53.85,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 53.84615384615385,
+          "finalScore": 53.85,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "232dd292d597",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "39万！雷军发布小米最贵SUV",
+        "link": "https://www.qbitai.com/2026/05/422088.html",
+        "contentSnippet": "特斯拉前厂长宋钢加盟后首秀",
+        "publishedAt": "2026-05-22T00:50:05.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 46.15,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 46.15384615384615,
+          "finalScore": 46.15,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b3981256aa9f",
+        "sourceId": "langchain-blog",
+        "sourceName": "LangChain Changelog",
+        "title": "Agent Builder is now LangSmith Fleet",
+        "link": "https://changelog.langchain.com/announcements/agent-builder-is-now-langsmith-fleet?utm_source=LaunchNotes&utm_medium=rss",
+        "contentSnippet": "",
+        "publishedAt": "2026-03-19T17:05:31.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 43.59,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 101,
+          "ruleScoreNormalized": 43.58974358974359,
+          "finalScore": 43.59,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4309c341e311",
+        "sourceId": "langchain-blog",
+        "sourceName": "LangChain Changelog",
+        "title": "Agent Builder: chat, file uploads, and tool registry",
+        "link": "https://changelog.langchain.com/announcements/agent-builder-chat-file-uploads-and-tool-registry?utm_source=LaunchNotes&utm_medium=rss",
+        "contentSnippet": "",
+        "publishedAt": "2026-02-18T18:59:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 43.59,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 101,
+          "ruleScoreNormalized": 43.58974358974359,
+          "finalScore": 43.59,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cbcaf3d94b9e",
+        "sourceId": "langchain-blog",
+        "sourceName": "LangChain Changelog",
+        "title": "Scheduled reports for Insights Agent",
+        "link": "https://changelog.langchain.com/announcements/scheduled-reports-for-insights-agent?utm_source=LaunchNotes&utm_medium=rss",
+        "contentSnippet": "",
+        "publishedAt": "2026-02-17T18:56:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 43.59,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 101,
+          "ruleScoreNormalized": 43.58974358974359,
+          "finalScore": 43.59,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e3d44e83a9fb",
+        "sourceId": "langchain-blog",
+        "sourceName": "LangChain Changelog",
+        "title": "Deep Agents v0.4",
+        "link": "https://changelog.langchain.com/announcements/deep-agents-v0-4?utm_source=LaunchNotes&utm_medium=rss",
+        "contentSnippet": "",
+        "publishedAt": "2026-02-10T18:50:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 43.59,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 101,
+          "ruleScoreNormalized": 43.58974358974359,
+          "finalScore": 43.59,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "dd3196417ee4",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Bintrail: MySQL Time-Travel Queries Using Indexed Binlogs",
+        "link": "https://www.infoq.com/news/2026/05/bintrail-mysql-timetravel/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Bintrail is a recently introduced layer that brings point-in-time queries and row-history lookups to MySQL, the only major relational database lacking native temporal querying. Using indexed binlogs behind ProxySQL and without modifying MySQL or application code, Bintrail supports querying data as of a past timestamp and reviewing change history, primarily for recovery and audit scenarios. By Renato Losio",
+        "publishedAt": "2026-05-21T17:03:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 41.03,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 41.02564102564102,
+          "finalScore": 41.03,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "30d258975940",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Six Sessions at QCon AI Boston 2026 That Take Productionizing AI Seriously",
+        "link": "https://www.infoq.com/news/2026/05/qconai-boston-2026-talks/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "QCon AI Boston 2026 is close to selling out. Six sessions where speakers engage directly with the gap between AI working in a demo and AI working in production. By Artenisa Chatziou",
+        "publishedAt": "2026-05-21T15:15:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 41.03,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 41.02564102564102,
+          "finalScore": 41.03,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "32f228673f9d",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "腾讯混元开源全新翻译模型Hy-MT2 ，上线小程序「腾讯Hy翻译」",
+        "link": "https://www.qbitai.com/2026/05/422068.html",
+        "contentSnippet": "最大提升体现在指令遵循能力上",
+        "publishedAt": "2026-05-21T09:48:42.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 38.46,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 99,
+          "ruleScoreNormalized": 38.46153846153847,
+          "finalScore": 38.46,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5e327815c2c4",
+        "sourceId": "microsoft-ai-blog",
+        "sourceName": "Microsoft AI Blog",
+        "title": "Microsoft open sources its ‘farm of the future’ toolkit",
+        "link": "https://blogs.microsoft.com/ai/microsoft-open-sources-its-farm-of-the-future-toolkit/",
+        "contentSnippet": "The post Microsoft open sources its ‘farm of the future’ toolkit appeared first on The AI Blog.",
+        "publishedAt": "2022-10-06T14:58:15.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 30.77,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 96,
+          "ruleScoreNormalized": 30.76923076923077,
+          "finalScore": 30.77,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4fdbea351235",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "We’re announcing new community investments in Missouri.",
+        "link": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/missouri-programs/",
+        "contentSnippet": "We’re helping build the state’s next-generation workforce and investing in energy programs.",
+        "publishedAt": "2026-05-20T20:40:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3d8e8d789d40",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "100 things we announced at I/O 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+        "contentSnippet": "This year at Google I/O 2026, we announced Gemini Omni, Google Antigravity, Universal Cart and so much more. Here are the highlights.",
+        "publishedAt": "2026-05-20T19:30:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "92f30ac7c83e",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "A new experiment brings better group meetings to Google Beam",
+        "link": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-beam-group-meetings/",
+        "contentSnippet": "See and hear your colleagues in true-to-life size and sound, making hybrid meetings feel more inclusive and connected.",
+        "publishedAt": "2026-05-20T16:45:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2af90981f595",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "I/O 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/",
+        "contentSnippet": "At Google I/O 2026, we shared how we’re making AI more helpful for everyone. See everything we announced.",
+        "publishedAt": "2026-05-19T17:45:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d2029680a697",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "How AI Mode is changing the way people search in the U.S.",
+        "link": "https://blog.google/products-and-platforms/products/search/ai-mode-us-insights/",
+        "contentSnippet": "One year after launch, see how AI Mode’s users are shifting from keywords to natural language queries.",
+        "publishedAt": "2026-05-19T17:45:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6848efd79da6",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "New ways to create and get things done in Google Workspace",
+        "link": "https://blog.google/products-and-platforms/products/workspace/workspace-updates/",
+        "contentSnippet": "Announcing new voice capabilities in Gmail, Docs and Keep, a new design tool called Google Pics and updates to AI Inbox.",
+        "publishedAt": "2026-05-19T17:45:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4f1bd42357e8",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "联想集团Q4营收利润双创新高，兑现历史最佳财年",
+        "link": "https://www.qbitai.com/2026/05/422127.html",
+        "contentSnippet": "调整后净利润同比增长42.1%",
+        "publishedAt": "2026-05-22T00:46:43.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f04fe7e63fdc",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Agoda Builds Multimodal Content System to Bridge Images and Reviews in Travel Discovery",
+        "link": "https://www.infoq.com/news/2026/05/agoda-multimodal-content-system/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Agoda Multimodal Content System https://example.com/agoda-multimodal-content-system Agoda unifies hotel images and guest reviews using a shared topic taxonomy, enabling multimodal retrieval across 700M+ images and multilingual reviews with offline enrichment and low-latency serving. By Leela Kumili",
+        "publishedAt": "2026-05-19T14:29:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 15.38,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 15.384615384615385,
+          "finalScore": 15.38,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "052a4a256537",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "菲尔兹奖得主都看懵了：OpenAI非数学模型首次自主突破80年未解数学难题",
+        "link": "https://www.qbitai.com/2026/05/422032.html",
+        "contentSnippet": "125页“令人恐惧”的推演",
+        "publishedAt": "2026-05-21T09:36:23.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 7.69,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 7.6923076923076925,
+          "finalScore": 7.69,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8ed4be37856d",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "风行在线CEO易正朝：先全员Coding，再All in众创丨AIGC2026",
+        "link": "https://www.qbitai.com/2026/05/422001.html",
+        "contentSnippet": "AI会放大“自嗨”，解药只有交付结果",
+        "publishedAt": "2026-05-21T09:27:25.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 7.69,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 7.6923076923076925,
+          "finalScore": 7.69,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "69ed0677a2e0",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "Artificial Analysis放榜：千问3.7问鼎国产模型冠军，全球前五",
+        "link": "https://www.qbitai.com/2026/05/422009.html",
+        "contentSnippet": "Qwen3.7-Max即将上线阿里云百炼对外提供API服务",
+        "publishedAt": "2026-05-21T09:16:12.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 7.69,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 7.6923076923076925,
+          "finalScore": 7.69,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8a9ed6e50795",
+        "sourceId": "langchain-blog",
+        "sourceName": "LangChain Changelog",
+        "title": "Pin a baseline experiment in LangSmith",
+        "link": "https://changelog.langchain.com/announcements/pin-a-baseline-experiment-in-langsmith?utm_source=LaunchNotes&utm_medium=rss",
+        "contentSnippet": "",
+        "publishedAt": "2026-02-19T19:01:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.13,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 86,
+          "ruleScoreNormalized": 5.128205128205128,
+          "finalScore": 5.13,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "98f4c30944aa",
+        "sourceId": "langchain-blog",
+        "sourceName": "LangChain Changelog",
+        "title": "Customize trace previews in LangSmith",
+        "link": "https://changelog.langchain.com/announcements/customize-trace-previews-in-langsmith?utm_source=LaunchNotes&utm_medium=rss",
+        "contentSnippet": "",
+        "publishedAt": "2026-02-06T21:09:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.13,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 86,
+          "ruleScoreNormalized": 5.128205128205128,
+          "finalScore": 5.13,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "87225dfc3e68",
+        "sourceId": "microsoft-ai-blog",
+        "sourceName": "Microsoft AI Blog",
+        "title": "A conversation with Kevin Scott: What’s next in AI",
+        "link": "https://blogs.microsoft.com/ai/a-conversation-with-kevin-scott-whats-next-in-ai/",
+        "contentSnippet": "The post A conversation with Kevin Scott: What’s next in AI appeared first on The AI Blog.",
+        "publishedAt": "2022-12-06T17:29:09.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5896e047adc6",
+        "sourceId": "microsoft-ai-blog",
+        "sourceName": "Microsoft AI Blog",
+        "title": "From Hot Wheels to handling content: How brands are using Microsoft AI to be more productive and imaginative",
+        "link": "https://blogs.microsoft.com/ai/from-hot-wheels-to-handling-content-how-brands-are-using-microsoft-ai-to-be-more-productive-and-imaginative/",
+        "contentSnippet": "The post From Hot Wheels to handling content: How brands are using Microsoft AI to be more productive and imaginative appeared first on The AI Blog.",
+        "publishedAt": "2022-10-12T16:00:02.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fe93253782ea",
+        "sourceId": "microsoft-ai-blog",
+        "sourceName": "Microsoft AI Blog",
+        "title": "How data and AI will transform contact centres for financial services",
+        "link": "https://cloudblogs.microsoft.com/industry-blog/en-gb/financial-services/2022/07/25/how-data-and-ai-will-transform-contact-centres-for-financial-services/",
+        "contentSnippet": "The post How data and AI will transform contact centres for financial services appeared first on The AI Blog.",
+        "publishedAt": "2022-07-25T14:49:33.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c61256096223",
+        "sourceId": "microsoft-ai-blog",
+        "sourceName": "Microsoft AI Blog",
+        "title": "AI-equipped drones study dolphins on the edge of extinction",
+        "link": "https://news.microsoft.com/apac/features/ai-drones-dolphins-maui63/",
+        "contentSnippet": "The post AI-equipped drones study dolphins on the edge of extinction appeared first on The AI Blog.",
+        "publishedAt": "2022-07-21T14:50:33.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "455e21f8b151",
+        "sourceId": "microsoft-ai-blog",
+        "sourceName": "Microsoft AI Blog",
+        "title": "Online math tutoring service uses AI to help boost students’ skills and confidence",
+        "link": "https://blogs.microsoft.com/ai/eedi-online-math-quiz/",
+        "contentSnippet": "The post Online math tutoring service uses AI to help boost students’ skills and confidence appeared first on The AI Blog.",
+        "publishedAt": "2022-07-13T12:59:50.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "be8bf2dc2b04",
+        "title": "Anthropic Introduces MCP Tunnels for Private Agent Access to Internal Systems",
+        "summary": "Anthropic has expanded its Claude Managed Agents platform with two enterprise-focused capabilities: self-hosted sandbox…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "be8bf2dc2b04"
+        ]
+      },
+      {
+        "itemId": "be6c13a1b6e6",
+        "title": "Anthropic's Code with Claude Announces Managed Agents, Proactive Workflows, Capability Curve",
+        "summary": "Anthropic hosted \"Code with Claude 2026\" in San Francisco, featuring livestream sessions focused on Claude Code, the Cl…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "be6c13a1b6e6"
+        ]
+      },
+      {
+        "itemId": "5c2b25e91cd2",
+        "title": "Designing a Multi-Agent System for Engineering Support at Scale: a Case Study from Grab",
+        "summary": "Grab’s Central Data Team built a multi-agent AI system to automate repetitive engineering support tasks across its data…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "5c2b25e91cd2"
+        ]
+      },
+      {
+        "itemId": "232dd292d597",
+        "title": "39万！雷军发布小米最贵SUV",
+        "summary": "特斯拉前厂长宋钢加盟后首秀",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "232dd292d597"
+        ]
+      },
+      {
+        "itemId": "b3981256aa9f",
+        "title": "Agent Builder is now LangSmith Fleet",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "b3981256aa9f"
+        ]
+      },
+      {
+        "itemId": "4309c341e311",
+        "title": "Agent Builder: chat, file uploads, and tool registry",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "4309c341e311"
+        ]
+      },
+      {
+        "itemId": "cbcaf3d94b9e",
+        "title": "Scheduled reports for Insights Agent",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "cbcaf3d94b9e"
+        ]
+      },
+      {
+        "itemId": "e3d44e83a9fb",
+        "title": "Deep Agents v0.4",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "e3d44e83a9fb"
+        ]
+      },
+      {
+        "itemId": "dd3196417ee4",
+        "title": "Bintrail: MySQL Time-Travel Queries Using Indexed Binlogs",
+        "summary": "Bintrail is a recently introduced layer that brings point-in-time queries and row-history lookups to MySQL, the only ma…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "dd3196417ee4"
+        ]
+      },
+      {
+        "itemId": "30d258975940",
+        "title": "Six Sessions at QCon AI Boston 2026 That Take Productionizing AI Seriously",
+        "summary": "QCon AI Boston 2026 is close to selling out. Six sessions where speakers engage directly with the gap between AI workin…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "30d258975940"
+        ]
+      },
+      {
+        "itemId": "32f228673f9d",
+        "title": "腾讯混元开源全新翻译模型Hy-MT2 ，上线小程序「腾讯Hy翻译」",
+        "summary": "最大提升体现在指令遵循能力上",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "32f228673f9d"
+        ]
+      },
+      {
+        "itemId": "5e327815c2c4",
+        "title": "Microsoft open sources its ‘farm of the future’ toolkit",
+        "summary": "The post Microsoft open sources its ‘farm of the future’ toolkit appeared first on The AI Blog.",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "5e327815c2c4"
+        ]
+      },
+      {
+        "itemId": "4fdbea351235",
+        "title": "We’re announcing new community investments in Missouri.",
+        "summary": "We’re helping build the state’s next-generation workforce and investing in energy programs.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "4fdbea351235"
+        ]
+      },
+      {
+        "itemId": "3d8e8d789d40",
+        "title": "100 things we announced at I/O 2026",
+        "summary": "This year at Google I/O 2026, we announced Gemini Omni, Google Antigravity, Universal Cart and so much more. Here are t…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3d8e8d789d40"
+        ]
+      },
+      {
+        "itemId": "92f30ac7c83e",
+        "title": "A new experiment brings better group meetings to Google Beam",
+        "summary": "See and hear your colleagues in true-to-life size and sound, making hybrid meetings feel more inclusive and connected.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "92f30ac7c83e"
+        ]
+      },
+      {
+        "itemId": "2af90981f595",
+        "title": "I/O 2026",
+        "summary": "At Google I/O 2026, we shared how we’re making AI more helpful for everyone. See everything we announced.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2af90981f595"
+        ]
+      },
+      {
+        "itemId": "d2029680a697",
+        "title": "How AI Mode is changing the way people search in the U.S.",
+        "summary": "One year after launch, see how AI Mode’s users are shifting from keywords to natural language queries.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d2029680a697"
+        ]
+      },
+      {
+        "itemId": "6848efd79da6",
+        "title": "New ways to create and get things done in Google Workspace",
+        "summary": "Announcing new voice capabilities in Gmail, Docs and Keep, a new design tool called Google Pics and updates to AI Inbox.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "6848efd79da6"
+        ]
+      },
+      {
+        "itemId": "4f1bd42357e8",
+        "title": "联想集团Q4营收利润双创新高，兑现历史最佳财年",
+        "summary": "调整后净利润同比增长42.1%",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "4f1bd42357e8"
+        ]
+      },
+      {
+        "itemId": "f04fe7e63fdc",
+        "title": "Agoda Builds Multimodal Content System to Bridge Images and Reviews in Travel Discovery",
+        "summary": "Agoda Multimodal Content System https://example.com/agoda-multimodal-content-system Agoda unifies hotel images and gues…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f04fe7e63fdc"
+        ]
+      },
+      {
+        "itemId": "052a4a256537",
+        "title": "菲尔兹奖得主都看懵了：OpenAI非数学模型首次自主突破80年未解数学难题",
+        "summary": "125页“令人恐惧”的推演",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "052a4a256537"
+        ]
+      },
+      {
+        "itemId": "8ed4be37856d",
+        "title": "风行在线CEO易正朝：先全员Coding，再All in众创丨AIGC2026",
+        "summary": "AI会放大“自嗨”，解药只有交付结果",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "8ed4be37856d"
+        ]
+      },
+      {
+        "itemId": "69ed0677a2e0",
+        "title": "Artificial Analysis放榜：千问3.7问鼎国产模型冠军，全球前五",
+        "summary": "Qwen3.7-Max即将上线阿里云百炼对外提供API服务",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "69ed0677a2e0"
+        ]
+      },
+      {
+        "itemId": "8a9ed6e50795",
+        "title": "Pin a baseline experiment in LangSmith",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "8a9ed6e50795"
+        ]
+      },
+      {
+        "itemId": "98f4c30944aa",
+        "title": "Customize trace previews in LangSmith",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "98f4c30944aa"
+        ]
+      },
+      {
+        "itemId": "87225dfc3e68",
+        "title": "A conversation with Kevin Scott: What’s next in AI",
+        "summary": "The post A conversation with Kevin Scott: What’s next in AI appeared first on The AI Blog.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "87225dfc3e68"
+        ]
+      },
+      {
+        "itemId": "5896e047adc6",
+        "title": "From Hot Wheels to handling content: How brands are using Microsoft AI to be more productive and imaginative",
+        "summary": "The post From Hot Wheels to handling content: How brands are using Microsoft AI to be more productive and imaginative a…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5896e047adc6"
+        ]
+      },
+      {
+        "itemId": "fe93253782ea",
+        "title": "How data and AI will transform contact centres for financial services",
+        "summary": "The post How data and AI will transform contact centres for financial services appeared first on The AI Blog.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fe93253782ea"
+        ]
+      },
+      {
+        "itemId": "c61256096223",
+        "title": "AI-equipped drones study dolphins on the edge of extinction",
+        "summary": "The post AI-equipped drones study dolphins on the edge of extinction appeared first on The AI Blog.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c61256096223"
+        ]
+      },
+      {
+        "itemId": "455e21f8b151",
+        "title": "Online math tutoring service uses AI to help boost students’ skills and confidence",
+        "summary": "The post Online math tutoring service uses AI to help boost students’ skills and confidence appeared first on The AI Bl…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "455e21f8b151"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "be8bf2dc2b04",
+        "title": "Anthropic Introduces MCP Tunnels for Private Agent Access to Internal Systems",
+        "takeaway": "Anthropic has expanded its Claude Managed Agents platform with two enterprise-focused capabilities: self-hosted sandbox…",
+        "evidenceItemIds": [
+          "be8bf2dc2b04"
+        ]
+      },
+      {
+        "itemId": "be6c13a1b6e6",
+        "title": "Anthropic's Code with Claude Announces Managed Agents, Proactive Workflows, Capability Curve",
+        "takeaway": "Anthropic hosted \"Code with Claude 2026\" in San Francisco, featuring livestream sessions focused on Claude Code, the Cl…",
+        "evidenceItemIds": [
+          "be6c13a1b6e6"
+        ]
+      },
+      {
+        "itemId": "5c2b25e91cd2",
+        "title": "Designing a Multi-Agent System for Engineering Support at Scale: a Case Study from Grab",
+        "takeaway": "Grab’s Central Data Team built a multi-agent AI system to automate repetitive engineering support tasks across its data…",
+        "evidenceItemIds": [
+          "5c2b25e91cd2"
+        ]
+      },
+      {
+        "itemId": "232dd292d597",
+        "title": "39万！雷军发布小米最贵SUV",
+        "takeaway": "特斯拉前厂长宋钢加盟后首秀",
+        "evidenceItemIds": [
+          "232dd292d597"
+        ]
+      },
+      {
+        "itemId": "b3981256aa9f",
+        "title": "Agent Builder is now LangSmith Fleet",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "b3981256aa9f"
+        ]
+      },
+      {
+        "itemId": "4309c341e311",
+        "title": "Agent Builder: chat, file uploads, and tool registry",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "4309c341e311"
+        ]
+      },
+      {
+        "itemId": "cbcaf3d94b9e",
+        "title": "Scheduled reports for Insights Agent",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "cbcaf3d94b9e"
+        ]
+      },
+      {
+        "itemId": "e3d44e83a9fb",
+        "title": "Deep Agents v0.4",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "e3d44e83a9fb"
+        ]
+      },
+      {
+        "itemId": "dd3196417ee4",
+        "title": "Bintrail: MySQL Time-Travel Queries Using Indexed Binlogs",
+        "takeaway": "Bintrail is a recently introduced layer that brings point-in-time queries and row-history lookups to MySQL, the only ma…",
+        "evidenceItemIds": [
+          "dd3196417ee4"
+        ]
+      },
+      {
+        "itemId": "30d258975940",
+        "title": "Six Sessions at QCon AI Boston 2026 That Take Productionizing AI Seriously",
+        "takeaway": "QCon AI Boston 2026 is close to selling out. Six sessions where speakers engage directly with the gap between AI workin…",
+        "evidenceItemIds": [
+          "30d258975940"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕agent与open-source展开，建议优先关注《Anthropic Introduces MCP Tunnels for Private Agent Access to Internal Systems》、《Anthropic's Code with Claude Announces Managed Agents, Proactive Workflows, Capability Curve》、《Designing a Multi-Agent System for Engineering Support at Scale: a Case Study from Grab》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Bintrail: MySQL Time-Travel Queries Using Indexed Binlogs》、《Six Sessions at QCon AI Boston 2026 That Take Productionizing AI Seriously》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "dd3196417ee4",
+          "30d258975940",
+          "4fdbea351235",
+          "3d8e8d789d40"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 4 条，建议优先阅读《Anthropic's Code with Claude Announces Managed Agents, Proactive Workflows, Capability Curve》、《Scheduled reports for Insights Agent》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "be6c13a1b6e6",
+          "cbcaf3d94b9e",
+          "32f228673f9d",
+          "5e327815c2c4"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 3 条，建议优先阅读《Anthropic Introduces MCP Tunnels for Private Agent Access to Internal Systems》、《Agent Builder is now LangSmith Fleet》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "be8bf2dc2b04",
+          "b3981256aa9f",
+          "e3d44e83a9fb"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "tooling",
+        "lead": "工具链方向本期共 3 条，建议优先阅读《Designing a Multi-Agent System for Engineering Support at Scale: a Case Study from Grab》、《Agent Builder: chat, file uploads, and tool registry》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "5c2b25e91cd2",
+          "4309c341e311",
+          "6848efd79da6"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "e7ce2d5e86f2890605e9757f7f72ee8e198a4eb0d1642d2e01f080c1845ff21d",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-05-22T01:42:21.416Z",
+      "finishedAt": "2026-05-22T01:44:50.811Z",
+      "durationMs": 149395,
+      "inputCount": 30,
+      "processedCount": 30,
+      "fallbackCount": 30,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 30,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 57,
+        "splitRetryCount": 27
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-05-15",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-05-08",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-05-22T01:44:50.910Z",
+      "finishedAt": "2026-05-22T01:45:08.515Z",
+      "durationMs": 17605,
+      "inputCount": 30,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "be8bf2dc2b04",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Anthropic Introduces MCP Tunnels for Private Agent Access to Internal Systems",
+        "link": "https://www.infoq.com/news/2026/05/claude-mcp-tunnels/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Anthropic has expanded its Claude Managed Agents platform with two enterprise-focused capabilities: self-hosted sandboxes and MCP tunnels. The release aims to address a recurring challenge in enterprise AI deployments, where organizations want to use autonomous agents but cannot allow execution environments or internal systems to leave their security perimeter. By Robert Krzaczyński",
+        "publishedAt": "2026-05-19T19:20:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "be6c13a1b6e6",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Anthropic's Code with Claude Announces Managed Agents, Proactive Workflows, Capability Curve",
+        "link": "https://www.infoq.com/news/2026/05/code-with-claude/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Anthropic hosted \"Code with Claude 2026\" in San Francisco, featuring livestream sessions focused on Claude Code, the Claude API platform, and other projects. Key topics included developer experience, autonomy features, model step-changes, and the impact of AI on product architecture. Discussions included insights from GitHub, Vercel, and AI-native startups on engineering strategies and challenges. By Andrew Hoblitzell",
+        "publishedAt": "2026-05-18T13:14:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 71.79,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 112,
+          "ruleScoreNormalized": 71.7948717948718,
+          "finalScore": 71.79,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5c2b25e91cd2",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Designing a Multi-Agent System for Engineering Support at Scale: a Case Study from Grab",
+        "link": "https://www.infoq.com/news/2026/05/grab-multi-agent-support-system/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Grab’s Central Data Team built a multi-agent AI system to automate repetitive engineering support tasks across its data warehouse platform. The system separates investigation and enhancement workflows using specialized agents coordinated via an orchestration layer. It reduces operational load, improves resolution speed, and shifts engineering effort from firefighting to platform engineering work. By Leela Kumili",
+        "publishedAt": "2026-05-20T14:38:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 53.85,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 53.84615384615385,
+          "finalScore": 53.85,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "232dd292d597",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "39万！雷军发布小米最贵SUV",
+        "link": "https://www.qbitai.com/2026/05/422088.html",
+        "contentSnippet": "特斯拉前厂长宋钢加盟后首秀",
+        "publishedAt": "2026-05-22T00:50:05.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 46.15,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 46.15384615384615,
+          "finalScore": 46.15,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b3981256aa9f",
+        "sourceId": "langchain-blog",
+        "sourceName": "LangChain Changelog",
+        "title": "Agent Builder is now LangSmith Fleet",
+        "link": "https://changelog.langchain.com/announcements/agent-builder-is-now-langsmith-fleet?utm_source=LaunchNotes&utm_medium=rss",
+        "contentSnippet": "",
+        "publishedAt": "2026-03-19T17:05:31.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 43.59,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 101,
+          "ruleScoreNormalized": 43.58974358974359,
+          "finalScore": 43.59,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 30,
+      "normalizedCount": 30,
+      "dedupedCount": 30,
+      "highImportanceCount": 1,
+      "mediumImportanceCount": 1,
+      "lowImportanceCount": 28,
+      "categoryBreakdown": {
+        "open-source": 4,
+        "tooling": 3,
+        "agent": 3,
+        "research": 0,
+        "industry-news": 1,
+        "tutorial": 0,
+        "other": 19
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[MarkTechPost] 抓取失败: HTTP 403",
+      "[VentureBeat AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[ZDNet AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[HNRSS AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：30/30",
+      "LLM 分类打分回退明细（前 3/30）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"065ee822fd7fb718951cc5468812dbdc\"} | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"065ee8221d1877356bcbd418d3c6656d\"} | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"065ee823656b8a82f9e6f78bb5fbde4a\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=30：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=57, split_retry=27",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
