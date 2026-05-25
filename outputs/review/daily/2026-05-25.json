@@ -1,0 +1,1486 @@
+{
+  "runId": "daily-1779671592941",
+  "generatedAt": "2026-05-25T01:13:12.898Z",
+  "reviewStartedAt": "2026-05-25T01:13:12.898Z",
+  "reportDate": "2026-05-25",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-05-25T01:13:12.898Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 18,
+    "normalizedCount": 18,
+    "dedupedCount": 18,
+    "highImportanceCount": 1,
+    "mediumImportanceCount": 0,
+    "lowImportanceCount": 17,
+    "categoryBreakdown": {
+      "open-source": 1,
+      "tooling": 1,
+      "agent": 1,
+      "research": 0,
+      "industry-news": 6,
+      "tutorial": 0,
+      "other": 9
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "7e305146d72d",
+      "title": "卷到今天，Agent的含金量还在提升丨AIGC2026圆桌论坛",
+      "summary": "大厂集体下场后，创业公司还有哪些机会？",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "7e305146d72d"
+      ]
+    },
+    {
+      "itemId": "859af422a042",
+      "title": "This HP laptop is a great MacBook alternative - and it's 50% off for Memorial Day",
+      "summary": "The OmniBook 5 is on sale for $530. It's a solid laptop with a long battery life, an OLED screen, and strong performanc…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "859af422a042"
+      ]
+    },
+    {
+      "itemId": "e6977bebec6d",
+      "title": "Home Depot and Lowe's have power tool deals for up to $400 off ahead of Memorial Day",
+      "summary": "Save big on everything you need for DIY projects and home repairs with these Memorial Day deals on tools from DeWalt, M…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e6977bebec6d"
+      ]
+    },
+    {
+      "itemId": "40ce4365516e",
+      "title": "I found the best early Memorial Day outdoor deals: Lawn mowers, power banks, and more",
+      "summary": "You can already find great Memorial Day deals on everything you need to upgrade your outdoor space.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "40ce4365516e"
+      ]
+    },
+    {
+      "itemId": "815fb4e49b9e",
+      "title": "I found the 11 best early Memorial Day Apple deals: Save hundreds on iPad, Apple Watch, and more",
+      "summary": "Summer is almost here, and you can already find deals on all things Apple with these early Memorial Day weekend sales.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "815fb4e49b9e"
+      ]
+    },
+    {
+      "itemId": "1baf84e53da9",
+      "title": "OpenAI大神教你如何榨干Codex",
+      "summary": "13k星开源库作者解锁Codex-maxxing！",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "1baf84e53da9"
+      ]
+    },
+    {
+      "itemId": "5c67b7201a78",
+      "title": "How AI Talks People Out of Conspiracy Theories–and What We Can Learn from That",
+      "summary": "Article URL: https://www.wsj.com/tech/ai/ai-debunks-conspiracy-theories-92eff2c5 Comments URL: https://news.ycombinator…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5c67b7201a78"
+      ]
+    },
+    {
+      "itemId": "bf2be0def69f",
+      "title": "What to know about the AI models that are jolting Washington",
+      "summary": "Article URL: https://www.politico.com/news/2026/05/24/anthropic-openai-mythos-what-to-know-00934668 Comments URL: https…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "bf2be0def69f"
+      ]
+    },
+    {
+      "itemId": "aab4a969e791",
+      "title": "AI for Design Needs Solving",
+      "summary": "Article URL: https://freedium-mirror.cfd/https://medium.com/@mini.1409/ai-for-design-needs-solving-db3f11af77d4 Comment…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "aab4a969e791"
+      ]
+    },
+    {
+      "itemId": "43eda7d96f99",
+      "title": "AI in journalism: Live tracker of scandals and mistakes",
+      "summary": "Article URL: https://pressgazette.co.uk/publishers/digital-journalism/ai-journalism-mistakes/ Comments URL: https://new…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "43eda7d96f99"
+      ]
+    },
+    {
+      "itemId": "9a95883f1350",
+      "title": "Predicting AI Job Exposure",
+      "summary": "Article URL: https://www.ben-evans.com/benedictevans/2026/5/24/ai-job-exposure Comments URL: https://news.ycombinator.c…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9a95883f1350"
+      ]
+    },
+    {
+      "itemId": "5b1884b3b7d1",
+      "title": "Portability Is a Myth: Why the Best AI Stacks Will Never Be Hardware-Agnostic",
+      "summary": "Article URL: https://twitter.com/PatrickToulme/status/2055709800986780028 Comments URL: https://news.ycombinator.com/it…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5b1884b3b7d1"
+      ]
+    },
+    {
+      "itemId": "b9d83d682d76",
+      "title": "My favorite early Memorial Day deals: Save big on laptops, tablets, and more",
+      "summary": "Memorial Day is here. These are the best deals we found so far, including price drops from Apple, Samsung, Hisense, Nin…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b9d83d682d76"
+      ]
+    },
+    {
+      "itemId": "cd91e2a25af2",
+      "title": "Samsung is giving away free 32-inch Odyssey monitors - seriously",
+      "summary": "Samsung's BOGO monitor deal is back, back, back again. Here's what you need to know to snag yours.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "cd91e2a25af2"
+      ]
+    },
+    {
+      "itemId": "4e1e32f89f48",
+      "title": "谷歌CEO承认Coding落后了",
+      "summary": "搜索25年来最大改版，但谷歌还不敢一脚切到AI",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "4e1e32f89f48"
+      ]
+    },
+    {
+      "itemId": "d0d360afc405",
+      "title": "未来推理将吃掉70%算力，30%留给训练丨硅谷投资人张璐@AIGC2026",
+      "summary": "技术创新只是起点，产业整合速度才是AI落地的真正竞争力",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d0d360afc405"
+      ]
+    },
+    {
+      "itemId": "03574c5a4faa",
+      "title": "什么！你说胡彦斌也在苦修Vibe Coding",
+      "summary": "Vibe Coding还是太权威了vibe",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "03574c5a4faa"
+      ]
+    },
+    {
+      "itemId": "8b51c7388df1",
+      "title": "“五类人AI替代不了，企业做第二名最稳妥” | 昆仑万维方汉@AIGC2026",
+      "summary": "“AI时代经验不再是护城河”",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "8b51c7388df1"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "7e305146d72d",
+      "title": "卷到今天，Agent的含金量还在提升丨AIGC2026圆桌论坛",
+      "takeaway": "大厂集体下场后，创业公司还有哪些机会？",
+      "evidenceItemIds": [
+        "7e305146d72d"
+      ]
+    },
+    {
+      "itemId": "859af422a042",
+      "title": "This HP laptop is a great MacBook alternative - and it's 50% off for Memorial Day",
+      "takeaway": "The OmniBook 5 is on sale for $530. It's a solid laptop with a long battery life, an OLED screen, and strong performanc…",
+      "evidenceItemIds": [
+        "859af422a042"
+      ]
+    },
+    {
+      "itemId": "e6977bebec6d",
+      "title": "Home Depot and Lowe's have power tool deals for up to $400 off ahead of Memorial Day",
+      "takeaway": "Save big on everything you need for DIY projects and home repairs with these Memorial Day deals on tools from DeWalt, M…",
+      "evidenceItemIds": [
+        "e6977bebec6d"
+      ]
+    },
+    {
+      "itemId": "40ce4365516e",
+      "title": "I found the best early Memorial Day outdoor deals: Lawn mowers, power banks, and more",
+      "takeaway": "You can already find great Memorial Day deals on everything you need to upgrade your outdoor space.",
+      "evidenceItemIds": [
+        "40ce4365516e"
+      ]
+    },
+    {
+      "itemId": "815fb4e49b9e",
+      "title": "I found the 11 best early Memorial Day Apple deals: Save hundreds on iPad, Apple Watch, and more",
+      "takeaway": "Summer is almost here, and you can already find deals on all things Apple with these early Memorial Day weekend sales.",
+      "evidenceItemIds": [
+        "815fb4e49b9e"
+      ]
+    },
+    {
+      "itemId": "1baf84e53da9",
+      "title": "OpenAI大神教你如何榨干Codex",
+      "takeaway": "13k星开源库作者解锁Codex-maxxing！",
+      "evidenceItemIds": [
+        "1baf84e53da9"
+      ]
+    },
+    {
+      "itemId": "5c67b7201a78",
+      "title": "How AI Talks People Out of Conspiracy Theories–and What We Can Learn from That",
+      "takeaway": "Article URL: https://www.wsj.com/tech/ai/ai-debunks-conspiracy-theories-92eff2c5 Comments URL: https://news.ycombinator…",
+      "evidenceItemIds": [
+        "5c67b7201a78"
+      ]
+    },
+    {
+      "itemId": "bf2be0def69f",
+      "title": "What to know about the AI models that are jolting Washington",
+      "takeaway": "Article URL: https://www.politico.com/news/2026/05/24/anthropic-openai-mythos-what-to-know-00934668 Comments URL: https…",
+      "evidenceItemIds": [
+        "bf2be0def69f"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕agent与other展开，建议优先关注《卷到今天，Agent的含金量还在提升丨AIGC2026圆桌论坛》、《This HP laptop is a great MacBook alternative - and it's 50% off for Memorial Day》、《Home Depot and Lowe's have power tool deals for up to $400 off ahead of Memorial Day》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《This HP laptop is a great MacBook alternative - and it's 50% off for Memorial Day》、《I found the best early Memorial Day outdoor deals: Lawn mowers, power banks, and more》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "859af422a042",
+        "40ce4365516e",
+        "815fb4e49b9e",
+        "b9d83d682d76"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《How AI Talks People Out of Conspiracy Theories–and What We Can Learn from That》、《What to know about the AI models that are jolting Washington》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "5c67b7201a78",
+        "bf2be0def69f",
+        "aab4a969e791",
+        "43eda7d96f99"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 1 条，建议优先阅读《卷到今天，Agent的含金量还在提升丨AIGC2026圆桌论坛》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "7e305146d72d"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "tooling",
+      "lead": "工具链方向本期共 1 条，建议优先阅读《Home Depot and Lowe's have power tool deals for up to $400 off ahead of Memorial Day》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "e6977bebec6d"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "1f1be30729e0f8c653c824d500a0e0c3fff0732cc32d7cc0313f76d3410d364d",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-05-25T01:22:17.859Z",
+    "finishedAt": "2026-05-25T01:24:05.491Z",
+    "durationMs": 107634,
+    "inputCount": 18,
+    "processedCount": 18,
+    "fallbackCount": 18,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 18,
+    "failureStats": {
+      "totalFailed": 18,
+      "timeout": 1,
+      "http": 17,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 34,
+      "splitRetryCount": 16
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-05-18",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-05-11",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-05-25T01:24:05.754Z",
+    "finishedAt": "2026-05-25T01:24:15.416Z",
+    "durationMs": 9662,
+    "inputCount": 18,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 18,
+      "timeout": 0,
+      "http": 18,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 18,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "7e305146d72d",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "卷到今天，Agent的含金量还在提升丨AIGC2026圆桌论坛",
+      "link": "https://www.qbitai.com/2026/05/423421.html",
+      "contentSnippet": "大厂集体下场后，创业公司还有哪些机会？",
+      "publishedAt": "2026-05-24T10:50:44.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 102,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "859af422a042",
+      "sourceId": "zdnet-ai",
+      "sourceName": "ZDNet AI",
+      "title": "This HP laptop is a great MacBook alternative - and it's 50% off for Memorial Day",
+      "link": "https://www.zdnet.com/article/hp-omnibook-5-memorial-day-deal-2026/",
+      "contentSnippet": "The OmniBook 5 is on sale for $530. It's a solid laptop with a long battery life, an OLED screen, and strong performance.",
+      "publishedAt": "2026-05-24T23:37:00.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 60,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 94,
+        "ruleScoreNormalized": 60,
+        "finalScore": 60,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "e6977bebec6d",
+      "sourceId": "zdnet-ai",
+      "sourceName": "ZDNet AI",
+      "title": "Home Depot and Lowe's have power tool deals for up to $400 off ahead of Memorial Day",
+      "link": "https://www.zdnet.com/article/best-early-power-tool-deals-memorial-day-2026/",
+      "contentSnippet": "Save big on everything you need for DIY projects and home repairs with these Memorial Day deals on tools from DeWalt, Milwaukee, and more.",
+      "publishedAt": "2026-05-24T14:11:40.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 60,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 94,
+        "ruleScoreNormalized": 60,
+        "finalScore": 60,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "40ce4365516e",
+      "sourceId": "zdnet-ai",
+      "sourceName": "ZDNet AI",
+      "title": "I found the best early Memorial Day outdoor deals: Lawn mowers, power banks, and more",
+      "link": "https://www.zdnet.com/article/best-early-memorial-day-2026-outdoor-deals/",
+      "contentSnippet": "You can already find great Memorial Day deals on everything you need to upgrade your outdoor space.",
+      "publishedAt": "2026-05-24T13:39:04.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 60,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 94,
+        "ruleScoreNormalized": 60,
+        "finalScore": 60,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "815fb4e49b9e",
+      "sourceId": "zdnet-ai",
+      "sourceName": "ZDNet AI",
+      "title": "I found the 11 best early Memorial Day Apple deals: Save hundreds on iPad, Apple Watch, and more",
+      "link": "https://www.zdnet.com/article/best-apple-deals-memorial-day-2026/",
+      "contentSnippet": "Summer is almost here, and you can already find deals on all things Apple with these early Memorial Day weekend sales.",
+      "publishedAt": "2026-05-24T12:53:23.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 60,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 94,
+        "ruleScoreNormalized": 60,
+        "finalScore": 60,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Google AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[InfoQ AI/ML News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[MarkTechPost] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[VentureBeat AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+    "LLM 分类打分部分回退：18/18",
+    "LLM 分类打分回退明细（前 3/18）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"0662d7f0d55424107715adb06181a5f9\"} | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"0662d7f14dceee2ee881a9dd6214b955\"} | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"0662d7f19df5b8a7c8d4e93ca010916a\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=1：http=17：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=34, split_retry=16",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/18）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+    "LLM 失败分类：missing_content=0, timeout=0, http=18, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=18, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- 卷到今天，Agent的含金量还在提升丨AIGC2026圆桌论坛\n- This HP laptop is a great MacBook alternative - and it's 50% off for Memorial Day\n- Home Depot and Lowe's have power tool deals for up to $400 off ahead of Memorial Day\n- I found the best early Memorial Day outdoor deals: Lawn mowers, power banks, and more\n- I found the 11 best early Memorial Day Apple deals: Save hundreds on iPad, Apple Watch, and more\n\n### 分类覆盖（大纲）\n- agent: 1 条\n- other: 9 条\n- tooling: 1 条\n- open-source: 1 条\n- industry-news: 6 条",
+    "rankedItems": [
+      {
+        "id": "7e305146d72d",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "卷到今天，Agent的含金量还在提升丨AIGC2026圆桌论坛",
+        "link": "https://www.qbitai.com/2026/05/423421.html",
+        "contentSnippet": "大厂集体下场后，创业公司还有哪些机会？",
+        "publishedAt": "2026-05-24T10:50:44.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "859af422a042",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "This HP laptop is a great MacBook alternative - and it's 50% off for Memorial Day",
+        "link": "https://www.zdnet.com/article/hp-omnibook-5-memorial-day-deal-2026/",
+        "contentSnippet": "The OmniBook 5 is on sale for $530. It's a solid laptop with a long battery life, an OLED screen, and strong performance.",
+        "publishedAt": "2026-05-24T23:37:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 60,
+          "finalScore": 60,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e6977bebec6d",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Home Depot and Lowe's have power tool deals for up to $400 off ahead of Memorial Day",
+        "link": "https://www.zdnet.com/article/best-early-power-tool-deals-memorial-day-2026/",
+        "contentSnippet": "Save big on everything you need for DIY projects and home repairs with these Memorial Day deals on tools from DeWalt, Milwaukee, and more.",
+        "publishedAt": "2026-05-24T14:11:40.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 60,
+          "finalScore": 60,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "40ce4365516e",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "I found the best early Memorial Day outdoor deals: Lawn mowers, power banks, and more",
+        "link": "https://www.zdnet.com/article/best-early-memorial-day-2026-outdoor-deals/",
+        "contentSnippet": "You can already find great Memorial Day deals on everything you need to upgrade your outdoor space.",
+        "publishedAt": "2026-05-24T13:39:04.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 60,
+          "finalScore": 60,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "815fb4e49b9e",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "I found the 11 best early Memorial Day Apple deals: Save hundreds on iPad, Apple Watch, and more",
+        "link": "https://www.zdnet.com/article/best-apple-deals-memorial-day-2026/",
+        "contentSnippet": "Summer is almost here, and you can already find deals on all things Apple with these early Memorial Day weekend sales.",
+        "publishedAt": "2026-05-24T12:53:23.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 60,
+          "finalScore": 60,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1baf84e53da9",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "OpenAI大神教你如何榨干Codex",
+        "link": "https://www.qbitai.com/2026/05/423179.html",
+        "contentSnippet": "13k星开源库作者解锁Codex-maxxing！",
+        "publishedAt": "2026-05-23T09:50:51.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 60,
+          "finalScore": 60,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5c67b7201a78",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "How AI Talks People Out of Conspiracy Theories–and What We Can Learn from That",
+        "link": "https://www.wsj.com/tech/ai/ai-debunks-conspiracy-theories-92eff2c5",
+        "contentSnippet": "Article URL: https://www.wsj.com/tech/ai/ai-debunks-conspiracy-theories-92eff2c5 Comments URL: https://news.ycombinator.com/item?id=48262460 Points: 3 # Comments: 1",
+        "publishedAt": "2026-05-25T00:44:23.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 40,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 40,
+          "finalScore": 40,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "bf2be0def69f",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "What to know about the AI models that are jolting Washington",
+        "link": "https://www.politico.com/news/2026/05/24/anthropic-openai-mythos-what-to-know-00934668",
+        "contentSnippet": "Article URL: https://www.politico.com/news/2026/05/24/anthropic-openai-mythos-what-to-know-00934668 Comments URL: https://news.ycombinator.com/item?id=48261970 Points: 2 # Comments: 1",
+        "publishedAt": "2026-05-24T23:14:37.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 40,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 40,
+          "finalScore": 40,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "aab4a969e791",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI for Design Needs Solving",
+        "link": "https://freedium-mirror.cfd/https://medium.com/@mini.1409/ai-for-design-needs-solving-db3f11af77d4",
+        "contentSnippet": "Article URL: https://freedium-mirror.cfd/https://medium.com/@mini.1409/ai-for-design-needs-solving-db3f11af77d4 Comments URL: https://news.ycombinator.com/item?id=48261923 Points: 1 # Comments: 0",
+        "publishedAt": "2026-05-24T23:09:02.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 40,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 40,
+          "finalScore": 40,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "43eda7d96f99",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI in journalism: Live tracker of scandals and mistakes",
+        "link": "https://pressgazette.co.uk/publishers/digital-journalism/ai-journalism-mistakes/",
+        "contentSnippet": "Article URL: https://pressgazette.co.uk/publishers/digital-journalism/ai-journalism-mistakes/ Comments URL: https://news.ycombinator.com/item?id=48261922 Points: 2 # Comments: 0",
+        "publishedAt": "2026-05-24T23:09:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 40,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 40,
+          "finalScore": 40,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9a95883f1350",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Predicting AI Job Exposure",
+        "link": "https://www.ben-evans.com/benedictevans/2026/5/24/ai-job-exposure",
+        "contentSnippet": "Article URL: https://www.ben-evans.com/benedictevans/2026/5/24/ai-job-exposure Comments URL: https://news.ycombinator.com/item?id=48261903 Points: 1 # Comments: 0",
+        "publishedAt": "2026-05-24T23:05:48.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 40,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 40,
+          "finalScore": 40,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5b1884b3b7d1",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Portability Is a Myth: Why the Best AI Stacks Will Never Be Hardware-Agnostic",
+        "link": "https://twitter.com/PatrickToulme/status/2055709800986780028",
+        "contentSnippet": "Article URL: https://twitter.com/PatrickToulme/status/2055709800986780028 Comments URL: https://news.ycombinator.com/item?id=48261760 Points: 1 # Comments: 0",
+        "publishedAt": "2026-05-24T22:45:31.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 40,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 40,
+          "finalScore": 40,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b9d83d682d76",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "My favorite early Memorial Day deals: Save big on laptops, tablets, and more",
+        "link": "https://www.zdnet.com/article/best-early-memorial-day-deals-2026/",
+        "contentSnippet": "Memorial Day is here. These are the best deals we found so far, including price drops from Apple, Samsung, Hisense, Ninja, and more.",
+        "publishedAt": "2026-05-24T11:09:54.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 35,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 89,
+          "ruleScoreNormalized": 35,
+          "finalScore": 35,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cd91e2a25af2",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Samsung is giving away free 32-inch Odyssey monitors - seriously",
+        "link": "https://www.zdnet.com/article/samsung-m9-odyssey-g7-bogo-deal/",
+        "contentSnippet": "Samsung's BOGO monitor deal is back, back, back again. Here's what you need to know to snag yours.",
+        "publishedAt": "2026-05-24T02:06:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 35,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 89,
+          "ruleScoreNormalized": 35,
+          "finalScore": 35,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4e1e32f89f48",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "谷歌CEO承认Coding落后了",
+        "link": "https://www.qbitai.com/2026/05/423390.html",
+        "contentSnippet": "搜索25年来最大改版，但谷歌还不敢一脚切到AI",
+        "publishedAt": "2026-05-24T06:20:35.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 25,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 25,
+          "finalScore": 25,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d0d360afc405",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "未来推理将吃掉70%算力，30%留给训练丨硅谷投资人张璐@AIGC2026",
+        "link": "https://www.qbitai.com/2026/05/423382.html",
+        "contentSnippet": "技术创新只是起点，产业整合速度才是AI落地的真正竞争力",
+        "publishedAt": "2026-05-24T06:14:05.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 25,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 25,
+          "finalScore": 25,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "03574c5a4faa",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "什么！你说胡彦斌也在苦修Vibe Coding",
+        "link": "https://www.qbitai.com/2026/05/423213.html",
+        "contentSnippet": "Vibe Coding还是太权威了vibe",
+        "publishedAt": "2026-05-24T04:53:32.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 25,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 25,
+          "finalScore": 25,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8b51c7388df1",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "“五类人AI替代不了，企业做第二名最稳妥” | 昆仑万维方汉@AIGC2026",
+        "link": "https://www.qbitai.com/2026/05/423202.html",
+        "contentSnippet": "“AI时代经验不再是护城河”",
+        "publishedAt": "2026-05-23T10:09:58.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "7e305146d72d",
+        "title": "卷到今天，Agent的含金量还在提升丨AIGC2026圆桌论坛",
+        "summary": "大厂集体下场后，创业公司还有哪些机会？",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "7e305146d72d"
+        ]
+      },
+      {
+        "itemId": "859af422a042",
+        "title": "This HP laptop is a great MacBook alternative - and it's 50% off for Memorial Day",
+        "summary": "The OmniBook 5 is on sale for $530. It's a solid laptop with a long battery life, an OLED screen, and strong performanc…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "859af422a042"
+        ]
+      },
+      {
+        "itemId": "e6977bebec6d",
+        "title": "Home Depot and Lowe's have power tool deals for up to $400 off ahead of Memorial Day",
+        "summary": "Save big on everything you need for DIY projects and home repairs with these Memorial Day deals on tools from DeWalt, M…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e6977bebec6d"
+        ]
+      },
+      {
+        "itemId": "40ce4365516e",
+        "title": "I found the best early Memorial Day outdoor deals: Lawn mowers, power banks, and more",
+        "summary": "You can already find great Memorial Day deals on everything you need to upgrade your outdoor space.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "40ce4365516e"
+        ]
+      },
+      {
+        "itemId": "815fb4e49b9e",
+        "title": "I found the 11 best early Memorial Day Apple deals: Save hundreds on iPad, Apple Watch, and more",
+        "summary": "Summer is almost here, and you can already find deals on all things Apple with these early Memorial Day weekend sales.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "815fb4e49b9e"
+        ]
+      },
+      {
+        "itemId": "1baf84e53da9",
+        "title": "OpenAI大神教你如何榨干Codex",
+        "summary": "13k星开源库作者解锁Codex-maxxing！",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "1baf84e53da9"
+        ]
+      },
+      {
+        "itemId": "5c67b7201a78",
+        "title": "How AI Talks People Out of Conspiracy Theories–and What We Can Learn from That",
+        "summary": "Article URL: https://www.wsj.com/tech/ai/ai-debunks-conspiracy-theories-92eff2c5 Comments URL: https://news.ycombinator…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5c67b7201a78"
+        ]
+      },
+      {
+        "itemId": "bf2be0def69f",
+        "title": "What to know about the AI models that are jolting Washington",
+        "summary": "Article URL: https://www.politico.com/news/2026/05/24/anthropic-openai-mythos-what-to-know-00934668 Comments URL: https…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "bf2be0def69f"
+        ]
+      },
+      {
+        "itemId": "aab4a969e791",
+        "title": "AI for Design Needs Solving",
+        "summary": "Article URL: https://freedium-mirror.cfd/https://medium.com/@mini.1409/ai-for-design-needs-solving-db3f11af77d4 Comment…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "aab4a969e791"
+        ]
+      },
+      {
+        "itemId": "43eda7d96f99",
+        "title": "AI in journalism: Live tracker of scandals and mistakes",
+        "summary": "Article URL: https://pressgazette.co.uk/publishers/digital-journalism/ai-journalism-mistakes/ Comments URL: https://new…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "43eda7d96f99"
+        ]
+      },
+      {
+        "itemId": "9a95883f1350",
+        "title": "Predicting AI Job Exposure",
+        "summary": "Article URL: https://www.ben-evans.com/benedictevans/2026/5/24/ai-job-exposure Comments URL: https://news.ycombinator.c…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9a95883f1350"
+        ]
+      },
+      {
+        "itemId": "5b1884b3b7d1",
+        "title": "Portability Is a Myth: Why the Best AI Stacks Will Never Be Hardware-Agnostic",
+        "summary": "Article URL: https://twitter.com/PatrickToulme/status/2055709800986780028 Comments URL: https://news.ycombinator.com/it…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5b1884b3b7d1"
+        ]
+      },
+      {
+        "itemId": "b9d83d682d76",
+        "title": "My favorite early Memorial Day deals: Save big on laptops, tablets, and more",
+        "summary": "Memorial Day is here. These are the best deals we found so far, including price drops from Apple, Samsung, Hisense, Nin…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b9d83d682d76"
+        ]
+      },
+      {
+        "itemId": "cd91e2a25af2",
+        "title": "Samsung is giving away free 32-inch Odyssey monitors - seriously",
+        "summary": "Samsung's BOGO monitor deal is back, back, back again. Here's what you need to know to snag yours.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "cd91e2a25af2"
+        ]
+      },
+      {
+        "itemId": "4e1e32f89f48",
+        "title": "谷歌CEO承认Coding落后了",
+        "summary": "搜索25年来最大改版，但谷歌还不敢一脚切到AI",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "4e1e32f89f48"
+        ]
+      },
+      {
+        "itemId": "d0d360afc405",
+        "title": "未来推理将吃掉70%算力，30%留给训练丨硅谷投资人张璐@AIGC2026",
+        "summary": "技术创新只是起点，产业整合速度才是AI落地的真正竞争力",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d0d360afc405"
+        ]
+      },
+      {
+        "itemId": "03574c5a4faa",
+        "title": "什么！你说胡彦斌也在苦修Vibe Coding",
+        "summary": "Vibe Coding还是太权威了vibe",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "03574c5a4faa"
+        ]
+      },
+      {
+        "itemId": "8b51c7388df1",
+        "title": "“五类人AI替代不了，企业做第二名最稳妥” | 昆仑万维方汉@AIGC2026",
+        "summary": "“AI时代经验不再是护城河”",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "8b51c7388df1"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "7e305146d72d",
+        "title": "卷到今天，Agent的含金量还在提升丨AIGC2026圆桌论坛",
+        "takeaway": "大厂集体下场后，创业公司还有哪些机会？",
+        "evidenceItemIds": [
+          "7e305146d72d"
+        ]
+      },
+      {
+        "itemId": "859af422a042",
+        "title": "This HP laptop is a great MacBook alternative - and it's 50% off for Memorial Day",
+        "takeaway": "The OmniBook 5 is on sale for $530. It's a solid laptop with a long battery life, an OLED screen, and strong performanc…",
+        "evidenceItemIds": [
+          "859af422a042"
+        ]
+      },
+      {
+        "itemId": "e6977bebec6d",
+        "title": "Home Depot and Lowe's have power tool deals for up to $400 off ahead of Memorial Day",
+        "takeaway": "Save big on everything you need for DIY projects and home repairs with these Memorial Day deals on tools from DeWalt, M…",
+        "evidenceItemIds": [
+          "e6977bebec6d"
+        ]
+      },
+      {
+        "itemId": "40ce4365516e",
+        "title": "I found the best early Memorial Day outdoor deals: Lawn mowers, power banks, and more",
+        "takeaway": "You can already find great Memorial Day deals on everything you need to upgrade your outdoor space.",
+        "evidenceItemIds": [
+          "40ce4365516e"
+        ]
+      },
+      {
+        "itemId": "815fb4e49b9e",
+        "title": "I found the 11 best early Memorial Day Apple deals: Save hundreds on iPad, Apple Watch, and more",
+        "takeaway": "Summer is almost here, and you can already find deals on all things Apple with these early Memorial Day weekend sales.",
+        "evidenceItemIds": [
+          "815fb4e49b9e"
+        ]
+      },
+      {
+        "itemId": "1baf84e53da9",
+        "title": "OpenAI大神教你如何榨干Codex",
+        "takeaway": "13k星开源库作者解锁Codex-maxxing！",
+        "evidenceItemIds": [
+          "1baf84e53da9"
+        ]
+      },
+      {
+        "itemId": "5c67b7201a78",
+        "title": "How AI Talks People Out of Conspiracy Theories–and What We Can Learn from That",
+        "takeaway": "Article URL: https://www.wsj.com/tech/ai/ai-debunks-conspiracy-theories-92eff2c5 Comments URL: https://news.ycombinator…",
+        "evidenceItemIds": [
+          "5c67b7201a78"
+        ]
+      },
+      {
+        "itemId": "bf2be0def69f",
+        "title": "What to know about the AI models that are jolting Washington",
+        "takeaway": "Article URL: https://www.politico.com/news/2026/05/24/anthropic-openai-mythos-what-to-know-00934668 Comments URL: https…",
+        "evidenceItemIds": [
+          "bf2be0def69f"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕agent与other展开，建议优先关注《卷到今天，Agent的含金量还在提升丨AIGC2026圆桌论坛》、《This HP laptop is a great MacBook alternative - and it's 50% off for Memorial Day》、《Home Depot and Lowe's have power tool deals for up to $400 off ahead of Memorial Day》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《This HP laptop is a great MacBook alternative - and it's 50% off for Memorial Day》、《I found the best early Memorial Day outdoor deals: Lawn mowers, power banks, and more》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "859af422a042",
+          "40ce4365516e",
+          "815fb4e49b9e",
+          "b9d83d682d76"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《How AI Talks People Out of Conspiracy Theories–and What We Can Learn from That》、《What to know about the AI models that are jolting Washington》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "5c67b7201a78",
+          "bf2be0def69f",
+          "aab4a969e791",
+          "43eda7d96f99"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 1 条，建议优先阅读《卷到今天，Agent的含金量还在提升丨AIGC2026圆桌论坛》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "7e305146d72d"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "tooling",
+        "lead": "工具链方向本期共 1 条，建议优先阅读《Home Depot and Lowe's have power tool deals for up to $400 off ahead of Memorial Day》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "e6977bebec6d"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "1f1be30729e0f8c653c824d500a0e0c3fff0732cc32d7cc0313f76d3410d364d",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-05-25T01:22:17.859Z",
+      "finishedAt": "2026-05-25T01:24:05.491Z",
+      "durationMs": 107634,
+      "inputCount": 18,
+      "processedCount": 18,
+      "fallbackCount": 18,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 18,
+      "failureStats": {
+        "totalFailed": 18,
+        "timeout": 1,
+        "http": 17,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 34,
+        "splitRetryCount": 16
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-05-18",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-05-11",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-05-25T01:24:05.754Z",
+      "finishedAt": "2026-05-25T01:24:15.416Z",
+      "durationMs": 9662,
+      "inputCount": 18,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 18,
+        "timeout": 0,
+        "http": 18,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 18,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "7e305146d72d",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "卷到今天，Agent的含金量还在提升丨AIGC2026圆桌论坛",
+        "link": "https://www.qbitai.com/2026/05/423421.html",
+        "contentSnippet": "大厂集体下场后，创业公司还有哪些机会？",
+        "publishedAt": "2026-05-24T10:50:44.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "859af422a042",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "This HP laptop is a great MacBook alternative - and it's 50% off for Memorial Day",
+        "link": "https://www.zdnet.com/article/hp-omnibook-5-memorial-day-deal-2026/",
+        "contentSnippet": "The OmniBook 5 is on sale for $530. It's a solid laptop with a long battery life, an OLED screen, and strong performance.",
+        "publishedAt": "2026-05-24T23:37:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 60,
+          "finalScore": 60,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e6977bebec6d",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Home Depot and Lowe's have power tool deals for up to $400 off ahead of Memorial Day",
+        "link": "https://www.zdnet.com/article/best-early-power-tool-deals-memorial-day-2026/",
+        "contentSnippet": "Save big on everything you need for DIY projects and home repairs with these Memorial Day deals on tools from DeWalt, Milwaukee, and more.",
+        "publishedAt": "2026-05-24T14:11:40.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 60,
+          "finalScore": 60,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "40ce4365516e",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "I found the best early Memorial Day outdoor deals: Lawn mowers, power banks, and more",
+        "link": "https://www.zdnet.com/article/best-early-memorial-day-2026-outdoor-deals/",
+        "contentSnippet": "You can already find great Memorial Day deals on everything you need to upgrade your outdoor space.",
+        "publishedAt": "2026-05-24T13:39:04.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 60,
+          "finalScore": 60,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "815fb4e49b9e",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "I found the 11 best early Memorial Day Apple deals: Save hundreds on iPad, Apple Watch, and more",
+        "link": "https://www.zdnet.com/article/best-apple-deals-memorial-day-2026/",
+        "contentSnippet": "Summer is almost here, and you can already find deals on all things Apple with these early Memorial Day weekend sales.",
+        "publishedAt": "2026-05-24T12:53:23.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 60,
+          "finalScore": 60,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 18,
+      "normalizedCount": 18,
+      "dedupedCount": 18,
+      "highImportanceCount": 1,
+      "mediumImportanceCount": 0,
+      "lowImportanceCount": 17,
+      "categoryBreakdown": {
+        "open-source": 1,
+        "tooling": 1,
+        "agent": 1,
+        "research": 0,
+        "industry-news": 6,
+        "tutorial": 0,
+        "other": 9
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Google AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[InfoQ AI/ML News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[MarkTechPost] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[VentureBeat AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+      "LLM 分类打分部分回退：18/18",
+      "LLM 分类打分回退明细（前 3/18）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"0662d7f0d55424107715adb06181a5f9\"} | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"0662d7f14dceee2ee881a9dd6214b955\"} | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"0662d7f19df5b8a7c8d4e93ca010916a\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=1：http=17：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=34, split_retry=16",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/18）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+      "LLM 失败分类：missing_content=0, timeout=0, http=18, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=18, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
