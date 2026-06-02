@@ -1,0 +1,1224 @@
+{
+  "runId": "daily-1780362576253",
+  "generatedAt": "2026-06-02T01:09:36.212Z",
+  "reviewStartedAt": "2026-06-02T01:09:36.212Z",
+  "reportDate": "2026-06-02",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-06-02T01:09:36.212Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 12,
+    "normalizedCount": 12,
+    "dedupedCount": 12,
+    "highImportanceCount": 2,
+    "mediumImportanceCount": 1,
+    "lowImportanceCount": 9,
+    "categoryBreakdown": {
+      "open-source": 1,
+      "tooling": 0,
+      "agent": 2,
+      "research": 0,
+      "industry-news": 4,
+      "tutorial": 0,
+      "other": 5
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "9f23be468314",
+      "title": "aweskills: Let Your AI Agent Manage skills for You",
+      "summary": "Article URL: https://aweskill.webioinfo.top/articles/let-your-ai-agent-manage-aweskill-for-you/ Comments URL: https://n…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "9f23be468314"
+      ]
+    },
+    {
+      "itemId": "94ea79d1fbe5",
+      "title": "Ask HN: Do you give AI agent the specs and have it start building unattended?",
+      "summary": "I use Cursor and I usually put it in plan mode and feed it the specs so I can review the plan and make sure the impleme…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "94ea79d1fbe5"
+      ]
+    },
+    {
+      "itemId": "3ec576019ae7",
+      "title": "Vercel AI Gateway Appears to Block BYOK Requests When Account Balance Reaches $0",
+      "summary": "Article URL: https://github.com/vercel/ai/issues/11280 Comments URL: https://news.ycombinator.com/item?id=48364193 Poin…",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "3ec576019ae7"
+      ]
+    },
+    {
+      "itemId": "784216f31730",
+      "title": "Colorado Rolls Back Landmark AI Governance Law",
+      "summary": "Article URL: https://www.bankinfosecurity.com/colorado-rolls-back-landmark-ai-governance-law-a-31804 Comments URL: http…",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "784216f31730"
+      ]
+    },
+    {
+      "itemId": "820a931bb854",
+      "title": "老黄的Token经济学翻车了！微软亚马逊通通跳车",
+      "summary": "token热潮开始降温",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "820a931bb854"
+      ]
+    },
+    {
+      "itemId": "4484427fe9dc",
+      "title": "Building an Open-Source Verilog Simulator with AI: 580K Lines in 43 Days",
+      "summary": "Article URL: https://normalcomputing.com/blog/building-an-open-source-verilog-simulator-with-ai-580k-lines-in-43-days C…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "4484427fe9dc"
+      ]
+    },
+    {
+      "itemId": "ef9fbe3c42e6",
+      "title": "Chinese firm developing AI to predict dissent, leaked documents show",
+      "summary": "Article URL: https://www.nytimes.com/2026/06/01/us/politics/china-ai-predicting-dissent.html Comments URL: https://news…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "ef9fbe3c42e6"
+      ]
+    },
+    {
+      "itemId": "78a62b52165a",
+      "title": "清智系企业亮相 BEYOND Expo 2026 并斩获多项大奖",
+      "summary": "已经投资了数个世界领先的AI科技公司",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "78a62b52165a"
+      ]
+    },
+    {
+      "itemId": "bbb2141c1fc7",
+      "title": "近2亿美元！VAST完成新一轮融资，正式披露世界模型路线",
+      "summary": "场景永不消失，多人真正同屏",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "bbb2141c1fc7"
+      ]
+    },
+    {
+      "itemId": "03cb57265f81",
+      "title": "德系精工邂逅中国智慧 全新奥迪Q5L现已登陆全国门店",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "03cb57265f81"
+      ]
+    },
+    {
+      "itemId": "b0dc5e11a8ce",
+      "title": "今天起，无限期免费！全球首个全模态API开放，Top 10 AI Lab出手",
+      "summary": "文本图像视频都能用",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b0dc5e11a8ce"
+      ]
+    },
+    {
+      "itemId": "652a57b118b6",
+      "title": "OpenAI重返机器人赛道！四大核心岗位开招",
+      "summary": "年薪超200万",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "652a57b118b6"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "9f23be468314",
+      "title": "aweskills: Let Your AI Agent Manage skills for You",
+      "takeaway": "Article URL: https://aweskill.webioinfo.top/articles/let-your-ai-agent-manage-aweskill-for-you/ Comments URL: https://n…",
+      "evidenceItemIds": [
+        "9f23be468314"
+      ]
+    },
+    {
+      "itemId": "94ea79d1fbe5",
+      "title": "Ask HN: Do you give AI agent the specs and have it start building unattended?",
+      "takeaway": "I use Cursor and I usually put it in plan mode and feed it the specs so I can review the plan and make sure the impleme…",
+      "evidenceItemIds": [
+        "94ea79d1fbe5"
+      ]
+    },
+    {
+      "itemId": "3ec576019ae7",
+      "title": "Vercel AI Gateway Appears to Block BYOK Requests When Account Balance Reaches $0",
+      "takeaway": "Article URL: https://github.com/vercel/ai/issues/11280 Comments URL: https://news.ycombinator.com/item?id=48364193 Poin…",
+      "evidenceItemIds": [
+        "3ec576019ae7"
+      ]
+    },
+    {
+      "itemId": "784216f31730",
+      "title": "Colorado Rolls Back Landmark AI Governance Law",
+      "takeaway": "Article URL: https://www.bankinfosecurity.com/colorado-rolls-back-landmark-ai-governance-law-a-31804 Comments URL: http…",
+      "evidenceItemIds": [
+        "784216f31730"
+      ]
+    },
+    {
+      "itemId": "820a931bb854",
+      "title": "老黄的Token经济学翻车了！微软亚马逊通通跳车",
+      "takeaway": "token热潮开始降温",
+      "evidenceItemIds": [
+        "820a931bb854"
+      ]
+    },
+    {
+      "itemId": "4484427fe9dc",
+      "title": "Building an Open-Source Verilog Simulator with AI: 580K Lines in 43 Days",
+      "takeaway": "Article URL: https://normalcomputing.com/blog/building-an-open-source-verilog-simulator-with-ai-580k-lines-in-43-days C…",
+      "evidenceItemIds": [
+        "4484427fe9dc"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕agent与open-source展开，建议优先关注《aweskills: Let Your AI Agent Manage skills for You》、《Ask HN: Do you give AI agent the specs and have it start building unattended?》、《Vercel AI Gateway Appears to Block BYOK Requests When Account Balance Reaches $0》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《老黄的Token经济学翻车了！微软亚马逊通通跳车》、《清智系企业亮相 BEYOND Expo 2026 并斩获多项大奖》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "820a931bb854",
+        "78a62b52165a",
+        "03cb57265f81",
+        "b0dc5e11a8ce"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《Colorado Rolls Back Landmark AI Governance Law》、《Building an Open-Source Verilog Simulator with AI: 580K Lines in 43 Days》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "784216f31730",
+        "4484427fe9dc",
+        "ef9fbe3c42e6",
+        "bbb2141c1fc7"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 2 条，建议优先阅读《aweskills: Let Your AI Agent Manage skills for You》、《Ask HN: Do you give AI agent the specs and have it start building unattended?》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "9f23be468314",
+        "94ea79d1fbe5"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 1 条，建议优先阅读《Vercel AI Gateway Appears to Block BYOK Requests When Account Balance Reaches $0》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "3ec576019ae7"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "b600e3fce1b4cbd4668c92626efa29a97de434783a476fe836a73082f6712b5b",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-06-02T01:19:16.034Z",
+    "finishedAt": "2026-06-02T01:20:58.192Z",
+    "durationMs": 102162,
+    "inputCount": 12,
+    "processedCount": 12,
+    "fallbackCount": 12,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 12,
+    "failureStats": {
+      "totalFailed": 12,
+      "timeout": 0,
+      "http": 12,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 22,
+      "splitRetryCount": 10
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-05-26",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-05-19",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 1
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-06-02T01:20:58.308Z",
+    "finishedAt": "2026-06-02T01:21:05.878Z",
+    "durationMs": 7570,
+    "inputCount": 12,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 12,
+      "timeout": 0,
+      "http": 12,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 12,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "9f23be468314",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "aweskills: Let Your AI Agent Manage skills for You",
+      "link": "https://aweskill.webioinfo.top/articles/let-your-ai-agent-manage-aweskill-for-you/",
+      "contentSnippet": "Article URL: https://aweskill.webioinfo.top/articles/let-your-ai-agent-manage-aweskill-for-you/ Comments URL: https://news.ycombinator.com/item?id=48364549 Points: 1 # Comments: 0",
+      "publishedAt": "2026-06-02T00:56:22.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 105,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "94ea79d1fbe5",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Ask HN: Do you give AI agent the specs and have it start building unattended?",
+      "link": "https://news.ycombinator.com/item?id=48364162",
+      "contentSnippet": "I use Cursor and I usually put it in plan mode and feed it the specs so I can review the plan and make sure the implementation will be done the way I want it to or to make sure the plan \"feels\" right. When I hear or see that people feed the specs, let agents handle things and then do some quick tests to make sure things work as expected, that sounds way too risky. I still have bad experiences where the agents made bad assumptions and included things I didn't need or ask for or had to stop the agent during implementation because it was going down a path that was needlessly complicated. Comments URL: https://news.ycombinator.com/item?id=48364162 Points: 4 # Comments: 1",
+      "publishedAt": "2026-06-02T00:03:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 105,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "3ec576019ae7",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Vercel AI Gateway Appears to Block BYOK Requests When Account Balance Reaches $0",
+      "link": "https://github.com/vercel/ai/issues/11280",
+      "contentSnippet": "Article URL: https://github.com/vercel/ai/issues/11280 Comments URL: https://news.ycombinator.com/item?id=48364193 Points: 2 # Comments: 1",
+      "publishedAt": "2026-06-02T00:07:24.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 83.33,
+      "importance": "medium",
+      "recommendationReason": "开源生态更新",
+      "scoreBreakdown": {
+        "ruleScore": 102,
+        "ruleScoreNormalized": 83.33333333333334,
+        "finalScore": 83.33,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "784216f31730",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Colorado Rolls Back Landmark AI Governance Law",
+      "link": "https://www.bankinfosecurity.com/colorado-rolls-back-landmark-ai-governance-law-a-31804",
+      "contentSnippet": "Article URL: https://www.bankinfosecurity.com/colorado-rolls-back-landmark-ai-governance-law-a-31804 Comments URL: https://news.ycombinator.com/item?id=48364520 Points: 1 # Comments: 0",
+      "publishedAt": "2026-06-02T00:53:17.000Z",
+      "category": "industry-news",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 61.11,
+      "importance": "low",
+      "recommendationReason": "安全与合规关注",
+      "scoreBreakdown": {
+        "ruleScore": 98,
+        "ruleScoreNormalized": 61.111111111111114,
+        "finalScore": 61.11,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "820a931bb854",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "老黄的Token经济学翻车了！微软亚马逊通通跳车",
+      "link": "https://www.qbitai.com/2026/06/427541.html",
+      "contentSnippet": "token热潮开始降温",
+      "publishedAt": "2026-06-02T00:33:17.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 27.78,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 92,
+        "ruleScoreNormalized": 27.77777777777778,
+        "finalScore": 27.78,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Google AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[InfoQ AI/ML News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[MarkTechPost] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[VentureBeat AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[ZDNet AI] 抓取失败: This operation was aborted",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+    "LLM 分类打分部分回退：12/12",
+    "LLM 分类打分回退明细（前 3/12）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"066d6340f529f49d72864f28207d0d48\"} | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"066d634078b7fbba331d7f7393f1cf35\"} | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"066d63413c5c863ef0f98a503438d438\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=12：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=22, split_retry=10",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/12）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+    "LLM 失败分类：missing_content=0, timeout=0, http=12, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=12, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- aweskills: Let Your AI Agent Manage skills for You\n- Ask HN: Do you give AI agent the specs and have it start building unattended?\n- Vercel AI Gateway Appears to Block BYOK Requests When Account Balance Reaches $0\n- Colorado Rolls Back Landmark AI Governance Law\n- 老黄的Token经济学翻车了！微软亚马逊通通跳车\n\n### 分类覆盖（大纲）\n- agent: 2 条\n- open-source: 1 条\n- industry-news: 4 条\n- other: 5 条",
+    "rankedItems": [
+      {
+        "id": "9f23be468314",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "aweskills: Let Your AI Agent Manage skills for You",
+        "link": "https://aweskill.webioinfo.top/articles/let-your-ai-agent-manage-aweskill-for-you/",
+        "contentSnippet": "Article URL: https://aweskill.webioinfo.top/articles/let-your-ai-agent-manage-aweskill-for-you/ Comments URL: https://news.ycombinator.com/item?id=48364549 Points: 1 # Comments: 0",
+        "publishedAt": "2026-06-02T00:56:22.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "94ea79d1fbe5",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Ask HN: Do you give AI agent the specs and have it start building unattended?",
+        "link": "https://news.ycombinator.com/item?id=48364162",
+        "contentSnippet": "I use Cursor and I usually put it in plan mode and feed it the specs so I can review the plan and make sure the implementation will be done the way I want it to or to make sure the plan \"feels\" right. When I hear or see that people feed the specs, let agents handle things and then do some quick tests to make sure things work as expected, that sounds way too risky. I still have bad experiences where the agents made bad assumptions and included things I didn't need or ask for or had to stop the agent during implementation because it was going down a path that was needlessly complicated. Comments URL: https://news.ycombinator.com/item?id=48364162 Points: 4 # Comments: 1",
+        "publishedAt": "2026-06-02T00:03:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3ec576019ae7",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Vercel AI Gateway Appears to Block BYOK Requests When Account Balance Reaches $0",
+        "link": "https://github.com/vercel/ai/issues/11280",
+        "contentSnippet": "Article URL: https://github.com/vercel/ai/issues/11280 Comments URL: https://news.ycombinator.com/item?id=48364193 Points: 2 # Comments: 1",
+        "publishedAt": "2026-06-02T00:07:24.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 83.33,
+        "importance": "medium",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 83.33333333333334,
+          "finalScore": 83.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "784216f31730",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Colorado Rolls Back Landmark AI Governance Law",
+        "link": "https://www.bankinfosecurity.com/colorado-rolls-back-landmark-ai-governance-law-a-31804",
+        "contentSnippet": "Article URL: https://www.bankinfosecurity.com/colorado-rolls-back-landmark-ai-governance-law-a-31804 Comments URL: https://news.ycombinator.com/item?id=48364520 Points: 1 # Comments: 0",
+        "publishedAt": "2026-06-02T00:53:17.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 61.11,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 61.111111111111114,
+          "finalScore": 61.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "820a931bb854",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "老黄的Token经济学翻车了！微软亚马逊通通跳车",
+        "link": "https://www.qbitai.com/2026/06/427541.html",
+        "contentSnippet": "token热潮开始降温",
+        "publishedAt": "2026-06-02T00:33:17.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 27.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 27.77777777777778,
+          "finalScore": 27.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4484427fe9dc",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Building an Open-Source Verilog Simulator with AI: 580K Lines in 43 Days",
+        "link": "https://normalcomputing.com/blog/building-an-open-source-verilog-simulator-with-ai-580k-lines-in-43-days",
+        "contentSnippet": "Article URL: https://normalcomputing.com/blog/building-an-open-source-verilog-simulator-with-ai-580k-lines-in-43-days Comments URL: https://news.ycombinator.com/item?id=48364654 Points: 1 # Comments: 0",
+        "publishedAt": "2026-06-02T01:09:32.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 16.67,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 16.666666666666664,
+          "finalScore": 16.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ef9fbe3c42e6",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Chinese firm developing AI to predict dissent, leaked documents show",
+        "link": "https://www.nytimes.com/2026/06/01/us/politics/china-ai-predicting-dissent.html",
+        "contentSnippet": "Article URL: https://www.nytimes.com/2026/06/01/us/politics/china-ai-predicting-dissent.html Comments URL: https://news.ycombinator.com/item?id=48364576 Points: 1 # Comments: 0",
+        "publishedAt": "2026-06-02T00:59:46.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 16.67,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 16.666666666666664,
+          "finalScore": 16.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "78a62b52165a",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "清智系企业亮相 BEYOND Expo 2026 并斩获多项大奖",
+        "link": "https://www.qbitai.com/2026/06/427530.html",
+        "contentSnippet": "已经投资了数个世界领先的AI科技公司",
+        "publishedAt": "2026-06-01T10:34:31.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "bbb2141c1fc7",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "近2亿美元！VAST完成新一轮融资，正式披露世界模型路线",
+        "link": "https://www.qbitai.com/2026/06/427516.html",
+        "contentSnippet": "场景永不消失，多人真正同屏",
+        "publishedAt": "2026-06-01T09:46:32.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "03cb57265f81",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "德系精工邂逅中国智慧 全新奥迪Q5L现已登陆全国门店",
+        "link": "https://www.qbitai.com/2026/06/427231.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-06-01T08:10:20.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b0dc5e11a8ce",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "今天起，无限期免费！全球首个全模态API开放，Top 10 AI Lab出手",
+        "link": "https://www.qbitai.com/2026/06/427332.html",
+        "contentSnippet": "文本图像视频都能用",
+        "publishedAt": "2026-06-01T07:57:16.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "652a57b118b6",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "OpenAI重返机器人赛道！四大核心岗位开招",
+        "link": "https://www.qbitai.com/2026/06/427238.html",
+        "contentSnippet": "年薪超200万",
+        "publishedAt": "2026-06-01T06:11:12.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "9f23be468314",
+        "title": "aweskills: Let Your AI Agent Manage skills for You",
+        "summary": "Article URL: https://aweskill.webioinfo.top/articles/let-your-ai-agent-manage-aweskill-for-you/ Comments URL: https://n…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "9f23be468314"
+        ]
+      },
+      {
+        "itemId": "94ea79d1fbe5",
+        "title": "Ask HN: Do you give AI agent the specs and have it start building unattended?",
+        "summary": "I use Cursor and I usually put it in plan mode and feed it the specs so I can review the plan and make sure the impleme…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "94ea79d1fbe5"
+        ]
+      },
+      {
+        "itemId": "3ec576019ae7",
+        "title": "Vercel AI Gateway Appears to Block BYOK Requests When Account Balance Reaches $0",
+        "summary": "Article URL: https://github.com/vercel/ai/issues/11280 Comments URL: https://news.ycombinator.com/item?id=48364193 Poin…",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "3ec576019ae7"
+        ]
+      },
+      {
+        "itemId": "784216f31730",
+        "title": "Colorado Rolls Back Landmark AI Governance Law",
+        "summary": "Article URL: https://www.bankinfosecurity.com/colorado-rolls-back-landmark-ai-governance-law-a-31804 Comments URL: http…",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "784216f31730"
+        ]
+      },
+      {
+        "itemId": "820a931bb854",
+        "title": "老黄的Token经济学翻车了！微软亚马逊通通跳车",
+        "summary": "token热潮开始降温",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "820a931bb854"
+        ]
+      },
+      {
+        "itemId": "4484427fe9dc",
+        "title": "Building an Open-Source Verilog Simulator with AI: 580K Lines in 43 Days",
+        "summary": "Article URL: https://normalcomputing.com/blog/building-an-open-source-verilog-simulator-with-ai-580k-lines-in-43-days C…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "4484427fe9dc"
+        ]
+      },
+      {
+        "itemId": "ef9fbe3c42e6",
+        "title": "Chinese firm developing AI to predict dissent, leaked documents show",
+        "summary": "Article URL: https://www.nytimes.com/2026/06/01/us/politics/china-ai-predicting-dissent.html Comments URL: https://news…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "ef9fbe3c42e6"
+        ]
+      },
+      {
+        "itemId": "78a62b52165a",
+        "title": "清智系企业亮相 BEYOND Expo 2026 并斩获多项大奖",
+        "summary": "已经投资了数个世界领先的AI科技公司",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "78a62b52165a"
+        ]
+      },
+      {
+        "itemId": "bbb2141c1fc7",
+        "title": "近2亿美元！VAST完成新一轮融资，正式披露世界模型路线",
+        "summary": "场景永不消失，多人真正同屏",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "bbb2141c1fc7"
+        ]
+      },
+      {
+        "itemId": "03cb57265f81",
+        "title": "德系精工邂逅中国智慧 全新奥迪Q5L现已登陆全国门店",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "03cb57265f81"
+        ]
+      },
+      {
+        "itemId": "b0dc5e11a8ce",
+        "title": "今天起，无限期免费！全球首个全模态API开放，Top 10 AI Lab出手",
+        "summary": "文本图像视频都能用",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b0dc5e11a8ce"
+        ]
+      },
+      {
+        "itemId": "652a57b118b6",
+        "title": "OpenAI重返机器人赛道！四大核心岗位开招",
+        "summary": "年薪超200万",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "652a57b118b6"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "9f23be468314",
+        "title": "aweskills: Let Your AI Agent Manage skills for You",
+        "takeaway": "Article URL: https://aweskill.webioinfo.top/articles/let-your-ai-agent-manage-aweskill-for-you/ Comments URL: https://n…",
+        "evidenceItemIds": [
+          "9f23be468314"
+        ]
+      },
+      {
+        "itemId": "94ea79d1fbe5",
+        "title": "Ask HN: Do you give AI agent the specs and have it start building unattended?",
+        "takeaway": "I use Cursor and I usually put it in plan mode and feed it the specs so I can review the plan and make sure the impleme…",
+        "evidenceItemIds": [
+          "94ea79d1fbe5"
+        ]
+      },
+      {
+        "itemId": "3ec576019ae7",
+        "title": "Vercel AI Gateway Appears to Block BYOK Requests When Account Balance Reaches $0",
+        "takeaway": "Article URL: https://github.com/vercel/ai/issues/11280 Comments URL: https://news.ycombinator.com/item?id=48364193 Poin…",
+        "evidenceItemIds": [
+          "3ec576019ae7"
+        ]
+      },
+      {
+        "itemId": "784216f31730",
+        "title": "Colorado Rolls Back Landmark AI Governance Law",
+        "takeaway": "Article URL: https://www.bankinfosecurity.com/colorado-rolls-back-landmark-ai-governance-law-a-31804 Comments URL: http…",
+        "evidenceItemIds": [
+          "784216f31730"
+        ]
+      },
+      {
+        "itemId": "820a931bb854",
+        "title": "老黄的Token经济学翻车了！微软亚马逊通通跳车",
+        "takeaway": "token热潮开始降温",
+        "evidenceItemIds": [
+          "820a931bb854"
+        ]
+      },
+      {
+        "itemId": "4484427fe9dc",
+        "title": "Building an Open-Source Verilog Simulator with AI: 580K Lines in 43 Days",
+        "takeaway": "Article URL: https://normalcomputing.com/blog/building-an-open-source-verilog-simulator-with-ai-580k-lines-in-43-days C…",
+        "evidenceItemIds": [
+          "4484427fe9dc"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕agent与open-source展开，建议优先关注《aweskills: Let Your AI Agent Manage skills for You》、《Ask HN: Do you give AI agent the specs and have it start building unattended?》、《Vercel AI Gateway Appears to Block BYOK Requests When Account Balance Reaches $0》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《老黄的Token经济学翻车了！微软亚马逊通通跳车》、《清智系企业亮相 BEYOND Expo 2026 并斩获多项大奖》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "820a931bb854",
+          "78a62b52165a",
+          "03cb57265f81",
+          "b0dc5e11a8ce"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《Colorado Rolls Back Landmark AI Governance Law》、《Building an Open-Source Verilog Simulator with AI: 580K Lines in 43 Days》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "784216f31730",
+          "4484427fe9dc",
+          "ef9fbe3c42e6",
+          "bbb2141c1fc7"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 2 条，建议优先阅读《aweskills: Let Your AI Agent Manage skills for You》、《Ask HN: Do you give AI agent the specs and have it start building unattended?》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "9f23be468314",
+          "94ea79d1fbe5"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 1 条，建议优先阅读《Vercel AI Gateway Appears to Block BYOK Requests When Account Balance Reaches $0》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "3ec576019ae7"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "b600e3fce1b4cbd4668c92626efa29a97de434783a476fe836a73082f6712b5b",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-06-02T01:19:16.034Z",
+      "finishedAt": "2026-06-02T01:20:58.192Z",
+      "durationMs": 102162,
+      "inputCount": 12,
+      "processedCount": 12,
+      "fallbackCount": 12,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 12,
+      "failureStats": {
+        "totalFailed": 12,
+        "timeout": 0,
+        "http": 12,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 22,
+        "splitRetryCount": 10
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-05-26",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-05-19",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 1
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-06-02T01:20:58.308Z",
+      "finishedAt": "2026-06-02T01:21:05.878Z",
+      "durationMs": 7570,
+      "inputCount": 12,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 12,
+        "timeout": 0,
+        "http": 12,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 12,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "9f23be468314",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "aweskills: Let Your AI Agent Manage skills for You",
+        "link": "https://aweskill.webioinfo.top/articles/let-your-ai-agent-manage-aweskill-for-you/",
+        "contentSnippet": "Article URL: https://aweskill.webioinfo.top/articles/let-your-ai-agent-manage-aweskill-for-you/ Comments URL: https://news.ycombinator.com/item?id=48364549 Points: 1 # Comments: 0",
+        "publishedAt": "2026-06-02T00:56:22.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "94ea79d1fbe5",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Ask HN: Do you give AI agent the specs and have it start building unattended?",
+        "link": "https://news.ycombinator.com/item?id=48364162",
+        "contentSnippet": "I use Cursor and I usually put it in plan mode and feed it the specs so I can review the plan and make sure the implementation will be done the way I want it to or to make sure the plan \"feels\" right. When I hear or see that people feed the specs, let agents handle things and then do some quick tests to make sure things work as expected, that sounds way too risky. I still have bad experiences where the agents made bad assumptions and included things I didn't need or ask for or had to stop the agent during implementation because it was going down a path that was needlessly complicated. Comments URL: https://news.ycombinator.com/item?id=48364162 Points: 4 # Comments: 1",
+        "publishedAt": "2026-06-02T00:03:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3ec576019ae7",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Vercel AI Gateway Appears to Block BYOK Requests When Account Balance Reaches $0",
+        "link": "https://github.com/vercel/ai/issues/11280",
+        "contentSnippet": "Article URL: https://github.com/vercel/ai/issues/11280 Comments URL: https://news.ycombinator.com/item?id=48364193 Points: 2 # Comments: 1",
+        "publishedAt": "2026-06-02T00:07:24.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 83.33,
+        "importance": "medium",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 83.33333333333334,
+          "finalScore": 83.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "784216f31730",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Colorado Rolls Back Landmark AI Governance Law",
+        "link": "https://www.bankinfosecurity.com/colorado-rolls-back-landmark-ai-governance-law-a-31804",
+        "contentSnippet": "Article URL: https://www.bankinfosecurity.com/colorado-rolls-back-landmark-ai-governance-law-a-31804 Comments URL: https://news.ycombinator.com/item?id=48364520 Points: 1 # Comments: 0",
+        "publishedAt": "2026-06-02T00:53:17.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 61.11,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 61.111111111111114,
+          "finalScore": 61.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "820a931bb854",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "老黄的Token经济学翻车了！微软亚马逊通通跳车",
+        "link": "https://www.qbitai.com/2026/06/427541.html",
+        "contentSnippet": "token热潮开始降温",
+        "publishedAt": "2026-06-02T00:33:17.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 27.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 27.77777777777778,
+          "finalScore": 27.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 12,
+      "normalizedCount": 12,
+      "dedupedCount": 12,
+      "highImportanceCount": 2,
+      "mediumImportanceCount": 1,
+      "lowImportanceCount": 9,
+      "categoryBreakdown": {
+        "open-source": 1,
+        "tooling": 0,
+        "agent": 2,
+        "research": 0,
+        "industry-news": 4,
+        "tutorial": 0,
+        "other": 5
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Google AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[InfoQ AI/ML News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[MarkTechPost] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[VentureBeat AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[ZDNet AI] 抓取失败: This operation was aborted",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+      "LLM 分类打分部分回退：12/12",
+      "LLM 分类打分回退明细（前 3/12）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"066d6340f529f49d72864f28207d0d48\"} | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"066d634078b7fbba331d7f7393f1cf35\"} | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"usage limit exceeded (2056)\"},\"request_id\":\"066d63413c5c863ef0f98a503438d438\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=12：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=22, split_retry=10",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/12）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+      "LLM 失败分类：missing_content=0, timeout=0, http=12, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=12, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
