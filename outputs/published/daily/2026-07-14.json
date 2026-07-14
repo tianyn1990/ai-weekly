@@ -1,0 +1,950 @@
+{
+  "runId": "daily-1783991526800",
+  "generatedAt": "2026-07-14T01:12:06.759Z",
+  "reviewStartedAt": "2026-07-14T01:12:06.759Z",
+  "reportDate": "2026-07-14",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-07-14T01:12:06.759Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 6,
+    "normalizedCount": 6,
+    "dedupedCount": 6,
+    "highImportanceCount": 1,
+    "mediumImportanceCount": 0,
+    "lowImportanceCount": 5,
+    "categoryBreakdown": {
+      "open-source": 1,
+      "tooling": 0,
+      "agent": 1,
+      "research": 0,
+      "industry-news": 1,
+      "tutorial": 0,
+      "other": 3
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "4cb9dfb07d6a",
+      "title": "Expanding Managed Agents in Gemini API: background tasks, remote MCP and more",
+      "summary": "We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready ag…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "4cb9dfb07d6a"
+      ]
+    },
+    {
+      "itemId": "512f9bcfd950",
+      "title": "The latest AI news we announced in June 2026",
+      "summary": "Here are Google’s latest AI updates from June 2026.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "512f9bcfd950"
+      ]
+    },
+    {
+      "itemId": "14415b60ae8f",
+      "title": "New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.",
+      "summary": "Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "14415b60ae8f"
+      ]
+    },
+    {
+      "itemId": "1982ecfd22d7",
+      "title": "Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers",
+      "summary": "Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered t…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1982ecfd22d7"
+      ]
+    },
+    {
+      "itemId": "6db7008cfcd5",
+      "title": "Ask an AI expert: What exactly is the full stack?",
+      "summary": "A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI w…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "6db7008cfcd5"
+      ]
+    },
+    {
+      "itemId": "fa6ef69d9b6d",
+      "title": "Our latest Google Finance upgrades, including a new app",
+      "summary": "The new Google Finance is coming out of beta and launching a new Android app.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fa6ef69d9b6d"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "4cb9dfb07d6a",
+      "title": "Expanding Managed Agents in Gemini API: background tasks, remote MCP and more",
+      "takeaway": "We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready ag…",
+      "evidenceItemIds": [
+        "4cb9dfb07d6a"
+      ]
+    },
+    {
+      "itemId": "512f9bcfd950",
+      "title": "The latest AI news we announced in June 2026",
+      "takeaway": "Here are Google’s latest AI updates from June 2026.",
+      "evidenceItemIds": [
+        "512f9bcfd950"
+      ]
+    },
+    {
+      "itemId": "14415b60ae8f",
+      "title": "New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.",
+      "takeaway": "Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.",
+      "evidenceItemIds": [
+        "14415b60ae8f"
+      ]
+    },
+    {
+      "itemId": "1982ecfd22d7",
+      "title": "Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers",
+      "takeaway": "Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered t…",
+      "evidenceItemIds": [
+        "1982ecfd22d7"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕agent与industry-news展开，建议优先关注《Expanding Managed Agents in Gemini API: background tasks, remote MCP and more》、《The latest AI news we announced in June 2026》、《New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 3 条，建议优先阅读《New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.》、《Ask an AI expert: What exactly is the full stack?》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "14415b60ae8f",
+        "6db7008cfcd5",
+        "fa6ef69d9b6d"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 1 条，建议优先阅读《Expanding Managed Agents in Gemini API: background tasks, remote MCP and more》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "4cb9dfb07d6a"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 1 条，建议优先阅读《The latest AI news we announced in June 2026》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "512f9bcfd950"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 1 条，建议优先阅读《Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "1982ecfd22d7"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "70b4575101ea1c5b56c793c05d0a7dfcf5793e750549720db4a6b26ead867212",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-07-14T01:51:10.630Z",
+    "finishedAt": "2026-07-14T01:51:13.185Z",
+    "durationMs": 2555,
+    "inputCount": 6,
+    "processedCount": 6,
+    "fallbackCount": 6,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 6,
+    "failureStats": {
+      "totalFailed": 6,
+      "timeout": 0,
+      "http": 0,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 6,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 11,
+      "splitRetryCount": 5
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-07-07",
+        "fetchedCount": 0,
+        "failedReason": "This operation was aborted"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-06-30",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 1,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-07-14T01:51:13.220Z",
+    "finishedAt": "2026-07-14T01:51:13.233Z",
+    "durationMs": 13,
+    "inputCount": 6,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 6,
+      "timeout": 0,
+      "http": 0,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 6
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 6,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "4cb9dfb07d6a",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "title": "Expanding Managed Agents in Gemini API: background tasks, remote MCP and more",
+      "link": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/",
+      "contentSnippet": "We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.",
+      "publishedAt": "2026-07-07T08:54:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 102,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "512f9bcfd950",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "title": "The latest AI news we announced in June 2026",
+      "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/",
+      "contentSnippet": "Here are Google’s latest AI updates from June 2026.",
+      "publishedAt": "2026-07-01T18:15:00.000Z",
+      "category": "industry-news",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 0,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 82,
+        "ruleScoreNormalized": 0,
+        "finalScore": 0,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "14415b60ae8f",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "title": "New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.",
+      "link": "https://blog.google/products-and-platforms/products/education/nyc-ai-summit/",
+      "contentSnippet": "Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.",
+      "publishedAt": "2026-07-01T16:00:00.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 0,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 82,
+        "ruleScoreNormalized": 0,
+        "finalScore": 0,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "1982ecfd22d7",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "title": "Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers",
+      "link": "https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/",
+      "contentSnippet": "Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.",
+      "publishedAt": "2026-06-30T06:00:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 0,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 82,
+        "ruleScoreNormalized": 0,
+        "finalScore": 0,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "6db7008cfcd5",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "title": "Ask an AI expert: What exactly is the full stack?",
+      "link": "https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/",
+      "contentSnippet": "A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.",
+      "publishedAt": "2026-06-29T16:00:00.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 0,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 82,
+        "ruleScoreNormalized": 0,
+        "finalScore": 0,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: This operation was aborted",
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[InfoQ AI/ML News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[MarkTechPost] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[VentureBeat AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[ZDNet AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[HNRSS AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[量子位] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): This operation was aborted",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：6/6",
+    "LLM 分类打分回退明细（前 3/6）：fetch failed | fetch failed | fetch failed",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=0：business=0：missing_content=0：invalid_json=0：quality=0：other=6",
+    "LLM 分类打分重试统计：batch_retry=11, split_retry=5",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/6）：fetch failed | fetch failed | fetch failed",
+    "LLM 失败分类：missing_content=0, timeout=0, http=0, business=0, invalid_json=0, quality=0, other=6",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=6, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Expanding Managed Agents in Gemini API: background tasks, remote MCP and more\n- The latest AI news we announced in June 2026\n- New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.\n- Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers\n- Ask an AI expert: What exactly is the full stack?\n\n### 分类覆盖（大纲）\n- agent: 1 条\n- industry-news: 1 条\n- other: 3 条\n- open-source: 1 条",
+    "rankedItems": [
+      {
+        "id": "4cb9dfb07d6a",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Expanding Managed Agents in Gemini API: background tasks, remote MCP and more",
+        "link": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/",
+        "contentSnippet": "We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.",
+        "publishedAt": "2026-07-07T08:54:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "512f9bcfd950",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in June 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from June 2026.",
+        "publishedAt": "2026-07-01T18:15:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "14415b60ae8f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.",
+        "link": "https://blog.google/products-and-platforms/products/education/nyc-ai-summit/",
+        "contentSnippet": "Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.",
+        "publishedAt": "2026-07-01T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1982ecfd22d7",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers",
+        "link": "https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/",
+        "contentSnippet": "Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.",
+        "publishedAt": "2026-06-30T06:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6db7008cfcd5",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Ask an AI expert: What exactly is the full stack?",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/",
+        "contentSnippet": "A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.",
+        "publishedAt": "2026-06-29T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fa6ef69d9b6d",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Our latest Google Finance upgrades, including a new app",
+        "link": "https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/",
+        "contentSnippet": "The new Google Finance is coming out of beta and launching a new Android app.",
+        "publishedAt": "2026-06-25T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "4cb9dfb07d6a",
+        "title": "Expanding Managed Agents in Gemini API: background tasks, remote MCP and more",
+        "summary": "We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready ag…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "4cb9dfb07d6a"
+        ]
+      },
+      {
+        "itemId": "512f9bcfd950",
+        "title": "The latest AI news we announced in June 2026",
+        "summary": "Here are Google’s latest AI updates from June 2026.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "512f9bcfd950"
+        ]
+      },
+      {
+        "itemId": "14415b60ae8f",
+        "title": "New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.",
+        "summary": "Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "14415b60ae8f"
+        ]
+      },
+      {
+        "itemId": "1982ecfd22d7",
+        "title": "Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers",
+        "summary": "Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered t…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1982ecfd22d7"
+        ]
+      },
+      {
+        "itemId": "6db7008cfcd5",
+        "title": "Ask an AI expert: What exactly is the full stack?",
+        "summary": "A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI w…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "6db7008cfcd5"
+        ]
+      },
+      {
+        "itemId": "fa6ef69d9b6d",
+        "title": "Our latest Google Finance upgrades, including a new app",
+        "summary": "The new Google Finance is coming out of beta and launching a new Android app.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fa6ef69d9b6d"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "4cb9dfb07d6a",
+        "title": "Expanding Managed Agents in Gemini API: background tasks, remote MCP and more",
+        "takeaway": "We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready ag…",
+        "evidenceItemIds": [
+          "4cb9dfb07d6a"
+        ]
+      },
+      {
+        "itemId": "512f9bcfd950",
+        "title": "The latest AI news we announced in June 2026",
+        "takeaway": "Here are Google’s latest AI updates from June 2026.",
+        "evidenceItemIds": [
+          "512f9bcfd950"
+        ]
+      },
+      {
+        "itemId": "14415b60ae8f",
+        "title": "New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.",
+        "takeaway": "Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.",
+        "evidenceItemIds": [
+          "14415b60ae8f"
+        ]
+      },
+      {
+        "itemId": "1982ecfd22d7",
+        "title": "Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers",
+        "takeaway": "Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered t…",
+        "evidenceItemIds": [
+          "1982ecfd22d7"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕agent与industry-news展开，建议优先关注《Expanding Managed Agents in Gemini API: background tasks, remote MCP and more》、《The latest AI news we announced in June 2026》、《New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 3 条，建议优先阅读《New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.》、《Ask an AI expert: What exactly is the full stack?》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "14415b60ae8f",
+          "6db7008cfcd5",
+          "fa6ef69d9b6d"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 1 条，建议优先阅读《Expanding Managed Agents in Gemini API: background tasks, remote MCP and more》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "4cb9dfb07d6a"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 1 条，建议优先阅读《The latest AI news we announced in June 2026》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "512f9bcfd950"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 1 条，建议优先阅读《Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "1982ecfd22d7"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "70b4575101ea1c5b56c793c05d0a7dfcf5793e750549720db4a6b26ead867212",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-07-14T01:51:10.630Z",
+      "finishedAt": "2026-07-14T01:51:13.185Z",
+      "durationMs": 2555,
+      "inputCount": 6,
+      "processedCount": 6,
+      "fallbackCount": 6,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 6,
+      "failureStats": {
+        "totalFailed": 6,
+        "timeout": 0,
+        "http": 0,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 6,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 11,
+        "splitRetryCount": 5
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-07-07",
+          "fetchedCount": 0,
+          "failedReason": "This operation was aborted"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-06-30",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 1,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-07-14T01:51:13.220Z",
+      "finishedAt": "2026-07-14T01:51:13.233Z",
+      "durationMs": 13,
+      "inputCount": 6,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 6,
+        "timeout": 0,
+        "http": 0,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 6
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 6,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "4cb9dfb07d6a",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Expanding Managed Agents in Gemini API: background tasks, remote MCP and more",
+        "link": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/",
+        "contentSnippet": "We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.",
+        "publishedAt": "2026-07-07T08:54:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "512f9bcfd950",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in June 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from June 2026.",
+        "publishedAt": "2026-07-01T18:15:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "14415b60ae8f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.",
+        "link": "https://blog.google/products-and-platforms/products/education/nyc-ai-summit/",
+        "contentSnippet": "Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.",
+        "publishedAt": "2026-07-01T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1982ecfd22d7",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers",
+        "link": "https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/",
+        "contentSnippet": "Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.",
+        "publishedAt": "2026-06-30T06:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6db7008cfcd5",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Ask an AI expert: What exactly is the full stack?",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/",
+        "contentSnippet": "A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.",
+        "publishedAt": "2026-06-29T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 6,
+      "normalizedCount": 6,
+      "dedupedCount": 6,
+      "highImportanceCount": 1,
+      "mediumImportanceCount": 0,
+      "lowImportanceCount": 5,
+      "categoryBreakdown": {
+        "open-source": 1,
+        "tooling": 0,
+        "agent": 1,
+        "research": 0,
+        "industry-news": 1,
+        "tutorial": 0,
+        "other": 3
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: This operation was aborted",
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[InfoQ AI/ML News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[MarkTechPost] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[VentureBeat AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[ZDNet AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[HNRSS AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[量子位] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): This operation was aborted",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：6/6",
+      "LLM 分类打分回退明细（前 3/6）：fetch failed | fetch failed | fetch failed",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=0：business=0：missing_content=0：invalid_json=0：quality=0：other=6",
+      "LLM 分类打分重试统计：batch_retry=11, split_retry=5",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/6）：fetch failed | fetch failed | fetch failed",
+      "LLM 失败分类：missing_content=0, timeout=0, http=0, business=0, invalid_json=0, quality=0, other=6",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=6, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
