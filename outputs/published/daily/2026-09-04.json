@@ -1,0 +1,1990 @@
+{
+  "runId": "daily-1788484320168",
+  "generatedAt": "2026-09-04T01:12:00.134Z",
+  "reviewStartedAt": "2026-09-04T01:12:00.134Z",
+  "reportDate": "2026-09-04",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-09-04T01:12:00.134Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 30,
+    "normalizedCount": 30,
+    "dedupedCount": 30,
+    "highImportanceCount": 2,
+    "mediumImportanceCount": 2,
+    "lowImportanceCount": 26,
+    "categoryBreakdown": {
+      "open-source": 1,
+      "tooling": 7,
+      "agent": 2,
+      "research": 0,
+      "industry-news": 9,
+      "tutorial": 0,
+      "other": 11
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "2b74f693a744",
+      "title": "OpenClaw 2.0 Releases with Simplified Setup and Collaborative Agents",
+      "summary": "OpenClaw has released OpenClaw 2.0, a major update to the open-source personal AI agent that changes its installation p…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "2b74f693a744"
+      ]
+    },
+    {
+      "itemId": "4d643ede66cf",
+      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+      "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nea…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "4d643ede66cf"
+      ]
+    },
+    {
+      "itemId": "b0af409a7921",
+      "title": "How AI-native companies turn workflows into operating capability",
+      "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "b0af409a7921"
+      ]
+    },
+    {
+      "itemId": "366701d5c738",
+      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+      "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, traini…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "366701d5c738"
+      ]
+    },
+    {
+      "itemId": "d9732bfc46a4",
+      "title": "Safety overview: GPT-6 Astra",
+      "summary": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capab…",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "d9732bfc46a4"
+      ]
+    },
+    {
+      "itemId": "9fdd79f61be8",
+      "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+      "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9fdd79f61be8"
+      ]
+    },
+    {
+      "itemId": "75c8dfff2f69",
+      "title": "Cloudflare Adds Optional OAuth Scopes, Letting Developers Mark What Users May Decline",
+      "summary": "Cloudflare has added optional OAuth scopes, letting client owners mark which permissions users may deselect at consent.…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "75c8dfff2f69"
+      ]
+    },
+    {
+      "itemId": "1a07760d2e83",
+      "title": "新版GPT Image 2.5已经能伪造GPT-6发布会了",
+      "summary": "改进GPT Image 2的噪点问题",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "1a07760d2e83"
+      ]
+    },
+    {
+      "itemId": "3fdb7253856f",
+      "title": "刚刚，GPT-6正式发布！OpenAI：欢迎来到AGI时代",
+      "summary": "全球最强C",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "3fdb7253856f"
+      ]
+    },
+    {
+      "itemId": "c9a891551e8f",
+      "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
+      "summary": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos in…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c9a891551e8f"
+      ]
+    },
+    {
+      "itemId": "24c317f06dbc",
+      "title": "Shopify Introduces Gisting: Compressing LLM System Prompts into Learned Tokens",
+      "summary": "Shopify's engineering introduced gisting, a novel technique for compressing long LLM prompts into a smaller set of lear…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "24c317f06dbc"
+      ]
+    },
+    {
+      "itemId": "98273525f8a1",
+      "title": "Cohere’s Parse 5 Promises Efficient Multi-Modal Information Extraction from Complex Documents",
+      "summary": "Cohere has launched Parse 5, a multimodal foundation model designed to extract structured data from complex enterprise …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "98273525f8a1"
+      ]
+    },
+    {
+      "itemId": "9a4252c66caa",
+      "title": "Proactive cyber defense for governments and enterprises",
+      "summary": "The Fairwind Program is a limited access program for governments and trusted partners to use our cyber defense tools.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9a4252c66caa"
+      ]
+    },
+    {
+      "itemId": "f3015cea6bea",
+      "title": "The latest AI news we announced in August 2026",
+      "summary": "Here are Google’s latest AI updates from August 2026",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f3015cea6bea"
+      ]
+    },
+    {
+      "itemId": "019f57066ed8",
+      "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+      "summary": "Built on our latest Nano Banana model, Google Pics — our image creation and editing tool — is now available.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "019f57066ed8"
+      ]
+    },
+    {
+      "itemId": "76c1a6e47f34",
+      "title": "Swiggy Uses 350+ Features and Multi-Task MLP to Predict Customer Lifetime Value",
+      "summary": "Swiggy developed an in-house predicted lifetime value model using more than 350 pre order features and a multi task MLP…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "76c1a6e47f34"
+      ]
+    },
+    {
+      "itemId": "30992253e0a3",
+      "title": "InfoQ previews the September Cohorts of its Online Certification Programs",
+      "summary": "A preview of the September cohorts of the InfoQ Online Certification Programs, and the facilitators leading them: Luca …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "30992253e0a3"
+      ]
+    },
+    {
+      "itemId": "bda31ef07efa",
+      "title": "Ask HN: Code review of AI output, review what?",
+      "summary": "If AI is supposed to be doing a better job at coding, then what are humans reviewing in it? I don't understand why I ne…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "bda31ef07efa"
+      ]
+    },
+    {
+      "itemId": "ed60687ee26c",
+      "title": "Jensen Huang Became AI'S Taylor Swift",
+      "summary": "Article URL: https://www.economist.com/interactive/1843/2026/09/03/how-jensen-huang-became-ais-taylor-swift Comments UR…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "ed60687ee26c"
+      ]
+    },
+    {
+      "itemId": "4c2f3ac383bd",
+      "title": "NVIDIA is driving the AI boom. Good",
+      "summary": "Article URL: https://www.economist.com/leaders/2026/09/03/nvidia-is-driving-the-ai-boom-good Comments URL: https://news…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "4c2f3ac383bd"
+      ]
+    },
+    {
+      "itemId": "fcffe8c27a58",
+      "title": "Botpool Create – Build websites and apps by chatting with AI",
+      "summary": "Article URL: https://www.botpool.ai/create Comments URL: https://news.ycombinator.com/item?id=49558895 Points: 1 # Comm…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fcffe8c27a58"
+      ]
+    },
+    {
+      "itemId": "01341e624399",
+      "title": "Pangram Has Emerged as the Gold Standard of AI Detection. Should You Trust It?",
+      "summary": "Article URL: https://www.wired.com/story/pangram-has-emerged-as-the-gold-standard-of-ai-detection/ Comments URL: https:…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "01341e624399"
+      ]
+    },
+    {
+      "itemId": "1080373ee614",
+      "title": "Nvidia Personal AI Router (Pair)",
+      "summary": "Article URL: https://www.nvidia.com/en-us/ai-on-rtx/personal-ai-router/ Comments URL: https://news.ycombinator.com/item…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1080373ee614"
+      ]
+    },
+    {
+      "itemId": "266073136860",
+      "title": "“没有Token的CS学生，应立即退学”",
+      "summary": "禁止古法编程、Token自费",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "266073136860"
+      ]
+    },
+    {
+      "itemId": "08ec3cd5f475",
+      "title": "腾讯WorkBuddy联名硬件来了！首批100多家伙伴入场",
+      "summary": "眼镜、耳机、麦克风都来了",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "08ec3cd5f475"
+      ]
+    },
+    {
+      "itemId": "4ff75f15e921",
+      "title": "世界生成模型来了3D头部玩家，可进入生产管线的场景级生成时代来临！",
+      "summary": "单图直出场景，顶会最佳论文落地",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "4ff75f15e921"
+      ]
+    },
+    {
+      "itemId": "646c163699b0",
+      "title": "陈大年复出，入局大模型",
+      "summary": "首秀逼近DeepSeek万亿旗舰",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "646c163699b0"
+      ]
+    },
+    {
+      "itemId": "b69262b69a49",
+      "title": "3 new ways to plan and book travel in Search",
+      "summary": "Book hotels and track airfares, plus view miles and rewards with AI Mode in Google Search.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b69262b69a49"
+      ]
+    },
+    {
+      "itemId": "0bff261be137",
+      "title": "5 ways to upgrade your home decor with Google Search",
+      "summary": "Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "0bff261be137"
+      ]
+    },
+    {
+      "itemId": "fb6e77407bde",
+      "title": "5 new ways to level up your learning with Search",
+      "summary": "Here’s how you can use Google Search tools to study for classes and standardized tests.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fb6e77407bde"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "2b74f693a744",
+      "title": "OpenClaw 2.0 Releases with Simplified Setup and Collaborative Agents",
+      "takeaway": "OpenClaw has released OpenClaw 2.0, a major update to the open-source personal AI agent that changes its installation p…",
+      "evidenceItemIds": [
+        "2b74f693a744"
+      ]
+    },
+    {
+      "itemId": "4d643ede66cf",
+      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+      "takeaway": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nea…",
+      "evidenceItemIds": [
+        "4d643ede66cf"
+      ]
+    },
+    {
+      "itemId": "b0af409a7921",
+      "title": "How AI-native companies turn workflows into operating capability",
+      "takeaway": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what…",
+      "evidenceItemIds": [
+        "b0af409a7921"
+      ]
+    },
+    {
+      "itemId": "366701d5c738",
+      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+      "takeaway": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, traini…",
+      "evidenceItemIds": [
+        "366701d5c738"
+      ]
+    },
+    {
+      "itemId": "d9732bfc46a4",
+      "title": "Safety overview: GPT-6 Astra",
+      "takeaway": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capab…",
+      "evidenceItemIds": [
+        "d9732bfc46a4"
+      ]
+    },
+    {
+      "itemId": "9fdd79f61be8",
+      "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+      "takeaway": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual…",
+      "evidenceItemIds": [
+        "9fdd79f61be8"
+      ]
+    },
+    {
+      "itemId": "75c8dfff2f69",
+      "title": "Cloudflare Adds Optional OAuth Scopes, Letting Developers Mark What Users May Decline",
+      "takeaway": "Cloudflare has added optional OAuth scopes, letting client owners mark which permissions users may deselect at consent.…",
+      "evidenceItemIds": [
+        "75c8dfff2f69"
+      ]
+    },
+    {
+      "itemId": "1a07760d2e83",
+      "title": "新版GPT Image 2.5已经能伪造GPT-6发布会了",
+      "takeaway": "改进GPT Image 2的噪点问题",
+      "evidenceItemIds": [
+        "1a07760d2e83"
+      ]
+    },
+    {
+      "itemId": "3fdb7253856f",
+      "title": "刚刚，GPT-6正式发布！OpenAI：欢迎来到AGI时代",
+      "takeaway": "全球最强C",
+      "evidenceItemIds": [
+        "3fdb7253856f"
+      ]
+    },
+    {
+      "itemId": "c9a891551e8f",
+      "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
+      "takeaway": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos in…",
+      "evidenceItemIds": [
+        "c9a891551e8f"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕agent与tooling展开，建议优先关注《OpenClaw 2.0 Releases with Simplified Setup and Collaborative Agents》、《Legora reviewed 41 documents in minutes with GPT-6 Astra》、《How AI-native companies turn workflows into operating capability》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Daybreak for Frontline Defenders: $1B to protect essential services》、《ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "366701d5c738",
+        "c9a891551e8f",
+        "24c317f06dbc",
+        "98273525f8a1"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《新版GPT Image 2.5已经能伪造GPT-6发布会了》、《刚刚，GPT-6正式发布！OpenAI：欢迎来到AGI时代》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "1a07760d2e83",
+        "3fdb7253856f",
+        "f3015cea6bea",
+        "bda31ef07efa"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "tooling",
+      "lead": "工具链方向本期共 4 条，建议优先阅读《Legora reviewed 41 documents in minutes with GPT-6 Astra》、《How AI-native companies turn workflows into operating capability》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "4d643ede66cf",
+        "b0af409a7921",
+        "d9732bfc46a4",
+        "9a4252c66caa"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 2 条，建议优先阅读《OpenClaw 2.0 Releases with Simplified Setup and Collaborative Agents》、《Cloudflare Adds Optional OAuth Scopes, Letting Developers Mark What Users May Decline》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "2b74f693a744",
+        "75c8dfff2f69"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "8892f0884f8b351eafabba34c944d8a98b30ca43710c26639df7c73aa6e10c6c",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-09-04T01:13:07.315Z",
+    "finishedAt": "2026-09-04T01:39:58.683Z",
+    "durationMs": 1611368,
+    "inputCount": 30,
+    "processedCount": 30,
+    "fallbackCount": 30,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 30,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 29,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 1,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 57,
+      "splitRetryCount": 27
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-08-28",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-08-21",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-09-04T01:39:58.761Z",
+    "finishedAt": "2026-09-04T01:57:43.319Z",
+    "durationMs": 1064558,
+    "inputCount": 30,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "2b74f693a744",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "OpenClaw 2.0 Releases with Simplified Setup and Collaborative Agents",
+      "link": "https://www.infoq.com/news/2026/09/openclaw-2-release/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "OpenClaw has released OpenClaw 2.0, a major update to the open-source personal AI agent that changes its installation process, browser interface, memory, skills, automations, plugins, security, and collaboration features. By Daniel Dominguez",
+      "publishedAt": "2026-09-01T18:47:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 123,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "4d643ede66cf",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+      "link": "https://openai.com/index/legora-financial-statement-review-with-astra",
+      "contentSnippet": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
+      "publishedAt": "2026-09-03T12:00:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 92.68,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 120,
+        "ruleScoreNormalized": 92.6829268292683,
+        "finalScore": 92.68,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "b0af409a7921",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "How AI-native companies turn workflows into operating capability",
+      "link": "https://openai.com/index/ai-native-company-workflows",
+      "contentSnippet": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
+      "publishedAt": "2026-09-01T17:00:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 80.49,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 115,
+        "ruleScoreNormalized": 80.48780487804879,
+        "finalScore": 80.49,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "366701d5c738",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+      "link": "https://openai.com/index/daybreak-for-frontline-defenders",
+      "contentSnippet": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
+      "publishedAt": "2026-09-03T13:15:00.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 68.29,
+      "importance": "medium",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 110,
+        "ruleScoreNormalized": 68.29268292682927,
+        "finalScore": 68.29,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "d9732bfc46a4",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "Safety overview: GPT-6 Astra",
+      "link": "https://openai.com/index/safety-overview-gpt-6-astra",
+      "contentSnippet": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.",
+      "publishedAt": "2026-09-03T00:00:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 63.41,
+      "importance": "low",
+      "recommendationReason": "安全与合规关注",
+      "scoreBreakdown": {
+        "ruleScore": 108,
+        "ruleScoreNormalized": 63.41463414634146,
+        "finalScore": 63.41,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[MarkTechPost] 抓取失败: HTTP 403",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[ZDNet AI] 抓取失败: HTTP 404",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：30/30",
+    "LLM 分类打分回退明细（前 3/30）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06e94e406279e0b1cec70bb7d24 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06e94e40e33c051516a87b1ae02 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06e94e41b660a1379085f781d47",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=29：business=0：missing_content=0：invalid_json=0：quality=0：other=1",
+    "LLM 分类打分重试统计：batch_retry=57, split_retry=27",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- OpenClaw 2.0 Releases with Simplified Setup and Collaborative Agents\n- Legora reviewed 41 documents in minutes with GPT-6 Astra\n- How AI-native companies turn workflows into operating capability\n- Daybreak for Frontline Defenders: $1B to protect essential services\n- Safety overview: GPT-6 Astra\n\n### 分类覆盖（大纲）\n- agent: 2 条\n- tooling: 7 条\n- other: 11 条\n- open-source: 1 条\n- industry-news: 9 条",
+    "rankedItems": [
+      {
+        "id": "2b74f693a744",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "OpenClaw 2.0 Releases with Simplified Setup and Collaborative Agents",
+        "link": "https://www.infoq.com/news/2026/09/openclaw-2-release/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "OpenClaw has released OpenClaw 2.0, a major update to the open-source personal AI agent that changes its installation process, browser interface, memory, skills, automations, plugins, security, and collaboration features. By Daniel Dominguez",
+        "publishedAt": "2026-09-01T18:47:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4d643ede66cf",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+        "link": "https://openai.com/index/legora-financial-statement-review-with-astra",
+        "contentSnippet": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
+        "publishedAt": "2026-09-03T12:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 92.68,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 120,
+          "ruleScoreNormalized": 92.6829268292683,
+          "finalScore": 92.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b0af409a7921",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How AI-native companies turn workflows into operating capability",
+        "link": "https://openai.com/index/ai-native-company-workflows",
+        "contentSnippet": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
+        "publishedAt": "2026-09-01T17:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 80.49,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 80.48780487804879,
+          "finalScore": 80.49,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "366701d5c738",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+        "link": "https://openai.com/index/daybreak-for-frontline-defenders",
+        "contentSnippet": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
+        "publishedAt": "2026-09-03T13:15:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 68.29,
+        "importance": "medium",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 68.29268292682927,
+          "finalScore": 68.29,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d9732bfc46a4",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Safety overview: GPT-6 Astra",
+        "link": "https://openai.com/index/safety-overview-gpt-6-astra",
+        "contentSnippet": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.",
+        "publishedAt": "2026-09-03T00:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 63.41,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 63.41463414634146,
+          "finalScore": 63.41,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9fdd79f61be8",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+        "link": "https://openai.com/index/playco-game-prototyping-with-astra",
+        "contentSnippet": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
+        "publishedAt": "2026-09-03T12:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 56.1,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 56.09756097560976,
+          "finalScore": 56.1,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "75c8dfff2f69",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Cloudflare Adds Optional OAuth Scopes, Letting Developers Mark What Users May Decline",
+        "link": "https://www.infoq.com/news/2026/09/cloudflare-optional-oauth-scopes/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Cloudflare has added optional OAuth scopes, letting client owners mark which permissions users may deselect at consent. The company names MCP servers as the motivating case, since agents request the union of everything they might do. Partial consent exists elsewhere, but developer control over which scopes are droppable does not. By Steef-Jan Wiggers",
+        "publishedAt": "2026-09-02T09:07:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 56.1,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 56.09756097560976,
+          "finalScore": 56.1,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1a07760d2e83",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "新版GPT Image 2.5已经能伪造GPT-6发布会了",
+        "link": "https://www.qbitai.com/2026/09/483948.html",
+        "contentSnippet": "改进GPT Image 2的噪点问题",
+        "publishedAt": "2026-09-03T21:57:08.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 48.78,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 48.78048780487805,
+          "finalScore": 48.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3fdb7253856f",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "刚刚，GPT-6正式发布！OpenAI：欢迎来到AGI时代",
+        "link": "https://www.qbitai.com/2026/09/483898.html",
+        "contentSnippet": "全球最强C",
+        "publishedAt": "2026-09-03T21:50:07.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 48.78,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 48.78048780487805,
+          "finalScore": 48.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c9a891551e8f",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
+        "link": "https://openai.com/index/atv-big-air-tour",
+        "contentSnippet": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos into an inventory website in 15 minutes.",
+        "publishedAt": "2026-09-02T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 43.9,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 43.90243902439025,
+          "finalScore": 43.9,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "24c317f06dbc",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Shopify Introduces Gisting: Compressing LLM System Prompts into Learned Tokens",
+        "link": "https://www.infoq.com/news/2026/09/spotify-gisting-llm-performance/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Shopify's engineering introduced gisting, a novel technique for compressing long LLM prompts into a smaller set of learned \"gist\" tokens, improving throughput and reducing inference cost. By Sergio De Simone",
+        "publishedAt": "2026-09-03T20:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 43.9,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 43.90243902439025,
+          "finalScore": 43.9,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "98273525f8a1",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Cohere’s Parse 5 Promises Efficient Multi-Modal Information Extraction from Complex Documents",
+        "link": "https://www.infoq.com/news/2026/09/cohere-multimodal-parse/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Cohere has launched Parse 5, a multimodal foundation model designed to extract structured data from complex enterprise documents. The 2.3-billion-parameter system converts visually rich PDFs into Markdown while providing bounding box coordinates for visual grounding. It has been evaluated against over 2,000 enterprise pages, achieving an average score of 79.2 in key performance areas. By Olimpiu Pop",
+        "publishedAt": "2026-09-03T06:06:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 31.71,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 31.70731707317073,
+          "finalScore": 31.71,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9a4252c66caa",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Proactive cyber defense for governments and enterprises",
+        "link": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+        "contentSnippet": "The Fairwind Program is a limited access program for governments and trusted partners to use our cyber defense tools.",
+        "publishedAt": "2026-09-02T15:40:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 24.39,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 24.390243902439025,
+          "finalScore": 24.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f3015cea6bea",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in August 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from August 2026",
+        "publishedAt": "2026-09-01T20:45:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 24.39,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 24.390243902439025,
+          "finalScore": 24.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "019f57066ed8",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+        "link": "https://blog.google/products-and-platforms/products/workspace/google-pics/",
+        "contentSnippet": "Built on our latest Nano Banana model, Google Pics — our image creation and editing tool — is now available.",
+        "publishedAt": "2026-09-01T16:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 24.39,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 24.390243902439025,
+          "finalScore": 24.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "76c1a6e47f34",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Swiggy Uses 350+ Features and Multi-Task MLP to Predict Customer Lifetime Value",
+        "link": "https://www.infoq.com/news/2026/09/swiggy-pltv-multitask-mlp/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Swiggy developed an in-house predicted lifetime value model using more than 350 pre order features and a multi task MLP for Food and Instamart. Adding order count as an auxiliary task reduced model parameters by 63% while improving predictive performance. The pLTV signal is used with Google Target ROAS bidding to optimize customer acquisition. By Leela Kumili",
+        "publishedAt": "2026-09-02T13:55:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 19.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 19.51219512195122,
+          "finalScore": 19.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "30992253e0a3",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "InfoQ previews the September Cohorts of its Online Certification Programs",
+        "link": "https://www.infoq.com/news/2026/09/infoq-online-cohorts-sept-2026/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A preview of the September cohorts of the InfoQ Online Certification Programs, and the facilitators leading them: Luca Mezzalira, Michelle Brush, Zichuan Xiong, and Premanand Chandrasekaran. By Artenisa Chatziou",
+        "publishedAt": "2026-09-01T13:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 19.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 19.51219512195122,
+          "finalScore": 19.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "bda31ef07efa",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Ask HN: Code review of AI output, review what?",
+        "link": "https://news.ycombinator.com/item?id=49559036",
+        "contentSnippet": "If AI is supposed to be doing a better job at coding, then what are humans reviewing in it? I don't understand why I need to spend extra time and effort just to read code that humans aren't supposed to write. I feel this is some sort of scam in the AI industry telling us to do code reviews. Either write the code yourself or just pass all the AI code. Please help me understand. Comments URL: https://news.ycombinator.com/item?id=49559036 Points: 3 # Comments: 2",
+        "publishedAt": "2026-09-04T00:36:08.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 19.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 19.51219512195122,
+          "finalScore": 19.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ed60687ee26c",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Jensen Huang Became AI'S Taylor Swift",
+        "link": "https://www.economist.com/interactive/1843/2026/09/03/how-jensen-huang-became-ais-taylor-swift",
+        "contentSnippet": "Article URL: https://www.economist.com/interactive/1843/2026/09/03/how-jensen-huang-became-ais-taylor-swift Comments URL: https://news.ycombinator.com/item?id=49559023 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-04T00:34:07.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 19.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 19.51219512195122,
+          "finalScore": 19.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4c2f3ac383bd",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "NVIDIA is driving the AI boom. Good",
+        "link": "https://www.economist.com/leaders/2026/09/03/nvidia-is-driving-the-ai-boom-good",
+        "contentSnippet": "Article URL: https://www.economist.com/leaders/2026/09/03/nvidia-is-driving-the-ai-boom-good Comments URL: https://news.ycombinator.com/item?id=49559014 Points: 3 # Comments: 0",
+        "publishedAt": "2026-09-04T00:32:25.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 19.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 19.51219512195122,
+          "finalScore": 19.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fcffe8c27a58",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Botpool Create – Build websites and apps by chatting with AI",
+        "link": "https://www.botpool.ai/create",
+        "contentSnippet": "Article URL: https://www.botpool.ai/create Comments URL: https://news.ycombinator.com/item?id=49558895 Points: 1 # Comments: 1",
+        "publishedAt": "2026-09-04T00:18:38.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 19.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 19.51219512195122,
+          "finalScore": 19.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "01341e624399",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Pangram Has Emerged as the Gold Standard of AI Detection. Should You Trust It?",
+        "link": "https://www.wired.com/story/pangram-has-emerged-as-the-gold-standard-of-ai-detection/",
+        "contentSnippet": "Article URL: https://www.wired.com/story/pangram-has-emerged-as-the-gold-standard-of-ai-detection/ Comments URL: https://news.ycombinator.com/item?id=49558711 Points: 3 # Comments: 1",
+        "publishedAt": "2026-09-03T23:51:21.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 19.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 19.51219512195122,
+          "finalScore": 19.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1080373ee614",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Nvidia Personal AI Router (Pair)",
+        "link": "https://www.nvidia.com/en-us/ai-on-rtx/personal-ai-router/",
+        "contentSnippet": "Article URL: https://www.nvidia.com/en-us/ai-on-rtx/personal-ai-router/ Comments URL: https://news.ycombinator.com/item?id=49558533 Points: 3 # Comments: 0",
+        "publishedAt": "2026-09-03T23:26:53.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 19.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 19.51219512195122,
+          "finalScore": 19.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "266073136860",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "“没有Token的CS学生，应立即退学”",
+        "link": "https://www.qbitai.com/2026/09/483839.html",
+        "contentSnippet": "禁止古法编程、Token自费",
+        "publishedAt": "2026-09-03T11:32:08.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 12.2,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 12.195121951219512,
+          "finalScore": 12.2,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "08ec3cd5f475",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "腾讯WorkBuddy联名硬件来了！首批100多家伙伴入场",
+        "link": "https://www.qbitai.com/2026/09/483786.html",
+        "contentSnippet": "眼镜、耳机、麦克风都来了",
+        "publishedAt": "2026-09-03T11:25:29.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 12.2,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 12.195121951219512,
+          "finalScore": 12.2,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4ff75f15e921",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "世界生成模型来了3D头部玩家，可进入生产管线的场景级生成时代来临！",
+        "link": "https://www.qbitai.com/2026/09/483189.html",
+        "contentSnippet": "单图直出场景，顶会最佳论文落地",
+        "publishedAt": "2026-09-03T10:18:36.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 12.2,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 12.195121951219512,
+          "finalScore": 12.2,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "646c163699b0",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "陈大年复出，入局大模型",
+        "link": "https://www.qbitai.com/2026/09/483600.html",
+        "contentSnippet": "首秀逼近DeepSeek万亿旗舰",
+        "publishedAt": "2026-09-03T10:13:24.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 12.2,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 12.195121951219512,
+          "finalScore": 12.2,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b69262b69a49",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "3 new ways to plan and book travel in Search",
+        "link": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+        "contentSnippet": "Book hotels and track airfares, plus view miles and rewards with AI Mode in Google Search.",
+        "publishedAt": "2026-08-27T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0bff261be137",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "5 ways to upgrade your home decor with Google Search",
+        "link": "https://blog.google/products-and-platforms/products/search/home-decor-tips/",
+        "contentSnippet": "Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
+        "publishedAt": "2026-08-25T16:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fb6e77407bde",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "5 new ways to level up your learning with Search",
+        "link": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
+        "contentSnippet": "Here’s how you can use Google Search tools to study for classes and standardized tests.",
+        "publishedAt": "2026-08-19T19:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "2b74f693a744",
+        "title": "OpenClaw 2.0 Releases with Simplified Setup and Collaborative Agents",
+        "summary": "OpenClaw has released OpenClaw 2.0, a major update to the open-source personal AI agent that changes its installation p…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "2b74f693a744"
+        ]
+      },
+      {
+        "itemId": "4d643ede66cf",
+        "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+        "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nea…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "4d643ede66cf"
+        ]
+      },
+      {
+        "itemId": "b0af409a7921",
+        "title": "How AI-native companies turn workflows into operating capability",
+        "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "b0af409a7921"
+        ]
+      },
+      {
+        "itemId": "366701d5c738",
+        "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+        "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, traini…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "366701d5c738"
+        ]
+      },
+      {
+        "itemId": "d9732bfc46a4",
+        "title": "Safety overview: GPT-6 Astra",
+        "summary": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capab…",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "d9732bfc46a4"
+        ]
+      },
+      {
+        "itemId": "9fdd79f61be8",
+        "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+        "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9fdd79f61be8"
+        ]
+      },
+      {
+        "itemId": "75c8dfff2f69",
+        "title": "Cloudflare Adds Optional OAuth Scopes, Letting Developers Mark What Users May Decline",
+        "summary": "Cloudflare has added optional OAuth scopes, letting client owners mark which permissions users may deselect at consent.…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "75c8dfff2f69"
+        ]
+      },
+      {
+        "itemId": "1a07760d2e83",
+        "title": "新版GPT Image 2.5已经能伪造GPT-6发布会了",
+        "summary": "改进GPT Image 2的噪点问题",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "1a07760d2e83"
+        ]
+      },
+      {
+        "itemId": "3fdb7253856f",
+        "title": "刚刚，GPT-6正式发布！OpenAI：欢迎来到AGI时代",
+        "summary": "全球最强C",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "3fdb7253856f"
+        ]
+      },
+      {
+        "itemId": "c9a891551e8f",
+        "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
+        "summary": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos in…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c9a891551e8f"
+        ]
+      },
+      {
+        "itemId": "24c317f06dbc",
+        "title": "Shopify Introduces Gisting: Compressing LLM System Prompts into Learned Tokens",
+        "summary": "Shopify's engineering introduced gisting, a novel technique for compressing long LLM prompts into a smaller set of lear…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "24c317f06dbc"
+        ]
+      },
+      {
+        "itemId": "98273525f8a1",
+        "title": "Cohere’s Parse 5 Promises Efficient Multi-Modal Information Extraction from Complex Documents",
+        "summary": "Cohere has launched Parse 5, a multimodal foundation model designed to extract structured data from complex enterprise …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "98273525f8a1"
+        ]
+      },
+      {
+        "itemId": "9a4252c66caa",
+        "title": "Proactive cyber defense for governments and enterprises",
+        "summary": "The Fairwind Program is a limited access program for governments and trusted partners to use our cyber defense tools.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9a4252c66caa"
+        ]
+      },
+      {
+        "itemId": "f3015cea6bea",
+        "title": "The latest AI news we announced in August 2026",
+        "summary": "Here are Google’s latest AI updates from August 2026",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f3015cea6bea"
+        ]
+      },
+      {
+        "itemId": "019f57066ed8",
+        "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+        "summary": "Built on our latest Nano Banana model, Google Pics — our image creation and editing tool — is now available.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "019f57066ed8"
+        ]
+      },
+      {
+        "itemId": "76c1a6e47f34",
+        "title": "Swiggy Uses 350+ Features and Multi-Task MLP to Predict Customer Lifetime Value",
+        "summary": "Swiggy developed an in-house predicted lifetime value model using more than 350 pre order features and a multi task MLP…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "76c1a6e47f34"
+        ]
+      },
+      {
+        "itemId": "30992253e0a3",
+        "title": "InfoQ previews the September Cohorts of its Online Certification Programs",
+        "summary": "A preview of the September cohorts of the InfoQ Online Certification Programs, and the facilitators leading them: Luca …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "30992253e0a3"
+        ]
+      },
+      {
+        "itemId": "bda31ef07efa",
+        "title": "Ask HN: Code review of AI output, review what?",
+        "summary": "If AI is supposed to be doing a better job at coding, then what are humans reviewing in it? I don't understand why I ne…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "bda31ef07efa"
+        ]
+      },
+      {
+        "itemId": "ed60687ee26c",
+        "title": "Jensen Huang Became AI'S Taylor Swift",
+        "summary": "Article URL: https://www.economist.com/interactive/1843/2026/09/03/how-jensen-huang-became-ais-taylor-swift Comments UR…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "ed60687ee26c"
+        ]
+      },
+      {
+        "itemId": "4c2f3ac383bd",
+        "title": "NVIDIA is driving the AI boom. Good",
+        "summary": "Article URL: https://www.economist.com/leaders/2026/09/03/nvidia-is-driving-the-ai-boom-good Comments URL: https://news…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "4c2f3ac383bd"
+        ]
+      },
+      {
+        "itemId": "fcffe8c27a58",
+        "title": "Botpool Create – Build websites and apps by chatting with AI",
+        "summary": "Article URL: https://www.botpool.ai/create Comments URL: https://news.ycombinator.com/item?id=49558895 Points: 1 # Comm…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fcffe8c27a58"
+        ]
+      },
+      {
+        "itemId": "01341e624399",
+        "title": "Pangram Has Emerged as the Gold Standard of AI Detection. Should You Trust It?",
+        "summary": "Article URL: https://www.wired.com/story/pangram-has-emerged-as-the-gold-standard-of-ai-detection/ Comments URL: https:…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "01341e624399"
+        ]
+      },
+      {
+        "itemId": "1080373ee614",
+        "title": "Nvidia Personal AI Router (Pair)",
+        "summary": "Article URL: https://www.nvidia.com/en-us/ai-on-rtx/personal-ai-router/ Comments URL: https://news.ycombinator.com/item…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1080373ee614"
+        ]
+      },
+      {
+        "itemId": "266073136860",
+        "title": "“没有Token的CS学生，应立即退学”",
+        "summary": "禁止古法编程、Token自费",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "266073136860"
+        ]
+      },
+      {
+        "itemId": "08ec3cd5f475",
+        "title": "腾讯WorkBuddy联名硬件来了！首批100多家伙伴入场",
+        "summary": "眼镜、耳机、麦克风都来了",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "08ec3cd5f475"
+        ]
+      },
+      {
+        "itemId": "4ff75f15e921",
+        "title": "世界生成模型来了3D头部玩家，可进入生产管线的场景级生成时代来临！",
+        "summary": "单图直出场景，顶会最佳论文落地",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "4ff75f15e921"
+        ]
+      },
+      {
+        "itemId": "646c163699b0",
+        "title": "陈大年复出，入局大模型",
+        "summary": "首秀逼近DeepSeek万亿旗舰",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "646c163699b0"
+        ]
+      },
+      {
+        "itemId": "b69262b69a49",
+        "title": "3 new ways to plan and book travel in Search",
+        "summary": "Book hotels and track airfares, plus view miles and rewards with AI Mode in Google Search.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b69262b69a49"
+        ]
+      },
+      {
+        "itemId": "0bff261be137",
+        "title": "5 ways to upgrade your home decor with Google Search",
+        "summary": "Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "0bff261be137"
+        ]
+      },
+      {
+        "itemId": "fb6e77407bde",
+        "title": "5 new ways to level up your learning with Search",
+        "summary": "Here’s how you can use Google Search tools to study for classes and standardized tests.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fb6e77407bde"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "2b74f693a744",
+        "title": "OpenClaw 2.0 Releases with Simplified Setup and Collaborative Agents",
+        "takeaway": "OpenClaw has released OpenClaw 2.0, a major update to the open-source personal AI agent that changes its installation p…",
+        "evidenceItemIds": [
+          "2b74f693a744"
+        ]
+      },
+      {
+        "itemId": "4d643ede66cf",
+        "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+        "takeaway": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nea…",
+        "evidenceItemIds": [
+          "4d643ede66cf"
+        ]
+      },
+      {
+        "itemId": "b0af409a7921",
+        "title": "How AI-native companies turn workflows into operating capability",
+        "takeaway": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what…",
+        "evidenceItemIds": [
+          "b0af409a7921"
+        ]
+      },
+      {
+        "itemId": "366701d5c738",
+        "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+        "takeaway": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, traini…",
+        "evidenceItemIds": [
+          "366701d5c738"
+        ]
+      },
+      {
+        "itemId": "d9732bfc46a4",
+        "title": "Safety overview: GPT-6 Astra",
+        "takeaway": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capab…",
+        "evidenceItemIds": [
+          "d9732bfc46a4"
+        ]
+      },
+      {
+        "itemId": "9fdd79f61be8",
+        "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+        "takeaway": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual…",
+        "evidenceItemIds": [
+          "9fdd79f61be8"
+        ]
+      },
+      {
+        "itemId": "75c8dfff2f69",
+        "title": "Cloudflare Adds Optional OAuth Scopes, Letting Developers Mark What Users May Decline",
+        "takeaway": "Cloudflare has added optional OAuth scopes, letting client owners mark which permissions users may deselect at consent.…",
+        "evidenceItemIds": [
+          "75c8dfff2f69"
+        ]
+      },
+      {
+        "itemId": "1a07760d2e83",
+        "title": "新版GPT Image 2.5已经能伪造GPT-6发布会了",
+        "takeaway": "改进GPT Image 2的噪点问题",
+        "evidenceItemIds": [
+          "1a07760d2e83"
+        ]
+      },
+      {
+        "itemId": "3fdb7253856f",
+        "title": "刚刚，GPT-6正式发布！OpenAI：欢迎来到AGI时代",
+        "takeaway": "全球最强C",
+        "evidenceItemIds": [
+          "3fdb7253856f"
+        ]
+      },
+      {
+        "itemId": "c9a891551e8f",
+        "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
+        "takeaway": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos in…",
+        "evidenceItemIds": [
+          "c9a891551e8f"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕agent与tooling展开，建议优先关注《OpenClaw 2.0 Releases with Simplified Setup and Collaborative Agents》、《Legora reviewed 41 documents in minutes with GPT-6 Astra》、《How AI-native companies turn workflows into operating capability》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Daybreak for Frontline Defenders: $1B to protect essential services》、《ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "366701d5c738",
+          "c9a891551e8f",
+          "24c317f06dbc",
+          "98273525f8a1"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《新版GPT Image 2.5已经能伪造GPT-6发布会了》、《刚刚，GPT-6正式发布！OpenAI：欢迎来到AGI时代》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "1a07760d2e83",
+          "3fdb7253856f",
+          "f3015cea6bea",
+          "bda31ef07efa"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "tooling",
+        "lead": "工具链方向本期共 4 条，建议优先阅读《Legora reviewed 41 documents in minutes with GPT-6 Astra》、《How AI-native companies turn workflows into operating capability》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "4d643ede66cf",
+          "b0af409a7921",
+          "d9732bfc46a4",
+          "9a4252c66caa"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 2 条，建议优先阅读《OpenClaw 2.0 Releases with Simplified Setup and Collaborative Agents》、《Cloudflare Adds Optional OAuth Scopes, Letting Developers Mark What Users May Decline》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "2b74f693a744",
+          "75c8dfff2f69"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "8892f0884f8b351eafabba34c944d8a98b30ca43710c26639df7c73aa6e10c6c",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-09-04T01:13:07.315Z",
+      "finishedAt": "2026-09-04T01:39:58.683Z",
+      "durationMs": 1611368,
+      "inputCount": 30,
+      "processedCount": 30,
+      "fallbackCount": 30,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 30,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 29,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 1,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 57,
+        "splitRetryCount": 27
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-08-28",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-08-21",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-09-04T01:39:58.761Z",
+      "finishedAt": "2026-09-04T01:57:43.319Z",
+      "durationMs": 1064558,
+      "inputCount": 30,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "2b74f693a744",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "OpenClaw 2.0 Releases with Simplified Setup and Collaborative Agents",
+        "link": "https://www.infoq.com/news/2026/09/openclaw-2-release/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "OpenClaw has released OpenClaw 2.0, a major update to the open-source personal AI agent that changes its installation process, browser interface, memory, skills, automations, plugins, security, and collaboration features. By Daniel Dominguez",
+        "publishedAt": "2026-09-01T18:47:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4d643ede66cf",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+        "link": "https://openai.com/index/legora-financial-statement-review-with-astra",
+        "contentSnippet": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
+        "publishedAt": "2026-09-03T12:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 92.68,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 120,
+          "ruleScoreNormalized": 92.6829268292683,
+          "finalScore": 92.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b0af409a7921",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How AI-native companies turn workflows into operating capability",
+        "link": "https://openai.com/index/ai-native-company-workflows",
+        "contentSnippet": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
+        "publishedAt": "2026-09-01T17:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 80.49,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 80.48780487804879,
+          "finalScore": 80.49,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "366701d5c738",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+        "link": "https://openai.com/index/daybreak-for-frontline-defenders",
+        "contentSnippet": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
+        "publishedAt": "2026-09-03T13:15:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 68.29,
+        "importance": "medium",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 68.29268292682927,
+          "finalScore": 68.29,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d9732bfc46a4",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Safety overview: GPT-6 Astra",
+        "link": "https://openai.com/index/safety-overview-gpt-6-astra",
+        "contentSnippet": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.",
+        "publishedAt": "2026-09-03T00:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 63.41,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 63.41463414634146,
+          "finalScore": 63.41,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 30,
+      "normalizedCount": 30,
+      "dedupedCount": 30,
+      "highImportanceCount": 2,
+      "mediumImportanceCount": 2,
+      "lowImportanceCount": 26,
+      "categoryBreakdown": {
+        "open-source": 1,
+        "tooling": 7,
+        "agent": 2,
+        "research": 0,
+        "industry-news": 9,
+        "tutorial": 0,
+        "other": 11
+      }
+    },
+    "warnings": [
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[MarkTechPost] 抓取失败: HTTP 403",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[ZDNet AI] 抓取失败: HTTP 404",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：30/30",
+      "LLM 分类打分回退明细（前 3/30）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06e94e406279e0b1cec70bb7d24 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06e94e40e33c051516a87b1ae02 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06e94e41b660a1379085f781d47",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=29：business=0：missing_content=0：invalid_json=0：quality=0：other=1",
+      "LLM 分类打分重试统计：batch_retry=57, split_retry=27",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
