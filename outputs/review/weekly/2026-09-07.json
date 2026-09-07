@@ -1,0 +1,2120 @@
+{
+  "runId": "weekly-1788744701004",
+  "generatedAt": "2026-09-07T01:31:40.979Z",
+  "reviewStartedAt": "2026-09-07T01:31:40.979Z",
+  "reportDate": "2026-09-07",
+  "mode": "weekly",
+  "reviewStatus": "pending_review",
+  "reviewStage": "final_review",
+  "reviewDeadlineAt": "2026-09-07T04:30:00.000Z",
+  "reviewReason": "仍在审核窗口内，等待人工审核",
+  "publishStatus": "pending",
+  "shouldPublish": false,
+  "publishReason": "waiting_for_manual_review",
+  "publishedAt": null,
+  "outlineApproved": true,
+  "finalApproved": false,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 30,
+    "normalizedCount": 30,
+    "dedupedCount": 30,
+    "highImportanceCount": 3,
+    "mediumImportanceCount": 3,
+    "lowImportanceCount": 24,
+    "categoryBreakdown": {
+      "open-source": 2,
+      "tooling": 7,
+      "agent": 5,
+      "research": 0,
+      "industry-news": 5,
+      "tutorial": 0,
+      "other": 11
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "f8e241b16231",
+      "title": "Research acceleration: The view inside OpenAI",
+      "summary": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task co…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "f8e241b16231"
+      ]
+    },
+    {
+      "itemId": "187292e890b6",
+      "title": "How Figma Uses AI Agents for Security",
+      "summary": "The engineering team at software company Figma recently documented how they built AI agents to help their security team…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "187292e890b6"
+      ]
+    },
+    {
+      "itemId": "5f3b6c546678",
+      "title": "Redefining GIS: Declarative Symbology and Collaborative Workflows in JupyterGIS",
+      "summary": "JupyterGIS is a GIS-focused extension for Jupyter notebooks. The recent 0.16 release enhances collaborative features, r…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "5f3b6c546678"
+      ]
+    },
+    {
+      "itemId": "a19c20346e27",
+      "title": "Beyond Zero: Google Publishes Successor to BeyondCorp",
+      "summary": "In a recent research paper, Google introduced Beyond Zero, a “security model for the AI era” that extends Zero Trust to…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "a19c20346e27"
+      ]
+    },
+    {
+      "itemId": "4d643ede66cf",
+      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+      "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nea…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "4d643ede66cf"
+      ]
+    },
+    {
+      "itemId": "ade4dc62c3f7",
+      "title": "Google Mantis: An Agentic Vulnerability Scanning Harness for Reducing False Positives",
+      "summary": "Google has open-sourced Mantis, an AI-agent framework designed to automate the software vulnerability lifecycle, from i…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "ade4dc62c3f7"
+      ]
+    },
+    {
+      "itemId": "daef59e489e3",
+      "title": "An Alien Mind",
+      "summary": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeg…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "daef59e489e3"
+      ]
+    },
+    {
+      "itemId": "4a7cbe8411b9",
+      "title": "ROCm 10.0: A Decade of Open Compute, Built for the Age of Agentic AI",
+      "summary": "Article URL: https://rocm.blogs.amd.com/ecosystems-and-partners/rocm-x-blog/README.html Comments URL: https://news.ycom…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "4a7cbe8411b9"
+      ]
+    },
+    {
+      "itemId": "962c3cd40acc",
+      "title": "Prediction of maternal and infant outcomes with a Mother-Child AI agent",
+      "summary": "Article URL: https://doi.org/10.1038/s41591-026-04694-y Comments URL: https://news.ycombinator.com/item?id=49592275 Poi…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "962c3cd40acc"
+      ]
+    },
+    {
+      "itemId": "c9a5bd3ea6df",
+      "title": "GPT-6 Astra: A new generation of intelligence",
+      "summary": "Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer…",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "c9a5bd3ea6df"
+      ]
+    },
+    {
+      "itemId": "97599d3f4475",
+      "title": "Copilot Code Review Reaches Azure Repos, Billed Per Review with Reporting Two Days Behind",
+      "summary": "Microsoft opened GitHub Copilot code review for Azure Repos to all Azure DevOps customers, after acknowledging that man…",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "97599d3f4475"
+      ]
+    },
+    {
+      "itemId": "366701d5c738",
+      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+      "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, traini…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "366701d5c738"
+      ]
+    },
+    {
+      "itemId": "9fdd79f61be8",
+      "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+      "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9fdd79f61be8"
+      ]
+    },
+    {
+      "itemId": "a10254c41322",
+      "title": "Abliteration.ai is making a business out of removing AI guardrails",
+      "summary": "Article URL: https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/ Comm…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a10254c41322"
+      ]
+    },
+    {
+      "itemId": "f877d234da1d",
+      "title": "AI Is Already Making Us Less Human",
+      "summary": "Article URL: https://www.theatlantic.com/ideas/2026/09/open-ai-consciousness-morality/688535/ Comments URL: https://new…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f877d234da1d"
+      ]
+    },
+    {
+      "itemId": "b8f898aef0e8",
+      "title": "Pivot to AI safety, I beg you",
+      "summary": "Article URL: https://ceselder.substack.com/p/pivot-to-ai-safety-i-beg-you Comments URL: https://news.ycombinator.com/it…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b8f898aef0e8"
+      ]
+    },
+    {
+      "itemId": "f94b038a52fa",
+      "title": "Genius AI Detector",
+      "summary": "Article URL: https://geniusaidetector.com/ Comments URL: https://news.ycombinator.com/item?id=49592034 Points: 1 # Comm…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f94b038a52fa"
+      ]
+    },
+    {
+      "itemId": "9a4252c66caa",
+      "title": "Proactive cyber defense for governments and enterprises",
+      "summary": "The Fairwind Program is a limited access program for governments and trusted partners to use our cyber defense tools.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9a4252c66caa"
+      ]
+    },
+    {
+      "itemId": "f3015cea6bea",
+      "title": "The latest AI news we announced in August 2026",
+      "summary": "Here are Google’s latest AI updates from August 2026",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f3015cea6bea"
+      ]
+    },
+    {
+      "itemId": "019f57066ed8",
+      "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+      "summary": "Built on our latest Nano Banana model, Google Pics — our image creation and editing tool — is now available.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "019f57066ed8"
+      ]
+    },
+    {
+      "itemId": "98bc04535d88",
+      "title": "具身ICL来了创业玩家！上下文成Scaling新赛道",
+      "summary": "让机器人学会利用更长的多模态Context",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "98bc04535d88"
+      ]
+    },
+    {
+      "itemId": "5e716e739450",
+      "title": "B站首届AI创造公开赛收官，超八成参赛者为一人团队",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5e716e739450"
+      ]
+    },
+    {
+      "itemId": "24c317f06dbc",
+      "title": "Shopify Introduces Gisting: Compressing LLM System Prompts into Learned Tokens",
+      "summary": "Shopify's engineering introduced gisting, a novel technique for compressing long LLM prompts into a smaller set of lear…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "24c317f06dbc"
+      ]
+    },
+    {
+      "itemId": "b69262b69a49",
+      "title": "3 new ways to plan and book travel in Search",
+      "summary": "Book hotels and track airfares, plus view miles and rewards with AI Mode in Google Search.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b69262b69a49"
+      ]
+    },
+    {
+      "itemId": "0bff261be137",
+      "title": "5 ways to upgrade your home decor with Google Search",
+      "summary": "Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "0bff261be137"
+      ]
+    },
+    {
+      "itemId": "fb6e77407bde",
+      "title": "5 new ways to level up your learning with Search",
+      "summary": "Here’s how you can use Google Search tools to study for classes and standardized tests.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fb6e77407bde"
+      ]
+    },
+    {
+      "itemId": "b6b0bc5554a6",
+      "title": "GPT-6带火循环Transformer，阿里早已布局",
+      "summary": "手握两篇顶会论文",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b6b0bc5554a6"
+      ]
+    },
+    {
+      "itemId": "e6cb607bda7a",
+      "title": "押中SpaceX的硅谷老将，把票投给了一家中国世界模型公司",
+      "summary": "当AI开始“预演”一场暴雨",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e6cb607bda7a"
+      ]
+    },
+    {
+      "itemId": "f9a706943533",
+      "title": "陶哲轩吐槽GPT-6孪生素数新突破：令人无语的一幕",
+      "summary": "AI直接吐出正确答案，但最关键的可能不是答案",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f9a706943533"
+      ]
+    },
+    {
+      "itemId": "f96e781f563a",
+      "title": "这个世界模型训练完就“退场”，机器人反而更能干了",
+      "summary": "如此“反骨”的方法，具体又是怎么实现的？",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f96e781f563a"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "f8e241b16231",
+      "title": "Research acceleration: The view inside OpenAI",
+      "takeaway": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task co…",
+      "evidenceItemIds": [
+        "f8e241b16231"
+      ]
+    },
+    {
+      "itemId": "187292e890b6",
+      "title": "How Figma Uses AI Agents for Security",
+      "takeaway": "The engineering team at software company Figma recently documented how they built AI agents to help their security team…",
+      "evidenceItemIds": [
+        "187292e890b6"
+      ]
+    },
+    {
+      "itemId": "5f3b6c546678",
+      "title": "Redefining GIS: Declarative Symbology and Collaborative Workflows in JupyterGIS",
+      "takeaway": "JupyterGIS is a GIS-focused extension for Jupyter notebooks. The recent 0.16 release enhances collaborative features, r…",
+      "evidenceItemIds": [
+        "5f3b6c546678"
+      ]
+    },
+    {
+      "itemId": "a19c20346e27",
+      "title": "Beyond Zero: Google Publishes Successor to BeyondCorp",
+      "takeaway": "In a recent research paper, Google introduced Beyond Zero, a “security model for the AI era” that extends Zero Trust to…",
+      "evidenceItemIds": [
+        "a19c20346e27"
+      ]
+    },
+    {
+      "itemId": "4d643ede66cf",
+      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+      "takeaway": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nea…",
+      "evidenceItemIds": [
+        "4d643ede66cf"
+      ]
+    },
+    {
+      "itemId": "ade4dc62c3f7",
+      "title": "Google Mantis: An Agentic Vulnerability Scanning Harness for Reducing False Positives",
+      "takeaway": "Google has open-sourced Mantis, an AI-agent framework designed to automate the software vulnerability lifecycle, from i…",
+      "evidenceItemIds": [
+        "ade4dc62c3f7"
+      ]
+    },
+    {
+      "itemId": "daef59e489e3",
+      "title": "An Alien Mind",
+      "takeaway": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeg…",
+      "evidenceItemIds": [
+        "daef59e489e3"
+      ]
+    },
+    {
+      "itemId": "4a7cbe8411b9",
+      "title": "ROCm 10.0: A Decade of Open Compute, Built for the Age of Agentic AI",
+      "takeaway": "Article URL: https://rocm.blogs.amd.com/ecosystems-and-partners/rocm-x-blog/README.html Comments URL: https://news.ycom…",
+      "evidenceItemIds": [
+        "4a7cbe8411b9"
+      ]
+    },
+    {
+      "itemId": "962c3cd40acc",
+      "title": "Prediction of maternal and infant outcomes with a Mother-Child AI agent",
+      "takeaway": "Article URL: https://doi.org/10.1038/s41591-026-04694-y Comments URL: https://news.ycombinator.com/item?id=49592275 Poi…",
+      "evidenceItemIds": [
+        "962c3cd40acc"
+      ]
+    },
+    {
+      "itemId": "c9a5bd3ea6df",
+      "title": "GPT-6 Astra: A new generation of intelligence",
+      "takeaway": "Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer…",
+      "evidenceItemIds": [
+        "c9a5bd3ea6df"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕agent与tooling展开，建议优先关注《Research acceleration: The view inside OpenAI》、《How Figma Uses AI Agents for Security》、《Redefining GIS: Declarative Symbology and Collaborative Workflows in JupyterGIS》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《An Alien Mind》、《GPT-6 Astra: A new generation of intelligence》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "daef59e489e3",
+        "c9a5bd3ea6df",
+        "366701d5c738",
+        "98bc04535d88"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "tooling",
+      "lead": "工具链方向本期共 4 条，建议优先阅读《Redefining GIS: Declarative Symbology and Collaborative Workflows in JupyterGIS》、《Legora reviewed 41 documents in minutes with GPT-6 Astra》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "5f3b6c546678",
+        "4d643ede66cf",
+        "ade4dc62c3f7",
+        "9a4252c66caa"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 4 条，建议优先阅读《Research acceleration: The view inside OpenAI》、《How Figma Uses AI Agents for Security》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "f8e241b16231",
+        "187292e890b6",
+        "a19c20346e27",
+        "4a7cbe8411b9"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《Abliteration.ai is making a business out of removing AI guardrails》、《AI Is Already Making Us Less Human》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "a10254c41322",
+        "f877d234da1d",
+        "b8f898aef0e8",
+        "f94b038a52fa"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "ac93224ba5e0cf731cb7bf4990c2f5037d6a88740bceaa2dbc1d4b076a797716",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-09-07T01:34:13.778Z",
+    "finishedAt": "2026-09-07T01:34:47.765Z",
+    "durationMs": 33988,
+    "inputCount": 30,
+    "processedCount": 30,
+    "fallbackCount": 30,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 30,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 57,
+      "splitRetryCount": 27
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-08-31",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-08-24",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-09-07T01:34:47.921Z",
+    "finishedAt": "2026-09-07T01:35:08.125Z",
+    "durationMs": 20204,
+    "inputCount": 30,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "f8e241b16231",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "Research acceleration: The view inside OpenAI",
+      "link": "https://openai.com/index/research-acceleration-view-inside-openai",
+      "contentSnippet": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
+      "publishedAt": "2026-09-06T08:00:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 120,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "187292e890b6",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "How Figma Uses AI Agents for Security",
+      "link": "https://www.infoq.com/news/2026/09/figma-security-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "The engineering team at software company Figma recently documented how they built AI agents to help their security team investigate alerts, search past incidents, check company systems, and even prepare code fixes. The agents learn from previous investigations, reducing repetitive work and helping engineers resolve complex alerts about 70% faster. By Renato Losio",
+      "publishedAt": "2026-09-06T06:59:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 94.74,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 118,
+        "ruleScoreNormalized": 94.73684210526315,
+        "finalScore": 94.74,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "5f3b6c546678",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Redefining GIS: Declarative Symbology and Collaborative Workflows in JupyterGIS",
+      "link": "https://www.infoq.com/news/2026/09/jupyter-gis-extension/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "JupyterGIS is a GIS-focused extension for Jupyter notebooks. The recent 0.16 release enhances collaborative features, real-time editing, and support for large-scale data processing, including remote sensing. It introduces better visualisation tools and extends compatibility to R users. Community feedback highlights practical concerns and a desire for improved portability. By Olimpiu Pop",
+      "publishedAt": "2026-09-05T05:05:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 86.84,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 115,
+        "ruleScoreNormalized": 86.8421052631579,
+        "finalScore": 86.84,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "a19c20346e27",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Beyond Zero: Google Publishes Successor to BeyondCorp",
+      "link": "https://www.infoq.com/news/2026/09/google-beyond-zero/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "In a recent research paper, Google introduced Beyond Zero, a “security model for the AI era” that extends Zero Trust to autonomous AI agents. The new approach moves access decisions from the application level to individual resources and actions, combining static authorization controls with dynamic AI-driven decisions to enable machine-speed enforcement for humans and agents. By Renato Losio",
+      "publishedAt": "2026-09-05T10:40:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 81.58,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 113,
+        "ruleScoreNormalized": 81.57894736842105,
+        "finalScore": 81.58,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "4d643ede66cf",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+      "link": "https://openai.com/index/legora-financial-statement-review-with-astra",
+      "contentSnippet": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
+      "publishedAt": "2026-09-03T12:00:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 73.68,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 110,
+        "ruleScoreNormalized": 73.68421052631578,
+        "finalScore": 73.68,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "ade4dc62c3f7",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Google Mantis: An Agentic Vulnerability Scanning Harness for Reducing False Positives",
+      "link": "https://www.infoq.com/news/2026/09/google-mantis-vulnerability-scan/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Google has open-sourced Mantis, an AI-agent framework designed to automate the software vulnerability lifecycle, from identifying and validating vulnerabilities to reproducing and fixing them. Google says it developed Mantis to address the high rate of false positives and hallucinated vulnerabilities produced by conventional AI-powered code scanning. By Sergio De Simone",
+      "publishedAt": "2026-09-06T12:00:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 73.68,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 110,
+        "ruleScoreNormalized": 73.68421052631578,
+        "finalScore": 73.68,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "daef59e489e3",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "An Alien Mind",
+      "link": "https://openai.com/index/an-alien-mind",
+      "contentSnippet": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
+      "publishedAt": "2026-09-06T09:00:00.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 60.53,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 105,
+        "ruleScoreNormalized": 60.526315789473685,
+        "finalScore": 60.53,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "4a7cbe8411b9",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "ROCm 10.0: A Decade of Open Compute, Built for the Age of Agentic AI",
+      "link": "https://rocm.blogs.amd.com/ecosystems-and-partners/rocm-x-blog/README.html",
+      "contentSnippet": "Article URL: https://rocm.blogs.amd.com/ecosystems-and-partners/rocm-x-blog/README.html Comments URL: https://news.ycombinator.com/item?id=49592508 Points: 2 # Comments: 0",
+      "publishedAt": "2026-09-07T00:46:01.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 60.53,
+      "importance": "low",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 105,
+        "ruleScoreNormalized": 60.526315789473685,
+        "finalScore": 60.53,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[MarkTechPost] 抓取失败: HTTP 403",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[ZDNet AI] 抓取失败: HTTP 404",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：30/30",
+    "LLM 分类打分回退明细（前 3/30）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06ed47994cae223850fe2fd064a | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06ed47992268882ea79133b4bc8 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06ed479a172bf794d3d8739e342",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=30：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=57, split_retry=27",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Research acceleration: The view inside OpenAI\n- How Figma Uses AI Agents for Security\n- Redefining GIS: Declarative Symbology and Collaborative Workflows in JupyterGIS\n- Beyond Zero: Google Publishes Successor to BeyondCorp\n- Legora reviewed 41 documents in minutes with GPT-6 Astra\n\n### 分类覆盖（大纲）\n- agent: 5 条\n- tooling: 7 条\n- other: 11 条\n- open-source: 2 条\n- industry-news: 5 条",
+    "rankedItems": [
+      {
+        "id": "f8e241b16231",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Research acceleration: The view inside OpenAI",
+        "link": "https://openai.com/index/research-acceleration-view-inside-openai",
+        "contentSnippet": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
+        "publishedAt": "2026-09-06T08:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 120,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "187292e890b6",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "How Figma Uses AI Agents for Security",
+        "link": "https://www.infoq.com/news/2026/09/figma-security-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "The engineering team at software company Figma recently documented how they built AI agents to help their security team investigate alerts, search past incidents, check company systems, and even prepare code fixes. The agents learn from previous investigations, reducing repetitive work and helping engineers resolve complex alerts about 70% faster. By Renato Losio",
+        "publishedAt": "2026-09-06T06:59:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 94.74,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 94.73684210526315,
+          "finalScore": 94.74,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5f3b6c546678",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Redefining GIS: Declarative Symbology and Collaborative Workflows in JupyterGIS",
+        "link": "https://www.infoq.com/news/2026/09/jupyter-gis-extension/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "JupyterGIS is a GIS-focused extension for Jupyter notebooks. The recent 0.16 release enhances collaborative features, real-time editing, and support for large-scale data processing, including remote sensing. It introduces better visualisation tools and extends compatibility to R users. Community feedback highlights practical concerns and a desire for improved portability. By Olimpiu Pop",
+        "publishedAt": "2026-09-05T05:05:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 86.84,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 86.8421052631579,
+          "finalScore": 86.84,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a19c20346e27",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Beyond Zero: Google Publishes Successor to BeyondCorp",
+        "link": "https://www.infoq.com/news/2026/09/google-beyond-zero/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "In a recent research paper, Google introduced Beyond Zero, a “security model for the AI era” that extends Zero Trust to autonomous AI agents. The new approach moves access decisions from the application level to individual resources and actions, combining static authorization controls with dynamic AI-driven decisions to enable machine-speed enforcement for humans and agents. By Renato Losio",
+        "publishedAt": "2026-09-05T10:40:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 81.58,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 81.57894736842105,
+          "finalScore": 81.58,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4d643ede66cf",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+        "link": "https://openai.com/index/legora-financial-statement-review-with-astra",
+        "contentSnippet": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
+        "publishedAt": "2026-09-03T12:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.68,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 73.68421052631578,
+          "finalScore": 73.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ade4dc62c3f7",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Mantis: An Agentic Vulnerability Scanning Harness for Reducing False Positives",
+        "link": "https://www.infoq.com/news/2026/09/google-mantis-vulnerability-scan/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has open-sourced Mantis, an AI-agent framework designed to automate the software vulnerability lifecycle, from identifying and validating vulnerabilities to reproducing and fixing them. Google says it developed Mantis to address the high rate of false positives and hallucinated vulnerabilities produced by conventional AI-powered code scanning. By Sergio De Simone",
+        "publishedAt": "2026-09-06T12:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.68,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 73.68421052631578,
+          "finalScore": 73.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "daef59e489e3",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "An Alien Mind",
+        "link": "https://openai.com/index/an-alien-mind",
+        "contentSnippet": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
+        "publishedAt": "2026-09-06T09:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.53,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 60.526315789473685,
+          "finalScore": 60.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4a7cbe8411b9",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "ROCm 10.0: A Decade of Open Compute, Built for the Age of Agentic AI",
+        "link": "https://rocm.blogs.amd.com/ecosystems-and-partners/rocm-x-blog/README.html",
+        "contentSnippet": "Article URL: https://rocm.blogs.amd.com/ecosystems-and-partners/rocm-x-blog/README.html Comments URL: https://news.ycombinator.com/item?id=49592508 Points: 2 # Comments: 0",
+        "publishedAt": "2026-09-07T00:46:01.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.53,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 60.526315789473685,
+          "finalScore": 60.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "962c3cd40acc",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Prediction of maternal and infant outcomes with a Mother-Child AI agent",
+        "link": "https://doi.org/10.1038/s41591-026-04694-y",
+        "contentSnippet": "Article URL: https://doi.org/10.1038/s41591-026-04694-y Comments URL: https://news.ycombinator.com/item?id=49592275 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-07T00:07:08.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.53,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 60.526315789473685,
+          "finalScore": 60.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c9a5bd3ea6df",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "GPT-6 Astra: A new generation of intelligence",
+        "link": "https://openai.com/index/gpt-6-astra",
+        "contentSnippet": "Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.",
+        "publishedAt": "2026-09-03T11:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.26,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 103,
+          "ruleScoreNormalized": 55.26315789473685,
+          "finalScore": 55.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "97599d3f4475",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Copilot Code Review Reaches Azure Repos, Billed Per Review with Reporting Two Days Behind",
+        "link": "https://www.infoq.com/news/2026/09/copilot-code-review-azure-repos/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Microsoft opened GitHub Copilot code review for Azure Repos to all Azure DevOps customers, after acknowledging that many are not ready to migrate to GitHub. Reviews bill per use through the linked Azure subscription and appear in Cost Management 48 hours later. Budgets notify but do not stop reviews, and concurrency caps at five per organization. By Steef-Jan Wiggers",
+        "publishedAt": "2026-09-04T10:01:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 52.63,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 52.63157894736842,
+          "finalScore": 52.63,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "366701d5c738",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+        "link": "https://openai.com/index/daybreak-for-frontline-defenders",
+        "contentSnippet": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
+        "publishedAt": "2026-09-03T13:15:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 34.21052631578947,
+          "finalScore": 34.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9fdd79f61be8",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+        "link": "https://openai.com/index/playco-game-prototyping-with-astra",
+        "contentSnippet": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
+        "publishedAt": "2026-09-03T12:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 34.21052631578947,
+          "finalScore": 34.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a10254c41322",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Abliteration.ai is making a business out of removing AI guardrails",
+        "link": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/",
+        "contentSnippet": "Article URL: https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/ Comments URL: https://news.ycombinator.com/item?id=49592655 Points: 2 # Comments: 1",
+        "publishedAt": "2026-09-07T01:09:19.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f877d234da1d",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI Is Already Making Us Less Human",
+        "link": "https://www.theatlantic.com/ideas/2026/09/open-ai-consciousness-morality/688535/",
+        "contentSnippet": "Article URL: https://www.theatlantic.com/ideas/2026/09/open-ai-consciousness-morality/688535/ Comments URL: https://news.ycombinator.com/item?id=49592456 Points: 1 # Comments: 2",
+        "publishedAt": "2026-09-07T00:38:24.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b8f898aef0e8",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Pivot to AI safety, I beg you",
+        "link": "https://ceselder.substack.com/p/pivot-to-ai-safety-i-beg-you",
+        "contentSnippet": "Article URL: https://ceselder.substack.com/p/pivot-to-ai-safety-i-beg-you Comments URL: https://news.ycombinator.com/item?id=49592035 Points: 7 # Comments: 7",
+        "publishedAt": "2026-09-06T23:37:04.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f94b038a52fa",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Genius AI Detector",
+        "link": "https://geniusaidetector.com/",
+        "contentSnippet": "Article URL: https://geniusaidetector.com/ Comments URL: https://news.ycombinator.com/item?id=49592034 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-06T23:36:50.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9a4252c66caa",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Proactive cyber defense for governments and enterprises",
+        "link": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+        "contentSnippet": "The Fairwind Program is a limited access program for governments and trusted partners to use our cyber defense tools.",
+        "publishedAt": "2026-09-02T15:40:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f3015cea6bea",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in August 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from August 2026",
+        "publishedAt": "2026-09-01T20:45:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "019f57066ed8",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+        "link": "https://blog.google/products-and-platforms/products/workspace/google-pics/",
+        "contentSnippet": "Built on our latest Nano Banana model, Google Pics — our image creation and editing tool — is now available.",
+        "publishedAt": "2026-09-01T16:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "98bc04535d88",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "具身ICL来了创业玩家！上下文成Scaling新赛道",
+        "link": "https://www.qbitai.com/2026/09/484897.html",
+        "contentSnippet": "让机器人学会利用更长的多模态Context",
+        "publishedAt": "2026-09-06T11:44:21.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5e716e739450",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "B站首届AI创造公开赛收官，超八成参赛者为一人团队",
+        "link": "https://www.qbitai.com/2026/09/484890.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-06T04:40:15.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "24c317f06dbc",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Shopify Introduces Gisting: Compressing LLM System Prompts into Learned Tokens",
+        "link": "https://www.infoq.com/news/2026/09/spotify-gisting-llm-performance/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Shopify's engineering introduced gisting, a novel technique for compressing long LLM prompts into a smaller set of learned \"gist\" tokens, improving throughput and reducing inference cost. By Sergio De Simone",
+        "publishedAt": "2026-09-03T20:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 7.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 85,
+          "ruleScoreNormalized": 7.894736842105263,
+          "finalScore": 7.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b69262b69a49",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "3 new ways to plan and book travel in Search",
+        "link": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+        "contentSnippet": "Book hotels and track airfares, plus view miles and rewards with AI Mode in Google Search.",
+        "publishedAt": "2026-08-27T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0bff261be137",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "5 ways to upgrade your home decor with Google Search",
+        "link": "https://blog.google/products-and-platforms/products/search/home-decor-tips/",
+        "contentSnippet": "Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
+        "publishedAt": "2026-08-25T16:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fb6e77407bde",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "5 new ways to level up your learning with Search",
+        "link": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
+        "contentSnippet": "Here’s how you can use Google Search tools to study for classes and standardized tests.",
+        "publishedAt": "2026-08-19T19:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b6b0bc5554a6",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "GPT-6带火循环Transformer，阿里早已布局",
+        "link": "https://www.qbitai.com/2026/09/484726.html",
+        "contentSnippet": "手握两篇顶会论文",
+        "publishedAt": "2026-09-05T15:07:08.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e6cb607bda7a",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "押中SpaceX的硅谷老将，把票投给了一家中国世界模型公司",
+        "link": "https://www.qbitai.com/2026/09/484683.html",
+        "contentSnippet": "当AI开始“预演”一场暴雨",
+        "publishedAt": "2026-09-05T14:46:15.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f9a706943533",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "陶哲轩吐槽GPT-6孪生素数新突破：令人无语的一幕",
+        "link": "https://www.qbitai.com/2026/09/484649.html",
+        "contentSnippet": "AI直接吐出正确答案，但最关键的可能不是答案",
+        "publishedAt": "2026-09-05T04:24:25.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f96e781f563a",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "这个世界模型训练完就“退场”，机器人反而更能干了",
+        "link": "https://www.qbitai.com/2026/09/484611.html",
+        "contentSnippet": "如此“反骨”的方法，具体又是怎么实现的？",
+        "publishedAt": "2026-09-05T04:18:54.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "f8e241b16231",
+        "title": "Research acceleration: The view inside OpenAI",
+        "summary": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task co…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "f8e241b16231"
+        ]
+      },
+      {
+        "itemId": "187292e890b6",
+        "title": "How Figma Uses AI Agents for Security",
+        "summary": "The engineering team at software company Figma recently documented how they built AI agents to help their security team…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "187292e890b6"
+        ]
+      },
+      {
+        "itemId": "5f3b6c546678",
+        "title": "Redefining GIS: Declarative Symbology and Collaborative Workflows in JupyterGIS",
+        "summary": "JupyterGIS is a GIS-focused extension for Jupyter notebooks. The recent 0.16 release enhances collaborative features, r…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "5f3b6c546678"
+        ]
+      },
+      {
+        "itemId": "a19c20346e27",
+        "title": "Beyond Zero: Google Publishes Successor to BeyondCorp",
+        "summary": "In a recent research paper, Google introduced Beyond Zero, a “security model for the AI era” that extends Zero Trust to…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "a19c20346e27"
+        ]
+      },
+      {
+        "itemId": "4d643ede66cf",
+        "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+        "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nea…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "4d643ede66cf"
+        ]
+      },
+      {
+        "itemId": "ade4dc62c3f7",
+        "title": "Google Mantis: An Agentic Vulnerability Scanning Harness for Reducing False Positives",
+        "summary": "Google has open-sourced Mantis, an AI-agent framework designed to automate the software vulnerability lifecycle, from i…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "ade4dc62c3f7"
+        ]
+      },
+      {
+        "itemId": "daef59e489e3",
+        "title": "An Alien Mind",
+        "summary": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeg…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "daef59e489e3"
+        ]
+      },
+      {
+        "itemId": "4a7cbe8411b9",
+        "title": "ROCm 10.0: A Decade of Open Compute, Built for the Age of Agentic AI",
+        "summary": "Article URL: https://rocm.blogs.amd.com/ecosystems-and-partners/rocm-x-blog/README.html Comments URL: https://news.ycom…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "4a7cbe8411b9"
+        ]
+      },
+      {
+        "itemId": "962c3cd40acc",
+        "title": "Prediction of maternal and infant outcomes with a Mother-Child AI agent",
+        "summary": "Article URL: https://doi.org/10.1038/s41591-026-04694-y Comments URL: https://news.ycombinator.com/item?id=49592275 Poi…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "962c3cd40acc"
+        ]
+      },
+      {
+        "itemId": "c9a5bd3ea6df",
+        "title": "GPT-6 Astra: A new generation of intelligence",
+        "summary": "Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer…",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "c9a5bd3ea6df"
+        ]
+      },
+      {
+        "itemId": "97599d3f4475",
+        "title": "Copilot Code Review Reaches Azure Repos, Billed Per Review with Reporting Two Days Behind",
+        "summary": "Microsoft opened GitHub Copilot code review for Azure Repos to all Azure DevOps customers, after acknowledging that man…",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "97599d3f4475"
+        ]
+      },
+      {
+        "itemId": "366701d5c738",
+        "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+        "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, traini…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "366701d5c738"
+        ]
+      },
+      {
+        "itemId": "9fdd79f61be8",
+        "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+        "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9fdd79f61be8"
+        ]
+      },
+      {
+        "itemId": "a10254c41322",
+        "title": "Abliteration.ai is making a business out of removing AI guardrails",
+        "summary": "Article URL: https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/ Comm…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a10254c41322"
+        ]
+      },
+      {
+        "itemId": "f877d234da1d",
+        "title": "AI Is Already Making Us Less Human",
+        "summary": "Article URL: https://www.theatlantic.com/ideas/2026/09/open-ai-consciousness-morality/688535/ Comments URL: https://new…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f877d234da1d"
+        ]
+      },
+      {
+        "itemId": "b8f898aef0e8",
+        "title": "Pivot to AI safety, I beg you",
+        "summary": "Article URL: https://ceselder.substack.com/p/pivot-to-ai-safety-i-beg-you Comments URL: https://news.ycombinator.com/it…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b8f898aef0e8"
+        ]
+      },
+      {
+        "itemId": "f94b038a52fa",
+        "title": "Genius AI Detector",
+        "summary": "Article URL: https://geniusaidetector.com/ Comments URL: https://news.ycombinator.com/item?id=49592034 Points: 1 # Comm…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f94b038a52fa"
+        ]
+      },
+      {
+        "itemId": "9a4252c66caa",
+        "title": "Proactive cyber defense for governments and enterprises",
+        "summary": "The Fairwind Program is a limited access program for governments and trusted partners to use our cyber defense tools.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9a4252c66caa"
+        ]
+      },
+      {
+        "itemId": "f3015cea6bea",
+        "title": "The latest AI news we announced in August 2026",
+        "summary": "Here are Google’s latest AI updates from August 2026",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f3015cea6bea"
+        ]
+      },
+      {
+        "itemId": "019f57066ed8",
+        "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+        "summary": "Built on our latest Nano Banana model, Google Pics — our image creation and editing tool — is now available.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "019f57066ed8"
+        ]
+      },
+      {
+        "itemId": "98bc04535d88",
+        "title": "具身ICL来了创业玩家！上下文成Scaling新赛道",
+        "summary": "让机器人学会利用更长的多模态Context",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "98bc04535d88"
+        ]
+      },
+      {
+        "itemId": "5e716e739450",
+        "title": "B站首届AI创造公开赛收官，超八成参赛者为一人团队",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5e716e739450"
+        ]
+      },
+      {
+        "itemId": "24c317f06dbc",
+        "title": "Shopify Introduces Gisting: Compressing LLM System Prompts into Learned Tokens",
+        "summary": "Shopify's engineering introduced gisting, a novel technique for compressing long LLM prompts into a smaller set of lear…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "24c317f06dbc"
+        ]
+      },
+      {
+        "itemId": "b69262b69a49",
+        "title": "3 new ways to plan and book travel in Search",
+        "summary": "Book hotels and track airfares, plus view miles and rewards with AI Mode in Google Search.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b69262b69a49"
+        ]
+      },
+      {
+        "itemId": "0bff261be137",
+        "title": "5 ways to upgrade your home decor with Google Search",
+        "summary": "Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "0bff261be137"
+        ]
+      },
+      {
+        "itemId": "fb6e77407bde",
+        "title": "5 new ways to level up your learning with Search",
+        "summary": "Here’s how you can use Google Search tools to study for classes and standardized tests.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fb6e77407bde"
+        ]
+      },
+      {
+        "itemId": "b6b0bc5554a6",
+        "title": "GPT-6带火循环Transformer，阿里早已布局",
+        "summary": "手握两篇顶会论文",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b6b0bc5554a6"
+        ]
+      },
+      {
+        "itemId": "e6cb607bda7a",
+        "title": "押中SpaceX的硅谷老将，把票投给了一家中国世界模型公司",
+        "summary": "当AI开始“预演”一场暴雨",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e6cb607bda7a"
+        ]
+      },
+      {
+        "itemId": "f9a706943533",
+        "title": "陶哲轩吐槽GPT-6孪生素数新突破：令人无语的一幕",
+        "summary": "AI直接吐出正确答案，但最关键的可能不是答案",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f9a706943533"
+        ]
+      },
+      {
+        "itemId": "f96e781f563a",
+        "title": "这个世界模型训练完就“退场”，机器人反而更能干了",
+        "summary": "如此“反骨”的方法，具体又是怎么实现的？",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f96e781f563a"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "f8e241b16231",
+        "title": "Research acceleration: The view inside OpenAI",
+        "takeaway": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task co…",
+        "evidenceItemIds": [
+          "f8e241b16231"
+        ]
+      },
+      {
+        "itemId": "187292e890b6",
+        "title": "How Figma Uses AI Agents for Security",
+        "takeaway": "The engineering team at software company Figma recently documented how they built AI agents to help their security team…",
+        "evidenceItemIds": [
+          "187292e890b6"
+        ]
+      },
+      {
+        "itemId": "5f3b6c546678",
+        "title": "Redefining GIS: Declarative Symbology and Collaborative Workflows in JupyterGIS",
+        "takeaway": "JupyterGIS is a GIS-focused extension for Jupyter notebooks. The recent 0.16 release enhances collaborative features, r…",
+        "evidenceItemIds": [
+          "5f3b6c546678"
+        ]
+      },
+      {
+        "itemId": "a19c20346e27",
+        "title": "Beyond Zero: Google Publishes Successor to BeyondCorp",
+        "takeaway": "In a recent research paper, Google introduced Beyond Zero, a “security model for the AI era” that extends Zero Trust to…",
+        "evidenceItemIds": [
+          "a19c20346e27"
+        ]
+      },
+      {
+        "itemId": "4d643ede66cf",
+        "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+        "takeaway": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nea…",
+        "evidenceItemIds": [
+          "4d643ede66cf"
+        ]
+      },
+      {
+        "itemId": "ade4dc62c3f7",
+        "title": "Google Mantis: An Agentic Vulnerability Scanning Harness for Reducing False Positives",
+        "takeaway": "Google has open-sourced Mantis, an AI-agent framework designed to automate the software vulnerability lifecycle, from i…",
+        "evidenceItemIds": [
+          "ade4dc62c3f7"
+        ]
+      },
+      {
+        "itemId": "daef59e489e3",
+        "title": "An Alien Mind",
+        "takeaway": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeg…",
+        "evidenceItemIds": [
+          "daef59e489e3"
+        ]
+      },
+      {
+        "itemId": "4a7cbe8411b9",
+        "title": "ROCm 10.0: A Decade of Open Compute, Built for the Age of Agentic AI",
+        "takeaway": "Article URL: https://rocm.blogs.amd.com/ecosystems-and-partners/rocm-x-blog/README.html Comments URL: https://news.ycom…",
+        "evidenceItemIds": [
+          "4a7cbe8411b9"
+        ]
+      },
+      {
+        "itemId": "962c3cd40acc",
+        "title": "Prediction of maternal and infant outcomes with a Mother-Child AI agent",
+        "takeaway": "Article URL: https://doi.org/10.1038/s41591-026-04694-y Comments URL: https://news.ycombinator.com/item?id=49592275 Poi…",
+        "evidenceItemIds": [
+          "962c3cd40acc"
+        ]
+      },
+      {
+        "itemId": "c9a5bd3ea6df",
+        "title": "GPT-6 Astra: A new generation of intelligence",
+        "takeaway": "Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer…",
+        "evidenceItemIds": [
+          "c9a5bd3ea6df"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕agent与tooling展开，建议优先关注《Research acceleration: The view inside OpenAI》、《How Figma Uses AI Agents for Security》、《Redefining GIS: Declarative Symbology and Collaborative Workflows in JupyterGIS》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《An Alien Mind》、《GPT-6 Astra: A new generation of intelligence》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "daef59e489e3",
+          "c9a5bd3ea6df",
+          "366701d5c738",
+          "98bc04535d88"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "tooling",
+        "lead": "工具链方向本期共 4 条，建议优先阅读《Redefining GIS: Declarative Symbology and Collaborative Workflows in JupyterGIS》、《Legora reviewed 41 documents in minutes with GPT-6 Astra》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "5f3b6c546678",
+          "4d643ede66cf",
+          "ade4dc62c3f7",
+          "9a4252c66caa"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 4 条，建议优先阅读《Research acceleration: The view inside OpenAI》、《How Figma Uses AI Agents for Security》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "f8e241b16231",
+          "187292e890b6",
+          "a19c20346e27",
+          "4a7cbe8411b9"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《Abliteration.ai is making a business out of removing AI guardrails》、《AI Is Already Making Us Less Human》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "a10254c41322",
+          "f877d234da1d",
+          "b8f898aef0e8",
+          "f94b038a52fa"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "ac93224ba5e0cf731cb7bf4990c2f5037d6a88740bceaa2dbc1d4b076a797716",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-09-07T01:34:13.778Z",
+      "finishedAt": "2026-09-07T01:34:47.765Z",
+      "durationMs": 33988,
+      "inputCount": 30,
+      "processedCount": 30,
+      "fallbackCount": 30,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 30,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 57,
+        "splitRetryCount": 27
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-08-31",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-08-24",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-09-07T01:34:47.921Z",
+      "finishedAt": "2026-09-07T01:35:08.125Z",
+      "durationMs": 20204,
+      "inputCount": 30,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "f8e241b16231",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Research acceleration: The view inside OpenAI",
+        "link": "https://openai.com/index/research-acceleration-view-inside-openai",
+        "contentSnippet": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
+        "publishedAt": "2026-09-06T08:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 120,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "187292e890b6",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "How Figma Uses AI Agents for Security",
+        "link": "https://www.infoq.com/news/2026/09/figma-security-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "The engineering team at software company Figma recently documented how they built AI agents to help their security team investigate alerts, search past incidents, check company systems, and even prepare code fixes. The agents learn from previous investigations, reducing repetitive work and helping engineers resolve complex alerts about 70% faster. By Renato Losio",
+        "publishedAt": "2026-09-06T06:59:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 94.74,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 94.73684210526315,
+          "finalScore": 94.74,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5f3b6c546678",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Redefining GIS: Declarative Symbology and Collaborative Workflows in JupyterGIS",
+        "link": "https://www.infoq.com/news/2026/09/jupyter-gis-extension/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "JupyterGIS is a GIS-focused extension for Jupyter notebooks. The recent 0.16 release enhances collaborative features, real-time editing, and support for large-scale data processing, including remote sensing. It introduces better visualisation tools and extends compatibility to R users. Community feedback highlights practical concerns and a desire for improved portability. By Olimpiu Pop",
+        "publishedAt": "2026-09-05T05:05:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 86.84,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 86.8421052631579,
+          "finalScore": 86.84,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a19c20346e27",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Beyond Zero: Google Publishes Successor to BeyondCorp",
+        "link": "https://www.infoq.com/news/2026/09/google-beyond-zero/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "In a recent research paper, Google introduced Beyond Zero, a “security model for the AI era” that extends Zero Trust to autonomous AI agents. The new approach moves access decisions from the application level to individual resources and actions, combining static authorization controls with dynamic AI-driven decisions to enable machine-speed enforcement for humans and agents. By Renato Losio",
+        "publishedAt": "2026-09-05T10:40:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 81.58,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 81.57894736842105,
+          "finalScore": 81.58,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4d643ede66cf",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+        "link": "https://openai.com/index/legora-financial-statement-review-with-astra",
+        "contentSnippet": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
+        "publishedAt": "2026-09-03T12:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.68,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 73.68421052631578,
+          "finalScore": 73.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ade4dc62c3f7",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Mantis: An Agentic Vulnerability Scanning Harness for Reducing False Positives",
+        "link": "https://www.infoq.com/news/2026/09/google-mantis-vulnerability-scan/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has open-sourced Mantis, an AI-agent framework designed to automate the software vulnerability lifecycle, from identifying and validating vulnerabilities to reproducing and fixing them. Google says it developed Mantis to address the high rate of false positives and hallucinated vulnerabilities produced by conventional AI-powered code scanning. By Sergio De Simone",
+        "publishedAt": "2026-09-06T12:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.68,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 73.68421052631578,
+          "finalScore": 73.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "daef59e489e3",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "An Alien Mind",
+        "link": "https://openai.com/index/an-alien-mind",
+        "contentSnippet": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
+        "publishedAt": "2026-09-06T09:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.53,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 60.526315789473685,
+          "finalScore": 60.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4a7cbe8411b9",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "ROCm 10.0: A Decade of Open Compute, Built for the Age of Agentic AI",
+        "link": "https://rocm.blogs.amd.com/ecosystems-and-partners/rocm-x-blog/README.html",
+        "contentSnippet": "Article URL: https://rocm.blogs.amd.com/ecosystems-and-partners/rocm-x-blog/README.html Comments URL: https://news.ycombinator.com/item?id=49592508 Points: 2 # Comments: 0",
+        "publishedAt": "2026-09-07T00:46:01.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.53,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 60.526315789473685,
+          "finalScore": 60.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 30,
+      "normalizedCount": 30,
+      "dedupedCount": 30,
+      "highImportanceCount": 3,
+      "mediumImportanceCount": 3,
+      "lowImportanceCount": 24,
+      "categoryBreakdown": {
+        "open-source": 2,
+        "tooling": 7,
+        "agent": 5,
+        "research": 0,
+        "industry-news": 5,
+        "tutorial": 0,
+        "other": 11
+      }
+    },
+    "warnings": [
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[MarkTechPost] 抓取失败: HTTP 403",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[ZDNet AI] 抓取失败: HTTP 404",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：30/30",
+      "LLM 分类打分回退明细（前 3/30）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06ed47994cae223850fe2fd064a | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06ed47992268882ea79133b4bc8 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06ed479a172bf794d3d8739e342",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=30：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=57, split_retry=27",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": "2026-09-07T04:30:00.000Z"
+  }
+}
