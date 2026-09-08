@@ -1,0 +1,1224 @@
+{
+  "runId": "daily-1788830127079",
+  "generatedAt": "2026-09-08T01:15:27.036Z",
+  "reviewStartedAt": "2026-09-08T01:15:27.036Z",
+  "reportDate": "2026-09-08",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-09-08T01:15:27.036Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 12,
+    "normalizedCount": 12,
+    "dedupedCount": 12,
+    "highImportanceCount": 1,
+    "mediumImportanceCount": 1,
+    "lowImportanceCount": 10,
+    "categoryBreakdown": {
+      "open-source": 3,
+      "tooling": 0,
+      "agent": 1,
+      "research": 2,
+      "industry-news": 4,
+      "tutorial": 0,
+      "other": 2
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "f08e41332ac5",
+      "title": "Secure temporary file sharing for AI agents and humans",
+      "summary": "Article URL: https://github.com/aispace-sh/aispace-client Comments URL: https://news.ycombinator.com/item?id=49604280 P…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "f08e41332ac5"
+      ]
+    },
+    {
+      "itemId": "b2e273f9963c",
+      "title": "国内首份办公Agent用户行为报告发布：北京用户量全国居首，海外用户占比超12%",
+      "summary": "9月7日，国内首份《中国办公Agent用户行为不完全报告》在京发布。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "b2e273f9963c"
+      ]
+    },
+    {
+      "itemId": "c3c06c2c44b2",
+      "title": "Cloudflare hid my site from AI. I sell AI visibility",
+      "summary": "Article URL: https://foundash-ai.github.io/ Comments URL: https://news.ycombinator.com/item?id=49603903 Points: 1 # Com…",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "c3c06c2c44b2"
+      ]
+    },
+    {
+      "itemId": "f7c21656f22c",
+      "title": "DHH领衔，英伟达、微软、HuggingFace等150+全球技术大咖集结，GOSIM Shenzhen 2026全议程公布",
+      "summary": "10 月 16–17 日，面向全球开发者的开源技术大会 GOSIM 将首次来到深圳，举办 GOSIM Shenzhen 2026。",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "f7c21656f22c"
+      ]
+    },
+    {
+      "itemId": "0a9b9b8f8fa4",
+      "title": "ASCII smuggling crosses over from AI prompt injection to phishing evasion",
+      "summary": "Article URL: https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injec…",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "0a9b9b8f8fa4"
+      ]
+    },
+    {
+      "itemId": "23d3d618a32a",
+      "title": "原生全模态技术战略闭环，智象（HiDream.ai）发布具身世界模型HiDream-O1-Embodied",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "23d3d618a32a"
+      ]
+    },
+    {
+      "itemId": "36cdcf911f03",
+      "title": "Anthropic AI 'formalizes' proof of Fermat's last theorem in just 11 days",
+      "summary": "Article URL: https://www.nature.com/articles/d41586-026-02822-9 Comments URL: https://news.ycombinator.com/item?id=4960…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "36cdcf911f03"
+      ]
+    },
+    {
+      "itemId": "1aed23ab0dc0",
+      "title": "WeatherNext 3: Our most advanced global weather AI model",
+      "summary": "Article URL: https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/ Comme…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1aed23ab0dc0"
+      ]
+    },
+    {
+      "itemId": "28185b303789",
+      "title": "Meta's AI Crawler Crashing My DB, and What I Did About It",
+      "summary": "Article URL: https://usero.io/blog/meta-ai-crawler-crashing-my-db Comments URL: https://news.ycombinator.com/item?id=49…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "28185b303789"
+      ]
+    },
+    {
+      "itemId": "321d8548be9e",
+      "title": "3秒变身！会合体的机器人，卖到全球50国",
+      "summary": "谁说现在机器人都长得差不多的！",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "321d8548be9e"
+      ]
+    },
+    {
+      "itemId": "337ea886a5a5",
+      "title": "GPT-6不只Astra！Sol内测结果曝光，速度快6倍",
+      "summary": "OpenAI研究院人均带3个AI实习生",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "337ea886a5a5"
+      ]
+    },
+    {
+      "itemId": "845dc8940c02",
+      "title": "菲尔兹奖得主入局大模型！4B手机Qwen+云端GLM刷爆ARC-AGI 3",
+      "summary": "“在两个模型之间找到数学上的共同基础其实非常困难”",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "845dc8940c02"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "f08e41332ac5",
+      "title": "Secure temporary file sharing for AI agents and humans",
+      "takeaway": "Article URL: https://github.com/aispace-sh/aispace-client Comments URL: https://news.ycombinator.com/item?id=49604280 P…",
+      "evidenceItemIds": [
+        "f08e41332ac5"
+      ]
+    },
+    {
+      "itemId": "b2e273f9963c",
+      "title": "国内首份办公Agent用户行为报告发布：北京用户量全国居首，海外用户占比超12%",
+      "takeaway": "9月7日，国内首份《中国办公Agent用户行为不完全报告》在京发布。",
+      "evidenceItemIds": [
+        "b2e273f9963c"
+      ]
+    },
+    {
+      "itemId": "c3c06c2c44b2",
+      "title": "Cloudflare hid my site from AI. I sell AI visibility",
+      "takeaway": "Article URL: https://foundash-ai.github.io/ Comments URL: https://news.ycombinator.com/item?id=49603903 Points: 1 # Com…",
+      "evidenceItemIds": [
+        "c3c06c2c44b2"
+      ]
+    },
+    {
+      "itemId": "f7c21656f22c",
+      "title": "DHH领衔，英伟达、微软、HuggingFace等150+全球技术大咖集结，GOSIM Shenzhen 2026全议程公布",
+      "takeaway": "10 月 16–17 日，面向全球开发者的开源技术大会 GOSIM 将首次来到深圳，举办 GOSIM Shenzhen 2026。",
+      "evidenceItemIds": [
+        "f7c21656f22c"
+      ]
+    },
+    {
+      "itemId": "0a9b9b8f8fa4",
+      "title": "ASCII smuggling crosses over from AI prompt injection to phishing evasion",
+      "takeaway": "Article URL: https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injec…",
+      "evidenceItemIds": [
+        "0a9b9b8f8fa4"
+      ]
+    },
+    {
+      "itemId": "23d3d618a32a",
+      "title": "原生全模态技术战略闭环，智象（HiDream.ai）发布具身世界模型HiDream-O1-Embodied",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "23d3d618a32a"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《Secure temporary file sharing for AI agents and humans》、《国内首份办公Agent用户行为报告发布：北京用户量全国居首，海外用户占比超12%》、《Cloudflare hid my site from AI. I sell AI visibility》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《ASCII smuggling crosses over from AI prompt injection to phishing evasion》、《原生全模态技术战略闭环，智象（HiDream.ai）发布具身世界模型HiDream-O1-Embodied》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "0a9b9b8f8fa4",
+        "23d3d618a32a",
+        "36cdcf911f03",
+        "28185b303789"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 3 条，建议优先阅读《Secure temporary file sharing for AI agents and humans》、《Cloudflare hid my site from AI. I sell AI visibility》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "f08e41332ac5",
+        "c3c06c2c44b2",
+        "f7c21656f22c"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "research",
+      "lead": "研究方向本期共 2 条，建议优先阅读《WeatherNext 3: Our most advanced global weather AI model》、《GPT-6不只Astra！Sol内测结果曝光，速度快6倍》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "1aed23ab0dc0",
+        "337ea886a5a5"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "other",
+      "lead": "其他方向本期共 2 条，建议优先阅读《3秒变身！会合体的机器人，卖到全球50国》、《菲尔兹奖得主入局大模型！4B手机Qwen+云端GLM刷爆ARC-AGI 3》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "321d8548be9e",
+        "845dc8940c02"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "42bfbb10ee39db007bfa83d36c3659a23bb018f7aa49076e252c04dd1df4248f",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-09-08T01:28:09.350Z",
+    "finishedAt": "2026-09-08T01:30:02.768Z",
+    "durationMs": 113419,
+    "inputCount": 12,
+    "processedCount": 12,
+    "fallbackCount": 12,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 12,
+    "failureStats": {
+      "totalFailed": 12,
+      "timeout": 0,
+      "http": 12,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 22,
+      "splitRetryCount": 10
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-01",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-08-25",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 1
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-09-08T01:30:03.221Z",
+    "finishedAt": "2026-09-08T01:30:11.134Z",
+    "durationMs": 7913,
+    "inputCount": 12,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 12,
+      "timeout": 0,
+      "http": 12,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 12,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "f08e41332ac5",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Secure temporary file sharing for AI agents and humans",
+      "link": "https://github.com/aispace-sh/aispace-client",
+      "contentSnippet": "Article URL: https://github.com/aispace-sh/aispace-client Comments URL: https://news.ycombinator.com/item?id=49604280 Points: 12 # Comments: 2",
+      "publishedAt": "2026-09-07T23:59:58.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 117,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "b2e273f9963c",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "国内首份办公Agent用户行为报告发布：北京用户量全国居首，海外用户占比超12%",
+      "link": "https://www.qbitai.com/2026/09/485064.html",
+      "contentSnippet": "9月7日，国内首份《中国办公Agent用户行为不完全报告》在京发布。",
+      "publishedAt": "2026-09-07T06:53:26.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 83.33,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 112,
+        "ruleScoreNormalized": 83.33333333333334,
+        "finalScore": 83.33,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "c3c06c2c44b2",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Cloudflare hid my site from AI. I sell AI visibility",
+      "link": "https://foundash-ai.github.io/",
+      "contentSnippet": "Article URL: https://foundash-ai.github.io/ Comments URL: https://news.ycombinator.com/item?id=49603903 Points: 1 # Comments: 0",
+      "publishedAt": "2026-09-07T22:58:04.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 50,
+      "importance": "low",
+      "recommendationReason": "开源生态更新",
+      "scoreBreakdown": {
+        "ruleScore": 102,
+        "ruleScoreNormalized": 50,
+        "finalScore": 50,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "f7c21656f22c",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "DHH领衔，英伟达、微软、HuggingFace等150+全球技术大咖集结，GOSIM Shenzhen 2026全议程公布",
+      "link": "https://www.qbitai.com/2026/09/485154.html",
+      "contentSnippet": "10 月 16–17 日，面向全球开发者的开源技术大会 GOSIM 将首次来到深圳，举办 GOSIM Shenzhen 2026。",
+      "publishedAt": "2026-09-07T08:51:30.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 40,
+      "importance": "low",
+      "recommendationReason": "开源生态更新",
+      "scoreBreakdown": {
+        "ruleScore": 99,
+        "ruleScoreNormalized": 40,
+        "finalScore": 40,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "0a9b9b8f8fa4",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "ASCII smuggling crosses over from AI prompt injection to phishing evasion",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injection-to-phishing-evasion/",
+      "contentSnippet": "Article URL: https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injection-to-phishing-evasion/ Comments URL: https://news.ycombinator.com/item?id=49604092 Points: 1 # Comments: 0",
+      "publishedAt": "2026-09-07T23:27:53.000Z",
+      "category": "industry-news",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 36.67,
+      "importance": "low",
+      "recommendationReason": "安全与合规关注",
+      "scoreBreakdown": {
+        "ruleScore": 98,
+        "ruleScoreNormalized": 36.666666666666664,
+        "finalScore": 36.67,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Google AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[InfoQ AI/ML News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[MarkTechPost] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[ZDNet AI] 抓取失败: HTTP 404",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+    "LLM 分类打分部分回退：12/12",
+    "LLM 分类打分回退明细（前 3/12）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06ee97ace3ec57ac97bba2512fc | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06ee97adf2de8512e0e3e107a06 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06ee97adab63ed8007158b3987f",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=12：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=22, split_retry=10",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/12）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+    "LLM 失败分类：missing_content=0, timeout=0, http=12, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=12, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Secure temporary file sharing for AI agents and humans\n- 国内首份办公Agent用户行为报告发布：北京用户量全国居首，海外用户占比超12%\n- Cloudflare hid my site from AI. I sell AI visibility\n- DHH领衔，英伟达、微软、HuggingFace等150+全球技术大咖集结，GOSIM Shenzhen 2026全议程公布\n- ASCII smuggling crosses over from AI prompt injection to phishing evasion\n\n### 分类覆盖（大纲）\n- open-source: 3 条\n- agent: 1 条\n- industry-news: 4 条\n- research: 2 条\n- other: 2 条",
+    "rankedItems": [
+      {
+        "id": "f08e41332ac5",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Secure temporary file sharing for AI agents and humans",
+        "link": "https://github.com/aispace-sh/aispace-client",
+        "contentSnippet": "Article URL: https://github.com/aispace-sh/aispace-client Comments URL: https://news.ycombinator.com/item?id=49604280 Points: 12 # Comments: 2",
+        "publishedAt": "2026-09-07T23:59:58.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b2e273f9963c",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "国内首份办公Agent用户行为报告发布：北京用户量全国居首，海外用户占比超12%",
+        "link": "https://www.qbitai.com/2026/09/485064.html",
+        "contentSnippet": "9月7日，国内首份《中国办公Agent用户行为不完全报告》在京发布。",
+        "publishedAt": "2026-09-07T06:53:26.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 83.33,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 112,
+          "ruleScoreNormalized": 83.33333333333334,
+          "finalScore": 83.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c3c06c2c44b2",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Cloudflare hid my site from AI. I sell AI visibility",
+        "link": "https://foundash-ai.github.io/",
+        "contentSnippet": "Article URL: https://foundash-ai.github.io/ Comments URL: https://news.ycombinator.com/item?id=49603903 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-07T22:58:04.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 50,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 50,
+          "finalScore": 50,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f7c21656f22c",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "DHH领衔，英伟达、微软、HuggingFace等150+全球技术大咖集结，GOSIM Shenzhen 2026全议程公布",
+        "link": "https://www.qbitai.com/2026/09/485154.html",
+        "contentSnippet": "10 月 16–17 日，面向全球开发者的开源技术大会 GOSIM 将首次来到深圳，举办 GOSIM Shenzhen 2026。",
+        "publishedAt": "2026-09-07T08:51:30.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 40,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 99,
+          "ruleScoreNormalized": 40,
+          "finalScore": 40,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0a9b9b8f8fa4",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "ASCII smuggling crosses over from AI prompt injection to phishing evasion",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injection-to-phishing-evasion/",
+        "contentSnippet": "Article URL: https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injection-to-phishing-evasion/ Comments URL: https://news.ycombinator.com/item?id=49604092 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-07T23:27:53.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 36.67,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 36.666666666666664,
+          "finalScore": 36.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "23d3d618a32a",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "原生全模态技术战略闭环，智象（HiDream.ai）发布具身世界模型HiDream-O1-Embodied",
+        "link": "https://www.qbitai.com/2026/09/485056.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-07T06:03:34.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 33.33,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 33.33333333333333,
+          "finalScore": 33.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "36cdcf911f03",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Anthropic AI 'formalizes' proof of Fermat's last theorem in just 11 days",
+        "link": "https://www.nature.com/articles/d41586-026-02822-9",
+        "contentSnippet": "Article URL: https://www.nature.com/articles/d41586-026-02822-9 Comments URL: https://news.ycombinator.com/item?id=49604319 Points: 5 # Comments: 1",
+        "publishedAt": "2026-09-08T00:07:07.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 10,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 10,
+          "finalScore": 10,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1aed23ab0dc0",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "WeatherNext 3: Our most advanced global weather AI model",
+        "link": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
+        "contentSnippet": "Article URL: https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/ Comments URL: https://news.ycombinator.com/item?id=49604257 Points: 8 # Comments: 1",
+        "publishedAt": "2026-09-07T23:56:41.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 10,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 10,
+          "finalScore": 10,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "28185b303789",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Meta's AI Crawler Crashing My DB, and What I Did About It",
+        "link": "https://usero.io/blog/meta-ai-crawler-crashing-my-db",
+        "contentSnippet": "Article URL: https://usero.io/blog/meta-ai-crawler-crashing-my-db Comments URL: https://news.ycombinator.com/item?id=49604043 Points: 2 # Comments: 0",
+        "publishedAt": "2026-09-07T23:20:45.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 10,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 10,
+          "finalScore": 10,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "321d8548be9e",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "3秒变身！会合体的机器人，卖到全球50国",
+        "link": "https://www.qbitai.com/2026/09/485525.html",
+        "contentSnippet": "谁说现在机器人都长得差不多的！",
+        "publishedAt": "2026-09-07T09:34:06.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "337ea886a5a5",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "GPT-6不只Astra！Sol内测结果曝光，速度快6倍",
+        "link": "https://www.qbitai.com/2026/09/485431.html",
+        "contentSnippet": "OpenAI研究院人均带3个AI实习生",
+        "publishedAt": "2026-09-07T09:04:06.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "845dc8940c02",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "菲尔兹奖得主入局大模型！4B手机Qwen+云端GLM刷爆ARC-AGI 3",
+        "link": "https://www.qbitai.com/2026/09/485108.html",
+        "contentSnippet": "“在两个模型之间找到数学上的共同基础其实非常困难”",
+        "publishedAt": "2026-09-07T08:36:30.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "f08e41332ac5",
+        "title": "Secure temporary file sharing for AI agents and humans",
+        "summary": "Article URL: https://github.com/aispace-sh/aispace-client Comments URL: https://news.ycombinator.com/item?id=49604280 P…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "f08e41332ac5"
+        ]
+      },
+      {
+        "itemId": "b2e273f9963c",
+        "title": "国内首份办公Agent用户行为报告发布：北京用户量全国居首，海外用户占比超12%",
+        "summary": "9月7日，国内首份《中国办公Agent用户行为不完全报告》在京发布。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "b2e273f9963c"
+        ]
+      },
+      {
+        "itemId": "c3c06c2c44b2",
+        "title": "Cloudflare hid my site from AI. I sell AI visibility",
+        "summary": "Article URL: https://foundash-ai.github.io/ Comments URL: https://news.ycombinator.com/item?id=49603903 Points: 1 # Com…",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "c3c06c2c44b2"
+        ]
+      },
+      {
+        "itemId": "f7c21656f22c",
+        "title": "DHH领衔，英伟达、微软、HuggingFace等150+全球技术大咖集结，GOSIM Shenzhen 2026全议程公布",
+        "summary": "10 月 16–17 日，面向全球开发者的开源技术大会 GOSIM 将首次来到深圳，举办 GOSIM Shenzhen 2026。",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "f7c21656f22c"
+        ]
+      },
+      {
+        "itemId": "0a9b9b8f8fa4",
+        "title": "ASCII smuggling crosses over from AI prompt injection to phishing evasion",
+        "summary": "Article URL: https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injec…",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "0a9b9b8f8fa4"
+        ]
+      },
+      {
+        "itemId": "23d3d618a32a",
+        "title": "原生全模态技术战略闭环，智象（HiDream.ai）发布具身世界模型HiDream-O1-Embodied",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "23d3d618a32a"
+        ]
+      },
+      {
+        "itemId": "36cdcf911f03",
+        "title": "Anthropic AI 'formalizes' proof of Fermat's last theorem in just 11 days",
+        "summary": "Article URL: https://www.nature.com/articles/d41586-026-02822-9 Comments URL: https://news.ycombinator.com/item?id=4960…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "36cdcf911f03"
+        ]
+      },
+      {
+        "itemId": "1aed23ab0dc0",
+        "title": "WeatherNext 3: Our most advanced global weather AI model",
+        "summary": "Article URL: https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/ Comme…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1aed23ab0dc0"
+        ]
+      },
+      {
+        "itemId": "28185b303789",
+        "title": "Meta's AI Crawler Crashing My DB, and What I Did About It",
+        "summary": "Article URL: https://usero.io/blog/meta-ai-crawler-crashing-my-db Comments URL: https://news.ycombinator.com/item?id=49…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "28185b303789"
+        ]
+      },
+      {
+        "itemId": "321d8548be9e",
+        "title": "3秒变身！会合体的机器人，卖到全球50国",
+        "summary": "谁说现在机器人都长得差不多的！",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "321d8548be9e"
+        ]
+      },
+      {
+        "itemId": "337ea886a5a5",
+        "title": "GPT-6不只Astra！Sol内测结果曝光，速度快6倍",
+        "summary": "OpenAI研究院人均带3个AI实习生",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "337ea886a5a5"
+        ]
+      },
+      {
+        "itemId": "845dc8940c02",
+        "title": "菲尔兹奖得主入局大模型！4B手机Qwen+云端GLM刷爆ARC-AGI 3",
+        "summary": "“在两个模型之间找到数学上的共同基础其实非常困难”",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "845dc8940c02"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "f08e41332ac5",
+        "title": "Secure temporary file sharing for AI agents and humans",
+        "takeaway": "Article URL: https://github.com/aispace-sh/aispace-client Comments URL: https://news.ycombinator.com/item?id=49604280 P…",
+        "evidenceItemIds": [
+          "f08e41332ac5"
+        ]
+      },
+      {
+        "itemId": "b2e273f9963c",
+        "title": "国内首份办公Agent用户行为报告发布：北京用户量全国居首，海外用户占比超12%",
+        "takeaway": "9月7日，国内首份《中国办公Agent用户行为不完全报告》在京发布。",
+        "evidenceItemIds": [
+          "b2e273f9963c"
+        ]
+      },
+      {
+        "itemId": "c3c06c2c44b2",
+        "title": "Cloudflare hid my site from AI. I sell AI visibility",
+        "takeaway": "Article URL: https://foundash-ai.github.io/ Comments URL: https://news.ycombinator.com/item?id=49603903 Points: 1 # Com…",
+        "evidenceItemIds": [
+          "c3c06c2c44b2"
+        ]
+      },
+      {
+        "itemId": "f7c21656f22c",
+        "title": "DHH领衔，英伟达、微软、HuggingFace等150+全球技术大咖集结，GOSIM Shenzhen 2026全议程公布",
+        "takeaway": "10 月 16–17 日，面向全球开发者的开源技术大会 GOSIM 将首次来到深圳，举办 GOSIM Shenzhen 2026。",
+        "evidenceItemIds": [
+          "f7c21656f22c"
+        ]
+      },
+      {
+        "itemId": "0a9b9b8f8fa4",
+        "title": "ASCII smuggling crosses over from AI prompt injection to phishing evasion",
+        "takeaway": "Article URL: https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injec…",
+        "evidenceItemIds": [
+          "0a9b9b8f8fa4"
+        ]
+      },
+      {
+        "itemId": "23d3d618a32a",
+        "title": "原生全模态技术战略闭环，智象（HiDream.ai）发布具身世界模型HiDream-O1-Embodied",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "23d3d618a32a"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《Secure temporary file sharing for AI agents and humans》、《国内首份办公Agent用户行为报告发布：北京用户量全国居首，海外用户占比超12%》、《Cloudflare hid my site from AI. I sell AI visibility》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《ASCII smuggling crosses over from AI prompt injection to phishing evasion》、《原生全模态技术战略闭环，智象（HiDream.ai）发布具身世界模型HiDream-O1-Embodied》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "0a9b9b8f8fa4",
+          "23d3d618a32a",
+          "36cdcf911f03",
+          "28185b303789"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 3 条，建议优先阅读《Secure temporary file sharing for AI agents and humans》、《Cloudflare hid my site from AI. I sell AI visibility》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "f08e41332ac5",
+          "c3c06c2c44b2",
+          "f7c21656f22c"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "research",
+        "lead": "研究方向本期共 2 条，建议优先阅读《WeatherNext 3: Our most advanced global weather AI model》、《GPT-6不只Astra！Sol内测结果曝光，速度快6倍》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "1aed23ab0dc0",
+          "337ea886a5a5"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "other",
+        "lead": "其他方向本期共 2 条，建议优先阅读《3秒变身！会合体的机器人，卖到全球50国》、《菲尔兹奖得主入局大模型！4B手机Qwen+云端GLM刷爆ARC-AGI 3》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "321d8548be9e",
+          "845dc8940c02"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "42bfbb10ee39db007bfa83d36c3659a23bb018f7aa49076e252c04dd1df4248f",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-09-08T01:28:09.350Z",
+      "finishedAt": "2026-09-08T01:30:02.768Z",
+      "durationMs": 113419,
+      "inputCount": 12,
+      "processedCount": 12,
+      "fallbackCount": 12,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 12,
+      "failureStats": {
+        "totalFailed": 12,
+        "timeout": 0,
+        "http": 12,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 22,
+        "splitRetryCount": 10
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-01",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-08-25",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 1
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-09-08T01:30:03.221Z",
+      "finishedAt": "2026-09-08T01:30:11.134Z",
+      "durationMs": 7913,
+      "inputCount": 12,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 12,
+        "timeout": 0,
+        "http": 12,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 12,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "f08e41332ac5",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Secure temporary file sharing for AI agents and humans",
+        "link": "https://github.com/aispace-sh/aispace-client",
+        "contentSnippet": "Article URL: https://github.com/aispace-sh/aispace-client Comments URL: https://news.ycombinator.com/item?id=49604280 Points: 12 # Comments: 2",
+        "publishedAt": "2026-09-07T23:59:58.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b2e273f9963c",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "国内首份办公Agent用户行为报告发布：北京用户量全国居首，海外用户占比超12%",
+        "link": "https://www.qbitai.com/2026/09/485064.html",
+        "contentSnippet": "9月7日，国内首份《中国办公Agent用户行为不完全报告》在京发布。",
+        "publishedAt": "2026-09-07T06:53:26.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 83.33,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 112,
+          "ruleScoreNormalized": 83.33333333333334,
+          "finalScore": 83.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c3c06c2c44b2",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Cloudflare hid my site from AI. I sell AI visibility",
+        "link": "https://foundash-ai.github.io/",
+        "contentSnippet": "Article URL: https://foundash-ai.github.io/ Comments URL: https://news.ycombinator.com/item?id=49603903 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-07T22:58:04.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 50,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 50,
+          "finalScore": 50,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f7c21656f22c",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "DHH领衔，英伟达、微软、HuggingFace等150+全球技术大咖集结，GOSIM Shenzhen 2026全议程公布",
+        "link": "https://www.qbitai.com/2026/09/485154.html",
+        "contentSnippet": "10 月 16–17 日，面向全球开发者的开源技术大会 GOSIM 将首次来到深圳，举办 GOSIM Shenzhen 2026。",
+        "publishedAt": "2026-09-07T08:51:30.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 40,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 99,
+          "ruleScoreNormalized": 40,
+          "finalScore": 40,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0a9b9b8f8fa4",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "ASCII smuggling crosses over from AI prompt injection to phishing evasion",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injection-to-phishing-evasion/",
+        "contentSnippet": "Article URL: https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injection-to-phishing-evasion/ Comments URL: https://news.ycombinator.com/item?id=49604092 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-07T23:27:53.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 36.67,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 36.666666666666664,
+          "finalScore": 36.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 12,
+      "normalizedCount": 12,
+      "dedupedCount": 12,
+      "highImportanceCount": 1,
+      "mediumImportanceCount": 1,
+      "lowImportanceCount": 10,
+      "categoryBreakdown": {
+        "open-source": 3,
+        "tooling": 0,
+        "agent": 1,
+        "research": 2,
+        "industry-news": 4,
+        "tutorial": 0,
+        "other": 2
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Google AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[InfoQ AI/ML News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[MarkTechPost] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[ZDNet AI] 抓取失败: HTTP 404",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+      "LLM 分类打分部分回退：12/12",
+      "LLM 分类打分回退明细（前 3/12）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06ee97ace3ec57ac97bba2512fc | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06ee97adf2de8512e0e3e107a06 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06ee97adab63ed8007158b3987f",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=12：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=22, split_retry=10",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/12）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+      "LLM 失败分类：missing_content=0, timeout=0, http=12, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=12, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
