@@ -1,0 +1,1220 @@
+{
+  "runId": "daily-1789088925489",
+  "generatedAt": "2026-09-11T01:08:45.450Z",
+  "reviewStartedAt": "2026-09-11T01:08:45.450Z",
+  "reportDate": "2026-09-11",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-09-11T01:08:45.450Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 12,
+    "normalizedCount": 12,
+    "dedupedCount": 12,
+    "highImportanceCount": 2,
+    "mediumImportanceCount": 1,
+    "lowImportanceCount": 9,
+    "categoryBreakdown": {
+      "open-source": 1,
+      "tooling": 1,
+      "agent": 2,
+      "research": 2,
+      "industry-news": 5,
+      "tutorial": 0,
+      "other": 1
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "2cd9ac00e917",
+      "title": "Show HN: Botbin.io – Pastebin for AI agent artifacts with MCP",
+      "summary": "Article URL: https://botbin.io/?mcp=true Comments URL: https://news.ycombinator.com/item?id=49652200 Points: 1 # Commen…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "2cd9ac00e917"
+      ]
+    },
+    {
+      "itemId": "27ef11120df6",
+      "title": "New audit combo for AI agents",
+      "summary": "Article URL: https://lexifina.com/blog/new-audit-for-ai-agents Comments URL: https://news.ycombinator.com/item?id=49651…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "27ef11120df6"
+      ]
+    },
+    {
+      "itemId": "0d5aac24f619",
+      "title": "这个新开源的世界模型只有1.3B，单卡就能实时跑！",
+      "summary": "轻量版LingBot-World 2.0",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "0d5aac24f619"
+      ]
+    },
+    {
+      "itemId": "e76de96a24b7",
+      "title": "全球首个3D原生城市世界模型ABot-Earth 0.7发布，构建AI理解真实世界的入口",
+      "summary": "9月10日，阿里巴巴集团旗下高德正式发布全球首个3D原生城市世界模型ABot-Earth 0.7。",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "e76de96a24b7"
+      ]
+    },
+    {
+      "itemId": "aa9388087141",
+      "title": "全球首个可仿真的人–场景交互重建框架 HSImul3R：让人类视频真正成为机器人技能来源",
+      "summary": "大晓机器人联合南洋理工大学 S-Lab、上海人工智能实验室发布全新人–场景交互重建研究 HSImul3R",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "aa9388087141"
+      ]
+    },
+    {
+      "itemId": "ffbe0e1bdac2",
+      "title": "OpenAI Is Open to Slowing Cutting-Edge AI, CEO Sam Altman Tells Staff",
+      "summary": "Article URL: https://www.bloomberg.com/news/articles/2026-09-11/openai-is-open-to-slowing-cutting-edge-ai-ceo-sam-altma…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "ffbe0e1bdac2"
+      ]
+    },
+    {
+      "itemId": "9cff8526f6d1",
+      "title": "Show HN: TIL in AI",
+      "summary": "Article URL: https://buildyard.ai/til Comments URL: https://news.ycombinator.com/item?id=49652235 Points: 1 # Comments:…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9cff8526f6d1"
+      ]
+    },
+    {
+      "itemId": "2c03c7ca0795",
+      "title": "The Kirkversary: An AI Carnival",
+      "summary": "Article URL: https://thecarrierwave.substack.com/p/kirkversary-a-bizarre-ai-carnival Comments URL: https://news.ycombin…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2c03c7ca0795"
+      ]
+    },
+    {
+      "itemId": "44665c8a056b",
+      "title": "Ask HN: Where is your red line for an AI provider?",
+      "summary": "Just looking at the past month has got me thinking. I suspect everyone has a slightly different answer too - which is w…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "44665c8a056b"
+      ]
+    },
+    {
+      "itemId": "949178c02588",
+      "title": "ECCV上，顶尖学者们开始研究如何让AI做生意了",
+      "summary": "多模态AI大牛轮番登台，全球64支团队组团解题",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "949178c02588"
+      ]
+    },
+    {
+      "itemId": "e2f398712210",
+      "title": "AGI时代的第一个生图模型，ChatGPT Images 2.5上线",
+      "summary": "主打生成更快，细节更好，改图也终于越来越像“真·修图”了。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e2f398712210"
+      ]
+    },
+    {
+      "itemId": "ead3ef5d22c7",
+      "title": "营销科技巨头蓝色光标与全球达人营销AI平台AhaCreator达成深度合作，让品牌更高效连接全球500万创作者",
+      "summary": "从一次投放到一套增长系统，AI 让海外达人营销可规模化复制",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "ead3ef5d22c7"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "2cd9ac00e917",
+      "title": "Show HN: Botbin.io – Pastebin for AI agent artifacts with MCP",
+      "takeaway": "Article URL: https://botbin.io/?mcp=true Comments URL: https://news.ycombinator.com/item?id=49652200 Points: 1 # Commen…",
+      "evidenceItemIds": [
+        "2cd9ac00e917"
+      ]
+    },
+    {
+      "itemId": "27ef11120df6",
+      "title": "New audit combo for AI agents",
+      "takeaway": "Article URL: https://lexifina.com/blog/new-audit-for-ai-agents Comments URL: https://news.ycombinator.com/item?id=49651…",
+      "evidenceItemIds": [
+        "27ef11120df6"
+      ]
+    },
+    {
+      "itemId": "0d5aac24f619",
+      "title": "这个新开源的世界模型只有1.3B，单卡就能实时跑！",
+      "takeaway": "轻量版LingBot-World 2.0",
+      "evidenceItemIds": [
+        "0d5aac24f619"
+      ]
+    },
+    {
+      "itemId": "e76de96a24b7",
+      "title": "全球首个3D原生城市世界模型ABot-Earth 0.7发布，构建AI理解真实世界的入口",
+      "takeaway": "9月10日，阿里巴巴集团旗下高德正式发布全球首个3D原生城市世界模型ABot-Earth 0.7。",
+      "evidenceItemIds": [
+        "e76de96a24b7"
+      ]
+    },
+    {
+      "itemId": "aa9388087141",
+      "title": "全球首个可仿真的人–场景交互重建框架 HSImul3R：让人类视频真正成为机器人技能来源",
+      "takeaway": "大晓机器人联合南洋理工大学 S-Lab、上海人工智能实验室发布全新人–场景交互重建研究 HSImul3R",
+      "evidenceItemIds": [
+        "aa9388087141"
+      ]
+    },
+    {
+      "itemId": "ffbe0e1bdac2",
+      "title": "OpenAI Is Open to Slowing Cutting-Edge AI, CEO Sam Altman Tells Staff",
+      "takeaway": "Article URL: https://www.bloomberg.com/news/articles/2026-09-11/openai-is-open-to-slowing-cutting-edge-ai-ceo-sam-altma…",
+      "evidenceItemIds": [
+        "ffbe0e1bdac2"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕agent与open-source展开，建议优先关注《Show HN: Botbin.io – Pastebin for AI agent artifacts with MCP》、《New audit combo for AI agents》、《这个新开源的世界模型只有1.3B，单卡就能实时跑！》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《全球首个3D原生城市世界模型ABot-Earth 0.7发布，构建AI理解真实世界的入口》、《OpenAI Is Open to Slowing Cutting-Edge AI, CEO Sam Altman Tells Staff》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "e76de96a24b7",
+        "ffbe0e1bdac2",
+        "9cff8526f6d1",
+        "2c03c7ca0795"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 2 条，建议优先阅读《Show HN: Botbin.io – Pastebin for AI agent artifacts with MCP》、《New audit combo for AI agents》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "2cd9ac00e917",
+        "27ef11120df6"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "research",
+      "lead": "研究方向本期共 2 条，建议优先阅读《全球首个可仿真的人–场景交互重建框架 HSImul3R：让人类视频真正成为机器人技能来源》、《ECCV上，顶尖学者们开始研究如何让AI做生意了》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "aa9388087141",
+        "949178c02588"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 1 条，建议优先阅读《这个新开源的世界模型只有1.3B，单卡就能实时跑！》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "0d5aac24f619"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "f1327f8dddda3429cd4980406fe30ee49400311ea2971318bec87a3ae7e91e42",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-09-11T01:21:14.205Z",
+    "finishedAt": "2026-09-11T01:21:33.249Z",
+    "durationMs": 19044,
+    "inputCount": 12,
+    "processedCount": 12,
+    "fallbackCount": 12,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 12,
+    "failureStats": {
+      "totalFailed": 12,
+      "timeout": 0,
+      "http": 12,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 22,
+      "splitRetryCount": 10
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-04",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-08-28",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 1,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-09-11T01:21:33.525Z",
+    "finishedAt": "2026-09-11T01:21:41.115Z",
+    "durationMs": 7590,
+    "inputCount": 12,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 12,
+      "timeout": 0,
+      "http": 12,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 12,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "2cd9ac00e917",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Show HN: Botbin.io – Pastebin for AI agent artifacts with MCP",
+      "link": "https://botbin.io/?mcp=true",
+      "contentSnippet": "Article URL: https://botbin.io/?mcp=true Comments URL: https://news.ycombinator.com/item?id=49652200 Points: 1 # Comments: 0",
+      "publishedAt": "2026-09-11T00:56:02.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 105,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "27ef11120df6",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "New audit combo for AI agents",
+      "link": "https://lexifina.com/blog/new-audit-for-ai-agents",
+      "contentSnippet": "Article URL: https://lexifina.com/blog/new-audit-for-ai-agents Comments URL: https://news.ycombinator.com/item?id=49651931 Points: 2 # Comments: 1",
+      "publishedAt": "2026-09-11T00:21:40.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 105,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "0d5aac24f619",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "这个新开源的世界模型只有1.3B，单卡就能实时跑！",
+      "link": "https://www.qbitai.com/2026/09/486716.html",
+      "contentSnippet": "轻量版LingBot-World 2.0",
+      "publishedAt": "2026-09-10T07:44:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 66.67,
+      "importance": "medium",
+      "recommendationReason": "开源生态更新",
+      "scoreBreakdown": {
+        "ruleScore": 99,
+        "ruleScoreNormalized": 66.66666666666666,
+        "finalScore": 66.67,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "e76de96a24b7",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "全球首个3D原生城市世界模型ABot-Earth 0.7发布，构建AI理解真实世界的入口",
+      "link": "https://www.qbitai.com/2026/09/486900.html",
+      "contentSnippet": "9月10日，阿里巴巴集团旗下高德正式发布全球首个3D原生城市世界模型ABot-Earth 0.7。",
+      "publishedAt": "2026-09-10T08:17:05.000Z",
+      "category": "industry-news",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 55.56,
+      "importance": "low",
+      "recommendationReason": "模型或产品发布",
+      "scoreBreakdown": {
+        "ruleScore": 97,
+        "ruleScoreNormalized": 55.55555555555556,
+        "finalScore": 55.56,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "aa9388087141",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "全球首个可仿真的人–场景交互重建框架 HSImul3R：让人类视频真正成为机器人技能来源",
+      "link": "https://www.qbitai.com/2026/09/486747.html",
+      "contentSnippet": "大晓机器人联合南洋理工大学 S-Lab、上海人工智能实验室发布全新人–场景交互重建研究 HSImul3R",
+      "publishedAt": "2026-09-10T07:57:55.000Z",
+      "category": "research",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 55.56,
+      "importance": "low",
+      "recommendationReason": "模型或产品发布",
+      "scoreBreakdown": {
+        "ruleScore": 97,
+        "ruleScoreNormalized": 55.55555555555556,
+        "finalScore": 55.56,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Google AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[InfoQ AI/ML News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[MarkTechPost] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[ZDNet AI] 抓取失败: HTTP 404",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+    "LLM 分类打分部分回退：12/12",
+    "LLM 分类打分回退明细（前 3/12）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06f28a8df4ae0c040b6a8bd4752 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06f28a8ed081b3308de33c89bc2 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06f28a8f35a39838fbb4ef775bf",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=12：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=22, split_retry=10",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/12）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+    "LLM 失败分类：missing_content=0, timeout=0, http=12, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=12, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Show HN: Botbin.io – Pastebin for AI agent artifacts with MCP\n- New audit combo for AI agents\n- 这个新开源的世界模型只有1.3B，单卡就能实时跑！\n- 全球首个3D原生城市世界模型ABot-Earth 0.7发布，构建AI理解真实世界的入口\n- 全球首个可仿真的人–场景交互重建框架 HSImul3R：让人类视频真正成为机器人技能来源\n\n### 分类覆盖（大纲）\n- agent: 2 条\n- open-source: 1 条\n- industry-news: 5 条\n- research: 2 条\n- other: 1 条\n- tooling: 1 条",
+    "rankedItems": [
+      {
+        "id": "2cd9ac00e917",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Botbin.io – Pastebin for AI agent artifacts with MCP",
+        "link": "https://botbin.io/?mcp=true",
+        "contentSnippet": "Article URL: https://botbin.io/?mcp=true Comments URL: https://news.ycombinator.com/item?id=49652200 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-11T00:56:02.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "27ef11120df6",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "New audit combo for AI agents",
+        "link": "https://lexifina.com/blog/new-audit-for-ai-agents",
+        "contentSnippet": "Article URL: https://lexifina.com/blog/new-audit-for-ai-agents Comments URL: https://news.ycombinator.com/item?id=49651931 Points: 2 # Comments: 1",
+        "publishedAt": "2026-09-11T00:21:40.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0d5aac24f619",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "这个新开源的世界模型只有1.3B，单卡就能实时跑！",
+        "link": "https://www.qbitai.com/2026/09/486716.html",
+        "contentSnippet": "轻量版LingBot-World 2.0",
+        "publishedAt": "2026-09-10T07:44:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 66.67,
+        "importance": "medium",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 99,
+          "ruleScoreNormalized": 66.66666666666666,
+          "finalScore": 66.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e76de96a24b7",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "全球首个3D原生城市世界模型ABot-Earth 0.7发布，构建AI理解真实世界的入口",
+        "link": "https://www.qbitai.com/2026/09/486900.html",
+        "contentSnippet": "9月10日，阿里巴巴集团旗下高德正式发布全球首个3D原生城市世界模型ABot-Earth 0.7。",
+        "publishedAt": "2026-09-10T08:17:05.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.56,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 55.55555555555556,
+          "finalScore": 55.56,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "aa9388087141",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "全球首个可仿真的人–场景交互重建框架 HSImul3R：让人类视频真正成为机器人技能来源",
+        "link": "https://www.qbitai.com/2026/09/486747.html",
+        "contentSnippet": "大晓机器人联合南洋理工大学 S-Lab、上海人工智能实验室发布全新人–场景交互重建研究 HSImul3R",
+        "publishedAt": "2026-09-10T07:57:55.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.56,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 55.55555555555556,
+          "finalScore": 55.56,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ffbe0e1bdac2",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "OpenAI Is Open to Slowing Cutting-Edge AI, CEO Sam Altman Tells Staff",
+        "link": "https://www.bloomberg.com/news/articles/2026-09-11/openai-is-open-to-slowing-cutting-edge-ai-ceo-sam-altman-tells-staff",
+        "contentSnippet": "Article URL: https://www.bloomberg.com/news/articles/2026-09-11/openai-is-open-to-slowing-cutting-edge-ai-ceo-sam-altman-tells-staff Comments URL: https://news.ycombinator.com/item?id=49652270 Points: 3 # Comments: 0",
+        "publishedAt": "2026-09-11T01:05:59.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 16.67,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 16.666666666666664,
+          "finalScore": 16.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9cff8526f6d1",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: TIL in AI",
+        "link": "https://buildyard.ai/til",
+        "contentSnippet": "Article URL: https://buildyard.ai/til Comments URL: https://news.ycombinator.com/item?id=49652235 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-11T01:00:20.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 16.67,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 16.666666666666664,
+          "finalScore": 16.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2c03c7ca0795",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "The Kirkversary: An AI Carnival",
+        "link": "https://thecarrierwave.substack.com/p/kirkversary-a-bizarre-ai-carnival",
+        "contentSnippet": "Article URL: https://thecarrierwave.substack.com/p/kirkversary-a-bizarre-ai-carnival Comments URL: https://news.ycombinator.com/item?id=49652132 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-11T00:46:44.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 16.67,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 16.666666666666664,
+          "finalScore": 16.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "44665c8a056b",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Ask HN: Where is your red line for an AI provider?",
+        "link": "https://news.ycombinator.com/item?id=49651845",
+        "contentSnippet": "Just looking at the past month has got me thinking. I suspect everyone has a slightly different answer too - which is why it is so difficult to coordinate on slowdown strategies. What action or event coming out of a frontier AI provider would make you draw the line and stop using them? Comments URL: https://news.ycombinator.com/item?id=49651845 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-11T00:11:11.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 16.67,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 16.666666666666664,
+          "finalScore": 16.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "949178c02588",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "ECCV上，顶尖学者们开始研究如何让AI做生意了",
+        "link": "https://www.qbitai.com/2026/09/486934.html",
+        "contentSnippet": "多模态AI大牛轮番登台，全球64支团队组团解题",
+        "publishedAt": "2026-09-10T10:17:46.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e2f398712210",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "AGI时代的第一个生图模型，ChatGPT Images 2.5上线",
+        "link": "https://www.qbitai.com/2026/09/486684.html",
+        "contentSnippet": "主打生成更快，细节更好，改图也终于越来越像“真·修图”了。",
+        "publishedAt": "2026-09-10T07:25:39.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ead3ef5d22c7",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "营销科技巨头蓝色光标与全球达人营销AI平台AhaCreator达成深度合作，让品牌更高效连接全球500万创作者",
+        "link": "https://www.qbitai.com/2026/09/486651.html",
+        "contentSnippet": "从一次投放到一套增长系统，AI 让海外达人营销可规模化复制",
+        "publishedAt": "2026-09-10T06:25:22.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "2cd9ac00e917",
+        "title": "Show HN: Botbin.io – Pastebin for AI agent artifacts with MCP",
+        "summary": "Article URL: https://botbin.io/?mcp=true Comments URL: https://news.ycombinator.com/item?id=49652200 Points: 1 # Commen…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "2cd9ac00e917"
+        ]
+      },
+      {
+        "itemId": "27ef11120df6",
+        "title": "New audit combo for AI agents",
+        "summary": "Article URL: https://lexifina.com/blog/new-audit-for-ai-agents Comments URL: https://news.ycombinator.com/item?id=49651…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "27ef11120df6"
+        ]
+      },
+      {
+        "itemId": "0d5aac24f619",
+        "title": "这个新开源的世界模型只有1.3B，单卡就能实时跑！",
+        "summary": "轻量版LingBot-World 2.0",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "0d5aac24f619"
+        ]
+      },
+      {
+        "itemId": "e76de96a24b7",
+        "title": "全球首个3D原生城市世界模型ABot-Earth 0.7发布，构建AI理解真实世界的入口",
+        "summary": "9月10日，阿里巴巴集团旗下高德正式发布全球首个3D原生城市世界模型ABot-Earth 0.7。",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "e76de96a24b7"
+        ]
+      },
+      {
+        "itemId": "aa9388087141",
+        "title": "全球首个可仿真的人–场景交互重建框架 HSImul3R：让人类视频真正成为机器人技能来源",
+        "summary": "大晓机器人联合南洋理工大学 S-Lab、上海人工智能实验室发布全新人–场景交互重建研究 HSImul3R",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "aa9388087141"
+        ]
+      },
+      {
+        "itemId": "ffbe0e1bdac2",
+        "title": "OpenAI Is Open to Slowing Cutting-Edge AI, CEO Sam Altman Tells Staff",
+        "summary": "Article URL: https://www.bloomberg.com/news/articles/2026-09-11/openai-is-open-to-slowing-cutting-edge-ai-ceo-sam-altma…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "ffbe0e1bdac2"
+        ]
+      },
+      {
+        "itemId": "9cff8526f6d1",
+        "title": "Show HN: TIL in AI",
+        "summary": "Article URL: https://buildyard.ai/til Comments URL: https://news.ycombinator.com/item?id=49652235 Points: 1 # Comments:…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9cff8526f6d1"
+        ]
+      },
+      {
+        "itemId": "2c03c7ca0795",
+        "title": "The Kirkversary: An AI Carnival",
+        "summary": "Article URL: https://thecarrierwave.substack.com/p/kirkversary-a-bizarre-ai-carnival Comments URL: https://news.ycombin…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2c03c7ca0795"
+        ]
+      },
+      {
+        "itemId": "44665c8a056b",
+        "title": "Ask HN: Where is your red line for an AI provider?",
+        "summary": "Just looking at the past month has got me thinking. I suspect everyone has a slightly different answer too - which is w…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "44665c8a056b"
+        ]
+      },
+      {
+        "itemId": "949178c02588",
+        "title": "ECCV上，顶尖学者们开始研究如何让AI做生意了",
+        "summary": "多模态AI大牛轮番登台，全球64支团队组团解题",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "949178c02588"
+        ]
+      },
+      {
+        "itemId": "e2f398712210",
+        "title": "AGI时代的第一个生图模型，ChatGPT Images 2.5上线",
+        "summary": "主打生成更快，细节更好，改图也终于越来越像“真·修图”了。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e2f398712210"
+        ]
+      },
+      {
+        "itemId": "ead3ef5d22c7",
+        "title": "营销科技巨头蓝色光标与全球达人营销AI平台AhaCreator达成深度合作，让品牌更高效连接全球500万创作者",
+        "summary": "从一次投放到一套增长系统，AI 让海外达人营销可规模化复制",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "ead3ef5d22c7"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "2cd9ac00e917",
+        "title": "Show HN: Botbin.io – Pastebin for AI agent artifacts with MCP",
+        "takeaway": "Article URL: https://botbin.io/?mcp=true Comments URL: https://news.ycombinator.com/item?id=49652200 Points: 1 # Commen…",
+        "evidenceItemIds": [
+          "2cd9ac00e917"
+        ]
+      },
+      {
+        "itemId": "27ef11120df6",
+        "title": "New audit combo for AI agents",
+        "takeaway": "Article URL: https://lexifina.com/blog/new-audit-for-ai-agents Comments URL: https://news.ycombinator.com/item?id=49651…",
+        "evidenceItemIds": [
+          "27ef11120df6"
+        ]
+      },
+      {
+        "itemId": "0d5aac24f619",
+        "title": "这个新开源的世界模型只有1.3B，单卡就能实时跑！",
+        "takeaway": "轻量版LingBot-World 2.0",
+        "evidenceItemIds": [
+          "0d5aac24f619"
+        ]
+      },
+      {
+        "itemId": "e76de96a24b7",
+        "title": "全球首个3D原生城市世界模型ABot-Earth 0.7发布，构建AI理解真实世界的入口",
+        "takeaway": "9月10日，阿里巴巴集团旗下高德正式发布全球首个3D原生城市世界模型ABot-Earth 0.7。",
+        "evidenceItemIds": [
+          "e76de96a24b7"
+        ]
+      },
+      {
+        "itemId": "aa9388087141",
+        "title": "全球首个可仿真的人–场景交互重建框架 HSImul3R：让人类视频真正成为机器人技能来源",
+        "takeaway": "大晓机器人联合南洋理工大学 S-Lab、上海人工智能实验室发布全新人–场景交互重建研究 HSImul3R",
+        "evidenceItemIds": [
+          "aa9388087141"
+        ]
+      },
+      {
+        "itemId": "ffbe0e1bdac2",
+        "title": "OpenAI Is Open to Slowing Cutting-Edge AI, CEO Sam Altman Tells Staff",
+        "takeaway": "Article URL: https://www.bloomberg.com/news/articles/2026-09-11/openai-is-open-to-slowing-cutting-edge-ai-ceo-sam-altma…",
+        "evidenceItemIds": [
+          "ffbe0e1bdac2"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕agent与open-source展开，建议优先关注《Show HN: Botbin.io – Pastebin for AI agent artifacts with MCP》、《New audit combo for AI agents》、《这个新开源的世界模型只有1.3B，单卡就能实时跑！》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《全球首个3D原生城市世界模型ABot-Earth 0.7发布，构建AI理解真实世界的入口》、《OpenAI Is Open to Slowing Cutting-Edge AI, CEO Sam Altman Tells Staff》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "e76de96a24b7",
+          "ffbe0e1bdac2",
+          "9cff8526f6d1",
+          "2c03c7ca0795"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 2 条，建议优先阅读《Show HN: Botbin.io – Pastebin for AI agent artifacts with MCP》、《New audit combo for AI agents》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "2cd9ac00e917",
+          "27ef11120df6"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "research",
+        "lead": "研究方向本期共 2 条，建议优先阅读《全球首个可仿真的人–场景交互重建框架 HSImul3R：让人类视频真正成为机器人技能来源》、《ECCV上，顶尖学者们开始研究如何让AI做生意了》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "aa9388087141",
+          "949178c02588"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 1 条，建议优先阅读《这个新开源的世界模型只有1.3B，单卡就能实时跑！》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "0d5aac24f619"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "f1327f8dddda3429cd4980406fe30ee49400311ea2971318bec87a3ae7e91e42",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-09-11T01:21:14.205Z",
+      "finishedAt": "2026-09-11T01:21:33.249Z",
+      "durationMs": 19044,
+      "inputCount": 12,
+      "processedCount": 12,
+      "fallbackCount": 12,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 12,
+      "failureStats": {
+        "totalFailed": 12,
+        "timeout": 0,
+        "http": 12,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 22,
+        "splitRetryCount": 10
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-04",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-08-28",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 1,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-09-11T01:21:33.525Z",
+      "finishedAt": "2026-09-11T01:21:41.115Z",
+      "durationMs": 7590,
+      "inputCount": 12,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 12,
+        "timeout": 0,
+        "http": 12,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 12,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "2cd9ac00e917",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Botbin.io – Pastebin for AI agent artifacts with MCP",
+        "link": "https://botbin.io/?mcp=true",
+        "contentSnippet": "Article URL: https://botbin.io/?mcp=true Comments URL: https://news.ycombinator.com/item?id=49652200 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-11T00:56:02.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "27ef11120df6",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "New audit combo for AI agents",
+        "link": "https://lexifina.com/blog/new-audit-for-ai-agents",
+        "contentSnippet": "Article URL: https://lexifina.com/blog/new-audit-for-ai-agents Comments URL: https://news.ycombinator.com/item?id=49651931 Points: 2 # Comments: 1",
+        "publishedAt": "2026-09-11T00:21:40.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0d5aac24f619",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "这个新开源的世界模型只有1.3B，单卡就能实时跑！",
+        "link": "https://www.qbitai.com/2026/09/486716.html",
+        "contentSnippet": "轻量版LingBot-World 2.0",
+        "publishedAt": "2026-09-10T07:44:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 66.67,
+        "importance": "medium",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 99,
+          "ruleScoreNormalized": 66.66666666666666,
+          "finalScore": 66.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e76de96a24b7",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "全球首个3D原生城市世界模型ABot-Earth 0.7发布，构建AI理解真实世界的入口",
+        "link": "https://www.qbitai.com/2026/09/486900.html",
+        "contentSnippet": "9月10日，阿里巴巴集团旗下高德正式发布全球首个3D原生城市世界模型ABot-Earth 0.7。",
+        "publishedAt": "2026-09-10T08:17:05.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.56,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 55.55555555555556,
+          "finalScore": 55.56,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "aa9388087141",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "全球首个可仿真的人–场景交互重建框架 HSImul3R：让人类视频真正成为机器人技能来源",
+        "link": "https://www.qbitai.com/2026/09/486747.html",
+        "contentSnippet": "大晓机器人联合南洋理工大学 S-Lab、上海人工智能实验室发布全新人–场景交互重建研究 HSImul3R",
+        "publishedAt": "2026-09-10T07:57:55.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.56,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 55.55555555555556,
+          "finalScore": 55.56,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 12,
+      "normalizedCount": 12,
+      "dedupedCount": 12,
+      "highImportanceCount": 2,
+      "mediumImportanceCount": 1,
+      "lowImportanceCount": 9,
+      "categoryBreakdown": {
+        "open-source": 1,
+        "tooling": 1,
+        "agent": 2,
+        "research": 2,
+        "industry-news": 5,
+        "tutorial": 0,
+        "other": 1
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Google AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[InfoQ AI/ML News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[MarkTechPost] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[ZDNet AI] 抓取失败: HTTP 404",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+      "LLM 分类打分部分回退：12/12",
+      "LLM 分类打分回退明细（前 3/12）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06f28a8df4ae0c040b6a8bd4752 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06f28a8ed081b3308de33c89bc2 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06f28a8f35a39838fbb4ef775bf",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=12：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=22, split_retry=10",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/12）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+      "LLM 失败分类：missing_content=0, timeout=0, http=12, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=12, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
