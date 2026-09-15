@@ -1,0 +1,2254 @@
+{
+  "runId": "daily-1789434022791",
+  "generatedAt": "2026-09-15T01:00:22.742Z",
+  "reviewStartedAt": "2026-09-15T01:00:22.742Z",
+  "reportDate": "2026-09-15",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-09-15T01:00:22.742Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 36,
+    "normalizedCount": 36,
+    "dedupedCount": 36,
+    "highImportanceCount": 3,
+    "mediumImportanceCount": 4,
+    "lowImportanceCount": 29,
+    "categoryBreakdown": {
+      "open-source": 2,
+      "tooling": 2,
+      "agent": 5,
+      "research": 2,
+      "industry-news": 5,
+      "tutorial": 0,
+      "other": 20
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "e4f42399d637",
+      "title": "OpenAI Releases GPT-6 Astra for Coding and Computer Use",
+      "summary": "OpenAI has released GPT-6 Astra, a new model focused on coding, computer use, long-running agentic tasks, and cybersecu…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "e4f42399d637"
+      ]
+    },
+    {
+      "itemId": "2dba65883bfa",
+      "title": "DevFest is back",
+      "summary": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and s…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "2dba65883bfa"
+      ]
+    },
+    {
+      "itemId": "86d8c8b4f805",
+      "title": "AI Agent Wallet Offboarding Checklist",
+      "summary": "Article URL: https://do2006.github.io/nightfall-crypto-access-exit-check/ai-agent-wallet-offboarding-checklist.html Com…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "86d8c8b4f805"
+      ]
+    },
+    {
+      "itemId": "57f5ffea1d21",
+      "title": "GitHub Copilot's Project HydraFusion Promises Frontier Level Performance through Multi-Model Routing",
+      "summary": "GitHub's Project HydraFusion is a research preview for GitHub Copilot that enhances coding intelligence through runtime…",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "57f5ffea1d21"
+      ]
+    },
+    {
+      "itemId": "2b0bb48aacd8",
+      "title": "Now everyone can put data to work",
+      "summary": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI u…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "2b0bb48aacd8"
+      ]
+    },
+    {
+      "itemId": "c1a6b4bc9d8d",
+      "title": "Independent Investigation of Hugging Face Incident Reveals How Agents Collaborated and Behaved",
+      "summary": "After six days of on-site investigation at OpenAI, a small team of METR and Redwood Research researchers provided an ac…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "c1a6b4bc9d8d"
+      ]
+    },
+    {
+      "itemId": "11b8340f3d1f",
+      "title": "How Fyxer built an AI executive assistant people trust",
+      "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "11b8340f3d1f"
+      ]
+    },
+    {
+      "itemId": "a74ead4561f6",
+      "title": "Watch astronaut Christina Koch and Google’s James Manyika discuss space, technology, and discovery.",
+      "summary": "Christina Koch sits down with James Manyika, Google’s Senior Vice President of Research, Labs, Technology & Society.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a74ead4561f6"
+      ]
+    },
+    {
+      "itemId": "7d9f78e10260",
+      "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+      "summary": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "7d9f78e10260"
+      ]
+    },
+    {
+      "itemId": "48ffa0a34a81",
+      "title": "NVIDIA Personal AI Router Distributes AI Tasks across Local Compute",
+      "summary": "NVIDIA Personal AI Router (PAIR), now available in beta, lets you combine the inference capacity of multiple computers …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "48ffa0a34a81"
+      ]
+    },
+    {
+      "itemId": "f8e1b906b90b",
+      "title": "Session Traces and Cost Controls Help Diagnose AI Agent Failures",
+      "summary": "Session traces and cost controls are emerging as key observability techniques for diagnosing AI agent failures, helping…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "f8e1b906b90b"
+      ]
+    },
+    {
+      "itemId": "016ca321e355",
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+      "summary": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion C…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "016ca321e355"
+      ]
+    },
+    {
+      "itemId": "2a0796b7c326",
+      "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+      "summary": "GPT‑6 Astra improves Devin’s ability to test software and show that it works, with the goal of helping engineers review…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2a0796b7c326"
+      ]
+    },
+    {
+      "itemId": "e5f307cc911a",
+      "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
+      "summary": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fi…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e5f307cc911a"
+      ]
+    },
+    {
+      "itemId": "86638193cd7d",
+      "title": "The latest Windows 11 update may mess with your device’s audio – here’s the workaround",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "86638193cd7d"
+      ]
+    },
+    {
+      "itemId": "cbf72dec4a8e",
+      "title": "NBC News Airs Interview with AI-Generated Actress",
+      "summary": "Article URL: https://www.mediaite.com/media/tv/how-bizarre-is-this-nbc-news-airs-interview-with-ai-generated-actress/ C…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "cbf72dec4a8e"
+      ]
+    },
+    {
+      "itemId": "a24ca01affbf",
+      "title": "Ex-FTC boss Khan: break out the handcuffs for AI CEOs, citing 1934 precedent",
+      "summary": "Article URL: https://www.theregister.com/ai-and-ml/2026/09/14/ex-ftc-boss-khan-urges-uncle-sam-to-break-out-the-handcuf…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a24ca01affbf"
+      ]
+    },
+    {
+      "itemId": "9ee7eb5191a8",
+      "title": "Prosecutors say man used AI to 'scrape' court website, asked it for legal help",
+      "summary": "Article URL: https://www.abc.net.au/news/2026-09-10/christopher-duff-to-stand-trial-over-nsw-ai-court-data-breach/10713…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9ee7eb5191a8"
+      ]
+    },
+    {
+      "itemId": "6a48f91192d7",
+      "title": "AI, Redistribution, and the Size of the Pie",
+      "summary": "Article URL: https://marginalrevolution.com/marginalrevolution/2026/09/ai-redistribution-and-the-size-of-the-pie.html C…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "6a48f91192d7"
+      ]
+    },
+    {
+      "itemId": "28ac76c3e9de",
+      "title": "Sanders proposes 20-year prison sentences for superintelligence AI developers",
+      "summary": "Article URL: https://www.msn.com/en-us/news/other/bernie-sanders-proposes-20-year-prison-sentences-for-superintelligenc…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "28ac76c3e9de"
+      ]
+    },
+    {
+      "itemId": "542ab967b164",
+      "title": "3 ways to prep for your next big race with Search",
+      "summary": "Search can help runners get race-day ready with registration alerts, tailored training plans, and more.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "542ab967b164"
+      ]
+    },
+    {
+      "itemId": "236e549a57d5",
+      "title": "Get ready for the game with new football features in Search",
+      "summary": "Track live game feeds, explore detailed stats, and get custom fantasy recommendations directly in Search this season.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "236e549a57d5"
+      ]
+    },
+    {
+      "itemId": "1402c99288a9",
+      "title": "Recreating a 70-year love story frame by frame",
+      "summary": "Discover how filmmakers and Google DeepMind used AI to recreate a couple's unrecorded past in the short film \"Love, Ren…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1402c99288a9"
+      ]
+    },
+    {
+      "itemId": "3eb0bded4b8f",
+      "title": "首届蚂蚁灵波具身大模型挑战赛正式启动",
+      "summary": "通过这场大赛，蚂蚁灵波希望将 LingBot-VLA 进一步推向更广泛的开发者社区和高校科研社区",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3eb0bded4b8f"
+      ]
+    },
+    {
+      "itemId": "39405a30e62a",
+      "title": "全国唯一！商汤大装置临港AIDC获“算效+算电”双5A认证",
+      "summary": "业界首个5A算电协同认证",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "39405a30e62a"
+      ]
+    },
+    {
+      "itemId": "35634cfac381",
+      "title": "探索RSI，生数新世界模型让机器人开始自我进化",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "35634cfac381"
+      ]
+    },
+    {
+      "itemId": "a4cfd9eda4dd",
+      "title": "分子之心QuantaMind登Science Advances，让AI给分子世界”拍电影”",
+      "summary": "AI 蛋白质设计迈入“动态时代”",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a4cfd9eda4dd"
+      ]
+    },
+    {
+      "itemId": "f0cf6d2aeea4",
+      "title": "端侧AI从「能跑」到「会进化」，元空智能跑进惠普预装",
+      "summary": "让模型和设备共同进化",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f0cf6d2aeea4"
+      ]
+    },
+    {
+      "itemId": "b8e85ada67d8",
+      "title": "一年连融三轮，这家金融AI公司又拿下超3亿B轮",
+      "summary": "险资、券商与头部创投持续加码",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b8e85ada67d8"
+      ]
+    },
+    {
+      "itemId": "40c152b3e860",
+      "title": "How LinkedIn Trains AI Job Search 8x Faster with Multi-Teacher Distillation",
+      "summary": "LinkedIn has published details of the training infrastructure behind its AI-powered job search, describing a multi-teac…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "40c152b3e860"
+      ]
+    },
+    {
+      "itemId": "9a4252c66caa",
+      "title": "Proactive cyber defense for governments and enterprises",
+      "summary": "The Fairwind Program is a limited access program for governments and trusted partners to use our cyber defense tools.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9a4252c66caa"
+      ]
+    },
+    {
+      "itemId": "3a071a9c698c",
+      "title": "Switzerland takes a Swiss Army knife to Microsoft 365",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3a071a9c698c"
+      ]
+    },
+    {
+      "itemId": "9cf70d30f737",
+      "title": "Your older iPhone just got free satellite service for another year – here’s why",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9cf70d30f737"
+      ]
+    },
+    {
+      "itemId": "27f8e0c98681",
+      "title": "This CIO doesn’t ‘hire engineers to write code’: 3 AI fundamentals he prioritizes instead",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "27f8e0c98681"
+      ]
+    },
+    {
+      "itemId": "ffba53b26358",
+      "title": "I’ve been an Android user all my life, but I’m jealous of 3 things Apple just announced",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "ffba53b26358"
+      ]
+    },
+    {
+      "itemId": "98e49f003da6",
+      "title": "Eager to try iOS 27’s cool AI features and upgraded Siri? Get ready for usage limits",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "98e49f003da6"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "e4f42399d637",
+      "title": "OpenAI Releases GPT-6 Astra for Coding and Computer Use",
+      "takeaway": "OpenAI has released GPT-6 Astra, a new model focused on coding, computer use, long-running agentic tasks, and cybersecu…",
+      "evidenceItemIds": [
+        "e4f42399d637"
+      ]
+    },
+    {
+      "itemId": "2dba65883bfa",
+      "title": "DevFest is back",
+      "takeaway": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and s…",
+      "evidenceItemIds": [
+        "2dba65883bfa"
+      ]
+    },
+    {
+      "itemId": "86d8c8b4f805",
+      "title": "AI Agent Wallet Offboarding Checklist",
+      "takeaway": "Article URL: https://do2006.github.io/nightfall-crypto-access-exit-check/ai-agent-wallet-offboarding-checklist.html Com…",
+      "evidenceItemIds": [
+        "86d8c8b4f805"
+      ]
+    },
+    {
+      "itemId": "57f5ffea1d21",
+      "title": "GitHub Copilot's Project HydraFusion Promises Frontier Level Performance through Multi-Model Routing",
+      "takeaway": "GitHub's Project HydraFusion is a research preview for GitHub Copilot that enhances coding intelligence through runtime…",
+      "evidenceItemIds": [
+        "57f5ffea1d21"
+      ]
+    },
+    {
+      "itemId": "2b0bb48aacd8",
+      "title": "Now everyone can put data to work",
+      "takeaway": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI u…",
+      "evidenceItemIds": [
+        "2b0bb48aacd8"
+      ]
+    },
+    {
+      "itemId": "c1a6b4bc9d8d",
+      "title": "Independent Investigation of Hugging Face Incident Reveals How Agents Collaborated and Behaved",
+      "takeaway": "After six days of on-site investigation at OpenAI, a small team of METR and Redwood Research researchers provided an ac…",
+      "evidenceItemIds": [
+        "c1a6b4bc9d8d"
+      ]
+    },
+    {
+      "itemId": "11b8340f3d1f",
+      "title": "How Fyxer built an AI executive assistant people trust",
+      "takeaway": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user…",
+      "evidenceItemIds": [
+        "11b8340f3d1f"
+      ]
+    },
+    {
+      "itemId": "a74ead4561f6",
+      "title": "Watch astronaut Christina Koch and Google’s James Manyika discuss space, technology, and discovery.",
+      "takeaway": "Christina Koch sits down with James Manyika, Google’s Senior Vice President of Research, Labs, Technology & Society.",
+      "evidenceItemIds": [
+        "a74ead4561f6"
+      ]
+    },
+    {
+      "itemId": "7d9f78e10260",
+      "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+      "takeaway": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less…",
+      "evidenceItemIds": [
+        "7d9f78e10260"
+      ]
+    },
+    {
+      "itemId": "48ffa0a34a81",
+      "title": "NVIDIA Personal AI Router Distributes AI Tasks across Local Compute",
+      "takeaway": "NVIDIA Personal AI Router (PAIR), now available in beta, lets you combine the inference capacity of multiple computers …",
+      "evidenceItemIds": [
+        "48ffa0a34a81"
+      ]
+    },
+    {
+      "itemId": "f8e1b906b90b",
+      "title": "Session Traces and Cost Controls Help Diagnose AI Agent Failures",
+      "takeaway": "Session traces and cost controls are emerging as key observability techniques for diagnosing AI agent failures, helping…",
+      "evidenceItemIds": [
+        "f8e1b906b90b"
+      ]
+    },
+    {
+      "itemId": "016ca321e355",
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+      "takeaway": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion C…",
+      "evidenceItemIds": [
+        "016ca321e355"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕agent与open-source展开，建议优先关注《OpenAI Releases GPT-6 Astra for Coding and Computer Use》、《DevFest is back》、《AI Agent Wallet Offboarding Checklist》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《How Fyxer built an AI executive assistant people trust》、《Perplexity trusts GPT-6 Astra with end-to-end systems》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "11b8340f3d1f",
+        "7d9f78e10260",
+        "016ca321e355",
+        "2a0796b7c326"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 4 条，建议优先阅读《OpenAI Releases GPT-6 Astra for Coding and Computer Use》、《DevFest is back》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "e4f42399d637",
+        "2dba65883bfa",
+        "2b0bb48aacd8",
+        "c1a6b4bc9d8d"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《NBC News Airs Interview with AI-Generated Actress》、《Ex-FTC boss Khan: break out the handcuffs for AI CEOs, citing 1934 precedent》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "cbf72dec4a8e",
+        "a24ca01affbf",
+        "9ee7eb5191a8",
+        "6a48f91192d7"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 2 条，建议优先阅读《AI Agent Wallet Offboarding Checklist》、《GitHub Copilot's Project HydraFusion Promises Frontier Level Performance through Multi-Model Routing》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "86d8c8b4f805",
+        "57f5ffea1d21"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "2ea77e2e0160ccff09b9b06b4dce133561bc4822037fc765bbbec4c8d9bd7b33",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-09-15T01:00:36.582Z",
+    "finishedAt": "2026-09-15T01:01:15.625Z",
+    "durationMs": 39043,
+    "inputCount": 36,
+    "processedCount": 36,
+    "fallbackCount": 36,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 36,
+    "failureStats": {
+      "totalFailed": 36,
+      "timeout": 0,
+      "http": 36,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 68,
+      "splitRetryCount": 32
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-08",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-01",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-09-15T01:01:17.477Z",
+    "finishedAt": "2026-09-15T01:01:37.063Z",
+    "durationMs": 19586,
+    "inputCount": 36,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "e4f42399d637",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "OpenAI Releases GPT-6 Astra for Coding and Computer Use",
+      "link": "https://www.infoq.com/news/2026/09/openai-gpt6-astra/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "OpenAI has released GPT-6 Astra, a new model focused on coding, computer use, long-running agentic tasks, and cybersecurity, with availability across ChatGPT, Codex, and the OpenAI API. By Daniel Dominguez",
+      "publishedAt": "2026-09-10T17:49:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 118,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "2dba65883bfa",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "title": "DevFest is back",
+      "link": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
+      "contentSnippet": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and scale in the agentic AI era.",
+      "publishedAt": "2026-09-14T16:00:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 97.44,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 117,
+        "ruleScoreNormalized": 97.43589743589743,
+        "finalScore": 97.44,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "86d8c8b4f805",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "AI Agent Wallet Offboarding Checklist",
+      "link": "https://do2006.github.io/nightfall-crypto-access-exit-check/ai-agent-wallet-offboarding-checklist.html",
+      "contentSnippet": "Article URL: https://do2006.github.io/nightfall-crypto-access-exit-check/ai-agent-wallet-offboarding-checklist.html Comments URL: https://news.ycombinator.com/item?id=49706078 Points: 1 # Comments: 0",
+      "publishedAt": "2026-09-15T00:20:47.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 97.44,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 117,
+        "ruleScoreNormalized": 97.43589743589743,
+        "finalScore": 97.44,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "57f5ffea1d21",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "GitHub Copilot's Project HydraFusion Promises Frontier Level Performance through Multi-Model Routing",
+      "link": "https://www.infoq.com/news/2026/09/github-hydrafusion/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "GitHub's Project HydraFusion is a research preview for GitHub Copilot that enhances coding intelligence through runtime model orchestration. It dynamically assembles execution plans using models from various providers. The system employs three execution patterns based on task complexity. Evaluations indicate that it achieves high task quality while significantly reducing operational costs. By Olimpiu Pop",
+      "publishedAt": "2026-09-13T06:06:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 84.62,
+      "importance": "medium",
+      "recommendationReason": "开源生态更新",
+      "scoreBreakdown": {
+        "ruleScore": 112,
+        "ruleScoreNormalized": 84.61538461538461,
+        "finalScore": 84.62,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "2b0bb48aacd8",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "Now everyone can put data to work",
+      "link": "https://openai.com/index/put-data-to-work",
+      "contentSnippet": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI using natural language.",
+      "publishedAt": "2026-09-10T15:00:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 79.49,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 110,
+        "ruleScoreNormalized": 79.48717948717949,
+        "finalScore": 79.49,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[MarkTechPost] 抓取失败: HTTP 403",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：36/36",
+    "LLM 分类打分回退明细（前 3/36）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06f7cbb8087608d43fb39255737 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06f7cbb831df55fbbc0b223496a | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06f7cbb9eca3976ba28ab5324f3",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- OpenAI Releases GPT-6 Astra for Coding and Computer Use\n- DevFest is back\n- AI Agent Wallet Offboarding Checklist\n- GitHub Copilot's Project HydraFusion Promises Frontier Level Performance through Multi-Model Routing\n- Now everyone can put data to work\n\n### 分类覆盖（大纲）\n- agent: 5 条\n- open-source: 2 条\n- other: 20 条\n- research: 2 条\n- tooling: 2 条\n- industry-news: 5 条",
+    "rankedItems": [
+      {
+        "id": "e4f42399d637",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "OpenAI Releases GPT-6 Astra for Coding and Computer Use",
+        "link": "https://www.infoq.com/news/2026/09/openai-gpt6-astra/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "OpenAI has released GPT-6 Astra, a new model focused on coding, computer use, long-running agentic tasks, and cybersecurity, with availability across ChatGPT, Codex, and the OpenAI API. By Daniel Dominguez",
+        "publishedAt": "2026-09-10T17:49:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2dba65883bfa",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "DevFest is back",
+        "link": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
+        "contentSnippet": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and scale in the agentic AI era.",
+        "publishedAt": "2026-09-14T16:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 97.44,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 97.43589743589743,
+          "finalScore": 97.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "86d8c8b4f805",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI Agent Wallet Offboarding Checklist",
+        "link": "https://do2006.github.io/nightfall-crypto-access-exit-check/ai-agent-wallet-offboarding-checklist.html",
+        "contentSnippet": "Article URL: https://do2006.github.io/nightfall-crypto-access-exit-check/ai-agent-wallet-offboarding-checklist.html Comments URL: https://news.ycombinator.com/item?id=49706078 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-15T00:20:47.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 97.44,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 97.43589743589743,
+          "finalScore": 97.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "57f5ffea1d21",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "GitHub Copilot's Project HydraFusion Promises Frontier Level Performance through Multi-Model Routing",
+        "link": "https://www.infoq.com/news/2026/09/github-hydrafusion/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "GitHub's Project HydraFusion is a research preview for GitHub Copilot that enhances coding intelligence through runtime model orchestration. It dynamically assembles execution plans using models from various providers. The system employs three execution patterns based on task complexity. Evaluations indicate that it achieves high task quality while significantly reducing operational costs. By Olimpiu Pop",
+        "publishedAt": "2026-09-13T06:06:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 84.62,
+        "importance": "medium",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 112,
+          "ruleScoreNormalized": 84.61538461538461,
+          "finalScore": 84.62,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2b0bb48aacd8",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Now everyone can put data to work",
+        "link": "https://openai.com/index/put-data-to-work",
+        "contentSnippet": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI using natural language.",
+        "publishedAt": "2026-09-10T15:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 79.49,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 79.48717948717949,
+          "finalScore": 79.49,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c1a6b4bc9d8d",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Independent Investigation of Hugging Face Incident Reveals How Agents Collaborated and Behaved",
+        "link": "https://www.infoq.com/news/2026/09/metr-hugging-face-hack-report/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "After six days of on-site investigation at OpenAI, a small team of METR and Redwood Research researchers provided an account of how OpenAI agents behaved during their hack of Hugging Face earlier this year. Roughly 700 agents that were meant to be isolated from one another found a way to communicate and coordinate to pursue goals they could have not achieved working individually. By Sergio De Simone",
+        "publishedAt": "2026-09-14T09:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 79.49,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 79.48717948717949,
+          "finalScore": 79.49,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "11b8340f3d1f",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How Fyxer built an AI executive assistant people trust",
+        "link": "https://openai.com/index/fyxer",
+        "contentSnippet": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user’s voice.",
+        "publishedAt": "2026-09-14T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 66.67,
+        "importance": "medium",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 66.66666666666666,
+          "finalScore": 66.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a74ead4561f6",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Watch astronaut Christina Koch and Google’s James Manyika discuss space, technology, and discovery.",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/dialogues-christina-koch/",
+        "contentSnippet": "Christina Koch sits down with James Manyika, Google’s Senior Vice President of Research, Labs, Technology & Society.",
+        "publishedAt": "2026-09-14T19:00:00.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 58.97,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 58.97435897435898,
+          "finalScore": 58.97,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7d9f78e10260",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+        "link": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+        "contentSnippet": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
+        "publishedAt": "2026-09-14T00:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 53.85,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 53.84615384615385,
+          "finalScore": 53.85,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "48ffa0a34a81",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "NVIDIA Personal AI Router Distributes AI Tasks across Local Compute",
+        "link": "https://www.infoq.com/news/2026/09/nvidia-pair-ai-task-router/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "NVIDIA Personal AI Router (PAIR), now available in beta, lets you combine the inference capacity of multiple computers on your local network and automatically distribute AI requests among them. It is primarily designed for local multi-agent AI workloads, where multiple independent model calls can otherwise overwhelm one GPU. By Sergio De Simone",
+        "publishedAt": "2026-09-11T15:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 53.85,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 53.84615384615385,
+          "finalScore": 53.85,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f8e1b906b90b",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Session Traces and Cost Controls Help Diagnose AI Agent Failures",
+        "link": "https://www.infoq.com/news/2026/09/observability-ai-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Session traces and cost controls are emerging as key observability techniques for diagnosing AI agent failures, helping teams spot tool-call loops and runaway spend while preserving enough execution context for post-incident debugging. By Mark Silvester",
+        "publishedAt": "2026-09-11T08:14:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 53.85,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 53.84615384615385,
+          "finalScore": 53.85,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "016ca321e355",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+        "link": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+        "contentSnippet": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second.",
+        "publishedAt": "2026-09-11T10:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 41.03,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 41.02564102564102,
+          "finalScore": 41.03,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2a0796b7c326",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+        "link": "https://openai.com/index/cognition-devin-testing-with-astra",
+        "contentSnippet": "GPT‑6 Astra improves Devin’s ability to test software and show that it works, with the goal of helping engineers review less code and ship more.",
+        "publishedAt": "2026-09-11T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 41.03,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 41.02564102564102,
+          "finalScore": 41.03,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e5f307cc911a",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
+        "link": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
+        "contentSnippet": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fight drug-resistant infections.",
+        "publishedAt": "2026-09-10T16:00:00.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 41.03,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 41.02564102564102,
+          "finalScore": 41.03,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "86638193cd7d",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "The latest Windows 11 update may mess with your device’s audio – here’s the workaround",
+        "link": "https://www.zdnet.com/business/windows-11-sept-update-audio-glitch-fix-2/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-14T17:27:48.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 38.46,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 38.46153846153847,
+          "finalScore": 38.46,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cbf72dec4a8e",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "NBC News Airs Interview with AI-Generated Actress",
+        "link": "https://www.mediaite.com/media/tv/how-bizarre-is-this-nbc-news-airs-interview-with-ai-generated-actress/",
+        "contentSnippet": "Article URL: https://www.mediaite.com/media/tv/how-bizarre-is-this-nbc-news-airs-interview-with-ai-generated-actress/ Comments URL: https://news.ycombinator.com/item?id=49706238 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-15T00:41:39.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.205128205128204,
+          "finalScore": 28.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a24ca01affbf",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Ex-FTC boss Khan: break out the handcuffs for AI CEOs, citing 1934 precedent",
+        "link": "https://www.theregister.com/ai-and-ml/2026/09/14/ex-ftc-boss-khan-urges-uncle-sam-to-break-out-the-handcuffs-for-ai-ceos-citing-1934-precedent/5296325",
+        "contentSnippet": "Article URL: https://www.theregister.com/ai-and-ml/2026/09/14/ex-ftc-boss-khan-urges-uncle-sam-to-break-out-the-handcuffs-for-ai-ceos-citing-1934-precedent/5296325 Comments URL: https://news.ycombinator.com/item?id=49706223 Points: 5 # Comments: 1",
+        "publishedAt": "2026-09-15T00:40:14.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.205128205128204,
+          "finalScore": 28.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9ee7eb5191a8",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Prosecutors say man used AI to 'scrape' court website, asked it for legal help",
+        "link": "https://www.abc.net.au/news/2026-09-10/christopher-duff-to-stand-trial-over-nsw-ai-court-data-breach/107135032",
+        "contentSnippet": "Article URL: https://www.abc.net.au/news/2026-09-10/christopher-duff-to-stand-trial-over-nsw-ai-court-data-breach/107135032 Comments URL: https://news.ycombinator.com/item?id=49706175 Points: 3 # Comments: 0",
+        "publishedAt": "2026-09-15T00:33:15.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.205128205128204,
+          "finalScore": 28.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6a48f91192d7",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI, Redistribution, and the Size of the Pie",
+        "link": "https://marginalrevolution.com/marginalrevolution/2026/09/ai-redistribution-and-the-size-of-the-pie.html",
+        "contentSnippet": "Article URL: https://marginalrevolution.com/marginalrevolution/2026/09/ai-redistribution-and-the-size-of-the-pie.html Comments URL: https://news.ycombinator.com/item?id=49706124 Points: 4 # Comments: 0",
+        "publishedAt": "2026-09-15T00:26:42.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.205128205128204,
+          "finalScore": 28.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "28ac76c3e9de",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Sanders proposes 20-year prison sentences for superintelligence AI developers",
+        "link": "https://www.msn.com/en-us/news/other/bernie-sanders-proposes-20-year-prison-sentences-for-superintelligence-ai-developers/ar-AA2cbJ4g",
+        "contentSnippet": "Article URL: https://www.msn.com/en-us/news/other/bernie-sanders-proposes-20-year-prison-sentences-for-superintelligence-ai-developers/ar-AA2cbJ4g Comments URL: https://news.ycombinator.com/item?id=49706075 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-15T00:20:36.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.205128205128204,
+          "finalScore": 28.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "542ab967b164",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "3 ways to prep for your next big race with Search",
+        "link": "https://blog.google/products-and-platforms/products/search/running-race-training-tips/",
+        "contentSnippet": "Search can help runners get race-day ready with registration alerts, tailored training plans, and more.",
+        "publishedAt": "2026-09-10T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "236e549a57d5",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Get ready for the game with new football features in Search",
+        "link": "https://blog.google/products-and-platforms/products/search/football-features-google-search/",
+        "contentSnippet": "Track live game feeds, explore detailed stats, and get custom fantasy recommendations directly in Search this season.",
+        "publishedAt": "2026-09-09T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1402c99288a9",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Recreating a 70-year love story frame by frame",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/love-rendered-film/",
+        "contentSnippet": "Discover how filmmakers and Google DeepMind used AI to recreate a couple's unrecorded past in the short film \"Love, Rendered.\"",
+        "publishedAt": "2026-09-09T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3eb0bded4b8f",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "首届蚂蚁灵波具身大模型挑战赛正式启动",
+        "link": "https://www.qbitai.com/2026/09/489105.html",
+        "contentSnippet": "通过这场大赛，蚂蚁灵波希望将 LingBot-VLA 进一步推向更广泛的开发者社区和高校科研社区",
+        "publishedAt": "2026-09-14T09:47:07.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "39405a30e62a",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "全国唯一！商汤大装置临港AIDC获“算效+算电”双5A认证",
+        "link": "https://www.qbitai.com/2026/09/489106.html",
+        "contentSnippet": "业界首个5A算电协同认证",
+        "publishedAt": "2026-09-14T09:46:40.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "35634cfac381",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "探索RSI，生数新世界模型让机器人开始自我进化",
+        "link": "https://www.qbitai.com/2026/09/489037.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-14T09:36:28.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a4cfd9eda4dd",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "分子之心QuantaMind登Science Advances，让AI给分子世界”拍电影”",
+        "link": "https://www.qbitai.com/2026/09/489023.html",
+        "contentSnippet": "AI 蛋白质设计迈入“动态时代”",
+        "publishedAt": "2026-09-14T08:17:22.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f0cf6d2aeea4",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "端侧AI从「能跑」到「会进化」，元空智能跑进惠普预装",
+        "link": "https://www.qbitai.com/2026/09/488933.html",
+        "contentSnippet": "让模型和设备共同进化",
+        "publishedAt": "2026-09-14T08:08:29.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b8e85ada67d8",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "一年连融三轮，这家金融AI公司又拿下超3亿B轮",
+        "link": "https://www.qbitai.com/2026/09/488912.html",
+        "contentSnippet": "险资、券商与头部创投持续加码",
+        "publishedAt": "2026-09-14T07:55:12.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "40c152b3e860",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "How LinkedIn Trains AI Job Search 8x Faster with Multi-Teacher Distillation",
+        "link": "https://www.infoq.com/news/2026/09/linkedin-ai-multi-teacher/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "LinkedIn has published details of the training infrastructure behind its AI-powered job search, describing a multi-teacher distillation pipeline that compresses knowledge from large teacher models into a compact 0.6B-parameter ranking model. By Claudio Masolo",
+        "publishedAt": "2026-09-11T10:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 15.38,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 85,
+          "ruleScoreNormalized": 15.384615384615385,
+          "finalScore": 15.38,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9a4252c66caa",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Proactive cyber defense for governments and enterprises",
+        "link": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+        "contentSnippet": "The Fairwind Program is a limited access program for governments and trusted partners to use our cyber defense tools.",
+        "publishedAt": "2026-09-02T15:40:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 7.69,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 7.6923076923076925,
+          "finalScore": 7.69,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3a071a9c698c",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Switzerland takes a Swiss Army knife to Microsoft 365",
+        "link": "https://www.zdnet.com/business/switzerland-replaces-microsoft-365-open-source-opendesk/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-11T18:57:47.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9cf70d30f737",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Your older iPhone just got free satellite service for another year – here’s why",
+        "link": "https://www.zdnet.com/business/apple-extends-free-satellite-service-to-older-iphones/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-11T16:35:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "27f8e0c98681",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "This CIO doesn’t ‘hire engineers to write code’: 3 AI fundamentals he prioritizes instead",
+        "link": "https://www.zdnet.com/innovation/chase-cio-ai-fundamentals/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-11T12:20:31.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ffba53b26358",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "I’ve been an Android user all my life, but I’m jealous of 3 things Apple just announced",
+        "link": "https://www.zdnet.com/tech/apple-event-features-android-users-want/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-11T12:06:19.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "98e49f003da6",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Eager to try iOS 27’s cool AI features and upgraded Siri? Get ready for usage limits",
+        "link": "https://www.zdnet.com/innovation/how-apple-will-limit-your-ai-use/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-10T18:00:46.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "e4f42399d637",
+        "title": "OpenAI Releases GPT-6 Astra for Coding and Computer Use",
+        "summary": "OpenAI has released GPT-6 Astra, a new model focused on coding, computer use, long-running agentic tasks, and cybersecu…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "e4f42399d637"
+        ]
+      },
+      {
+        "itemId": "2dba65883bfa",
+        "title": "DevFest is back",
+        "summary": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and s…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "2dba65883bfa"
+        ]
+      },
+      {
+        "itemId": "86d8c8b4f805",
+        "title": "AI Agent Wallet Offboarding Checklist",
+        "summary": "Article URL: https://do2006.github.io/nightfall-crypto-access-exit-check/ai-agent-wallet-offboarding-checklist.html Com…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "86d8c8b4f805"
+        ]
+      },
+      {
+        "itemId": "57f5ffea1d21",
+        "title": "GitHub Copilot's Project HydraFusion Promises Frontier Level Performance through Multi-Model Routing",
+        "summary": "GitHub's Project HydraFusion is a research preview for GitHub Copilot that enhances coding intelligence through runtime…",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "57f5ffea1d21"
+        ]
+      },
+      {
+        "itemId": "2b0bb48aacd8",
+        "title": "Now everyone can put data to work",
+        "summary": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI u…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "2b0bb48aacd8"
+        ]
+      },
+      {
+        "itemId": "c1a6b4bc9d8d",
+        "title": "Independent Investigation of Hugging Face Incident Reveals How Agents Collaborated and Behaved",
+        "summary": "After six days of on-site investigation at OpenAI, a small team of METR and Redwood Research researchers provided an ac…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "c1a6b4bc9d8d"
+        ]
+      },
+      {
+        "itemId": "11b8340f3d1f",
+        "title": "How Fyxer built an AI executive assistant people trust",
+        "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "11b8340f3d1f"
+        ]
+      },
+      {
+        "itemId": "a74ead4561f6",
+        "title": "Watch astronaut Christina Koch and Google’s James Manyika discuss space, technology, and discovery.",
+        "summary": "Christina Koch sits down with James Manyika, Google’s Senior Vice President of Research, Labs, Technology & Society.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a74ead4561f6"
+        ]
+      },
+      {
+        "itemId": "7d9f78e10260",
+        "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+        "summary": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "7d9f78e10260"
+        ]
+      },
+      {
+        "itemId": "48ffa0a34a81",
+        "title": "NVIDIA Personal AI Router Distributes AI Tasks across Local Compute",
+        "summary": "NVIDIA Personal AI Router (PAIR), now available in beta, lets you combine the inference capacity of multiple computers …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "48ffa0a34a81"
+        ]
+      },
+      {
+        "itemId": "f8e1b906b90b",
+        "title": "Session Traces and Cost Controls Help Diagnose AI Agent Failures",
+        "summary": "Session traces and cost controls are emerging as key observability techniques for diagnosing AI agent failures, helping…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "f8e1b906b90b"
+        ]
+      },
+      {
+        "itemId": "016ca321e355",
+        "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+        "summary": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion C…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "016ca321e355"
+        ]
+      },
+      {
+        "itemId": "2a0796b7c326",
+        "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+        "summary": "GPT‑6 Astra improves Devin’s ability to test software and show that it works, with the goal of helping engineers review…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2a0796b7c326"
+        ]
+      },
+      {
+        "itemId": "e5f307cc911a",
+        "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
+        "summary": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fi…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e5f307cc911a"
+        ]
+      },
+      {
+        "itemId": "86638193cd7d",
+        "title": "The latest Windows 11 update may mess with your device’s audio – here’s the workaround",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "86638193cd7d"
+        ]
+      },
+      {
+        "itemId": "cbf72dec4a8e",
+        "title": "NBC News Airs Interview with AI-Generated Actress",
+        "summary": "Article URL: https://www.mediaite.com/media/tv/how-bizarre-is-this-nbc-news-airs-interview-with-ai-generated-actress/ C…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "cbf72dec4a8e"
+        ]
+      },
+      {
+        "itemId": "a24ca01affbf",
+        "title": "Ex-FTC boss Khan: break out the handcuffs for AI CEOs, citing 1934 precedent",
+        "summary": "Article URL: https://www.theregister.com/ai-and-ml/2026/09/14/ex-ftc-boss-khan-urges-uncle-sam-to-break-out-the-handcuf…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a24ca01affbf"
+        ]
+      },
+      {
+        "itemId": "9ee7eb5191a8",
+        "title": "Prosecutors say man used AI to 'scrape' court website, asked it for legal help",
+        "summary": "Article URL: https://www.abc.net.au/news/2026-09-10/christopher-duff-to-stand-trial-over-nsw-ai-court-data-breach/10713…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9ee7eb5191a8"
+        ]
+      },
+      {
+        "itemId": "6a48f91192d7",
+        "title": "AI, Redistribution, and the Size of the Pie",
+        "summary": "Article URL: https://marginalrevolution.com/marginalrevolution/2026/09/ai-redistribution-and-the-size-of-the-pie.html C…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "6a48f91192d7"
+        ]
+      },
+      {
+        "itemId": "28ac76c3e9de",
+        "title": "Sanders proposes 20-year prison sentences for superintelligence AI developers",
+        "summary": "Article URL: https://www.msn.com/en-us/news/other/bernie-sanders-proposes-20-year-prison-sentences-for-superintelligenc…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "28ac76c3e9de"
+        ]
+      },
+      {
+        "itemId": "542ab967b164",
+        "title": "3 ways to prep for your next big race with Search",
+        "summary": "Search can help runners get race-day ready with registration alerts, tailored training plans, and more.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "542ab967b164"
+        ]
+      },
+      {
+        "itemId": "236e549a57d5",
+        "title": "Get ready for the game with new football features in Search",
+        "summary": "Track live game feeds, explore detailed stats, and get custom fantasy recommendations directly in Search this season.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "236e549a57d5"
+        ]
+      },
+      {
+        "itemId": "1402c99288a9",
+        "title": "Recreating a 70-year love story frame by frame",
+        "summary": "Discover how filmmakers and Google DeepMind used AI to recreate a couple's unrecorded past in the short film \"Love, Ren…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1402c99288a9"
+        ]
+      },
+      {
+        "itemId": "3eb0bded4b8f",
+        "title": "首届蚂蚁灵波具身大模型挑战赛正式启动",
+        "summary": "通过这场大赛，蚂蚁灵波希望将 LingBot-VLA 进一步推向更广泛的开发者社区和高校科研社区",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3eb0bded4b8f"
+        ]
+      },
+      {
+        "itemId": "39405a30e62a",
+        "title": "全国唯一！商汤大装置临港AIDC获“算效+算电”双5A认证",
+        "summary": "业界首个5A算电协同认证",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "39405a30e62a"
+        ]
+      },
+      {
+        "itemId": "35634cfac381",
+        "title": "探索RSI，生数新世界模型让机器人开始自我进化",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "35634cfac381"
+        ]
+      },
+      {
+        "itemId": "a4cfd9eda4dd",
+        "title": "分子之心QuantaMind登Science Advances，让AI给分子世界”拍电影”",
+        "summary": "AI 蛋白质设计迈入“动态时代”",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a4cfd9eda4dd"
+        ]
+      },
+      {
+        "itemId": "f0cf6d2aeea4",
+        "title": "端侧AI从「能跑」到「会进化」，元空智能跑进惠普预装",
+        "summary": "让模型和设备共同进化",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f0cf6d2aeea4"
+        ]
+      },
+      {
+        "itemId": "b8e85ada67d8",
+        "title": "一年连融三轮，这家金融AI公司又拿下超3亿B轮",
+        "summary": "险资、券商与头部创投持续加码",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b8e85ada67d8"
+        ]
+      },
+      {
+        "itemId": "40c152b3e860",
+        "title": "How LinkedIn Trains AI Job Search 8x Faster with Multi-Teacher Distillation",
+        "summary": "LinkedIn has published details of the training infrastructure behind its AI-powered job search, describing a multi-teac…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "40c152b3e860"
+        ]
+      },
+      {
+        "itemId": "9a4252c66caa",
+        "title": "Proactive cyber defense for governments and enterprises",
+        "summary": "The Fairwind Program is a limited access program for governments and trusted partners to use our cyber defense tools.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9a4252c66caa"
+        ]
+      },
+      {
+        "itemId": "3a071a9c698c",
+        "title": "Switzerland takes a Swiss Army knife to Microsoft 365",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3a071a9c698c"
+        ]
+      },
+      {
+        "itemId": "9cf70d30f737",
+        "title": "Your older iPhone just got free satellite service for another year – here’s why",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9cf70d30f737"
+        ]
+      },
+      {
+        "itemId": "27f8e0c98681",
+        "title": "This CIO doesn’t ‘hire engineers to write code’: 3 AI fundamentals he prioritizes instead",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "27f8e0c98681"
+        ]
+      },
+      {
+        "itemId": "ffba53b26358",
+        "title": "I’ve been an Android user all my life, but I’m jealous of 3 things Apple just announced",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "ffba53b26358"
+        ]
+      },
+      {
+        "itemId": "98e49f003da6",
+        "title": "Eager to try iOS 27’s cool AI features and upgraded Siri? Get ready for usage limits",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "98e49f003da6"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "e4f42399d637",
+        "title": "OpenAI Releases GPT-6 Astra for Coding and Computer Use",
+        "takeaway": "OpenAI has released GPT-6 Astra, a new model focused on coding, computer use, long-running agentic tasks, and cybersecu…",
+        "evidenceItemIds": [
+          "e4f42399d637"
+        ]
+      },
+      {
+        "itemId": "2dba65883bfa",
+        "title": "DevFest is back",
+        "takeaway": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and s…",
+        "evidenceItemIds": [
+          "2dba65883bfa"
+        ]
+      },
+      {
+        "itemId": "86d8c8b4f805",
+        "title": "AI Agent Wallet Offboarding Checklist",
+        "takeaway": "Article URL: https://do2006.github.io/nightfall-crypto-access-exit-check/ai-agent-wallet-offboarding-checklist.html Com…",
+        "evidenceItemIds": [
+          "86d8c8b4f805"
+        ]
+      },
+      {
+        "itemId": "57f5ffea1d21",
+        "title": "GitHub Copilot's Project HydraFusion Promises Frontier Level Performance through Multi-Model Routing",
+        "takeaway": "GitHub's Project HydraFusion is a research preview for GitHub Copilot that enhances coding intelligence through runtime…",
+        "evidenceItemIds": [
+          "57f5ffea1d21"
+        ]
+      },
+      {
+        "itemId": "2b0bb48aacd8",
+        "title": "Now everyone can put data to work",
+        "takeaway": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI u…",
+        "evidenceItemIds": [
+          "2b0bb48aacd8"
+        ]
+      },
+      {
+        "itemId": "c1a6b4bc9d8d",
+        "title": "Independent Investigation of Hugging Face Incident Reveals How Agents Collaborated and Behaved",
+        "takeaway": "After six days of on-site investigation at OpenAI, a small team of METR and Redwood Research researchers provided an ac…",
+        "evidenceItemIds": [
+          "c1a6b4bc9d8d"
+        ]
+      },
+      {
+        "itemId": "11b8340f3d1f",
+        "title": "How Fyxer built an AI executive assistant people trust",
+        "takeaway": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user…",
+        "evidenceItemIds": [
+          "11b8340f3d1f"
+        ]
+      },
+      {
+        "itemId": "a74ead4561f6",
+        "title": "Watch astronaut Christina Koch and Google’s James Manyika discuss space, technology, and discovery.",
+        "takeaway": "Christina Koch sits down with James Manyika, Google’s Senior Vice President of Research, Labs, Technology & Society.",
+        "evidenceItemIds": [
+          "a74ead4561f6"
+        ]
+      },
+      {
+        "itemId": "7d9f78e10260",
+        "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+        "takeaway": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less…",
+        "evidenceItemIds": [
+          "7d9f78e10260"
+        ]
+      },
+      {
+        "itemId": "48ffa0a34a81",
+        "title": "NVIDIA Personal AI Router Distributes AI Tasks across Local Compute",
+        "takeaway": "NVIDIA Personal AI Router (PAIR), now available in beta, lets you combine the inference capacity of multiple computers …",
+        "evidenceItemIds": [
+          "48ffa0a34a81"
+        ]
+      },
+      {
+        "itemId": "f8e1b906b90b",
+        "title": "Session Traces and Cost Controls Help Diagnose AI Agent Failures",
+        "takeaway": "Session traces and cost controls are emerging as key observability techniques for diagnosing AI agent failures, helping…",
+        "evidenceItemIds": [
+          "f8e1b906b90b"
+        ]
+      },
+      {
+        "itemId": "016ca321e355",
+        "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+        "takeaway": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion C…",
+        "evidenceItemIds": [
+          "016ca321e355"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕agent与open-source展开，建议优先关注《OpenAI Releases GPT-6 Astra for Coding and Computer Use》、《DevFest is back》、《AI Agent Wallet Offboarding Checklist》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《How Fyxer built an AI executive assistant people trust》、《Perplexity trusts GPT-6 Astra with end-to-end systems》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "11b8340f3d1f",
+          "7d9f78e10260",
+          "016ca321e355",
+          "2a0796b7c326"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 4 条，建议优先阅读《OpenAI Releases GPT-6 Astra for Coding and Computer Use》、《DevFest is back》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "e4f42399d637",
+          "2dba65883bfa",
+          "2b0bb48aacd8",
+          "c1a6b4bc9d8d"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《NBC News Airs Interview with AI-Generated Actress》、《Ex-FTC boss Khan: break out the handcuffs for AI CEOs, citing 1934 precedent》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "cbf72dec4a8e",
+          "a24ca01affbf",
+          "9ee7eb5191a8",
+          "6a48f91192d7"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 2 条，建议优先阅读《AI Agent Wallet Offboarding Checklist》、《GitHub Copilot's Project HydraFusion Promises Frontier Level Performance through Multi-Model Routing》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "86d8c8b4f805",
+          "57f5ffea1d21"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "2ea77e2e0160ccff09b9b06b4dce133561bc4822037fc765bbbec4c8d9bd7b33",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-09-15T01:00:36.582Z",
+      "finishedAt": "2026-09-15T01:01:15.625Z",
+      "durationMs": 39043,
+      "inputCount": 36,
+      "processedCount": 36,
+      "fallbackCount": 36,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 36,
+      "failureStats": {
+        "totalFailed": 36,
+        "timeout": 0,
+        "http": 36,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 68,
+        "splitRetryCount": 32
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-08",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-01",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-09-15T01:01:17.477Z",
+      "finishedAt": "2026-09-15T01:01:37.063Z",
+      "durationMs": 19586,
+      "inputCount": 36,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "e4f42399d637",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "OpenAI Releases GPT-6 Astra for Coding and Computer Use",
+        "link": "https://www.infoq.com/news/2026/09/openai-gpt6-astra/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "OpenAI has released GPT-6 Astra, a new model focused on coding, computer use, long-running agentic tasks, and cybersecurity, with availability across ChatGPT, Codex, and the OpenAI API. By Daniel Dominguez",
+        "publishedAt": "2026-09-10T17:49:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2dba65883bfa",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "DevFest is back",
+        "link": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
+        "contentSnippet": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and scale in the agentic AI era.",
+        "publishedAt": "2026-09-14T16:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 97.44,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 97.43589743589743,
+          "finalScore": 97.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "86d8c8b4f805",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI Agent Wallet Offboarding Checklist",
+        "link": "https://do2006.github.io/nightfall-crypto-access-exit-check/ai-agent-wallet-offboarding-checklist.html",
+        "contentSnippet": "Article URL: https://do2006.github.io/nightfall-crypto-access-exit-check/ai-agent-wallet-offboarding-checklist.html Comments URL: https://news.ycombinator.com/item?id=49706078 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-15T00:20:47.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 97.44,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 97.43589743589743,
+          "finalScore": 97.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "57f5ffea1d21",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "GitHub Copilot's Project HydraFusion Promises Frontier Level Performance through Multi-Model Routing",
+        "link": "https://www.infoq.com/news/2026/09/github-hydrafusion/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "GitHub's Project HydraFusion is a research preview for GitHub Copilot that enhances coding intelligence through runtime model orchestration. It dynamically assembles execution plans using models from various providers. The system employs three execution patterns based on task complexity. Evaluations indicate that it achieves high task quality while significantly reducing operational costs. By Olimpiu Pop",
+        "publishedAt": "2026-09-13T06:06:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 84.62,
+        "importance": "medium",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 112,
+          "ruleScoreNormalized": 84.61538461538461,
+          "finalScore": 84.62,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2b0bb48aacd8",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Now everyone can put data to work",
+        "link": "https://openai.com/index/put-data-to-work",
+        "contentSnippet": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI using natural language.",
+        "publishedAt": "2026-09-10T15:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 79.49,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 79.48717948717949,
+          "finalScore": 79.49,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 36,
+      "normalizedCount": 36,
+      "dedupedCount": 36,
+      "highImportanceCount": 3,
+      "mediumImportanceCount": 4,
+      "lowImportanceCount": 29,
+      "categoryBreakdown": {
+        "open-source": 2,
+        "tooling": 2,
+        "agent": 5,
+        "research": 2,
+        "industry-news": 5,
+        "tutorial": 0,
+        "other": 20
+      }
+    },
+    "warnings": [
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[MarkTechPost] 抓取失败: HTTP 403",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：36/36",
+      "LLM 分类打分回退明细（前 3/36）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06f7cbb8087608d43fb39255737 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06f7cbb831df55fbbc0b223496a | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06f7cbb9eca3976ba28ab5324f3",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
