@@ -1,0 +1,2256 @@
+{
+  "runId": "daily-1789607367649",
+  "generatedAt": "2026-09-17T01:09:27.604Z",
+  "reviewStartedAt": "2026-09-17T01:09:27.604Z",
+  "reportDate": "2026-09-17",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-09-17T01:09:27.604Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 36,
+    "normalizedCount": 36,
+    "dedupedCount": 36,
+    "highImportanceCount": 1,
+    "mediumImportanceCount": 2,
+    "lowImportanceCount": 33,
+    "categoryBreakdown": {
+      "open-source": 3,
+      "tooling": 3,
+      "agent": 6,
+      "research": 2,
+      "industry-news": 5,
+      "tutorial": 1,
+      "other": 16
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "8a01ddc35b3c",
+      "title": "Reimagining advertising with AI",
+      "summary": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integr…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "8a01ddc35b3c"
+      ]
+    },
+    {
+      "itemId": "fa35a90e4718",
+      "title": "Dropbox Evolves Riviera Content Processing Platform to Support AI Workloads",
+      "summary": "Dropbox has evolved Riviera from a file preview service into a universal content processing platform supporting more th…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "fa35a90e4718"
+      ]
+    },
+    {
+      "itemId": "af70d956b09f",
+      "title": "Grab's Agent Framework LLM-Kit Accelerates AI Agent Production Deployment",
+      "summary": "Grab has implemented LLM-Kit, a framework that standardizes over 500 internal agent services. This system enhances serv…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "af70d956b09f"
+      ]
+    },
+    {
+      "itemId": "912e1c414db4",
+      "title": "Helping older adults use AI in everyday life",
+      "summary": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build prac…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "912e1c414db4"
+      ]
+    },
+    {
+      "itemId": "ee925a5ee911",
+      "title": "Our framework for reporting model misalignment",
+      "summary": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unex…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "ee925a5ee911"
+      ]
+    },
+    {
+      "itemId": "2dba65883bfa",
+      "title": "DevFest is back",
+      "summary": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and s…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "2dba65883bfa"
+      ]
+    },
+    {
+      "itemId": "57f5ffea1d21",
+      "title": "GitHub Copilot's Project HydraFusion Promises Frontier Level Performance through Multi-Model Routing",
+      "summary": "GitHub's Project HydraFusion is a research preview for GitHub Copilot that enhances coding intelligence through runtime…",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "57f5ffea1d21"
+      ]
+    },
+    {
+      "itemId": "34f8a08d36d2",
+      "title": "How to connect AI usage to business value",
+      "summary": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and conne…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "34f8a08d36d2"
+      ]
+    },
+    {
+      "itemId": "2205504f125a",
+      "title": "How workers are unlocking new ways of working",
+      "summary": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurrin…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2205504f125a"
+      ]
+    },
+    {
+      "itemId": "c1a6b4bc9d8d",
+      "title": "Independent Investigation of Hugging Face Incident Reveals How Agents Collaborated and Behaved",
+      "summary": "After six days of on-site investigation at OpenAI, a small team of METR and Redwood Research researchers provided an ac…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "c1a6b4bc9d8d"
+      ]
+    },
+    {
+      "itemId": "d5ea129bdd13",
+      "title": "What's Scarier Than Agents Taking over Internet? CEO Cartel Trying Take over AI",
+      "summary": "Article URL: https://fractalsofchange.substack.com/p/q-whats-scarier-than-a-swarm-of-ai Comments URL: https://news.ycom…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "d5ea129bdd13"
+      ]
+    },
+    {
+      "itemId": "3f05909619f6",
+      "title": "通用能力不打折，空间具身智能断层领先！ZDTaichu5.0-9B国产开源，跻身全球多模态第一梯队",
+      "summary": "九大空间测试10B规模通用模型中8项第一",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "3f05909619f6"
+      ]
+    },
+    {
+      "itemId": "a86531e9d87b",
+      "title": "协同办公进入Agent时代，飞书+豆包工作跑在了最前面",
+      "summary": "AI协同办公的新官配，我先磕了",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "a86531e9d87b"
+      ]
+    },
+    {
+      "itemId": "11b8340f3d1f",
+      "title": "How Fyxer built an AI executive assistant people trust",
+      "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "11b8340f3d1f"
+      ]
+    },
+    {
+      "itemId": "48ffa0a34a81",
+      "title": "NVIDIA Personal AI Router Distributes AI Tasks across Local Compute",
+      "summary": "NVIDIA Personal AI Router (PAIR), now available in beta, lets you combine the inference capacity of multiple computers …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "48ffa0a34a81"
+      ]
+    },
+    {
+      "itemId": "0bcd5a216c11",
+      "title": "How Cisco is confronting the security crisis of agentic AI",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "0bcd5a216c11"
+      ]
+    },
+    {
+      "itemId": "ca806977a473",
+      "title": "Dropbox Outlines How Focusing on Existing Infrastructure Efficiency Can Create Headroom for AI",
+      "summary": "Dropbox has outlined how a decade of infrastructure optimization is helping it absorb growing demand from AI without tr…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "ca806977a473"
+      ]
+    },
+    {
+      "itemId": "f47b0899b6d0",
+      "title": "I recommend you don’t run these appliances on your power station – even if you can",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f47b0899b6d0"
+      ]
+    },
+    {
+      "itemId": "6e74f2dab0ff",
+      "title": "Anthropic merges Claude chat and Cowork into one",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "6e74f2dab0ff"
+      ]
+    },
+    {
+      "itemId": "d15454e26989",
+      "title": "How September’s Pixel Drop changes the way you call and message important contacts",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d15454e26989"
+      ]
+    },
+    {
+      "itemId": "e1db45977735",
+      "title": "AI for Societal Impact",
+      "summary": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share th…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e1db45977735"
+      ]
+    },
+    {
+      "itemId": "d48ff988711c",
+      "title": "Building AI to accelerate science and improve lives",
+      "summary": "The true measure of AI is who it helps. Here’s how it’s impacting lives today. We're focused on key areas where advance…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d48ff988711c"
+      ]
+    },
+    {
+      "itemId": "9939660e3208",
+      "title": "AI for everyone in every language",
+      "summary": "We’re moving beyond traditional text translation to build models that understand the world’s rich, living languages exa…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9939660e3208"
+      ]
+    },
+    {
+      "itemId": "1f837d0dbdcc",
+      "title": "New insights from Google’s AI & Economy ATLAS",
+      "summary": "We’ve translated ATLAS’s millions of global data points into an interactive, open-access experience.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1f837d0dbdcc"
+      ]
+    },
+    {
+      "itemId": "a74ead4561f6",
+      "title": "Watch astronaut Christina Koch and Google’s James Manyika discuss space, technology, and discovery.",
+      "summary": "Christina Koch sits down with James Manyika, Google’s Senior Vice President of Research, Labs, Technology & Society.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a74ead4561f6"
+      ]
+    },
+    {
+      "itemId": "833a39c5ad36",
+      "title": "Pangram – AI detector for text and images",
+      "summary": "Article URL: https://www.pangram.com Comments URL: https://news.ycombinator.com/item?id=49735241 Points: 1 # Comments: 0",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "833a39c5ad36"
+      ]
+    },
+    {
+      "itemId": "c854db9572a1",
+      "title": "Will AI Replace Your Doctor? Dr. Zeke Emanuel and AMA President Dr. John Whyte",
+      "summary": "Article URL: https://www.youtube.com/watch?v=WTnZ6W7qsLQ Comments URL: https://news.ycombinator.com/item?id=49735105 Po…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c854db9572a1"
+      ]
+    },
+    {
+      "itemId": "bc9a6b5aff82",
+      "title": "AI Cheating Is on the Rise",
+      "summary": "Article URL: https://www.vals.ai/blogs/cheating-on-the-rise Comments URL: https://news.ycombinator.com/item?id=49735030…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "bc9a6b5aff82"
+      ]
+    },
+    {
+      "itemId": "cd277bedd983",
+      "title": "OpenAI discloses six new AI safety incidents",
+      "summary": "Article URL: https://www.axios.com/2026/09/16/openai-testing-safety-incidents-disclosure Comments URL: https://news.yco…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "cd277bedd983"
+      ]
+    },
+    {
+      "itemId": "25831abc02e0",
+      "title": "Ask HN: How long before we will have a major AI driven cyberincident?",
+      "summary": "It occurs to me that we are playing with fire. These systems are rapidly approaching levels that are hard or even impos…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "25831abc02e0"
+      ]
+    },
+    {
+      "itemId": "38bfad527cf3",
+      "title": "I’ve used both iPhone 18 Pro models – here’s how my buying advice is changing in 2026",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "38bfad527cf3"
+      ]
+    },
+    {
+      "itemId": "e08214feec6d",
+      "title": "Windows 11 out-of-band update fixes audio glitch and other bugs – grab it now",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e08214feec6d"
+      ]
+    },
+    {
+      "itemId": "525d1698e855",
+      "title": "AI大模型工场2026 AI产业生态大会今日举办，大咖同台共探智能生长与产业共生",
+      "summary": "9月15日，由AI大模型工场主办的“2026 AI产业生态大会”在北京举行。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "525d1698e855"
+      ]
+    },
+    {
+      "itemId": "3d4699596c4b",
+      "title": "高通技术公司携手中兴努比亚和豆包手机助手，共同推动智能手机迈入个人AI新时代",
+      "summary": "第五代骁龙8至尊版赋能全新AI智能体手机努比亚NaviX Ultra，加速智能体体验规模化落地",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3d4699596c4b"
+      ]
+    },
+    {
+      "itemId": "98da44afa4eb",
+      "title": "基元律动与无问芯穹达成战略合作，推进高质量Token供给与应用",
+      "summary": "2026年 9 月 15 日，AI基础设施公司基元律动（TokenRhythm）与无问芯穹（Infinigence AI）签署战略合作协议。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "98da44afa4eb"
+      ]
+    },
+    {
+      "itemId": "fdf6727a7c43",
+      "title": "西门子不造机器人，为什么机器人进厂的故事里总有它？",
+      "summary": "帮助成熟赛道复制方案，帮助新赛道长出场景。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fdf6727a7c43"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "8a01ddc35b3c",
+      "title": "Reimagining advertising with AI",
+      "takeaway": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integr…",
+      "evidenceItemIds": [
+        "8a01ddc35b3c"
+      ]
+    },
+    {
+      "itemId": "fa35a90e4718",
+      "title": "Dropbox Evolves Riviera Content Processing Platform to Support AI Workloads",
+      "takeaway": "Dropbox has evolved Riviera from a file preview service into a universal content processing platform supporting more th…",
+      "evidenceItemIds": [
+        "fa35a90e4718"
+      ]
+    },
+    {
+      "itemId": "af70d956b09f",
+      "title": "Grab's Agent Framework LLM-Kit Accelerates AI Agent Production Deployment",
+      "takeaway": "Grab has implemented LLM-Kit, a framework that standardizes over 500 internal agent services. This system enhances serv…",
+      "evidenceItemIds": [
+        "af70d956b09f"
+      ]
+    },
+    {
+      "itemId": "912e1c414db4",
+      "title": "Helping older adults use AI in everyday life",
+      "takeaway": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build prac…",
+      "evidenceItemIds": [
+        "912e1c414db4"
+      ]
+    },
+    {
+      "itemId": "ee925a5ee911",
+      "title": "Our framework for reporting model misalignment",
+      "takeaway": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unex…",
+      "evidenceItemIds": [
+        "ee925a5ee911"
+      ]
+    },
+    {
+      "itemId": "2dba65883bfa",
+      "title": "DevFest is back",
+      "takeaway": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and s…",
+      "evidenceItemIds": [
+        "2dba65883bfa"
+      ]
+    },
+    {
+      "itemId": "57f5ffea1d21",
+      "title": "GitHub Copilot's Project HydraFusion Promises Frontier Level Performance through Multi-Model Routing",
+      "takeaway": "GitHub's Project HydraFusion is a research preview for GitHub Copilot that enhances coding intelligence through runtime…",
+      "evidenceItemIds": [
+        "57f5ffea1d21"
+      ]
+    },
+    {
+      "itemId": "34f8a08d36d2",
+      "title": "How to connect AI usage to business value",
+      "takeaway": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and conne…",
+      "evidenceItemIds": [
+        "34f8a08d36d2"
+      ]
+    },
+    {
+      "itemId": "2205504f125a",
+      "title": "How workers are unlocking new ways of working",
+      "takeaway": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurrin…",
+      "evidenceItemIds": [
+        "2205504f125a"
+      ]
+    },
+    {
+      "itemId": "c1a6b4bc9d8d",
+      "title": "Independent Investigation of Hugging Face Incident Reveals How Agents Collaborated and Behaved",
+      "takeaway": "After six days of on-site investigation at OpenAI, a small team of METR and Redwood Research researchers provided an ac…",
+      "evidenceItemIds": [
+        "c1a6b4bc9d8d"
+      ]
+    },
+    {
+      "itemId": "d5ea129bdd13",
+      "title": "What's Scarier Than Agents Taking over Internet? CEO Cartel Trying Take over AI",
+      "takeaway": "Article URL: https://fractalsofchange.substack.com/p/q-whats-scarier-than-a-swarm-of-ai Comments URL: https://news.ycom…",
+      "evidenceItemIds": [
+        "d5ea129bdd13"
+      ]
+    },
+    {
+      "itemId": "3f05909619f6",
+      "title": "通用能力不打折，空间具身智能断层领先！ZDTaichu5.0-9B国产开源，跻身全球多模态第一梯队",
+      "takeaway": "九大空间测试10B规模通用模型中8项第一",
+      "evidenceItemIds": [
+        "3f05909619f6"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕tooling展开，建议优先关注《Reimagining advertising with AI》、《Dropbox Evolves Riviera Content Processing Platform to Support AI Workloads》、《Grab's Agent Framework LLM-Kit Accelerates AI Agent Production Deployment》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Helping older adults use AI in everyday life》、《How Fyxer built an AI executive assistant people trust》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "912e1c414db4",
+        "11b8340f3d1f",
+        "ca806977a473",
+        "f47b0899b6d0"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 4 条，建议优先阅读《DevFest is back》、《Independent Investigation of Hugging Face Incident Reveals How Agents Collaborated and Behaved》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "2dba65883bfa",
+        "c1a6b4bc9d8d",
+        "d5ea129bdd13",
+        "a86531e9d87b"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《Pangram – AI detector for text and images》、《Will AI Replace Your Doctor? Dr. Zeke Emanuel and AMA President Dr. John Whyte》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "833a39c5ad36",
+        "c854db9572a1",
+        "bc9a6b5aff82",
+        "cd277bedd983"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "tooling",
+      "lead": "工具链方向本期共 3 条，建议优先阅读《Reimagining advertising with AI》、《Dropbox Evolves Riviera Content Processing Platform to Support AI Workloads》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "8a01ddc35b3c",
+        "fa35a90e4718",
+        "af70d956b09f"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "7d56dec756f10f91e5eb9ef1b326a0772fdca8c34d4b5b934d032c3c33b21130",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-09-17T01:28:35.138Z",
+    "finishedAt": "2026-09-17T01:29:18.468Z",
+    "durationMs": 43520,
+    "inputCount": 36,
+    "processedCount": 36,
+    "fallbackCount": 36,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 36,
+    "failureStats": {
+      "totalFailed": 36,
+      "timeout": 0,
+      "http": 36,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 68,
+      "splitRetryCount": 32
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-10",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-03",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-09-17T01:29:21.226Z",
+    "finishedAt": "2026-09-17T01:29:41.114Z",
+    "durationMs": 19888,
+    "inputCount": 36,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "8a01ddc35b3c",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "Reimagining advertising with AI",
+      "link": "https://openai.com/index/reimagining-advertising-with-ai",
+      "contentSnippet": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integrations with HubSpot and Shopify.",
+      "publishedAt": "2026-09-16T13:00:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 125,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "fa35a90e4718",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Dropbox Evolves Riviera Content Processing Platform to Support AI Workloads",
+      "link": "https://www.infoq.com/news/2026/09/dropbox-riviera-ai-platform/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Dropbox has evolved Riviera from a file preview service into a universal content processing platform supporting more than 300 file formats and over 100 transformation capabilities. Processing hundreds of thousands of transformations per second, Riviera now supports Search, Replay, Sign, and Dash, while its APIs enable asynchronous content extraction for AI and RAG workflows. By Leela Kumili",
+      "publishedAt": "2026-09-16T14:42:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 73.68,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 115,
+        "ruleScoreNormalized": 73.68421052631578,
+        "finalScore": 73.68,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "af70d956b09f",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Grab's Agent Framework LLM-Kit Accelerates AI Agent Production Deployment",
+      "link": "https://www.infoq.com/news/2026/09/grab-agent-platform/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Grab has implemented LLM-Kit, a framework that standardizes over 500 internal agent services. This system enhances service integration, evaluation, and secret handling, reducing the time to deploy new AI agents from two weeks to one hour. It centralizes infrastructure management, allowing runtime tool discovery and flexible model integration, while maintaining operational control. By Hien Luu",
+      "publishedAt": "2026-09-15T09:00:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 73.68,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 115,
+        "ruleScoreNormalized": 73.68421052631578,
+        "finalScore": 73.68,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "912e1c414db4",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "Helping older adults use AI in everyday life",
+      "link": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+      "contentSnippet": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
+      "publishedAt": "2026-09-16T16:00:00.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 60.53,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 110,
+        "ruleScoreNormalized": 60.526315789473685,
+        "finalScore": 60.53,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "ee925a5ee911",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "Our framework for reporting model misalignment",
+      "link": "https://openai.com/index/model-misalignment-reporting-framework",
+      "contentSnippet": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior.",
+      "publishedAt": "2026-09-16T17:00:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 60.53,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 110,
+        "ruleScoreNormalized": 60.526315789473685,
+        "finalScore": 60.53,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[MarkTechPost] 抓取失败: HTTP 403",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：36/36",
+    "LLM 分类打分回退明细（前 3/36）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06fa7546f92e8f458287c6d0b31 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06fa7547a5189601ea90c124d60 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06fa7548566ab489264242bf203",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Reimagining advertising with AI\n- Dropbox Evolves Riviera Content Processing Platform to Support AI Workloads\n- Grab's Agent Framework LLM-Kit Accelerates AI Agent Production Deployment\n- Helping older adults use AI in everyday life\n- Our framework for reporting model misalignment\n\n### 分类覆盖（大纲）\n- tooling: 3 条\n- other: 16 条\n- open-source: 3 条\n- agent: 6 条\n- tutorial: 1 条\n- research: 2 条\n- industry-news: 5 条",
+    "rankedItems": [
+      {
+        "id": "8a01ddc35b3c",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Reimagining advertising with AI",
+        "link": "https://openai.com/index/reimagining-advertising-with-ai",
+        "contentSnippet": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integrations with HubSpot and Shopify.",
+        "publishedAt": "2026-09-16T13:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 125,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fa35a90e4718",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Dropbox Evolves Riviera Content Processing Platform to Support AI Workloads",
+        "link": "https://www.infoq.com/news/2026/09/dropbox-riviera-ai-platform/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Dropbox has evolved Riviera from a file preview service into a universal content processing platform supporting more than 300 file formats and over 100 transformation capabilities. Processing hundreds of thousands of transformations per second, Riviera now supports Search, Replay, Sign, and Dash, while its APIs enable asynchronous content extraction for AI and RAG workflows. By Leela Kumili",
+        "publishedAt": "2026-09-16T14:42:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.68,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 73.68421052631578,
+          "finalScore": 73.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "af70d956b09f",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Grab's Agent Framework LLM-Kit Accelerates AI Agent Production Deployment",
+        "link": "https://www.infoq.com/news/2026/09/grab-agent-platform/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Grab has implemented LLM-Kit, a framework that standardizes over 500 internal agent services. This system enhances service integration, evaluation, and secret handling, reducing the time to deploy new AI agents from two weeks to one hour. It centralizes infrastructure management, allowing runtime tool discovery and flexible model integration, while maintaining operational control. By Hien Luu",
+        "publishedAt": "2026-09-15T09:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.68,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 73.68421052631578,
+          "finalScore": 73.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "912e1c414db4",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Helping older adults use AI in everyday life",
+        "link": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+        "contentSnippet": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
+        "publishedAt": "2026-09-16T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.53,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 60.526315789473685,
+          "finalScore": 60.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ee925a5ee911",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Our framework for reporting model misalignment",
+        "link": "https://openai.com/index/model-misalignment-reporting-framework",
+        "contentSnippet": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior.",
+        "publishedAt": "2026-09-16T17:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.53,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 60.526315789473685,
+          "finalScore": 60.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2dba65883bfa",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "DevFest is back",
+        "link": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
+        "contentSnippet": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and scale in the agentic AI era.",
+        "publishedAt": "2026-09-14T16:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 52.63,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 107,
+          "ruleScoreNormalized": 52.63157894736842,
+          "finalScore": 52.63,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "57f5ffea1d21",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "GitHub Copilot's Project HydraFusion Promises Frontier Level Performance through Multi-Model Routing",
+        "link": "https://www.infoq.com/news/2026/09/github-hydrafusion/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "GitHub's Project HydraFusion is a research preview for GitHub Copilot that enhances coding intelligence through runtime model orchestration. It dynamically assembles execution plans using models from various providers. The system employs three execution patterns based on task complexity. Evaluations indicate that it achieves high task quality while significantly reducing operational costs. By Olimpiu Pop",
+        "publishedAt": "2026-09-13T06:06:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 52.63,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 107,
+          "ruleScoreNormalized": 52.63157894736842,
+          "finalScore": 52.63,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "34f8a08d36d2",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How to connect AI usage to business value",
+        "link": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
+        "contentSnippet": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and connect adoption to business outcomes.",
+        "publishedAt": "2026-09-16T12:00:00.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 47.37,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 47.368421052631575,
+          "finalScore": 47.37,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2205504f125a",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How workers are unlocking new ways of working",
+        "link": "https://openai.com/index/unlocking-new-ways-of-working",
+        "contentSnippet": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurring parts of their work.",
+        "publishedAt": "2026-09-16T09:00:00.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 47.37,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 47.368421052631575,
+          "finalScore": 47.37,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c1a6b4bc9d8d",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Independent Investigation of Hugging Face Incident Reveals How Agents Collaborated and Behaved",
+        "link": "https://www.infoq.com/news/2026/09/metr-hugging-face-hack-report/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "After six days of on-site investigation at OpenAI, a small team of METR and Redwood Research researchers provided an account of how OpenAI agents behaved during their hack of Hugging Face earlier this year. Roughly 700 agents that were meant to be isolated from one another found a way to communicate and coordinate to pursue goals they could have not achieved working individually. By Sergio De Simone",
+        "publishedAt": "2026-09-14T09:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 47.37,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 47.368421052631575,
+          "finalScore": 47.37,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d5ea129bdd13",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "What's Scarier Than Agents Taking over Internet? CEO Cartel Trying Take over AI",
+        "link": "https://fractalsofchange.substack.com/p/q-whats-scarier-than-a-swarm-of-ai",
+        "contentSnippet": "Article URL: https://fractalsofchange.substack.com/p/q-whats-scarier-than-a-swarm-of-ai Comments URL: https://news.ycombinator.com/item?id=49735049 Points: 6 # Comments: 0",
+        "publishedAt": "2026-09-17T00:44:51.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 47.37,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 47.368421052631575,
+          "finalScore": 47.37,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3f05909619f6",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "通用能力不打折，空间具身智能断层领先！ZDTaichu5.0-9B国产开源，跻身全球多模态第一梯队",
+        "link": "https://www.qbitai.com/2026/09/490839.html",
+        "contentSnippet": "九大空间测试10B规模通用模型中8项第一",
+        "publishedAt": "2026-09-16T13:08:20.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 44.74,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 104,
+          "ruleScoreNormalized": 44.73684210526316,
+          "finalScore": 44.74,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a86531e9d87b",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "协同办公进入Agent时代，飞书+豆包工作跑在了最前面",
+        "link": "https://www.qbitai.com/2026/09/490686.html",
+        "contentSnippet": "AI协同办公的新官配，我先磕了",
+        "publishedAt": "2026-09-16T07:46:38.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 39.47,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 39.473684210526315,
+          "finalScore": 39.47,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "11b8340f3d1f",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How Fyxer built an AI executive assistant people trust",
+        "link": "https://openai.com/index/fyxer",
+        "contentSnippet": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user’s voice.",
+        "publishedAt": "2026-09-14T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 34.21052631578947,
+          "finalScore": 34.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "48ffa0a34a81",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "NVIDIA Personal AI Router Distributes AI Tasks across Local Compute",
+        "link": "https://www.infoq.com/news/2026/09/nvidia-pair-ai-task-router/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "NVIDIA Personal AI Router (PAIR), now available in beta, lets you combine the inference capacity of multiple computers on your local network and automatically distribute AI requests among them. It is primarily designed for local multi-agent AI workloads, where multiple independent model calls can otherwise overwhelm one GPU. By Sergio De Simone",
+        "publishedAt": "2026-09-11T15:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.21,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 34.21052631578947,
+          "finalScore": 34.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0bcd5a216c11",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "How Cisco is confronting the security crisis of agentic AI",
+        "link": "https://www.zdnet.com/paid-content/article/how-cisco-is-confronting-the-security-crisis-of-agentic-ai/",
+        "contentSnippet": "",
+        "publishedAt": "2026-08-22T00:13:27.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 26.32,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 26.31578947368421,
+          "finalScore": 26.32,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ca806977a473",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Dropbox Outlines How Focusing on Existing Infrastructure Efficiency Can Create Headroom for AI",
+        "link": "https://www.infoq.com/news/2026/09/dropbox-datacenter/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Dropbox has outlined how a decade of infrastructure optimization is helping it absorb growing demand from AI without treating new data-center capacity as the only answer. Its work spans forecasting, fleet utilization, storage density, hardware lifecycles, and rack-level power delivery, much of it predating the current AI boom. By Matt Foster",
+        "publishedAt": "2026-09-16T07:15:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f47b0899b6d0",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "I recommend you don’t run these appliances on your power station – even if you can",
+        "link": "https://www.zdnet.com/home-and-office/do-not-run-these-appliances-on-power-stations/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-16T17:44:31.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.42,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 18.421052631578945,
+          "finalScore": 18.42,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6e74f2dab0ff",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Anthropic merges Claude chat and Cowork into one",
+        "link": "https://www.zdnet.com/innovation/claude-chat-absorbs-cowork-anthropic/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-16T16:30:44.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.42,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 18.421052631578945,
+          "finalScore": 18.42,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d15454e26989",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "How September’s Pixel Drop changes the way you call and message important contacts",
+        "link": "https://www.zdnet.com/tech/september-pixel-drop-call-message-important-contacts/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-16T16:25:53.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.42,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 18.421052631578945,
+          "finalScore": 18.42,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e1db45977735",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "AI for Societal Impact",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/",
+        "contentSnippet": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share the opportunity of AI.",
+        "publishedAt": "2026-09-15T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d48ff988711c",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Building AI to accelerate science and improve lives",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/",
+        "contentSnippet": "The true measure of AI is who it helps. Here’s how it’s impacting lives today. We're focused on key areas where advanced technology can help make extraordinary progress …",
+        "publishedAt": "2026-09-15T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9939660e3208",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "AI for everyone in every language",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/",
+        "contentSnippet": "We’re moving beyond traditional text translation to build models that understand the world’s rich, living languages exactly as they are expressed.",
+        "publishedAt": "2026-09-15T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1f837d0dbdcc",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "New insights from Google’s AI & Economy ATLAS",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/ai-economy-atlas-september-2026/",
+        "contentSnippet": "We’ve translated ATLAS’s millions of global data points into an interactive, open-access experience.",
+        "publishedAt": "2026-09-15T13:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a74ead4561f6",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Watch astronaut Christina Koch and Google’s James Manyika discuss space, technology, and discovery.",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/dialogues-christina-koch/",
+        "contentSnippet": "Christina Koch sits down with James Manyika, Google’s Senior Vice President of Research, Labs, Technology & Society.",
+        "publishedAt": "2026-09-14T19:00:00.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "833a39c5ad36",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Pangram – AI detector for text and images",
+        "link": "https://www.pangram.com",
+        "contentSnippet": "Article URL: https://www.pangram.com Comments URL: https://news.ycombinator.com/item?id=49735241 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-17T01:13:10.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 7.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 7.894736842105263,
+          "finalScore": 7.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c854db9572a1",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Will AI Replace Your Doctor? Dr. Zeke Emanuel and AMA President Dr. John Whyte",
+        "link": "https://www.youtube.com/watch?v=WTnZ6W7qsLQ",
+        "contentSnippet": "Article URL: https://www.youtube.com/watch?v=WTnZ6W7qsLQ Comments URL: https://news.ycombinator.com/item?id=49735105 Points: 1 # Comments: 1",
+        "publishedAt": "2026-09-17T00:51:52.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 7.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 7.894736842105263,
+          "finalScore": 7.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "bc9a6b5aff82",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI Cheating Is on the Rise",
+        "link": "https://www.vals.ai/blogs/cheating-on-the-rise",
+        "contentSnippet": "Article URL: https://www.vals.ai/blogs/cheating-on-the-rise Comments URL: https://news.ycombinator.com/item?id=49735030 Points: 3 # Comments: 0",
+        "publishedAt": "2026-09-17T00:42:25.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 7.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 7.894736842105263,
+          "finalScore": 7.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cd277bedd983",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "OpenAI discloses six new AI safety incidents",
+        "link": "https://www.axios.com/2026/09/16/openai-testing-safety-incidents-disclosure",
+        "contentSnippet": "Article URL: https://www.axios.com/2026/09/16/openai-testing-safety-incidents-disclosure Comments URL: https://news.ycombinator.com/item?id=49734970 Points: 9 # Comments: 1",
+        "publishedAt": "2026-09-17T00:33:03.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 7.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 7.894736842105263,
+          "finalScore": 7.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "25831abc02e0",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Ask HN: How long before we will have a major AI driven cyberincident?",
+        "link": "https://news.ycombinator.com/item?id=49734816",
+        "contentSnippet": "It occurs to me that we are playing with fire. These systems are rapidly approaching levels that are hard or even impossible to defend against and I'm wondering how long it will take - assuming we are not already there - before we will have a major AI driven cyberattack against infrastructure. Either on a nation or on a continental level. Given what I know about these installations (electricity, gas, water, transportation, internet) they are not nearly as tightly run as I would like to see which makes me believe the clock really is ticking. Once these capabilities are out there they tend to be used sooner or later. So, how long? A couple of weeks or months? A year or more? What do you estimate the damage will be? Comments URL: https://news.ycombinator.com/item?id=49734816 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-17T00:13:22.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 7.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 7.894736842105263,
+          "finalScore": 7.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "38bfad527cf3",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "I’ve used both iPhone 18 Pro models – here’s how my buying advice is changing in 2026",
+        "link": "https://www.zdnet.com/business/iphone-18-pro-vs-pro-max-buying-advice-2026/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-16T12:05:35.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.26,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 89,
+          "ruleScoreNormalized": 5.263157894736842,
+          "finalScore": 5.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e08214feec6d",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Windows 11 out-of-band update fixes audio glitch and other bugs – grab it now",
+        "link": "https://www.zdnet.com/business/windows-11-out-of-band-update-fixes-audio-glitch/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-16T09:04:02.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.26,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 89,
+          "ruleScoreNormalized": 5.263157894736842,
+          "finalScore": 5.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "525d1698e855",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "AI大模型工场2026 AI产业生态大会今日举办，大咖同台共探智能生长与产业共生",
+        "link": "https://www.qbitai.com/2026/09/490760.html",
+        "contentSnippet": "9月15日，由AI大模型工场主办的“2026 AI产业生态大会”在北京举行。",
+        "publishedAt": "2026-09-16T08:51:02.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3d4699596c4b",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "高通技术公司携手中兴努比亚和豆包手机助手，共同推动智能手机迈入个人AI新时代",
+        "link": "https://www.qbitai.com/2026/09/490756.html",
+        "contentSnippet": "第五代骁龙8至尊版赋能全新AI智能体手机努比亚NaviX Ultra，加速智能体体验规模化落地",
+        "publishedAt": "2026-09-16T08:18:44.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "98da44afa4eb",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "基元律动与无问芯穹达成战略合作，推进高质量Token供给与应用",
+        "link": "https://www.qbitai.com/2026/09/490750.html",
+        "contentSnippet": "2026年 9 月 15 日，AI基础设施公司基元律动（TokenRhythm）与无问芯穹（Infinigence AI）签署战略合作协议。",
+        "publishedAt": "2026-09-16T08:09:53.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fdf6727a7c43",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "西门子不造机器人，为什么机器人进厂的故事里总有它？",
+        "link": "https://www.qbitai.com/2026/09/490416.html",
+        "contentSnippet": "帮助成熟赛道复制方案，帮助新赛道长出场景。",
+        "publishedAt": "2026-09-16T07:38:18.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "8a01ddc35b3c",
+        "title": "Reimagining advertising with AI",
+        "summary": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integr…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "8a01ddc35b3c"
+        ]
+      },
+      {
+        "itemId": "fa35a90e4718",
+        "title": "Dropbox Evolves Riviera Content Processing Platform to Support AI Workloads",
+        "summary": "Dropbox has evolved Riviera from a file preview service into a universal content processing platform supporting more th…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "fa35a90e4718"
+        ]
+      },
+      {
+        "itemId": "af70d956b09f",
+        "title": "Grab's Agent Framework LLM-Kit Accelerates AI Agent Production Deployment",
+        "summary": "Grab has implemented LLM-Kit, a framework that standardizes over 500 internal agent services. This system enhances serv…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "af70d956b09f"
+        ]
+      },
+      {
+        "itemId": "912e1c414db4",
+        "title": "Helping older adults use AI in everyday life",
+        "summary": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build prac…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "912e1c414db4"
+        ]
+      },
+      {
+        "itemId": "ee925a5ee911",
+        "title": "Our framework for reporting model misalignment",
+        "summary": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unex…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "ee925a5ee911"
+        ]
+      },
+      {
+        "itemId": "2dba65883bfa",
+        "title": "DevFest is back",
+        "summary": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and s…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "2dba65883bfa"
+        ]
+      },
+      {
+        "itemId": "57f5ffea1d21",
+        "title": "GitHub Copilot's Project HydraFusion Promises Frontier Level Performance through Multi-Model Routing",
+        "summary": "GitHub's Project HydraFusion is a research preview for GitHub Copilot that enhances coding intelligence through runtime…",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "57f5ffea1d21"
+        ]
+      },
+      {
+        "itemId": "34f8a08d36d2",
+        "title": "How to connect AI usage to business value",
+        "summary": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and conne…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "34f8a08d36d2"
+        ]
+      },
+      {
+        "itemId": "2205504f125a",
+        "title": "How workers are unlocking new ways of working",
+        "summary": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurrin…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2205504f125a"
+        ]
+      },
+      {
+        "itemId": "c1a6b4bc9d8d",
+        "title": "Independent Investigation of Hugging Face Incident Reveals How Agents Collaborated and Behaved",
+        "summary": "After six days of on-site investigation at OpenAI, a small team of METR and Redwood Research researchers provided an ac…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "c1a6b4bc9d8d"
+        ]
+      },
+      {
+        "itemId": "d5ea129bdd13",
+        "title": "What's Scarier Than Agents Taking over Internet? CEO Cartel Trying Take over AI",
+        "summary": "Article URL: https://fractalsofchange.substack.com/p/q-whats-scarier-than-a-swarm-of-ai Comments URL: https://news.ycom…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "d5ea129bdd13"
+        ]
+      },
+      {
+        "itemId": "3f05909619f6",
+        "title": "通用能力不打折，空间具身智能断层领先！ZDTaichu5.0-9B国产开源，跻身全球多模态第一梯队",
+        "summary": "九大空间测试10B规模通用模型中8项第一",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "3f05909619f6"
+        ]
+      },
+      {
+        "itemId": "a86531e9d87b",
+        "title": "协同办公进入Agent时代，飞书+豆包工作跑在了最前面",
+        "summary": "AI协同办公的新官配，我先磕了",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "a86531e9d87b"
+        ]
+      },
+      {
+        "itemId": "11b8340f3d1f",
+        "title": "How Fyxer built an AI executive assistant people trust",
+        "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "11b8340f3d1f"
+        ]
+      },
+      {
+        "itemId": "48ffa0a34a81",
+        "title": "NVIDIA Personal AI Router Distributes AI Tasks across Local Compute",
+        "summary": "NVIDIA Personal AI Router (PAIR), now available in beta, lets you combine the inference capacity of multiple computers …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "48ffa0a34a81"
+        ]
+      },
+      {
+        "itemId": "0bcd5a216c11",
+        "title": "How Cisco is confronting the security crisis of agentic AI",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "0bcd5a216c11"
+        ]
+      },
+      {
+        "itemId": "ca806977a473",
+        "title": "Dropbox Outlines How Focusing on Existing Infrastructure Efficiency Can Create Headroom for AI",
+        "summary": "Dropbox has outlined how a decade of infrastructure optimization is helping it absorb growing demand from AI without tr…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "ca806977a473"
+        ]
+      },
+      {
+        "itemId": "f47b0899b6d0",
+        "title": "I recommend you don’t run these appliances on your power station – even if you can",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f47b0899b6d0"
+        ]
+      },
+      {
+        "itemId": "6e74f2dab0ff",
+        "title": "Anthropic merges Claude chat and Cowork into one",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "6e74f2dab0ff"
+        ]
+      },
+      {
+        "itemId": "d15454e26989",
+        "title": "How September’s Pixel Drop changes the way you call and message important contacts",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d15454e26989"
+        ]
+      },
+      {
+        "itemId": "e1db45977735",
+        "title": "AI for Societal Impact",
+        "summary": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share th…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e1db45977735"
+        ]
+      },
+      {
+        "itemId": "d48ff988711c",
+        "title": "Building AI to accelerate science and improve lives",
+        "summary": "The true measure of AI is who it helps. Here’s how it’s impacting lives today. We're focused on key areas where advance…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d48ff988711c"
+        ]
+      },
+      {
+        "itemId": "9939660e3208",
+        "title": "AI for everyone in every language",
+        "summary": "We’re moving beyond traditional text translation to build models that understand the world’s rich, living languages exa…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9939660e3208"
+        ]
+      },
+      {
+        "itemId": "1f837d0dbdcc",
+        "title": "New insights from Google’s AI & Economy ATLAS",
+        "summary": "We’ve translated ATLAS’s millions of global data points into an interactive, open-access experience.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1f837d0dbdcc"
+        ]
+      },
+      {
+        "itemId": "a74ead4561f6",
+        "title": "Watch astronaut Christina Koch and Google’s James Manyika discuss space, technology, and discovery.",
+        "summary": "Christina Koch sits down with James Manyika, Google’s Senior Vice President of Research, Labs, Technology & Society.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a74ead4561f6"
+        ]
+      },
+      {
+        "itemId": "833a39c5ad36",
+        "title": "Pangram – AI detector for text and images",
+        "summary": "Article URL: https://www.pangram.com Comments URL: https://news.ycombinator.com/item?id=49735241 Points: 1 # Comments: 0",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "833a39c5ad36"
+        ]
+      },
+      {
+        "itemId": "c854db9572a1",
+        "title": "Will AI Replace Your Doctor? Dr. Zeke Emanuel and AMA President Dr. John Whyte",
+        "summary": "Article URL: https://www.youtube.com/watch?v=WTnZ6W7qsLQ Comments URL: https://news.ycombinator.com/item?id=49735105 Po…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c854db9572a1"
+        ]
+      },
+      {
+        "itemId": "bc9a6b5aff82",
+        "title": "AI Cheating Is on the Rise",
+        "summary": "Article URL: https://www.vals.ai/blogs/cheating-on-the-rise Comments URL: https://news.ycombinator.com/item?id=49735030…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "bc9a6b5aff82"
+        ]
+      },
+      {
+        "itemId": "cd277bedd983",
+        "title": "OpenAI discloses six new AI safety incidents",
+        "summary": "Article URL: https://www.axios.com/2026/09/16/openai-testing-safety-incidents-disclosure Comments URL: https://news.yco…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "cd277bedd983"
+        ]
+      },
+      {
+        "itemId": "25831abc02e0",
+        "title": "Ask HN: How long before we will have a major AI driven cyberincident?",
+        "summary": "It occurs to me that we are playing with fire. These systems are rapidly approaching levels that are hard or even impos…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "25831abc02e0"
+        ]
+      },
+      {
+        "itemId": "38bfad527cf3",
+        "title": "I’ve used both iPhone 18 Pro models – here’s how my buying advice is changing in 2026",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "38bfad527cf3"
+        ]
+      },
+      {
+        "itemId": "e08214feec6d",
+        "title": "Windows 11 out-of-band update fixes audio glitch and other bugs – grab it now",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e08214feec6d"
+        ]
+      },
+      {
+        "itemId": "525d1698e855",
+        "title": "AI大模型工场2026 AI产业生态大会今日举办，大咖同台共探智能生长与产业共生",
+        "summary": "9月15日，由AI大模型工场主办的“2026 AI产业生态大会”在北京举行。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "525d1698e855"
+        ]
+      },
+      {
+        "itemId": "3d4699596c4b",
+        "title": "高通技术公司携手中兴努比亚和豆包手机助手，共同推动智能手机迈入个人AI新时代",
+        "summary": "第五代骁龙8至尊版赋能全新AI智能体手机努比亚NaviX Ultra，加速智能体体验规模化落地",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3d4699596c4b"
+        ]
+      },
+      {
+        "itemId": "98da44afa4eb",
+        "title": "基元律动与无问芯穹达成战略合作，推进高质量Token供给与应用",
+        "summary": "2026年 9 月 15 日，AI基础设施公司基元律动（TokenRhythm）与无问芯穹（Infinigence AI）签署战略合作协议。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "98da44afa4eb"
+        ]
+      },
+      {
+        "itemId": "fdf6727a7c43",
+        "title": "西门子不造机器人，为什么机器人进厂的故事里总有它？",
+        "summary": "帮助成熟赛道复制方案，帮助新赛道长出场景。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fdf6727a7c43"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "8a01ddc35b3c",
+        "title": "Reimagining advertising with AI",
+        "takeaway": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integr…",
+        "evidenceItemIds": [
+          "8a01ddc35b3c"
+        ]
+      },
+      {
+        "itemId": "fa35a90e4718",
+        "title": "Dropbox Evolves Riviera Content Processing Platform to Support AI Workloads",
+        "takeaway": "Dropbox has evolved Riviera from a file preview service into a universal content processing platform supporting more th…",
+        "evidenceItemIds": [
+          "fa35a90e4718"
+        ]
+      },
+      {
+        "itemId": "af70d956b09f",
+        "title": "Grab's Agent Framework LLM-Kit Accelerates AI Agent Production Deployment",
+        "takeaway": "Grab has implemented LLM-Kit, a framework that standardizes over 500 internal agent services. This system enhances serv…",
+        "evidenceItemIds": [
+          "af70d956b09f"
+        ]
+      },
+      {
+        "itemId": "912e1c414db4",
+        "title": "Helping older adults use AI in everyday life",
+        "takeaway": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build prac…",
+        "evidenceItemIds": [
+          "912e1c414db4"
+        ]
+      },
+      {
+        "itemId": "ee925a5ee911",
+        "title": "Our framework for reporting model misalignment",
+        "takeaway": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unex…",
+        "evidenceItemIds": [
+          "ee925a5ee911"
+        ]
+      },
+      {
+        "itemId": "2dba65883bfa",
+        "title": "DevFest is back",
+        "takeaway": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and s…",
+        "evidenceItemIds": [
+          "2dba65883bfa"
+        ]
+      },
+      {
+        "itemId": "57f5ffea1d21",
+        "title": "GitHub Copilot's Project HydraFusion Promises Frontier Level Performance through Multi-Model Routing",
+        "takeaway": "GitHub's Project HydraFusion is a research preview for GitHub Copilot that enhances coding intelligence through runtime…",
+        "evidenceItemIds": [
+          "57f5ffea1d21"
+        ]
+      },
+      {
+        "itemId": "34f8a08d36d2",
+        "title": "How to connect AI usage to business value",
+        "takeaway": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and conne…",
+        "evidenceItemIds": [
+          "34f8a08d36d2"
+        ]
+      },
+      {
+        "itemId": "2205504f125a",
+        "title": "How workers are unlocking new ways of working",
+        "takeaway": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurrin…",
+        "evidenceItemIds": [
+          "2205504f125a"
+        ]
+      },
+      {
+        "itemId": "c1a6b4bc9d8d",
+        "title": "Independent Investigation of Hugging Face Incident Reveals How Agents Collaborated and Behaved",
+        "takeaway": "After six days of on-site investigation at OpenAI, a small team of METR and Redwood Research researchers provided an ac…",
+        "evidenceItemIds": [
+          "c1a6b4bc9d8d"
+        ]
+      },
+      {
+        "itemId": "d5ea129bdd13",
+        "title": "What's Scarier Than Agents Taking over Internet? CEO Cartel Trying Take over AI",
+        "takeaway": "Article URL: https://fractalsofchange.substack.com/p/q-whats-scarier-than-a-swarm-of-ai Comments URL: https://news.ycom…",
+        "evidenceItemIds": [
+          "d5ea129bdd13"
+        ]
+      },
+      {
+        "itemId": "3f05909619f6",
+        "title": "通用能力不打折，空间具身智能断层领先！ZDTaichu5.0-9B国产开源，跻身全球多模态第一梯队",
+        "takeaway": "九大空间测试10B规模通用模型中8项第一",
+        "evidenceItemIds": [
+          "3f05909619f6"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕tooling展开，建议优先关注《Reimagining advertising with AI》、《Dropbox Evolves Riviera Content Processing Platform to Support AI Workloads》、《Grab's Agent Framework LLM-Kit Accelerates AI Agent Production Deployment》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Helping older adults use AI in everyday life》、《How Fyxer built an AI executive assistant people trust》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "912e1c414db4",
+          "11b8340f3d1f",
+          "ca806977a473",
+          "f47b0899b6d0"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 4 条，建议优先阅读《DevFest is back》、《Independent Investigation of Hugging Face Incident Reveals How Agents Collaborated and Behaved》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "2dba65883bfa",
+          "c1a6b4bc9d8d",
+          "d5ea129bdd13",
+          "a86531e9d87b"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《Pangram – AI detector for text and images》、《Will AI Replace Your Doctor? Dr. Zeke Emanuel and AMA President Dr. John Whyte》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "833a39c5ad36",
+          "c854db9572a1",
+          "bc9a6b5aff82",
+          "cd277bedd983"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "tooling",
+        "lead": "工具链方向本期共 3 条，建议优先阅读《Reimagining advertising with AI》、《Dropbox Evolves Riviera Content Processing Platform to Support AI Workloads》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "8a01ddc35b3c",
+          "fa35a90e4718",
+          "af70d956b09f"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "7d56dec756f10f91e5eb9ef1b326a0772fdca8c34d4b5b934d032c3c33b21130",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-09-17T01:28:35.138Z",
+      "finishedAt": "2026-09-17T01:29:18.468Z",
+      "durationMs": 43520,
+      "inputCount": 36,
+      "processedCount": 36,
+      "fallbackCount": 36,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 36,
+      "failureStats": {
+        "totalFailed": 36,
+        "timeout": 0,
+        "http": 36,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 68,
+        "splitRetryCount": 32
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-10",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-03",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-09-17T01:29:21.226Z",
+      "finishedAt": "2026-09-17T01:29:41.114Z",
+      "durationMs": 19888,
+      "inputCount": 36,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "8a01ddc35b3c",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Reimagining advertising with AI",
+        "link": "https://openai.com/index/reimagining-advertising-with-ai",
+        "contentSnippet": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integrations with HubSpot and Shopify.",
+        "publishedAt": "2026-09-16T13:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 125,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fa35a90e4718",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Dropbox Evolves Riviera Content Processing Platform to Support AI Workloads",
+        "link": "https://www.infoq.com/news/2026/09/dropbox-riviera-ai-platform/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Dropbox has evolved Riviera from a file preview service into a universal content processing platform supporting more than 300 file formats and over 100 transformation capabilities. Processing hundreds of thousands of transformations per second, Riviera now supports Search, Replay, Sign, and Dash, while its APIs enable asynchronous content extraction for AI and RAG workflows. By Leela Kumili",
+        "publishedAt": "2026-09-16T14:42:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.68,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 73.68421052631578,
+          "finalScore": 73.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "af70d956b09f",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Grab's Agent Framework LLM-Kit Accelerates AI Agent Production Deployment",
+        "link": "https://www.infoq.com/news/2026/09/grab-agent-platform/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Grab has implemented LLM-Kit, a framework that standardizes over 500 internal agent services. This system enhances service integration, evaluation, and secret handling, reducing the time to deploy new AI agents from two weeks to one hour. It centralizes infrastructure management, allowing runtime tool discovery and flexible model integration, while maintaining operational control. By Hien Luu",
+        "publishedAt": "2026-09-15T09:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.68,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 73.68421052631578,
+          "finalScore": 73.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "912e1c414db4",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Helping older adults use AI in everyday life",
+        "link": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+        "contentSnippet": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
+        "publishedAt": "2026-09-16T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.53,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 60.526315789473685,
+          "finalScore": 60.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ee925a5ee911",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Our framework for reporting model misalignment",
+        "link": "https://openai.com/index/model-misalignment-reporting-framework",
+        "contentSnippet": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior.",
+        "publishedAt": "2026-09-16T17:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.53,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 60.526315789473685,
+          "finalScore": 60.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 36,
+      "normalizedCount": 36,
+      "dedupedCount": 36,
+      "highImportanceCount": 1,
+      "mediumImportanceCount": 2,
+      "lowImportanceCount": 33,
+      "categoryBreakdown": {
+        "open-source": 3,
+        "tooling": 3,
+        "agent": 6,
+        "research": 2,
+        "industry-news": 5,
+        "tutorial": 1,
+        "other": 16
+      }
+    },
+    "warnings": [
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[MarkTechPost] 抓取失败: HTTP 403",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：36/36",
+      "LLM 分类打分回退明细（前 3/36）：minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06fa7546f92e8f458287c6d0b31 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06fa7547a5189601ea90c124d60 | minimax_http_429:{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\"},\"request_id\":\"06fa7548566ab489264242bf203",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:429 | minimax_http_failed:429 | minimax_http_failed:429",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
