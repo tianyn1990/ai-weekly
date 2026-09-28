@@ -1,0 +1,1880 @@
+{
+  "runId": "weekly-1790559324850",
+  "generatedAt": "2026-09-28T01:35:24.826Z",
+  "reviewStartedAt": "2026-09-28T01:35:24.826Z",
+  "reportDate": "2026-09-28",
+  "mode": "weekly",
+  "reviewStatus": "pending_review",
+  "reviewStage": "final_review",
+  "reviewDeadlineAt": "2026-09-28T04:30:00.000Z",
+  "reviewReason": "仍在审核窗口内，等待人工审核",
+  "publishStatus": "pending",
+  "shouldPublish": false,
+  "publishReason": "waiting_for_manual_review",
+  "publishedAt": null,
+  "outlineApproved": true,
+  "finalApproved": false,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 24,
+    "normalizedCount": 24,
+    "dedupedCount": 24,
+    "highImportanceCount": 2,
+    "mediumImportanceCount": 2,
+    "lowImportanceCount": 20,
+    "categoryBreakdown": {
+      "open-source": 3,
+      "tooling": 2,
+      "agent": 2,
+      "research": 2,
+      "industry-news": 3,
+      "tutorial": 1,
+      "other": 11
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "da8e11e086df",
+      "title": "Show HN: Ghostfox – Self-hosted stealth browser for AI agents",
+      "summary": "Article URL: https://github.com/autokeren/ghostfox Comments URL: https://news.ycombinator.com/item?id=49872295 Points: …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "da8e11e086df"
+      ]
+    },
+    {
+      "itemId": "2ee934b07581",
+      "title": "From Agent Authorization to AI Production Evaluation: QCon AI New York 2026",
+      "summary": "QCon AI New York has confirmed 23 sessions covering agent authorization, production guardrails, shared inference infras…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "2ee934b07581"
+      ]
+    },
+    {
+      "itemId": "2774cfd80a0b",
+      "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+      "summary": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loadin…",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "2774cfd80a0b"
+      ]
+    },
+    {
+      "itemId": "e69cb799ce33",
+      "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction Across Laptop and Cloud",
+      "summary": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed inf…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "e69cb799ce33"
+      ]
+    },
+    {
+      "itemId": "0d38ca402cf2",
+      "title": "Cambrian Explosion of AI",
+      "summary": "Article URL: https://debarshibasak.github.io/readables/blogs/cambrian-explosion Comments URL: https://news.ycombinator.…",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "0d38ca402cf2"
+      ]
+    },
+    {
+      "itemId": "cce2b6fbe9bd",
+      "title": "AI agent kill switch urged by Okta-led alliance – how businesses could make it work",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "cce2b6fbe9bd"
+      ]
+    },
+    {
+      "itemId": "c7a2745a032e",
+      "title": "量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c7a2745a032e"
+      ]
+    },
+    {
+      "itemId": "e9d4a1884531",
+      "title": "量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门",
+      "summary": "想让开发者“说句话就能跑量子计算”",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e9d4a1884531"
+      ]
+    },
+    {
+      "itemId": "c413a234311b",
+      "title": "又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录",
+      "summary": "中秋假期文具OpenRouter调用日榜榜首",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c413a234311b"
+      ]
+    },
+    {
+      "itemId": "a55b21c93cc8",
+      "title": "索辰科技加码世界模型，与战略投资企业美梦空间联合发布具身模型与物理测评标准",
+      "summary": "“世界模型”开始成为具身智能跨越商业化“奇点”的新叙事。",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "a55b21c93cc8"
+      ]
+    },
+    {
+      "itemId": "a6f8bec579ad",
+      "title": "AI开始研究Physical AI：FSD级团队亮出首版模型Simate-beta，空降RoboDojo",
+      "summary": "Simate将训练、推理与评测全流程接入自研Infra，通过极致的任务编排与资源调度，同时并行推进数十条相互独立的研究路线。",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "a6f8bec579ad"
+      ]
+    },
+    {
+      "itemId": "37560ea76b71",
+      "title": "Home Made CobbleDB Replaces DynamoDB at Perplexity to Cut Query Latency 5x and Reduce Cloud Storage",
+      "summary": "Perplexity has migrated its search infrastructure from Amazon DynamoDB to CobbleDB, an internally developed key-value s…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "37560ea76b71"
+      ]
+    },
+    {
+      "itemId": "2abbde252c9c",
+      "title": "Stateless MCP Removes Session Affinity Requirements for AWS Server Deployments",
+      "summary": "AWS details how the latest Model Context Protocol specification removes protocol-level sessions, sticky-session require…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2abbde252c9c"
+      ]
+    },
+    {
+      "itemId": "2198d5e51d33",
+      "title": "AI is not an alien, it's our offspring: Reframing the alignment problem",
+      "summary": "Article URL: https://sovereignintelligence1313mhz.substack.com/p/the-titan-dilemma Comments URL: https://news.ycombinat…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2198d5e51d33"
+      ]
+    },
+    {
+      "itemId": "91ecd684f189",
+      "title": "From Geisha Face Paint to Servers, Sakai Chemical Emerges as AI Linchpin",
+      "summary": "Article URL: https://www.bloomberg.com/news/articles/2026-09-27/from-geisha-face-paint-to-servers-sakai-chemical-emerge…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "91ecd684f189"
+      ]
+    },
+    {
+      "itemId": "b326c2a892a0",
+      "title": "Financing of historic AI buildout raises systemic risks in US, researcher says",
+      "summary": "Article URL: https://www.reuters.com/business/finance/financing-historic-ai-buildout-raises-systemic-risks-us-researche…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b326c2a892a0"
+      ]
+    },
+    {
+      "itemId": "7e32dae6dc66",
+      "title": "How do I promote an anti AI slop tool I built? It's free and genuine",
+      "summary": "I am scared of Show HN: what if it is a flop show :( Comments URL: https://news.ycombinator.com/item?id=49872106 Points…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "7e32dae6dc66"
+      ]
+    },
+    {
+      "itemId": "2c743b1ab7b7",
+      "title": "啥题啊能干崩OpenAI最强模型训练…",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2c743b1ab7b7"
+      ]
+    },
+    {
+      "itemId": "6513cd28fb6a",
+      "title": "InfoQ Launches High-Performing Teams Certification Program",
+      "summary": "InfoQ has opened enrollment for a new five-week certification program covering engineering team design, delivery flow, …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "6513cd28fb6a"
+      ]
+    },
+    {
+      "itemId": "3cc9dff5d08b",
+      "title": "This one WatchOS 27 feature just solved my biggest issue with Apple Watch",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3cc9dff5d08b"
+      ]
+    },
+    {
+      "itemId": "d0d671489138",
+      "title": "Your LG TV is constantly collecting your data – here’s how to stop it",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d0d671489138"
+      ]
+    },
+    {
+      "itemId": "8bfa2acc93fa",
+      "title": "Microsoft’s new Copilot app puts everything in one place – but the price is ‘evolving’",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "8bfa2acc93fa"
+      ]
+    },
+    {
+      "itemId": "572f4a279916",
+      "title": "Google Wallet got a lot of new tricks in 2026 – these 5 are my favorites",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "572f4a279916"
+      ]
+    },
+    {
+      "itemId": "b00869c67951",
+      "title": "Microsoft’s Surface Mouse is back, now with haptic feedback – and I need it",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b00869c67951"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "da8e11e086df",
+      "title": "Show HN: Ghostfox – Self-hosted stealth browser for AI agents",
+      "takeaway": "Article URL: https://github.com/autokeren/ghostfox Comments URL: https://news.ycombinator.com/item?id=49872295 Points: …",
+      "evidenceItemIds": [
+        "da8e11e086df"
+      ]
+    },
+    {
+      "itemId": "2ee934b07581",
+      "title": "From Agent Authorization to AI Production Evaluation: QCon AI New York 2026",
+      "takeaway": "QCon AI New York has confirmed 23 sessions covering agent authorization, production guardrails, shared inference infras…",
+      "evidenceItemIds": [
+        "2ee934b07581"
+      ]
+    },
+    {
+      "itemId": "2774cfd80a0b",
+      "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+      "takeaway": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loadin…",
+      "evidenceItemIds": [
+        "2774cfd80a0b"
+      ]
+    },
+    {
+      "itemId": "e69cb799ce33",
+      "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction Across Laptop and Cloud",
+      "takeaway": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed inf…",
+      "evidenceItemIds": [
+        "e69cb799ce33"
+      ]
+    },
+    {
+      "itemId": "0d38ca402cf2",
+      "title": "Cambrian Explosion of AI",
+      "takeaway": "Article URL: https://debarshibasak.github.io/readables/blogs/cambrian-explosion Comments URL: https://news.ycombinator.…",
+      "evidenceItemIds": [
+        "0d38ca402cf2"
+      ]
+    },
+    {
+      "itemId": "cce2b6fbe9bd",
+      "title": "AI agent kill switch urged by Okta-led alliance – how businesses could make it work",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "cce2b6fbe9bd"
+      ]
+    },
+    {
+      "itemId": "c7a2745a032e",
+      "title": "量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "c7a2745a032e"
+      ]
+    },
+    {
+      "itemId": "e9d4a1884531",
+      "title": "量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门",
+      "takeaway": "想让开发者“说句话就能跑量子计算”",
+      "evidenceItemIds": [
+        "e9d4a1884531"
+      ]
+    },
+    {
+      "itemId": "c413a234311b",
+      "title": "又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录",
+      "takeaway": "中秋假期文具OpenRouter调用日榜榜首",
+      "evidenceItemIds": [
+        "c413a234311b"
+      ]
+    },
+    {
+      "itemId": "a55b21c93cc8",
+      "title": "索辰科技加码世界模型，与战略投资企业美梦空间联合发布具身模型与物理测评标准",
+      "takeaway": "“世界模型”开始成为具身智能跨越商业化“奇点”的新叙事。",
+      "evidenceItemIds": [
+        "a55b21c93cc8"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《Show HN: Ghostfox – Self-hosted stealth browser for AI agents》、《From Agent Authorization to AI Production Evaluation: QCon AI New York 2026》、《GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层》、《量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "c7a2745a032e",
+        "e9d4a1884531",
+        "c413a234311b",
+        "37560ea76b71"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 3 条，建议优先阅读《Show HN: Ghostfox – Self-hosted stealth browser for AI agents》、《GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "da8e11e086df",
+        "2774cfd80a0b",
+        "0d38ca402cf2"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 3 条，建议优先阅读《索辰科技加码世界模型，与战略投资企业美梦空间联合发布具身模型与物理测评标准》、《AI is not an alien, it's our offspring: Reframing the alignment problem》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "a55b21c93cc8",
+        "2198d5e51d33",
+        "91ecd684f189"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 2 条，建议优先阅读《From Agent Authorization to AI Production Evaluation: QCon AI New York 2026》、《AI agent kill switch urged by Okta-led alliance – how businesses could make it work》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "2ee934b07581",
+        "cce2b6fbe9bd"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "bfb71b04209abf5fc10d58bbb4eb8e423b9d7724cecda2be163834b92a7962d7",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-09-28T01:35:57.085Z",
+    "finishedAt": "2026-09-28T01:36:21.685Z",
+    "durationMs": 24600,
+    "inputCount": 24,
+    "processedCount": 24,
+    "fallbackCount": 24,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 24,
+    "failureStats": {
+      "totalFailed": 24,
+      "timeout": 0,
+      "http": 24,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 45,
+      "splitRetryCount": 21
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-21",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-14",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 1
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-09-28T01:36:21.751Z",
+    "finishedAt": "2026-09-28T01:36:28.954Z",
+    "durationMs": 7203,
+    "inputCount": 24,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 24,
+      "timeout": 0,
+      "http": 24,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 24,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "da8e11e086df",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Show HN: Ghostfox – Self-hosted stealth browser for AI agents",
+      "link": "https://github.com/autokeren/ghostfox",
+      "contentSnippet": "Article URL: https://github.com/autokeren/ghostfox Comments URL: https://news.ycombinator.com/item?id=49872295 Points: 1 # Comments: 0",
+      "publishedAt": "2026-09-28T00:45:37.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 117,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "2ee934b07581",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "From Agent Authorization to AI Production Evaluation: QCon AI New York 2026",
+      "link": "https://www.infoq.com/news/2026/09/qcon-ai-newyork-2026-sessions/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "QCon AI New York has confirmed 23 sessions covering agent authorization, production guardrails, shared inference infrastructure, and the evaluation of AI systems after deployment. By Artenisa Chatziou",
+      "publishedAt": "2026-09-25T11:00:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 94.74,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 115,
+        "ruleScoreNormalized": 94.73684210526315,
+        "finalScore": 94.74,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "2774cfd80a0b",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+      "link": "https://www.infoq.com/news/2026/09/gke-pod-snapshots-benchmarks/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loading in 37 seconds. The feature checkpoints CPU and GPU memory through gVisor into Cloud Storage. Practitioners have asked whether invalidation is the harder problem, since snapshots match on a spec hash, machine series, and kernel and driver versions. By Steef-Jan Wiggers",
+      "publishedAt": "2026-09-27T06:46:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 68.42,
+      "importance": "medium",
+      "recommendationReason": "评测与性能信息",
+      "scoreBreakdown": {
+        "ruleScore": 105,
+        "ruleScoreNormalized": 68.42105263157895,
+        "finalScore": 68.42,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "e69cb799ce33",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction Across Laptop and Cloud",
+      "link": "https://www.infoq.com/news/2026/09/docker-cloud-sandboxes/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed infrastructure. Built on hardware-enforced microVM isolation, the platform provides a consistent execution environment and unified CLI workflows for seamlessly moving workloads from local machines to the cloud. By Sergio De Simone",
+      "publishedAt": "2026-09-26T17:00:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 68.42,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 105,
+        "ruleScoreNormalized": 68.42105263157895,
+        "finalScore": 68.42,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "0d38ca402cf2",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Cambrian Explosion of AI",
+      "link": "https://debarshibasak.github.io/readables/blogs/cambrian-explosion",
+      "contentSnippet": "Article URL: https://debarshibasak.github.io/readables/blogs/cambrian-explosion Comments URL: https://news.ycombinator.com/item?id=49872200 Points: 2 # Comments: 1",
+      "publishedAt": "2026-09-28T00:25:57.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 60.53,
+      "importance": "low",
+      "recommendationReason": "开源生态更新",
+      "scoreBreakdown": {
+        "ruleScore": 102,
+        "ruleScoreNormalized": 60.526315789473685,
+        "finalScore": 60.53,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "cce2b6fbe9bd",
+      "sourceId": "zdnet-ai",
+      "sourceName": "ZDNet AI",
+      "title": "AI agent kill switch urged by Okta-led alliance – how businesses could make it work",
+      "link": "https://www.zdnet.com/innovation/okta-blueprint-alliance-ai-agents-oauth-kill-switch/",
+      "contentSnippet": "",
+      "publishedAt": "2026-09-24T16:01:19.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 39.47,
+      "importance": "low",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 94,
+        "ruleScoreNormalized": 39.473684210526315,
+        "finalScore": 39.47,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "c7a2745a032e",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层",
+      "link": "https://www.qbitai.com/2026/09/498633.html",
+      "contentSnippet": "",
+      "publishedAt": "2026-09-27T14:20:35.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 34.21,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 92,
+        "ruleScoreNormalized": 34.21052631578947,
+        "finalScore": 34.21,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "e9d4a1884531",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门",
+      "link": "https://www.qbitai.com/2026/09/498605.html",
+      "contentSnippet": "想让开发者“说句话就能跑量子计算”",
+      "publishedAt": "2026-09-27T13:57:57.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 34.21,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 92,
+        "ruleScoreNormalized": 34.21052631578947,
+        "finalScore": 34.21,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Google AI Blog] 抓取失败: This operation was aborted",
+    "[MarkTechPost] 抓取失败: HTTP 403",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+    "LLM 分类打分部分回退：24/24",
+    "LLM 分类打分回退明细（前 3/24）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0708f7808f3bfcf93b6b7c5554c57318\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0708f781d67c2ef821cddb86384aac77\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0708f781b79c23a42499d46dffe750dc\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=24：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=45, split_retry=21",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/24）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=24, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=24, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Show HN: Ghostfox – Self-hosted stealth browser for AI agents\n- From Agent Authorization to AI Production Evaluation: QCon AI New York 2026\n- GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management\n- Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction Across Laptop and Cloud\n- Cambrian Explosion of AI\n\n### 分类覆盖（大纲）\n- open-source: 3 条\n- agent: 2 条\n- tooling: 2 条\n- other: 11 条\n- industry-news: 3 条\n- research: 2 条\n- tutorial: 1 条",
+    "rankedItems": [
+      {
+        "id": "da8e11e086df",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Ghostfox – Self-hosted stealth browser for AI agents",
+        "link": "https://github.com/autokeren/ghostfox",
+        "contentSnippet": "Article URL: https://github.com/autokeren/ghostfox Comments URL: https://news.ycombinator.com/item?id=49872295 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-28T00:45:37.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2ee934b07581",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "From Agent Authorization to AI Production Evaluation: QCon AI New York 2026",
+        "link": "https://www.infoq.com/news/2026/09/qcon-ai-newyork-2026-sessions/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "QCon AI New York has confirmed 23 sessions covering agent authorization, production guardrails, shared inference infrastructure, and the evaluation of AI systems after deployment. By Artenisa Chatziou",
+        "publishedAt": "2026-09-25T11:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 94.74,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 94.73684210526315,
+          "finalScore": 94.74,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2774cfd80a0b",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+        "link": "https://www.infoq.com/news/2026/09/gke-pod-snapshots-benchmarks/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loading in 37 seconds. The feature checkpoints CPU and GPU memory through gVisor into Cloud Storage. Practitioners have asked whether invalidation is the harder problem, since snapshots match on a spec hash, machine series, and kernel and driver versions. By Steef-Jan Wiggers",
+        "publishedAt": "2026-09-27T06:46:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 68.42,
+        "importance": "medium",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 68.42105263157895,
+          "finalScore": 68.42,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e69cb799ce33",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction Across Laptop and Cloud",
+        "link": "https://www.infoq.com/news/2026/09/docker-cloud-sandboxes/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed infrastructure. Built on hardware-enforced microVM isolation, the platform provides a consistent execution environment and unified CLI workflows for seamlessly moving workloads from local machines to the cloud. By Sergio De Simone",
+        "publishedAt": "2026-09-26T17:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 68.42,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 68.42105263157895,
+          "finalScore": 68.42,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0d38ca402cf2",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Cambrian Explosion of AI",
+        "link": "https://debarshibasak.github.io/readables/blogs/cambrian-explosion",
+        "contentSnippet": "Article URL: https://debarshibasak.github.io/readables/blogs/cambrian-explosion Comments URL: https://news.ycombinator.com/item?id=49872200 Points: 2 # Comments: 1",
+        "publishedAt": "2026-09-28T00:25:57.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.53,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 60.526315789473685,
+          "finalScore": 60.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cce2b6fbe9bd",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "AI agent kill switch urged by Okta-led alliance – how businesses could make it work",
+        "link": "https://www.zdnet.com/innovation/okta-blueprint-alliance-ai-agents-oauth-kill-switch/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-24T16:01:19.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 39.47,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 39.473684210526315,
+          "finalScore": 39.47,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c7a2745a032e",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层",
+        "link": "https://www.qbitai.com/2026/09/498633.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-27T14:20:35.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 34.21052631578947,
+          "finalScore": 34.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e9d4a1884531",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门",
+        "link": "https://www.qbitai.com/2026/09/498605.html",
+        "contentSnippet": "想让开发者“说句话就能跑量子计算”",
+        "publishedAt": "2026-09-27T13:57:57.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 34.21052631578947,
+          "finalScore": 34.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c413a234311b",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录",
+        "link": "https://www.qbitai.com/2026/09/498584.html",
+        "contentSnippet": "中秋假期文具OpenRouter调用日榜榜首",
+        "publishedAt": "2026-09-27T13:40:02.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 34.21052631578947,
+          "finalScore": 34.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a55b21c93cc8",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "索辰科技加码世界模型，与战略投资企业美梦空间联合发布具身模型与物理测评标准",
+        "link": "https://www.qbitai.com/2026/09/498478.html",
+        "contentSnippet": "“世界模型”开始成为具身智能跨越商业化“奇点”的新叙事。",
+        "publishedAt": "2026-09-26T11:49:43.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.21,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 34.21052631578947,
+          "finalScore": 34.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a6f8bec579ad",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "AI开始研究Physical AI：FSD级团队亮出首版模型Simate-beta，空降RoboDojo",
+        "link": "https://www.qbitai.com/2026/09/498271.html",
+        "contentSnippet": "Simate将训练、推理与评测全流程接入自研Infra，通过极致的任务编排与资源调度，同时并行推进数十条相互独立的研究路线。",
+        "publishedAt": "2026-09-26T09:07:41.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.21,
+        "importance": "low",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 34.21052631578947,
+          "finalScore": 34.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "37560ea76b71",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Home Made CobbleDB Replaces DynamoDB at Perplexity to Cut Query Latency 5x and Reduce Cloud Storage",
+        "link": "https://www.infoq.com/news/2026/09/cobbledb-perplexity/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Perplexity has migrated its search infrastructure from Amazon DynamoDB to CobbleDB, an internally developed key-value store in Rust. This change reduced latency and costs associated with handling large document batches. The new architecture supports high query volumes more efficiently, achieving improved latency and reduced storage expenses while managing significant production traffic. By Olimpiu Pop",
+        "publishedAt": "2026-09-25T14:14:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.95,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.947368421052634,
+          "finalScore": 28.95,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2abbde252c9c",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Stateless MCP Removes Session Affinity Requirements for AWS Server Deployments",
+        "link": "https://www.infoq.com/news/2026/09/aws-stateless-mcp/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "AWS details how the latest Model Context Protocol specification removes protocol-level sessions, sticky-session requirements, and session storage for remote MCP servers. The change enables independent request routing and simpler horizontal scaling while shifting application state, retries, observability, and idempotency concerns to other layers. By Leela Kumili",
+        "publishedAt": "2026-09-25T12:58:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.95,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.947368421052634,
+          "finalScore": 28.95,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2198d5e51d33",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI is not an alien, it's our offspring: Reframing the alignment problem",
+        "link": "https://sovereignintelligence1313mhz.substack.com/p/the-titan-dilemma",
+        "contentSnippet": "Article URL: https://sovereignintelligence1313mhz.substack.com/p/the-titan-dilemma Comments URL: https://news.ycombinator.com/item?id=49872488 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-28T01:24:55.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.95,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.947368421052634,
+          "finalScore": 28.95,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "91ecd684f189",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "From Geisha Face Paint to Servers, Sakai Chemical Emerges as AI Linchpin",
+        "link": "https://www.bloomberg.com/news/articles/2026-09-27/from-geisha-face-paint-to-servers-sakai-chemical-emerges-as-ai-linchpin",
+        "contentSnippet": "Article URL: https://www.bloomberg.com/news/articles/2026-09-27/from-geisha-face-paint-to-servers-sakai-chemical-emerges-as-ai-linchpin Comments URL: https://news.ycombinator.com/item?id=49872409 Points: 2 # Comments: 0",
+        "publishedAt": "2026-09-28T01:07:08.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.95,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.947368421052634,
+          "finalScore": 28.95,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b326c2a892a0",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Financing of historic AI buildout raises systemic risks in US, researcher says",
+        "link": "https://www.reuters.com/business/finance/financing-historic-ai-buildout-raises-systemic-risks-us-researcher-says-2026-09-24/",
+        "contentSnippet": "Article URL: https://www.reuters.com/business/finance/financing-historic-ai-buildout-raises-systemic-risks-us-researcher-says-2026-09-24/ Comments URL: https://news.ycombinator.com/item?id=49872317 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-28T00:49:55.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.95,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.947368421052634,
+          "finalScore": 28.95,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7e32dae6dc66",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "How do I promote an anti AI slop tool I built? It's free and genuine",
+        "link": "https://news.ycombinator.com/item?id=49872106",
+        "contentSnippet": "I am scared of Show HN: what if it is a flop show :( Comments URL: https://news.ycombinator.com/item?id=49872106 Points: 2 # Comments: 2",
+        "publishedAt": "2026-09-28T00:08:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.95,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.947368421052634,
+          "finalScore": 28.95,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2c743b1ab7b7",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "啥题啊能干崩OpenAI最强模型训练…",
+        "link": "https://www.qbitai.com/2026/09/498546.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-27T09:44:16.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6513cd28fb6a",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "InfoQ Launches High-Performing Teams Certification Program",
+        "link": "https://www.infoq.com/news/2026/09/high-performing-teams-program/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "InfoQ has opened enrollment for a new five-week certification program covering engineering team design, delivery flow, AI-enabled work, and metrics, facilitated by InfoQ editor and podcast co-host Olimpiu Pop. By Artenisa Chatziou",
+        "publishedAt": "2026-09-24T15:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 15.79,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 85,
+          "ruleScoreNormalized": 15.789473684210526,
+          "finalScore": 15.79,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3cc9dff5d08b",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "This one WatchOS 27 feature just solved my biggest issue with Apple Watch",
+        "link": "https://www.zdnet.com/uncategorized/watchos-27-update-fix-apple-watch/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-25T16:51:43.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d0d671489138",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Your LG TV is constantly collecting your data – here’s how to stop it",
+        "link": "https://www.zdnet.com/home-and-office/lg-tv-data-collection-how-to-factory-reset-and-why-you-need-to/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-25T12:18:24.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8bfa2acc93fa",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Microsoft’s new Copilot app puts everything in one place – but the price is ‘evolving’",
+        "link": "https://www.zdnet.com/innovation/microsoft-new-copilot-unified-ai-app/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-25T12:00:14.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "572f4a279916",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Google Wallet got a lot of new tricks in 2026 – these 5 are my favorites",
+        "link": "https://www.zdnet.com/tech/new-google-wallet-features-2026/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-24T20:31:27.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b00869c67951",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Microsoft’s Surface Mouse is back, now with haptic feedback – and I need it",
+        "link": "https://www.zdnet.com/home-and-office/microsoft-surface-mouse-haptic-feedback-customizable/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-24T16:22:13.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "da8e11e086df",
+        "title": "Show HN: Ghostfox – Self-hosted stealth browser for AI agents",
+        "summary": "Article URL: https://github.com/autokeren/ghostfox Comments URL: https://news.ycombinator.com/item?id=49872295 Points: …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "da8e11e086df"
+        ]
+      },
+      {
+        "itemId": "2ee934b07581",
+        "title": "From Agent Authorization to AI Production Evaluation: QCon AI New York 2026",
+        "summary": "QCon AI New York has confirmed 23 sessions covering agent authorization, production guardrails, shared inference infras…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "2ee934b07581"
+        ]
+      },
+      {
+        "itemId": "2774cfd80a0b",
+        "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+        "summary": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loadin…",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "2774cfd80a0b"
+        ]
+      },
+      {
+        "itemId": "e69cb799ce33",
+        "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction Across Laptop and Cloud",
+        "summary": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed inf…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "e69cb799ce33"
+        ]
+      },
+      {
+        "itemId": "0d38ca402cf2",
+        "title": "Cambrian Explosion of AI",
+        "summary": "Article URL: https://debarshibasak.github.io/readables/blogs/cambrian-explosion Comments URL: https://news.ycombinator.…",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "0d38ca402cf2"
+        ]
+      },
+      {
+        "itemId": "cce2b6fbe9bd",
+        "title": "AI agent kill switch urged by Okta-led alliance – how businesses could make it work",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "cce2b6fbe9bd"
+        ]
+      },
+      {
+        "itemId": "c7a2745a032e",
+        "title": "量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c7a2745a032e"
+        ]
+      },
+      {
+        "itemId": "e9d4a1884531",
+        "title": "量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门",
+        "summary": "想让开发者“说句话就能跑量子计算”",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e9d4a1884531"
+        ]
+      },
+      {
+        "itemId": "c413a234311b",
+        "title": "又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录",
+        "summary": "中秋假期文具OpenRouter调用日榜榜首",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c413a234311b"
+        ]
+      },
+      {
+        "itemId": "a55b21c93cc8",
+        "title": "索辰科技加码世界模型，与战略投资企业美梦空间联合发布具身模型与物理测评标准",
+        "summary": "“世界模型”开始成为具身智能跨越商业化“奇点”的新叙事。",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "a55b21c93cc8"
+        ]
+      },
+      {
+        "itemId": "a6f8bec579ad",
+        "title": "AI开始研究Physical AI：FSD级团队亮出首版模型Simate-beta，空降RoboDojo",
+        "summary": "Simate将训练、推理与评测全流程接入自研Infra，通过极致的任务编排与资源调度，同时并行推进数十条相互独立的研究路线。",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "a6f8bec579ad"
+        ]
+      },
+      {
+        "itemId": "37560ea76b71",
+        "title": "Home Made CobbleDB Replaces DynamoDB at Perplexity to Cut Query Latency 5x and Reduce Cloud Storage",
+        "summary": "Perplexity has migrated its search infrastructure from Amazon DynamoDB to CobbleDB, an internally developed key-value s…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "37560ea76b71"
+        ]
+      },
+      {
+        "itemId": "2abbde252c9c",
+        "title": "Stateless MCP Removes Session Affinity Requirements for AWS Server Deployments",
+        "summary": "AWS details how the latest Model Context Protocol specification removes protocol-level sessions, sticky-session require…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2abbde252c9c"
+        ]
+      },
+      {
+        "itemId": "2198d5e51d33",
+        "title": "AI is not an alien, it's our offspring: Reframing the alignment problem",
+        "summary": "Article URL: https://sovereignintelligence1313mhz.substack.com/p/the-titan-dilemma Comments URL: https://news.ycombinat…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2198d5e51d33"
+        ]
+      },
+      {
+        "itemId": "91ecd684f189",
+        "title": "From Geisha Face Paint to Servers, Sakai Chemical Emerges as AI Linchpin",
+        "summary": "Article URL: https://www.bloomberg.com/news/articles/2026-09-27/from-geisha-face-paint-to-servers-sakai-chemical-emerge…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "91ecd684f189"
+        ]
+      },
+      {
+        "itemId": "b326c2a892a0",
+        "title": "Financing of historic AI buildout raises systemic risks in US, researcher says",
+        "summary": "Article URL: https://www.reuters.com/business/finance/financing-historic-ai-buildout-raises-systemic-risks-us-researche…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b326c2a892a0"
+        ]
+      },
+      {
+        "itemId": "7e32dae6dc66",
+        "title": "How do I promote an anti AI slop tool I built? It's free and genuine",
+        "summary": "I am scared of Show HN: what if it is a flop show :( Comments URL: https://news.ycombinator.com/item?id=49872106 Points…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "7e32dae6dc66"
+        ]
+      },
+      {
+        "itemId": "2c743b1ab7b7",
+        "title": "啥题啊能干崩OpenAI最强模型训练…",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2c743b1ab7b7"
+        ]
+      },
+      {
+        "itemId": "6513cd28fb6a",
+        "title": "InfoQ Launches High-Performing Teams Certification Program",
+        "summary": "InfoQ has opened enrollment for a new five-week certification program covering engineering team design, delivery flow, …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "6513cd28fb6a"
+        ]
+      },
+      {
+        "itemId": "3cc9dff5d08b",
+        "title": "This one WatchOS 27 feature just solved my biggest issue with Apple Watch",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3cc9dff5d08b"
+        ]
+      },
+      {
+        "itemId": "d0d671489138",
+        "title": "Your LG TV is constantly collecting your data – here’s how to stop it",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d0d671489138"
+        ]
+      },
+      {
+        "itemId": "8bfa2acc93fa",
+        "title": "Microsoft’s new Copilot app puts everything in one place – but the price is ‘evolving’",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "8bfa2acc93fa"
+        ]
+      },
+      {
+        "itemId": "572f4a279916",
+        "title": "Google Wallet got a lot of new tricks in 2026 – these 5 are my favorites",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "572f4a279916"
+        ]
+      },
+      {
+        "itemId": "b00869c67951",
+        "title": "Microsoft’s Surface Mouse is back, now with haptic feedback – and I need it",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b00869c67951"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "da8e11e086df",
+        "title": "Show HN: Ghostfox – Self-hosted stealth browser for AI agents",
+        "takeaway": "Article URL: https://github.com/autokeren/ghostfox Comments URL: https://news.ycombinator.com/item?id=49872295 Points: …",
+        "evidenceItemIds": [
+          "da8e11e086df"
+        ]
+      },
+      {
+        "itemId": "2ee934b07581",
+        "title": "From Agent Authorization to AI Production Evaluation: QCon AI New York 2026",
+        "takeaway": "QCon AI New York has confirmed 23 sessions covering agent authorization, production guardrails, shared inference infras…",
+        "evidenceItemIds": [
+          "2ee934b07581"
+        ]
+      },
+      {
+        "itemId": "2774cfd80a0b",
+        "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+        "takeaway": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loadin…",
+        "evidenceItemIds": [
+          "2774cfd80a0b"
+        ]
+      },
+      {
+        "itemId": "e69cb799ce33",
+        "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction Across Laptop and Cloud",
+        "takeaway": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed inf…",
+        "evidenceItemIds": [
+          "e69cb799ce33"
+        ]
+      },
+      {
+        "itemId": "0d38ca402cf2",
+        "title": "Cambrian Explosion of AI",
+        "takeaway": "Article URL: https://debarshibasak.github.io/readables/blogs/cambrian-explosion Comments URL: https://news.ycombinator.…",
+        "evidenceItemIds": [
+          "0d38ca402cf2"
+        ]
+      },
+      {
+        "itemId": "cce2b6fbe9bd",
+        "title": "AI agent kill switch urged by Okta-led alliance – how businesses could make it work",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "cce2b6fbe9bd"
+        ]
+      },
+      {
+        "itemId": "c7a2745a032e",
+        "title": "量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "c7a2745a032e"
+        ]
+      },
+      {
+        "itemId": "e9d4a1884531",
+        "title": "量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门",
+        "takeaway": "想让开发者“说句话就能跑量子计算”",
+        "evidenceItemIds": [
+          "e9d4a1884531"
+        ]
+      },
+      {
+        "itemId": "c413a234311b",
+        "title": "又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录",
+        "takeaway": "中秋假期文具OpenRouter调用日榜榜首",
+        "evidenceItemIds": [
+          "c413a234311b"
+        ]
+      },
+      {
+        "itemId": "a55b21c93cc8",
+        "title": "索辰科技加码世界模型，与战略投资企业美梦空间联合发布具身模型与物理测评标准",
+        "takeaway": "“世界模型”开始成为具身智能跨越商业化“奇点”的新叙事。",
+        "evidenceItemIds": [
+          "a55b21c93cc8"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《Show HN: Ghostfox – Self-hosted stealth browser for AI agents》、《From Agent Authorization to AI Production Evaluation: QCon AI New York 2026》、《GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层》、《量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "c7a2745a032e",
+          "e9d4a1884531",
+          "c413a234311b",
+          "37560ea76b71"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 3 条，建议优先阅读《Show HN: Ghostfox – Self-hosted stealth browser for AI agents》、《GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "da8e11e086df",
+          "2774cfd80a0b",
+          "0d38ca402cf2"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 3 条，建议优先阅读《索辰科技加码世界模型，与战略投资企业美梦空间联合发布具身模型与物理测评标准》、《AI is not an alien, it's our offspring: Reframing the alignment problem》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "a55b21c93cc8",
+          "2198d5e51d33",
+          "91ecd684f189"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 2 条，建议优先阅读《From Agent Authorization to AI Production Evaluation: QCon AI New York 2026》、《AI agent kill switch urged by Okta-led alliance – how businesses could make it work》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "2ee934b07581",
+          "cce2b6fbe9bd"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "bfb71b04209abf5fc10d58bbb4eb8e423b9d7724cecda2be163834b92a7962d7",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-09-28T01:35:57.085Z",
+      "finishedAt": "2026-09-28T01:36:21.685Z",
+      "durationMs": 24600,
+      "inputCount": 24,
+      "processedCount": 24,
+      "fallbackCount": 24,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 24,
+      "failureStats": {
+        "totalFailed": 24,
+        "timeout": 0,
+        "http": 24,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 45,
+        "splitRetryCount": 21
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-21",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-14",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 1
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-09-28T01:36:21.751Z",
+      "finishedAt": "2026-09-28T01:36:28.954Z",
+      "durationMs": 7203,
+      "inputCount": 24,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 24,
+        "timeout": 0,
+        "http": 24,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 24,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "da8e11e086df",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Ghostfox – Self-hosted stealth browser for AI agents",
+        "link": "https://github.com/autokeren/ghostfox",
+        "contentSnippet": "Article URL: https://github.com/autokeren/ghostfox Comments URL: https://news.ycombinator.com/item?id=49872295 Points: 1 # Comments: 0",
+        "publishedAt": "2026-09-28T00:45:37.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2ee934b07581",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "From Agent Authorization to AI Production Evaluation: QCon AI New York 2026",
+        "link": "https://www.infoq.com/news/2026/09/qcon-ai-newyork-2026-sessions/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "QCon AI New York has confirmed 23 sessions covering agent authorization, production guardrails, shared inference infrastructure, and the evaluation of AI systems after deployment. By Artenisa Chatziou",
+        "publishedAt": "2026-09-25T11:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 94.74,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 94.73684210526315,
+          "finalScore": 94.74,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2774cfd80a0b",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+        "link": "https://www.infoq.com/news/2026/09/gke-pod-snapshots-benchmarks/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loading in 37 seconds. The feature checkpoints CPU and GPU memory through gVisor into Cloud Storage. Practitioners have asked whether invalidation is the harder problem, since snapshots match on a spec hash, machine series, and kernel and driver versions. By Steef-Jan Wiggers",
+        "publishedAt": "2026-09-27T06:46:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 68.42,
+        "importance": "medium",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 68.42105263157895,
+          "finalScore": 68.42,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e69cb799ce33",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction Across Laptop and Cloud",
+        "link": "https://www.infoq.com/news/2026/09/docker-cloud-sandboxes/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed infrastructure. Built on hardware-enforced microVM isolation, the platform provides a consistent execution environment and unified CLI workflows for seamlessly moving workloads from local machines to the cloud. By Sergio De Simone",
+        "publishedAt": "2026-09-26T17:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 68.42,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 68.42105263157895,
+          "finalScore": 68.42,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0d38ca402cf2",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Cambrian Explosion of AI",
+        "link": "https://debarshibasak.github.io/readables/blogs/cambrian-explosion",
+        "contentSnippet": "Article URL: https://debarshibasak.github.io/readables/blogs/cambrian-explosion Comments URL: https://news.ycombinator.com/item?id=49872200 Points: 2 # Comments: 1",
+        "publishedAt": "2026-09-28T00:25:57.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.53,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 60.526315789473685,
+          "finalScore": 60.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cce2b6fbe9bd",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "AI agent kill switch urged by Okta-led alliance – how businesses could make it work",
+        "link": "https://www.zdnet.com/innovation/okta-blueprint-alliance-ai-agents-oauth-kill-switch/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-24T16:01:19.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 39.47,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 39.473684210526315,
+          "finalScore": 39.47,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c7a2745a032e",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层",
+        "link": "https://www.qbitai.com/2026/09/498633.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-27T14:20:35.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 34.21052631578947,
+          "finalScore": 34.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e9d4a1884531",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门",
+        "link": "https://www.qbitai.com/2026/09/498605.html",
+        "contentSnippet": "想让开发者“说句话就能跑量子计算”",
+        "publishedAt": "2026-09-27T13:57:57.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 34.21052631578947,
+          "finalScore": 34.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 24,
+      "normalizedCount": 24,
+      "dedupedCount": 24,
+      "highImportanceCount": 2,
+      "mediumImportanceCount": 2,
+      "lowImportanceCount": 20,
+      "categoryBreakdown": {
+        "open-source": 3,
+        "tooling": 2,
+        "agent": 2,
+        "research": 2,
+        "industry-news": 3,
+        "tutorial": 1,
+        "other": 11
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Google AI Blog] 抓取失败: This operation was aborted",
+      "[MarkTechPost] 抓取失败: HTTP 403",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+      "LLM 分类打分部分回退：24/24",
+      "LLM 分类打分回退明细（前 3/24）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0708f7808f3bfcf93b6b7c5554c57318\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0708f781d67c2ef821cddb86384aac77\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0708f781b79c23a42499d46dffe750dc\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=24：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=45, split_retry=21",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/24）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=24, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=24, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": "2026-09-28T04:30:00.000Z"
+  }
+}
