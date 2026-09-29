@@ -1,0 +1,2252 @@
+{
+  "runId": "daily-1790643616574",
+  "generatedAt": "2026-09-29T01:00:16.535Z",
+  "reviewStartedAt": "2026-09-29T01:00:16.535Z",
+  "reportDate": "2026-09-29",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-09-29T01:00:16.535Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 36,
+    "normalizedCount": 36,
+    "dedupedCount": 36,
+    "highImportanceCount": 1,
+    "mediumImportanceCount": 1,
+    "lowImportanceCount": 34,
+    "categoryBreakdown": {
+      "open-source": 2,
+      "tooling": 3,
+      "agent": 1,
+      "research": 2,
+      "industry-news": 5,
+      "tutorial": 1,
+      "other": 22
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "fe73799bddc6",
+      "title": "We found 24 Android vulnerabilities using our open source AI security agent",
+      "summary": "Article URL: https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-age…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "fe73799bddc6"
+      ]
+    },
+    {
+      "itemId": "2ee934b07581",
+      "title": "From Agent Authorization to AI Production Evaluation: QCon AI New York 2026",
+      "summary": "QCon AI New York has confirmed 23 sessions covering agent authorization, production guardrails, shared inference infras…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "2ee934b07581"
+      ]
+    },
+    {
+      "itemId": "e5d879d43958",
+      "title": "工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路",
+      "summary": "工业平台已经卷到帮伙伴拿线索、做Agent、出海了",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "e5d879d43958"
+      ]
+    },
+    {
+      "itemId": "702b08a9adfe",
+      "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+      "summary": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "702b08a9adfe"
+      ]
+    },
+    {
+      "itemId": "64a5ca20d1f2",
+      "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction across Laptop and Cloud",
+      "summary": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed inf…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "64a5ca20d1f2"
+      ]
+    },
+    {
+      "itemId": "d4fdab2b4d3c",
+      "title": "iOS 27.0.1 released: Apple fixes annoying iPhone 18 Pro restart and freezing issues",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "d4fdab2b4d3c"
+      ]
+    },
+    {
+      "itemId": "927c795585b6",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "927c795585b6"
+      ]
+    },
+    {
+      "itemId": "b004637950f2",
+      "title": "Are you a Codex Original?",
+      "summary": "We’re collecting real stories of builders, tinkerers, researchers, and creators who are using Codex to do incredible th…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b004637950f2"
+      ]
+    },
+    {
+      "itemId": "74c38d423baa",
+      "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
+      "summary": "GPT-6 Astra completed a 50-tab tax workbook twice as fast as GPT-5.6 Sol, and its stronger understanding of user intent…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "74c38d423baa"
+      ]
+    },
+    {
+      "itemId": "2774cfd80a0b",
+      "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+      "summary": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loadin…",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "2774cfd80a0b"
+      ]
+    },
+    {
+      "itemId": "3c0964585a0c",
+      "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+      "summary": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3c0964585a0c"
+      ]
+    },
+    {
+      "itemId": "2d266ca72726",
+      "title": "Two years of OpenAI Academy",
+      "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2d266ca72726"
+      ]
+    },
+    {
+      "itemId": "c273209afe62",
+      "title": "OpenAI extends cyber access to Ukraine for civilian defense",
+      "summary": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilia…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c273209afe62"
+      ]
+    },
+    {
+      "itemId": "25d355f28a25",
+      "title": "AWS Introduces Foreign Key Constraints in Aurora DSQL",
+      "summary": "AWS recently announced that Aurora DSQL now supports foreign key constraints, allowing applications to enforce referent…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "25d355f28a25"
+      ]
+    },
+    {
+      "itemId": "673ded79dd34",
+      "title": "Bose’s new wired earbuds aim for the same great sound and ANC – no charging needed",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "673ded79dd34"
+      ]
+    },
+    {
+      "itemId": "a872c97e2dc7",
+      "title": "Your Bose headphones are getting a major Bluetooth upgrade – what to expect",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a872c97e2dc7"
+      ]
+    },
+    {
+      "itemId": "a5b8ada4abdf",
+      "title": "Show HN: Jylus – give AI systems evidence from changing data.",
+      "summary": "Article URL: https://jylus.ai/try Comments URL: https://news.ycombinator.com/item?id=49886404 Points: 2 # Comments: 0",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a5b8ada4abdf"
+      ]
+    },
+    {
+      "itemId": "b94b1ccb31b1",
+      "title": "AI Companies Are Not (Necessarily) Liable for Unintended AI Cyberattacks",
+      "summary": "Article URL: https://sarahconstantin.substack.com/p/ai-companies-are-not-necessarily Comments URL: https://news.ycombin…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b94b1ccb31b1"
+      ]
+    },
+    {
+      "itemId": "9c9afef40c07",
+      "title": "AI and the Revenge of the Non-Techies",
+      "summary": "Article URL: https://maroun-baydoun.com/blog/ai-revenge-non-techies/ Comments URL: https://news.ycombinator.com/item?id…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9c9afef40c07"
+      ]
+    },
+    {
+      "itemId": "c32211104611",
+      "title": "AI's next training data: your dodgy gaming skills",
+      "summary": "Article URL: https://www.wired.com/story/the-next-evolution-of-ai-is-learning-from-your-dodgy-gaming-skills/ Comments U…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c32211104611"
+      ]
+    },
+    {
+      "itemId": "564f58159eb9",
+      "title": "Atrocious AI-Written Tests",
+      "summary": "Article URL: https://gruhn.me/blog/2026-09-29/ Comments URL: https://news.ycombinator.com/item?id=49886186 Points: 2 # …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "564f58159eb9"
+      ]
+    },
+    {
+      "itemId": "5f226c85d6ea",
+      "title": "Google Beam expands with new regions, partners, and customers",
+      "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5f226c85d6ea"
+      ]
+    },
+    {
+      "itemId": "5617fbe7acb7",
+      "title": "HC归来，华为正重新定义AIDC基础设施",
+      "summary": "AI基础设施下一站：算电协同",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5617fbe7acb7"
+      ]
+    },
+    {
+      "itemId": "37560ea76b71",
+      "title": "Home Made CobbleDB Replaces DynamoDB at Perplexity to Cut Query Latency 5x and Reduce Cloud Storage",
+      "summary": "Perplexity has migrated its search infrastructure from Amazon DynamoDB to CobbleDB, an internally developed key-value s…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "37560ea76b71"
+      ]
+    },
+    {
+      "itemId": "2abbde252c9c",
+      "title": "Stateless MCP Removes Session Affinity Requirements for AWS Server Deployments",
+      "summary": "AWS details how the latest Model Context Protocol specification removes protocol-level sessions, sticky-session require…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2abbde252c9c"
+      ]
+    },
+    {
+      "itemId": "429ba3c49baa",
+      "title": "New experts join Google’s AI & Economy team",
+      "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "429ba3c49baa"
+      ]
+    },
+    {
+      "itemId": "cccb8fdd919f",
+      "title": "Co-creating the future of fashion with Google",
+      "summary": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NY…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "cccb8fdd919f"
+      ]
+    },
+    {
+      "itemId": "f2c97248df43",
+      "title": "Making global data easier to explore",
+      "summary": "Google and the UN system have launched the UN System Data Commons, a new open platform making global statistics accessi…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f2c97248df43"
+      ]
+    },
+    {
+      "itemId": "e1db45977735",
+      "title": "AI for Societal Impact",
+      "summary": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share th…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e1db45977735"
+      ]
+    },
+    {
+      "itemId": "c7a2745a032e",
+      "title": "量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c7a2745a032e"
+      ]
+    },
+    {
+      "itemId": "e9d4a1884531",
+      "title": "量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门",
+      "summary": "想让开发者“说句话就能跑量子计算”",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e9d4a1884531"
+      ]
+    },
+    {
+      "itemId": "c413a234311b",
+      "title": "又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录",
+      "summary": "中秋假期文具OpenRouter调用日榜榜首",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c413a234311b"
+      ]
+    },
+    {
+      "itemId": "2c743b1ab7b7",
+      "title": "啥题啊能干崩OpenAI最强模型训练…",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2c743b1ab7b7"
+      ]
+    },
+    {
+      "itemId": "3cc9dff5d08b",
+      "title": "This one WatchOS 27 feature just solved my biggest issue with Apple Watch",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3cc9dff5d08b"
+      ]
+    },
+    {
+      "itemId": "d0d671489138",
+      "title": "Your LG TV is constantly collecting your data – here’s how to stop it",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d0d671489138"
+      ]
+    },
+    {
+      "itemId": "8bfa2acc93fa",
+      "title": "Microsoft’s new Copilot app puts everything in one place – but the price is ‘evolving’",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "8bfa2acc93fa"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "fe73799bddc6",
+      "title": "We found 24 Android vulnerabilities using our open source AI security agent",
+      "takeaway": "Article URL: https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-age…",
+      "evidenceItemIds": [
+        "fe73799bddc6"
+      ]
+    },
+    {
+      "itemId": "2ee934b07581",
+      "title": "From Agent Authorization to AI Production Evaluation: QCon AI New York 2026",
+      "takeaway": "QCon AI New York has confirmed 23 sessions covering agent authorization, production guardrails, shared inference infras…",
+      "evidenceItemIds": [
+        "2ee934b07581"
+      ]
+    },
+    {
+      "itemId": "e5d879d43958",
+      "title": "工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路",
+      "takeaway": "工业平台已经卷到帮伙伴拿线索、做Agent、出海了",
+      "evidenceItemIds": [
+        "e5d879d43958"
+      ]
+    },
+    {
+      "itemId": "702b08a9adfe",
+      "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+      "takeaway": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million…",
+      "evidenceItemIds": [
+        "702b08a9adfe"
+      ]
+    },
+    {
+      "itemId": "64a5ca20d1f2",
+      "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction across Laptop and Cloud",
+      "takeaway": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed inf…",
+      "evidenceItemIds": [
+        "64a5ca20d1f2"
+      ]
+    },
+    {
+      "itemId": "d4fdab2b4d3c",
+      "title": "iOS 27.0.1 released: Apple fixes annoying iPhone 18 Pro restart and freezing issues",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "d4fdab2b4d3c"
+      ]
+    },
+    {
+      "itemId": "927c795585b6",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "takeaway": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "evidenceItemIds": [
+        "927c795585b6"
+      ]
+    },
+    {
+      "itemId": "b004637950f2",
+      "title": "Are you a Codex Original?",
+      "takeaway": "We’re collecting real stories of builders, tinkerers, researchers, and creators who are using Codex to do incredible th…",
+      "evidenceItemIds": [
+        "b004637950f2"
+      ]
+    },
+    {
+      "itemId": "74c38d423baa",
+      "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
+      "takeaway": "GPT-6 Astra completed a 50-tab tax workbook twice as fast as GPT-5.6 Sol, and its stronger understanding of user intent…",
+      "evidenceItemIds": [
+        "74c38d423baa"
+      ]
+    },
+    {
+      "itemId": "2774cfd80a0b",
+      "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+      "takeaway": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loadin…",
+      "evidenceItemIds": [
+        "2774cfd80a0b"
+      ]
+    },
+    {
+      "itemId": "3c0964585a0c",
+      "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+      "takeaway": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
+      "evidenceItemIds": [
+        "3c0964585a0c"
+      ]
+    },
+    {
+      "itemId": "2d266ca72726",
+      "title": "Two years of OpenAI Academy",
+      "takeaway": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
+      "evidenceItemIds": [
+        "2d266ca72726"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《We found 24 Android vulnerabilities using our open source AI security agent》、《From Agent Authorization to AI Production Evaluation: QCon AI New York 2026》、《工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《The Lenfest Institute grows landmark program with expanded OpenAI support》、《iOS 27.0.1 released: Apple fixes annoying iPhone 18 Pro restart and freezing issues》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "702b08a9adfe",
+        "d4fdab2b4d3c",
+        "927c795585b6",
+        "74c38d423baa"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《Show HN: Jylus – give AI systems evidence from changing data.》、《AI Companies Are Not (Necessarily) Liable for Unintended AI Cyberattacks》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "a5b8ada4abdf",
+        "b94b1ccb31b1",
+        "9c9afef40c07",
+        "c32211104611"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "tooling",
+      "lead": "工具链方向本期共 3 条，建议优先阅读《工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路》、《Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction across Laptop and Cloud》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "e5d879d43958",
+        "64a5ca20d1f2",
+        "cccb8fdd919f"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 2 条，建议优先阅读《We found 24 Android vulnerabilities using our open source AI security agent》、《GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "fe73799bddc6",
+        "2774cfd80a0b"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "3f2ae0c06b0e15187e21dab77be9a59ce10d6e76e71e5057dfdc28391f3dcda7",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-09-29T01:00:30.514Z",
+    "finishedAt": "2026-09-29T01:01:07.070Z",
+    "durationMs": 36556,
+    "inputCount": 36,
+    "processedCount": 36,
+    "fallbackCount": 36,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 36,
+    "failureStats": {
+      "totalFailed": 36,
+      "timeout": 0,
+      "http": 36,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 68,
+      "splitRetryCount": 32
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-22",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-15",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 1,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-09-29T01:01:07.120Z",
+    "finishedAt": "2026-09-29T01:01:15.935Z",
+    "durationMs": 8815,
+    "inputCount": 36,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "fe73799bddc6",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "We found 24 Android vulnerabilities using our open source AI security agent",
+      "link": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
+      "contentSnippet": "Article URL: https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/ Comments URL: https://news.ycombinator.com/item?id=49886609 Points: 2 # Comments: 0",
+      "publishedAt": "2026-09-29T00:55:47.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 125,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "2ee934b07581",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "From Agent Authorization to AI Production Evaluation: QCon AI New York 2026",
+      "link": "https://www.infoq.com/news/2026/09/qcon-ai-newyork-2026-sessions/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "QCon AI New York has confirmed 23 sessions covering agent authorization, production guardrails, shared inference infrastructure, and the evaluation of AI systems after deployment. By Artenisa Chatziou",
+      "publishedAt": "2026-09-25T11:00:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 67.39,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 110,
+        "ruleScoreNormalized": 67.3913043478261,
+        "finalScore": 67.39,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "e5d879d43958",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路",
+      "link": "https://www.qbitai.com/2026/09/498877.html",
+      "contentSnippet": "工业平台已经卷到帮伙伴拿线索、做Agent、出海了",
+      "publishedAt": "2026-09-28T12:43:53.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 60.87,
+      "importance": "low",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 107,
+        "ruleScoreNormalized": 60.86956521739131,
+        "finalScore": 60.87,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "702b08a9adfe",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+      "link": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+      "contentSnippet": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
+      "publishedAt": "2026-09-28T07:00:00.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 56.52,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 105,
+        "ruleScoreNormalized": 56.52173913043478,
+        "finalScore": 56.52,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "64a5ca20d1f2",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction across Laptop and Cloud",
+      "link": "https://www.infoq.com/news/2026/09/docker-cloud-sandboxes/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed infrastructure. Built on hardware-enforced microVM isolation, the platform provides a consistent execution environment and unified CLI workflows for seamlessly moving workloads from local machines to the cloud. By Sergio De Simone",
+      "publishedAt": "2026-09-26T17:00:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 56.52,
+      "importance": "low",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 105,
+        "ruleScoreNormalized": 56.52173913043478,
+        "finalScore": 56.52,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[MarkTechPost] 抓取失败: HTTP 403",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：36/36",
+    "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"070a40b2c75de65e5eb20317bd40ce70\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"070a40b20620896061106ab501861eeb\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"070a40b329e46f2728f13fa81ded710e\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- We found 24 Android vulnerabilities using our open source AI security agent\n- From Agent Authorization to AI Production Evaluation: QCon AI New York 2026\n- 工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路\n- The Lenfest Institute grows landmark program with expanded OpenAI support\n- Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction across Laptop and Cloud\n\n### 分类覆盖（大纲）\n- open-source: 2 条\n- agent: 1 条\n- tooling: 3 条\n- other: 22 条\n- research: 2 条\n- industry-news: 5 条\n- tutorial: 1 条",
+    "rankedItems": [
+      {
+        "id": "fe73799bddc6",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "We found 24 Android vulnerabilities using our open source AI security agent",
+        "link": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
+        "contentSnippet": "Article URL: https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/ Comments URL: https://news.ycombinator.com/item?id=49886609 Points: 2 # Comments: 0",
+        "publishedAt": "2026-09-29T00:55:47.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 125,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2ee934b07581",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "From Agent Authorization to AI Production Evaluation: QCon AI New York 2026",
+        "link": "https://www.infoq.com/news/2026/09/qcon-ai-newyork-2026-sessions/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "QCon AI New York has confirmed 23 sessions covering agent authorization, production guardrails, shared inference infrastructure, and the evaluation of AI systems after deployment. By Artenisa Chatziou",
+        "publishedAt": "2026-09-25T11:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 67.39,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 67.3913043478261,
+          "finalScore": 67.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e5d879d43958",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路",
+        "link": "https://www.qbitai.com/2026/09/498877.html",
+        "contentSnippet": "工业平台已经卷到帮伙伴拿线索、做Agent、出海了",
+        "publishedAt": "2026-09-28T12:43:53.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.87,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 107,
+          "ruleScoreNormalized": 60.86956521739131,
+          "finalScore": 60.87,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "702b08a9adfe",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+        "link": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+        "contentSnippet": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
+        "publishedAt": "2026-09-28T07:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 56.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 56.52173913043478,
+          "finalScore": 56.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "64a5ca20d1f2",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction across Laptop and Cloud",
+        "link": "https://www.infoq.com/news/2026/09/docker-cloud-sandboxes/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed infrastructure. Built on hardware-enforced microVM isolation, the platform provides a consistent execution environment and unified CLI workflows for seamlessly moving workloads from local machines to the cloud. By Sergio De Simone",
+        "publishedAt": "2026-09-26T17:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 56.52,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 56.52173913043478,
+          "finalScore": 56.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d4fdab2b4d3c",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "iOS 27.0.1 released: Apple fixes annoying iPhone 18 Pro restart and freezing issues",
+        "link": "https://www.zdnet.com/tech/iphone-18-pro-freeze-restart-ios-27-0-1-fix/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-28T20:39:56.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 54.35,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 104,
+          "ruleScoreNormalized": 54.347826086956516,
+          "finalScore": 54.35,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "927c795585b6",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "contentSnippet": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "publishedAt": "2026-09-28T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 50,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 50,
+          "finalScore": 50,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b004637950f2",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Are you a Codex Original?",
+        "link": "https://openai.com/form/codex-originals",
+        "contentSnippet": "We’re collecting real stories of builders, tinkerers, researchers, and creators who are using Codex to do incredible things. If you want to be a part of the next chapter of the Codex Originals program, tell us more about your story and project below.",
+        "publishedAt": "2026-09-28T00:00:00.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 45.65,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 45.65217391304348,
+          "finalScore": 45.65,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "74c38d423baa",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
+        "link": "https://openai.com/index/basis-tax-workbook-with-astra",
+        "contentSnippet": "GPT-6 Astra completed a 50-tab tax workbook twice as fast as GPT-5.6 Sol, and its stronger understanding of user intent gives Basis more confidence in real-world use.",
+        "publishedAt": "2026-09-28T00:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 45.65,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 45.65217391304348,
+          "finalScore": 45.65,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2774cfd80a0b",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+        "link": "https://www.infoq.com/news/2026/09/gke-pod-snapshots-benchmarks/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loading in 37 seconds. The feature checkpoints CPU and GPU memory through gVisor into Cloud Storage. Practitioners have asked whether invalidation is the harder problem, since snapshots match on a spec hash, machine series, and kernel and driver versions. By Steef-Jan Wiggers",
+        "publishedAt": "2026-09-27T06:46:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 45.65,
+        "importance": "low",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 45.65217391304348,
+          "finalScore": 45.65,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3c0964585a0c",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+        "link": "https://openai.com/index/proaction",
+        "contentSnippet": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
+        "publishedAt": "2026-09-25T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 34.78260869565217,
+          "finalScore": 34.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2d266ca72726",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Two years of OpenAI Academy",
+        "link": "https://openai.com/index/two-years-of-openai-academy",
+        "contentSnippet": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
+        "publishedAt": "2026-09-23T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 34.78260869565217,
+          "finalScore": 34.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c273209afe62",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "OpenAI extends cyber access to Ukraine for civilian defense",
+        "link": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
+        "contentSnippet": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.",
+        "publishedAt": "2026-09-23T13:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 34.78260869565217,
+          "finalScore": 34.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "25d355f28a25",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "AWS Introduces Foreign Key Constraints in Aurora DSQL",
+        "link": "https://www.infoq.com/news/2026/09/aurora-dsql-foreign-keys/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "AWS recently announced that Aurora DSQL now supports foreign key constraints, allowing applications to enforce referential integrity directly in the database, including CASCADE, SET NULL, and other referential actions. The addition addresses a long-standing gap that users had explicitly called out as an adoption blocker. By Renato Losio",
+        "publishedAt": "2026-09-28T04:54:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 34.78260869565217,
+          "finalScore": 34.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "673ded79dd34",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Bose’s new wired earbuds aim for the same great sound and ANC – no charging needed",
+        "link": "https://www.zdnet.com/tech/bose-new-hybrid-wired-earbuds-anc/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-28T16:15:17.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 32.61,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 32.608695652173914,
+          "finalScore": 32.61,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a872c97e2dc7",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Your Bose headphones are getting a major Bluetooth upgrade – what to expect",
+        "link": "https://www.zdnet.com/tech/your-bose-headphones-are-getting-a-major-bluetooth-upgrade-what-to-expect/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-28T14:40:43.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 32.61,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 32.608695652173914,
+          "finalScore": 32.61,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a5b8ada4abdf",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Jylus – give AI systems evidence from changing data.",
+        "link": "https://jylus.ai/try",
+        "contentSnippet": "Article URL: https://jylus.ai/try Comments URL: https://news.ycombinator.com/item?id=49886404 Points: 2 # Comments: 0",
+        "publishedAt": "2026-09-29T00:33:11.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 23.91,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 23.91304347826087,
+          "finalScore": 23.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b94b1ccb31b1",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI Companies Are Not (Necessarily) Liable for Unintended AI Cyberattacks",
+        "link": "https://sarahconstantin.substack.com/p/ai-companies-are-not-necessarily",
+        "contentSnippet": "Article URL: https://sarahconstantin.substack.com/p/ai-companies-are-not-necessarily Comments URL: https://news.ycombinator.com/item?id=49886368 Points: 2 # Comments: 0",
+        "publishedAt": "2026-09-29T00:29:20.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 23.91,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 23.91304347826087,
+          "finalScore": 23.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9c9afef40c07",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI and the Revenge of the Non-Techies",
+        "link": "https://maroun-baydoun.com/blog/ai-revenge-non-techies/",
+        "contentSnippet": "Article URL: https://maroun-baydoun.com/blog/ai-revenge-non-techies/ Comments URL: https://news.ycombinator.com/item?id=49886277 Points: 2 # Comments: 0",
+        "publishedAt": "2026-09-29T00:18:30.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 23.91,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 23.91304347826087,
+          "finalScore": 23.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c32211104611",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI's next training data: your dodgy gaming skills",
+        "link": "https://www.wired.com/story/the-next-evolution-of-ai-is-learning-from-your-dodgy-gaming-skills/",
+        "contentSnippet": "Article URL: https://www.wired.com/story/the-next-evolution-of-ai-is-learning-from-your-dodgy-gaming-skills/ Comments URL: https://news.ycombinator.com/item?id=49886262 Points: 2 # Comments: 0",
+        "publishedAt": "2026-09-29T00:15:25.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 23.91,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 23.91304347826087,
+          "finalScore": 23.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "564f58159eb9",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Atrocious AI-Written Tests",
+        "link": "https://gruhn.me/blog/2026-09-29/",
+        "contentSnippet": "Article URL: https://gruhn.me/blog/2026-09-29/ Comments URL: https://news.ycombinator.com/item?id=49886186 Points: 2 # Comments: 0",
+        "publishedAt": "2026-09-29T00:05:36.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 23.91,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 23.91304347826087,
+          "finalScore": 23.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5f226c85d6ea",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "link": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+        "contentSnippet": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "publishedAt": "2026-09-23T18:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 17.39,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 17.391304347826086,
+          "finalScore": 17.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5617fbe7acb7",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "HC归来，华为正重新定义AIDC基础设施",
+        "link": "https://www.qbitai.com/2026/09/498787.html",
+        "contentSnippet": "AI基础设施下一站：算电协同",
+        "publishedAt": "2026-09-28T11:18:27.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 17.39,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 17.391304347826086,
+          "finalScore": 17.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "37560ea76b71",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Home Made CobbleDB Replaces DynamoDB at Perplexity to Cut Query Latency 5x and Reduce Cloud Storage",
+        "link": "https://www.infoq.com/news/2026/09/cobbledb-perplexity/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Perplexity has migrated its search infrastructure from Amazon DynamoDB to CobbleDB, an internally developed key-value store in Rust. This change reduced latency and costs associated with handling large document batches. The new architecture supports high query volumes more efficiently, achieving improved latency and reduced storage expenses while managing significant production traffic. By Olimpiu Pop",
+        "publishedAt": "2026-09-25T14:14:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.04,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 85,
+          "ruleScoreNormalized": 13.043478260869565,
+          "finalScore": 13.04,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2abbde252c9c",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Stateless MCP Removes Session Affinity Requirements for AWS Server Deployments",
+        "link": "https://www.infoq.com/news/2026/09/aws-stateless-mcp/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "AWS details how the latest Model Context Protocol specification removes protocol-level sessions, sticky-session requirements, and session storage for remote MCP servers. The change enables independent request routing and simpler horizontal scaling while shifting application state, retries, observability, and idempotency concerns to other layers. By Leela Kumili",
+        "publishedAt": "2026-09-25T12:58:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.04,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 85,
+          "ruleScoreNormalized": 13.043478260869565,
+          "finalScore": 13.04,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "429ba3c49baa",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "New experts join Google’s AI & Economy team",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+        "contentSnippet": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+        "publishedAt": "2026-09-18T14:00:00.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.521739130434782,
+          "finalScore": 6.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cccb8fdd919f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Co-creating the future of fashion with Google",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
+        "contentSnippet": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NYFW.",
+        "publishedAt": "2026-09-18T13:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.521739130434782,
+          "finalScore": 6.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f2c97248df43",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Making global data easier to explore",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/",
+        "contentSnippet": "Google and the UN system have launched the UN System Data Commons, a new open platform making global statistics accessible and easy to search.",
+        "publishedAt": "2026-09-17T20:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.521739130434782,
+          "finalScore": 6.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e1db45977735",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "AI for Societal Impact",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/",
+        "contentSnippet": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share the opportunity of AI.",
+        "publishedAt": "2026-09-15T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.521739130434782,
+          "finalScore": 6.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c7a2745a032e",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层",
+        "link": "https://www.qbitai.com/2026/09/498633.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-27T14:20:35.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.521739130434782,
+          "finalScore": 6.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e9d4a1884531",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门",
+        "link": "https://www.qbitai.com/2026/09/498605.html",
+        "contentSnippet": "想让开发者“说句话就能跑量子计算”",
+        "publishedAt": "2026-09-27T13:57:57.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.521739130434782,
+          "finalScore": 6.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c413a234311b",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录",
+        "link": "https://www.qbitai.com/2026/09/498584.html",
+        "contentSnippet": "中秋假期文具OpenRouter调用日榜榜首",
+        "publishedAt": "2026-09-27T13:40:02.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.521739130434782,
+          "finalScore": 6.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2c743b1ab7b7",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "啥题啊能干崩OpenAI最强模型训练…",
+        "link": "https://www.qbitai.com/2026/09/498546.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-27T09:44:16.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.521739130434782,
+          "finalScore": 6.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3cc9dff5d08b",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "This one WatchOS 27 feature just solved my biggest issue with Apple Watch",
+        "link": "https://www.zdnet.com/uncategorized/watchos-27-update-fix-apple-watch/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-25T16:51:43.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d0d671489138",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Your LG TV is constantly collecting your data – here’s how to stop it",
+        "link": "https://www.zdnet.com/home-and-office/lg-tv-data-collection-how-to-factory-reset-and-why-you-need-to/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-25T12:18:24.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8bfa2acc93fa",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Microsoft’s new Copilot app puts everything in one place – but the price is ‘evolving’",
+        "link": "https://www.zdnet.com/innovation/microsoft-new-copilot-unified-ai-app/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-25T12:00:14.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "fe73799bddc6",
+        "title": "We found 24 Android vulnerabilities using our open source AI security agent",
+        "summary": "Article URL: https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-age…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "fe73799bddc6"
+        ]
+      },
+      {
+        "itemId": "2ee934b07581",
+        "title": "From Agent Authorization to AI Production Evaluation: QCon AI New York 2026",
+        "summary": "QCon AI New York has confirmed 23 sessions covering agent authorization, production guardrails, shared inference infras…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "2ee934b07581"
+        ]
+      },
+      {
+        "itemId": "e5d879d43958",
+        "title": "工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路",
+        "summary": "工业平台已经卷到帮伙伴拿线索、做Agent、出海了",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "e5d879d43958"
+        ]
+      },
+      {
+        "itemId": "702b08a9adfe",
+        "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+        "summary": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "702b08a9adfe"
+        ]
+      },
+      {
+        "itemId": "64a5ca20d1f2",
+        "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction across Laptop and Cloud",
+        "summary": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed inf…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "64a5ca20d1f2"
+        ]
+      },
+      {
+        "itemId": "d4fdab2b4d3c",
+        "title": "iOS 27.0.1 released: Apple fixes annoying iPhone 18 Pro restart and freezing issues",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "d4fdab2b4d3c"
+        ]
+      },
+      {
+        "itemId": "927c795585b6",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "927c795585b6"
+        ]
+      },
+      {
+        "itemId": "b004637950f2",
+        "title": "Are you a Codex Original?",
+        "summary": "We’re collecting real stories of builders, tinkerers, researchers, and creators who are using Codex to do incredible th…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b004637950f2"
+        ]
+      },
+      {
+        "itemId": "74c38d423baa",
+        "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
+        "summary": "GPT-6 Astra completed a 50-tab tax workbook twice as fast as GPT-5.6 Sol, and its stronger understanding of user intent…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "74c38d423baa"
+        ]
+      },
+      {
+        "itemId": "2774cfd80a0b",
+        "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+        "summary": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loadin…",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "2774cfd80a0b"
+        ]
+      },
+      {
+        "itemId": "3c0964585a0c",
+        "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+        "summary": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3c0964585a0c"
+        ]
+      },
+      {
+        "itemId": "2d266ca72726",
+        "title": "Two years of OpenAI Academy",
+        "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2d266ca72726"
+        ]
+      },
+      {
+        "itemId": "c273209afe62",
+        "title": "OpenAI extends cyber access to Ukraine for civilian defense",
+        "summary": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilia…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c273209afe62"
+        ]
+      },
+      {
+        "itemId": "25d355f28a25",
+        "title": "AWS Introduces Foreign Key Constraints in Aurora DSQL",
+        "summary": "AWS recently announced that Aurora DSQL now supports foreign key constraints, allowing applications to enforce referent…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "25d355f28a25"
+        ]
+      },
+      {
+        "itemId": "673ded79dd34",
+        "title": "Bose’s new wired earbuds aim for the same great sound and ANC – no charging needed",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "673ded79dd34"
+        ]
+      },
+      {
+        "itemId": "a872c97e2dc7",
+        "title": "Your Bose headphones are getting a major Bluetooth upgrade – what to expect",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a872c97e2dc7"
+        ]
+      },
+      {
+        "itemId": "a5b8ada4abdf",
+        "title": "Show HN: Jylus – give AI systems evidence from changing data.",
+        "summary": "Article URL: https://jylus.ai/try Comments URL: https://news.ycombinator.com/item?id=49886404 Points: 2 # Comments: 0",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a5b8ada4abdf"
+        ]
+      },
+      {
+        "itemId": "b94b1ccb31b1",
+        "title": "AI Companies Are Not (Necessarily) Liable for Unintended AI Cyberattacks",
+        "summary": "Article URL: https://sarahconstantin.substack.com/p/ai-companies-are-not-necessarily Comments URL: https://news.ycombin…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b94b1ccb31b1"
+        ]
+      },
+      {
+        "itemId": "9c9afef40c07",
+        "title": "AI and the Revenge of the Non-Techies",
+        "summary": "Article URL: https://maroun-baydoun.com/blog/ai-revenge-non-techies/ Comments URL: https://news.ycombinator.com/item?id…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9c9afef40c07"
+        ]
+      },
+      {
+        "itemId": "c32211104611",
+        "title": "AI's next training data: your dodgy gaming skills",
+        "summary": "Article URL: https://www.wired.com/story/the-next-evolution-of-ai-is-learning-from-your-dodgy-gaming-skills/ Comments U…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c32211104611"
+        ]
+      },
+      {
+        "itemId": "564f58159eb9",
+        "title": "Atrocious AI-Written Tests",
+        "summary": "Article URL: https://gruhn.me/blog/2026-09-29/ Comments URL: https://news.ycombinator.com/item?id=49886186 Points: 2 # …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "564f58159eb9"
+        ]
+      },
+      {
+        "itemId": "5f226c85d6ea",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5f226c85d6ea"
+        ]
+      },
+      {
+        "itemId": "5617fbe7acb7",
+        "title": "HC归来，华为正重新定义AIDC基础设施",
+        "summary": "AI基础设施下一站：算电协同",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5617fbe7acb7"
+        ]
+      },
+      {
+        "itemId": "37560ea76b71",
+        "title": "Home Made CobbleDB Replaces DynamoDB at Perplexity to Cut Query Latency 5x and Reduce Cloud Storage",
+        "summary": "Perplexity has migrated its search infrastructure from Amazon DynamoDB to CobbleDB, an internally developed key-value s…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "37560ea76b71"
+        ]
+      },
+      {
+        "itemId": "2abbde252c9c",
+        "title": "Stateless MCP Removes Session Affinity Requirements for AWS Server Deployments",
+        "summary": "AWS details how the latest Model Context Protocol specification removes protocol-level sessions, sticky-session require…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2abbde252c9c"
+        ]
+      },
+      {
+        "itemId": "429ba3c49baa",
+        "title": "New experts join Google’s AI & Economy team",
+        "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "429ba3c49baa"
+        ]
+      },
+      {
+        "itemId": "cccb8fdd919f",
+        "title": "Co-creating the future of fashion with Google",
+        "summary": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NY…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "cccb8fdd919f"
+        ]
+      },
+      {
+        "itemId": "f2c97248df43",
+        "title": "Making global data easier to explore",
+        "summary": "Google and the UN system have launched the UN System Data Commons, a new open platform making global statistics accessi…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f2c97248df43"
+        ]
+      },
+      {
+        "itemId": "e1db45977735",
+        "title": "AI for Societal Impact",
+        "summary": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share th…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e1db45977735"
+        ]
+      },
+      {
+        "itemId": "c7a2745a032e",
+        "title": "量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c7a2745a032e"
+        ]
+      },
+      {
+        "itemId": "e9d4a1884531",
+        "title": "量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门",
+        "summary": "想让开发者“说句话就能跑量子计算”",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e9d4a1884531"
+        ]
+      },
+      {
+        "itemId": "c413a234311b",
+        "title": "又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录",
+        "summary": "中秋假期文具OpenRouter调用日榜榜首",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c413a234311b"
+        ]
+      },
+      {
+        "itemId": "2c743b1ab7b7",
+        "title": "啥题啊能干崩OpenAI最强模型训练…",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2c743b1ab7b7"
+        ]
+      },
+      {
+        "itemId": "3cc9dff5d08b",
+        "title": "This one WatchOS 27 feature just solved my biggest issue with Apple Watch",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3cc9dff5d08b"
+        ]
+      },
+      {
+        "itemId": "d0d671489138",
+        "title": "Your LG TV is constantly collecting your data – here’s how to stop it",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d0d671489138"
+        ]
+      },
+      {
+        "itemId": "8bfa2acc93fa",
+        "title": "Microsoft’s new Copilot app puts everything in one place – but the price is ‘evolving’",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "8bfa2acc93fa"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "fe73799bddc6",
+        "title": "We found 24 Android vulnerabilities using our open source AI security agent",
+        "takeaway": "Article URL: https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-age…",
+        "evidenceItemIds": [
+          "fe73799bddc6"
+        ]
+      },
+      {
+        "itemId": "2ee934b07581",
+        "title": "From Agent Authorization to AI Production Evaluation: QCon AI New York 2026",
+        "takeaway": "QCon AI New York has confirmed 23 sessions covering agent authorization, production guardrails, shared inference infras…",
+        "evidenceItemIds": [
+          "2ee934b07581"
+        ]
+      },
+      {
+        "itemId": "e5d879d43958",
+        "title": "工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路",
+        "takeaway": "工业平台已经卷到帮伙伴拿线索、做Agent、出海了",
+        "evidenceItemIds": [
+          "e5d879d43958"
+        ]
+      },
+      {
+        "itemId": "702b08a9adfe",
+        "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+        "takeaway": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million…",
+        "evidenceItemIds": [
+          "702b08a9adfe"
+        ]
+      },
+      {
+        "itemId": "64a5ca20d1f2",
+        "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction across Laptop and Cloud",
+        "takeaway": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed inf…",
+        "evidenceItemIds": [
+          "64a5ca20d1f2"
+        ]
+      },
+      {
+        "itemId": "d4fdab2b4d3c",
+        "title": "iOS 27.0.1 released: Apple fixes annoying iPhone 18 Pro restart and freezing issues",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "d4fdab2b4d3c"
+        ]
+      },
+      {
+        "itemId": "927c795585b6",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "takeaway": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "evidenceItemIds": [
+          "927c795585b6"
+        ]
+      },
+      {
+        "itemId": "b004637950f2",
+        "title": "Are you a Codex Original?",
+        "takeaway": "We’re collecting real stories of builders, tinkerers, researchers, and creators who are using Codex to do incredible th…",
+        "evidenceItemIds": [
+          "b004637950f2"
+        ]
+      },
+      {
+        "itemId": "74c38d423baa",
+        "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
+        "takeaway": "GPT-6 Astra completed a 50-tab tax workbook twice as fast as GPT-5.6 Sol, and its stronger understanding of user intent…",
+        "evidenceItemIds": [
+          "74c38d423baa"
+        ]
+      },
+      {
+        "itemId": "2774cfd80a0b",
+        "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+        "takeaway": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loadin…",
+        "evidenceItemIds": [
+          "2774cfd80a0b"
+        ]
+      },
+      {
+        "itemId": "3c0964585a0c",
+        "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+        "takeaway": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
+        "evidenceItemIds": [
+          "3c0964585a0c"
+        ]
+      },
+      {
+        "itemId": "2d266ca72726",
+        "title": "Two years of OpenAI Academy",
+        "takeaway": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
+        "evidenceItemIds": [
+          "2d266ca72726"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《We found 24 Android vulnerabilities using our open source AI security agent》、《From Agent Authorization to AI Production Evaluation: QCon AI New York 2026》、《工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《The Lenfest Institute grows landmark program with expanded OpenAI support》、《iOS 27.0.1 released: Apple fixes annoying iPhone 18 Pro restart and freezing issues》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "702b08a9adfe",
+          "d4fdab2b4d3c",
+          "927c795585b6",
+          "74c38d423baa"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《Show HN: Jylus – give AI systems evidence from changing data.》、《AI Companies Are Not (Necessarily) Liable for Unintended AI Cyberattacks》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "a5b8ada4abdf",
+          "b94b1ccb31b1",
+          "9c9afef40c07",
+          "c32211104611"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "tooling",
+        "lead": "工具链方向本期共 3 条，建议优先阅读《工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路》、《Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction across Laptop and Cloud》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "e5d879d43958",
+          "64a5ca20d1f2",
+          "cccb8fdd919f"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 2 条，建议优先阅读《We found 24 Android vulnerabilities using our open source AI security agent》、《GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "fe73799bddc6",
+          "2774cfd80a0b"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "3f2ae0c06b0e15187e21dab77be9a59ce10d6e76e71e5057dfdc28391f3dcda7",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-09-29T01:00:30.514Z",
+      "finishedAt": "2026-09-29T01:01:07.070Z",
+      "durationMs": 36556,
+      "inputCount": 36,
+      "processedCount": 36,
+      "fallbackCount": 36,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 36,
+      "failureStats": {
+        "totalFailed": 36,
+        "timeout": 0,
+        "http": 36,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 68,
+        "splitRetryCount": 32
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-22",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-15",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 1,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-09-29T01:01:07.120Z",
+      "finishedAt": "2026-09-29T01:01:15.935Z",
+      "durationMs": 8815,
+      "inputCount": 36,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "fe73799bddc6",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "We found 24 Android vulnerabilities using our open source AI security agent",
+        "link": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
+        "contentSnippet": "Article URL: https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/ Comments URL: https://news.ycombinator.com/item?id=49886609 Points: 2 # Comments: 0",
+        "publishedAt": "2026-09-29T00:55:47.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 125,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2ee934b07581",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "From Agent Authorization to AI Production Evaluation: QCon AI New York 2026",
+        "link": "https://www.infoq.com/news/2026/09/qcon-ai-newyork-2026-sessions/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "QCon AI New York has confirmed 23 sessions covering agent authorization, production guardrails, shared inference infrastructure, and the evaluation of AI systems after deployment. By Artenisa Chatziou",
+        "publishedAt": "2026-09-25T11:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 67.39,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 67.3913043478261,
+          "finalScore": 67.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e5d879d43958",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路",
+        "link": "https://www.qbitai.com/2026/09/498877.html",
+        "contentSnippet": "工业平台已经卷到帮伙伴拿线索、做Agent、出海了",
+        "publishedAt": "2026-09-28T12:43:53.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.87,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 107,
+          "ruleScoreNormalized": 60.86956521739131,
+          "finalScore": 60.87,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "702b08a9adfe",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+        "link": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+        "contentSnippet": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
+        "publishedAt": "2026-09-28T07:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 56.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 56.52173913043478,
+          "finalScore": 56.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "64a5ca20d1f2",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction across Laptop and Cloud",
+        "link": "https://www.infoq.com/news/2026/09/docker-cloud-sandboxes/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed infrastructure. Built on hardware-enforced microVM isolation, the platform provides a consistent execution environment and unified CLI workflows for seamlessly moving workloads from local machines to the cloud. By Sergio De Simone",
+        "publishedAt": "2026-09-26T17:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 56.52,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 56.52173913043478,
+          "finalScore": 56.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 36,
+      "normalizedCount": 36,
+      "dedupedCount": 36,
+      "highImportanceCount": 1,
+      "mediumImportanceCount": 1,
+      "lowImportanceCount": 34,
+      "categoryBreakdown": {
+        "open-source": 2,
+        "tooling": 3,
+        "agent": 1,
+        "research": 2,
+        "industry-news": 5,
+        "tutorial": 1,
+        "other": 22
+      }
+    },
+    "warnings": [
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[MarkTechPost] 抓取失败: HTTP 403",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：36/36",
+      "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"070a40b2c75de65e5eb20317bd40ce70\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"070a40b20620896061106ab501861eeb\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"070a40b329e46f2728f13fa81ded710e\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
