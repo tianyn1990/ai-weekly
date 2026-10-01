@@ -1,0 +1,1988 @@
+{
+  "runId": "daily-1790816844902",
+  "generatedAt": "2026-10-01T01:07:24.870Z",
+  "reviewStartedAt": "2026-10-01T01:07:24.870Z",
+  "reportDate": "2026-10-01",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-10-01T01:07:24.870Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 30,
+    "normalizedCount": 30,
+    "dedupedCount": 30,
+    "highImportanceCount": 1,
+    "mediumImportanceCount": 2,
+    "lowImportanceCount": 27,
+    "categoryBreakdown": {
+      "open-source": 2,
+      "tooling": 3,
+      "agent": 5,
+      "research": 1,
+      "industry-news": 0,
+      "tutorial": 2,
+      "other": 17
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "2f82989b07fe",
+      "title": "InfoQ Online Cohorts Address AI Security and Coding Agent Verification",
+      "summary": "A look at two InfoQ online certification cohorts covering security and privacy decisions in production AI systems and t…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "2f82989b07fe"
+      ]
+    },
+    {
+      "itemId": "5d78376f9b47",
+      "title": "DeepSeek知乎独家发文，首次公开V4.1 Agent训练“大本营”DSec",
+      "summary": "DeepSeek在知乎独家发布技术长文，首次系统阐释了DeepSeek弹性计算（DeepSeek Elastic Compute，DSec）",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "5d78376f9b47"
+      ]
+    },
+    {
+      "itemId": "920375266c68",
+      "title": "Agents Refactor 300K Lines in Three Weeks, and Practitioners Ask What It Proves",
+      "summary": "CodeScene has published a case study in which coding agents refactored 300,000 lines of C over three weeks for roughly …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "920375266c68"
+      ]
+    },
+    {
+      "itemId": "f2b23a7f736d",
+      "title": "DevDay 2026 Recap",
+      "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and …",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "f2b23a7f736d"
+      ]
+    },
+    {
+      "itemId": "646ff5194882",
+      "title": "OpenAI推理之父最新访谈！数学只是多智能体时代的开胃菜",
+      "summary": "千禧年难题的突破，10000个Agent最多占了10%的功劳。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "646ff5194882"
+      ]
+    },
+    {
+      "itemId": "0b250c0288f8",
+      "title": "Disrupting a coordinated model-distillation campaign",
+      "summary": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against advers…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "0b250c0288f8"
+      ]
+    },
+    {
+      "itemId": "3cacf873e1bd",
+      "title": "Helping small businesses put AI to work",
+      "summary": "OpenAI is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongsi…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3cacf873e1bd"
+      ]
+    },
+    {
+      "itemId": "838973b95344",
+      "title": "openSUSE Leap adds a new security layer: Immutable mode",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "838973b95344"
+      ]
+    },
+    {
+      "itemId": "b12b1c4be679",
+      "title": "Manus 2.0回来了！给AI配手机号和钱包，还能拉群干活",
+      "summary": "给Agent配上手机号，再拉个群",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "b12b1c4be679"
+      ]
+    },
+    {
+      "itemId": "c072a4fb42aa",
+      "title": "Introducing GPT-6.1 Sol",
+      "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s stand…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c072a4fb42aa"
+      ]
+    },
+    {
+      "itemId": "fb04dd831001",
+      "title": "Introducing dots",
+      "summary": "Dots by OpenAI are proactive assistants that can keep working across complex projects and everyday tasks. Learn how dot…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fb04dd831001"
+      ]
+    },
+    {
+      "itemId": "c2987d76072a",
+      "title": "How we will do better for Australia",
+      "summary": "OpenAI apologises for incidents involving Australian government websites and outlines stronger safeguards and support t…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c2987d76072a"
+      ]
+    },
+    {
+      "itemId": "64a5ca20d1f2",
+      "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction across Laptop and Cloud",
+      "summary": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed inf…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "64a5ca20d1f2"
+      ]
+    },
+    {
+      "itemId": "2774cfd80a0b",
+      "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+      "summary": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loadin…",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "2774cfd80a0b"
+      ]
+    },
+    {
+      "itemId": "af4a5a78bbe0",
+      "title": "Your iPhone just got a hidden anti-scam upgrade in iOS 27: How to enable it",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "af4a5a78bbe0"
+      ]
+    },
+    {
+      "itemId": "d12c1bd9e58e",
+      "title": "Pearson’s Workera deal targets a big workplace problem: No time to AI upskill",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d12c1bd9e58e"
+      ]
+    },
+    {
+      "itemId": "927c795585b6",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "927c795585b6"
+      ]
+    },
+    {
+      "itemId": "f353ff81b5e2",
+      "title": "直播回顾：工业AI的下一个机会在哪？",
+      "summary": "什么样的AI才适合工业现场？企业真正开始做工业AI时，又该从哪里下手？",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f353ff81b5e2"
+      ]
+    },
+    {
+      "itemId": "25d355f28a25",
+      "title": "AWS Introduces Foreign Key Constraints in Aurora DSQL",
+      "summary": "AWS recently announced that Aurora DSQL now supports foreign key constraints, allowing applications to enforce referent…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "25d355f28a25"
+      ]
+    },
+    {
+      "itemId": "994cf49e7c42",
+      "title": "Anthropic，你是来给智谱打广告的吧！",
+      "summary": "实测说GLM-5.3很强",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "994cf49e7c42"
+      ]
+    },
+    {
+      "itemId": "9ac455526570",
+      "title": "刚刚，GPT-6 Astra接上宇树G1，把厨房收拾了！",
+      "summary": "让GPT把机器人技能当工具调用",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9ac455526570"
+      ]
+    },
+    {
+      "itemId": "37560ea76b71",
+      "title": "Home Made CobbleDB Replaces DynamoDB at Perplexity to Cut Query Latency 5x and Reduce Cloud Storage",
+      "summary": "Perplexity has migrated its search infrastructure from Amazon DynamoDB to CobbleDB, an internally developed key-value s…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "37560ea76b71"
+      ]
+    },
+    {
+      "itemId": "f6ebbb46ab72",
+      "title": "LLMjacking can run up your business’ AI bill fast – how to stop it",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f6ebbb46ab72"
+      ]
+    },
+    {
+      "itemId": "4b9a6ecbac8f",
+      "title": "Is ChatGPT your new Google Workspace alternative? Meet Space, Pages, and slides",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "4b9a6ecbac8f"
+      ]
+    },
+    {
+      "itemId": "752780c0da34",
+      "title": "Get Kindle Unlimited free for 3 months with this early Prime Day deal",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "752780c0da34"
+      ]
+    },
+    {
+      "itemId": "5f226c85d6ea",
+      "title": "Google Beam expands with new regions, partners, and customers",
+      "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5f226c85d6ea"
+      ]
+    },
+    {
+      "itemId": "429ba3c49baa",
+      "title": "New experts join Google’s AI & Economy team",
+      "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "429ba3c49baa"
+      ]
+    },
+    {
+      "itemId": "cccb8fdd919f",
+      "title": "Co-creating the future of fashion with Google",
+      "summary": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NY…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "cccb8fdd919f"
+      ]
+    },
+    {
+      "itemId": "f2c97248df43",
+      "title": "Making global data easier to explore",
+      "summary": "Google and the UN system have launched the UN System Data Commons, a new open platform making global statistics accessi…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f2c97248df43"
+      ]
+    },
+    {
+      "itemId": "e1db45977735",
+      "title": "AI for Societal Impact",
+      "summary": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share th…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e1db45977735"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "2f82989b07fe",
+      "title": "InfoQ Online Cohorts Address AI Security and Coding Agent Verification",
+      "takeaway": "A look at two InfoQ online certification cohorts covering security and privacy decisions in production AI systems and t…",
+      "evidenceItemIds": [
+        "2f82989b07fe"
+      ]
+    },
+    {
+      "itemId": "5d78376f9b47",
+      "title": "DeepSeek知乎独家发文，首次公开V4.1 Agent训练“大本营”DSec",
+      "takeaway": "DeepSeek在知乎独家发布技术长文，首次系统阐释了DeepSeek弹性计算（DeepSeek Elastic Compute，DSec）",
+      "evidenceItemIds": [
+        "5d78376f9b47"
+      ]
+    },
+    {
+      "itemId": "920375266c68",
+      "title": "Agents Refactor 300K Lines in Three Weeks, and Practitioners Ask What It Proves",
+      "takeaway": "CodeScene has published a case study in which coding agents refactored 300,000 lines of C over three weeks for roughly …",
+      "evidenceItemIds": [
+        "920375266c68"
+      ]
+    },
+    {
+      "itemId": "f2b23a7f736d",
+      "title": "DevDay 2026 Recap",
+      "takeaway": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and …",
+      "evidenceItemIds": [
+        "f2b23a7f736d"
+      ]
+    },
+    {
+      "itemId": "646ff5194882",
+      "title": "OpenAI推理之父最新访谈！数学只是多智能体时代的开胃菜",
+      "takeaway": "千禧年难题的突破，10000个Agent最多占了10%的功劳。",
+      "evidenceItemIds": [
+        "646ff5194882"
+      ]
+    },
+    {
+      "itemId": "0b250c0288f8",
+      "title": "Disrupting a coordinated model-distillation campaign",
+      "takeaway": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against advers…",
+      "evidenceItemIds": [
+        "0b250c0288f8"
+      ]
+    },
+    {
+      "itemId": "3cacf873e1bd",
+      "title": "Helping small businesses put AI to work",
+      "takeaway": "OpenAI is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongsi…",
+      "evidenceItemIds": [
+        "3cacf873e1bd"
+      ]
+    },
+    {
+      "itemId": "838973b95344",
+      "title": "openSUSE Leap adds a new security layer: Immutable mode",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "838973b95344"
+      ]
+    },
+    {
+      "itemId": "b12b1c4be679",
+      "title": "Manus 2.0回来了！给AI配手机号和钱包，还能拉群干活",
+      "takeaway": "给Agent配上手机号，再拉个群",
+      "evidenceItemIds": [
+        "b12b1c4be679"
+      ]
+    },
+    {
+      "itemId": "c072a4fb42aa",
+      "title": "Introducing GPT-6.1 Sol",
+      "takeaway": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s stand…",
+      "evidenceItemIds": [
+        "c072a4fb42aa"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕agent展开，建议优先关注《InfoQ Online Cohorts Address AI Security and Coding Agent Verification》、《DeepSeek知乎独家发文，首次公开V4.1 Agent训练“大本营”DSec》、《Agents Refactor 300K Lines in Three Weeks, and Practitioners Ask What It Proves》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Disrupting a coordinated model-distillation campaign》、《openSUSE Leap adds a new security layer: Immutable mode》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "0b250c0288f8",
+        "838973b95344",
+        "c072a4fb42aa",
+        "fb04dd831001"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 4 条，建议优先阅读《InfoQ Online Cohorts Address AI Security and Coding Agent Verification》、《DeepSeek知乎独家发文，首次公开V4.1 Agent训练“大本营”DSec》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "2f82989b07fe",
+        "5d78376f9b47",
+        "920375266c68",
+        "646ff5194882"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "tooling",
+      "lead": "工具链方向本期共 3 条，建议优先阅读《DevDay 2026 Recap》、《Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction across Laptop and Cloud》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "f2b23a7f736d",
+        "64a5ca20d1f2",
+        "cccb8fdd919f"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 2 条，建议优先阅读《Helping small businesses put AI to work》、《GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "3cacf873e1bd",
+        "2774cfd80a0b"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "552f9824d4ef152342c9dc78db389b8e59b3d1277a61568c75559ba2e98d9d6e",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-10-01T01:26:19.093Z",
+    "finishedAt": "2026-10-01T01:52:20.368Z",
+    "durationMs": 1561275,
+    "inputCount": 30,
+    "processedCount": 30,
+    "fallbackCount": 30,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 30,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 1,
+      "http": 28,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 1,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 57,
+      "splitRetryCount": 27
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-24",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-17",
+        "fetchedCount": 0,
+        "failedReason": "This operation was aborted"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 1,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-10-01T01:52:20.422Z",
+    "finishedAt": "2026-10-01T02:12:17.906Z",
+    "durationMs": 1197484,
+    "inputCount": 30,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 1,
+      "http": 28,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 1
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "2f82989b07fe",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "InfoQ Online Cohorts Address AI Security and Coding Agent Verification",
+      "link": "https://www.infoq.com/news/2026/09/onlinecohorts-ai-certifications/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "A look at two InfoQ online certification cohorts covering security and privacy decisions in production AI systems and the verification needed when coding agents work in existing codebases. By Artenisa Chatziou",
+      "publishedAt": "2026-09-30T17:00:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 123,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "5d78376f9b47",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "DeepSeek知乎独家发文，首次公开V4.1 Agent训练“大本营”DSec",
+      "link": "https://www.qbitai.com/2026/09/499308.html",
+      "contentSnippet": "DeepSeek在知乎独家发布技术长文，首次系统阐释了DeepSeek弹性计算（DeepSeek Elastic Compute，DSec）",
+      "publishedAt": "2026-09-30T05:18:05.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 73.17,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 112,
+        "ruleScoreNormalized": 73.17073170731707,
+        "finalScore": 73.17,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "920375266c68",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Agents Refactor 300K Lines in Three Weeks, and Practitioners Ask What It Proves",
+      "link": "https://www.infoq.com/news/2026/09/agentic-refactoring-case-study/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "CodeScene has published a case study in which coding agents refactored 300,000 lines of C over three weeks for roughly $4,000 in tokens, verified by a frame-by-frame replay harness. The agents built a playbook of codebase-specific recipes along the way. Practitioners have questioned the scope, the metric, and how much of the result depends on the harness. By Steef-Jan Wiggers",
+      "publishedAt": "2026-09-30T06:16:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 68.29,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 110,
+        "ruleScoreNormalized": 68.29268292682927,
+        "finalScore": 68.29,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "f2b23a7f736d",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "DevDay 2026 Recap",
+      "link": "https://openai.com/index/devday-2026-recap",
+      "contentSnippet": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
+      "publishedAt": "2026-09-29T10:00:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 63.41,
+      "importance": "low",
+      "recommendationReason": "安全与合规关注",
+      "scoreBreakdown": {
+        "ruleScore": 108,
+        "ruleScoreNormalized": 63.41463414634146,
+        "finalScore": 63.41,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "646ff5194882",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "OpenAI推理之父最新访谈！数学只是多智能体时代的开胃菜",
+      "link": "https://www.qbitai.com/2026/09/499654.html",
+      "contentSnippet": "千禧年难题的突破，10000个Agent最多占了10%的功劳。",
+      "publishedAt": "2026-09-30T14:03:43.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 60.98,
+      "importance": "low",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 107,
+        "ruleScoreNormalized": 60.97560975609756,
+        "finalScore": 60.98,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[LangChain Changelog] 抓取失败: This operation was aborted",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[MarkTechPost] 抓取失败: HTTP 403",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[HNRSS AI] 抓取失败: This operation was aborted",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): This operation was aborted",
+    "LLM 分类打分部分回退：30/30",
+    "LLM 分类打分回退明细（前 3/30）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"070ce9c0b20493d139ac8afc073522a8\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"070ce9c0e5adf6203dc391285b0d2265\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"070ce9daccdf91c1aada7cc4b958b553\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=1：http=28：business=0：missing_content=0：invalid_json=0：quality=0：other=1",
+    "LLM 分类打分重试统计：batch_retry=57, split_retry=27",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=1, http=28, business=0, invalid_json=0, quality=0, other=1",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- InfoQ Online Cohorts Address AI Security and Coding Agent Verification\n- DeepSeek知乎独家发文，首次公开V4.1 Agent训练“大本营”DSec\n- Agents Refactor 300K Lines in Three Weeks, and Practitioners Ask What It Proves\n- DevDay 2026 Recap\n- OpenAI推理之父最新访谈！数学只是多智能体时代的开胃菜\n\n### 分类覆盖（大纲）\n- agent: 5 条\n- tooling: 3 条\n- other: 17 条\n- open-source: 2 条\n- tutorial: 2 条\n- research: 1 条",
+    "rankedItems": [
+      {
+        "id": "2f82989b07fe",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "InfoQ Online Cohorts Address AI Security and Coding Agent Verification",
+        "link": "https://www.infoq.com/news/2026/09/onlinecohorts-ai-certifications/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A look at two InfoQ online certification cohorts covering security and privacy decisions in production AI systems and the verification needed when coding agents work in existing codebases. By Artenisa Chatziou",
+        "publishedAt": "2026-09-30T17:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5d78376f9b47",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "DeepSeek知乎独家发文，首次公开V4.1 Agent训练“大本营”DSec",
+        "link": "https://www.qbitai.com/2026/09/499308.html",
+        "contentSnippet": "DeepSeek在知乎独家发布技术长文，首次系统阐释了DeepSeek弹性计算（DeepSeek Elastic Compute，DSec）",
+        "publishedAt": "2026-09-30T05:18:05.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.17,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 112,
+          "ruleScoreNormalized": 73.17073170731707,
+          "finalScore": 73.17,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "920375266c68",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Agents Refactor 300K Lines in Three Weeks, and Practitioners Ask What It Proves",
+        "link": "https://www.infoq.com/news/2026/09/agentic-refactoring-case-study/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "CodeScene has published a case study in which coding agents refactored 300,000 lines of C over three weeks for roughly $4,000 in tokens, verified by a frame-by-frame replay harness. The agents built a playbook of codebase-specific recipes along the way. Practitioners have questioned the scope, the metric, and how much of the result depends on the harness. By Steef-Jan Wiggers",
+        "publishedAt": "2026-09-30T06:16:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 68.29,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 68.29268292682927,
+          "finalScore": 68.29,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f2b23a7f736d",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "DevDay 2026 Recap",
+        "link": "https://openai.com/index/devday-2026-recap",
+        "contentSnippet": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
+        "publishedAt": "2026-09-29T10:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 63.41,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 63.41463414634146,
+          "finalScore": 63.41,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "646ff5194882",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "OpenAI推理之父最新访谈！数学只是多智能体时代的开胃菜",
+        "link": "https://www.qbitai.com/2026/09/499654.html",
+        "contentSnippet": "千禧年难题的突破，10000个Agent最多占了10%的功劳。",
+        "publishedAt": "2026-09-30T14:03:43.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.98,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 107,
+          "ruleScoreNormalized": 60.97560975609756,
+          "finalScore": 60.98,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0b250c0288f8",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Disrupting a coordinated model-distillation campaign",
+        "link": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
+        "contentSnippet": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against adversarial distillation.",
+        "publishedAt": "2026-09-30T10:30:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 56.1,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 56.09756097560976,
+          "finalScore": 56.1,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3cacf873e1bd",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Helping small businesses put AI to work",
+        "link": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
+        "contentSnippet": "OpenAI is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongside a new report on how small teams are using AI.",
+        "publishedAt": "2026-09-30T10:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 56.1,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 56.09756097560976,
+          "finalScore": 56.1,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "838973b95344",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "openSUSE Leap adds a new security layer: Immutable mode",
+        "link": "https://www.zdnet.com/tech/opensuse-leap-immutable-mode-security/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-30T17:58:06.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 48.78,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 48.78048780487805,
+          "finalScore": 48.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b12b1c4be679",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "Manus 2.0回来了！给AI配手机号和钱包，还能拉群干活",
+        "link": "https://www.qbitai.com/2026/09/499592.html",
+        "contentSnippet": "给Agent配上手机号，再拉个群",
+        "publishedAt": "2026-09-30T07:58:37.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 48.78,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 48.78048780487805,
+          "finalScore": 48.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c072a4fb42aa",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Introducing GPT-6.1 Sol",
+        "link": "https://openai.com/index/introducing-gpt-6-1-sol",
+        "contentSnippet": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
+        "publishedAt": "2026-09-29T10:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 43.9,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 43.90243902439025,
+          "finalScore": 43.9,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fb04dd831001",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Introducing dots",
+        "link": "https://openai.com/index/introducing-dots",
+        "contentSnippet": "Dots by OpenAI are proactive assistants that can keep working across complex projects and everyday tasks. Learn how dots help you stay in control while work moves forward.",
+        "publishedAt": "2026-09-29T00:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 43.9,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 43.90243902439025,
+          "finalScore": 43.9,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c2987d76072a",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How we will do better for Australia",
+        "link": "https://openai.com/index/how-we-will-do-better-for-australia",
+        "contentSnippet": "OpenAI apologises for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
+        "publishedAt": "2026-09-28T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 43.9,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 43.90243902439025,
+          "finalScore": 43.9,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "64a5ca20d1f2",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction across Laptop and Cloud",
+        "link": "https://www.infoq.com/news/2026/09/docker-cloud-sandboxes/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed infrastructure. Built on hardware-enforced microVM isolation, the platform provides a consistent execution environment and unified CLI workflows for seamlessly moving workloads from local machines to the cloud. By Sergio De Simone",
+        "publishedAt": "2026-09-26T17:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 43.9,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 43.90243902439025,
+          "finalScore": 43.9,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2774cfd80a0b",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+        "link": "https://www.infoq.com/news/2026/09/gke-pod-snapshots-benchmarks/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loading in 37 seconds. The feature checkpoints CPU and GPU memory through gVisor into Cloud Storage. Practitioners have asked whether invalidation is the harder problem, since snapshots match on a spec hash, machine series, and kernel and driver versions. By Steef-Jan Wiggers",
+        "publishedAt": "2026-09-27T06:46:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 31.71,
+        "importance": "low",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 31.70731707317073,
+          "finalScore": 31.71,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "af4a5a78bbe0",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Your iPhone just got a hidden anti-scam upgrade in iOS 27: How to enable it",
+        "link": "https://www.zdnet.com/tech/ios-27-impersonation-risk-detection-security-feature/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-30T15:45:00.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 29.27,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 29.268292682926827,
+          "finalScore": 29.27,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d12c1bd9e58e",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Pearson’s Workera deal targets a big workplace problem: No time to AI upskill",
+        "link": "https://www.zdnet.com/innovation/pearson-workera-acquisition-ai-upskilling/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-30T12:25:48.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 29.27,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 29.268292682926827,
+          "finalScore": 29.27,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "927c795585b6",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "contentSnippet": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "publishedAt": "2026-09-28T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 24.39,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 24.390243902439025,
+          "finalScore": 24.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f353ff81b5e2",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "直播回顾：工业AI的下一个机会在哪？",
+        "link": "https://www.qbitai.com/2026/09/499605.html",
+        "contentSnippet": "什么样的AI才适合工业现场？企业真正开始做工业AI时，又该从哪里下手？",
+        "publishedAt": "2026-09-30T12:11:24.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 24.39,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 24.390243902439025,
+          "finalScore": 24.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "25d355f28a25",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "AWS Introduces Foreign Key Constraints in Aurora DSQL",
+        "link": "https://www.infoq.com/news/2026/09/aurora-dsql-foreign-keys/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "AWS recently announced that Aurora DSQL now supports foreign key constraints, allowing applications to enforce referential integrity directly in the database, including CASCADE, SET NULL, and other referential actions. The addition addresses a long-standing gap that users had explicitly called out as an adoption blocker. By Renato Losio",
+        "publishedAt": "2026-09-28T04:54:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 19.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 19.51219512195122,
+          "finalScore": 19.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "994cf49e7c42",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "Anthropic，你是来给智谱打广告的吧！",
+        "link": "https://www.qbitai.com/2026/09/499597.html",
+        "contentSnippet": "实测说GLM-5.3很强",
+        "publishedAt": "2026-09-30T10:04:12.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 12.2,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 12.195121951219512,
+          "finalScore": 12.2,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9ac455526570",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "刚刚，GPT-6 Astra接上宇树G1，把厨房收拾了！",
+        "link": "https://www.qbitai.com/2026/09/499493.html",
+        "contentSnippet": "让GPT把机器人技能当工具调用",
+        "publishedAt": "2026-09-30T07:54:54.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 12.2,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 12.195121951219512,
+          "finalScore": 12.2,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "37560ea76b71",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Home Made CobbleDB Replaces DynamoDB at Perplexity to Cut Query Latency 5x and Reduce Cloud Storage",
+        "link": "https://www.infoq.com/news/2026/09/cobbledb-perplexity/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Perplexity has migrated its search infrastructure from Amazon DynamoDB to CobbleDB, an internally developed key-value store in Rust. This change reduced latency and costs associated with handling large document batches. The new architecture supports high query volumes more efficiently, achieving improved latency and reduced storage expenses while managing significant production traffic. By Olimpiu Pop",
+        "publishedAt": "2026-09-25T14:14:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 7.32,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 85,
+          "ruleScoreNormalized": 7.317073170731707,
+          "finalScore": 7.32,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f6ebbb46ab72",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "LLMjacking can run up your business’ AI bill fast – how to stop it",
+        "link": "https://www.zdnet.com/innovation/llmjacking-business-ai-bill-cost-how-to-stop/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-29T19:09:53.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 4.88,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 4.878048780487805,
+          "finalScore": 4.88,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4b9a6ecbac8f",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Is ChatGPT your new Google Workspace alternative? Meet Space, Pages, and slides",
+        "link": "https://www.zdnet.com/innovation/chatgpt-space-pages-slides-google-workspace-alternative/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-29T17:58:37.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 4.88,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 4.878048780487805,
+          "finalScore": 4.88,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "752780c0da34",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Get Kindle Unlimited free for 3 months with this early Prime Day deal",
+        "link": "https://www.zdnet.com/uncategorized/kindle-unlimited-amazon-october-prime-day-deal-2026/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-29T17:32:40.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 4.88,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 4.878048780487805,
+          "finalScore": 4.88,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5f226c85d6ea",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "link": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+        "contentSnippet": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "publishedAt": "2026-09-23T18:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "429ba3c49baa",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "New experts join Google’s AI & Economy team",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+        "contentSnippet": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+        "publishedAt": "2026-09-18T14:00:00.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cccb8fdd919f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Co-creating the future of fashion with Google",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
+        "contentSnippet": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NYFW.",
+        "publishedAt": "2026-09-18T13:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f2c97248df43",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Making global data easier to explore",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/",
+        "contentSnippet": "Google and the UN system have launched the UN System Data Commons, a new open platform making global statistics accessible and easy to search.",
+        "publishedAt": "2026-09-17T20:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e1db45977735",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "AI for Societal Impact",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/",
+        "contentSnippet": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share the opportunity of AI.",
+        "publishedAt": "2026-09-15T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "2f82989b07fe",
+        "title": "InfoQ Online Cohorts Address AI Security and Coding Agent Verification",
+        "summary": "A look at two InfoQ online certification cohorts covering security and privacy decisions in production AI systems and t…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "2f82989b07fe"
+        ]
+      },
+      {
+        "itemId": "5d78376f9b47",
+        "title": "DeepSeek知乎独家发文，首次公开V4.1 Agent训练“大本营”DSec",
+        "summary": "DeepSeek在知乎独家发布技术长文，首次系统阐释了DeepSeek弹性计算（DeepSeek Elastic Compute，DSec）",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "5d78376f9b47"
+        ]
+      },
+      {
+        "itemId": "920375266c68",
+        "title": "Agents Refactor 300K Lines in Three Weeks, and Practitioners Ask What It Proves",
+        "summary": "CodeScene has published a case study in which coding agents refactored 300,000 lines of C over three weeks for roughly …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "920375266c68"
+        ]
+      },
+      {
+        "itemId": "f2b23a7f736d",
+        "title": "DevDay 2026 Recap",
+        "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and …",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "f2b23a7f736d"
+        ]
+      },
+      {
+        "itemId": "646ff5194882",
+        "title": "OpenAI推理之父最新访谈！数学只是多智能体时代的开胃菜",
+        "summary": "千禧年难题的突破，10000个Agent最多占了10%的功劳。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "646ff5194882"
+        ]
+      },
+      {
+        "itemId": "0b250c0288f8",
+        "title": "Disrupting a coordinated model-distillation campaign",
+        "summary": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against advers…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "0b250c0288f8"
+        ]
+      },
+      {
+        "itemId": "3cacf873e1bd",
+        "title": "Helping small businesses put AI to work",
+        "summary": "OpenAI is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongsi…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3cacf873e1bd"
+        ]
+      },
+      {
+        "itemId": "838973b95344",
+        "title": "openSUSE Leap adds a new security layer: Immutable mode",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "838973b95344"
+        ]
+      },
+      {
+        "itemId": "b12b1c4be679",
+        "title": "Manus 2.0回来了！给AI配手机号和钱包，还能拉群干活",
+        "summary": "给Agent配上手机号，再拉个群",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "b12b1c4be679"
+        ]
+      },
+      {
+        "itemId": "c072a4fb42aa",
+        "title": "Introducing GPT-6.1 Sol",
+        "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s stand…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c072a4fb42aa"
+        ]
+      },
+      {
+        "itemId": "fb04dd831001",
+        "title": "Introducing dots",
+        "summary": "Dots by OpenAI are proactive assistants that can keep working across complex projects and everyday tasks. Learn how dot…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fb04dd831001"
+        ]
+      },
+      {
+        "itemId": "c2987d76072a",
+        "title": "How we will do better for Australia",
+        "summary": "OpenAI apologises for incidents involving Australian government websites and outlines stronger safeguards and support t…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c2987d76072a"
+        ]
+      },
+      {
+        "itemId": "64a5ca20d1f2",
+        "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction across Laptop and Cloud",
+        "summary": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed inf…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "64a5ca20d1f2"
+        ]
+      },
+      {
+        "itemId": "2774cfd80a0b",
+        "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+        "summary": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loadin…",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "2774cfd80a0b"
+        ]
+      },
+      {
+        "itemId": "af4a5a78bbe0",
+        "title": "Your iPhone just got a hidden anti-scam upgrade in iOS 27: How to enable it",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "af4a5a78bbe0"
+        ]
+      },
+      {
+        "itemId": "d12c1bd9e58e",
+        "title": "Pearson’s Workera deal targets a big workplace problem: No time to AI upskill",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d12c1bd9e58e"
+        ]
+      },
+      {
+        "itemId": "927c795585b6",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "927c795585b6"
+        ]
+      },
+      {
+        "itemId": "f353ff81b5e2",
+        "title": "直播回顾：工业AI的下一个机会在哪？",
+        "summary": "什么样的AI才适合工业现场？企业真正开始做工业AI时，又该从哪里下手？",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f353ff81b5e2"
+        ]
+      },
+      {
+        "itemId": "25d355f28a25",
+        "title": "AWS Introduces Foreign Key Constraints in Aurora DSQL",
+        "summary": "AWS recently announced that Aurora DSQL now supports foreign key constraints, allowing applications to enforce referent…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "25d355f28a25"
+        ]
+      },
+      {
+        "itemId": "994cf49e7c42",
+        "title": "Anthropic，你是来给智谱打广告的吧！",
+        "summary": "实测说GLM-5.3很强",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "994cf49e7c42"
+        ]
+      },
+      {
+        "itemId": "9ac455526570",
+        "title": "刚刚，GPT-6 Astra接上宇树G1，把厨房收拾了！",
+        "summary": "让GPT把机器人技能当工具调用",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9ac455526570"
+        ]
+      },
+      {
+        "itemId": "37560ea76b71",
+        "title": "Home Made CobbleDB Replaces DynamoDB at Perplexity to Cut Query Latency 5x and Reduce Cloud Storage",
+        "summary": "Perplexity has migrated its search infrastructure from Amazon DynamoDB to CobbleDB, an internally developed key-value s…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "37560ea76b71"
+        ]
+      },
+      {
+        "itemId": "f6ebbb46ab72",
+        "title": "LLMjacking can run up your business’ AI bill fast – how to stop it",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f6ebbb46ab72"
+        ]
+      },
+      {
+        "itemId": "4b9a6ecbac8f",
+        "title": "Is ChatGPT your new Google Workspace alternative? Meet Space, Pages, and slides",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "4b9a6ecbac8f"
+        ]
+      },
+      {
+        "itemId": "752780c0da34",
+        "title": "Get Kindle Unlimited free for 3 months with this early Prime Day deal",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "752780c0da34"
+        ]
+      },
+      {
+        "itemId": "5f226c85d6ea",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5f226c85d6ea"
+        ]
+      },
+      {
+        "itemId": "429ba3c49baa",
+        "title": "New experts join Google’s AI & Economy team",
+        "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "429ba3c49baa"
+        ]
+      },
+      {
+        "itemId": "cccb8fdd919f",
+        "title": "Co-creating the future of fashion with Google",
+        "summary": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NY…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "cccb8fdd919f"
+        ]
+      },
+      {
+        "itemId": "f2c97248df43",
+        "title": "Making global data easier to explore",
+        "summary": "Google and the UN system have launched the UN System Data Commons, a new open platform making global statistics accessi…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f2c97248df43"
+        ]
+      },
+      {
+        "itemId": "e1db45977735",
+        "title": "AI for Societal Impact",
+        "summary": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share th…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e1db45977735"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "2f82989b07fe",
+        "title": "InfoQ Online Cohorts Address AI Security and Coding Agent Verification",
+        "takeaway": "A look at two InfoQ online certification cohorts covering security and privacy decisions in production AI systems and t…",
+        "evidenceItemIds": [
+          "2f82989b07fe"
+        ]
+      },
+      {
+        "itemId": "5d78376f9b47",
+        "title": "DeepSeek知乎独家发文，首次公开V4.1 Agent训练“大本营”DSec",
+        "takeaway": "DeepSeek在知乎独家发布技术长文，首次系统阐释了DeepSeek弹性计算（DeepSeek Elastic Compute，DSec）",
+        "evidenceItemIds": [
+          "5d78376f9b47"
+        ]
+      },
+      {
+        "itemId": "920375266c68",
+        "title": "Agents Refactor 300K Lines in Three Weeks, and Practitioners Ask What It Proves",
+        "takeaway": "CodeScene has published a case study in which coding agents refactored 300,000 lines of C over three weeks for roughly …",
+        "evidenceItemIds": [
+          "920375266c68"
+        ]
+      },
+      {
+        "itemId": "f2b23a7f736d",
+        "title": "DevDay 2026 Recap",
+        "takeaway": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and …",
+        "evidenceItemIds": [
+          "f2b23a7f736d"
+        ]
+      },
+      {
+        "itemId": "646ff5194882",
+        "title": "OpenAI推理之父最新访谈！数学只是多智能体时代的开胃菜",
+        "takeaway": "千禧年难题的突破，10000个Agent最多占了10%的功劳。",
+        "evidenceItemIds": [
+          "646ff5194882"
+        ]
+      },
+      {
+        "itemId": "0b250c0288f8",
+        "title": "Disrupting a coordinated model-distillation campaign",
+        "takeaway": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against advers…",
+        "evidenceItemIds": [
+          "0b250c0288f8"
+        ]
+      },
+      {
+        "itemId": "3cacf873e1bd",
+        "title": "Helping small businesses put AI to work",
+        "takeaway": "OpenAI is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongsi…",
+        "evidenceItemIds": [
+          "3cacf873e1bd"
+        ]
+      },
+      {
+        "itemId": "838973b95344",
+        "title": "openSUSE Leap adds a new security layer: Immutable mode",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "838973b95344"
+        ]
+      },
+      {
+        "itemId": "b12b1c4be679",
+        "title": "Manus 2.0回来了！给AI配手机号和钱包，还能拉群干活",
+        "takeaway": "给Agent配上手机号，再拉个群",
+        "evidenceItemIds": [
+          "b12b1c4be679"
+        ]
+      },
+      {
+        "itemId": "c072a4fb42aa",
+        "title": "Introducing GPT-6.1 Sol",
+        "takeaway": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s stand…",
+        "evidenceItemIds": [
+          "c072a4fb42aa"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕agent展开，建议优先关注《InfoQ Online Cohorts Address AI Security and Coding Agent Verification》、《DeepSeek知乎独家发文，首次公开V4.1 Agent训练“大本营”DSec》、《Agents Refactor 300K Lines in Three Weeks, and Practitioners Ask What It Proves》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Disrupting a coordinated model-distillation campaign》、《openSUSE Leap adds a new security layer: Immutable mode》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "0b250c0288f8",
+          "838973b95344",
+          "c072a4fb42aa",
+          "fb04dd831001"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 4 条，建议优先阅读《InfoQ Online Cohorts Address AI Security and Coding Agent Verification》、《DeepSeek知乎独家发文，首次公开V4.1 Agent训练“大本营”DSec》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "2f82989b07fe",
+          "5d78376f9b47",
+          "920375266c68",
+          "646ff5194882"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "tooling",
+        "lead": "工具链方向本期共 3 条，建议优先阅读《DevDay 2026 Recap》、《Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction across Laptop and Cloud》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "f2b23a7f736d",
+          "64a5ca20d1f2",
+          "cccb8fdd919f"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 2 条，建议优先阅读《Helping small businesses put AI to work》、《GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "3cacf873e1bd",
+          "2774cfd80a0b"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "552f9824d4ef152342c9dc78db389b8e59b3d1277a61568c75559ba2e98d9d6e",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-10-01T01:26:19.093Z",
+      "finishedAt": "2026-10-01T01:52:20.368Z",
+      "durationMs": 1561275,
+      "inputCount": 30,
+      "processedCount": 30,
+      "fallbackCount": 30,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 30,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 1,
+        "http": 28,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 1,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 57,
+        "splitRetryCount": 27
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-24",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-17",
+          "fetchedCount": 0,
+          "failedReason": "This operation was aborted"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 1,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-10-01T01:52:20.422Z",
+      "finishedAt": "2026-10-01T02:12:17.906Z",
+      "durationMs": 1197484,
+      "inputCount": 30,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 1,
+        "http": 28,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 1
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "2f82989b07fe",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "InfoQ Online Cohorts Address AI Security and Coding Agent Verification",
+        "link": "https://www.infoq.com/news/2026/09/onlinecohorts-ai-certifications/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A look at two InfoQ online certification cohorts covering security and privacy decisions in production AI systems and the verification needed when coding agents work in existing codebases. By Artenisa Chatziou",
+        "publishedAt": "2026-09-30T17:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5d78376f9b47",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "DeepSeek知乎独家发文，首次公开V4.1 Agent训练“大本营”DSec",
+        "link": "https://www.qbitai.com/2026/09/499308.html",
+        "contentSnippet": "DeepSeek在知乎独家发布技术长文，首次系统阐释了DeepSeek弹性计算（DeepSeek Elastic Compute，DSec）",
+        "publishedAt": "2026-09-30T05:18:05.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.17,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 112,
+          "ruleScoreNormalized": 73.17073170731707,
+          "finalScore": 73.17,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "920375266c68",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Agents Refactor 300K Lines in Three Weeks, and Practitioners Ask What It Proves",
+        "link": "https://www.infoq.com/news/2026/09/agentic-refactoring-case-study/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "CodeScene has published a case study in which coding agents refactored 300,000 lines of C over three weeks for roughly $4,000 in tokens, verified by a frame-by-frame replay harness. The agents built a playbook of codebase-specific recipes along the way. Practitioners have questioned the scope, the metric, and how much of the result depends on the harness. By Steef-Jan Wiggers",
+        "publishedAt": "2026-09-30T06:16:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 68.29,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 68.29268292682927,
+          "finalScore": 68.29,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f2b23a7f736d",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "DevDay 2026 Recap",
+        "link": "https://openai.com/index/devday-2026-recap",
+        "contentSnippet": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
+        "publishedAt": "2026-09-29T10:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 63.41,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 63.41463414634146,
+          "finalScore": 63.41,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "646ff5194882",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "OpenAI推理之父最新访谈！数学只是多智能体时代的开胃菜",
+        "link": "https://www.qbitai.com/2026/09/499654.html",
+        "contentSnippet": "千禧年难题的突破，10000个Agent最多占了10%的功劳。",
+        "publishedAt": "2026-09-30T14:03:43.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.98,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 107,
+          "ruleScoreNormalized": 60.97560975609756,
+          "finalScore": 60.98,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 30,
+      "normalizedCount": 30,
+      "dedupedCount": 30,
+      "highImportanceCount": 1,
+      "mediumImportanceCount": 2,
+      "lowImportanceCount": 27,
+      "categoryBreakdown": {
+        "open-source": 2,
+        "tooling": 3,
+        "agent": 5,
+        "research": 1,
+        "industry-news": 0,
+        "tutorial": 2,
+        "other": 17
+      }
+    },
+    "warnings": [
+      "[LangChain Changelog] 抓取失败: This operation was aborted",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[MarkTechPost] 抓取失败: HTTP 403",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[HNRSS AI] 抓取失败: This operation was aborted",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): This operation was aborted",
+      "LLM 分类打分部分回退：30/30",
+      "LLM 分类打分回退明细（前 3/30）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"070ce9c0b20493d139ac8afc073522a8\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"070ce9c0e5adf6203dc391285b0d2265\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"070ce9daccdf91c1aada7cc4b958b553\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=1：http=28：business=0：missing_content=0：invalid_json=0：quality=0：other=1",
+      "LLM 分类打分重试统计：batch_retry=57, split_retry=27",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=1, http=28, business=0, invalid_json=0, quality=0, other=1",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
