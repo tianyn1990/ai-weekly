@@ -1,0 +1,2488 @@
+{
+  "runId": "daily-1791377665292",
+  "generatedAt": "2026-10-07T12:54:25.230Z",
+  "reviewStartedAt": "2026-10-07T12:54:25.230Z",
+  "reportDate": "2026-10-07",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-10-07T12:54:25.230Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 42,
+    "normalizedCount": 42,
+    "dedupedCount": 42,
+    "highImportanceCount": 1,
+    "mediumImportanceCount": 4,
+    "lowImportanceCount": 37,
+    "categoryBreakdown": {
+      "open-source": 3,
+      "tooling": 4,
+      "agent": 3,
+      "research": 3,
+      "industry-news": 6,
+      "tutorial": 2,
+      "other": 21
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "13f0bf4a7dc9",
+      "title": "New Archestra's OpenAPPA Saturates Two Major Security Benchmarks with a 0% Attack Success Rate",
+      "summary": "Archestra released OpenAPPA, an open-source security engine designed to stop data exfiltration caused by prompt injecti…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "13f0bf4a7dc9"
+      ]
+    },
+    {
+      "itemId": "afa6b62a6593",
+      "title": "How Jump Trading is scaling quant research with ChatGPT",
+      "summary": "Jump Trading uses OpenAI to expand quantitative research. See how longer-running AI workflows combine multiple data sou…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "afa6b62a6593"
+      ]
+    },
+    {
+      "itemId": "cc874bb1316c",
+      "title": "Sharing AI progress in mathematics",
+      "summary": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof form…",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "cc874bb1316c"
+      ]
+    },
+    {
+      "itemId": "f86a2aa6990d",
+      "title": "Advancing computer use with Ironclad",
+      "summary": "Learn how OpenAI and Ironclad are training and evaluating AI agents on complex contracting workflows to advance compute…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "f86a2aa6990d"
+      ]
+    },
+    {
+      "itemId": "20428db517e1",
+      "title": "QCon London 2027 Announces 15 Tracks on Production AI, Architecture, and Engineering at Scale",
+      "summary": "A preview of the 15-track QCon London 2027 program, covering agent evaluation and guardrails, AI-era architecture, dist…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "20428db517e1"
+      ]
+    },
+    {
+      "itemId": "0024a4bbba2f",
+      "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
+      "summary": "Atlassian and OpenAI are expanding their partnership to connect frontier models with enterprise knowledge and help team…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "0024a4bbba2f"
+      ]
+    },
+    {
+      "itemId": "f56095582f17",
+      "title": "Show HN: Open model that checks stablecoin payments before an AI agent pays",
+      "summary": "Article URL: https://huggingface.co/sriram1983007/SRA-RiskGate-4B Comments URL: https://news.ycombinator.com/item?id=49…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "f56095582f17"
+      ]
+    },
+    {
+      "itemId": "68d0d0608c2e",
+      "title": "A Developer’s Guide to Laya: Zero-Shot Decisions and Calibration",
+      "summary": "Explore a comprehensive coding guide to Laya, the open-source zero-shot decision engine. Learn how to implement typed d…",
+      "recommendation": "可直接学习实践",
+      "evidenceItemIds": [
+        "68d0d0608c2e"
+      ]
+    },
+    {
+      "itemId": "935618412af7",
+      "title": "Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4",
+      "summary": "Google DeepMind's EmbeddingGemma 2 maps 5 input types into one 768d space and ships today under Apache 2.0. The post Go…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "935618412af7"
+      ]
+    },
+    {
+      "itemId": "04c710ba8864",
+      "title": "Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model",
+      "summary": "Mistral AI has released Mistral Large 4, nicknamed Le Chonk, as a public preview. It is a 1.05 trillion parameter Mixtu…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "04c710ba8864"
+      ]
+    },
+    {
+      "itemId": "92d60b58598f",
+      "title": "Introducing Playground: Create and play custom games",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "92d60b58598f"
+      ]
+    },
+    {
+      "itemId": "1670da97304e",
+      "title": "Akka Tests Spec-Driven AI Delivery across 65 Open Source Projects",
+      "summary": "Akka used 65 open-source projects to examine how specification structure, context, model selection, automated validatio…",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "1670da97304e"
+      ]
+    },
+    {
+      "itemId": "5fd94da9b89d",
+      "title": "Our approach to EU text provenance rules",
+      "summary": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5fd94da9b89d"
+      ]
+    },
+    {
+      "itemId": "f7a17928d2ad",
+      "title": "Building advertising for the way people use AI",
+      "summary": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f7a17928d2ad"
+      ]
+    },
+    {
+      "itemId": "f9be6bcbc55f",
+      "title": "Cloudflare Uses an AI Harness to Probe and Harden Its WAF",
+      "summary": "Cloudflare placed frontier AI models inside a controlled testing harness to probe its Web Application Firewall (WAF), u…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f9be6bcbc55f"
+      ]
+    },
+    {
+      "itemId": "dee75302a3df",
+      "title": "Spanner Omni Reaches GA, Replacing Google's Atomic Clocks and File System with Software",
+      "summary": "Google has made Spanner Omni generally available, running its distributed SQL database on-premises, across clouds or on…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "dee75302a3df"
+      ]
+    },
+    {
+      "itemId": "6ae29b9bab58",
+      "title": "Pizza Bot: Open-Source Inbox for Background AI Agents",
+      "summary": "A team of developers working at AWS recently open-sourced Pizza Bot, a self-hosted application designed to let AI agent…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "6ae29b9bab58"
+      ]
+    },
+    {
+      "itemId": "e19031c4ecf1",
+      "title": "Meta AI Open-Sources Rebalancer: A C++ Assignment Solver That Runs About 40 Million Placement Problems a Day",
+      "summary": "Meta has open-sourced Rebalancer, the C++ and Python library it has used for over 9 years to place shards, servers and …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e19031c4ecf1"
+      ]
+    },
+    {
+      "itemId": "1541ded240c4",
+      "title": "Reka Releases Rho-1: A 19B Omni-Reasoning Model That Understands, Generates Video and Outputs Robot Actions in One",
+      "summary": "Reka has released Rho-1, a 19B omni-reasoning model trained from scratch. One network reads and generates text, images,…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "1541ded240c4"
+      ]
+    },
+    {
+      "itemId": "4c0899fd385e",
+      "title": "Mistral’s new Le Chonk model brings AI cybersecurity to your business – and you control it",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "4c0899fd385e"
+      ]
+    },
+    {
+      "itemId": "0bb33120a530",
+      "title": "《怪物史莱克》编剧也来了！这家AI影视公司，视频模型全球第二！",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "0bb33120a530"
+      ]
+    },
+    {
+      "itemId": "02de0a47e09b",
+      "title": "晕…这年头还有说人话的AI不",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "02de0a47e09b"
+      ]
+    },
+    {
+      "itemId": "1a75aaaaa192",
+      "title": "Meshy 跻身 a16z 消费级 AI 应用月收入 Top 50，为榜单唯一 AI 3D 公司",
+      "summary": "在 a16z 首份消费级 AI 应用月收入榜单中，Meshy 位列第 31 名，与 OpenAI、Anthropic、Canva、Superhuman、Higgsfield 等共同上榜",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1a75aaaaa192"
+      ]
+    },
+    {
+      "itemId": "9d45a803cb18",
+      "title": "OpenAI一夜甩出722篇数学论文！黎曼霍奇BSD全上阵，数学家：读不过来",
+      "summary": "三位菲尔兹奖得主：不代表认可",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9d45a803cb18"
+      ]
+    },
+    {
+      "itemId": "f54569d0fc05",
+      "title": "How to Catch AI Delegation Drift Before Your Board Does",
+      "summary": "Article URL: https://age-of-product.com/ai-delegation-audit-webinar/ Comments URL: https://news.ycombinator.com/item?id…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f54569d0fc05"
+      ]
+    },
+    {
+      "itemId": "e5fed599e19e",
+      "title": "AI Solved One Math Problem and Everyone Freaked Out. It Just Cracked 100s More",
+      "summary": "Article URL: https://www.wsj.com/tech/ai/openai-ai-math-problems-millennium-prize-23d14511 Comments URL: https://news.y…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e5fed599e19e"
+      ]
+    },
+    {
+      "itemId": "46ed3c3b6d8d",
+      "title": "Bender: AI's 'Existential' Risk Is 'Fake' [video]",
+      "summary": "Article URL: https://www.youtube.com/watch?v=QuZjcKshf_c Comments URL: https://news.ycombinator.com/item?id=49992418 Po…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "46ed3c3b6d8d"
+      ]
+    },
+    {
+      "itemId": "70208102fbf0",
+      "title": "Ask HN: Will AI Longevity Models Optimize for Physical Scarcity?",
+      "summary": "Since longevity has a high value and AI models are becoming capable of new leaps I think the dynamic of the market migh…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "70208102fbf0"
+      ]
+    },
+    {
+      "itemId": "ea20724f4c73",
+      "title": "Tynbo – a daily team awareness board with no AI and no task management",
+      "summary": "Article URL: https://tynbo.me Comments URL: https://news.ycombinator.com/item?id=49992013 Points: 1 # Comments: 0",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "ea20724f4c73"
+      ]
+    },
+    {
+      "itemId": "077f919315a2",
+      "title": "Use Gemini for free? You’ll soon be limited to its weakest AI model",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "077f919315a2"
+      ]
+    },
+    {
+      "itemId": "605efdb9052a",
+      "title": "Office 2021 support ends this month – you have 5 options",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "605efdb9052a"
+      ]
+    },
+    {
+      "itemId": "3fb5e2397a05",
+      "title": "Beyond Domain-Specific World Models: JEPA-Anything Uses 1 Recipe for 7 Fields",
+      "summary": "JEPA-Anything splits a JEPA's single latent target into 4 orthogonal factors, each with its own predictor. Tested acros…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3fb5e2397a05"
+      ]
+    },
+    {
+      "itemId": "1d5fed04e570",
+      "title": "The latest AI news we announced in September 2026",
+      "summary": "Here are Google’s latest AI updates from September 2026",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1d5fed04e570"
+      ]
+    },
+    {
+      "itemId": "ebdb2bd9f69c",
+      "title": "How I made a paid Mac app in 11 days with Claude – without writing a single line of code",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "ebdb2bd9f69c"
+      ]
+    },
+    {
+      "itemId": "927c795585b6",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "927c795585b6"
+      ]
+    },
+    {
+      "itemId": "5f226c85d6ea",
+      "title": "Google Beam expands with new regions, partners, and customers",
+      "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5f226c85d6ea"
+      ]
+    },
+    {
+      "itemId": "429ba3c49baa",
+      "title": "New experts join Google’s AI & Economy team",
+      "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "429ba3c49baa"
+      ]
+    },
+    {
+      "itemId": "cccb8fdd919f",
+      "title": "Co-creating the future of fashion with Google",
+      "summary": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NY…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "cccb8fdd919f"
+      ]
+    },
+    {
+      "itemId": "b328945dfca2",
+      "title": "刚刚，诺贝尔物理奖一人独揽！",
+      "summary": "南极洲甚至有一座高地以他名字命名",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b328945dfca2"
+      ]
+    },
+    {
+      "itemId": "98fb73d14a36",
+      "title": "不er，咋陶哲轩也成AI减速派了？？",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "98fb73d14a36"
+      ]
+    },
+    {
+      "itemId": "80ad45d4b42d",
+      "title": "iPhone 18 Pro Max can’t call or text on AT&#038;T? Apple will replace it for free",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "80ad45d4b42d"
+      ]
+    },
+    {
+      "itemId": "4b2784781dd0",
+      "title": "This new ChatGPT scam tricks you into installing malware – how to spot the trap",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "4b2784781dd0"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "13f0bf4a7dc9",
+      "title": "New Archestra's OpenAPPA Saturates Two Major Security Benchmarks with a 0% Attack Success Rate",
+      "takeaway": "Archestra released OpenAPPA, an open-source security engine designed to stop data exfiltration caused by prompt injecti…",
+      "evidenceItemIds": [
+        "13f0bf4a7dc9"
+      ]
+    },
+    {
+      "itemId": "afa6b62a6593",
+      "title": "How Jump Trading is scaling quant research with ChatGPT",
+      "takeaway": "Jump Trading uses OpenAI to expand quantitative research. See how longer-running AI workflows combine multiple data sou…",
+      "evidenceItemIds": [
+        "afa6b62a6593"
+      ]
+    },
+    {
+      "itemId": "cc874bb1316c",
+      "title": "Sharing AI progress in mathematics",
+      "takeaway": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof form…",
+      "evidenceItemIds": [
+        "cc874bb1316c"
+      ]
+    },
+    {
+      "itemId": "f86a2aa6990d",
+      "title": "Advancing computer use with Ironclad",
+      "takeaway": "Learn how OpenAI and Ironclad are training and evaluating AI agents on complex contracting workflows to advance compute…",
+      "evidenceItemIds": [
+        "f86a2aa6990d"
+      ]
+    },
+    {
+      "itemId": "20428db517e1",
+      "title": "QCon London 2027 Announces 15 Tracks on Production AI, Architecture, and Engineering at Scale",
+      "takeaway": "A preview of the 15-track QCon London 2027 program, covering agent evaluation and guardrails, AI-era architecture, dist…",
+      "evidenceItemIds": [
+        "20428db517e1"
+      ]
+    },
+    {
+      "itemId": "0024a4bbba2f",
+      "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
+      "takeaway": "Atlassian and OpenAI are expanding their partnership to connect frontier models with enterprise knowledge and help team…",
+      "evidenceItemIds": [
+        "0024a4bbba2f"
+      ]
+    },
+    {
+      "itemId": "f56095582f17",
+      "title": "Show HN: Open model that checks stablecoin payments before an AI agent pays",
+      "takeaway": "Article URL: https://huggingface.co/sriram1983007/SRA-RiskGate-4B Comments URL: https://news.ycombinator.com/item?id=49…",
+      "evidenceItemIds": [
+        "f56095582f17"
+      ]
+    },
+    {
+      "itemId": "68d0d0608c2e",
+      "title": "A Developer’s Guide to Laya: Zero-Shot Decisions and Calibration",
+      "takeaway": "Explore a comprehensive coding guide to Laya, the open-source zero-shot decision engine. Learn how to implement typed d…",
+      "evidenceItemIds": [
+        "68d0d0608c2e"
+      ]
+    },
+    {
+      "itemId": "935618412af7",
+      "title": "Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4",
+      "takeaway": "Google DeepMind's EmbeddingGemma 2 maps 5 input types into one 768d space and ships today under Apache 2.0. The post Go…",
+      "evidenceItemIds": [
+        "935618412af7"
+      ]
+    },
+    {
+      "itemId": "04c710ba8864",
+      "title": "Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model",
+      "takeaway": "Mistral AI has released Mistral Large 4, nicknamed Le Chonk, as a public preview. It is a 1.05 trillion parameter Mixtu…",
+      "evidenceItemIds": [
+        "04c710ba8864"
+      ]
+    },
+    {
+      "itemId": "92d60b58598f",
+      "title": "Introducing Playground: Create and play custom games",
+      "takeaway": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "evidenceItemIds": [
+        "92d60b58598f"
+      ]
+    },
+    {
+      "itemId": "1670da97304e",
+      "title": "Akka Tests Spec-Driven AI Delivery across 65 Open Source Projects",
+      "takeaway": "Akka used 65 open-source projects to examine how specification structure, context, model selection, automated validatio…",
+      "evidenceItemIds": [
+        "1670da97304e"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕open-source与tooling展开，建议优先关注《New Archestra's OpenAPPA Saturates Two Major Security Benchmarks with a 0% Attack Success Rate》、《How Jump Trading is scaling quant research with ChatGPT》、《Sharing AI progress in mathematics》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Atlassian and OpenAI expand partnership to turn enterprise knowledge into action》、《Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "0024a4bbba2f",
+        "935618412af7",
+        "04c710ba8864",
+        "92d60b58598f"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《How to Catch AI Delegation Drift Before Your Board Does》、《AI Solved One Math Problem and Everyone Freaked Out. It Just Cracked 100s More》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "f54569d0fc05",
+        "e5fed599e19e",
+        "46ed3c3b6d8d",
+        "70208102fbf0"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "tooling",
+      "lead": "工具链方向本期共 4 条，建议优先阅读《How Jump Trading is scaling quant research with ChatGPT》、《Advancing computer use with Ironclad》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "afa6b62a6593",
+        "f86a2aa6990d",
+        "f7a17928d2ad",
+        "cccb8fdd919f"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 3 条，建议优先阅读《New Archestra's OpenAPPA Saturates Two Major Security Benchmarks with a 0% Attack Success Rate》、《Sharing AI progress in mathematics》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "13f0bf4a7dc9",
+        "cc874bb1316c",
+        "1670da97304e"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "b73f7445a9fbedfd7e2576af2815ac752f5ab53cc965d47b194c49135bbee8f6",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-10-07T13:28:58.693Z",
+    "finishedAt": "2026-10-07T16:32:00.327Z",
+    "durationMs": 10981634,
+    "inputCount": 42,
+    "processedCount": 42,
+    "fallbackCount": 42,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 42,
+    "failureStats": {
+      "totalFailed": 42,
+      "timeout": 4,
+      "http": 38,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 79,
+      "splitRetryCount": 37
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-30",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-23",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 1,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-10-07T16:32:00.448Z",
+    "finishedAt": "2026-10-07T16:32:09.113Z",
+    "durationMs": 8665,
+    "inputCount": 42,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "13f0bf4a7dc9",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "New Archestra's OpenAPPA Saturates Two Major Security Benchmarks with a 0% Attack Success Rate",
+      "link": "https://www.infoq.com/news/2026/10/open-APPA-zero-security-breach/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Archestra released OpenAPPA, an open-source security engine designed to stop data exfiltration caused by prompt injection or model hallucination. The team reports zero successful attacks when running security benchmarks Bench-Corp (20 multi-step enterprise workflows) and AgentThreatBench, versus 10% for Claude Code’s auto mode and 31% for Microsoft FIDES. By Bruno Couriol",
+      "publishedAt": "2026-10-03T23:41:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 128,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "afa6b62a6593",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "How Jump Trading is scaling quant research with ChatGPT",
+      "link": "https://openai.com/index/jump-trading",
+      "contentSnippet": "Jump Trading uses OpenAI to expand quantitative research. See how longer-running AI workflows combine multiple data sources with human review.",
+      "publishedAt": "2026-10-06T12:00:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 83.67,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 120,
+        "ruleScoreNormalized": 83.6734693877551,
+        "finalScore": 83.67,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "cc874bb1316c",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "Sharing AI progress in mathematics",
+      "link": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+      "contentSnippet": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details on GitHub.",
+      "publishedAt": "2026-10-06T12:00:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 77.55,
+      "importance": "medium",
+      "recommendationReason": "开源生态更新",
+      "scoreBreakdown": {
+        "ruleScore": 117,
+        "ruleScoreNormalized": 77.55102040816327,
+        "finalScore": 77.55,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "f86a2aa6990d",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "Advancing computer use with Ironclad",
+      "link": "https://openai.com/index/advancing-computer-use-with-ironclad",
+      "contentSnippet": "Learn how OpenAI and Ironclad are training and evaluating AI agents on complex contracting workflows to advance computer use for professional work.",
+      "publishedAt": "2026-10-06T10:00:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 73.47,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 115,
+        "ruleScoreNormalized": 73.46938775510205,
+        "finalScore": 73.47,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "20428db517e1",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "QCon London 2027 Announces 15 Tracks on Production AI, Architecture, and Engineering at Scale",
+      "link": "https://www.infoq.com/news/2026/10/qconlondon-2027-track/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "A preview of the 15-track QCon London 2027 program, covering agent evaluation and guardrails, AI-era architecture, distributed-system debugging, modern data platforms, high-performance engineering, and Staff+ leadership. By Artenisa Chatziou",
+      "publishedAt": "2026-10-06T10:00:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 73.47,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 115,
+        "ruleScoreNormalized": 73.46938775510205,
+        "finalScore": 73.47,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：42/42",
+    "LLM 分类打分回退明细（前 3/42）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07157c209b2ebcb9bf4bca1166facf40\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07157c210a7464a4609b790e57a6f626\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07157c2125a77dd87a42c10c207aa3b5\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=4：http=38：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=79, split_retry=37",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- New Archestra's OpenAPPA Saturates Two Major Security Benchmarks with a 0% Attack Success Rate\n- How Jump Trading is scaling quant research with ChatGPT\n- Sharing AI progress in mathematics\n- Advancing computer use with Ironclad\n- QCon London 2027 Announces 15 Tracks on Production AI, Architecture, and Engineering at Scale\n\n### 分类覆盖（大纲）\n- open-source: 3 条\n- tooling: 4 条\n- agent: 3 条\n- other: 21 条\n- tutorial: 2 条\n- research: 3 条\n- industry-news: 6 条",
+    "rankedItems": [
+      {
+        "id": "13f0bf4a7dc9",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "New Archestra's OpenAPPA Saturates Two Major Security Benchmarks with a 0% Attack Success Rate",
+        "link": "https://www.infoq.com/news/2026/10/open-APPA-zero-security-breach/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Archestra released OpenAPPA, an open-source security engine designed to stop data exfiltration caused by prompt injection or model hallucination. The team reports zero successful attacks when running security benchmarks Bench-Corp (20 multi-step enterprise workflows) and AgentThreatBench, versus 10% for Claude Code’s auto mode and 31% for Microsoft FIDES. By Bruno Couriol",
+        "publishedAt": "2026-10-03T23:41:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 128,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "afa6b62a6593",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How Jump Trading is scaling quant research with ChatGPT",
+        "link": "https://openai.com/index/jump-trading",
+        "contentSnippet": "Jump Trading uses OpenAI to expand quantitative research. See how longer-running AI workflows combine multiple data sources with human review.",
+        "publishedAt": "2026-10-06T12:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 83.67,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 120,
+          "ruleScoreNormalized": 83.6734693877551,
+          "finalScore": 83.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cc874bb1316c",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Sharing AI progress in mathematics",
+        "link": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+        "contentSnippet": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details on GitHub.",
+        "publishedAt": "2026-10-06T12:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 77.55,
+        "importance": "medium",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 77.55102040816327,
+          "finalScore": 77.55,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f86a2aa6990d",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Advancing computer use with Ironclad",
+        "link": "https://openai.com/index/advancing-computer-use-with-ironclad",
+        "contentSnippet": "Learn how OpenAI and Ironclad are training and evaluating AI agents on complex contracting workflows to advance computer use for professional work.",
+        "publishedAt": "2026-10-06T10:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.47,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 73.46938775510205,
+          "finalScore": 73.47,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "20428db517e1",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "QCon London 2027 Announces 15 Tracks on Production AI, Architecture, and Engineering at Scale",
+        "link": "https://www.infoq.com/news/2026/10/qconlondon-2027-track/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A preview of the 15-track QCon London 2027 program, covering agent evaluation and guardrails, AI-era architecture, distributed-system debugging, modern data platforms, high-performance engineering, and Staff+ leadership. By Artenisa Chatziou",
+        "publishedAt": "2026-10-06T10:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.47,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 73.46938775510205,
+          "finalScore": 73.47,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0024a4bbba2f",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
+        "link": "https://openai.com/index/atlassian-partnership",
+        "contentSnippet": "Atlassian and OpenAI are expanding their partnership to connect frontier models with enterprise knowledge and help teams plan, build, and deliver work.",
+        "publishedAt": "2026-10-06T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 53.06,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 53.06122448979592,
+          "finalScore": 53.06,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f56095582f17",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Open model that checks stablecoin payments before an AI agent pays",
+        "link": "https://huggingface.co/sriram1983007/SRA-RiskGate-4B",
+        "contentSnippet": "Article URL: https://huggingface.co/sriram1983007/SRA-RiskGate-4B Comments URL: https://news.ycombinator.com/item?id=49992039 Points: 1 # Comments: 1",
+        "publishedAt": "2026-10-07T12:49:31.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 53.06,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 53.06122448979592,
+          "finalScore": 53.06,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "68d0d0608c2e",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "A Developer’s Guide to Laya: Zero-Shot Decisions and Calibration",
+        "link": "https://www.marktechpost.com/2026/10/06/a-developers-guide-to-laya-zero-shot-decisions-and-calibration/",
+        "contentSnippet": "Explore a comprehensive coding guide to Laya, the open-source zero-shot decision engine. Learn how to implement typed decisions, fit custom temperatures, and build reliable abstention gates using real-world CLINC150 banking data. The post A Developer’s Guide to Laya: Zero-Shot Decisions and Calibration appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-07T00:53:03.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 51.02,
+        "importance": "low",
+        "recommendationReason": "可直接学习实践",
+        "scoreBreakdown": {
+          "ruleScore": 104,
+          "ruleScoreNormalized": 51.02040816326531,
+          "finalScore": 51.02,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "935618412af7",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4",
+        "link": "https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4/",
+        "contentSnippet": "Google DeepMind's EmbeddingGemma 2 maps 5 input types into one 768d space and ships today under Apache 2.0. The post Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4 appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-06T18:36:08.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 48.98,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 103,
+          "ruleScoreNormalized": 48.97959183673469,
+          "finalScore": 48.98,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "04c710ba8864",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model",
+        "link": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/",
+        "contentSnippet": "Mistral AI has released Mistral Large 4, nicknamed Le Chonk, as a public preview. It is a 1.05 trillion parameter Mixture of Experts model with 49 billion active parameters, native image input, and a 1 million token context window, trained on 3,800 NVIDIA Grace Blackwell GPUs in Mistral's own European datacenters. The API is live now; open weights ship end of October 2026. The post Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-06T17:30:46.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 48.98,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 103,
+          "ruleScoreNormalized": 48.97959183673469,
+          "finalScore": 48.98,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "92d60b58598f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Introducing Playground: Create and play custom games",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+        "contentSnippet": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "publishedAt": "2026-10-07T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 46.94,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 46.93877551020408,
+          "finalScore": 46.94,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1670da97304e",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Akka Tests Spec-Driven AI Delivery across 65 Open Source Projects",
+        "link": "https://www.infoq.com/news/2026/10/ai-spec-driven-delivery/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Akka used 65 open-source projects to examine how specification structure, context, model selection, automated validation, and delivery guardrails affect AI assisted software porting. The experiment measured time, token use, code size, test parity, and performance, finding substantial variation across models, effort levels, and project types. By Leela Kumili",
+        "publishedAt": "2026-10-05T13:58:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 46.94,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 46.93877551020408,
+          "finalScore": 46.94,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5fd94da9b89d",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Our approach to EU text provenance rules",
+        "link": "https://openai.com/index/eu-text-provenance",
+        "contentSnippet": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why access starts with researchers.",
+        "publishedAt": "2026-10-05T15:00:00.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 42.86,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 42.857142857142854,
+          "finalScore": 42.86,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f7a17928d2ad",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Building advertising for the way people use AI",
+        "link": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+        "contentSnippet": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand suitability for advertisers.",
+        "publishedAt": "2026-10-05T10:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 42.86,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 42.857142857142854,
+          "finalScore": 42.86,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f9be6bcbc55f",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Cloudflare Uses an AI Harness to Probe and Harden Its WAF",
+        "link": "https://www.infoq.com/news/2026/10/cloudflare-sec-harness/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Cloudflare placed frontier AI models inside a controlled testing harness to probe its Web Application Firewall (WAF), using blocked attacks as starting points for models to generate and refine new variations. By Matt Foster",
+        "publishedAt": "2026-10-07T07:21:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 42.86,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 42.857142857142854,
+          "finalScore": 42.86,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "dee75302a3df",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Spanner Omni Reaches GA, Replacing Google's Atomic Clocks and File System with Software",
+        "link": "https://www.infoq.com/news/2026/10/spanner-omni-deploy-anywhere-ga/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has made Spanner Omni generally available, running its distributed SQL database on-premises, across clouds or on a laptop. Doing so meant replacing Colossus with a Colossus-like abstraction layer and TrueTime with software-based time synchronization. There is no availability SLA, and practitioners are pricing the move in tail latency and operational toil. By Steef-Jan Wiggers",
+        "publishedAt": "2026-10-07T04:43:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 42.86,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 42.857142857142854,
+          "finalScore": 42.86,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6ae29b9bab58",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Pizza Bot: Open-Source Inbox for Background AI Agents",
+        "link": "https://www.infoq.com/news/2026/10/pizza-bot-ai-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A team of developers working at AWS recently open-sourced Pizza Bot, a self-hosted application designed to let AI agents run tasks in the background and return results through an inbox-style interface. Agents can perform scheduled or webhook-triggered work, delegate tasks to specialized workers, and pause for human approval when needed. By Renato Losio",
+        "publishedAt": "2026-10-04T06:34:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 42.86,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 42.857142857142854,
+          "finalScore": 42.86,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e19031c4ecf1",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meta AI Open-Sources Rebalancer: A C++ Assignment Solver That Runs About 40 Million Placement Problems a Day",
+        "link": "https://www.marktechpost.com/2026/10/06/meta-ai-open-sources-rebalancer-a-c-assignment-solver-that-runs-about-40-million-placement-problems-a-day/",
+        "contentSnippet": "Meta has open-sourced Rebalancer, the C++ and Python library it has used for over 9 years to place shards, servers and traffic. It handles about 40 million assignment problems a day, using local search or MIP solvers like Gurobi, FICO Xpress and HiGHS. It is pip-installable under Apache 2.0. The post Meta AI Open-Sources Rebalancer: A C++ Assignment Solver That Runs About 40 Million Placement Problems a Day appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-07T06:29:14.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 38.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 38.775510204081634,
+          "finalScore": 38.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1541ded240c4",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Reka Releases Rho-1: A 19B Omni-Reasoning Model That Understands, Generates Video and Outputs Robot Actions in One",
+        "link": "https://www.marktechpost.com/2026/10/05/reka-releases-rho-1-a-19b-omni-reasoning-model-that-understands-generates-video-and-outputs-robot-actions-in-one/",
+        "contentSnippet": "Reka has released Rho-1, a 19B omni-reasoning model trained from scratch. One network reads and generates text, images, video and robot actions over a shared KV cache. A distilled variant returns a 5.3-second clip in about a second. It is a research preview with no public weights yet. The post Reka Releases Rho-1: A 19B Omni-Reasoning Model That Understands, Generates Video and Outputs Robot Actions in One appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-06T06:45:31.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 38.78,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 38.775510204081634,
+          "finalScore": 38.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4c0899fd385e",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Mistral’s new Le Chonk model brings AI cybersecurity to your business – and you control it",
+        "link": "https://www.zdnet.com/innovation/mistral-le-chonk-ai-cybersecurity-business/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-06T13:00:04.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 36.73,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 36.734693877551024,
+          "finalScore": 36.73,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0bb33120a530",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "《怪物史莱克》编剧也来了！这家AI影视公司，视频模型全球第二！",
+        "link": "https://www.qbitai.com/2026/10/501803.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-07T11:34:47.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 26.53,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 26.53061224489796,
+          "finalScore": 26.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "02de0a47e09b",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "晕…这年头还有说人话的AI不",
+        "link": "https://www.qbitai.com/2026/10/501796.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-07T08:41:13.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 26.53,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 26.53061224489796,
+          "finalScore": 26.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1a75aaaaa192",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "Meshy 跻身 a16z 消费级 AI 应用月收入 Top 50，为榜单唯一 AI 3D 公司",
+        "link": "https://www.qbitai.com/2026/10/501791.html",
+        "contentSnippet": "在 a16z 首份消费级 AI 应用月收入榜单中，Meshy 位列第 31 名，与 OpenAI、Anthropic、Canva、Superhuman、Higgsfield 等共同上榜",
+        "publishedAt": "2026-10-07T06:39:36.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 26.53,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 26.53061224489796,
+          "finalScore": 26.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9d45a803cb18",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "OpenAI一夜甩出722篇数学论文！黎曼霍奇BSD全上阵，数学家：读不过来",
+        "link": "https://www.qbitai.com/2026/10/501749.html",
+        "contentSnippet": "三位菲尔兹奖得主：不代表认可",
+        "publishedAt": "2026-10-07T01:05:13.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 26.53,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 26.53061224489796,
+          "finalScore": 26.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f54569d0fc05",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "How to Catch AI Delegation Drift Before Your Board Does",
+        "link": "https://age-of-product.com/ai-delegation-audit-webinar/",
+        "contentSnippet": "Article URL: https://age-of-product.com/ai-delegation-audit-webinar/ Comments URL: https://news.ycombinator.com/item?id=49992456 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-07T13:22:12.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.45,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 22.448979591836736,
+          "finalScore": 22.45,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e5fed599e19e",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI Solved One Math Problem and Everyone Freaked Out. It Just Cracked 100s More",
+        "link": "https://www.wsj.com/tech/ai/openai-ai-math-problems-millennium-prize-23d14511",
+        "contentSnippet": "Article URL: https://www.wsj.com/tech/ai/openai-ai-math-problems-millennium-prize-23d14511 Comments URL: https://news.ycombinator.com/item?id=49992442 Points: 1 # Comments: 1",
+        "publishedAt": "2026-10-07T13:20:45.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.45,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 22.448979591836736,
+          "finalScore": 22.45,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "46ed3c3b6d8d",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Bender: AI's 'Existential' Risk Is 'Fake' [video]",
+        "link": "https://www.youtube.com/watch?v=QuZjcKshf_c",
+        "contentSnippet": "Article URL: https://www.youtube.com/watch?v=QuZjcKshf_c Comments URL: https://news.ycombinator.com/item?id=49992418 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-07T13:19:30.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.45,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 22.448979591836736,
+          "finalScore": 22.45,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "70208102fbf0",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Ask HN: Will AI Longevity Models Optimize for Physical Scarcity?",
+        "link": "https://news.ycombinator.com/item?id=49992222",
+        "contentSnippet": "Since longevity has a high value and AI models are becoming capable of new leaps I think the dynamic of the market might look for physical scarcity so that a betting strategy for the tailored treatment will provide immense profits for such a search. Comments URL: https://news.ycombinator.com/item?id=49992222 Points: 1 # Comments: 1",
+        "publishedAt": "2026-10-07T13:06:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.45,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 22.448979591836736,
+          "finalScore": 22.45,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ea20724f4c73",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Tynbo – a daily team awareness board with no AI and no task management",
+        "link": "https://tynbo.me",
+        "contentSnippet": "Article URL: https://tynbo.me Comments URL: https://news.ycombinator.com/item?id=49992013 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-07T12:47:07.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.45,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 22.448979591836736,
+          "finalScore": 22.45,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "077f919315a2",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Use Gemini for free? You’ll soon be limited to its weakest AI model",
+        "link": "https://www.zdnet.com/innovation/google-ai-free-model-access-limited/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-06T18:00:57.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.41,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 89,
+          "ruleScoreNormalized": 20.408163265306122,
+          "finalScore": 20.41,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "605efdb9052a",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Office 2021 support ends this month – you have 5 options",
+        "link": "https://www.zdnet.com/tech/microsoft-office-2021-support-ends-your-options/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-06T16:40:40.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.41,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 89,
+          "ruleScoreNormalized": 20.408163265306122,
+          "finalScore": 20.41,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3fb5e2397a05",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Beyond Domain-Specific World Models: JEPA-Anything Uses 1 Recipe for 7 Fields",
+        "link": "https://www.marktechpost.com/2026/10/05/beyond-domain-specific-world-models-jepa-anything-uses-1-recipe-for-7-fields/",
+        "contentSnippet": "JEPA-Anything splits a JEPA's single latent target into 4 orthogonal factors, each with its own predictor. Tested across 7 domains, it beat matched JEPA baselines on all 10 dynamics tasks and cut Interventional Pong intervention error by 34.8%. The post Beyond Domain-Specific World Models: JEPA-Anything Uses 1 Recipe for 7 Fields appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-06T05:12:01.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.37,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 88,
+          "ruleScoreNormalized": 18.367346938775512,
+          "finalScore": 18.37,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1d5fed04e570",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in September 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from September 2026",
+        "publishedAt": "2026-10-02T15:00:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 16.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 16.3265306122449,
+          "finalScore": 16.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ebdb2bd9f69c",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "How I made a paid Mac app in 11 days with Claude – without writing a single line of code",
+        "link": "https://www.zdnet.com/innovation/claude-code-vibe-coding-mac-app/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-05T12:03:03.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 10.2,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 10.204081632653061,
+          "finalScore": 10.2,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "927c795585b6",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "contentSnippet": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "publishedAt": "2026-09-28T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.12,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.122448979591836,
+          "finalScore": 6.12,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5f226c85d6ea",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "link": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+        "contentSnippet": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "publishedAt": "2026-09-23T18:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.12,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.122448979591836,
+          "finalScore": 6.12,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "429ba3c49baa",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "New experts join Google’s AI & Economy team",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+        "contentSnippet": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+        "publishedAt": "2026-09-18T14:00:00.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.12,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.122448979591836,
+          "finalScore": 6.12,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cccb8fdd919f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Co-creating the future of fashion with Google",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
+        "contentSnippet": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NYFW.",
+        "publishedAt": "2026-09-18T13:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.12,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.122448979591836,
+          "finalScore": 6.12,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b328945dfca2",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "刚刚，诺贝尔物理奖一人独揽！",
+        "link": "https://www.qbitai.com/2026/10/501746.html",
+        "contentSnippet": "南极洲甚至有一座高地以他名字命名",
+        "publishedAt": "2026-10-06T10:44:58.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.12,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.122448979591836,
+          "finalScore": 6.12,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "98fb73d14a36",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "不er，咋陶哲轩也成AI减速派了？？",
+        "link": "https://www.qbitai.com/2026/10/501736.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-06T07:59:17.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.12,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.122448979591836,
+          "finalScore": 6.12,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "80ad45d4b42d",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "iPhone 18 Pro Max can’t call or text on AT&#038;T? Apple will replace it for free",
+        "link": "https://www.zdnet.com/tech/iphone-18-pro-max-att-no-service-free-replacement/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-03T01:43:56.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4b2784781dd0",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "This new ChatGPT scam tricks you into installing malware – how to spot the trap",
+        "link": "https://www.zdnet.com/innovation/chatgpt-scam-malware-trap/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-02T18:18:57.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "13f0bf4a7dc9",
+        "title": "New Archestra's OpenAPPA Saturates Two Major Security Benchmarks with a 0% Attack Success Rate",
+        "summary": "Archestra released OpenAPPA, an open-source security engine designed to stop data exfiltration caused by prompt injecti…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "13f0bf4a7dc9"
+        ]
+      },
+      {
+        "itemId": "afa6b62a6593",
+        "title": "How Jump Trading is scaling quant research with ChatGPT",
+        "summary": "Jump Trading uses OpenAI to expand quantitative research. See how longer-running AI workflows combine multiple data sou…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "afa6b62a6593"
+        ]
+      },
+      {
+        "itemId": "cc874bb1316c",
+        "title": "Sharing AI progress in mathematics",
+        "summary": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof form…",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "cc874bb1316c"
+        ]
+      },
+      {
+        "itemId": "f86a2aa6990d",
+        "title": "Advancing computer use with Ironclad",
+        "summary": "Learn how OpenAI and Ironclad are training and evaluating AI agents on complex contracting workflows to advance compute…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "f86a2aa6990d"
+        ]
+      },
+      {
+        "itemId": "20428db517e1",
+        "title": "QCon London 2027 Announces 15 Tracks on Production AI, Architecture, and Engineering at Scale",
+        "summary": "A preview of the 15-track QCon London 2027 program, covering agent evaluation and guardrails, AI-era architecture, dist…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "20428db517e1"
+        ]
+      },
+      {
+        "itemId": "0024a4bbba2f",
+        "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
+        "summary": "Atlassian and OpenAI are expanding their partnership to connect frontier models with enterprise knowledge and help team…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "0024a4bbba2f"
+        ]
+      },
+      {
+        "itemId": "f56095582f17",
+        "title": "Show HN: Open model that checks stablecoin payments before an AI agent pays",
+        "summary": "Article URL: https://huggingface.co/sriram1983007/SRA-RiskGate-4B Comments URL: https://news.ycombinator.com/item?id=49…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "f56095582f17"
+        ]
+      },
+      {
+        "itemId": "68d0d0608c2e",
+        "title": "A Developer’s Guide to Laya: Zero-Shot Decisions and Calibration",
+        "summary": "Explore a comprehensive coding guide to Laya, the open-source zero-shot decision engine. Learn how to implement typed d…",
+        "recommendation": "可直接学习实践",
+        "evidenceItemIds": [
+          "68d0d0608c2e"
+        ]
+      },
+      {
+        "itemId": "935618412af7",
+        "title": "Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4",
+        "summary": "Google DeepMind's EmbeddingGemma 2 maps 5 input types into one 768d space and ships today under Apache 2.0. The post Go…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "935618412af7"
+        ]
+      },
+      {
+        "itemId": "04c710ba8864",
+        "title": "Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model",
+        "summary": "Mistral AI has released Mistral Large 4, nicknamed Le Chonk, as a public preview. It is a 1.05 trillion parameter Mixtu…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "04c710ba8864"
+        ]
+      },
+      {
+        "itemId": "92d60b58598f",
+        "title": "Introducing Playground: Create and play custom games",
+        "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "92d60b58598f"
+        ]
+      },
+      {
+        "itemId": "1670da97304e",
+        "title": "Akka Tests Spec-Driven AI Delivery across 65 Open Source Projects",
+        "summary": "Akka used 65 open-source projects to examine how specification structure, context, model selection, automated validatio…",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "1670da97304e"
+        ]
+      },
+      {
+        "itemId": "5fd94da9b89d",
+        "title": "Our approach to EU text provenance rules",
+        "summary": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5fd94da9b89d"
+        ]
+      },
+      {
+        "itemId": "f7a17928d2ad",
+        "title": "Building advertising for the way people use AI",
+        "summary": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f7a17928d2ad"
+        ]
+      },
+      {
+        "itemId": "f9be6bcbc55f",
+        "title": "Cloudflare Uses an AI Harness to Probe and Harden Its WAF",
+        "summary": "Cloudflare placed frontier AI models inside a controlled testing harness to probe its Web Application Firewall (WAF), u…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f9be6bcbc55f"
+        ]
+      },
+      {
+        "itemId": "dee75302a3df",
+        "title": "Spanner Omni Reaches GA, Replacing Google's Atomic Clocks and File System with Software",
+        "summary": "Google has made Spanner Omni generally available, running its distributed SQL database on-premises, across clouds or on…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "dee75302a3df"
+        ]
+      },
+      {
+        "itemId": "6ae29b9bab58",
+        "title": "Pizza Bot: Open-Source Inbox for Background AI Agents",
+        "summary": "A team of developers working at AWS recently open-sourced Pizza Bot, a self-hosted application designed to let AI agent…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "6ae29b9bab58"
+        ]
+      },
+      {
+        "itemId": "e19031c4ecf1",
+        "title": "Meta AI Open-Sources Rebalancer: A C++ Assignment Solver That Runs About 40 Million Placement Problems a Day",
+        "summary": "Meta has open-sourced Rebalancer, the C++ and Python library it has used for over 9 years to place shards, servers and …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e19031c4ecf1"
+        ]
+      },
+      {
+        "itemId": "1541ded240c4",
+        "title": "Reka Releases Rho-1: A 19B Omni-Reasoning Model That Understands, Generates Video and Outputs Robot Actions in One",
+        "summary": "Reka has released Rho-1, a 19B omni-reasoning model trained from scratch. One network reads and generates text, images,…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "1541ded240c4"
+        ]
+      },
+      {
+        "itemId": "4c0899fd385e",
+        "title": "Mistral’s new Le Chonk model brings AI cybersecurity to your business – and you control it",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "4c0899fd385e"
+        ]
+      },
+      {
+        "itemId": "0bb33120a530",
+        "title": "《怪物史莱克》编剧也来了！这家AI影视公司，视频模型全球第二！",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "0bb33120a530"
+        ]
+      },
+      {
+        "itemId": "02de0a47e09b",
+        "title": "晕…这年头还有说人话的AI不",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "02de0a47e09b"
+        ]
+      },
+      {
+        "itemId": "1a75aaaaa192",
+        "title": "Meshy 跻身 a16z 消费级 AI 应用月收入 Top 50，为榜单唯一 AI 3D 公司",
+        "summary": "在 a16z 首份消费级 AI 应用月收入榜单中，Meshy 位列第 31 名，与 OpenAI、Anthropic、Canva、Superhuman、Higgsfield 等共同上榜",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1a75aaaaa192"
+        ]
+      },
+      {
+        "itemId": "9d45a803cb18",
+        "title": "OpenAI一夜甩出722篇数学论文！黎曼霍奇BSD全上阵，数学家：读不过来",
+        "summary": "三位菲尔兹奖得主：不代表认可",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9d45a803cb18"
+        ]
+      },
+      {
+        "itemId": "f54569d0fc05",
+        "title": "How to Catch AI Delegation Drift Before Your Board Does",
+        "summary": "Article URL: https://age-of-product.com/ai-delegation-audit-webinar/ Comments URL: https://news.ycombinator.com/item?id…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f54569d0fc05"
+        ]
+      },
+      {
+        "itemId": "e5fed599e19e",
+        "title": "AI Solved One Math Problem and Everyone Freaked Out. It Just Cracked 100s More",
+        "summary": "Article URL: https://www.wsj.com/tech/ai/openai-ai-math-problems-millennium-prize-23d14511 Comments URL: https://news.y…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e5fed599e19e"
+        ]
+      },
+      {
+        "itemId": "46ed3c3b6d8d",
+        "title": "Bender: AI's 'Existential' Risk Is 'Fake' [video]",
+        "summary": "Article URL: https://www.youtube.com/watch?v=QuZjcKshf_c Comments URL: https://news.ycombinator.com/item?id=49992418 Po…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "46ed3c3b6d8d"
+        ]
+      },
+      {
+        "itemId": "70208102fbf0",
+        "title": "Ask HN: Will AI Longevity Models Optimize for Physical Scarcity?",
+        "summary": "Since longevity has a high value and AI models are becoming capable of new leaps I think the dynamic of the market migh…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "70208102fbf0"
+        ]
+      },
+      {
+        "itemId": "ea20724f4c73",
+        "title": "Tynbo – a daily team awareness board with no AI and no task management",
+        "summary": "Article URL: https://tynbo.me Comments URL: https://news.ycombinator.com/item?id=49992013 Points: 1 # Comments: 0",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "ea20724f4c73"
+        ]
+      },
+      {
+        "itemId": "077f919315a2",
+        "title": "Use Gemini for free? You’ll soon be limited to its weakest AI model",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "077f919315a2"
+        ]
+      },
+      {
+        "itemId": "605efdb9052a",
+        "title": "Office 2021 support ends this month – you have 5 options",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "605efdb9052a"
+        ]
+      },
+      {
+        "itemId": "3fb5e2397a05",
+        "title": "Beyond Domain-Specific World Models: JEPA-Anything Uses 1 Recipe for 7 Fields",
+        "summary": "JEPA-Anything splits a JEPA's single latent target into 4 orthogonal factors, each with its own predictor. Tested acros…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3fb5e2397a05"
+        ]
+      },
+      {
+        "itemId": "1d5fed04e570",
+        "title": "The latest AI news we announced in September 2026",
+        "summary": "Here are Google’s latest AI updates from September 2026",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1d5fed04e570"
+        ]
+      },
+      {
+        "itemId": "ebdb2bd9f69c",
+        "title": "How I made a paid Mac app in 11 days with Claude – without writing a single line of code",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "ebdb2bd9f69c"
+        ]
+      },
+      {
+        "itemId": "927c795585b6",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "927c795585b6"
+        ]
+      },
+      {
+        "itemId": "5f226c85d6ea",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5f226c85d6ea"
+        ]
+      },
+      {
+        "itemId": "429ba3c49baa",
+        "title": "New experts join Google’s AI & Economy team",
+        "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "429ba3c49baa"
+        ]
+      },
+      {
+        "itemId": "cccb8fdd919f",
+        "title": "Co-creating the future of fashion with Google",
+        "summary": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NY…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "cccb8fdd919f"
+        ]
+      },
+      {
+        "itemId": "b328945dfca2",
+        "title": "刚刚，诺贝尔物理奖一人独揽！",
+        "summary": "南极洲甚至有一座高地以他名字命名",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b328945dfca2"
+        ]
+      },
+      {
+        "itemId": "98fb73d14a36",
+        "title": "不er，咋陶哲轩也成AI减速派了？？",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "98fb73d14a36"
+        ]
+      },
+      {
+        "itemId": "80ad45d4b42d",
+        "title": "iPhone 18 Pro Max can’t call or text on AT&#038;T? Apple will replace it for free",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "80ad45d4b42d"
+        ]
+      },
+      {
+        "itemId": "4b2784781dd0",
+        "title": "This new ChatGPT scam tricks you into installing malware – how to spot the trap",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "4b2784781dd0"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "13f0bf4a7dc9",
+        "title": "New Archestra's OpenAPPA Saturates Two Major Security Benchmarks with a 0% Attack Success Rate",
+        "takeaway": "Archestra released OpenAPPA, an open-source security engine designed to stop data exfiltration caused by prompt injecti…",
+        "evidenceItemIds": [
+          "13f0bf4a7dc9"
+        ]
+      },
+      {
+        "itemId": "afa6b62a6593",
+        "title": "How Jump Trading is scaling quant research with ChatGPT",
+        "takeaway": "Jump Trading uses OpenAI to expand quantitative research. See how longer-running AI workflows combine multiple data sou…",
+        "evidenceItemIds": [
+          "afa6b62a6593"
+        ]
+      },
+      {
+        "itemId": "cc874bb1316c",
+        "title": "Sharing AI progress in mathematics",
+        "takeaway": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof form…",
+        "evidenceItemIds": [
+          "cc874bb1316c"
+        ]
+      },
+      {
+        "itemId": "f86a2aa6990d",
+        "title": "Advancing computer use with Ironclad",
+        "takeaway": "Learn how OpenAI and Ironclad are training and evaluating AI agents on complex contracting workflows to advance compute…",
+        "evidenceItemIds": [
+          "f86a2aa6990d"
+        ]
+      },
+      {
+        "itemId": "20428db517e1",
+        "title": "QCon London 2027 Announces 15 Tracks on Production AI, Architecture, and Engineering at Scale",
+        "takeaway": "A preview of the 15-track QCon London 2027 program, covering agent evaluation and guardrails, AI-era architecture, dist…",
+        "evidenceItemIds": [
+          "20428db517e1"
+        ]
+      },
+      {
+        "itemId": "0024a4bbba2f",
+        "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
+        "takeaway": "Atlassian and OpenAI are expanding their partnership to connect frontier models with enterprise knowledge and help team…",
+        "evidenceItemIds": [
+          "0024a4bbba2f"
+        ]
+      },
+      {
+        "itemId": "f56095582f17",
+        "title": "Show HN: Open model that checks stablecoin payments before an AI agent pays",
+        "takeaway": "Article URL: https://huggingface.co/sriram1983007/SRA-RiskGate-4B Comments URL: https://news.ycombinator.com/item?id=49…",
+        "evidenceItemIds": [
+          "f56095582f17"
+        ]
+      },
+      {
+        "itemId": "68d0d0608c2e",
+        "title": "A Developer’s Guide to Laya: Zero-Shot Decisions and Calibration",
+        "takeaway": "Explore a comprehensive coding guide to Laya, the open-source zero-shot decision engine. Learn how to implement typed d…",
+        "evidenceItemIds": [
+          "68d0d0608c2e"
+        ]
+      },
+      {
+        "itemId": "935618412af7",
+        "title": "Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4",
+        "takeaway": "Google DeepMind's EmbeddingGemma 2 maps 5 input types into one 768d space and ships today under Apache 2.0. The post Go…",
+        "evidenceItemIds": [
+          "935618412af7"
+        ]
+      },
+      {
+        "itemId": "04c710ba8864",
+        "title": "Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model",
+        "takeaway": "Mistral AI has released Mistral Large 4, nicknamed Le Chonk, as a public preview. It is a 1.05 trillion parameter Mixtu…",
+        "evidenceItemIds": [
+          "04c710ba8864"
+        ]
+      },
+      {
+        "itemId": "92d60b58598f",
+        "title": "Introducing Playground: Create and play custom games",
+        "takeaway": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "evidenceItemIds": [
+          "92d60b58598f"
+        ]
+      },
+      {
+        "itemId": "1670da97304e",
+        "title": "Akka Tests Spec-Driven AI Delivery across 65 Open Source Projects",
+        "takeaway": "Akka used 65 open-source projects to examine how specification structure, context, model selection, automated validatio…",
+        "evidenceItemIds": [
+          "1670da97304e"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕open-source与tooling展开，建议优先关注《New Archestra's OpenAPPA Saturates Two Major Security Benchmarks with a 0% Attack Success Rate》、《How Jump Trading is scaling quant research with ChatGPT》、《Sharing AI progress in mathematics》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Atlassian and OpenAI expand partnership to turn enterprise knowledge into action》、《Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "0024a4bbba2f",
+          "935618412af7",
+          "04c710ba8864",
+          "92d60b58598f"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《How to Catch AI Delegation Drift Before Your Board Does》、《AI Solved One Math Problem and Everyone Freaked Out. It Just Cracked 100s More》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "f54569d0fc05",
+          "e5fed599e19e",
+          "46ed3c3b6d8d",
+          "70208102fbf0"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "tooling",
+        "lead": "工具链方向本期共 4 条，建议优先阅读《How Jump Trading is scaling quant research with ChatGPT》、《Advancing computer use with Ironclad》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "afa6b62a6593",
+          "f86a2aa6990d",
+          "f7a17928d2ad",
+          "cccb8fdd919f"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 3 条，建议优先阅读《New Archestra's OpenAPPA Saturates Two Major Security Benchmarks with a 0% Attack Success Rate》、《Sharing AI progress in mathematics》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "13f0bf4a7dc9",
+          "cc874bb1316c",
+          "1670da97304e"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "b73f7445a9fbedfd7e2576af2815ac752f5ab53cc965d47b194c49135bbee8f6",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-10-07T13:28:58.693Z",
+      "finishedAt": "2026-10-07T16:32:00.327Z",
+      "durationMs": 10981634,
+      "inputCount": 42,
+      "processedCount": 42,
+      "fallbackCount": 42,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 42,
+      "failureStats": {
+        "totalFailed": 42,
+        "timeout": 4,
+        "http": 38,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 79,
+        "splitRetryCount": 37
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-09-30",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-23",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 1,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-10-07T16:32:00.448Z",
+      "finishedAt": "2026-10-07T16:32:09.113Z",
+      "durationMs": 8665,
+      "inputCount": 42,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "13f0bf4a7dc9",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "New Archestra's OpenAPPA Saturates Two Major Security Benchmarks with a 0% Attack Success Rate",
+        "link": "https://www.infoq.com/news/2026/10/open-APPA-zero-security-breach/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Archestra released OpenAPPA, an open-source security engine designed to stop data exfiltration caused by prompt injection or model hallucination. The team reports zero successful attacks when running security benchmarks Bench-Corp (20 multi-step enterprise workflows) and AgentThreatBench, versus 10% for Claude Code’s auto mode and 31% for Microsoft FIDES. By Bruno Couriol",
+        "publishedAt": "2026-10-03T23:41:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 128,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "afa6b62a6593",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How Jump Trading is scaling quant research with ChatGPT",
+        "link": "https://openai.com/index/jump-trading",
+        "contentSnippet": "Jump Trading uses OpenAI to expand quantitative research. See how longer-running AI workflows combine multiple data sources with human review.",
+        "publishedAt": "2026-10-06T12:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 83.67,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 120,
+          "ruleScoreNormalized": 83.6734693877551,
+          "finalScore": 83.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cc874bb1316c",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Sharing AI progress in mathematics",
+        "link": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+        "contentSnippet": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details on GitHub.",
+        "publishedAt": "2026-10-06T12:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 77.55,
+        "importance": "medium",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 77.55102040816327,
+          "finalScore": 77.55,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f86a2aa6990d",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Advancing computer use with Ironclad",
+        "link": "https://openai.com/index/advancing-computer-use-with-ironclad",
+        "contentSnippet": "Learn how OpenAI and Ironclad are training and evaluating AI agents on complex contracting workflows to advance computer use for professional work.",
+        "publishedAt": "2026-10-06T10:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.47,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 73.46938775510205,
+          "finalScore": 73.47,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "20428db517e1",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "QCon London 2027 Announces 15 Tracks on Production AI, Architecture, and Engineering at Scale",
+        "link": "https://www.infoq.com/news/2026/10/qconlondon-2027-track/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A preview of the 15-track QCon London 2027 program, covering agent evaluation and guardrails, AI-era architecture, distributed-system debugging, modern data platforms, high-performance engineering, and Staff+ leadership. By Artenisa Chatziou",
+        "publishedAt": "2026-10-06T10:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.47,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 73.46938775510205,
+          "finalScore": 73.47,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 42,
+      "normalizedCount": 42,
+      "dedupedCount": 42,
+      "highImportanceCount": 1,
+      "mediumImportanceCount": 4,
+      "lowImportanceCount": 37,
+      "categoryBreakdown": {
+        "open-source": 3,
+        "tooling": 4,
+        "agent": 3,
+        "research": 3,
+        "industry-news": 6,
+        "tutorial": 2,
+        "other": 21
+      }
+    },
+    "warnings": [
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：42/42",
+      "LLM 分类打分回退明细（前 3/42）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07157c209b2ebcb9bf4bca1166facf40\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07157c210a7464a4609b790e57a6f626\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07157c2125a77dd87a42c10c207aa3b5\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=4：http=38：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=79, split_retry=37",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
