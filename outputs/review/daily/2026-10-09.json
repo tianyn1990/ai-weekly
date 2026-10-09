@@ -1,0 +1,1490 @@
+{
+  "runId": "daily-1791507961875",
+  "generatedAt": "2026-10-09T01:06:01.864Z",
+  "reviewStartedAt": "2026-10-09T01:06:01.864Z",
+  "reportDate": "2026-10-09",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-10-09T01:06:01.864Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 18,
+    "normalizedCount": 18,
+    "dedupedCount": 18,
+    "highImportanceCount": 3,
+    "mediumImportanceCount": 1,
+    "lowImportanceCount": 14,
+    "categoryBreakdown": {
+      "open-source": 0,
+      "tooling": 0,
+      "agent": 1,
+      "research": 3,
+      "industry-news": 6,
+      "tutorial": 0,
+      "other": 8
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "6637bef54982",
+      "title": "正行创新亮相APRCE 2026，发布全球首个零售物理智能24/7服务解决方案",
+      "summary": "打造便利店“人机协作”运营新模式",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "6637bef54982"
+      ]
+    },
+    {
+      "itemId": "6a125584df31",
+      "title": "浪子回头！Manus重启北京办公室大举招聘",
+      "summary": "开始和国产Agent抢人，还拿到5亿美元新融资",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "6a125584df31"
+      ]
+    },
+    {
+      "itemId": "83d1ebd02867",
+      "title": "Scale AI cut 89 tasks from SWE-Bench Pro after an audit found gaming",
+      "summary": "Article URL: https://theinference.org/article/scale-ai-cut-89-tasks-from-its-coding-benchmark-after-an-audit-found-gami…",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "83d1ebd02867"
+      ]
+    },
+    {
+      "itemId": "7d38ff9fadbe",
+      "title": "吉利智充技术正式发布，重塑全球补能新标杆",
+      "summary": "2027年底实现“县县通”",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "7d38ff9fadbe"
+      ]
+    },
+    {
+      "itemId": "8d5f42150cc9",
+      "title": "Got a Microsoft 365 subscription? Your storage is about to shrink",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "8d5f42150cc9"
+      ]
+    },
+    {
+      "itemId": "625711b4da47",
+      "title": "Regulators are trying to protect you from being fired by AI – here’s how",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "625711b4da47"
+      ]
+    },
+    {
+      "itemId": "b2ea2a160456",
+      "title": "Can AI fix legacy IT? The ‘economics don’t hold up,’ says former IBM strategist",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b2ea2a160456"
+      ]
+    },
+    {
+      "itemId": "e29cee5dbe7a",
+      "title": "真香！做这个邪恶老奶版「GTA 6」，我只花了5元！",
+      "summary": "Vidu Q4预览版，了解一下~",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e29cee5dbe7a"
+      ]
+    },
+    {
+      "itemId": "1c3d958c75e2",
+      "title": "Bending the Curve of Discovery: AI in Science Today and Tomorrow",
+      "summary": "Article URL: https://institute.deepmind.com/essays/bending-the-curve-of-discovery-ai-in-science-today-and-tomorrow/ Com…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1c3d958c75e2"
+      ]
+    },
+    {
+      "itemId": "5621d849e931",
+      "title": "Why AI hasn't fixed software delivery yet, and what will",
+      "summary": "Article URL: https://m1spec.com/why/ Comments URL: https://news.ycombinator.com/item?id=50014711 Points: 1 # Comments: 0",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5621d849e931"
+      ]
+    },
+    {
+      "itemId": "c3348d6dbd1b",
+      "title": "Show HN: Nace.ai Document Intelligence 1.0",
+      "summary": "Article URL: https://www.nace.ai/developers Comments URL: https://news.ycombinator.com/item?id=50014659 Points: 2 # Com…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c3348d6dbd1b"
+      ]
+    },
+    {
+      "itemId": "22c466f0253c",
+      "title": "Using evals to cut AI errors 7x",
+      "summary": "Article URL: https://hex.tech/blog/we-used-evals-to-improve-ai-feature/ Comments URL: https://news.ycombinator.com/item…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "22c466f0253c"
+      ]
+    },
+    {
+      "itemId": "3bb14ad244a3",
+      "title": "Long-Term Memory for AI:50M-Token Window,Is Faster,Cheaper Than Recompute",
+      "summary": "Article URL: https://arxiv.org/abs/2610.10845 Comments URL: https://news.ycombinator.com/item?id=50014353 Points: 3 # C…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3bb14ad244a3"
+      ]
+    },
+    {
+      "itemId": "e9197fd8d61b",
+      "title": "Microsoft’s new Surface Laptop Ultra finally has a starting price (you should sit down)",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e9197fd8d61b"
+      ]
+    },
+    {
+      "itemId": "54d1c37a27ec",
+      "title": "Yelp, who? 4 ways Google Maps can help you find your next meal – and order it",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "54d1c37a27ec"
+      ]
+    },
+    {
+      "itemId": "7d81bbf91e16",
+      "title": "搭载NVIDIA RTX Spark™ N1X超级芯片：联想YOGA Pro 15开启盲约，重塑个人生产力边界",
+      "summary": "联想YOGA Pro 15 RTX Spark笔记本电脑，于10月8日9:00正式开启全网盲约。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "7d81bbf91e16"
+      ]
+    },
+    {
+      "itemId": "40ae96daa5ea",
+      "title": "ChatGPT踢到铁板了！能破解千禧数学难题，但论文复现率低至13.98%？",
+      "summary": "PaperBenchX为代表的基准或许能更好地衡量AI的科研实力",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "40ae96daa5ea"
+      ]
+    },
+    {
+      "itemId": "3af02f03ea6d",
+      "title": "Managers are using AI to write performance reviews – and it shows",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3af02f03ea6d"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "6637bef54982",
+      "title": "正行创新亮相APRCE 2026，发布全球首个零售物理智能24/7服务解决方案",
+      "takeaway": "打造便利店“人机协作”运营新模式",
+      "evidenceItemIds": [
+        "6637bef54982"
+      ]
+    },
+    {
+      "itemId": "6a125584df31",
+      "title": "浪子回头！Manus重启北京办公室大举招聘",
+      "takeaway": "开始和国产Agent抢人，还拿到5亿美元新融资",
+      "evidenceItemIds": [
+        "6a125584df31"
+      ]
+    },
+    {
+      "itemId": "83d1ebd02867",
+      "title": "Scale AI cut 89 tasks from SWE-Bench Pro after an audit found gaming",
+      "takeaway": "Article URL: https://theinference.org/article/scale-ai-cut-89-tasks-from-its-coding-benchmark-after-an-audit-found-gami…",
+      "evidenceItemIds": [
+        "83d1ebd02867"
+      ]
+    },
+    {
+      "itemId": "7d38ff9fadbe",
+      "title": "吉利智充技术正式发布，重塑全球补能新标杆",
+      "takeaway": "2027年底实现“县县通”",
+      "evidenceItemIds": [
+        "7d38ff9fadbe"
+      ]
+    },
+    {
+      "itemId": "8d5f42150cc9",
+      "title": "Got a Microsoft 365 subscription? Your storage is about to shrink",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "8d5f42150cc9"
+      ]
+    },
+    {
+      "itemId": "625711b4da47",
+      "title": "Regulators are trying to protect you from being fired by AI – here’s how",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "625711b4da47"
+      ]
+    },
+    {
+      "itemId": "b2ea2a160456",
+      "title": "Can AI fix legacy IT? The ‘economics don’t hold up,’ says former IBM strategist",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "b2ea2a160456"
+      ]
+    },
+    {
+      "itemId": "e29cee5dbe7a",
+      "title": "真香！做这个邪恶老奶版「GTA 6」，我只花了5元！",
+      "takeaway": "Vidu Q4预览版，了解一下~",
+      "evidenceItemIds": [
+        "e29cee5dbe7a"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕industry-news与agent展开，建议优先关注《正行创新亮相APRCE 2026，发布全球首个零售物理智能24/7服务解决方案》、《浪子回头！Manus重启北京办公室大举招聘》、《Scale AI cut 89 tasks from SWE-Bench Pro after an audit found gaming》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Got a Microsoft 365 subscription? Your storage is about to shrink》、《Regulators are trying to protect you from being fired by AI – here’s how》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "8d5f42150cc9",
+        "625711b4da47",
+        "b2ea2a160456",
+        "e29cee5dbe7a"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《正行创新亮相APRCE 2026，发布全球首个零售物理智能24/7服务解决方案》、《吉利智充技术正式发布，重塑全球补能新标杆》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "6637bef54982",
+        "7d38ff9fadbe",
+        "1c3d958c75e2",
+        "5621d849e931"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "research",
+      "lead": "研究方向本期共 3 条，建议优先阅读《Scale AI cut 89 tasks from SWE-Bench Pro after an audit found gaming》、《Long-Term Memory for AI:50M-Token Window,Is Faster,Cheaper Than Recompute》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "83d1ebd02867",
+        "3bb14ad244a3",
+        "40ae96daa5ea"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 1 条，建议优先阅读《浪子回头！Manus重启北京办公室大举招聘》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "6a125584df31"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "f9b5e3c2ab090d9688e5950975007f624619cfadf19e3df797bc20f1d97e0bc5",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-10-09T01:40:57.655Z",
+    "finishedAt": "2026-10-09T01:41:17.842Z",
+    "durationMs": 20187,
+    "inputCount": 18,
+    "processedCount": 18,
+    "fallbackCount": 18,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 18,
+    "failureStats": {
+      "totalFailed": 18,
+      "timeout": 0,
+      "http": 18,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 34,
+      "splitRetryCount": 16
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-02",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-25",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-10-09T01:41:17.884Z",
+    "finishedAt": "2026-10-09T01:42:54.685Z",
+    "durationMs": 96801,
+    "inputCount": 18,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 18,
+      "timeout": 0,
+      "http": 18,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 18,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "6637bef54982",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "正行创新亮相APRCE 2026，发布全球首个零售物理智能24/7服务解决方案",
+      "link": "https://www.qbitai.com/2026/10/502035.html",
+      "contentSnippet": "打造便利店“人机协作”运营新模式",
+      "publishedAt": "2026-10-08T12:43:31.000Z",
+      "category": "industry-news",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "模型或产品发布",
+      "scoreBreakdown": {
+        "ruleScore": 102,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "6a125584df31",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "浪子回头！Manus重启北京办公室大举招聘",
+      "link": "https://www.qbitai.com/2026/10/502009.html",
+      "contentSnippet": "开始和国产Agent抢人，还拿到5亿美元新融资",
+      "publishedAt": "2026-10-08T09:30:17.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 102,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "83d1ebd02867",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Scale AI cut 89 tasks from SWE-Bench Pro after an audit found gaming",
+      "link": "https://theinference.org/article/scale-ai-cut-89-tasks-from-its-coding-benchmark-after-an-audit-found-gaming-then-graded-its-own-fix",
+      "contentSnippet": "Article URL: https://theinference.org/article/scale-ai-cut-89-tasks-from-its-coding-benchmark-after-an-audit-found-gaming-then-graded-its-own-fix Comments URL: https://news.ycombinator.com/item?id=50014434 Points: 3 # Comments: 0",
+      "publishedAt": "2026-10-09T00:32:44.000Z",
+      "category": "research",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 88.89,
+      "importance": "high",
+      "recommendationReason": "评测与性能信息",
+      "scoreBreakdown": {
+        "ruleScore": 100,
+        "ruleScoreNormalized": 88.88888888888889,
+        "finalScore": 88.89,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "7d38ff9fadbe",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "吉利智充技术正式发布，重塑全球补能新标杆",
+      "link": "https://www.qbitai.com/2026/10/501956.html",
+      "contentSnippet": "2027年底实现“县县通”",
+      "publishedAt": "2026-10-08T09:10:55.000Z",
+      "category": "industry-news",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 72.22,
+      "importance": "medium",
+      "recommendationReason": "模型或产品发布",
+      "scoreBreakdown": {
+        "ruleScore": 97,
+        "ruleScoreNormalized": 72.22222222222221,
+        "finalScore": 72.22,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "8d5f42150cc9",
+      "sourceId": "zdnet-ai",
+      "sourceName": "ZDNet AI",
+      "title": "Got a Microsoft 365 subscription? Your storage is about to shrink",
+      "link": "https://www.zdnet.com/tech/microsoft-365-subscription-storage-limits/",
+      "contentSnippet": "",
+      "publishedAt": "2026-10-08T18:56:22.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 55.56,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 94,
+        "ruleScoreNormalized": 55.55555555555556,
+        "finalScore": 55.56,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Google AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[InfoQ AI/ML News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[MarkTechPost] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[VentureBeat AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+    "LLM 分类打分部分回退：18/18",
+    "LLM 分类打分回退明细（前 3/18）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0717792d06607da9fa04efcf264dd866\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0717792d8af84c91557c0a6c9ec4682f\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0717792e0c10c33d7dec6e8a78528a97\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=18：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=34, split_retry=16",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/18）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=18, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=18, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- 正行创新亮相APRCE 2026，发布全球首个零售物理智能24/7服务解决方案\n- 浪子回头！Manus重启北京办公室大举招聘\n- Scale AI cut 89 tasks from SWE-Bench Pro after an audit found gaming\n- 吉利智充技术正式发布，重塑全球补能新标杆\n- Got a Microsoft 365 subscription? Your storage is about to shrink\n\n### 分类覆盖（大纲）\n- industry-news: 6 条\n- agent: 1 条\n- research: 3 条\n- other: 8 条",
+    "rankedItems": [
+      {
+        "id": "6637bef54982",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "正行创新亮相APRCE 2026，发布全球首个零售物理智能24/7服务解决方案",
+        "link": "https://www.qbitai.com/2026/10/502035.html",
+        "contentSnippet": "打造便利店“人机协作”运营新模式",
+        "publishedAt": "2026-10-08T12:43:31.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6a125584df31",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "浪子回头！Manus重启北京办公室大举招聘",
+        "link": "https://www.qbitai.com/2026/10/502009.html",
+        "contentSnippet": "开始和国产Agent抢人，还拿到5亿美元新融资",
+        "publishedAt": "2026-10-08T09:30:17.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "83d1ebd02867",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Scale AI cut 89 tasks from SWE-Bench Pro after an audit found gaming",
+        "link": "https://theinference.org/article/scale-ai-cut-89-tasks-from-its-coding-benchmark-after-an-audit-found-gaming-then-graded-its-own-fix",
+        "contentSnippet": "Article URL: https://theinference.org/article/scale-ai-cut-89-tasks-from-its-coding-benchmark-after-an-audit-found-gaming-then-graded-its-own-fix Comments URL: https://news.ycombinator.com/item?id=50014434 Points: 3 # Comments: 0",
+        "publishedAt": "2026-10-09T00:32:44.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 88.89,
+        "importance": "high",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 88.88888888888889,
+          "finalScore": 88.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7d38ff9fadbe",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "吉利智充技术正式发布，重塑全球补能新标杆",
+        "link": "https://www.qbitai.com/2026/10/501956.html",
+        "contentSnippet": "2027年底实现“县县通”",
+        "publishedAt": "2026-10-08T09:10:55.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 72.22,
+        "importance": "medium",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 72.22222222222221,
+          "finalScore": 72.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8d5f42150cc9",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Got a Microsoft 365 subscription? Your storage is about to shrink",
+        "link": "https://www.zdnet.com/tech/microsoft-365-subscription-storage-limits/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-08T18:56:22.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.56,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 55.55555555555556,
+          "finalScore": 55.56,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "625711b4da47",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Regulators are trying to protect you from being fired by AI – here’s how",
+        "link": "https://www.zdnet.com/innovation/how-state-regulators-protect-you-fired-by-ai/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-08T17:05:53.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.56,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 55.55555555555556,
+          "finalScore": 55.56,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b2ea2a160456",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Can AI fix legacy IT? The ‘economics don’t hold up,’ says former IBM strategist",
+        "link": "https://www.zdnet.com/innovation/ai-legacy-it-modernization/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-08T14:35:46.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.56,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 55.55555555555556,
+          "finalScore": 55.56,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e29cee5dbe7a",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "真香！做这个邪恶老奶版「GTA 6」，我只花了5元！",
+        "link": "https://www.qbitai.com/2026/10/502049.html",
+        "contentSnippet": "Vidu Q4预览版，了解一下~",
+        "publishedAt": "2026-10-08T13:28:23.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 44.44,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 44.44444444444444,
+          "finalScore": 44.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1c3d958c75e2",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Bending the Curve of Discovery: AI in Science Today and Tomorrow",
+        "link": "https://institute.deepmind.com/essays/bending-the-curve-of-discovery-ai-in-science-today-and-tomorrow/",
+        "contentSnippet": "Article URL: https://institute.deepmind.com/essays/bending-the-curve-of-discovery-ai-in-science-today-and-tomorrow/ Comments URL: https://news.ycombinator.com/item?id=50014793 Points: 4 # Comments: 0",
+        "publishedAt": "2026-10-09T01:16:15.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 33.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 33.33333333333333,
+          "finalScore": 33.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5621d849e931",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Why AI hasn't fixed software delivery yet, and what will",
+        "link": "https://m1spec.com/why/",
+        "contentSnippet": "Article URL: https://m1spec.com/why/ Comments URL: https://news.ycombinator.com/item?id=50014711 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-09T01:04:37.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 33.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 33.33333333333333,
+          "finalScore": 33.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c3348d6dbd1b",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Nace.ai Document Intelligence 1.0",
+        "link": "https://www.nace.ai/developers",
+        "contentSnippet": "Article URL: https://www.nace.ai/developers Comments URL: https://news.ycombinator.com/item?id=50014659 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-09T00:58:25.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 33.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 33.33333333333333,
+          "finalScore": 33.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "22c466f0253c",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Using evals to cut AI errors 7x",
+        "link": "https://hex.tech/blog/we-used-evals-to-improve-ai-feature/",
+        "contentSnippet": "Article URL: https://hex.tech/blog/we-used-evals-to-improve-ai-feature/ Comments URL: https://news.ycombinator.com/item?id=50014465 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-09T00:35:34.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 33.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 33.33333333333333,
+          "finalScore": 33.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3bb14ad244a3",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Long-Term Memory for AI:50M-Token Window,Is Faster,Cheaper Than Recompute",
+        "link": "https://arxiv.org/abs/2610.10845",
+        "contentSnippet": "Article URL: https://arxiv.org/abs/2610.10845 Comments URL: https://news.ycombinator.com/item?id=50014353 Points: 3 # Comments: 0",
+        "publishedAt": "2026-10-09T00:25:11.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 33.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 33.33333333333333,
+          "finalScore": 33.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e9197fd8d61b",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Microsoft’s new Surface Laptop Ultra finally has a starting price (you should sit down)",
+        "link": "https://www.zdnet.com/tech/microsoft-surface-laptop-ultra-preorder-starting-price/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-08T04:21:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 27.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 89,
+          "ruleScoreNormalized": 27.77777777777778,
+          "finalScore": 27.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "54d1c37a27ec",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Yelp, who? 4 ways Google Maps can help you find your next meal – and order it",
+        "link": "https://www.zdnet.com/tech/google-maps-features-restaurants-dining-food-ordering/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-08T12:00:07.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 27.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 89,
+          "ruleScoreNormalized": 27.77777777777778,
+          "finalScore": 27.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7d81bbf91e16",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "搭载NVIDIA RTX Spark™ N1X超级芯片：联想YOGA Pro 15开启盲约，重塑个人生产力边界",
+        "link": "https://www.qbitai.com/2026/10/502020.html",
+        "contentSnippet": "联想YOGA Pro 15 RTX Spark笔记本电脑，于10月8日9:00正式开启全网盲约。",
+        "publishedAt": "2026-10-08T10:23:53.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 16.67,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 16.666666666666664,
+          "finalScore": 16.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "40ae96daa5ea",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "ChatGPT踢到铁板了！能破解千禧数学难题，但论文复现率低至13.98%？",
+        "link": "https://www.qbitai.com/2026/10/501995.html",
+        "contentSnippet": "PaperBenchX为代表的基准或许能更好地衡量AI的科研实力",
+        "publishedAt": "2026-10-08T09:28:44.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 16.67,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 16.666666666666664,
+          "finalScore": 16.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3af02f03ea6d",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Managers are using AI to write performance reviews – and it shows",
+        "link": "https://www.zdnet.com/innovation/manager-ai-use-highwire-survey/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-07T21:47:48.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "6637bef54982",
+        "title": "正行创新亮相APRCE 2026，发布全球首个零售物理智能24/7服务解决方案",
+        "summary": "打造便利店“人机协作”运营新模式",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "6637bef54982"
+        ]
+      },
+      {
+        "itemId": "6a125584df31",
+        "title": "浪子回头！Manus重启北京办公室大举招聘",
+        "summary": "开始和国产Agent抢人，还拿到5亿美元新融资",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "6a125584df31"
+        ]
+      },
+      {
+        "itemId": "83d1ebd02867",
+        "title": "Scale AI cut 89 tasks from SWE-Bench Pro after an audit found gaming",
+        "summary": "Article URL: https://theinference.org/article/scale-ai-cut-89-tasks-from-its-coding-benchmark-after-an-audit-found-gami…",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "83d1ebd02867"
+        ]
+      },
+      {
+        "itemId": "7d38ff9fadbe",
+        "title": "吉利智充技术正式发布，重塑全球补能新标杆",
+        "summary": "2027年底实现“县县通”",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "7d38ff9fadbe"
+        ]
+      },
+      {
+        "itemId": "8d5f42150cc9",
+        "title": "Got a Microsoft 365 subscription? Your storage is about to shrink",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "8d5f42150cc9"
+        ]
+      },
+      {
+        "itemId": "625711b4da47",
+        "title": "Regulators are trying to protect you from being fired by AI – here’s how",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "625711b4da47"
+        ]
+      },
+      {
+        "itemId": "b2ea2a160456",
+        "title": "Can AI fix legacy IT? The ‘economics don’t hold up,’ says former IBM strategist",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b2ea2a160456"
+        ]
+      },
+      {
+        "itemId": "e29cee5dbe7a",
+        "title": "真香！做这个邪恶老奶版「GTA 6」，我只花了5元！",
+        "summary": "Vidu Q4预览版，了解一下~",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e29cee5dbe7a"
+        ]
+      },
+      {
+        "itemId": "1c3d958c75e2",
+        "title": "Bending the Curve of Discovery: AI in Science Today and Tomorrow",
+        "summary": "Article URL: https://institute.deepmind.com/essays/bending-the-curve-of-discovery-ai-in-science-today-and-tomorrow/ Com…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1c3d958c75e2"
+        ]
+      },
+      {
+        "itemId": "5621d849e931",
+        "title": "Why AI hasn't fixed software delivery yet, and what will",
+        "summary": "Article URL: https://m1spec.com/why/ Comments URL: https://news.ycombinator.com/item?id=50014711 Points: 1 # Comments: 0",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5621d849e931"
+        ]
+      },
+      {
+        "itemId": "c3348d6dbd1b",
+        "title": "Show HN: Nace.ai Document Intelligence 1.0",
+        "summary": "Article URL: https://www.nace.ai/developers Comments URL: https://news.ycombinator.com/item?id=50014659 Points: 2 # Com…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c3348d6dbd1b"
+        ]
+      },
+      {
+        "itemId": "22c466f0253c",
+        "title": "Using evals to cut AI errors 7x",
+        "summary": "Article URL: https://hex.tech/blog/we-used-evals-to-improve-ai-feature/ Comments URL: https://news.ycombinator.com/item…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "22c466f0253c"
+        ]
+      },
+      {
+        "itemId": "3bb14ad244a3",
+        "title": "Long-Term Memory for AI:50M-Token Window,Is Faster,Cheaper Than Recompute",
+        "summary": "Article URL: https://arxiv.org/abs/2610.10845 Comments URL: https://news.ycombinator.com/item?id=50014353 Points: 3 # C…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3bb14ad244a3"
+        ]
+      },
+      {
+        "itemId": "e9197fd8d61b",
+        "title": "Microsoft’s new Surface Laptop Ultra finally has a starting price (you should sit down)",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e9197fd8d61b"
+        ]
+      },
+      {
+        "itemId": "54d1c37a27ec",
+        "title": "Yelp, who? 4 ways Google Maps can help you find your next meal – and order it",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "54d1c37a27ec"
+        ]
+      },
+      {
+        "itemId": "7d81bbf91e16",
+        "title": "搭载NVIDIA RTX Spark™ N1X超级芯片：联想YOGA Pro 15开启盲约，重塑个人生产力边界",
+        "summary": "联想YOGA Pro 15 RTX Spark笔记本电脑，于10月8日9:00正式开启全网盲约。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "7d81bbf91e16"
+        ]
+      },
+      {
+        "itemId": "40ae96daa5ea",
+        "title": "ChatGPT踢到铁板了！能破解千禧数学难题，但论文复现率低至13.98%？",
+        "summary": "PaperBenchX为代表的基准或许能更好地衡量AI的科研实力",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "40ae96daa5ea"
+        ]
+      },
+      {
+        "itemId": "3af02f03ea6d",
+        "title": "Managers are using AI to write performance reviews – and it shows",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3af02f03ea6d"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "6637bef54982",
+        "title": "正行创新亮相APRCE 2026，发布全球首个零售物理智能24/7服务解决方案",
+        "takeaway": "打造便利店“人机协作”运营新模式",
+        "evidenceItemIds": [
+          "6637bef54982"
+        ]
+      },
+      {
+        "itemId": "6a125584df31",
+        "title": "浪子回头！Manus重启北京办公室大举招聘",
+        "takeaway": "开始和国产Agent抢人，还拿到5亿美元新融资",
+        "evidenceItemIds": [
+          "6a125584df31"
+        ]
+      },
+      {
+        "itemId": "83d1ebd02867",
+        "title": "Scale AI cut 89 tasks from SWE-Bench Pro after an audit found gaming",
+        "takeaway": "Article URL: https://theinference.org/article/scale-ai-cut-89-tasks-from-its-coding-benchmark-after-an-audit-found-gami…",
+        "evidenceItemIds": [
+          "83d1ebd02867"
+        ]
+      },
+      {
+        "itemId": "7d38ff9fadbe",
+        "title": "吉利智充技术正式发布，重塑全球补能新标杆",
+        "takeaway": "2027年底实现“县县通”",
+        "evidenceItemIds": [
+          "7d38ff9fadbe"
+        ]
+      },
+      {
+        "itemId": "8d5f42150cc9",
+        "title": "Got a Microsoft 365 subscription? Your storage is about to shrink",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "8d5f42150cc9"
+        ]
+      },
+      {
+        "itemId": "625711b4da47",
+        "title": "Regulators are trying to protect you from being fired by AI – here’s how",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "625711b4da47"
+        ]
+      },
+      {
+        "itemId": "b2ea2a160456",
+        "title": "Can AI fix legacy IT? The ‘economics don’t hold up,’ says former IBM strategist",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "b2ea2a160456"
+        ]
+      },
+      {
+        "itemId": "e29cee5dbe7a",
+        "title": "真香！做这个邪恶老奶版「GTA 6」，我只花了5元！",
+        "takeaway": "Vidu Q4预览版，了解一下~",
+        "evidenceItemIds": [
+          "e29cee5dbe7a"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕industry-news与agent展开，建议优先关注《正行创新亮相APRCE 2026，发布全球首个零售物理智能24/7服务解决方案》、《浪子回头！Manus重启北京办公室大举招聘》、《Scale AI cut 89 tasks from SWE-Bench Pro after an audit found gaming》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Got a Microsoft 365 subscription? Your storage is about to shrink》、《Regulators are trying to protect you from being fired by AI – here’s how》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "8d5f42150cc9",
+          "625711b4da47",
+          "b2ea2a160456",
+          "e29cee5dbe7a"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《正行创新亮相APRCE 2026，发布全球首个零售物理智能24/7服务解决方案》、《吉利智充技术正式发布，重塑全球补能新标杆》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "6637bef54982",
+          "7d38ff9fadbe",
+          "1c3d958c75e2",
+          "5621d849e931"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "research",
+        "lead": "研究方向本期共 3 条，建议优先阅读《Scale AI cut 89 tasks from SWE-Bench Pro after an audit found gaming》、《Long-Term Memory for AI:50M-Token Window,Is Faster,Cheaper Than Recompute》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "83d1ebd02867",
+          "3bb14ad244a3",
+          "40ae96daa5ea"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 1 条，建议优先阅读《浪子回头！Manus重启北京办公室大举招聘》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "6a125584df31"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "f9b5e3c2ab090d9688e5950975007f624619cfadf19e3df797bc20f1d97e0bc5",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-10-09T01:40:57.655Z",
+      "finishedAt": "2026-10-09T01:41:17.842Z",
+      "durationMs": 20187,
+      "inputCount": 18,
+      "processedCount": 18,
+      "fallbackCount": 18,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 18,
+      "failureStats": {
+        "totalFailed": 18,
+        "timeout": 0,
+        "http": 18,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 34,
+        "splitRetryCount": 16
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-02",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-25",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-10-09T01:41:17.884Z",
+      "finishedAt": "2026-10-09T01:42:54.685Z",
+      "durationMs": 96801,
+      "inputCount": 18,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 18,
+        "timeout": 0,
+        "http": 18,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 18,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "6637bef54982",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "正行创新亮相APRCE 2026，发布全球首个零售物理智能24/7服务解决方案",
+        "link": "https://www.qbitai.com/2026/10/502035.html",
+        "contentSnippet": "打造便利店“人机协作”运营新模式",
+        "publishedAt": "2026-10-08T12:43:31.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6a125584df31",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "浪子回头！Manus重启北京办公室大举招聘",
+        "link": "https://www.qbitai.com/2026/10/502009.html",
+        "contentSnippet": "开始和国产Agent抢人，还拿到5亿美元新融资",
+        "publishedAt": "2026-10-08T09:30:17.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "83d1ebd02867",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Scale AI cut 89 tasks from SWE-Bench Pro after an audit found gaming",
+        "link": "https://theinference.org/article/scale-ai-cut-89-tasks-from-its-coding-benchmark-after-an-audit-found-gaming-then-graded-its-own-fix",
+        "contentSnippet": "Article URL: https://theinference.org/article/scale-ai-cut-89-tasks-from-its-coding-benchmark-after-an-audit-found-gaming-then-graded-its-own-fix Comments URL: https://news.ycombinator.com/item?id=50014434 Points: 3 # Comments: 0",
+        "publishedAt": "2026-10-09T00:32:44.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 88.89,
+        "importance": "high",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 88.88888888888889,
+          "finalScore": 88.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7d38ff9fadbe",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "吉利智充技术正式发布，重塑全球补能新标杆",
+        "link": "https://www.qbitai.com/2026/10/501956.html",
+        "contentSnippet": "2027年底实现“县县通”",
+        "publishedAt": "2026-10-08T09:10:55.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 72.22,
+        "importance": "medium",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 72.22222222222221,
+          "finalScore": 72.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8d5f42150cc9",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Got a Microsoft 365 subscription? Your storage is about to shrink",
+        "link": "https://www.zdnet.com/tech/microsoft-365-subscription-storage-limits/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-08T18:56:22.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.56,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 55.55555555555556,
+          "finalScore": 55.56,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 18,
+      "normalizedCount": 18,
+      "dedupedCount": 18,
+      "highImportanceCount": 3,
+      "mediumImportanceCount": 1,
+      "lowImportanceCount": 14,
+      "categoryBreakdown": {
+        "open-source": 0,
+        "tooling": 0,
+        "agent": 1,
+        "research": 3,
+        "industry-news": 6,
+        "tutorial": 0,
+        "other": 8
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Google AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[InfoQ AI/ML News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[MarkTechPost] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[VentureBeat AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+      "LLM 分类打分部分回退：18/18",
+      "LLM 分类打分回退明细（前 3/18）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0717792d06607da9fa04efcf264dd866\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0717792d8af84c91557c0a6c9ec4682f\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0717792e0c10c33d7dec6e8a78528a97\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=18：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=34, split_retry=16",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/18）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=18, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=18, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
