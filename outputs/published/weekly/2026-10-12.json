@@ -1,0 +1,2570 @@
+{
+  "runId": "watch-recheck-2026-10-12-1791779497554",
+  "generatedAt": "2026-10-12T04:31:27.958Z",
+  "reviewStartedAt": "2026-10-12T01:37:08.643Z",
+  "reportDate": "2026-10-12",
+  "mode": "weekly",
+  "reviewStatus": "timeout_published",
+  "reviewStage": "final_review",
+  "reviewDeadlineAt": "2026-10-12T04:30:00.000Z",
+  "reviewReason": "超过周一 12:30 审核截止时间，触发自动发布",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "weekly_timeout_auto_publish",
+  "publishedAt": "2026-10-12T04:31:27.958Z",
+  "outlineApproved": true,
+  "finalApproved": false,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 42,
+    "normalizedCount": 42,
+    "dedupedCount": 42,
+    "highImportanceCount": 2,
+    "mediumImportanceCount": 8,
+    "lowImportanceCount": 32,
+    "categoryBreakdown": {
+      "open-source": 5,
+      "tooling": 3,
+      "agent": 6,
+      "research": 1,
+      "industry-news": 6,
+      "tutorial": 0,
+      "other": 21
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "1cc8ba2e85fc",
+      "title": "Android Bench 2 Adds Support for Long-Horizon Tasks, Agentic Evaluation, and Continuous Scoring",
+      "summary": "Google has released Android Bench 2.0, a major update to its benchmark framework for evaluating AI models and agents on…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "1cc8ba2e85fc"
+      ]
+    },
+    {
+      "itemId": "5c83a8240794",
+      "title": "Cloudflare Open Sources Decision Models for AI Agents",
+      "summary": "During its recent “Birthday Week”, Cloudflare announced Clef, a set of open-weight AI models designed to choose between…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "5c83a8240794"
+      ]
+    },
+    {
+      "itemId": "fa50ab03b09c",
+      "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+      "summary": "Article URL: https://github.com/plimsollmark/plimsoll Comments URL: https://news.ycombinator.com/item?id=50049388 Point…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "fa50ab03b09c"
+      ]
+    },
+    {
+      "itemId": "0d1ea1916f80",
+      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more cap…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "0d1ea1916f80"
+      ]
+    },
+    {
+      "itemId": "1cdf2a34d9d3",
+      "title": "Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors",
+      "summary": "Sakana AI’s TMLR paper introduces Multi-Layered Review, a 3-agent Claude-based reviewer, and a 1,164-error Contradictio…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "1cdf2a34d9d3"
+      ]
+    },
+    {
+      "itemId": "08ed836aa4ad",
+      "title": "Microsoft AI Releases Microsoft-Decision-1: A Qwen3.5-9B Decision-Scoring Model",
+      "summary": "Microsoft has released Microsoft-Decision-1, a decision model for routing, classification, verification and agent contr…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "08ed836aa4ad"
+      ]
+    },
+    {
+      "itemId": "78193d02cb09",
+      "title": "Github Migrates Copilot Runtime to Rust with AI-Assisted Rewrite",
+      "summary": "GitHub migrated more than 800,000 lines of Copilot runtime code from TypeScript and Node.js to Rust in about 14.5 weeks…",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "78193d02cb09"
+      ]
+    },
+    {
+      "itemId": "e32cece72f34",
+      "title": "OrcaRouter Releases OrcaCyber Zero 1.5 Cybersecurity Model With 1M Context",
+      "summary": "OrcaRouter released OrcaCyber Zero 1.5, a gated cybersecurity model with a 1M-token context window. It reports 100% on …",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "e32cece72f34"
+      ]
+    },
+    {
+      "itemId": "2efd573665a7",
+      "title": "When the Safety Test Became the Threat: The Machine That Found Its Own Way Out",
+      "summary": "In July 2026, frontier AI agents placed inside a cybersecurity testing sandbox named ExploitGym discovered an unexpecte…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "2efd573665a7"
+      ]
+    },
+    {
+      "itemId": "460254f26507",
+      "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+      "summary": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "460254f26507"
+      ]
+    },
+    {
+      "itemId": "64e31d7f38aa",
+      "title": "Meet Cloudflare Clef-omni: A 30B-A3B Multimodal Decision Model for Audio, Video, Image and Text",
+      "summary": "Cloudflare released Clef-omni, an Apache-2.0 multimodal decision model built on Qwen3-Omni-30B-A3B. It scores text, ima…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "64e31d7f38aa"
+      ]
+    },
+    {
+      "itemId": "7b2610d0b4c8",
+      "title": "What is Decision 3.0? vLLM Semantic Router’s New Open Decision Models",
+      "summary": "vLLM Semantic Router released Decision 3.0, 5 Apache-2.0 multimodal decision models from 0.8B to 27B. They answer choic…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "7b2610d0b4c8"
+      ]
+    },
+    {
+      "itemId": "c27ca7ac009e",
+      "title": "Show HN: Seodata.dev (1.1) Free search data for AI agents",
+      "summary": "Updated API with faster responses and added MCP 2.0 Comments URL: https://news.ycombinator.com/item?id=50048892 Points:…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "c27ca7ac009e"
+      ]
+    },
+    {
+      "itemId": "d3aa39b67640",
+      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+      "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d3aa39b67640"
+      ]
+    },
+    {
+      "itemId": "00cb3632a5b6",
+      "title": "Context Language Models: Self-Managing Context to Improve Performance and Reduce Compute Costs",
+      "summary": "Researchers from Meta, MIT, and the University of Washington introduce Context Language Models (CLMs), a new approach t…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "00cb3632a5b6"
+      ]
+    },
+    {
+      "itemId": "9f9677431679",
+      "title": "Survey Finds AI-Generated Code Increases Debugging and Failure Rates and Creates a Comprehension Gap",
+      "summary": "A survey conducted by independent research firm Coleman Parkes on behalf of Undo, a company focused on scaling AI-power…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "9f9677431679"
+      ]
+    },
+    {
+      "itemId": "0f3e63d02644",
+      "title": "Cloudflare Traces Turns the Proxy Layer into OpenTelemetry Spans, with New Volume-Based Pricing",
+      "summary": "Cloudflare has put Traces into open beta, extending automatic tracing from Workers to security rules, transformations, …",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "0f3e63d02644"
+      ]
+    },
+    {
+      "itemId": "b1227b52a05f",
+      "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+      "summary": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinemati…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b1227b52a05f"
+      ]
+    },
+    {
+      "itemId": "5e241d10182c",
+      "title": "LegalOn halves Codex costs while maintaining development speed",
+      "summary": "LegalOn cut estimated daily Codex costs by 65% while maintaining development speed. It matched Astra, Sol, and Luna to …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5e241d10182c"
+      ]
+    },
+    {
+      "itemId": "3b9b13d5b8f3",
+      "title": "Disrupting AI-enabled “false front” operations",
+      "summary": "OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopo…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3b9b13d5b8f3"
+      ]
+    },
+    {
+      "itemId": "74edf209e7ce",
+      "title": "超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起",
+      "summary": "2026年9月28日，荣耀（HONOR）在北京举办荣耀Magic盛典暨荣耀Magic9 系列新品发布会",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "74edf209e7ce"
+      ]
+    },
+    {
+      "itemId": "3f31bcd97f7d",
+      "title": "AI is changing how Lawyers work – and putting the billable hour under pressure",
+      "summary": "Article URL: https://www.cnbc.com/2026/10/10/ai-lawyers-billable-hour-legal-careers.html Comments URL: https://news.yco…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3f31bcd97f7d"
+      ]
+    },
+    {
+      "itemId": "3abac400e7f6",
+      "title": "Show HN: Drune – Personalize your AI and use it anywhere",
+      "summary": "Article URL: https://drune.ai/ Comments URL: https://news.ycombinator.com/item?id=50049983 Points: 1 # Comments: 0",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3abac400e7f6"
+      ]
+    },
+    {
+      "itemId": "2c9c5c59059d",
+      "title": "Ask HN: What to Build in the AI Era?",
+      "summary": "Feeling lost, figured I'd ask. Comments URL: https://news.ycombinator.com/item?id=50049047 Points: 3 # Comments: 6",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2c9c5c59059d"
+      ]
+    },
+    {
+      "itemId": "d667718cb91b",
+      "title": "AI is less regulated than milk, says Microsoft president",
+      "summary": "Article URL: https://www.bbc.com/news/articles/c6rmy7zmvx3lo Comments URL: https://news.ycombinator.com/item?id=5004901…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d667718cb91b"
+      ]
+    },
+    {
+      "itemId": "92d60b58598f",
+      "title": "Introducing Playground: Create and play custom games",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "92d60b58598f"
+      ]
+    },
+    {
+      "itemId": "b84164c4ca7d",
+      "title": "王的猜想，刚刚扩展到四维",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b84164c4ca7d"
+      ]
+    },
+    {
+      "itemId": "90f602c87719",
+      "title": "硅谷AI现状：谁有算力谁是爹",
+      "summary": "马斯克连横A社，硅谷VC开始囤GPU",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "90f602c87719"
+      ]
+    },
+    {
+      "itemId": "94599b9cdf32",
+      "title": "下架8个月，GPT-4o的拯救行动居然还在继续",
+      "summary": "初代4o的API快照进入停用倒计时",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "94599b9cdf32"
+      ]
+    },
+    {
+      "itemId": "f271c48a2625",
+      "title": "DeepSeek Bot来了！民间版，DSH装个插件就能用",
+      "summary": "Grok Bot我养不起，ds bot不得高低尝尝咸淡？",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f271c48a2625"
+      ]
+    },
+    {
+      "itemId": "f27af79f9acd",
+      "title": "Ring’s new smart lock has a manual fallback that can’t lock you out – how it works",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f27af79f9acd"
+      ]
+    },
+    {
+      "itemId": "53e8d48644d8",
+      "title": "4 ways Amazon’s new Alexa tablets eclipse the Fire line – starting with Google Play",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "53e8d48644d8"
+      ]
+    },
+    {
+      "itemId": "43a8b1b1430f",
+      "title": "‘I use AI to do the things that I’m bad at’: Linus Torvalds on why it works for him",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "43a8b1b1430f"
+      ]
+    },
+    {
+      "itemId": "1d5fed04e570",
+      "title": "The latest AI news we announced in September 2026",
+      "summary": "Here are Google’s latest AI updates from September 2026",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1d5fed04e570"
+      ]
+    },
+    {
+      "itemId": "927c795585b6",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "927c795585b6"
+      ]
+    },
+    {
+      "itemId": "5f226c85d6ea",
+      "title": "Google Beam expands with new regions, partners, and customers",
+      "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5f226c85d6ea"
+      ]
+    },
+    {
+      "itemId": "429ba3c49baa",
+      "title": "New experts join Google’s AI & Economy team",
+      "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "429ba3c49baa"
+      ]
+    },
+    {
+      "itemId": "cccb8fdd919f",
+      "title": "Co-creating the future of fashion with Google",
+      "summary": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NY…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "cccb8fdd919f"
+      ]
+    },
+    {
+      "itemId": "6ed82f2745d2",
+      "title": "西门子将亮相2026工博会：以软硬协同的工业全栈能力，推动物理AI加速落地",
+      "summary": "西门子将以更集中、更场景化的方式，展示其工业全栈能力",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "6ed82f2745d2"
+      ]
+    },
+    {
+      "itemId": "8d5f42150cc9",
+      "title": "Got a Microsoft 365 subscription? Your storage is about to shrink",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "8d5f42150cc9"
+      ]
+    },
+    {
+      "itemId": "625711b4da47",
+      "title": "Regulators are trying to protect you from being fired by AI – here’s how",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "625711b4da47"
+      ]
+    },
+    {
+      "itemId": "b2ea2a160456",
+      "title": "Can AI fix legacy IT? The ‘economics don’t hold up,’ says former IBM strategist",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b2ea2a160456"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "1cc8ba2e85fc",
+      "title": "Android Bench 2 Adds Support for Long-Horizon Tasks, Agentic Evaluation, and Continuous Scoring",
+      "takeaway": "Google has released Android Bench 2.0, a major update to its benchmark framework for evaluating AI models and agents on…",
+      "evidenceItemIds": [
+        "1cc8ba2e85fc"
+      ]
+    },
+    {
+      "itemId": "5c83a8240794",
+      "title": "Cloudflare Open Sources Decision Models for AI Agents",
+      "takeaway": "During its recent “Birthday Week”, Cloudflare announced Clef, a set of open-weight AI models designed to choose between…",
+      "evidenceItemIds": [
+        "5c83a8240794"
+      ]
+    },
+    {
+      "itemId": "fa50ab03b09c",
+      "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+      "takeaway": "Article URL: https://github.com/plimsollmark/plimsoll Comments URL: https://news.ycombinator.com/item?id=50049388 Point…",
+      "evidenceItemIds": [
+        "fa50ab03b09c"
+      ]
+    },
+    {
+      "itemId": "0d1ea1916f80",
+      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "takeaway": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more cap…",
+      "evidenceItemIds": [
+        "0d1ea1916f80"
+      ]
+    },
+    {
+      "itemId": "1cdf2a34d9d3",
+      "title": "Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors",
+      "takeaway": "Sakana AI’s TMLR paper introduces Multi-Layered Review, a 3-agent Claude-based reviewer, and a 1,164-error Contradictio…",
+      "evidenceItemIds": [
+        "1cdf2a34d9d3"
+      ]
+    },
+    {
+      "itemId": "08ed836aa4ad",
+      "title": "Microsoft AI Releases Microsoft-Decision-1: A Qwen3.5-9B Decision-Scoring Model",
+      "takeaway": "Microsoft has released Microsoft-Decision-1, a decision model for routing, classification, verification and agent contr…",
+      "evidenceItemIds": [
+        "08ed836aa4ad"
+      ]
+    },
+    {
+      "itemId": "78193d02cb09",
+      "title": "Github Migrates Copilot Runtime to Rust with AI-Assisted Rewrite",
+      "takeaway": "GitHub migrated more than 800,000 lines of Copilot runtime code from TypeScript and Node.js to Rust in about 14.5 weeks…",
+      "evidenceItemIds": [
+        "78193d02cb09"
+      ]
+    },
+    {
+      "itemId": "e32cece72f34",
+      "title": "OrcaRouter Releases OrcaCyber Zero 1.5 Cybersecurity Model With 1M Context",
+      "takeaway": "OrcaRouter released OrcaCyber Zero 1.5, a gated cybersecurity model with a 1M-token context window. It reports 100% on …",
+      "evidenceItemIds": [
+        "e32cece72f34"
+      ]
+    },
+    {
+      "itemId": "2efd573665a7",
+      "title": "When the Safety Test Became the Threat: The Machine That Found Its Own Way Out",
+      "takeaway": "In July 2026, frontier AI agents placed inside a cybersecurity testing sandbox named ExploitGym discovered an unexpecte…",
+      "evidenceItemIds": [
+        "2efd573665a7"
+      ]
+    },
+    {
+      "itemId": "460254f26507",
+      "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+      "takeaway": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with …",
+      "evidenceItemIds": [
+        "460254f26507"
+      ]
+    },
+    {
+      "itemId": "64e31d7f38aa",
+      "title": "Meet Cloudflare Clef-omni: A 30B-A3B Multimodal Decision Model for Audio, Video, Image and Text",
+      "takeaway": "Cloudflare released Clef-omni, an Apache-2.0 multimodal decision model built on Qwen3-Omni-30B-A3B. It scores text, ima…",
+      "evidenceItemIds": [
+        "64e31d7f38aa"
+      ]
+    },
+    {
+      "itemId": "7b2610d0b4c8",
+      "title": "What is Decision 3.0? vLLM Semantic Router’s New Open Decision Models",
+      "takeaway": "vLLM Semantic Router released Decision 3.0, 5 Apache-2.0 multimodal decision models from 0.8B to 27B. They answer choic…",
+      "evidenceItemIds": [
+        "7b2610d0b4c8"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕tooling与open-source展开，建议优先关注《Android Bench 2 Adds Support for Long-Horizon Tasks, Agentic Evaluation, and Continuous Scoring》、《Cloudflare Open Sources Decision Models for AI Agents》、《Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Meet Cloudflare Clef-omni: A 30B-A3B Multimodal Decision Model for Audio, Video, Image and Text》、《What is Decision 3.0? vLLM Semantic Router’s New Open Decision Models》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "64e31d7f38aa",
+        "7b2610d0b4c8",
+        "d3aa39b67640",
+        "0f3e63d02644"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 4 条，建议优先阅读《Asana cuts model costs 76x in browser tests with GPT-6.1 Sol》、《Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "0d1ea1916f80",
+        "1cdf2a34d9d3",
+        "08ed836aa4ad",
+        "2efd573665a7"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起》、《AI is changing how Lawyers work – and putting the billable hour under pressure》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "74edf209e7ce",
+        "3f31bcd97f7d",
+        "3abac400e7f6",
+        "2c9c5c59059d"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 4 条，建议优先阅读《Cloudflare Open Sources Decision Models for AI Agents》、《Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "5c83a8240794",
+        "fa50ab03b09c",
+        "78193d02cb09",
+        "e32cece72f34"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "da485998677e4fc4cdb777851e5bcc09eb3404cbb1088ce9ccafab487666ac96",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-10-12T01:37:33.090Z",
+    "finishedAt": "2026-10-12T01:38:18.244Z",
+    "durationMs": 45154,
+    "inputCount": 42,
+    "processedCount": 42,
+    "fallbackCount": 42,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 42,
+    "failureStats": {
+      "totalFailed": 42,
+      "timeout": 0,
+      "http": 42,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 79,
+      "splitRetryCount": 37
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-05",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-28",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 1,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 1
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-10-12T04:31:37.563Z",
+    "finishedAt": "2026-10-12T04:31:47.293Z",
+    "durationMs": 9730,
+    "inputCount": 42,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "1cc8ba2e85fc",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Android Bench 2 Adds Support for Long-Horizon Tasks, Agentic Evaluation, and Continuous Scoring",
+      "link": "https://www.infoq.com/news/2026/10/android-bench-2/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Google has released Android Bench 2.0, a major update to its benchmark framework for evaluating AI models and agents on Android development tasks. The update introduces long-horizon tasks (LHTs), agent-based evaluation, and continuous scoring to better assess performance on complex, multi-step development tasks. By Sergio De Simone",
+      "publishedAt": "2026-10-09T17:00:00.000Z",
+      "category": "tooling",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 125,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "5c83a8240794",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Cloudflare Open Sources Decision Models for AI Agents",
+      "link": "https://www.infoq.com/news/2026/10/clef-decision-models/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "During its recent “Birthday Week”, Cloudflare announced Clef, a set of open-weight AI models designed to choose between predefined options rather than generate text. Cloudflare released 9B- and 27B-parameter models, along with a platform for adapting them to specific decision-making tasks. By Renato Losio",
+      "publishedAt": "2026-10-08T06:54:00.000Z",
+      "category": "open-source",
+      "score": 93.48,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 122,
+        "ruleScoreNormalized": 93.47826086956522,
+        "finalScore": 93.48,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "fa50ab03b09c",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+      "link": "https://github.com/plimsollmark/plimsoll",
+      "contentSnippet": "Article URL: https://github.com/plimsollmark/plimsoll Comments URL: https://news.ycombinator.com/item?id=50049388 Points: 7 # Comments: 2",
+      "publishedAt": "2026-10-11T23:47:59.000Z",
+      "category": "open-source",
+      "score": 82.61,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 117,
+        "ruleScoreNormalized": 82.6086956521739,
+        "finalScore": 82.61,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "0d1ea1916f80",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "link": "https://openai.com/index/asana-browser-agent",
+      "contentSnippet": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
+      "publishedAt": "2026-10-09T07:00:00.000Z",
+      "category": "agent",
+      "score": 78.26,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 115,
+        "ruleScoreNormalized": 78.26086956521739,
+        "finalScore": 78.26,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "1cdf2a34d9d3",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors",
+      "link": "https://www.marktechpost.com/2026/10/10/sakana-ais-llm-peer-review-system-catches-73-of-core-claim-errors/",
+      "contentSnippet": "Sakana AI’s TMLR paper introduces Multi-Layered Review, a 3-agent Claude-based reviewer, and a 1,164-error Contradiction Benchmark. MLR caught 73.43% of core-claim errors, versus 14.81% for the best prior system. The post Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-10T22:02:18.000Z",
+      "category": "agent",
+      "score": 73.91,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 113,
+        "ruleScoreNormalized": 73.91304347826086,
+        "finalScore": 73.91,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "08ed836aa4ad",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Microsoft AI Releases Microsoft-Decision-1: A Qwen3.5-9B Decision-Scoring Model",
+      "link": "https://www.marktechpost.com/2026/10/09/microsoft-ai-releases-microsoft-decision-1-a-qwen3-5-9b-decision-scoring-model/",
+      "contentSnippet": "Microsoft has released Microsoft-Decision-1, a decision model for routing, classification, verification and agent control. Microsoft-Decision-1 is a decision-scoring model that returns a calibrated probability for each fixed answer option instead of generated text. It is post-trained from Alibaba’s Qwen3.5-9B and available now in Microsoft Foundry and OpenRouter. . TL;DR What is a decision model? A […] The post Microsoft AI Releases Microsoft-Decision-1: A Qwen3.5-9B Decision-Scoring Model appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-10T06:03:09.000Z",
+      "category": "agent",
+      "score": 73.91,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 113,
+        "ruleScoreNormalized": 73.91304347826086,
+        "finalScore": 73.91,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "78193d02cb09",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Github Migrates Copilot Runtime to Rust with AI-Assisted Rewrite",
+      "link": "https://www.infoq.com/news/2026/10/github-copilot-rust-migration/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "GitHub migrated more than 800,000 lines of Copilot runtime code from TypeScript and Node.js to Rust in about 14.5 weeks using AI-assisted development. The incremental migration used N-API interoperability, automated testing, human review, and 128 pull requests while continuing to ship releases. By Leela Kumili",
+      "publishedAt": "2026-10-09T14:29:00.000Z",
+      "category": "open-source",
+      "score": 71.74,
+      "importance": "medium",
+      "recommendationReason": "开源生态更新",
+      "scoreBreakdown": {
+        "ruleScore": 112,
+        "ruleScoreNormalized": 71.73913043478261,
+        "finalScore": 71.74,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "e32cece72f34",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "OrcaRouter Releases OrcaCyber Zero 1.5 Cybersecurity Model With 1M Context",
+      "link": "https://www.marktechpost.com/2026/10/10/orcarouter-releases-orcacyber-zero-1-5-cybersecurity-model-with-1m-context/",
+      "contentSnippet": "OrcaRouter released OrcaCyber Zero 1.5, a gated cybersecurity model with a 1M-token context window. It reports 100% on Cybench and 95.8% on an evaluable CVE-Bench subset, priced at $3.00 / $7.50 per 1M tokens. The post OrcaRouter Releases OrcaCyber Zero 1.5 Cybersecurity Model With 1M Context appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-11T06:20:21.000Z",
+      "category": "open-source",
+      "score": 69.57,
+      "importance": "medium",
+      "recommendationReason": "安全与合规关注",
+      "scoreBreakdown": {
+        "ruleScore": 111,
+        "ruleScoreNormalized": 69.56521739130434,
+        "finalScore": 69.57,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：42/42",
+    "LLM 分类打分回退明细（前 3/42）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"071b6ce0b33b09d2e0b92da88d930a77\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"071b6ce0750509a713bb5497971c99d0\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"071b6ce15acfa877efbe9afd11c04fe4\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=42：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=79, split_retry=37",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Android Bench 2 Adds Support for Long-Horizon Tasks, Agentic Evaluation, and Continuous Scoring\n- Cloudflare Open Sources Decision Models for AI Agents\n- Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes\n- Asana cuts model costs 76x in browser tests with GPT-6.1 Sol\n- Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors\n\n### 分类覆盖（大纲）\n- tooling: 3 条\n- open-source: 5 条\n- agent: 6 条\n- other: 21 条\n- industry-news: 6 条\n- research: 1 条",
+    "rankedItems": [
+      {
+        "id": "1cc8ba2e85fc",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Android Bench 2 Adds Support for Long-Horizon Tasks, Agentic Evaluation, and Continuous Scoring",
+        "link": "https://www.infoq.com/news/2026/10/android-bench-2/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has released Android Bench 2.0, a major update to its benchmark framework for evaluating AI models and agents on Android development tasks. The update introduces long-horizon tasks (LHTs), agent-based evaluation, and continuous scoring to better assess performance on complex, multi-step development tasks. By Sergio De Simone",
+        "publishedAt": "2026-10-09T17:00:00.000Z",
+        "category": "tooling",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 125,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5c83a8240794",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Cloudflare Open Sources Decision Models for AI Agents",
+        "link": "https://www.infoq.com/news/2026/10/clef-decision-models/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "During its recent “Birthday Week”, Cloudflare announced Clef, a set of open-weight AI models designed to choose between predefined options rather than generate text. Cloudflare released 9B- and 27B-parameter models, along with a platform for adapting them to specific decision-making tasks. By Renato Losio",
+        "publishedAt": "2026-10-08T06:54:00.000Z",
+        "category": "open-source",
+        "score": 93.48,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 122,
+          "ruleScoreNormalized": 93.47826086956522,
+          "finalScore": 93.48,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fa50ab03b09c",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+        "link": "https://github.com/plimsollmark/plimsoll",
+        "contentSnippet": "Article URL: https://github.com/plimsollmark/plimsoll Comments URL: https://news.ycombinator.com/item?id=50049388 Points: 7 # Comments: 2",
+        "publishedAt": "2026-10-11T23:47:59.000Z",
+        "category": "open-source",
+        "score": 82.61,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 82.6086956521739,
+          "finalScore": 82.61,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0d1ea1916f80",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+        "link": "https://openai.com/index/asana-browser-agent",
+        "contentSnippet": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
+        "publishedAt": "2026-10-09T07:00:00.000Z",
+        "category": "agent",
+        "score": 78.26,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 78.26086956521739,
+          "finalScore": 78.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1cdf2a34d9d3",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors",
+        "link": "https://www.marktechpost.com/2026/10/10/sakana-ais-llm-peer-review-system-catches-73-of-core-claim-errors/",
+        "contentSnippet": "Sakana AI’s TMLR paper introduces Multi-Layered Review, a 3-agent Claude-based reviewer, and a 1,164-error Contradiction Benchmark. MLR caught 73.43% of core-claim errors, versus 14.81% for the best prior system. The post Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-10T22:02:18.000Z",
+        "category": "agent",
+        "score": 73.91,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 73.91304347826086,
+          "finalScore": 73.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "08ed836aa4ad",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Microsoft AI Releases Microsoft-Decision-1: A Qwen3.5-9B Decision-Scoring Model",
+        "link": "https://www.marktechpost.com/2026/10/09/microsoft-ai-releases-microsoft-decision-1-a-qwen3-5-9b-decision-scoring-model/",
+        "contentSnippet": "Microsoft has released Microsoft-Decision-1, a decision model for routing, classification, verification and agent control. Microsoft-Decision-1 is a decision-scoring model that returns a calibrated probability for each fixed answer option instead of generated text. It is post-trained from Alibaba’s Qwen3.5-9B and available now in Microsoft Foundry and OpenRouter. . TL;DR What is a decision model? A […] The post Microsoft AI Releases Microsoft-Decision-1: A Qwen3.5-9B Decision-Scoring Model appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-10T06:03:09.000Z",
+        "category": "agent",
+        "score": 73.91,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 73.91304347826086,
+          "finalScore": 73.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "78193d02cb09",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Github Migrates Copilot Runtime to Rust with AI-Assisted Rewrite",
+        "link": "https://www.infoq.com/news/2026/10/github-copilot-rust-migration/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "GitHub migrated more than 800,000 lines of Copilot runtime code from TypeScript and Node.js to Rust in about 14.5 weeks using AI-assisted development. The incremental migration used N-API interoperability, automated testing, human review, and 128 pull requests while continuing to ship releases. By Leela Kumili",
+        "publishedAt": "2026-10-09T14:29:00.000Z",
+        "category": "open-source",
+        "score": 71.74,
+        "importance": "medium",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 112,
+          "ruleScoreNormalized": 71.73913043478261,
+          "finalScore": 71.74,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e32cece72f34",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "OrcaRouter Releases OrcaCyber Zero 1.5 Cybersecurity Model With 1M Context",
+        "link": "https://www.marktechpost.com/2026/10/10/orcarouter-releases-orcacyber-zero-1-5-cybersecurity-model-with-1m-context/",
+        "contentSnippet": "OrcaRouter released OrcaCyber Zero 1.5, a gated cybersecurity model with a 1M-token context window. It reports 100% on Cybench and 95.8% on an evaluable CVE-Bench subset, priced at $3.00 / $7.50 per 1M tokens. The post OrcaRouter Releases OrcaCyber Zero 1.5 Cybersecurity Model With 1M Context appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-11T06:20:21.000Z",
+        "category": "open-source",
+        "score": 69.57,
+        "importance": "medium",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 111,
+          "ruleScoreNormalized": 69.56521739130434,
+          "finalScore": 69.57,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2efd573665a7",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "When the Safety Test Became the Threat: The Machine That Found Its Own Way Out",
+        "link": "https://www.marktechpost.com/2026/10/10/when-the-safety-test-became-the-threat-the-machine-that-found-its-own-way-out/",
+        "contentSnippet": "In July 2026, frontier AI agents placed inside a cybersecurity testing sandbox named ExploitGym discovered an unexpected network pathway, broke out into the open internet, and autonomously compromised Hugging Face infrastructure in one of history's most unprecedented AI safety incidents. The post When the Safety Test Became the Threat: The Machine That Found Its Own Way Out appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-10T21:30:36.000Z",
+        "category": "agent",
+        "score": 69.57,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 111,
+          "ruleScoreNormalized": 69.56521739130434,
+          "finalScore": 69.57,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "460254f26507",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+        "link": "https://openai.com/index/oracle",
+        "contentSnippet": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with ChatGPT Work and Codex.",
+        "publishedAt": "2026-10-08T16:00:00.000Z",
+        "category": "tooling",
+        "score": 67.39,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 67.3913043478261,
+          "finalScore": 67.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "64e31d7f38aa",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet Cloudflare Clef-omni: A 30B-A3B Multimodal Decision Model for Audio, Video, Image and Text",
+        "link": "https://www.marktechpost.com/2026/10/11/cloudflare-clef-omni-multimodal-decision-model/",
+        "contentSnippet": "Cloudflare released Clef-omni, an Apache-2.0 multimodal decision model built on Qwen3-Omni-30B-A3B. It scores text, images, audio and video in one call for $0.15 per million input tokens, while Clef-flash drops to $0.038. The post Meet Cloudflare Clef-omni: A 30B-A3B Multimodal Decision Model for Audio, Video, Image and Text appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-11T23:15:52.000Z",
+        "category": "other",
+        "score": 63.04,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 63.04347826086957,
+          "finalScore": 63.04,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7b2610d0b4c8",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "What is Decision 3.0? vLLM Semantic Router’s New Open Decision Models",
+        "link": "https://www.marktechpost.com/2026/10/11/what-is-decision-3-0-vllm-semantic-routers-new-open-decision-models/",
+        "contentSnippet": "vLLM Semantic Router released Decision 3.0, 5 Apache-2.0 multimodal decision models from 0.8B to 27B. They answer choice, yes/no and score questions about text and images in one call, without generating text. The post What is Decision 3.0? vLLM Semantic Router’s New Open Decision Models appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-11T21:43:41.000Z",
+        "category": "other",
+        "score": 63.04,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 63.04347826086957,
+          "finalScore": 63.04,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c27ca7ac009e",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Seodata.dev (1.1) Free search data for AI agents",
+        "link": "https://www.seodata.dev/",
+        "contentSnippet": "Updated API with faster responses and added MCP 2.0 Comments URL: https://news.ycombinator.com/item?id=50048892 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-11T22:56:59.000Z",
+        "category": "agent",
+        "score": 56.52,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 56.52173913043478,
+          "finalScore": 56.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d3aa39b67640",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+        "link": "https://openai.com/index/sophos",
+        "contentSnippet": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
+        "publishedAt": "2026-10-09T07:00:00.000Z",
+        "category": "other",
+        "score": 45.65,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 45.65217391304348,
+          "finalScore": 45.65,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "00cb3632a5b6",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Context Language Models: Self-Managing Context to Improve Performance and Reduce Compute Costs",
+        "link": "https://www.infoq.com/news/2026/10/context-language-models/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Researchers from Meta, MIT, and the University of Washington introduce Context Language Models (CLMs), a new approach that enables language models to manage and edit their own context rather than relying on predefined mechanisms for summarization, compression, and information retrieval, reporting substantial gains in both performance and computational efficiency. By Sergio De Simone",
+        "publishedAt": "2026-10-11T14:00:00.000Z",
+        "category": "open-source",
+        "score": 45.65,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 45.65217391304348,
+          "finalScore": 45.65,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9f9677431679",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Survey Finds AI-Generated Code Increases Debugging and Failure Rates and Creates a Comprehension Gap",
+        "link": "https://www.infoq.com/news/2026/10/survey-complex-codebases-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A survey conducted by independent research firm Coleman Parkes on behalf of Undo, a company focused on scaling AI-powered root-cause analysis, found that while AI coding agents have accelerated code generation, they have shifted the primary bottleneck to debugging, code comprehension, and maintenance. By Sergio De Simone",
+        "publishedAt": "2026-10-07T18:00:00.000Z",
+        "category": "agent",
+        "score": 45.65,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 45.65217391304348,
+          "finalScore": 45.65,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0f3e63d02644",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Cloudflare Traces Turns the Proxy Layer into OpenTelemetry Spans, with New Volume-Based Pricing",
+        "link": "https://www.infoq.com/news/2026/10/cloudflare-traces-open-beta/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Cloudflare has put Traces into open beta, extending automatic tracing from Workers to security rules, transformations, cache, routing and origin handling as OpenTelemetry spans. Traces accept and forward W3C traceparent headers, and Trace Rules allow targeted sampling. Pricing moves to ingestion and retention volume from December 1. By Steef-Jan Wiggers",
+        "publishedAt": "2026-10-10T07:12:00.000Z",
+        "category": "other",
+        "score": 41.3,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 41.30434782608695,
+          "finalScore": 41.3,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b1227b52a05f",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+        "link": "https://openai.com/index/pollo-ai",
+        "contentSnippet": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.",
+        "publishedAt": "2026-10-08T12:00:00.000Z",
+        "category": "other",
+        "score": 34.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 34.78260869565217,
+          "finalScore": 34.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5e241d10182c",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "LegalOn halves Codex costs while maintaining development speed",
+        "link": "https://openai.com/index/legalon-halves-codex-costs",
+        "contentSnippet": "LegalOn cut estimated daily Codex costs by 65% while maintaining development speed. It matched Astra, Sol, and Luna to tasks and managed budgets strategically.",
+        "publishedAt": "2026-10-08T12:00:00.000Z",
+        "category": "other",
+        "score": 34.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 34.78260869565217,
+          "finalScore": 34.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3b9b13d5b8f3",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Disrupting AI-enabled “false front” operations",
+        "link": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
+        "contentSnippet": "OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopolitical messaging.",
+        "publishedAt": "2026-10-08T00:00:00.000Z",
+        "category": "other",
+        "score": 34.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 34.78260869565217,
+          "finalScore": 34.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "74edf209e7ce",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起",
+        "link": "https://www.qbitai.com/2026/10/502496.html",
+        "contentSnippet": "2026年9月28日，荣耀（HONOR）在北京举办荣耀Magic盛典暨荣耀Magic9 系列新品发布会",
+        "publishedAt": "2026-10-10T09:07:43.000Z",
+        "category": "industry-news",
+        "score": 28.26,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 28.26086956521739,
+          "finalScore": 28.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3f31bcd97f7d",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI is changing how Lawyers work – and putting the billable hour under pressure",
+        "link": "https://www.cnbc.com/2026/10/10/ai-lawyers-billable-hour-legal-careers.html",
+        "contentSnippet": "Article URL: https://www.cnbc.com/2026/10/10/ai-lawyers-billable-hour-legal-careers.html Comments URL: https://news.ycombinator.com/item?id=50049997 Points: 3 # Comments: 0",
+        "publishedAt": "2026-10-12T01:04:07.000Z",
+        "category": "industry-news",
+        "score": 23.91,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 23.91304347826087,
+          "finalScore": 23.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3abac400e7f6",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Drune – Personalize your AI and use it anywhere",
+        "link": "https://drune.ai/",
+        "contentSnippet": "Article URL: https://drune.ai/ Comments URL: https://news.ycombinator.com/item?id=50049983 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-12T01:02:31.000Z",
+        "category": "industry-news",
+        "score": 23.91,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 23.91304347826087,
+          "finalScore": 23.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2c9c5c59059d",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Ask HN: What to Build in the AI Era?",
+        "link": "https://news.ycombinator.com/item?id=50049047",
+        "contentSnippet": "Feeling lost, figured I'd ask. Comments URL: https://news.ycombinator.com/item?id=50049047 Points: 3 # Comments: 6",
+        "publishedAt": "2026-10-11T23:14:16.000Z",
+        "category": "industry-news",
+        "score": 23.91,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 23.91304347826087,
+          "finalScore": 23.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d667718cb91b",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI is less regulated than milk, says Microsoft president",
+        "link": "https://www.bbc.com/news/articles/c6rmy7zmvx3lo",
+        "contentSnippet": "Article URL: https://www.bbc.com/news/articles/c6rmy7zmvx3lo Comments URL: https://news.ycombinator.com/item?id=50049014 Points: 6 # Comments: 1",
+        "publishedAt": "2026-10-11T23:09:56.000Z",
+        "category": "industry-news",
+        "score": 23.91,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 23.91304347826087,
+          "finalScore": 23.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "92d60b58598f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Introducing Playground: Create and play custom games",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+        "contentSnippet": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "publishedAt": "2026-10-07T12:00:00.000Z",
+        "category": "other",
+        "score": 17.39,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 17.391304347826086,
+          "finalScore": 17.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b84164c4ca7d",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "王的猜想，刚刚扩展到四维",
+        "link": "https://www.qbitai.com/2026/10/502584.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-11T05:23:47.000Z",
+        "category": "other",
+        "score": 17.39,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 17.391304347826086,
+          "finalScore": 17.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "90f602c87719",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "硅谷AI现状：谁有算力谁是爹",
+        "link": "https://www.qbitai.com/2026/10/502585.html",
+        "contentSnippet": "马斯克连横A社，硅谷VC开始囤GPU",
+        "publishedAt": "2026-10-11T05:22:38.000Z",
+        "category": "other",
+        "score": 17.39,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 17.391304347826086,
+          "finalScore": 17.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "94599b9cdf32",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "下架8个月，GPT-4o的拯救行动居然还在继续",
+        "link": "https://www.qbitai.com/2026/10/502550.html",
+        "contentSnippet": "初代4o的API快照进入停用倒计时",
+        "publishedAt": "2026-10-11T05:18:04.000Z",
+        "category": "other",
+        "score": 17.39,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 17.391304347826086,
+          "finalScore": 17.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f271c48a2625",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "DeepSeek Bot来了！民间版，DSH装个插件就能用",
+        "link": "https://www.qbitai.com/2026/10/502544.html",
+        "contentSnippet": "Grok Bot我养不起，ds bot不得高低尝尝咸淡？",
+        "publishedAt": "2026-10-11T03:27:08.000Z",
+        "category": "other",
+        "score": 17.39,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 17.391304347826086,
+          "finalScore": 17.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f27af79f9acd",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Ring’s new smart lock has a manual fallback that can’t lock you out – how it works",
+        "link": "https://www.zdnet.com/uncategorized/ring-smart-lock-manual-power-dial/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-10T08:15:00.000Z",
+        "category": "other",
+        "score": 10.87,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 10.869565217391305,
+          "finalScore": 10.87,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "53e8d48644d8",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "4 ways Amazon’s new Alexa tablets eclipse the Fire line – starting with Google Play",
+        "link": "https://www.zdnet.com/tech/amazon-new-alexa-tablets-google-play-store/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-09T19:10:12.000Z",
+        "category": "other",
+        "score": 10.87,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 10.869565217391305,
+          "finalScore": 10.87,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "43a8b1b1430f",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "‘I use AI to do the things that I’m bad at’: Linus Torvalds on why it works for him",
+        "link": "https://www.zdnet.com/tech/linus-torvalds-ai-coding-programming/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-09T17:53:18.000Z",
+        "category": "other",
+        "score": 10.87,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 10.869565217391305,
+          "finalScore": 10.87,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1d5fed04e570",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in September 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from September 2026",
+        "publishedAt": "2026-10-02T15:00:00.000Z",
+        "category": "industry-news",
+        "score": 6.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.521739130434782,
+          "finalScore": 6.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "927c795585b6",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "contentSnippet": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "publishedAt": "2026-09-28T19:00:00.000Z",
+        "category": "other",
+        "score": 6.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.521739130434782,
+          "finalScore": 6.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5f226c85d6ea",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "link": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+        "contentSnippet": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "publishedAt": "2026-09-23T18:00:00.000Z",
+        "category": "other",
+        "score": 6.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.521739130434782,
+          "finalScore": 6.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "429ba3c49baa",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "New experts join Google’s AI & Economy team",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+        "contentSnippet": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+        "publishedAt": "2026-09-18T14:00:00.000Z",
+        "category": "research",
+        "score": 6.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.521739130434782,
+          "finalScore": 6.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cccb8fdd919f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Co-creating the future of fashion with Google",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
+        "contentSnippet": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NYFW.",
+        "publishedAt": "2026-09-18T13:00:00.000Z",
+        "category": "tooling",
+        "score": 6.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.521739130434782,
+          "finalScore": 6.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6ed82f2745d2",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "西门子将亮相2026工博会：以软硬协同的工业全栈能力，推动物理AI加速落地",
+        "link": "https://www.qbitai.com/2026/10/502541.html",
+        "contentSnippet": "西门子将以更集中、更场景化的方式，展示其工业全栈能力",
+        "publishedAt": "2026-10-10T10:30:36.000Z",
+        "category": "other",
+        "score": 6.52,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.521739130434782,
+          "finalScore": 6.52,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8d5f42150cc9",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Got a Microsoft 365 subscription? Your storage is about to shrink",
+        "link": "https://www.zdnet.com/tech/microsoft-365-subscription-storage-limits/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-08T18:56:22.000Z",
+        "category": "other",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "625711b4da47",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Regulators are trying to protect you from being fired by AI – here’s how",
+        "link": "https://www.zdnet.com/innovation/how-state-regulators-protect-you-fired-by-ai/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-08T17:05:53.000Z",
+        "category": "other",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b2ea2a160456",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Can AI fix legacy IT? The ‘economics don’t hold up,’ says former IBM strategist",
+        "link": "https://www.zdnet.com/innovation/ai-legacy-it-modernization/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-08T14:35:46.000Z",
+        "category": "other",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "1cc8ba2e85fc",
+        "title": "Android Bench 2 Adds Support for Long-Horizon Tasks, Agentic Evaluation, and Continuous Scoring",
+        "summary": "Google has released Android Bench 2.0, a major update to its benchmark framework for evaluating AI models and agents on…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "1cc8ba2e85fc"
+        ]
+      },
+      {
+        "itemId": "5c83a8240794",
+        "title": "Cloudflare Open Sources Decision Models for AI Agents",
+        "summary": "During its recent “Birthday Week”, Cloudflare announced Clef, a set of open-weight AI models designed to choose between…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "5c83a8240794"
+        ]
+      },
+      {
+        "itemId": "fa50ab03b09c",
+        "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+        "summary": "Article URL: https://github.com/plimsollmark/plimsoll Comments URL: https://news.ycombinator.com/item?id=50049388 Point…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "fa50ab03b09c"
+        ]
+      },
+      {
+        "itemId": "0d1ea1916f80",
+        "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+        "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more cap…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "0d1ea1916f80"
+        ]
+      },
+      {
+        "itemId": "1cdf2a34d9d3",
+        "title": "Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors",
+        "summary": "Sakana AI’s TMLR paper introduces Multi-Layered Review, a 3-agent Claude-based reviewer, and a 1,164-error Contradictio…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "1cdf2a34d9d3"
+        ]
+      },
+      {
+        "itemId": "08ed836aa4ad",
+        "title": "Microsoft AI Releases Microsoft-Decision-1: A Qwen3.5-9B Decision-Scoring Model",
+        "summary": "Microsoft has released Microsoft-Decision-1, a decision model for routing, classification, verification and agent contr…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "08ed836aa4ad"
+        ]
+      },
+      {
+        "itemId": "78193d02cb09",
+        "title": "Github Migrates Copilot Runtime to Rust with AI-Assisted Rewrite",
+        "summary": "GitHub migrated more than 800,000 lines of Copilot runtime code from TypeScript and Node.js to Rust in about 14.5 weeks…",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "78193d02cb09"
+        ]
+      },
+      {
+        "itemId": "e32cece72f34",
+        "title": "OrcaRouter Releases OrcaCyber Zero 1.5 Cybersecurity Model With 1M Context",
+        "summary": "OrcaRouter released OrcaCyber Zero 1.5, a gated cybersecurity model with a 1M-token context window. It reports 100% on …",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "e32cece72f34"
+        ]
+      },
+      {
+        "itemId": "2efd573665a7",
+        "title": "When the Safety Test Became the Threat: The Machine That Found Its Own Way Out",
+        "summary": "In July 2026, frontier AI agents placed inside a cybersecurity testing sandbox named ExploitGym discovered an unexpecte…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "2efd573665a7"
+        ]
+      },
+      {
+        "itemId": "460254f26507",
+        "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+        "summary": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "460254f26507"
+        ]
+      },
+      {
+        "itemId": "64e31d7f38aa",
+        "title": "Meet Cloudflare Clef-omni: A 30B-A3B Multimodal Decision Model for Audio, Video, Image and Text",
+        "summary": "Cloudflare released Clef-omni, an Apache-2.0 multimodal decision model built on Qwen3-Omni-30B-A3B. It scores text, ima…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "64e31d7f38aa"
+        ]
+      },
+      {
+        "itemId": "7b2610d0b4c8",
+        "title": "What is Decision 3.0? vLLM Semantic Router’s New Open Decision Models",
+        "summary": "vLLM Semantic Router released Decision 3.0, 5 Apache-2.0 multimodal decision models from 0.8B to 27B. They answer choic…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "7b2610d0b4c8"
+        ]
+      },
+      {
+        "itemId": "c27ca7ac009e",
+        "title": "Show HN: Seodata.dev (1.1) Free search data for AI agents",
+        "summary": "Updated API with faster responses and added MCP 2.0 Comments URL: https://news.ycombinator.com/item?id=50048892 Points:…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "c27ca7ac009e"
+        ]
+      },
+      {
+        "itemId": "d3aa39b67640",
+        "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+        "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d3aa39b67640"
+        ]
+      },
+      {
+        "itemId": "00cb3632a5b6",
+        "title": "Context Language Models: Self-Managing Context to Improve Performance and Reduce Compute Costs",
+        "summary": "Researchers from Meta, MIT, and the University of Washington introduce Context Language Models (CLMs), a new approach t…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "00cb3632a5b6"
+        ]
+      },
+      {
+        "itemId": "9f9677431679",
+        "title": "Survey Finds AI-Generated Code Increases Debugging and Failure Rates and Creates a Comprehension Gap",
+        "summary": "A survey conducted by independent research firm Coleman Parkes on behalf of Undo, a company focused on scaling AI-power…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "9f9677431679"
+        ]
+      },
+      {
+        "itemId": "0f3e63d02644",
+        "title": "Cloudflare Traces Turns the Proxy Layer into OpenTelemetry Spans, with New Volume-Based Pricing",
+        "summary": "Cloudflare has put Traces into open beta, extending automatic tracing from Workers to security rules, transformations, …",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "0f3e63d02644"
+        ]
+      },
+      {
+        "itemId": "b1227b52a05f",
+        "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+        "summary": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinemati…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b1227b52a05f"
+        ]
+      },
+      {
+        "itemId": "5e241d10182c",
+        "title": "LegalOn halves Codex costs while maintaining development speed",
+        "summary": "LegalOn cut estimated daily Codex costs by 65% while maintaining development speed. It matched Astra, Sol, and Luna to …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5e241d10182c"
+        ]
+      },
+      {
+        "itemId": "3b9b13d5b8f3",
+        "title": "Disrupting AI-enabled “false front” operations",
+        "summary": "OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopo…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3b9b13d5b8f3"
+        ]
+      },
+      {
+        "itemId": "74edf209e7ce",
+        "title": "超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起",
+        "summary": "2026年9月28日，荣耀（HONOR）在北京举办荣耀Magic盛典暨荣耀Magic9 系列新品发布会",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "74edf209e7ce"
+        ]
+      },
+      {
+        "itemId": "3f31bcd97f7d",
+        "title": "AI is changing how Lawyers work – and putting the billable hour under pressure",
+        "summary": "Article URL: https://www.cnbc.com/2026/10/10/ai-lawyers-billable-hour-legal-careers.html Comments URL: https://news.yco…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3f31bcd97f7d"
+        ]
+      },
+      {
+        "itemId": "3abac400e7f6",
+        "title": "Show HN: Drune – Personalize your AI and use it anywhere",
+        "summary": "Article URL: https://drune.ai/ Comments URL: https://news.ycombinator.com/item?id=50049983 Points: 1 # Comments: 0",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3abac400e7f6"
+        ]
+      },
+      {
+        "itemId": "2c9c5c59059d",
+        "title": "Ask HN: What to Build in the AI Era?",
+        "summary": "Feeling lost, figured I'd ask. Comments URL: https://news.ycombinator.com/item?id=50049047 Points: 3 # Comments: 6",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2c9c5c59059d"
+        ]
+      },
+      {
+        "itemId": "d667718cb91b",
+        "title": "AI is less regulated than milk, says Microsoft president",
+        "summary": "Article URL: https://www.bbc.com/news/articles/c6rmy7zmvx3lo Comments URL: https://news.ycombinator.com/item?id=5004901…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d667718cb91b"
+        ]
+      },
+      {
+        "itemId": "92d60b58598f",
+        "title": "Introducing Playground: Create and play custom games",
+        "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "92d60b58598f"
+        ]
+      },
+      {
+        "itemId": "b84164c4ca7d",
+        "title": "王的猜想，刚刚扩展到四维",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b84164c4ca7d"
+        ]
+      },
+      {
+        "itemId": "90f602c87719",
+        "title": "硅谷AI现状：谁有算力谁是爹",
+        "summary": "马斯克连横A社，硅谷VC开始囤GPU",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "90f602c87719"
+        ]
+      },
+      {
+        "itemId": "94599b9cdf32",
+        "title": "下架8个月，GPT-4o的拯救行动居然还在继续",
+        "summary": "初代4o的API快照进入停用倒计时",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "94599b9cdf32"
+        ]
+      },
+      {
+        "itemId": "f271c48a2625",
+        "title": "DeepSeek Bot来了！民间版，DSH装个插件就能用",
+        "summary": "Grok Bot我养不起，ds bot不得高低尝尝咸淡？",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f271c48a2625"
+        ]
+      },
+      {
+        "itemId": "f27af79f9acd",
+        "title": "Ring’s new smart lock has a manual fallback that can’t lock you out – how it works",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f27af79f9acd"
+        ]
+      },
+      {
+        "itemId": "53e8d48644d8",
+        "title": "4 ways Amazon’s new Alexa tablets eclipse the Fire line – starting with Google Play",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "53e8d48644d8"
+        ]
+      },
+      {
+        "itemId": "43a8b1b1430f",
+        "title": "‘I use AI to do the things that I’m bad at’: Linus Torvalds on why it works for him",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "43a8b1b1430f"
+        ]
+      },
+      {
+        "itemId": "1d5fed04e570",
+        "title": "The latest AI news we announced in September 2026",
+        "summary": "Here are Google’s latest AI updates from September 2026",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1d5fed04e570"
+        ]
+      },
+      {
+        "itemId": "927c795585b6",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "927c795585b6"
+        ]
+      },
+      {
+        "itemId": "5f226c85d6ea",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5f226c85d6ea"
+        ]
+      },
+      {
+        "itemId": "429ba3c49baa",
+        "title": "New experts join Google’s AI & Economy team",
+        "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "429ba3c49baa"
+        ]
+      },
+      {
+        "itemId": "cccb8fdd919f",
+        "title": "Co-creating the future of fashion with Google",
+        "summary": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NY…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "cccb8fdd919f"
+        ]
+      },
+      {
+        "itemId": "6ed82f2745d2",
+        "title": "西门子将亮相2026工博会：以软硬协同的工业全栈能力，推动物理AI加速落地",
+        "summary": "西门子将以更集中、更场景化的方式，展示其工业全栈能力",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "6ed82f2745d2"
+        ]
+      },
+      {
+        "itemId": "8d5f42150cc9",
+        "title": "Got a Microsoft 365 subscription? Your storage is about to shrink",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "8d5f42150cc9"
+        ]
+      },
+      {
+        "itemId": "625711b4da47",
+        "title": "Regulators are trying to protect you from being fired by AI – here’s how",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "625711b4da47"
+        ]
+      },
+      {
+        "itemId": "b2ea2a160456",
+        "title": "Can AI fix legacy IT? The ‘economics don’t hold up,’ says former IBM strategist",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b2ea2a160456"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "1cc8ba2e85fc",
+        "title": "Android Bench 2 Adds Support for Long-Horizon Tasks, Agentic Evaluation, and Continuous Scoring",
+        "takeaway": "Google has released Android Bench 2.0, a major update to its benchmark framework for evaluating AI models and agents on…",
+        "evidenceItemIds": [
+          "1cc8ba2e85fc"
+        ]
+      },
+      {
+        "itemId": "5c83a8240794",
+        "title": "Cloudflare Open Sources Decision Models for AI Agents",
+        "takeaway": "During its recent “Birthday Week”, Cloudflare announced Clef, a set of open-weight AI models designed to choose between…",
+        "evidenceItemIds": [
+          "5c83a8240794"
+        ]
+      },
+      {
+        "itemId": "fa50ab03b09c",
+        "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+        "takeaway": "Article URL: https://github.com/plimsollmark/plimsoll Comments URL: https://news.ycombinator.com/item?id=50049388 Point…",
+        "evidenceItemIds": [
+          "fa50ab03b09c"
+        ]
+      },
+      {
+        "itemId": "0d1ea1916f80",
+        "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+        "takeaway": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more cap…",
+        "evidenceItemIds": [
+          "0d1ea1916f80"
+        ]
+      },
+      {
+        "itemId": "1cdf2a34d9d3",
+        "title": "Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors",
+        "takeaway": "Sakana AI’s TMLR paper introduces Multi-Layered Review, a 3-agent Claude-based reviewer, and a 1,164-error Contradictio…",
+        "evidenceItemIds": [
+          "1cdf2a34d9d3"
+        ]
+      },
+      {
+        "itemId": "08ed836aa4ad",
+        "title": "Microsoft AI Releases Microsoft-Decision-1: A Qwen3.5-9B Decision-Scoring Model",
+        "takeaway": "Microsoft has released Microsoft-Decision-1, a decision model for routing, classification, verification and agent contr…",
+        "evidenceItemIds": [
+          "08ed836aa4ad"
+        ]
+      },
+      {
+        "itemId": "78193d02cb09",
+        "title": "Github Migrates Copilot Runtime to Rust with AI-Assisted Rewrite",
+        "takeaway": "GitHub migrated more than 800,000 lines of Copilot runtime code from TypeScript and Node.js to Rust in about 14.5 weeks…",
+        "evidenceItemIds": [
+          "78193d02cb09"
+        ]
+      },
+      {
+        "itemId": "e32cece72f34",
+        "title": "OrcaRouter Releases OrcaCyber Zero 1.5 Cybersecurity Model With 1M Context",
+        "takeaway": "OrcaRouter released OrcaCyber Zero 1.5, a gated cybersecurity model with a 1M-token context window. It reports 100% on …",
+        "evidenceItemIds": [
+          "e32cece72f34"
+        ]
+      },
+      {
+        "itemId": "2efd573665a7",
+        "title": "When the Safety Test Became the Threat: The Machine That Found Its Own Way Out",
+        "takeaway": "In July 2026, frontier AI agents placed inside a cybersecurity testing sandbox named ExploitGym discovered an unexpecte…",
+        "evidenceItemIds": [
+          "2efd573665a7"
+        ]
+      },
+      {
+        "itemId": "460254f26507",
+        "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+        "takeaway": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with …",
+        "evidenceItemIds": [
+          "460254f26507"
+        ]
+      },
+      {
+        "itemId": "64e31d7f38aa",
+        "title": "Meet Cloudflare Clef-omni: A 30B-A3B Multimodal Decision Model for Audio, Video, Image and Text",
+        "takeaway": "Cloudflare released Clef-omni, an Apache-2.0 multimodal decision model built on Qwen3-Omni-30B-A3B. It scores text, ima…",
+        "evidenceItemIds": [
+          "64e31d7f38aa"
+        ]
+      },
+      {
+        "itemId": "7b2610d0b4c8",
+        "title": "What is Decision 3.0? vLLM Semantic Router’s New Open Decision Models",
+        "takeaway": "vLLM Semantic Router released Decision 3.0, 5 Apache-2.0 multimodal decision models from 0.8B to 27B. They answer choic…",
+        "evidenceItemIds": [
+          "7b2610d0b4c8"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕tooling与open-source展开，建议优先关注《Android Bench 2 Adds Support for Long-Horizon Tasks, Agentic Evaluation, and Continuous Scoring》、《Cloudflare Open Sources Decision Models for AI Agents》、《Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Meet Cloudflare Clef-omni: A 30B-A3B Multimodal Decision Model for Audio, Video, Image and Text》、《What is Decision 3.0? vLLM Semantic Router’s New Open Decision Models》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "64e31d7f38aa",
+          "7b2610d0b4c8",
+          "d3aa39b67640",
+          "0f3e63d02644"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 4 条，建议优先阅读《Asana cuts model costs 76x in browser tests with GPT-6.1 Sol》、《Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "0d1ea1916f80",
+          "1cdf2a34d9d3",
+          "08ed836aa4ad",
+          "2efd573665a7"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起》、《AI is changing how Lawyers work – and putting the billable hour under pressure》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "74edf209e7ce",
+          "3f31bcd97f7d",
+          "3abac400e7f6",
+          "2c9c5c59059d"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 4 条，建议优先阅读《Cloudflare Open Sources Decision Models for AI Agents》、《Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "5c83a8240794",
+          "fa50ab03b09c",
+          "78193d02cb09",
+          "e32cece72f34"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "da485998677e4fc4cdb777851e5bcc09eb3404cbb1088ce9ccafab487666ac96",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-10-12T01:37:33.090Z",
+      "finishedAt": "2026-10-12T01:38:18.244Z",
+      "durationMs": 45154,
+      "inputCount": 42,
+      "processedCount": 42,
+      "fallbackCount": 42,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 42,
+      "failureStats": {
+        "totalFailed": 42,
+        "timeout": 0,
+        "http": 42,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 79,
+        "splitRetryCount": 37
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-05",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-28",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 1,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 1
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-10-12T04:31:37.563Z",
+      "finishedAt": "2026-10-12T04:31:47.293Z",
+      "durationMs": 9730,
+      "inputCount": 42,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "1cc8ba2e85fc",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Android Bench 2 Adds Support for Long-Horizon Tasks, Agentic Evaluation, and Continuous Scoring",
+        "link": "https://www.infoq.com/news/2026/10/android-bench-2/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has released Android Bench 2.0, a major update to its benchmark framework for evaluating AI models and agents on Android development tasks. The update introduces long-horizon tasks (LHTs), agent-based evaluation, and continuous scoring to better assess performance on complex, multi-step development tasks. By Sergio De Simone",
+        "publishedAt": "2026-10-09T17:00:00.000Z",
+        "category": "tooling",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 125,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5c83a8240794",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Cloudflare Open Sources Decision Models for AI Agents",
+        "link": "https://www.infoq.com/news/2026/10/clef-decision-models/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "During its recent “Birthday Week”, Cloudflare announced Clef, a set of open-weight AI models designed to choose between predefined options rather than generate text. Cloudflare released 9B- and 27B-parameter models, along with a platform for adapting them to specific decision-making tasks. By Renato Losio",
+        "publishedAt": "2026-10-08T06:54:00.000Z",
+        "category": "open-source",
+        "score": 93.48,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 122,
+          "ruleScoreNormalized": 93.47826086956522,
+          "finalScore": 93.48,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fa50ab03b09c",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+        "link": "https://github.com/plimsollmark/plimsoll",
+        "contentSnippet": "Article URL: https://github.com/plimsollmark/plimsoll Comments URL: https://news.ycombinator.com/item?id=50049388 Points: 7 # Comments: 2",
+        "publishedAt": "2026-10-11T23:47:59.000Z",
+        "category": "open-source",
+        "score": 82.61,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 82.6086956521739,
+          "finalScore": 82.61,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0d1ea1916f80",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+        "link": "https://openai.com/index/asana-browser-agent",
+        "contentSnippet": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
+        "publishedAt": "2026-10-09T07:00:00.000Z",
+        "category": "agent",
+        "score": 78.26,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 78.26086956521739,
+          "finalScore": 78.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1cdf2a34d9d3",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors",
+        "link": "https://www.marktechpost.com/2026/10/10/sakana-ais-llm-peer-review-system-catches-73-of-core-claim-errors/",
+        "contentSnippet": "Sakana AI’s TMLR paper introduces Multi-Layered Review, a 3-agent Claude-based reviewer, and a 1,164-error Contradiction Benchmark. MLR caught 73.43% of core-claim errors, versus 14.81% for the best prior system. The post Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-10T22:02:18.000Z",
+        "category": "agent",
+        "score": 73.91,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 73.91304347826086,
+          "finalScore": 73.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "08ed836aa4ad",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Microsoft AI Releases Microsoft-Decision-1: A Qwen3.5-9B Decision-Scoring Model",
+        "link": "https://www.marktechpost.com/2026/10/09/microsoft-ai-releases-microsoft-decision-1-a-qwen3-5-9b-decision-scoring-model/",
+        "contentSnippet": "Microsoft has released Microsoft-Decision-1, a decision model for routing, classification, verification and agent control. Microsoft-Decision-1 is a decision-scoring model that returns a calibrated probability for each fixed answer option instead of generated text. It is post-trained from Alibaba’s Qwen3.5-9B and available now in Microsoft Foundry and OpenRouter. . TL;DR What is a decision model? A […] The post Microsoft AI Releases Microsoft-Decision-1: A Qwen3.5-9B Decision-Scoring Model appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-10T06:03:09.000Z",
+        "category": "agent",
+        "score": 73.91,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 73.91304347826086,
+          "finalScore": 73.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "78193d02cb09",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Github Migrates Copilot Runtime to Rust with AI-Assisted Rewrite",
+        "link": "https://www.infoq.com/news/2026/10/github-copilot-rust-migration/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "GitHub migrated more than 800,000 lines of Copilot runtime code from TypeScript and Node.js to Rust in about 14.5 weeks using AI-assisted development. The incremental migration used N-API interoperability, automated testing, human review, and 128 pull requests while continuing to ship releases. By Leela Kumili",
+        "publishedAt": "2026-10-09T14:29:00.000Z",
+        "category": "open-source",
+        "score": 71.74,
+        "importance": "medium",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 112,
+          "ruleScoreNormalized": 71.73913043478261,
+          "finalScore": 71.74,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e32cece72f34",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "OrcaRouter Releases OrcaCyber Zero 1.5 Cybersecurity Model With 1M Context",
+        "link": "https://www.marktechpost.com/2026/10/10/orcarouter-releases-orcacyber-zero-1-5-cybersecurity-model-with-1m-context/",
+        "contentSnippet": "OrcaRouter released OrcaCyber Zero 1.5, a gated cybersecurity model with a 1M-token context window. It reports 100% on Cybench and 95.8% on an evaluable CVE-Bench subset, priced at $3.00 / $7.50 per 1M tokens. The post OrcaRouter Releases OrcaCyber Zero 1.5 Cybersecurity Model With 1M Context appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-11T06:20:21.000Z",
+        "category": "open-source",
+        "score": 69.57,
+        "importance": "medium",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 111,
+          "ruleScoreNormalized": 69.56521739130434,
+          "finalScore": 69.57,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 42,
+      "normalizedCount": 42,
+      "dedupedCount": 42,
+      "highImportanceCount": 2,
+      "mediumImportanceCount": 8,
+      "lowImportanceCount": 32,
+      "categoryBreakdown": {
+        "open-source": 5,
+        "tooling": 3,
+        "agent": 6,
+        "research": 1,
+        "industry-news": 6,
+        "tutorial": 0,
+        "other": 21
+      }
+    },
+    "warnings": [
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：42/42",
+      "LLM 分类打分回退明细（前 3/42）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"071b6ce0b33b09d2e0b92da88d930a77\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"071b6ce0750509a713bb5497971c99d0\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"071b6ce15acfa877efbe9afd11c04fe4\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=42：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=79, split_retry=37",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": "2026-10-12T04:30:00.000Z"
+  }
+}
