@@ -1,0 +1,1486 @@
+{
+  "runId": "daily-1791767233384",
+  "generatedAt": "2026-10-12T01:07:13.351Z",
+  "reviewStartedAt": "2026-10-12T01:07:13.351Z",
+  "reportDate": "2026-10-12",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-10-12T01:07:13.351Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 18,
+    "normalizedCount": 18,
+    "dedupedCount": 18,
+    "highImportanceCount": 1,
+    "mediumImportanceCount": 1,
+    "lowImportanceCount": 16,
+    "categoryBreakdown": {
+      "open-source": 1,
+      "tooling": 0,
+      "agent": 1,
+      "research": 0,
+      "industry-news": 5,
+      "tutorial": 0,
+      "other": 11
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "fa50ab03b09c",
+      "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+      "summary": "Article URL: https://github.com/plimsollmark/plimsoll Comments URL: https://news.ycombinator.com/item?id=50049388 Point…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "fa50ab03b09c"
+      ]
+    },
+    {
+      "itemId": "c27ca7ac009e",
+      "title": "Show HN: Seodata.dev (1.1) Free search data for AI agents",
+      "summary": "Updated API with faster responses and added MCP 2.0 Comments URL: https://news.ycombinator.com/item?id=50048892 Points:…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "c27ca7ac009e"
+      ]
+    },
+    {
+      "itemId": "74edf209e7ce",
+      "title": "超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起",
+      "summary": "2026年9月28日，荣耀（HONOR）在北京举办荣耀Magic盛典暨荣耀Magic9 系列新品发布会",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "74edf209e7ce"
+      ]
+    },
+    {
+      "itemId": "3f31bcd97f7d",
+      "title": "AI is changing how Lawyers work – and putting the billable hour under pressure",
+      "summary": "Article URL: https://www.cnbc.com/2026/10/10/ai-lawyers-billable-hour-legal-careers.html Comments URL: https://news.yco…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3f31bcd97f7d"
+      ]
+    },
+    {
+      "itemId": "3abac400e7f6",
+      "title": "Show HN: Drune – Personalize your AI and use it anywhere",
+      "summary": "Article URL: https://drune.ai/ Comments URL: https://news.ycombinator.com/item?id=50049983 Points: 1 # Comments: 0",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3abac400e7f6"
+      ]
+    },
+    {
+      "itemId": "2c9c5c59059d",
+      "title": "Ask HN: What to Build in the AI Era?",
+      "summary": "Feeling lost, figured I'd ask. Comments URL: https://news.ycombinator.com/item?id=50049047 Points: 3 # Comments: 6",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2c9c5c59059d"
+      ]
+    },
+    {
+      "itemId": "d667718cb91b",
+      "title": "AI is less regulated than milk, says Microsoft president",
+      "summary": "Article URL: https://www.bbc.com/news/articles/c6rmy7zmvx3lo Comments URL: https://news.ycombinator.com/item?id=5004901…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d667718cb91b"
+      ]
+    },
+    {
+      "itemId": "b84164c4ca7d",
+      "title": "王的猜想，刚刚扩展到四维",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b84164c4ca7d"
+      ]
+    },
+    {
+      "itemId": "90f602c87719",
+      "title": "硅谷AI现状：谁有算力谁是爹",
+      "summary": "马斯克连横A社，硅谷VC开始囤GPU",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "90f602c87719"
+      ]
+    },
+    {
+      "itemId": "94599b9cdf32",
+      "title": "下架8个月，GPT-4o的拯救行动居然还在继续",
+      "summary": "初代4o的API快照进入停用倒计时",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "94599b9cdf32"
+      ]
+    },
+    {
+      "itemId": "f271c48a2625",
+      "title": "DeepSeek Bot来了！民间版，DSH装个插件就能用",
+      "summary": "Grok Bot我养不起，ds bot不得高低尝尝咸淡？",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f271c48a2625"
+      ]
+    },
+    {
+      "itemId": "f27af79f9acd",
+      "title": "Ring’s new smart lock has a manual fallback that can’t lock you out – how it works",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f27af79f9acd"
+      ]
+    },
+    {
+      "itemId": "53e8d48644d8",
+      "title": "4 ways Amazon’s new Alexa tablets eclipse the Fire line – starting with Google Play",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "53e8d48644d8"
+      ]
+    },
+    {
+      "itemId": "43a8b1b1430f",
+      "title": "‘I use AI to do the things that I’m bad at’: Linus Torvalds on why it works for him",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "43a8b1b1430f"
+      ]
+    },
+    {
+      "itemId": "6ed82f2745d2",
+      "title": "西门子将亮相2026工博会：以软硬协同的工业全栈能力，推动物理AI加速落地",
+      "summary": "西门子将以更集中、更场景化的方式，展示其工业全栈能力",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "6ed82f2745d2"
+      ]
+    },
+    {
+      "itemId": "8d5f42150cc9",
+      "title": "Got a Microsoft 365 subscription? Your storage is about to shrink",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "8d5f42150cc9"
+      ]
+    },
+    {
+      "itemId": "625711b4da47",
+      "title": "Regulators are trying to protect you from being fired by AI – here’s how",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "625711b4da47"
+      ]
+    },
+    {
+      "itemId": "b2ea2a160456",
+      "title": "Can AI fix legacy IT? The ‘economics don’t hold up,’ says former IBM strategist",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b2ea2a160456"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "fa50ab03b09c",
+      "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+      "takeaway": "Article URL: https://github.com/plimsollmark/plimsoll Comments URL: https://news.ycombinator.com/item?id=50049388 Point…",
+      "evidenceItemIds": [
+        "fa50ab03b09c"
+      ]
+    },
+    {
+      "itemId": "c27ca7ac009e",
+      "title": "Show HN: Seodata.dev (1.1) Free search data for AI agents",
+      "takeaway": "Updated API with faster responses and added MCP 2.0 Comments URL: https://news.ycombinator.com/item?id=50048892 Points:…",
+      "evidenceItemIds": [
+        "c27ca7ac009e"
+      ]
+    },
+    {
+      "itemId": "74edf209e7ce",
+      "title": "超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起",
+      "takeaway": "2026年9月28日，荣耀（HONOR）在北京举办荣耀Magic盛典暨荣耀Magic9 系列新品发布会",
+      "evidenceItemIds": [
+        "74edf209e7ce"
+      ]
+    },
+    {
+      "itemId": "3f31bcd97f7d",
+      "title": "AI is changing how Lawyers work – and putting the billable hour under pressure",
+      "takeaway": "Article URL: https://www.cnbc.com/2026/10/10/ai-lawyers-billable-hour-legal-careers.html Comments URL: https://news.yco…",
+      "evidenceItemIds": [
+        "3f31bcd97f7d"
+      ]
+    },
+    {
+      "itemId": "3abac400e7f6",
+      "title": "Show HN: Drune – Personalize your AI and use it anywhere",
+      "takeaway": "Article URL: https://drune.ai/ Comments URL: https://news.ycombinator.com/item?id=50049983 Points: 1 # Comments: 0",
+      "evidenceItemIds": [
+        "3abac400e7f6"
+      ]
+    },
+    {
+      "itemId": "2c9c5c59059d",
+      "title": "Ask HN: What to Build in the AI Era?",
+      "takeaway": "Feeling lost, figured I'd ask. Comments URL: https://news.ycombinator.com/item?id=50049047 Points: 3 # Comments: 6",
+      "evidenceItemIds": [
+        "2c9c5c59059d"
+      ]
+    },
+    {
+      "itemId": "d667718cb91b",
+      "title": "AI is less regulated than milk, says Microsoft president",
+      "takeaway": "Article URL: https://www.bbc.com/news/articles/c6rmy7zmvx3lo Comments URL: https://news.ycombinator.com/item?id=5004901…",
+      "evidenceItemIds": [
+        "d667718cb91b"
+      ]
+    },
+    {
+      "itemId": "b84164c4ca7d",
+      "title": "王的猜想，刚刚扩展到四维",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "b84164c4ca7d"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes》、《Show HN: Seodata.dev (1.1) Free search data for AI agents》、《超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《王的猜想，刚刚扩展到四维》、《硅谷AI现状：谁有算力谁是爹》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "b84164c4ca7d",
+        "90f602c87719",
+        "94599b9cdf32",
+        "f271c48a2625"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起》、《AI is changing how Lawyers work – and putting the billable hour under pressure》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "74edf209e7ce",
+        "3f31bcd97f7d",
+        "3abac400e7f6",
+        "2c9c5c59059d"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 1 条，建议优先阅读《Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "fa50ab03b09c"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 1 条，建议优先阅读《Show HN: Seodata.dev (1.1) Free search data for AI agents》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "c27ca7ac009e"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "b8e81c0d74f6cb84834569dfe240a968d3605655da1d8318eab0e2029fc5569e",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-10-12T01:36:31.498Z",
+    "finishedAt": "2026-10-12T01:36:52.405Z",
+    "durationMs": 20908,
+    "inputCount": 18,
+    "processedCount": 18,
+    "fallbackCount": 18,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 18,
+    "failureStats": {
+      "totalFailed": 18,
+      "timeout": 0,
+      "http": 18,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 34,
+      "splitRetryCount": 16
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-05",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-28",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 1
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-10-12T01:36:52.499Z",
+    "finishedAt": "2026-10-12T01:36:58.008Z",
+    "durationMs": 5509,
+    "inputCount": 18,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 18,
+      "timeout": 0,
+      "http": 18,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 18,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "fa50ab03b09c",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+      "link": "https://github.com/plimsollmark/plimsoll",
+      "contentSnippet": "Article URL: https://github.com/plimsollmark/plimsoll Comments URL: https://news.ycombinator.com/item?id=50049388 Points: 6 # Comments: 2",
+      "publishedAt": "2026-10-11T23:47:59.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 117,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "c27ca7ac009e",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Show HN: Seodata.dev (1.1) Free search data for AI agents",
+      "link": "https://www.seodata.dev/",
+      "contentSnippet": "Updated API with faster responses and added MCP 2.0 Comments URL: https://news.ycombinator.com/item?id=50048892 Points: 2 # Comments: 0",
+      "publishedAt": "2026-10-11T22:56:59.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 68.42,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 105,
+        "ruleScoreNormalized": 68.42105263157895,
+        "finalScore": 68.42,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "74edf209e7ce",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起",
+      "link": "https://www.qbitai.com/2026/10/502496.html",
+      "contentSnippet": "2026年9月28日，荣耀（HONOR）在北京举办荣耀Magic盛典暨荣耀Magic9 系列新品发布会",
+      "publishedAt": "2026-10-10T09:07:43.000Z",
+      "category": "industry-news",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 34.21,
+      "importance": "low",
+      "recommendationReason": "模型或产品发布",
+      "scoreBreakdown": {
+        "ruleScore": 92,
+        "ruleScoreNormalized": 34.21052631578947,
+        "finalScore": 34.21,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "3f31bcd97f7d",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "AI is changing how Lawyers work – and putting the billable hour under pressure",
+      "link": "https://www.cnbc.com/2026/10/10/ai-lawyers-billable-hour-legal-careers.html",
+      "contentSnippet": "Article URL: https://www.cnbc.com/2026/10/10/ai-lawyers-billable-hour-legal-careers.html Comments URL: https://news.ycombinator.com/item?id=50049997 Points: 2 # Comments: 0",
+      "publishedAt": "2026-10-12T01:04:07.000Z",
+      "category": "industry-news",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 28.95,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 90,
+        "ruleScoreNormalized": 28.947368421052634,
+        "finalScore": 28.95,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "3abac400e7f6",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Show HN: Drune – Personalize your AI and use it anywhere",
+      "link": "https://drune.ai/",
+      "contentSnippet": "Article URL: https://drune.ai/ Comments URL: https://news.ycombinator.com/item?id=50049983 Points: 1 # Comments: 0",
+      "publishedAt": "2026-10-12T01:02:31.000Z",
+      "category": "industry-news",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 28.95,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 90,
+        "ruleScoreNormalized": 28.947368421052634,
+        "finalScore": 28.95,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Google AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[InfoQ AI/ML News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[MarkTechPost] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[VentureBeat AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+    "LLM 分类打分部分回退：18/18",
+    "LLM 分类打分回退明细（前 3/18）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"071b6ca3933929dd4d4b014ea57b73cb\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"071b6ca332d3ebe96f08ccbdf0e2f223\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"071b6ca4ba535fc6f8ce865271304a7c\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=18：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=34, split_retry=16",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/18）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=18, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=18, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes\n- Show HN: Seodata.dev (1.1) Free search data for AI agents\n- 超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起\n- AI is changing how Lawyers work – and putting the billable hour under pressure\n- Show HN: Drune – Personalize your AI and use it anywhere\n\n### 分类覆盖（大纲）\n- open-source: 1 条\n- agent: 1 条\n- industry-news: 5 条\n- other: 11 条",
+    "rankedItems": [
+      {
+        "id": "fa50ab03b09c",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+        "link": "https://github.com/plimsollmark/plimsoll",
+        "contentSnippet": "Article URL: https://github.com/plimsollmark/plimsoll Comments URL: https://news.ycombinator.com/item?id=50049388 Points: 6 # Comments: 2",
+        "publishedAt": "2026-10-11T23:47:59.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c27ca7ac009e",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Seodata.dev (1.1) Free search data for AI agents",
+        "link": "https://www.seodata.dev/",
+        "contentSnippet": "Updated API with faster responses and added MCP 2.0 Comments URL: https://news.ycombinator.com/item?id=50048892 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-11T22:56:59.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 68.42,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 68.42105263157895,
+          "finalScore": 68.42,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "74edf209e7ce",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起",
+        "link": "https://www.qbitai.com/2026/10/502496.html",
+        "contentSnippet": "2026年9月28日，荣耀（HONOR）在北京举办荣耀Magic盛典暨荣耀Magic9 系列新品发布会",
+        "publishedAt": "2026-10-10T09:07:43.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.21,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 34.21052631578947,
+          "finalScore": 34.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3f31bcd97f7d",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI is changing how Lawyers work – and putting the billable hour under pressure",
+        "link": "https://www.cnbc.com/2026/10/10/ai-lawyers-billable-hour-legal-careers.html",
+        "contentSnippet": "Article URL: https://www.cnbc.com/2026/10/10/ai-lawyers-billable-hour-legal-careers.html Comments URL: https://news.ycombinator.com/item?id=50049997 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-12T01:04:07.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.95,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.947368421052634,
+          "finalScore": 28.95,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3abac400e7f6",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Drune – Personalize your AI and use it anywhere",
+        "link": "https://drune.ai/",
+        "contentSnippet": "Article URL: https://drune.ai/ Comments URL: https://news.ycombinator.com/item?id=50049983 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-12T01:02:31.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.95,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.947368421052634,
+          "finalScore": 28.95,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2c9c5c59059d",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Ask HN: What to Build in the AI Era?",
+        "link": "https://news.ycombinator.com/item?id=50049047",
+        "contentSnippet": "Feeling lost, figured I'd ask. Comments URL: https://news.ycombinator.com/item?id=50049047 Points: 3 # Comments: 6",
+        "publishedAt": "2026-10-11T23:14:16.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.95,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.947368421052634,
+          "finalScore": 28.95,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d667718cb91b",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI is less regulated than milk, says Microsoft president",
+        "link": "https://www.bbc.com/news/articles/c6rmy7zmvx3lo",
+        "contentSnippet": "Article URL: https://www.bbc.com/news/articles/c6rmy7zmvx3lo Comments URL: https://news.ycombinator.com/item?id=50049014 Points: 6 # Comments: 1",
+        "publishedAt": "2026-10-11T23:09:56.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.95,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.947368421052634,
+          "finalScore": 28.95,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b84164c4ca7d",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "王的猜想，刚刚扩展到四维",
+        "link": "https://www.qbitai.com/2026/10/502584.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-11T05:23:47.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "90f602c87719",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "硅谷AI现状：谁有算力谁是爹",
+        "link": "https://www.qbitai.com/2026/10/502585.html",
+        "contentSnippet": "马斯克连横A社，硅谷VC开始囤GPU",
+        "publishedAt": "2026-10-11T05:22:38.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "94599b9cdf32",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "下架8个月，GPT-4o的拯救行动居然还在继续",
+        "link": "https://www.qbitai.com/2026/10/502550.html",
+        "contentSnippet": "初代4o的API快照进入停用倒计时",
+        "publishedAt": "2026-10-11T05:18:04.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f271c48a2625",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "DeepSeek Bot来了！民间版，DSH装个插件就能用",
+        "link": "https://www.qbitai.com/2026/10/502544.html",
+        "contentSnippet": "Grok Bot我养不起，ds bot不得高低尝尝咸淡？",
+        "publishedAt": "2026-10-11T03:27:08.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f27af79f9acd",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Ring’s new smart lock has a manual fallback that can’t lock you out – how it works",
+        "link": "https://www.zdnet.com/uncategorized/ring-smart-lock-manual-power-dial/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-10T08:15:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "53e8d48644d8",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "4 ways Amazon’s new Alexa tablets eclipse the Fire line – starting with Google Play",
+        "link": "https://www.zdnet.com/tech/amazon-new-alexa-tablets-google-play-store/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-09T19:10:12.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "43a8b1b1430f",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "‘I use AI to do the things that I’m bad at’: Linus Torvalds on why it works for him",
+        "link": "https://www.zdnet.com/tech/linus-torvalds-ai-coding-programming/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-09T17:53:18.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6ed82f2745d2",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "西门子将亮相2026工博会：以软硬协同的工业全栈能力，推动物理AI加速落地",
+        "link": "https://www.qbitai.com/2026/10/502541.html",
+        "contentSnippet": "西门子将以更集中、更场景化的方式，展示其工业全栈能力",
+        "publishedAt": "2026-10-10T10:30:36.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 7.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 7.894736842105263,
+          "finalScore": 7.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8d5f42150cc9",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Got a Microsoft 365 subscription? Your storage is about to shrink",
+        "link": "https://www.zdnet.com/tech/microsoft-365-subscription-storage-limits/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-08T18:56:22.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "625711b4da47",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Regulators are trying to protect you from being fired by AI – here’s how",
+        "link": "https://www.zdnet.com/innovation/how-state-regulators-protect-you-fired-by-ai/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-08T17:05:53.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b2ea2a160456",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Can AI fix legacy IT? The ‘economics don’t hold up,’ says former IBM strategist",
+        "link": "https://www.zdnet.com/innovation/ai-legacy-it-modernization/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-08T14:35:46.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "fa50ab03b09c",
+        "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+        "summary": "Article URL: https://github.com/plimsollmark/plimsoll Comments URL: https://news.ycombinator.com/item?id=50049388 Point…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "fa50ab03b09c"
+        ]
+      },
+      {
+        "itemId": "c27ca7ac009e",
+        "title": "Show HN: Seodata.dev (1.1) Free search data for AI agents",
+        "summary": "Updated API with faster responses and added MCP 2.0 Comments URL: https://news.ycombinator.com/item?id=50048892 Points:…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "c27ca7ac009e"
+        ]
+      },
+      {
+        "itemId": "74edf209e7ce",
+        "title": "超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起",
+        "summary": "2026年9月28日，荣耀（HONOR）在北京举办荣耀Magic盛典暨荣耀Magic9 系列新品发布会",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "74edf209e7ce"
+        ]
+      },
+      {
+        "itemId": "3f31bcd97f7d",
+        "title": "AI is changing how Lawyers work – and putting the billable hour under pressure",
+        "summary": "Article URL: https://www.cnbc.com/2026/10/10/ai-lawyers-billable-hour-legal-careers.html Comments URL: https://news.yco…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3f31bcd97f7d"
+        ]
+      },
+      {
+        "itemId": "3abac400e7f6",
+        "title": "Show HN: Drune – Personalize your AI and use it anywhere",
+        "summary": "Article URL: https://drune.ai/ Comments URL: https://news.ycombinator.com/item?id=50049983 Points: 1 # Comments: 0",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3abac400e7f6"
+        ]
+      },
+      {
+        "itemId": "2c9c5c59059d",
+        "title": "Ask HN: What to Build in the AI Era?",
+        "summary": "Feeling lost, figured I'd ask. Comments URL: https://news.ycombinator.com/item?id=50049047 Points: 3 # Comments: 6",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2c9c5c59059d"
+        ]
+      },
+      {
+        "itemId": "d667718cb91b",
+        "title": "AI is less regulated than milk, says Microsoft president",
+        "summary": "Article URL: https://www.bbc.com/news/articles/c6rmy7zmvx3lo Comments URL: https://news.ycombinator.com/item?id=5004901…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d667718cb91b"
+        ]
+      },
+      {
+        "itemId": "b84164c4ca7d",
+        "title": "王的猜想，刚刚扩展到四维",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b84164c4ca7d"
+        ]
+      },
+      {
+        "itemId": "90f602c87719",
+        "title": "硅谷AI现状：谁有算力谁是爹",
+        "summary": "马斯克连横A社，硅谷VC开始囤GPU",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "90f602c87719"
+        ]
+      },
+      {
+        "itemId": "94599b9cdf32",
+        "title": "下架8个月，GPT-4o的拯救行动居然还在继续",
+        "summary": "初代4o的API快照进入停用倒计时",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "94599b9cdf32"
+        ]
+      },
+      {
+        "itemId": "f271c48a2625",
+        "title": "DeepSeek Bot来了！民间版，DSH装个插件就能用",
+        "summary": "Grok Bot我养不起，ds bot不得高低尝尝咸淡？",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f271c48a2625"
+        ]
+      },
+      {
+        "itemId": "f27af79f9acd",
+        "title": "Ring’s new smart lock has a manual fallback that can’t lock you out – how it works",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f27af79f9acd"
+        ]
+      },
+      {
+        "itemId": "53e8d48644d8",
+        "title": "4 ways Amazon’s new Alexa tablets eclipse the Fire line – starting with Google Play",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "53e8d48644d8"
+        ]
+      },
+      {
+        "itemId": "43a8b1b1430f",
+        "title": "‘I use AI to do the things that I’m bad at’: Linus Torvalds on why it works for him",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "43a8b1b1430f"
+        ]
+      },
+      {
+        "itemId": "6ed82f2745d2",
+        "title": "西门子将亮相2026工博会：以软硬协同的工业全栈能力，推动物理AI加速落地",
+        "summary": "西门子将以更集中、更场景化的方式，展示其工业全栈能力",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "6ed82f2745d2"
+        ]
+      },
+      {
+        "itemId": "8d5f42150cc9",
+        "title": "Got a Microsoft 365 subscription? Your storage is about to shrink",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "8d5f42150cc9"
+        ]
+      },
+      {
+        "itemId": "625711b4da47",
+        "title": "Regulators are trying to protect you from being fired by AI – here’s how",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "625711b4da47"
+        ]
+      },
+      {
+        "itemId": "b2ea2a160456",
+        "title": "Can AI fix legacy IT? The ‘economics don’t hold up,’ says former IBM strategist",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b2ea2a160456"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "fa50ab03b09c",
+        "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+        "takeaway": "Article URL: https://github.com/plimsollmark/plimsoll Comments URL: https://news.ycombinator.com/item?id=50049388 Point…",
+        "evidenceItemIds": [
+          "fa50ab03b09c"
+        ]
+      },
+      {
+        "itemId": "c27ca7ac009e",
+        "title": "Show HN: Seodata.dev (1.1) Free search data for AI agents",
+        "takeaway": "Updated API with faster responses and added MCP 2.0 Comments URL: https://news.ycombinator.com/item?id=50048892 Points:…",
+        "evidenceItemIds": [
+          "c27ca7ac009e"
+        ]
+      },
+      {
+        "itemId": "74edf209e7ce",
+        "title": "超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起",
+        "takeaway": "2026年9月28日，荣耀（HONOR）在北京举办荣耀Magic盛典暨荣耀Magic9 系列新品发布会",
+        "evidenceItemIds": [
+          "74edf209e7ce"
+        ]
+      },
+      {
+        "itemId": "3f31bcd97f7d",
+        "title": "AI is changing how Lawyers work – and putting the billable hour under pressure",
+        "takeaway": "Article URL: https://www.cnbc.com/2026/10/10/ai-lawyers-billable-hour-legal-careers.html Comments URL: https://news.yco…",
+        "evidenceItemIds": [
+          "3f31bcd97f7d"
+        ]
+      },
+      {
+        "itemId": "3abac400e7f6",
+        "title": "Show HN: Drune – Personalize your AI and use it anywhere",
+        "takeaway": "Article URL: https://drune.ai/ Comments URL: https://news.ycombinator.com/item?id=50049983 Points: 1 # Comments: 0",
+        "evidenceItemIds": [
+          "3abac400e7f6"
+        ]
+      },
+      {
+        "itemId": "2c9c5c59059d",
+        "title": "Ask HN: What to Build in the AI Era?",
+        "takeaway": "Feeling lost, figured I'd ask. Comments URL: https://news.ycombinator.com/item?id=50049047 Points: 3 # Comments: 6",
+        "evidenceItemIds": [
+          "2c9c5c59059d"
+        ]
+      },
+      {
+        "itemId": "d667718cb91b",
+        "title": "AI is less regulated than milk, says Microsoft president",
+        "takeaway": "Article URL: https://www.bbc.com/news/articles/c6rmy7zmvx3lo Comments URL: https://news.ycombinator.com/item?id=5004901…",
+        "evidenceItemIds": [
+          "d667718cb91b"
+        ]
+      },
+      {
+        "itemId": "b84164c4ca7d",
+        "title": "王的猜想，刚刚扩展到四维",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "b84164c4ca7d"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes》、《Show HN: Seodata.dev (1.1) Free search data for AI agents》、《超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《王的猜想，刚刚扩展到四维》、《硅谷AI现状：谁有算力谁是爹》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "b84164c4ca7d",
+          "90f602c87719",
+          "94599b9cdf32",
+          "f271c48a2625"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起》、《AI is changing how Lawyers work – and putting the billable hour under pressure》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "74edf209e7ce",
+          "3f31bcd97f7d",
+          "3abac400e7f6",
+          "2c9c5c59059d"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 1 条，建议优先阅读《Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "fa50ab03b09c"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 1 条，建议优先阅读《Show HN: Seodata.dev (1.1) Free search data for AI agents》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "c27ca7ac009e"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "b8e81c0d74f6cb84834569dfe240a968d3605655da1d8318eab0e2029fc5569e",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-10-12T01:36:31.498Z",
+      "finishedAt": "2026-10-12T01:36:52.405Z",
+      "durationMs": 20908,
+      "inputCount": 18,
+      "processedCount": 18,
+      "fallbackCount": 18,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 18,
+      "failureStats": {
+        "totalFailed": 18,
+        "timeout": 0,
+        "http": 18,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 34,
+        "splitRetryCount": 16
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-05",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-09-28",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 1
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-10-12T01:36:52.499Z",
+      "finishedAt": "2026-10-12T01:36:58.008Z",
+      "durationMs": 5509,
+      "inputCount": 18,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 18,
+        "timeout": 0,
+        "http": 18,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 18,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "fa50ab03b09c",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+        "link": "https://github.com/plimsollmark/plimsoll",
+        "contentSnippet": "Article URL: https://github.com/plimsollmark/plimsoll Comments URL: https://news.ycombinator.com/item?id=50049388 Points: 6 # Comments: 2",
+        "publishedAt": "2026-10-11T23:47:59.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c27ca7ac009e",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Seodata.dev (1.1) Free search data for AI agents",
+        "link": "https://www.seodata.dev/",
+        "contentSnippet": "Updated API with faster responses and added MCP 2.0 Comments URL: https://news.ycombinator.com/item?id=50048892 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-11T22:56:59.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 68.42,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 68.42105263157895,
+          "finalScore": 68.42,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "74edf209e7ce",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起",
+        "link": "https://www.qbitai.com/2026/10/502496.html",
+        "contentSnippet": "2026年9月28日，荣耀（HONOR）在北京举办荣耀Magic盛典暨荣耀Magic9 系列新品发布会",
+        "publishedAt": "2026-10-10T09:07:43.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.21,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 34.21052631578947,
+          "finalScore": 34.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3f31bcd97f7d",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI is changing how Lawyers work – and putting the billable hour under pressure",
+        "link": "https://www.cnbc.com/2026/10/10/ai-lawyers-billable-hour-legal-careers.html",
+        "contentSnippet": "Article URL: https://www.cnbc.com/2026/10/10/ai-lawyers-billable-hour-legal-careers.html Comments URL: https://news.ycombinator.com/item?id=50049997 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-12T01:04:07.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.95,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.947368421052634,
+          "finalScore": 28.95,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3abac400e7f6",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Drune – Personalize your AI and use it anywhere",
+        "link": "https://drune.ai/",
+        "contentSnippet": "Article URL: https://drune.ai/ Comments URL: https://news.ycombinator.com/item?id=50049983 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-12T01:02:31.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.95,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 28.947368421052634,
+          "finalScore": 28.95,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 18,
+      "normalizedCount": 18,
+      "dedupedCount": 18,
+      "highImportanceCount": 1,
+      "mediumImportanceCount": 1,
+      "lowImportanceCount": 16,
+      "categoryBreakdown": {
+        "open-source": 1,
+        "tooling": 0,
+        "agent": 1,
+        "research": 0,
+        "industry-news": 5,
+        "tutorial": 0,
+        "other": 11
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Microsoft AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Google AI Blog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[InfoQ AI/ML News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[MarkTechPost] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[VentureBeat AI] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=ENOTFOUND",
+      "LLM 分类打分部分回退：18/18",
+      "LLM 分类打分回退明细（前 3/18）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"071b6ca3933929dd4d4b014ea57b73cb\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"071b6ca332d3ebe96f08ccbdf0e2f223\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"071b6ca4ba535fc6f8ce865271304a7c\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=18：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=34, split_retry=16",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/18）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=18, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=18, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
