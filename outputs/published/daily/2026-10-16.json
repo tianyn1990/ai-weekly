@@ -1,0 +1,2258 @@
+{
+  "runId": "daily-1792113092863",
+  "generatedAt": "2026-10-16T01:11:32.828Z",
+  "reviewStartedAt": "2026-10-16T01:11:32.828Z",
+  "reportDate": "2026-10-16",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-10-16T01:11:32.828Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 36,
+    "normalizedCount": 36,
+    "dedupedCount": 36,
+    "highImportanceCount": 3,
+    "mediumImportanceCount": 3,
+    "lowImportanceCount": 30,
+    "categoryBreakdown": {
+      "open-source": 4,
+      "tooling": 3,
+      "agent": 5,
+      "research": 2,
+      "industry-news": 6,
+      "tutorial": 0,
+      "other": 16
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "9fddd3434342",
+      "title": "NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model",
+      "summary": "NVIDIA released Nemotron 3.5 Super VL, an open 120B-parameter multimodal MoE model with 12B active parameters, 1M-token…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "9fddd3434342"
+      ]
+    },
+    {
+      "itemId": "164071039183",
+      "title": "CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data",
+      "summary": "Introduction Teams shipping AI agents at scale keep running into the same pattern. Even agents built on top-tier models…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "164071039183"
+      ]
+    },
+    {
+      "itemId": "8e60193d7e02",
+      "title": "Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis",
+      "summary": "SpaceXAI just released Grok Voice 3.0. Grok Voice 3.0 is a SpaceXAI speech-to-speech model that listens, reasons, calls…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "8e60193d7e02"
+      ]
+    },
+    {
+      "itemId": "a2eef79bd6e6",
+      "title": "Google Antigravity SDK Adds Local Model Support for Greater Token Efficiency and Code Privacy",
+      "summary": "Google has introduced support for local models in the Antigravity SDK, enabling developers to build and execute agentic…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "a2eef79bd6e6"
+      ]
+    },
+    {
+      "itemId": "1efbe9c9f320",
+      "title": "openKylin Outlines Its Vision for Reimagining Linux in the AI Era at Open Source Summit Europe 2026",
+      "summary": "At Open Source Summit Europe 2026, openKylin outlined its vision for transitioning from resource management to intent m…",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "1efbe9c9f320"
+      ]
+    },
+    {
+      "itemId": "15b1e808e642",
+      "title": "Datalab Releases OmniParseBench: An Open OCR Benchmark With 16,288 Pass/Fail Tests to Audit OCR Parsers",
+      "summary": "Datalab released OmniParseBench, an open OCR benchmark with 16,288 yes/no tests on 2,937 pages in 92 languages. Every s…",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "15b1e808e642"
+      ]
+    },
+    {
+      "itemId": "7a32a6d78357",
+      "title": "阶跃终端首款「Agent手机」STEPX Neo正式发布，创客先行",
+      "summary": "这妥妥是个物理版Agent啊！",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "7a32a6d78357"
+      ]
+    },
+    {
+      "itemId": "c4dc43ba0ff1",
+      "title": "Production Patterns for Agents, Evals, and LLM Costs: QCon AI New York 2026",
+      "summary": "Once AI is in production, code arrives faster than it can be reviewed, token costs rise, evals have to be good enough t…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "c4dc43ba0ff1"
+      ]
+    },
+    {
+      "itemId": "5f6ee4322363",
+      "title": "Cloudflare and OpenAI: making AI discovery better for everyone",
+      "summary": "Article URL: https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/ Comments URL: https://news.ycombinato…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "5f6ee4322363"
+      ]
+    },
+    {
+      "itemId": "9efd984f52d9",
+      "title": "TypeSafe AI Releases Jev 1.14 With Images, Box Type and 262k Context",
+      "summary": "TypeSafe AI released Jev 1.14 under the jev-preview alias. The System One model adds experimental image input, a Box bo…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "9efd984f52d9"
+      ]
+    },
+    {
+      "itemId": "817f48987f02",
+      "title": "Show HN: Sjq – Jq, but for AI Streaming",
+      "summary": "Article URL: https://github.com/vivgrid/sjq Comments URL: https://news.ycombinator.com/item?id=50112214 Points: 1 # Com…",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "817f48987f02"
+      ]
+    },
+    {
+      "itemId": "f1c479631885",
+      "title": "7天几百元开一家店！用千问办公电商版，立省启动资金5万元",
+      "summary": "给企业Agent打了个样",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "f1c479631885"
+      ]
+    },
+    {
+      "itemId": "c53b008a28fd",
+      "title": "Renting? These 2 new Apple smart home devices are worth your money (and these 5 are not)",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c53b008a28fd"
+      ]
+    },
+    {
+      "itemId": "1155af9882ea",
+      "title": "Apple’s first touchscreen MacBook is days away – with another OLED surprise",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1155af9882ea"
+      ]
+    },
+    {
+      "itemId": "c8a0f5ab17c9",
+      "title": "Nvidia’s new Nemotron 3.5 Super VL is another step forward for US open-weight AI",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c8a0f5ab17c9"
+      ]
+    },
+    {
+      "itemId": "d136fa353475",
+      "title": "Google’s new Universal Cart tracks prices on items you want now – plus 3 other tricks",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d136fa353475"
+      ]
+    },
+    {
+      "itemId": "0f3e63d02644",
+      "title": "Cloudflare Traces Turns the Proxy Layer into OpenTelemetry Spans, with New Volume-Based Pricing",
+      "summary": "Cloudflare has put Traces into open beta, extending automatic tracing from Workers to security rules, transformations, …",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "0f3e63d02644"
+      ]
+    },
+    {
+      "itemId": "5478efc66827",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5478efc66827"
+      ]
+    },
+    {
+      "itemId": "c43f1c6dffe4",
+      "title": "STEPX首款大模型原生智能体手机STEPX Neo正式发布",
+      "summary": "2026年10月13日，大模型原生AI终端品牌STEPX（阶跃终端）旗下首款大模型原生智能体手机STEPX Neo正式发布",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "c43f1c6dffe4"
+      ]
+    },
+    {
+      "itemId": "5ee4ce288708",
+      "title": "Meta Extends Confidential Computing to AI Glasses with Private Processing",
+      "summary": "Meta has extended Private Processing to AI glasses, using confidential VMs, trusted execution environments, remote atte…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5ee4ce288708"
+      ]
+    },
+    {
+      "itemId": "a61ea3076b01",
+      "title": "AI, Crypto and DEI Drove Marc Andreessen to MAGA",
+      "summary": "Article URL: https://www.bloomberg.com/news/features/2026-10-15/how-ai-crypto-and-dei-drove-marc-andreessen-to-maga Com…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a61ea3076b01"
+      ]
+    },
+    {
+      "itemId": "7a0b59530941",
+      "title": "No AI. Just open a book, read it, and code whatever you want",
+      "summary": "Article URL: https://www.youtube.com/watch?v=kCVZWZzrBB4 Comments URL: https://news.ycombinator.com/item?id=50112351 Po…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "7a0b59530941"
+      ]
+    },
+    {
+      "itemId": "fbb01af0bad2",
+      "title": "What Nvidia's CEO thinks about the UK's AI future",
+      "summary": "Article URL: https://news.sky.com/video/what-nvidias-ceo-really-thinks-about-ais-safety-13599433 Comments URL: https://…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fbb01af0bad2"
+      ]
+    },
+    {
+      "itemId": "f13ffbc03930",
+      "title": "What causes AI fatigue for engineers and how to ease the strain",
+      "summary": "Article URL: https://thoughtbot.com/blog/what-causes-ai-fatigue-for-engineers-and-how-to-ease-the-strain Comments URL: …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f13ffbc03930"
+      ]
+    },
+    {
+      "itemId": "270cfdccb0e0",
+      "title": "Spotify More Than Doubled Monthly Code Changes as AI Accelerated Development",
+      "summary": "Spotify reports that AI-assisted development more than doubled monthly merged changes, prompting a review of quality an…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "270cfdccb0e0"
+      ]
+    },
+    {
+      "itemId": "00cb3632a5b6",
+      "title": "Context Language Models: Self-Managing Context to Improve Performance and Reduce Compute Costs",
+      "summary": "Researchers from Meta, MIT, and the University of Washington introduce Context Language Models (CLMs), a new approach t…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "00cb3632a5b6"
+      ]
+    },
+    {
+      "itemId": "92d60b58598f",
+      "title": "Introducing Playground: Create and play custom games",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "92d60b58598f"
+      ]
+    },
+    {
+      "itemId": "1d5fed04e570",
+      "title": "The latest AI news we announced in September 2026",
+      "summary": "Here are Google’s latest AI updates from September 2026",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1d5fed04e570"
+      ]
+    },
+    {
+      "itemId": "927c795585b6",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "927c795585b6"
+      ]
+    },
+    {
+      "itemId": "5f226c85d6ea",
+      "title": "Google Beam expands with new regions, partners, and customers",
+      "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5f226c85d6ea"
+      ]
+    },
+    {
+      "itemId": "429ba3c49baa",
+      "title": "New experts join Google’s AI & Economy team",
+      "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "429ba3c49baa"
+      ]
+    },
+    {
+      "itemId": "10faecd96c80",
+      "title": "抢先盘点2026全球开发者先锋大会暨国际具身智能技能大赛十大亮点！",
+      "summary": "“具身进实景，劳动最光荣”",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "10faecd96c80"
+      ]
+    },
+    {
+      "itemId": "b899b5f3b297",
+      "title": "智能不出彩的「领克」，刚靠一次坠崖事故出圈了",
+      "summary": "汽车竞争正在回归汽车本身",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b899b5f3b297"
+      ]
+    },
+    {
+      "itemId": "9d4e71718d7b",
+      "title": "《变形计》综艺赛博复活，AI版MrBeast爆火，LibTV下场「造星」了",
+      "summary": "从创意到成本，AI正在重写综艺的生产逻辑",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9d4e71718d7b"
+      ]
+    },
+    {
+      "itemId": "e5a8d261c34e",
+      "title": "Claude sent a false homicide tip to police – and it’s part of a troubling AI pattern",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e5a8d261c34e"
+      ]
+    },
+    {
+      "itemId": "a64aeb2a2a6d",
+      "title": "Google’s new Fitbit Edge solves my biggest gripe with the Pixel Watch",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a64aeb2a2a6d"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "9fddd3434342",
+      "title": "NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model",
+      "takeaway": "NVIDIA released Nemotron 3.5 Super VL, an open 120B-parameter multimodal MoE model with 12B active parameters, 1M-token…",
+      "evidenceItemIds": [
+        "9fddd3434342"
+      ]
+    },
+    {
+      "itemId": "164071039183",
+      "title": "CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data",
+      "takeaway": "Introduction Teams shipping AI agents at scale keep running into the same pattern. Even agents built on top-tier models…",
+      "evidenceItemIds": [
+        "164071039183"
+      ]
+    },
+    {
+      "itemId": "8e60193d7e02",
+      "title": "Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis",
+      "takeaway": "SpaceXAI just released Grok Voice 3.0. Grok Voice 3.0 is a SpaceXAI speech-to-speech model that listens, reasons, calls…",
+      "evidenceItemIds": [
+        "8e60193d7e02"
+      ]
+    },
+    {
+      "itemId": "a2eef79bd6e6",
+      "title": "Google Antigravity SDK Adds Local Model Support for Greater Token Efficiency and Code Privacy",
+      "takeaway": "Google has introduced support for local models in the Antigravity SDK, enabling developers to build and execute agentic…",
+      "evidenceItemIds": [
+        "a2eef79bd6e6"
+      ]
+    },
+    {
+      "itemId": "1efbe9c9f320",
+      "title": "openKylin Outlines Its Vision for Reimagining Linux in the AI Era at Open Source Summit Europe 2026",
+      "takeaway": "At Open Source Summit Europe 2026, openKylin outlined its vision for transitioning from resource management to intent m…",
+      "evidenceItemIds": [
+        "1efbe9c9f320"
+      ]
+    },
+    {
+      "itemId": "15b1e808e642",
+      "title": "Datalab Releases OmniParseBench: An Open OCR Benchmark With 16,288 Pass/Fail Tests to Audit OCR Parsers",
+      "takeaway": "Datalab released OmniParseBench, an open OCR benchmark with 16,288 yes/no tests on 2,937 pages in 92 languages. Every s…",
+      "evidenceItemIds": [
+        "15b1e808e642"
+      ]
+    },
+    {
+      "itemId": "7a32a6d78357",
+      "title": "阶跃终端首款「Agent手机」STEPX Neo正式发布，创客先行",
+      "takeaway": "这妥妥是个物理版Agent啊！",
+      "evidenceItemIds": [
+        "7a32a6d78357"
+      ]
+    },
+    {
+      "itemId": "c4dc43ba0ff1",
+      "title": "Production Patterns for Agents, Evals, and LLM Costs: QCon AI New York 2026",
+      "takeaway": "Once AI is in production, code arrives faster than it can be reviewed, token costs rise, evals have to be good enough t…",
+      "evidenceItemIds": [
+        "c4dc43ba0ff1"
+      ]
+    },
+    {
+      "itemId": "5f6ee4322363",
+      "title": "Cloudflare and OpenAI: making AI discovery better for everyone",
+      "takeaway": "Article URL: https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/ Comments URL: https://news.ycombinato…",
+      "evidenceItemIds": [
+        "5f6ee4322363"
+      ]
+    },
+    {
+      "itemId": "9efd984f52d9",
+      "title": "TypeSafe AI Releases Jev 1.14 With Images, Box Type and 262k Context",
+      "takeaway": "TypeSafe AI released Jev 1.14 under the jev-preview alias. The System One model adds experimental image input, a Box bo…",
+      "evidenceItemIds": [
+        "9efd984f52d9"
+      ]
+    },
+    {
+      "itemId": "817f48987f02",
+      "title": "Show HN: Sjq – Jq, but for AI Streaming",
+      "takeaway": "Article URL: https://github.com/vivgrid/sjq Comments URL: https://news.ycombinator.com/item?id=50112214 Points: 1 # Com…",
+      "evidenceItemIds": [
+        "817f48987f02"
+      ]
+    },
+    {
+      "itemId": "f1c479631885",
+      "title": "7天几百元开一家店！用千问办公电商版，立省启动资金5万元",
+      "takeaway": "给企业Agent打了个样",
+      "evidenceItemIds": [
+        "f1c479631885"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕agent与tooling展开，建议优先关注《NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model》、《CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data》、《Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《TypeSafe AI Releases Jev 1.14 With Images, Box Type and 262k Context》、《Renting? These 2 new Apple smart home devices are worth your money (and these 5 are not)》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "9efd984f52d9",
+        "c53b008a28fd",
+        "1155af9882ea",
+        "c8a0f5ab17c9"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《STEPX首款大模型原生智能体手机STEPX Neo正式发布》、《AI, Crypto and DEI Drove Marc Andreessen to MAGA》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "c43f1c6dffe4",
+        "a61ea3076b01",
+        "7a0b59530941",
+        "fbb01af0bad2"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 4 条，建议优先阅读《NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model》、《阶跃终端首款「Agent手机」STEPX Neo正式发布，创客先行》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "9fddd3434342",
+        "7a32a6d78357",
+        "c4dc43ba0ff1",
+        "5f6ee4322363"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 4 条，建议优先阅读《openKylin Outlines Its Vision for Reimagining Linux in the AI Era at Open Source Summit Europe 2026》、《Show HN: Sjq – Jq, but for AI Streaming》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "1efbe9c9f320",
+        "817f48987f02",
+        "270cfdccb0e0",
+        "00cb3632a5b6"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "8005c6b5f97a1c5a94dc6729fefefc77385ee19b8c4975bba6aeed0557005ab8",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-10-16T01:44:54.209Z",
+    "finishedAt": "2026-10-16T01:45:34.331Z",
+    "durationMs": 40124,
+    "inputCount": 36,
+    "processedCount": 36,
+    "fallbackCount": 36,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 36,
+    "failureStats": {
+      "totalFailed": 36,
+      "timeout": 0,
+      "http": 36,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 68,
+      "splitRetryCount": 32
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-09",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=UND_ERR_CONNECT_TIMEOUT"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-02",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 1,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-10-16T01:45:34.431Z",
+    "finishedAt": "2026-10-16T01:45:44.011Z",
+    "durationMs": 9580,
+    "inputCount": 36,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "9fddd3434342",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model",
+      "link": "https://www.marktechpost.com/2026/10/15/nvidia-nemotron-3-5-super-vl-release/",
+      "contentSnippet": "NVIDIA released Nemotron 3.5 Super VL, an open 120B-parameter multimodal MoE model with 12B active parameters, 1M-token context and NVFP4 weights that run on 1 DGX Spark, plus 2 Bolt edge models. The post NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-15T19:53:50.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 123,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "164071039183",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data",
+      "link": "https://www.marktechpost.com/2026/10/15/copilotkit-releases-clif-a-continual-learning-platform-that-turns-agent-traces-and-user-actions-into-skills-evals-and-fine-tuning-data/",
+      "contentSnippet": "Introduction Teams shipping AI agents at scale keep running into the same pattern. Even agents built on top-tier models like Fable and Astra struggle to carry out complex, end-to-end tasks inside a specific product consistently enough to deploy. So teams grind out evals for the workflows that matter most, often hundreds or thousands of hand-written […] The post CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-15T14:19:27.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 123,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "8e60193d7e02",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis",
+      "link": "https://www.marktechpost.com/2026/10/14/meet-grok-voice-3-0-spacexai-voice-agent-model-ranks-1-on-artificial-analysis/",
+      "contentSnippet": "SpaceXAI just released Grok Voice 3.0. Grok Voice 3.0 is a SpaceXAI speech-to-speech model that listens, reasons, calls tools and speaks. It now ranks first on the Artificial Analysis Speech-to-Speech Index with a score of 86.9. For developers, the endpoint, events and $0.08 per minute price are unchanged from Grok Voice 2.0. TL;DR What is […] The post Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-15T05:18:54.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 88.64,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 118,
+        "ruleScoreNormalized": 88.63636363636364,
+        "finalScore": 88.64,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "a2eef79bd6e6",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Google Antigravity SDK Adds Local Model Support for Greater Token Efficiency and Code Privacy",
+      "link": "https://www.infoq.com/news/2026/10/antigravity-sdk-local-models/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Google has introduced support for local models in the Antigravity SDK, enabling developers to build and execute agentic workflows directly on their own machines, while retaining the flexibility to mix in cloud-based models for higher-level tasks. This approach gives developers greater control over data privacy, inference costs, network dependencies, and computational workload distribution. By Sergio De Simone",
+      "publishedAt": "2026-10-14T09:00:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 77.27,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 113,
+        "ruleScoreNormalized": 77.27272727272727,
+        "finalScore": 77.27,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "1efbe9c9f320",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "openKylin Outlines Its Vision for Reimagining Linux in the AI Era at Open Source Summit Europe 2026",
+      "link": "https://www.marktechpost.com/2026/10/15/openkylin-outlines-its-vision-for-reimagining-linux-in-the-ai-era-at-open-source-summit-europe-2026/",
+      "contentSnippet": "At Open Source Summit Europe 2026, openKylin outlined its vision for transitioning from resource management to intent management in the AI era. The community introduced KART, a unified AI runtime, alongside core desktop features in openKylin 3.0 like the AI Assistant, Global Intelligent Search, and Intelligent Space The post openKylin Outlines Its Vision for Reimagining Linux in the AI Era at Open Source Summit Europe 2026 appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-15T13:23:45.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 70.45,
+      "importance": "medium",
+      "recommendationReason": "开源生态更新",
+      "scoreBreakdown": {
+        "ruleScore": 110,
+        "ruleScoreNormalized": 70.45454545454545,
+        "finalScore": 70.45,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=UND_ERR_CONNECT_TIMEOUT",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：36/36",
+    "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0720b49bc8259bab9ccec3fc2eb63ed7\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0720b49b2aa164cc71e6c6fbdb4fcb73\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0720b49c671ebcbc4eef62e23ae435bb\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model\n- CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data\n- Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis\n- Google Antigravity SDK Adds Local Model Support for Greater Token Efficiency and Code Privacy\n- openKylin Outlines Its Vision for Reimagining Linux in the AI Era at Open Source Summit Europe 2026\n\n### 分类覆盖（大纲）\n- agent: 5 条\n- tooling: 3 条\n- open-source: 4 条\n- research: 2 条\n- other: 16 条\n- industry-news: 6 条",
+    "rankedItems": [
+      {
+        "id": "9fddd3434342",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model",
+        "link": "https://www.marktechpost.com/2026/10/15/nvidia-nemotron-3-5-super-vl-release/",
+        "contentSnippet": "NVIDIA released Nemotron 3.5 Super VL, an open 120B-parameter multimodal MoE model with 12B active parameters, 1M-token context and NVFP4 weights that run on 1 DGX Spark, plus 2 Bolt edge models. The post NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-15T19:53:50.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "164071039183",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data",
+        "link": "https://www.marktechpost.com/2026/10/15/copilotkit-releases-clif-a-continual-learning-platform-that-turns-agent-traces-and-user-actions-into-skills-evals-and-fine-tuning-data/",
+        "contentSnippet": "Introduction Teams shipping AI agents at scale keep running into the same pattern. Even agents built on top-tier models like Fable and Astra struggle to carry out complex, end-to-end tasks inside a specific product consistently enough to deploy. So teams grind out evals for the workflows that matter most, often hundreds or thousands of hand-written […] The post CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-15T14:19:27.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8e60193d7e02",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis",
+        "link": "https://www.marktechpost.com/2026/10/14/meet-grok-voice-3-0-spacexai-voice-agent-model-ranks-1-on-artificial-analysis/",
+        "contentSnippet": "SpaceXAI just released Grok Voice 3.0. Grok Voice 3.0 is a SpaceXAI speech-to-speech model that listens, reasons, calls tools and speaks. It now ranks first on the Artificial Analysis Speech-to-Speech Index with a score of 86.9. For developers, the endpoint, events and $0.08 per minute price are unchanged from Grok Voice 2.0. TL;DR What is […] The post Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-15T05:18:54.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 88.64,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 88.63636363636364,
+          "finalScore": 88.64,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a2eef79bd6e6",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Antigravity SDK Adds Local Model Support for Greater Token Efficiency and Code Privacy",
+        "link": "https://www.infoq.com/news/2026/10/antigravity-sdk-local-models/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has introduced support for local models in the Antigravity SDK, enabling developers to build and execute agentic workflows directly on their own machines, while retaining the flexibility to mix in cloud-based models for higher-level tasks. This approach gives developers greater control over data privacy, inference costs, network dependencies, and computational workload distribution. By Sergio De Simone",
+        "publishedAt": "2026-10-14T09:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 77.27,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 77.27272727272727,
+          "finalScore": 77.27,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1efbe9c9f320",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "openKylin Outlines Its Vision for Reimagining Linux in the AI Era at Open Source Summit Europe 2026",
+        "link": "https://www.marktechpost.com/2026/10/15/openkylin-outlines-its-vision-for-reimagining-linux-in-the-ai-era-at-open-source-summit-europe-2026/",
+        "contentSnippet": "At Open Source Summit Europe 2026, openKylin outlined its vision for transitioning from resource management to intent management in the AI era. The community introduced KART, a unified AI runtime, alongside core desktop features in openKylin 3.0 like the AI Assistant, Global Intelligent Search, and Intelligent Space The post openKylin Outlines Its Vision for Reimagining Linux in the AI Era at Open Source Summit Europe 2026 appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-15T13:23:45.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 70.45,
+        "importance": "medium",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 70.45454545454545,
+          "finalScore": 70.45,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "15b1e808e642",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Datalab Releases OmniParseBench: An Open OCR Benchmark With 16,288 Pass/Fail Tests to Audit OCR Parsers",
+        "link": "https://www.marktechpost.com/2026/10/14/datalab-omniparsebench-open-ocr-document-parsing-benchmark/",
+        "contentSnippet": "Datalab released OmniParseBench, an open OCR benchmark with 16,288 yes/no tests on 2,937 pages in 92 languages. Every score is a pass rate you can slice by tag, script or language. The post Datalab Releases OmniParseBench: An Open OCR Benchmark With 16,288 Pass/Fail Tests to Audit OCR Parsers appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-14T23:37:25.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 65.91,
+        "importance": "medium",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 65.9090909090909,
+          "finalScore": 65.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7a32a6d78357",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "阶跃终端首款「Agent手机」STEPX Neo正式发布，创客先行",
+        "link": "https://www.qbitai.com/2026/10/503244.html",
+        "contentSnippet": "这妥妥是个物理版Agent啊！",
+        "publishedAt": "2026-10-14T08:01:18.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 63.64,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 107,
+          "ruleScoreNormalized": 63.63636363636363,
+          "finalScore": 63.64,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c4dc43ba0ff1",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Production Patterns for Agents, Evals, and LLM Costs: QCon AI New York 2026",
+        "link": "https://www.infoq.com/news/2026/10/qcon-ai-newyork-2026-sessionsv2/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Once AI is in production, code arrives faster than it can be reviewed, token costs rise, evals have to be good enough to act on, and agents need permissions and guardrails. QCon AI New York 2026 (December 15-16) has confirmed sessions from engineers sharing how they handle these constraints. By Artenisa Chatziou",
+        "publishedAt": "2026-10-13T12:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 59.09,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 59.09090909090909,
+          "finalScore": 59.09,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5f6ee4322363",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Cloudflare and OpenAI: making AI discovery better for everyone",
+        "link": "https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/",
+        "contentSnippet": "Article URL: https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/ Comments URL: https://news.ycombinator.com/item?id=50112577 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-16T01:24:50.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 59.09,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 59.09090909090909,
+          "finalScore": 59.09,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9efd984f52d9",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "TypeSafe AI Releases Jev 1.14 With Images, Box Type and 262k Context",
+        "link": "https://www.marktechpost.com/2026/10/14/typesafe-ai-jev-1-14-images-box-long-context/",
+        "contentSnippet": "TypeSafe AI released Jev 1.14 under the jev-preview alias. The System One model adds experimental image input, a Box bounding-box type and an opt-in 262k-token context, at $0.042 per million input tokens. The post TypeSafe AI Releases Jev 1.14 With Images, Box Type and 262k Context appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-15T05:45:03.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 54.55,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 103,
+          "ruleScoreNormalized": 54.54545454545454,
+          "finalScore": 54.55,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "817f48987f02",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Sjq – Jq, but for AI Streaming",
+        "link": "https://github.com/vivgrid/sjq",
+        "contentSnippet": "Article URL: https://github.com/vivgrid/sjq Comments URL: https://news.ycombinator.com/item?id=50112214 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-16T00:34:51.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 52.27,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 52.27272727272727,
+          "finalScore": 52.27,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f1c479631885",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "7天几百元开一家店！用千问办公电商版，立省启动资金5万元",
+        "link": "https://www.qbitai.com/2026/10/503303.html",
+        "contentSnippet": "给企业Agent打了个样",
+        "publishedAt": "2026-10-15T01:56:20.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 52.27,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 52.27272727272727,
+          "finalScore": 52.27,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c53b008a28fd",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Renting? These 2 new Apple smart home devices are worth your money (and these 5 are not)",
+        "link": "https://www.zdnet.com/home-and-office/is-the-apple-home-collection-right-for-renters/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-15T16:19:16.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.09,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 34.090909090909086,
+          "finalScore": 34.09,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1155af9882ea",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Apple’s first touchscreen MacBook is days away – with another OLED surprise",
+        "link": "https://www.zdnet.com/tech/apple-touchscreen-macbook-oled-ipad-mini-october-event/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-15T16:18:57.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.09,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 34.090909090909086,
+          "finalScore": 34.09,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c8a0f5ab17c9",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Nvidia’s new Nemotron 3.5 Super VL is another step forward for US open-weight AI",
+        "link": "https://www.zdnet.com/innovation/nvidia-nemotron-3-5-super-vl-model-us-open-weight-ai/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-15T15:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.09,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 34.090909090909086,
+          "finalScore": 34.09,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d136fa353475",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Google’s new Universal Cart tracks prices on items you want now – plus 3 other tricks",
+        "link": "https://www.zdnet.com/tech/google-universal-cart-when-to-buy-guide/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-15T13:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.09,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 34.090909090909086,
+          "finalScore": 34.09,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0f3e63d02644",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Cloudflare Traces Turns the Proxy Layer into OpenTelemetry Spans, with New Volume-Based Pricing",
+        "link": "https://www.infoq.com/news/2026/10/cloudflare-traces-open-beta/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Cloudflare has put Traces into open beta, extending automatic tracing from Workers to security rules, transformations, cache, routing and origin handling as OpenTelemetry spans. Traces accept and forward W3C traceparent headers, and Trace Rules allow targeted sampling. Pricing moves to ingestion and retention volume from December 1. By Steef-Jan Wiggers",
+        "publishedAt": "2026-10-10T07:12:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 31.82,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 93,
+          "ruleScoreNormalized": 31.818181818181817,
+          "finalScore": 31.82,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5478efc66827",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "contentSnippet": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "publishedAt": "2026-10-13T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 29.55,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 29.545454545454547,
+          "finalScore": 29.55,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c43f1c6dffe4",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "STEPX首款大模型原生智能体手机STEPX Neo正式发布",
+        "link": "https://www.qbitai.com/2026/10/503201.html",
+        "contentSnippet": "2026年10月13日，大模型原生AI终端品牌STEPX（阶跃终端）旗下首款大模型原生智能体手机STEPX Neo正式发布",
+        "publishedAt": "2026-10-14T06:45:38.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 29.55,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 29.545454545454547,
+          "finalScore": 29.55,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5ee4ce288708",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Meta Extends Confidential Computing to AI Glasses with Private Processing",
+        "link": "https://www.infoq.com/news/2026/10/meta-private-process-ai-glasses/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Meta has extended Private Processing to AI glasses, using confidential VMs, trusted execution environments, remote attestation, anonymous credentials, OHTTP routing, and TEE-based storage to process AI workloads and persistent user context in the cloud. By Leela Kumili",
+        "publishedAt": "2026-10-14T13:57:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 25,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 25,
+          "finalScore": 25,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a61ea3076b01",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI, Crypto and DEI Drove Marc Andreessen to MAGA",
+        "link": "https://www.bloomberg.com/news/features/2026-10-15/how-ai-crypto-and-dei-drove-marc-andreessen-to-maga",
+        "contentSnippet": "Article URL: https://www.bloomberg.com/news/features/2026-10-15/how-ai-crypto-and-dei-drove-marc-andreessen-to-maga Comments URL: https://news.ycombinator.com/item?id=50112366 Points: 7 # Comments: 1",
+        "publishedAt": "2026-10-16T00:56:54.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 25,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 25,
+          "finalScore": 25,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7a0b59530941",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "No AI. Just open a book, read it, and code whatever you want",
+        "link": "https://www.youtube.com/watch?v=kCVZWZzrBB4",
+        "contentSnippet": "Article URL: https://www.youtube.com/watch?v=kCVZWZzrBB4 Comments URL: https://news.ycombinator.com/item?id=50112351 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-16T00:54:57.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 25,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 25,
+          "finalScore": 25,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fbb01af0bad2",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "What Nvidia's CEO thinks about the UK's AI future",
+        "link": "https://news.sky.com/video/what-nvidias-ceo-really-thinks-about-ais-safety-13599433",
+        "contentSnippet": "Article URL: https://news.sky.com/video/what-nvidias-ceo-really-thinks-about-ais-safety-13599433 Comments URL: https://news.ycombinator.com/item?id=50112219 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-16T00:35:29.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 25,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 25,
+          "finalScore": 25,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f13ffbc03930",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "What causes AI fatigue for engineers and how to ease the strain",
+        "link": "https://thoughtbot.com/blog/what-causes-ai-fatigue-for-engineers-and-how-to-ease-the-strain",
+        "contentSnippet": "Article URL: https://thoughtbot.com/blog/what-causes-ai-fatigue-for-engineers-and-how-to-ease-the-strain Comments URL: https://news.ycombinator.com/item?id=50111887 Points: 5 # Comments: 0",
+        "publishedAt": "2026-10-15T23:43:23.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 25,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 25,
+          "finalScore": 25,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "270cfdccb0e0",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Spotify More Than Doubled Monthly Code Changes as AI Accelerated Development",
+        "link": "https://www.infoq.com/news/2026/10/spotify-ai-quality-controls/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Spotify reports that AI-assisted development more than doubled monthly merged changes, prompting a review of quality and reliability controls across its engineering organization. The company describes changes to testing, observability, rollback capacity, workload prioritization, and automated maintenance as it adapts to higher software change volume. By Leela Kumili",
+        "publishedAt": "2026-10-12T13:57:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.64,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 85,
+          "ruleScoreNormalized": 13.636363636363635,
+          "finalScore": 13.64,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "00cb3632a5b6",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Context Language Models: Self-Managing Context to Improve Performance and Reduce Compute Costs",
+        "link": "https://www.infoq.com/news/2026/10/context-language-models/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Researchers from Meta, MIT, and the University of Washington introduce Context Language Models (CLMs), a new approach that enables language models to manage and edit their own context rather than relying on predefined mechanisms for summarization, compression, and information retrieval, reporting substantial gains in both performance and computational efficiency. By Sergio De Simone",
+        "publishedAt": "2026-10-11T14:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.64,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 85,
+          "ruleScoreNormalized": 13.636363636363635,
+          "finalScore": 13.64,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "92d60b58598f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Introducing Playground: Create and play custom games",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+        "contentSnippet": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "publishedAt": "2026-10-07T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.82,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.8181818181818175,
+          "finalScore": 6.82,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1d5fed04e570",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in September 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from September 2026",
+        "publishedAt": "2026-10-02T15:00:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.82,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.8181818181818175,
+          "finalScore": 6.82,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "927c795585b6",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "contentSnippet": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "publishedAt": "2026-09-28T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.82,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.8181818181818175,
+          "finalScore": 6.82,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5f226c85d6ea",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "link": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+        "contentSnippet": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "publishedAt": "2026-09-23T18:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.82,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.8181818181818175,
+          "finalScore": 6.82,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "429ba3c49baa",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "New experts join Google’s AI & Economy team",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+        "contentSnippet": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+        "publishedAt": "2026-09-18T14:00:00.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.82,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.8181818181818175,
+          "finalScore": 6.82,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "10faecd96c80",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "抢先盘点2026全球开发者先锋大会暨国际具身智能技能大赛十大亮点！",
+        "link": "https://www.qbitai.com/2026/10/503294.html",
+        "contentSnippet": "“具身进实景，劳动最光荣”",
+        "publishedAt": "2026-10-14T10:41:47.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.82,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.8181818181818175,
+          "finalScore": 6.82,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b899b5f3b297",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "智能不出彩的「领克」，刚靠一次坠崖事故出圈了",
+        "link": "https://www.qbitai.com/2026/10/503231.html",
+        "contentSnippet": "汽车竞争正在回归汽车本身",
+        "publishedAt": "2026-10-14T07:12:02.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.82,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.8181818181818175,
+          "finalScore": 6.82,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9d4e71718d7b",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "《变形计》综艺赛博复活，AI版MrBeast爆火，LibTV下场「造星」了",
+        "link": "https://www.qbitai.com/2026/10/503211.html",
+        "contentSnippet": "从创意到成本，AI正在重写综艺的生产逻辑",
+        "publishedAt": "2026-10-14T07:03:44.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.82,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 6.8181818181818175,
+          "finalScore": 6.82,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e5a8d261c34e",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Claude sent a false homicide tip to police – and it’s part of a troubling AI pattern",
+        "link": "https://www.zdnet.com/innovation/claude-false-homicide-tip/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-12T17:45:44.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a64aeb2a2a6d",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Google’s new Fitbit Edge solves my biggest gripe with the Pixel Watch",
+        "link": "https://www.zdnet.com/tech/googles-new-fitbit-edge-solves-my-biggest-gripe-with-the-pixel-watch/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-12T13:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "9fddd3434342",
+        "title": "NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model",
+        "summary": "NVIDIA released Nemotron 3.5 Super VL, an open 120B-parameter multimodal MoE model with 12B active parameters, 1M-token…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "9fddd3434342"
+        ]
+      },
+      {
+        "itemId": "164071039183",
+        "title": "CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data",
+        "summary": "Introduction Teams shipping AI agents at scale keep running into the same pattern. Even agents built on top-tier models…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "164071039183"
+        ]
+      },
+      {
+        "itemId": "8e60193d7e02",
+        "title": "Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis",
+        "summary": "SpaceXAI just released Grok Voice 3.0. Grok Voice 3.0 is a SpaceXAI speech-to-speech model that listens, reasons, calls…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "8e60193d7e02"
+        ]
+      },
+      {
+        "itemId": "a2eef79bd6e6",
+        "title": "Google Antigravity SDK Adds Local Model Support for Greater Token Efficiency and Code Privacy",
+        "summary": "Google has introduced support for local models in the Antigravity SDK, enabling developers to build and execute agentic…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "a2eef79bd6e6"
+        ]
+      },
+      {
+        "itemId": "1efbe9c9f320",
+        "title": "openKylin Outlines Its Vision for Reimagining Linux in the AI Era at Open Source Summit Europe 2026",
+        "summary": "At Open Source Summit Europe 2026, openKylin outlined its vision for transitioning from resource management to intent m…",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "1efbe9c9f320"
+        ]
+      },
+      {
+        "itemId": "15b1e808e642",
+        "title": "Datalab Releases OmniParseBench: An Open OCR Benchmark With 16,288 Pass/Fail Tests to Audit OCR Parsers",
+        "summary": "Datalab released OmniParseBench, an open OCR benchmark with 16,288 yes/no tests on 2,937 pages in 92 languages. Every s…",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "15b1e808e642"
+        ]
+      },
+      {
+        "itemId": "7a32a6d78357",
+        "title": "阶跃终端首款「Agent手机」STEPX Neo正式发布，创客先行",
+        "summary": "这妥妥是个物理版Agent啊！",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "7a32a6d78357"
+        ]
+      },
+      {
+        "itemId": "c4dc43ba0ff1",
+        "title": "Production Patterns for Agents, Evals, and LLM Costs: QCon AI New York 2026",
+        "summary": "Once AI is in production, code arrives faster than it can be reviewed, token costs rise, evals have to be good enough t…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "c4dc43ba0ff1"
+        ]
+      },
+      {
+        "itemId": "5f6ee4322363",
+        "title": "Cloudflare and OpenAI: making AI discovery better for everyone",
+        "summary": "Article URL: https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/ Comments URL: https://news.ycombinato…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "5f6ee4322363"
+        ]
+      },
+      {
+        "itemId": "9efd984f52d9",
+        "title": "TypeSafe AI Releases Jev 1.14 With Images, Box Type and 262k Context",
+        "summary": "TypeSafe AI released Jev 1.14 under the jev-preview alias. The System One model adds experimental image input, a Box bo…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "9efd984f52d9"
+        ]
+      },
+      {
+        "itemId": "817f48987f02",
+        "title": "Show HN: Sjq – Jq, but for AI Streaming",
+        "summary": "Article URL: https://github.com/vivgrid/sjq Comments URL: https://news.ycombinator.com/item?id=50112214 Points: 1 # Com…",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "817f48987f02"
+        ]
+      },
+      {
+        "itemId": "f1c479631885",
+        "title": "7天几百元开一家店！用千问办公电商版，立省启动资金5万元",
+        "summary": "给企业Agent打了个样",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "f1c479631885"
+        ]
+      },
+      {
+        "itemId": "c53b008a28fd",
+        "title": "Renting? These 2 new Apple smart home devices are worth your money (and these 5 are not)",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c53b008a28fd"
+        ]
+      },
+      {
+        "itemId": "1155af9882ea",
+        "title": "Apple’s first touchscreen MacBook is days away – with another OLED surprise",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1155af9882ea"
+        ]
+      },
+      {
+        "itemId": "c8a0f5ab17c9",
+        "title": "Nvidia’s new Nemotron 3.5 Super VL is another step forward for US open-weight AI",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c8a0f5ab17c9"
+        ]
+      },
+      {
+        "itemId": "d136fa353475",
+        "title": "Google’s new Universal Cart tracks prices on items you want now – plus 3 other tricks",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d136fa353475"
+        ]
+      },
+      {
+        "itemId": "0f3e63d02644",
+        "title": "Cloudflare Traces Turns the Proxy Layer into OpenTelemetry Spans, with New Volume-Based Pricing",
+        "summary": "Cloudflare has put Traces into open beta, extending automatic tracing from Workers to security rules, transformations, …",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "0f3e63d02644"
+        ]
+      },
+      {
+        "itemId": "5478efc66827",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5478efc66827"
+        ]
+      },
+      {
+        "itemId": "c43f1c6dffe4",
+        "title": "STEPX首款大模型原生智能体手机STEPX Neo正式发布",
+        "summary": "2026年10月13日，大模型原生AI终端品牌STEPX（阶跃终端）旗下首款大模型原生智能体手机STEPX Neo正式发布",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "c43f1c6dffe4"
+        ]
+      },
+      {
+        "itemId": "5ee4ce288708",
+        "title": "Meta Extends Confidential Computing to AI Glasses with Private Processing",
+        "summary": "Meta has extended Private Processing to AI glasses, using confidential VMs, trusted execution environments, remote atte…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5ee4ce288708"
+        ]
+      },
+      {
+        "itemId": "a61ea3076b01",
+        "title": "AI, Crypto and DEI Drove Marc Andreessen to MAGA",
+        "summary": "Article URL: https://www.bloomberg.com/news/features/2026-10-15/how-ai-crypto-and-dei-drove-marc-andreessen-to-maga Com…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a61ea3076b01"
+        ]
+      },
+      {
+        "itemId": "7a0b59530941",
+        "title": "No AI. Just open a book, read it, and code whatever you want",
+        "summary": "Article URL: https://www.youtube.com/watch?v=kCVZWZzrBB4 Comments URL: https://news.ycombinator.com/item?id=50112351 Po…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "7a0b59530941"
+        ]
+      },
+      {
+        "itemId": "fbb01af0bad2",
+        "title": "What Nvidia's CEO thinks about the UK's AI future",
+        "summary": "Article URL: https://news.sky.com/video/what-nvidias-ceo-really-thinks-about-ais-safety-13599433 Comments URL: https://…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fbb01af0bad2"
+        ]
+      },
+      {
+        "itemId": "f13ffbc03930",
+        "title": "What causes AI fatigue for engineers and how to ease the strain",
+        "summary": "Article URL: https://thoughtbot.com/blog/what-causes-ai-fatigue-for-engineers-and-how-to-ease-the-strain Comments URL: …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f13ffbc03930"
+        ]
+      },
+      {
+        "itemId": "270cfdccb0e0",
+        "title": "Spotify More Than Doubled Monthly Code Changes as AI Accelerated Development",
+        "summary": "Spotify reports that AI-assisted development more than doubled monthly merged changes, prompting a review of quality an…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "270cfdccb0e0"
+        ]
+      },
+      {
+        "itemId": "00cb3632a5b6",
+        "title": "Context Language Models: Self-Managing Context to Improve Performance and Reduce Compute Costs",
+        "summary": "Researchers from Meta, MIT, and the University of Washington introduce Context Language Models (CLMs), a new approach t…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "00cb3632a5b6"
+        ]
+      },
+      {
+        "itemId": "92d60b58598f",
+        "title": "Introducing Playground: Create and play custom games",
+        "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "92d60b58598f"
+        ]
+      },
+      {
+        "itemId": "1d5fed04e570",
+        "title": "The latest AI news we announced in September 2026",
+        "summary": "Here are Google’s latest AI updates from September 2026",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1d5fed04e570"
+        ]
+      },
+      {
+        "itemId": "927c795585b6",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "927c795585b6"
+        ]
+      },
+      {
+        "itemId": "5f226c85d6ea",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5f226c85d6ea"
+        ]
+      },
+      {
+        "itemId": "429ba3c49baa",
+        "title": "New experts join Google’s AI & Economy team",
+        "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "429ba3c49baa"
+        ]
+      },
+      {
+        "itemId": "10faecd96c80",
+        "title": "抢先盘点2026全球开发者先锋大会暨国际具身智能技能大赛十大亮点！",
+        "summary": "“具身进实景，劳动最光荣”",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "10faecd96c80"
+        ]
+      },
+      {
+        "itemId": "b899b5f3b297",
+        "title": "智能不出彩的「领克」，刚靠一次坠崖事故出圈了",
+        "summary": "汽车竞争正在回归汽车本身",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b899b5f3b297"
+        ]
+      },
+      {
+        "itemId": "9d4e71718d7b",
+        "title": "《变形计》综艺赛博复活，AI版MrBeast爆火，LibTV下场「造星」了",
+        "summary": "从创意到成本，AI正在重写综艺的生产逻辑",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9d4e71718d7b"
+        ]
+      },
+      {
+        "itemId": "e5a8d261c34e",
+        "title": "Claude sent a false homicide tip to police – and it’s part of a troubling AI pattern",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e5a8d261c34e"
+        ]
+      },
+      {
+        "itemId": "a64aeb2a2a6d",
+        "title": "Google’s new Fitbit Edge solves my biggest gripe with the Pixel Watch",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a64aeb2a2a6d"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "9fddd3434342",
+        "title": "NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model",
+        "takeaway": "NVIDIA released Nemotron 3.5 Super VL, an open 120B-parameter multimodal MoE model with 12B active parameters, 1M-token…",
+        "evidenceItemIds": [
+          "9fddd3434342"
+        ]
+      },
+      {
+        "itemId": "164071039183",
+        "title": "CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data",
+        "takeaway": "Introduction Teams shipping AI agents at scale keep running into the same pattern. Even agents built on top-tier models…",
+        "evidenceItemIds": [
+          "164071039183"
+        ]
+      },
+      {
+        "itemId": "8e60193d7e02",
+        "title": "Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis",
+        "takeaway": "SpaceXAI just released Grok Voice 3.0. Grok Voice 3.0 is a SpaceXAI speech-to-speech model that listens, reasons, calls…",
+        "evidenceItemIds": [
+          "8e60193d7e02"
+        ]
+      },
+      {
+        "itemId": "a2eef79bd6e6",
+        "title": "Google Antigravity SDK Adds Local Model Support for Greater Token Efficiency and Code Privacy",
+        "takeaway": "Google has introduced support for local models in the Antigravity SDK, enabling developers to build and execute agentic…",
+        "evidenceItemIds": [
+          "a2eef79bd6e6"
+        ]
+      },
+      {
+        "itemId": "1efbe9c9f320",
+        "title": "openKylin Outlines Its Vision for Reimagining Linux in the AI Era at Open Source Summit Europe 2026",
+        "takeaway": "At Open Source Summit Europe 2026, openKylin outlined its vision for transitioning from resource management to intent m…",
+        "evidenceItemIds": [
+          "1efbe9c9f320"
+        ]
+      },
+      {
+        "itemId": "15b1e808e642",
+        "title": "Datalab Releases OmniParseBench: An Open OCR Benchmark With 16,288 Pass/Fail Tests to Audit OCR Parsers",
+        "takeaway": "Datalab released OmniParseBench, an open OCR benchmark with 16,288 yes/no tests on 2,937 pages in 92 languages. Every s…",
+        "evidenceItemIds": [
+          "15b1e808e642"
+        ]
+      },
+      {
+        "itemId": "7a32a6d78357",
+        "title": "阶跃终端首款「Agent手机」STEPX Neo正式发布，创客先行",
+        "takeaway": "这妥妥是个物理版Agent啊！",
+        "evidenceItemIds": [
+          "7a32a6d78357"
+        ]
+      },
+      {
+        "itemId": "c4dc43ba0ff1",
+        "title": "Production Patterns for Agents, Evals, and LLM Costs: QCon AI New York 2026",
+        "takeaway": "Once AI is in production, code arrives faster than it can be reviewed, token costs rise, evals have to be good enough t…",
+        "evidenceItemIds": [
+          "c4dc43ba0ff1"
+        ]
+      },
+      {
+        "itemId": "5f6ee4322363",
+        "title": "Cloudflare and OpenAI: making AI discovery better for everyone",
+        "takeaway": "Article URL: https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/ Comments URL: https://news.ycombinato…",
+        "evidenceItemIds": [
+          "5f6ee4322363"
+        ]
+      },
+      {
+        "itemId": "9efd984f52d9",
+        "title": "TypeSafe AI Releases Jev 1.14 With Images, Box Type and 262k Context",
+        "takeaway": "TypeSafe AI released Jev 1.14 under the jev-preview alias. The System One model adds experimental image input, a Box bo…",
+        "evidenceItemIds": [
+          "9efd984f52d9"
+        ]
+      },
+      {
+        "itemId": "817f48987f02",
+        "title": "Show HN: Sjq – Jq, but for AI Streaming",
+        "takeaway": "Article URL: https://github.com/vivgrid/sjq Comments URL: https://news.ycombinator.com/item?id=50112214 Points: 1 # Com…",
+        "evidenceItemIds": [
+          "817f48987f02"
+        ]
+      },
+      {
+        "itemId": "f1c479631885",
+        "title": "7天几百元开一家店！用千问办公电商版，立省启动资金5万元",
+        "takeaway": "给企业Agent打了个样",
+        "evidenceItemIds": [
+          "f1c479631885"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕agent与tooling展开，建议优先关注《NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model》、《CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data》、《Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《TypeSafe AI Releases Jev 1.14 With Images, Box Type and 262k Context》、《Renting? These 2 new Apple smart home devices are worth your money (and these 5 are not)》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "9efd984f52d9",
+          "c53b008a28fd",
+          "1155af9882ea",
+          "c8a0f5ab17c9"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《STEPX首款大模型原生智能体手机STEPX Neo正式发布》、《AI, Crypto and DEI Drove Marc Andreessen to MAGA》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "c43f1c6dffe4",
+          "a61ea3076b01",
+          "7a0b59530941",
+          "fbb01af0bad2"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 4 条，建议优先阅读《NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model》、《阶跃终端首款「Agent手机」STEPX Neo正式发布，创客先行》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "9fddd3434342",
+          "7a32a6d78357",
+          "c4dc43ba0ff1",
+          "5f6ee4322363"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 4 条，建议优先阅读《openKylin Outlines Its Vision for Reimagining Linux in the AI Era at Open Source Summit Europe 2026》、《Show HN: Sjq – Jq, but for AI Streaming》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "1efbe9c9f320",
+          "817f48987f02",
+          "270cfdccb0e0",
+          "00cb3632a5b6"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "8005c6b5f97a1c5a94dc6729fefefc77385ee19b8c4975bba6aeed0557005ab8",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-10-16T01:44:54.209Z",
+      "finishedAt": "2026-10-16T01:45:34.331Z",
+      "durationMs": 40124,
+      "inputCount": 36,
+      "processedCount": 36,
+      "fallbackCount": 36,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 36,
+      "failureStats": {
+        "totalFailed": 36,
+        "timeout": 0,
+        "http": 36,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 68,
+        "splitRetryCount": 32
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-09",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=UND_ERR_CONNECT_TIMEOUT"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-02",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 1,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-10-16T01:45:34.431Z",
+      "finishedAt": "2026-10-16T01:45:44.011Z",
+      "durationMs": 9580,
+      "inputCount": 36,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "9fddd3434342",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model",
+        "link": "https://www.marktechpost.com/2026/10/15/nvidia-nemotron-3-5-super-vl-release/",
+        "contentSnippet": "NVIDIA released Nemotron 3.5 Super VL, an open 120B-parameter multimodal MoE model with 12B active parameters, 1M-token context and NVFP4 weights that run on 1 DGX Spark, plus 2 Bolt edge models. The post NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-15T19:53:50.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "164071039183",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data",
+        "link": "https://www.marktechpost.com/2026/10/15/copilotkit-releases-clif-a-continual-learning-platform-that-turns-agent-traces-and-user-actions-into-skills-evals-and-fine-tuning-data/",
+        "contentSnippet": "Introduction Teams shipping AI agents at scale keep running into the same pattern. Even agents built on top-tier models like Fable and Astra struggle to carry out complex, end-to-end tasks inside a specific product consistently enough to deploy. So teams grind out evals for the workflows that matter most, often hundreds or thousands of hand-written […] The post CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-15T14:19:27.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8e60193d7e02",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis",
+        "link": "https://www.marktechpost.com/2026/10/14/meet-grok-voice-3-0-spacexai-voice-agent-model-ranks-1-on-artificial-analysis/",
+        "contentSnippet": "SpaceXAI just released Grok Voice 3.0. Grok Voice 3.0 is a SpaceXAI speech-to-speech model that listens, reasons, calls tools and speaks. It now ranks first on the Artificial Analysis Speech-to-Speech Index with a score of 86.9. For developers, the endpoint, events and $0.08 per minute price are unchanged from Grok Voice 2.0. TL;DR What is […] The post Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-15T05:18:54.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 88.64,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 88.63636363636364,
+          "finalScore": 88.64,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a2eef79bd6e6",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Antigravity SDK Adds Local Model Support for Greater Token Efficiency and Code Privacy",
+        "link": "https://www.infoq.com/news/2026/10/antigravity-sdk-local-models/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has introduced support for local models in the Antigravity SDK, enabling developers to build and execute agentic workflows directly on their own machines, while retaining the flexibility to mix in cloud-based models for higher-level tasks. This approach gives developers greater control over data privacy, inference costs, network dependencies, and computational workload distribution. By Sergio De Simone",
+        "publishedAt": "2026-10-14T09:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 77.27,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 77.27272727272727,
+          "finalScore": 77.27,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1efbe9c9f320",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "openKylin Outlines Its Vision for Reimagining Linux in the AI Era at Open Source Summit Europe 2026",
+        "link": "https://www.marktechpost.com/2026/10/15/openkylin-outlines-its-vision-for-reimagining-linux-in-the-ai-era-at-open-source-summit-europe-2026/",
+        "contentSnippet": "At Open Source Summit Europe 2026, openKylin outlined its vision for transitioning from resource management to intent management in the AI era. The community introduced KART, a unified AI runtime, alongside core desktop features in openKylin 3.0 like the AI Assistant, Global Intelligent Search, and Intelligent Space The post openKylin Outlines Its Vision for Reimagining Linux in the AI Era at Open Source Summit Europe 2026 appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-15T13:23:45.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 70.45,
+        "importance": "medium",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 70.45454545454545,
+          "finalScore": 70.45,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 36,
+      "normalizedCount": 36,
+      "dedupedCount": 36,
+      "highImportanceCount": 3,
+      "mediumImportanceCount": 3,
+      "lowImportanceCount": 30,
+      "categoryBreakdown": {
+        "open-source": 4,
+        "tooling": 3,
+        "agent": 5,
+        "research": 2,
+        "industry-news": 6,
+        "tutorial": 0,
+        "other": 16
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=UND_ERR_CONNECT_TIMEOUT",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：36/36",
+      "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0720b49bc8259bab9ccec3fc2eb63ed7\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0720b49b2aa164cc71e6c6fbdb4fcb73\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0720b49c671ebcbc4eef62e23ae435bb\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
