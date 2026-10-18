@@ -1,0 +1,2490 @@
+{
+  "runId": "daily-1792286105267",
+  "generatedAt": "2026-10-18T01:15:05.224Z",
+  "reviewStartedAt": "2026-10-18T01:15:05.224Z",
+  "reportDate": "2026-10-18",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-10-18T01:15:05.224Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 42,
+    "normalizedCount": 42,
+    "dedupedCount": 42,
+    "highImportanceCount": 3,
+    "mediumImportanceCount": 5,
+    "lowImportanceCount": 34,
+    "categoryBreakdown": {
+      "open-source": 6,
+      "tooling": 4,
+      "agent": 6,
+      "research": 3,
+      "industry-news": 5,
+      "tutorial": 0,
+      "other": 18
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "7349867a4cf6",
+      "title": "Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments",
+      "summary": "Google researchers open sourced EnvHarness, a framework that dynamically adapts agent-training environments to an agent…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "7349867a4cf6"
+      ]
+    },
+    {
+      "itemId": "9d8e1cc9ed65",
+      "title": "AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance",
+      "summary": "A recent InfoQ webinar examined operational challenges in deploying agentic systems. Key points included issues like se…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "9d8e1cc9ed65"
+      ]
+    },
+    {
+      "itemId": "d54ce541933e",
+      "title": "Reverse Engineer Anything Project Brings AI Agents to Binary Analysis",
+      "summary": "Reverse Engineer Anything (REA) is an open-source project with over 200K GitHub stars that connects coding agents such …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "d54ce541933e"
+      ]
+    },
+    {
+      "itemId": "3a3d2f869e46",
+      "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+      "summary": "Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipula…",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "3a3d2f869e46"
+      ]
+    },
+    {
+      "itemId": "647750f91fce",
+      "title": "StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context",
+      "summary": "StepFun has released Step 5 Preview as open weights. FP8 and BF16 checkpoints are live on Hugging Face and ModelScope. …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "647750f91fce"
+      ]
+    },
+    {
+      "itemId": "5377325783c4",
+      "title": "Lazyagents – Lazygit for AI coding agents",
+      "summary": "Article URL: https://github.com/rogeriojunior31/lazyagents Comments URL: https://news.ycombinator.com/item?id=50136701 …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "5377325783c4"
+      ]
+    },
+    {
+      "itemId": "fbacee60bd9a",
+      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "fbacee60bd9a"
+      ]
+    },
+    {
+      "itemId": "b889497c55d6",
+      "title": "Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents",
+      "summary": "Perplexity has open-sourced SPACE, the sandbox platform behind every task in Perplexity Computer. The Perplexity SPACE …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "b889497c55d6"
+      ]
+    },
+    {
+      "itemId": "d294db57c626",
+      "title": "Grafana Applies SLOs and Error Budgets to AI Agent Behaviour",
+      "summary": "Grafana Labs is proposing a familiar reliability engineering approach for one of the less familiar problems in modern s…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "d294db57c626"
+      ]
+    },
+    {
+      "itemId": "f57e64b8cd50",
+      "title": "AWS Introduces Strands Decider 2B and Strands Box for AI Agent Development",
+      "summary": "AWS has introduced two open-source projects for AI agent development: Strands Decider 2B, a small model designed to mak…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "f57e64b8cd50"
+      ]
+    },
+    {
+      "itemId": "1e128280000b",
+      "title": "Blocking AI-bot can be a double-edged Sword",
+      "summary": "Article URL: https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web Comments URL: https://ne…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "1e128280000b"
+      ]
+    },
+    {
+      "itemId": "c85af8cb9c0d",
+      "title": "DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API",
+      "summary": "DeepSeek has just released DeepSeek-V4.1-Flash-1017, a new checkpoint of its V4.1-Flash model. It is live on the DeepSe…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "c85af8cb9c0d"
+      ]
+    },
+    {
+      "itemId": "e3afab90f36c",
+      "title": "How Itaú is building generative AI for its entire customer base",
+      "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to cust…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e3afab90f36c"
+      ]
+    },
+    {
+      "itemId": "2193619b6a2f",
+      "title": "Benefit Street Partners answers questions faster with Codex",
+      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and fast…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2193619b6a2f"
+      ]
+    },
+    {
+      "itemId": "7b577150654f",
+      "title": "Bringing GPT-Rosalind to academic research labs",
+      "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to a…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "7b577150654f"
+      ]
+    },
+    {
+      "itemId": "b764de8c621d",
+      "title": "Teaching students to think and learn through questions",
+      "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b764de8c621d"
+      ]
+    },
+    {
+      "itemId": "51625cbf6ccb",
+      "title": "Liquid AI Releases d1-ultra: A Multimodal Decision Model That Scores 65 on the AA Decision Index",
+      "summary": "Liquid AI released d1-ultra, a text and image decision model that returns calibrated probabilities in 1 forward pass. I…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "51625cbf6ccb"
+      ]
+    },
+    {
+      "itemId": "4431775c12a0",
+      "title": "说真话就能拿10万？网易叭哥说重金求“真需求”，不卡专业学历",
+      "summary": "网易首个AI原生语音Agent「网易叭哥说」上线 “用户荣誉联创计划”，投入 10 万元征集产品建议",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "4431775c12a0"
+      ]
+    },
+    {
+      "itemId": "4215c0822902",
+      "title": "Munich dumps proprietary for open source (again) – but no Linux desktop",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "4215c0822902"
+      ]
+    },
+    {
+      "itemId": "147510c2c7a0",
+      "title": "Sullivan & Cromwell brings legal expertise into agreement review",
+      "summary": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "147510c2c7a0"
+      ]
+    },
+    {
+      "itemId": "2a0a946d131b",
+      "title": "Amazon Acquires DuckLabs and Integrates DuckDB in Amazon Aurora PostgreSQL",
+      "summary": "Amazon has acquired DuckLabs, the company behind the analytical database DuckDB. Co-founders Hannes Mühleisen and Mark …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2a0a946d131b"
+      ]
+    },
+    {
+      "itemId": "bdbc16e65e61",
+      "title": "Plug-in solar is legal in these 10 states now – how it could save you money",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "bdbc16e65e61"
+      ]
+    },
+    {
+      "itemId": "4e2cca4d486b",
+      "title": "范式智能联合睿思智联推出开源一站式 生产级 AI 部署平台 “模域ModelSphere”",
+      "summary": "范式智能技术集团有限公司联合北京睿思智联科技有限公司宣布，一站式生产级 AI 部署平台“模域”正式上线。",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "4e2cca4d486b"
+      ]
+    },
+    {
+      "itemId": "c494cd4d863b",
+      "title": "20 Jev Alternatives: The Decision Models Taking On TypeSafe in 2026",
+      "summary": "TypeSafe launched Jev on September 15, 2026. It is a decision model, not a chatbot. You define the allowed answers, and…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c494cd4d863b"
+      ]
+    },
+    {
+      "itemId": "591b784aa1be",
+      "title": "霸榜三大基准！优必选 Thinker-WM：多模态统一表征，单模型实现六大能力",
+      "summary": "优必选 Thinker-WM在三大公认具身世界模型基准评测中全部拿下第一名",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "591b784aa1be"
+      ]
+    },
+    {
+      "itemId": "f078b55ed6e9",
+      "title": "What 500 MiniMax Code Tests Revealed About AI Saying \"Done\"",
+      "summary": "Article URL: https://defuzex.ai/blog/what-500-minimax-code-tests-revealed-about-ai-saying-done Comments URL: https://ne…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f078b55ed6e9"
+      ]
+    },
+    {
+      "itemId": "12a3928a7bc2",
+      "title": "Drunken Goddess Reflux Public Demo Canceled over AI Imitation Concerns",
+      "summary": "Article URL: https://noisypixel.net/drunken-goddess-reflux-public-demo-canceled-ai-imitation-concerns/ Comments URL: ht…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "12a3928a7bc2"
+      ]
+    },
+    {
+      "itemId": "34c06c10c338",
+      "title": "Anthropic warns AI models could self-replicate across home devices",
+      "summary": "Article URL: https://www.cnbc.com/2026/10/13/anthropic-ai-models-self-replication-smart-devices.html Comments URL: http…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "34c06c10c338"
+      ]
+    },
+    {
+      "itemId": "42ccb2bace62",
+      "title": "AI Reviews All-In",
+      "summary": "Article URL: https://all-in-claim-check.pages.dev/ Comments URL: https://news.ycombinator.com/item?id=50136673 Points: …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "42ccb2bace62"
+      ]
+    },
+    {
+      "itemId": "5478efc66827",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5478efc66827"
+      ]
+    },
+    {
+      "itemId": "63a2fe4a6815",
+      "title": "Have a Meta business account? You’re consenting to AI scraping now, legal experts say",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "63a2fe4a6815"
+      ]
+    },
+    {
+      "itemId": "e37fef0f49a7",
+      "title": "Anthropic gives third-party auditors ’employee-like access’ in AI industry first",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e37fef0f49a7"
+      ]
+    },
+    {
+      "itemId": "a58d0e049666",
+      "title": "Want an iPhone Duo before 2027? Don’t preorder from Apple – try this instead",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a58d0e049666"
+      ]
+    },
+    {
+      "itemId": "f18765cd6b91",
+      "title": "How many jobs is your state losing to AI? This dashboard tracks the cuts – and the cost",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f18765cd6b91"
+      ]
+    },
+    {
+      "itemId": "92d60b58598f",
+      "title": "Introducing Playground: Create and play custom games",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "92d60b58598f"
+      ]
+    },
+    {
+      "itemId": "1d5fed04e570",
+      "title": "The latest AI news we announced in September 2026",
+      "summary": "Here are Google’s latest AI updates from September 2026",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1d5fed04e570"
+      ]
+    },
+    {
+      "itemId": "927c795585b6",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "927c795585b6"
+      ]
+    },
+    {
+      "itemId": "5f226c85d6ea",
+      "title": "Google Beam expands with new regions, partners, and customers",
+      "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5f226c85d6ea"
+      ]
+    },
+    {
+      "itemId": "429ba3c49baa",
+      "title": "New experts join Google’s AI & Economy team",
+      "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "429ba3c49baa"
+      ]
+    },
+    {
+      "itemId": "a6f8278b4a08",
+      "title": "清华特奖得主AI创业再+1：GeoPT一作入局物理世界模型",
+      "summary": "从搭载物理建模能力的世界模型切入",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a6f8278b4a08"
+      ]
+    },
+    {
+      "itemId": "fc5c1298091a",
+      "title": "从“看懂世界”到“预演下一步”：世界模型与 VLA，如何让机器人拥有真正的“具身大脑”？",
+      "summary": "VLA解决“能干”，世界模型解决“想清楚再干”",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fc5c1298091a"
+      ]
+    },
+    {
+      "itemId": "5be2585d9218",
+      "title": "68岁亚马逊CTO：别让恐惧，替企业做AI决策",
+      "summary": "经验没有压缩算法",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5be2585d9218"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "7349867a4cf6",
+      "title": "Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments",
+      "takeaway": "Google researchers open sourced EnvHarness, a framework that dynamically adapts agent-training environments to an agent…",
+      "evidenceItemIds": [
+        "7349867a4cf6"
+      ]
+    },
+    {
+      "itemId": "9d8e1cc9ed65",
+      "title": "AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance",
+      "takeaway": "A recent InfoQ webinar examined operational challenges in deploying agentic systems. Key points included issues like se…",
+      "evidenceItemIds": [
+        "9d8e1cc9ed65"
+      ]
+    },
+    {
+      "itemId": "d54ce541933e",
+      "title": "Reverse Engineer Anything Project Brings AI Agents to Binary Analysis",
+      "takeaway": "Reverse Engineer Anything (REA) is an open-source project with over 200K GitHub stars that connects coding agents such …",
+      "evidenceItemIds": [
+        "d54ce541933e"
+      ]
+    },
+    {
+      "itemId": "3a3d2f869e46",
+      "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+      "takeaway": "Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipula…",
+      "evidenceItemIds": [
+        "3a3d2f869e46"
+      ]
+    },
+    {
+      "itemId": "647750f91fce",
+      "title": "StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context",
+      "takeaway": "StepFun has released Step 5 Preview as open weights. FP8 and BF16 checkpoints are live on Hugging Face and ModelScope. …",
+      "evidenceItemIds": [
+        "647750f91fce"
+      ]
+    },
+    {
+      "itemId": "5377325783c4",
+      "title": "Lazyagents – Lazygit for AI coding agents",
+      "takeaway": "Article URL: https://github.com/rogeriojunior31/lazyagents Comments URL: https://news.ycombinator.com/item?id=50136701 …",
+      "evidenceItemIds": [
+        "5377325783c4"
+      ]
+    },
+    {
+      "itemId": "fbacee60bd9a",
+      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "takeaway": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10…",
+      "evidenceItemIds": [
+        "fbacee60bd9a"
+      ]
+    },
+    {
+      "itemId": "b889497c55d6",
+      "title": "Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents",
+      "takeaway": "Perplexity has open-sourced SPACE, the sandbox platform behind every task in Perplexity Computer. The Perplexity SPACE …",
+      "evidenceItemIds": [
+        "b889497c55d6"
+      ]
+    },
+    {
+      "itemId": "d294db57c626",
+      "title": "Grafana Applies SLOs and Error Budgets to AI Agent Behaviour",
+      "takeaway": "Grafana Labs is proposing a familiar reliability engineering approach for one of the less familiar problems in modern s…",
+      "evidenceItemIds": [
+        "d294db57c626"
+      ]
+    },
+    {
+      "itemId": "f57e64b8cd50",
+      "title": "AWS Introduces Strands Decider 2B and Strands Box for AI Agent Development",
+      "takeaway": "AWS has introduced two open-source projects for AI agent development: Strands Decider 2B, a small model designed to mak…",
+      "evidenceItemIds": [
+        "f57e64b8cd50"
+      ]
+    },
+    {
+      "itemId": "1e128280000b",
+      "title": "Blocking AI-bot can be a double-edged Sword",
+      "takeaway": "Article URL: https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web Comments URL: https://ne…",
+      "evidenceItemIds": [
+        "1e128280000b"
+      ]
+    },
+    {
+      "itemId": "c85af8cb9c0d",
+      "title": "DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API",
+      "takeaway": "DeepSeek has just released DeepSeek-V4.1-Flash-1017, a new checkpoint of its V4.1-Flash model. It is live on the DeepSe…",
+      "evidenceItemIds": [
+        "c85af8cb9c0d"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments》、《AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance》、《Reverse Engineer Anything Project Brings AI Agents to Binary Analysis》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API》、《How Itaú is building generative AI for its entire customer base》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "c85af8cb9c0d",
+        "e3afab90f36c",
+        "b764de8c621d",
+        "51625cbf6ccb"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 4 条，建议优先阅读《Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments》、《Reverse Engineer Anything Project Brings AI Agents to Binary Analysis》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "7349867a4cf6",
+        "d54ce541933e",
+        "5377325783c4",
+        "b889497c55d6"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 4 条，建议优先阅读《AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance》、《StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "9d8e1cc9ed65",
+        "647750f91fce",
+        "fbacee60bd9a",
+        "d294db57c626"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《What 500 MiniMax Code Tests Revealed About AI Saying \"Done\"》、《Drunken Goddess Reflux Public Demo Canceled over AI Imitation Concerns》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "f078b55ed6e9",
+        "12a3928a7bc2",
+        "34c06c10c338",
+        "42ccb2bace62"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "74c26038eadf009be01d3b8fbbeccf81fac3c92fd5a85e212c92666e81b46201",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-10-18T01:31:48.553Z",
+    "finishedAt": "2026-10-18T02:32:14.567Z",
+    "durationMs": 3626015,
+    "inputCount": 42,
+    "processedCount": 42,
+    "fallbackCount": 42,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 42,
+    "failureStats": {
+      "totalFailed": 42,
+      "timeout": 1,
+      "http": 29,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 12,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 79,
+      "splitRetryCount": 37
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-11",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-04",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 1,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-10-18T02:32:14.654Z",
+    "finishedAt": "2026-10-18T02:32:14.737Z",
+    "durationMs": 83,
+    "inputCount": 42,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 0,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 30
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "7349867a4cf6",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments",
+      "link": "https://www.infoq.com/news/2026/10/envharness-self-evolving-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Google researchers open sourced EnvHarness, a framework that dynamically adapts agent-training environments to an agent's weaknesses without modifying the agent, environment, or evaluation system. According to the researchers, this approach can improve both learning effectiveness and efficiency while helping agents overcome their weaknesses. By Sergio De Simone",
+      "publishedAt": "2026-10-16T19:00:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 127,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "9d8e1cc9ed65",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance",
+      "link": "https://www.infoq.com/news/2026/10/ai-systems-production/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "A recent InfoQ webinar examined operational challenges in deploying agentic systems. Key points included issues like semantic and embedding drift, which can lead to significant errors. Experts discussed the need for automated code reviews, continuous evaluation of models, and enhanced privacy measures. The session emphasised a strategic approach to deployment and security management. By Olimpiu Pop",
+      "publishedAt": "2026-10-16T14:14:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 91.11,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 123,
+        "ruleScoreNormalized": 91.11111111111111,
+        "finalScore": 91.11,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "d54ce541933e",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Reverse Engineer Anything Project Brings AI Agents to Binary Analysis",
+      "link": "https://www.infoq.com/news/2026/10/reverse-engineer-anything/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Reverse Engineer Anything (REA) is an open-source project with over 200K GitHub stars that connects coding agents such as Claude Code and Codex to reverse-engineering tools like Ghidra, Hopper, and IDA. The project lets developers inspect compiled binaries, trace function calls, and investigate how applications implement specific features. By Renato Losio",
+      "publishedAt": "2026-10-17T06:28:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 88.89,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 122,
+        "ruleScoreNormalized": 88.88888888888889,
+        "finalScore": 88.89,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "3a3d2f869e46",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+      "link": "https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/",
+      "contentSnippet": "Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipulation. The REKI vision-language-action model is pretrained only on public data. It also carries a cheap memory of its recent past. On three out-of-distribution benchmarks, only models about twice its size beat it. All weights are live on […] The post Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-17T20:22:11.000Z",
+      "category": "research",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 80,
+      "importance": "medium",
+      "recommendationReason": "评测与性能信息",
+      "scoreBreakdown": {
+        "ruleScore": 118,
+        "ruleScoreNormalized": 80,
+        "finalScore": 80,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "647750f91fce",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context",
+      "link": "https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/",
+      "contentSnippet": "StepFun has released Step 5 Preview as open weights. FP8 and BF16 checkpoints are live on Hugging Face and ModelScope. Step 5 Preview is a sparse Mixture-of-Experts model from StepFun built for long-horizon agentic work. It has 600B total parameters, 27B active per token and up to 1M tokens of context. For developers, this is […] The post StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-17T06:29:55.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 80,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 118,
+        "ruleScoreNormalized": 80,
+        "finalScore": 80,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：42/42",
+    "LLM 分类打分回退明细（前 3/42）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07235487e7d626e2cc6bb0b22e575e9b\"} | minimax_timeout:90000ms | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"072354e3ae5f70d3572999deee32be2c\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=1：http=29：business=0：missing_content=0：invalid_json=0：quality=0：other=12",
+    "LLM 分类打分重试统计：batch_retry=79, split_retry=37",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：fetch failed | fetch failed | fetch failed",
+    "LLM 失败分类：missing_content=0, timeout=0, http=0, business=0, invalid_json=0, quality=0, other=30",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments\n- AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance\n- Reverse Engineer Anything Project Brings AI Agents to Binary Analysis\n- Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation\n- StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context\n\n### 分类覆盖（大纲）\n- open-source: 6 条\n- agent: 6 条\n- research: 3 条\n- tooling: 4 条\n- other: 18 条\n- industry-news: 5 条",
+    "rankedItems": [
+      {
+        "id": "7349867a4cf6",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments",
+        "link": "https://www.infoq.com/news/2026/10/envharness-self-evolving-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google researchers open sourced EnvHarness, a framework that dynamically adapts agent-training environments to an agent's weaknesses without modifying the agent, environment, or evaluation system. According to the researchers, this approach can improve both learning effectiveness and efficiency while helping agents overcome their weaknesses. By Sergio De Simone",
+        "publishedAt": "2026-10-16T19:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 127,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9d8e1cc9ed65",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance",
+        "link": "https://www.infoq.com/news/2026/10/ai-systems-production/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A recent InfoQ webinar examined operational challenges in deploying agentic systems. Key points included issues like semantic and embedding drift, which can lead to significant errors. Experts discussed the need for automated code reviews, continuous evaluation of models, and enhanced privacy measures. The session emphasised a strategic approach to deployment and security management. By Olimpiu Pop",
+        "publishedAt": "2026-10-16T14:14:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 91.11,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 91.11111111111111,
+          "finalScore": 91.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d54ce541933e",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Reverse Engineer Anything Project Brings AI Agents to Binary Analysis",
+        "link": "https://www.infoq.com/news/2026/10/reverse-engineer-anything/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Reverse Engineer Anything (REA) is an open-source project with over 200K GitHub stars that connects coding agents such as Claude Code and Codex to reverse-engineering tools like Ghidra, Hopper, and IDA. The project lets developers inspect compiled binaries, trace function calls, and investigate how applications implement specific features. By Renato Losio",
+        "publishedAt": "2026-10-17T06:28:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 88.89,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 122,
+          "ruleScoreNormalized": 88.88888888888889,
+          "finalScore": 88.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3a3d2f869e46",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+        "link": "https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/",
+        "contentSnippet": "Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipulation. The REKI vision-language-action model is pretrained only on public data. It also carries a cheap memory of its recent past. On three out-of-distribution benchmarks, only models about twice its size beat it. All weights are live on […] The post Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-17T20:22:11.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 80,
+        "importance": "medium",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 80,
+          "finalScore": 80,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "647750f91fce",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context",
+        "link": "https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/",
+        "contentSnippet": "StepFun has released Step 5 Preview as open weights. FP8 and BF16 checkpoints are live on Hugging Face and ModelScope. Step 5 Preview is a sparse Mixture-of-Experts model from StepFun built for long-horizon agentic work. It has 600B total parameters, 27B active per token and up to 1M tokens of context. For developers, this is […] The post StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-17T06:29:55.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 80,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 80,
+          "finalScore": 80,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5377325783c4",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Lazyagents – Lazygit for AI coding agents",
+        "link": "https://github.com/rogeriojunior31/lazyagents",
+        "contentSnippet": "Article URL: https://github.com/rogeriojunior31/lazyagents Comments URL: https://news.ycombinator.com/item?id=50136701 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-18T00:42:19.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 77.78,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 77.77777777777779,
+          "finalScore": 77.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fbacee60bd9a",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+        "link": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+        "contentSnippet": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+        "publishedAt": "2026-10-16T00:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.33,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 73.33333333333333,
+          "finalScore": 73.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b889497c55d6",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents",
+        "link": "https://www.marktechpost.com/2026/10/16/perplexity-open-sources-space-firecracker-microvm-sandbox-ai-agents/",
+        "contentSnippet": "Perplexity has open-sourced SPACE, the sandbox platform behind every task in Perplexity Computer. The Perplexity SPACE sandbox gives each agent task its own Firecracker microVM. Credentials and outbound traffic are controlled from outside that VM. The code ships under Apache 2.0 on GitHub. For teams building coding or browsing agents, this is a production-tested isolation […] The post Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-17T00:09:12.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.33,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 73.33333333333333,
+          "finalScore": 73.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d294db57c626",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Grafana Applies SLOs and Error Budgets to AI Agent Behaviour",
+        "link": "https://www.infoq.com/news/2026/10/grafana-slo-ai-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Grafana Labs is proposing a familiar reliability engineering approach for one of the less familiar problems in modern software: how to measure whether an AI agent is actually behaving well. By Craig Risi",
+        "publishedAt": "2026-10-16T12:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 51.11,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 51.11111111111111,
+          "finalScore": 51.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f57e64b8cd50",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "AWS Introduces Strands Decider 2B and Strands Box for AI Agent Development",
+        "link": "https://www.infoq.com/news/2026/10/aws-strands-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "AWS has introduced two open-source projects for AI agent development: Strands Decider 2B, a small model designed to make decisions within agent workflows, and Strands Box, a sandbox for controlling agent execution. Both projects address different aspects of building agents that use tools, execute code, and interact with external systems. By Daniel Dominguez",
+        "publishedAt": "2026-10-16T10:47:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 51.11,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 51.11111111111111,
+          "finalScore": 51.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1e128280000b",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Blocking AI-bot can be a double-edged Sword",
+        "link": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+        "contentSnippet": "Article URL: https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web Comments URL: https://news.ycombinator.com/item?id=50136684 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-18T00:39:15.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 51.11,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 51.11111111111111,
+          "finalScore": 51.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c85af8cb9c0d",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API",
+        "link": "https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/",
+        "contentSnippet": "DeepSeek has just released DeepSeek-V4.1-Flash-1017, a new checkpoint of its V4.1-Flash model. It is live on the DeepSeek website, app and API. DeepSeek claims stronger scores, faster task completion and shorter outputs than the September V4.1-Flash release. The company calls it a Pareto improvement in performance and cost. Alongside it, DeepSeek opened its Search and […] The post DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-17T08:53:58.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 46.67,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 103,
+          "ruleScoreNormalized": 46.666666666666664,
+          "finalScore": 46.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e3afab90f36c",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How Itaú is building generative AI for its entire customer base",
+        "link": "https://openai.com/index/itau-generative-ai",
+        "contentSnippet": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
+        "publishedAt": "2026-10-16T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 40,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 40,
+          "finalScore": 40,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2193619b6a2f",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Benefit Street Partners answers questions faster with Codex",
+        "link": "https://openai.com/index/benefit-street-partners",
+        "contentSnippet": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
+        "publishedAt": "2026-10-16T00:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 40,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 40,
+          "finalScore": 40,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7b577150654f",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Bringing GPT-Rosalind to academic research labs",
+        "link": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+        "contentSnippet": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
+        "publishedAt": "2026-10-15T19:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 40,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 40,
+          "finalScore": 40,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b764de8c621d",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Teaching students to think and learn through questions",
+        "link": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+        "contentSnippet": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
+        "publishedAt": "2026-10-15T13:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 40,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 40,
+          "finalScore": 40,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "51625cbf6ccb",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Liquid AI Releases d1-ultra: A Multimodal Decision Model That Scores 65 on the AA Decision Index",
+        "link": "https://www.marktechpost.com/2026/10/15/liquid-ai-d1-ultra-decision-model/",
+        "contentSnippet": "Liquid AI released d1-ultra, a text and image decision model that returns calibrated probabilities in 1 forward pass. It scores 65 on the Artificial Analysis Decision Index and costs $0.042 per million input tokens. The post Liquid AI Releases d1-ultra: A Multimodal Decision Model That Scores 65 on the AA Decision Index appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-16T06:26:41.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 35.56,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 35.55555555555556,
+          "finalScore": 35.56,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4431775c12a0",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "说真话就能拿10万？网易叭哥说重金求“真需求”，不卡专业学历",
+        "link": "https://www.qbitai.com/2026/10/503861.html",
+        "contentSnippet": "网易首个AI原生语音Agent「网易叭哥说」上线 “用户荣誉联创计划”，投入 10 万元征集产品建议",
+        "publishedAt": "2026-10-16T08:07:33.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 33.33,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 33.33333333333333,
+          "finalScore": 33.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4215c0822902",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Munich dumps proprietary for open source (again) – but no Linux desktop",
+        "link": "https://www.zdnet.com/business/munich-proprietary-open-source-no-linux-desktop/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-16T17:11:35.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 31.11,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 96,
+          "ruleScoreNormalized": 31.11111111111111,
+          "finalScore": 31.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "147510c2c7a0",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Sullivan & Cromwell brings legal expertise into agreement review",
+        "link": "https://openai.com/index/sullivan-cromwell",
+        "contentSnippet": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a draft agreement.",
+        "publishedAt": "2026-10-15T00:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 28.888888888888886,
+          "finalScore": 28.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2a0a946d131b",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Amazon Acquires DuckLabs and Integrates DuckDB in Amazon Aurora PostgreSQL",
+        "link": "https://www.infoq.com/news/2026/10/amazon-acquires-ducklabs/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Amazon has acquired DuckLabs, the company behind the analytical database DuckDB. Co-founders Hannes Mühleisen and Mark Raasveldt will continue to lead the team under AWS. The acquisition aims to enhance the development and reach of DuckDB while maintaining its open-source status. Amazon Aurora PostgreSQL gets its first DuckDB-powered feature following the acquisition. By Gianmarco Nalin",
+        "publishedAt": "2026-10-17T06:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 28.888888888888886,
+          "finalScore": 28.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "bdbc16e65e61",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Plug-in solar is legal in these 10 states now – how it could save you money",
+        "link": "https://www.zdnet.com/uncategorized/plug-in-solar-balcony-solar-legalization-2026/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-17T13:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 26.67,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 26.666666666666668,
+          "finalScore": 26.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4e2cca4d486b",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "范式智能联合睿思智联推出开源一站式 生产级 AI 部署平台 “模域ModelSphere”",
+        "link": "https://www.qbitai.com/2026/10/503829.html",
+        "contentSnippet": "范式智能技术集团有限公司联合北京睿思智联科技有限公司宣布，一站式生产级 AI 部署平台“模域”正式上线。",
+        "publishedAt": "2026-10-16T07:16:11.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 26.67,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 26.666666666666668,
+          "finalScore": 26.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c494cd4d863b",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "20 Jev Alternatives: The Decision Models Taking On TypeSafe in 2026",
+        "link": "https://www.marktechpost.com/2026/10/17/20-jev-alternatives-the-decision-models-taking-on-typesafe-in-2026/",
+        "contentSnippet": "TypeSafe launched Jev on September 15, 2026. It is a decision model, not a chatbot. You define the allowed answers, and Jev returns a label, a score or a yes/no probability. In about 4 weeks, at least 20 Jev alternatives shipped. They come from Cloudflare, OpenAI, Perplexity, Liquid AI, AWS’s Strands Labs and independent developers. […] The post 20 Jev Alternatives: The Decision Models Taking On TypeSafe in 2026 appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-17T07:26:39.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 24.44,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 93,
+          "ruleScoreNormalized": 24.444444444444443,
+          "finalScore": 24.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "591b784aa1be",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "霸榜三大基准！优必选 Thinker-WM：多模态统一表征，单模型实现六大能力",
+        "link": "https://www.qbitai.com/2026/10/503843.html",
+        "contentSnippet": "优必选 Thinker-WM在三大公认具身世界模型基准评测中全部拿下第一名",
+        "publishedAt": "2026-10-16T08:00:31.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.22,
+        "importance": "low",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 22.22222222222222,
+          "finalScore": 22.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f078b55ed6e9",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "What 500 MiniMax Code Tests Revealed About AI Saying \"Done\"",
+        "link": "https://defuzex.ai/blog/what-500-minimax-code-tests-revealed-about-ai-saying-done",
+        "contentSnippet": "Article URL: https://defuzex.ai/blog/what-500-minimax-code-tests-revealed-about-ai-saying-done Comments URL: https://news.ycombinator.com/item?id=50136796 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-18T00:59:44.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 17.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 17.77777777777778,
+          "finalScore": 17.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "12a3928a7bc2",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Drunken Goddess Reflux Public Demo Canceled over AI Imitation Concerns",
+        "link": "https://noisypixel.net/drunken-goddess-reflux-public-demo-canceled-ai-imitation-concerns/",
+        "contentSnippet": "Article URL: https://noisypixel.net/drunken-goddess-reflux-public-demo-canceled-ai-imitation-concerns/ Comments URL: https://news.ycombinator.com/item?id=50136741 Points: 1 # Comments: 1",
+        "publishedAt": "2026-10-18T00:50:48.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 17.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 17.77777777777778,
+          "finalScore": 17.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "34c06c10c338",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Anthropic warns AI models could self-replicate across home devices",
+        "link": "https://www.cnbc.com/2026/10/13/anthropic-ai-models-self-replication-smart-devices.html",
+        "contentSnippet": "Article URL: https://www.cnbc.com/2026/10/13/anthropic-ai-models-self-replication-smart-devices.html Comments URL: https://news.ycombinator.com/item?id=50136716 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-18T00:44:06.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 17.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 17.77777777777778,
+          "finalScore": 17.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "42ccb2bace62",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI Reviews All-In",
+        "link": "https://all-in-claim-check.pages.dev/",
+        "contentSnippet": "Article URL: https://all-in-claim-check.pages.dev/ Comments URL: https://news.ycombinator.com/item?id=50136673 Points: 1 # Comments: 2",
+        "publishedAt": "2026-10-18T00:37:15.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 17.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 17.77777777777778,
+          "finalScore": 17.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5478efc66827",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "contentSnippet": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "publishedAt": "2026-10-13T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 11.11,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 11.11111111111111,
+          "finalScore": 11.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "63a2fe4a6815",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Have a Meta business account? You’re consenting to AI scraping now, legal experts say",
+        "link": "https://www.zdnet.com/uncategorized/meta-business-account-data-ai-scraping-terms/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-16T19:36:02.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 4.44,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 4.444444444444445,
+          "finalScore": 4.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e37fef0f49a7",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Anthropic gives third-party auditors ’employee-like access’ in AI industry first",
+        "link": "https://www.zdnet.com/uncategorized/anthropic-embed-third-party-ai-auditors-safety/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-16T17:10:27.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 4.44,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 4.444444444444445,
+          "finalScore": 4.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a58d0e049666",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Want an iPhone Duo before 2027? Don’t preorder from Apple – try this instead",
+        "link": "https://www.zdnet.com/tech/iphone-duo-preorders-delay-supply/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-16T16:44:50.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 4.44,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 4.444444444444445,
+          "finalScore": 4.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f18765cd6b91",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "How many jobs is your state losing to AI? This dashboard tracks the cuts – and the cost",
+        "link": "https://www.zdnet.com/innovation/ai-job-cuts-wage-loss-by-state-tracker/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-16T11:47:39.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 4.44,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 4.444444444444445,
+          "finalScore": 4.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "92d60b58598f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Introducing Playground: Create and play custom games",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+        "contentSnippet": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "publishedAt": "2026-10-07T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1d5fed04e570",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in September 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from September 2026",
+        "publishedAt": "2026-10-02T15:00:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "927c795585b6",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "contentSnippet": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "publishedAt": "2026-09-28T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5f226c85d6ea",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "link": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+        "contentSnippet": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "publishedAt": "2026-09-23T18:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "429ba3c49baa",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "New experts join Google’s AI & Economy team",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+        "contentSnippet": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+        "publishedAt": "2026-09-18T14:00:00.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a6f8278b4a08",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "清华特奖得主AI创业再+1：GeoPT一作入局物理世界模型",
+        "link": "https://www.qbitai.com/2026/10/503880.html",
+        "contentSnippet": "从搭载物理建模能力的世界模型切入",
+        "publishedAt": "2026-10-16T12:54:54.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fc5c1298091a",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "从“看懂世界”到“预演下一步”：世界模型与 VLA，如何让机器人拥有真正的“具身大脑”？",
+        "link": "https://www.qbitai.com/2026/10/503865.html",
+        "contentSnippet": "VLA解决“能干”，世界模型解决“想清楚再干”",
+        "publishedAt": "2026-10-16T08:12:01.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5be2585d9218",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "68岁亚马逊CTO：别让恐惧，替企业做AI决策",
+        "link": "https://www.qbitai.com/2026/10/503815.html",
+        "contentSnippet": "经验没有压缩算法",
+        "publishedAt": "2026-10-16T07:01:31.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "7349867a4cf6",
+        "title": "Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments",
+        "summary": "Google researchers open sourced EnvHarness, a framework that dynamically adapts agent-training environments to an agent…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "7349867a4cf6"
+        ]
+      },
+      {
+        "itemId": "9d8e1cc9ed65",
+        "title": "AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance",
+        "summary": "A recent InfoQ webinar examined operational challenges in deploying agentic systems. Key points included issues like se…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "9d8e1cc9ed65"
+        ]
+      },
+      {
+        "itemId": "d54ce541933e",
+        "title": "Reverse Engineer Anything Project Brings AI Agents to Binary Analysis",
+        "summary": "Reverse Engineer Anything (REA) is an open-source project with over 200K GitHub stars that connects coding agents such …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "d54ce541933e"
+        ]
+      },
+      {
+        "itemId": "3a3d2f869e46",
+        "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+        "summary": "Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipula…",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "3a3d2f869e46"
+        ]
+      },
+      {
+        "itemId": "647750f91fce",
+        "title": "StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context",
+        "summary": "StepFun has released Step 5 Preview as open weights. FP8 and BF16 checkpoints are live on Hugging Face and ModelScope. …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "647750f91fce"
+        ]
+      },
+      {
+        "itemId": "5377325783c4",
+        "title": "Lazyagents – Lazygit for AI coding agents",
+        "summary": "Article URL: https://github.com/rogeriojunior31/lazyagents Comments URL: https://news.ycombinator.com/item?id=50136701 …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "5377325783c4"
+        ]
+      },
+      {
+        "itemId": "fbacee60bd9a",
+        "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+        "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "fbacee60bd9a"
+        ]
+      },
+      {
+        "itemId": "b889497c55d6",
+        "title": "Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents",
+        "summary": "Perplexity has open-sourced SPACE, the sandbox platform behind every task in Perplexity Computer. The Perplexity SPACE …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "b889497c55d6"
+        ]
+      },
+      {
+        "itemId": "d294db57c626",
+        "title": "Grafana Applies SLOs and Error Budgets to AI Agent Behaviour",
+        "summary": "Grafana Labs is proposing a familiar reliability engineering approach for one of the less familiar problems in modern s…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "d294db57c626"
+        ]
+      },
+      {
+        "itemId": "f57e64b8cd50",
+        "title": "AWS Introduces Strands Decider 2B and Strands Box for AI Agent Development",
+        "summary": "AWS has introduced two open-source projects for AI agent development: Strands Decider 2B, a small model designed to mak…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "f57e64b8cd50"
+        ]
+      },
+      {
+        "itemId": "1e128280000b",
+        "title": "Blocking AI-bot can be a double-edged Sword",
+        "summary": "Article URL: https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web Comments URL: https://ne…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "1e128280000b"
+        ]
+      },
+      {
+        "itemId": "c85af8cb9c0d",
+        "title": "DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API",
+        "summary": "DeepSeek has just released DeepSeek-V4.1-Flash-1017, a new checkpoint of its V4.1-Flash model. It is live on the DeepSe…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "c85af8cb9c0d"
+        ]
+      },
+      {
+        "itemId": "e3afab90f36c",
+        "title": "How Itaú is building generative AI for its entire customer base",
+        "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to cust…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e3afab90f36c"
+        ]
+      },
+      {
+        "itemId": "2193619b6a2f",
+        "title": "Benefit Street Partners answers questions faster with Codex",
+        "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and fast…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2193619b6a2f"
+        ]
+      },
+      {
+        "itemId": "7b577150654f",
+        "title": "Bringing GPT-Rosalind to academic research labs",
+        "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to a…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "7b577150654f"
+        ]
+      },
+      {
+        "itemId": "b764de8c621d",
+        "title": "Teaching students to think and learn through questions",
+        "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b764de8c621d"
+        ]
+      },
+      {
+        "itemId": "51625cbf6ccb",
+        "title": "Liquid AI Releases d1-ultra: A Multimodal Decision Model That Scores 65 on the AA Decision Index",
+        "summary": "Liquid AI released d1-ultra, a text and image decision model that returns calibrated probabilities in 1 forward pass. I…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "51625cbf6ccb"
+        ]
+      },
+      {
+        "itemId": "4431775c12a0",
+        "title": "说真话就能拿10万？网易叭哥说重金求“真需求”，不卡专业学历",
+        "summary": "网易首个AI原生语音Agent「网易叭哥说」上线 “用户荣誉联创计划”，投入 10 万元征集产品建议",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "4431775c12a0"
+        ]
+      },
+      {
+        "itemId": "4215c0822902",
+        "title": "Munich dumps proprietary for open source (again) – but no Linux desktop",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "4215c0822902"
+        ]
+      },
+      {
+        "itemId": "147510c2c7a0",
+        "title": "Sullivan & Cromwell brings legal expertise into agreement review",
+        "summary": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "147510c2c7a0"
+        ]
+      },
+      {
+        "itemId": "2a0a946d131b",
+        "title": "Amazon Acquires DuckLabs and Integrates DuckDB in Amazon Aurora PostgreSQL",
+        "summary": "Amazon has acquired DuckLabs, the company behind the analytical database DuckDB. Co-founders Hannes Mühleisen and Mark …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2a0a946d131b"
+        ]
+      },
+      {
+        "itemId": "bdbc16e65e61",
+        "title": "Plug-in solar is legal in these 10 states now – how it could save you money",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "bdbc16e65e61"
+        ]
+      },
+      {
+        "itemId": "4e2cca4d486b",
+        "title": "范式智能联合睿思智联推出开源一站式 生产级 AI 部署平台 “模域ModelSphere”",
+        "summary": "范式智能技术集团有限公司联合北京睿思智联科技有限公司宣布，一站式生产级 AI 部署平台“模域”正式上线。",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "4e2cca4d486b"
+        ]
+      },
+      {
+        "itemId": "c494cd4d863b",
+        "title": "20 Jev Alternatives: The Decision Models Taking On TypeSafe in 2026",
+        "summary": "TypeSafe launched Jev on September 15, 2026. It is a decision model, not a chatbot. You define the allowed answers, and…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c494cd4d863b"
+        ]
+      },
+      {
+        "itemId": "591b784aa1be",
+        "title": "霸榜三大基准！优必选 Thinker-WM：多模态统一表征，单模型实现六大能力",
+        "summary": "优必选 Thinker-WM在三大公认具身世界模型基准评测中全部拿下第一名",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "591b784aa1be"
+        ]
+      },
+      {
+        "itemId": "f078b55ed6e9",
+        "title": "What 500 MiniMax Code Tests Revealed About AI Saying \"Done\"",
+        "summary": "Article URL: https://defuzex.ai/blog/what-500-minimax-code-tests-revealed-about-ai-saying-done Comments URL: https://ne…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f078b55ed6e9"
+        ]
+      },
+      {
+        "itemId": "12a3928a7bc2",
+        "title": "Drunken Goddess Reflux Public Demo Canceled over AI Imitation Concerns",
+        "summary": "Article URL: https://noisypixel.net/drunken-goddess-reflux-public-demo-canceled-ai-imitation-concerns/ Comments URL: ht…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "12a3928a7bc2"
+        ]
+      },
+      {
+        "itemId": "34c06c10c338",
+        "title": "Anthropic warns AI models could self-replicate across home devices",
+        "summary": "Article URL: https://www.cnbc.com/2026/10/13/anthropic-ai-models-self-replication-smart-devices.html Comments URL: http…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "34c06c10c338"
+        ]
+      },
+      {
+        "itemId": "42ccb2bace62",
+        "title": "AI Reviews All-In",
+        "summary": "Article URL: https://all-in-claim-check.pages.dev/ Comments URL: https://news.ycombinator.com/item?id=50136673 Points: …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "42ccb2bace62"
+        ]
+      },
+      {
+        "itemId": "5478efc66827",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5478efc66827"
+        ]
+      },
+      {
+        "itemId": "63a2fe4a6815",
+        "title": "Have a Meta business account? You’re consenting to AI scraping now, legal experts say",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "63a2fe4a6815"
+        ]
+      },
+      {
+        "itemId": "e37fef0f49a7",
+        "title": "Anthropic gives third-party auditors ’employee-like access’ in AI industry first",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e37fef0f49a7"
+        ]
+      },
+      {
+        "itemId": "a58d0e049666",
+        "title": "Want an iPhone Duo before 2027? Don’t preorder from Apple – try this instead",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a58d0e049666"
+        ]
+      },
+      {
+        "itemId": "f18765cd6b91",
+        "title": "How many jobs is your state losing to AI? This dashboard tracks the cuts – and the cost",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f18765cd6b91"
+        ]
+      },
+      {
+        "itemId": "92d60b58598f",
+        "title": "Introducing Playground: Create and play custom games",
+        "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "92d60b58598f"
+        ]
+      },
+      {
+        "itemId": "1d5fed04e570",
+        "title": "The latest AI news we announced in September 2026",
+        "summary": "Here are Google’s latest AI updates from September 2026",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1d5fed04e570"
+        ]
+      },
+      {
+        "itemId": "927c795585b6",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "927c795585b6"
+        ]
+      },
+      {
+        "itemId": "5f226c85d6ea",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5f226c85d6ea"
+        ]
+      },
+      {
+        "itemId": "429ba3c49baa",
+        "title": "New experts join Google’s AI & Economy team",
+        "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "429ba3c49baa"
+        ]
+      },
+      {
+        "itemId": "a6f8278b4a08",
+        "title": "清华特奖得主AI创业再+1：GeoPT一作入局物理世界模型",
+        "summary": "从搭载物理建模能力的世界模型切入",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a6f8278b4a08"
+        ]
+      },
+      {
+        "itemId": "fc5c1298091a",
+        "title": "从“看懂世界”到“预演下一步”：世界模型与 VLA，如何让机器人拥有真正的“具身大脑”？",
+        "summary": "VLA解决“能干”，世界模型解决“想清楚再干”",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fc5c1298091a"
+        ]
+      },
+      {
+        "itemId": "5be2585d9218",
+        "title": "68岁亚马逊CTO：别让恐惧，替企业做AI决策",
+        "summary": "经验没有压缩算法",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5be2585d9218"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "7349867a4cf6",
+        "title": "Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments",
+        "takeaway": "Google researchers open sourced EnvHarness, a framework that dynamically adapts agent-training environments to an agent…",
+        "evidenceItemIds": [
+          "7349867a4cf6"
+        ]
+      },
+      {
+        "itemId": "9d8e1cc9ed65",
+        "title": "AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance",
+        "takeaway": "A recent InfoQ webinar examined operational challenges in deploying agentic systems. Key points included issues like se…",
+        "evidenceItemIds": [
+          "9d8e1cc9ed65"
+        ]
+      },
+      {
+        "itemId": "d54ce541933e",
+        "title": "Reverse Engineer Anything Project Brings AI Agents to Binary Analysis",
+        "takeaway": "Reverse Engineer Anything (REA) is an open-source project with over 200K GitHub stars that connects coding agents such …",
+        "evidenceItemIds": [
+          "d54ce541933e"
+        ]
+      },
+      {
+        "itemId": "3a3d2f869e46",
+        "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+        "takeaway": "Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipula…",
+        "evidenceItemIds": [
+          "3a3d2f869e46"
+        ]
+      },
+      {
+        "itemId": "647750f91fce",
+        "title": "StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context",
+        "takeaway": "StepFun has released Step 5 Preview as open weights. FP8 and BF16 checkpoints are live on Hugging Face and ModelScope. …",
+        "evidenceItemIds": [
+          "647750f91fce"
+        ]
+      },
+      {
+        "itemId": "5377325783c4",
+        "title": "Lazyagents – Lazygit for AI coding agents",
+        "takeaway": "Article URL: https://github.com/rogeriojunior31/lazyagents Comments URL: https://news.ycombinator.com/item?id=50136701 …",
+        "evidenceItemIds": [
+          "5377325783c4"
+        ]
+      },
+      {
+        "itemId": "fbacee60bd9a",
+        "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+        "takeaway": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10…",
+        "evidenceItemIds": [
+          "fbacee60bd9a"
+        ]
+      },
+      {
+        "itemId": "b889497c55d6",
+        "title": "Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents",
+        "takeaway": "Perplexity has open-sourced SPACE, the sandbox platform behind every task in Perplexity Computer. The Perplexity SPACE …",
+        "evidenceItemIds": [
+          "b889497c55d6"
+        ]
+      },
+      {
+        "itemId": "d294db57c626",
+        "title": "Grafana Applies SLOs and Error Budgets to AI Agent Behaviour",
+        "takeaway": "Grafana Labs is proposing a familiar reliability engineering approach for one of the less familiar problems in modern s…",
+        "evidenceItemIds": [
+          "d294db57c626"
+        ]
+      },
+      {
+        "itemId": "f57e64b8cd50",
+        "title": "AWS Introduces Strands Decider 2B and Strands Box for AI Agent Development",
+        "takeaway": "AWS has introduced two open-source projects for AI agent development: Strands Decider 2B, a small model designed to mak…",
+        "evidenceItemIds": [
+          "f57e64b8cd50"
+        ]
+      },
+      {
+        "itemId": "1e128280000b",
+        "title": "Blocking AI-bot can be a double-edged Sword",
+        "takeaway": "Article URL: https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web Comments URL: https://ne…",
+        "evidenceItemIds": [
+          "1e128280000b"
+        ]
+      },
+      {
+        "itemId": "c85af8cb9c0d",
+        "title": "DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API",
+        "takeaway": "DeepSeek has just released DeepSeek-V4.1-Flash-1017, a new checkpoint of its V4.1-Flash model. It is live on the DeepSe…",
+        "evidenceItemIds": [
+          "c85af8cb9c0d"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments》、《AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance》、《Reverse Engineer Anything Project Brings AI Agents to Binary Analysis》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API》、《How Itaú is building generative AI for its entire customer base》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "c85af8cb9c0d",
+          "e3afab90f36c",
+          "b764de8c621d",
+          "51625cbf6ccb"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 4 条，建议优先阅读《Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments》、《Reverse Engineer Anything Project Brings AI Agents to Binary Analysis》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "7349867a4cf6",
+          "d54ce541933e",
+          "5377325783c4",
+          "b889497c55d6"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 4 条，建议优先阅读《AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance》、《StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "9d8e1cc9ed65",
+          "647750f91fce",
+          "fbacee60bd9a",
+          "d294db57c626"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《What 500 MiniMax Code Tests Revealed About AI Saying \"Done\"》、《Drunken Goddess Reflux Public Demo Canceled over AI Imitation Concerns》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "f078b55ed6e9",
+          "12a3928a7bc2",
+          "34c06c10c338",
+          "42ccb2bace62"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "74c26038eadf009be01d3b8fbbeccf81fac3c92fd5a85e212c92666e81b46201",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-10-18T01:31:48.553Z",
+      "finishedAt": "2026-10-18T02:32:14.567Z",
+      "durationMs": 3626015,
+      "inputCount": 42,
+      "processedCount": 42,
+      "fallbackCount": 42,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 42,
+      "failureStats": {
+        "totalFailed": 42,
+        "timeout": 1,
+        "http": 29,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 12,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 79,
+        "splitRetryCount": 37
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-11",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-04",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 1,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-10-18T02:32:14.654Z",
+      "finishedAt": "2026-10-18T02:32:14.737Z",
+      "durationMs": 83,
+      "inputCount": 42,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 0,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 30
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "7349867a4cf6",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments",
+        "link": "https://www.infoq.com/news/2026/10/envharness-self-evolving-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google researchers open sourced EnvHarness, a framework that dynamically adapts agent-training environments to an agent's weaknesses without modifying the agent, environment, or evaluation system. According to the researchers, this approach can improve both learning effectiveness and efficiency while helping agents overcome their weaknesses. By Sergio De Simone",
+        "publishedAt": "2026-10-16T19:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 127,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9d8e1cc9ed65",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance",
+        "link": "https://www.infoq.com/news/2026/10/ai-systems-production/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A recent InfoQ webinar examined operational challenges in deploying agentic systems. Key points included issues like semantic and embedding drift, which can lead to significant errors. Experts discussed the need for automated code reviews, continuous evaluation of models, and enhanced privacy measures. The session emphasised a strategic approach to deployment and security management. By Olimpiu Pop",
+        "publishedAt": "2026-10-16T14:14:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 91.11,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 91.11111111111111,
+          "finalScore": 91.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d54ce541933e",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Reverse Engineer Anything Project Brings AI Agents to Binary Analysis",
+        "link": "https://www.infoq.com/news/2026/10/reverse-engineer-anything/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Reverse Engineer Anything (REA) is an open-source project with over 200K GitHub stars that connects coding agents such as Claude Code and Codex to reverse-engineering tools like Ghidra, Hopper, and IDA. The project lets developers inspect compiled binaries, trace function calls, and investigate how applications implement specific features. By Renato Losio",
+        "publishedAt": "2026-10-17T06:28:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 88.89,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 122,
+          "ruleScoreNormalized": 88.88888888888889,
+          "finalScore": 88.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3a3d2f869e46",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+        "link": "https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/",
+        "contentSnippet": "Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipulation. The REKI vision-language-action model is pretrained only on public data. It also carries a cheap memory of its recent past. On three out-of-distribution benchmarks, only models about twice its size beat it. All weights are live on […] The post Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-17T20:22:11.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 80,
+        "importance": "medium",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 80,
+          "finalScore": 80,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "647750f91fce",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context",
+        "link": "https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/",
+        "contentSnippet": "StepFun has released Step 5 Preview as open weights. FP8 and BF16 checkpoints are live on Hugging Face and ModelScope. Step 5 Preview is a sparse Mixture-of-Experts model from StepFun built for long-horizon agentic work. It has 600B total parameters, 27B active per token and up to 1M tokens of context. For developers, this is […] The post StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-17T06:29:55.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 80,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 80,
+          "finalScore": 80,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 42,
+      "normalizedCount": 42,
+      "dedupedCount": 42,
+      "highImportanceCount": 3,
+      "mediumImportanceCount": 5,
+      "lowImportanceCount": 34,
+      "categoryBreakdown": {
+        "open-source": 6,
+        "tooling": 4,
+        "agent": 6,
+        "research": 3,
+        "industry-news": 5,
+        "tutorial": 0,
+        "other": 18
+      }
+    },
+    "warnings": [
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：42/42",
+      "LLM 分类打分回退明细（前 3/42）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07235487e7d626e2cc6bb0b22e575e9b\"} | minimax_timeout:90000ms | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"072354e3ae5f70d3572999deee32be2c\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=1：http=29：business=0：missing_content=0：invalid_json=0：quality=0：other=12",
+      "LLM 分类打分重试统计：batch_retry=79, split_retry=37",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：fetch failed | fetch failed | fetch failed",
+      "LLM 失败分类：missing_content=0, timeout=0, http=0, business=0, invalid_json=0, quality=0, other=30",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
