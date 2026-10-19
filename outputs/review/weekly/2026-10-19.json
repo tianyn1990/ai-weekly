@@ -1,0 +1,2616 @@
+{
+  "runId": "weekly-1792373651716",
+  "generatedAt": "2026-10-19T01:34:11.706Z",
+  "reviewStartedAt": "2026-10-19T01:34:11.706Z",
+  "reportDate": "2026-10-19",
+  "mode": "weekly",
+  "reviewStatus": "pending_review",
+  "reviewStage": "final_review",
+  "reviewDeadlineAt": "2026-10-19T04:30:00.000Z",
+  "reviewReason": "仍在审核窗口内，等待人工审核",
+  "publishStatus": "pending",
+  "shouldPublish": false,
+  "publishReason": "waiting_for_manual_review",
+  "publishedAt": null,
+  "outlineApproved": true,
+  "finalApproved": false,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 42,
+    "normalizedCount": 42,
+    "dedupedCount": 42,
+    "highImportanceCount": 2,
+    "mediumImportanceCount": 4,
+    "lowImportanceCount": 36,
+    "categoryBreakdown": {
+      "open-source": 4,
+      "tooling": 7,
+      "agent": 5,
+      "research": 2,
+      "industry-news": 6,
+      "tutorial": 1,
+      "other": 17
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "7349867a4cf6",
+      "title": "Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments",
+      "summary": "Google researchers open sourced EnvHarness, a framework that dynamically adapts agent-training environments to an agent…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "7349867a4cf6"
+      ]
+    },
+    {
+      "itemId": "9d8e1cc9ed65",
+      "title": "AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance",
+      "summary": "A recent InfoQ webinar examined operational challenges in deploying agentic systems. Key points included issues like se…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "9d8e1cc9ed65"
+      ]
+    },
+    {
+      "itemId": "e79603b7c59b",
+      "title": "Google Open-Sources Harness2, a Recursive Agent Harnessing Framework",
+      "summary": "Google Research released Harness2, an Apache-2.0 framework that rewrites an agent's harness at test time. One refinemen…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "e79603b7c59b"
+      ]
+    },
+    {
+      "itemId": "ed8987c61bb8",
+      "title": "Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI",
+      "summary": "Voxel51 3.0 merges search, curation, annotation and evaluation of multimodal sensor data into one platform for physical…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "ed8987c61bb8"
+      ]
+    },
+    {
+      "itemId": "d54ce541933e",
+      "title": "Reverse Engineer Anything Project Brings AI Agents to Binary Analysis",
+      "summary": "Reverse Engineer Anything (REA) is an open-source project with over 200K GitHub stars that connects coding agents such …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "d54ce541933e"
+      ]
+    },
+    {
+      "itemId": "17ad7fc54cb3",
+      "title": "TinyFish Makes Search Free: What It Really Costs an AI Agent to Read the Web",
+      "summary": "An AI agent that reads the web pays 2 kinds of cost. The first is the retrieval charge: what a search or fetch API bill…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "17ad7fc54cb3"
+      ]
+    },
+    {
+      "itemId": "fbacee60bd9a",
+      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "fbacee60bd9a"
+      ]
+    },
+    {
+      "itemId": "3a3d2f869e46",
+      "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+      "summary": "Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipula…",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "3a3d2f869e46"
+      ]
+    },
+    {
+      "itemId": "d294db57c626",
+      "title": "Grafana Applies SLOs and Error Budgets to AI Agent Behaviour",
+      "summary": "Grafana Labs is proposing a familiar reliability engineering approach for one of the less familiar problems in modern s…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "d294db57c626"
+      ]
+    },
+    {
+      "itemId": "f57e64b8cd50",
+      "title": "AWS Introduces Strands Decider 2B and Strands Box for AI Agent Development",
+      "summary": "AWS has introduced two open-source projects for AI agent development: Strands Decider 2B, a small model designed to mak…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "f57e64b8cd50"
+      ]
+    },
+    {
+      "itemId": "c03bec7773fc",
+      "title": "Reliable web access for AI agents and automation workflows",
+      "summary": "Article URL: https://ninatechllc.com/ Comments URL: https://news.ycombinator.com/item?id=50147061 Points: 1 # Comments:…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "c03bec7773fc"
+      ]
+    },
+    {
+      "itemId": "8b506f74416c",
+      "title": "Show HN: Hybro – an open interoperability engine for AI agents",
+      "summary": "I built an open interoperability engine for AI agents. Connect your favorite agents and harnesses. Work together. Appre…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "8b506f74416c"
+      ]
+    },
+    {
+      "itemId": "e3afab90f36c",
+      "title": "How Itaú is building generative AI for its entire customer base",
+      "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to cust…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e3afab90f36c"
+      ]
+    },
+    {
+      "itemId": "c74c2fd443b8",
+      "title": "How to Make Zero-Training Tabular Predictions with NVIDIA Structured Data Models",
+      "summary": "In this tutorial, we implement Structured Data Models, NVIDIA’s new library that puts several pretrained foundation mod…",
+      "recommendation": "可直接学习实践",
+      "evidenceItemIds": [
+        "c74c2fd443b8"
+      ]
+    },
+    {
+      "itemId": "c85af8cb9c0d",
+      "title": "DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API",
+      "summary": "DeepSeek has just released DeepSeek-V4.1-Flash-1017, a new checkpoint of its V4.1-Flash model. It is live on the DeepSe…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "c85af8cb9c0d"
+      ]
+    },
+    {
+      "itemId": "4215c0822902",
+      "title": "Munich dumps proprietary for open source (again) – but no Linux desktop",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "4215c0822902"
+      ]
+    },
+    {
+      "itemId": "2193619b6a2f",
+      "title": "Benefit Street Partners answers questions faster with Codex",
+      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and fast…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2193619b6a2f"
+      ]
+    },
+    {
+      "itemId": "7b577150654f",
+      "title": "Bringing GPT-Rosalind to academic research labs",
+      "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to a…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "7b577150654f"
+      ]
+    },
+    {
+      "itemId": "b764de8c621d",
+      "title": "Teaching students to think and learn through questions",
+      "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b764de8c621d"
+      ]
+    },
+    {
+      "itemId": "147510c2c7a0",
+      "title": "Sullivan & Cromwell brings legal expertise into agreement review",
+      "summary": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "147510c2c7a0"
+      ]
+    },
+    {
+      "itemId": "7c29f3b148b5",
+      "title": "清华开源！智能体操作系统任务成本降83%，AI记忆可查可改",
+      "summary": "整套系统原生支持MCP",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "7c29f3b148b5"
+      ]
+    },
+    {
+      "itemId": "7b7721aa5312",
+      "title": "突发！DeepSeek新模型发布，超级性价比斩杀一切",
+      "summary": "新版本V4.1-Flash-1017，还开放了自研搜索API",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "7b7721aa5312"
+      ]
+    },
+    {
+      "itemId": "f41b3890d54f",
+      "title": "智谱新模型，懂法方面全球第一了",
+      "summary": "AI的风还是刮到了法律圈",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "f41b3890d54f"
+      ]
+    },
+    {
+      "itemId": "2a0a946d131b",
+      "title": "Amazon Acquires DuckLabs and Integrates DuckDB in Amazon Aurora PostgreSQL",
+      "summary": "Amazon has acquired DuckLabs, the company behind the analytical database DuckDB. Co-founders Hannes Mühleisen and Mark …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2a0a946d131b"
+      ]
+    },
+    {
+      "itemId": "203ce785549d",
+      "title": "Will major-party U.S. presidential candidate deploy AI clone to talk to voters?",
+      "summary": "Article URL: https://manifold.markets/BrunoClawfeld/will-a-majorparty-us-presidential-c Comments URL: https://news.ycom…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "203ce785549d"
+      ]
+    },
+    {
+      "itemId": "d79d112caae4",
+      "title": "AI Optimism Globally Widespread Despite Uneven Use",
+      "summary": "Article URL: https://news.gallup.com/poll/714593/optimism-globally-widespread-despite-uneven.aspx Comments URL: https:/…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d79d112caae4"
+      ]
+    },
+    {
+      "itemId": "026525e2114f",
+      "title": "Don't filter your email based on AI detection",
+      "summary": "Article URL: https://blog.keyvan.net/p/dont-filter-your-email-based-on-ai Comments URL: https://news.ycombinator.com/it…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "026525e2114f"
+      ]
+    },
+    {
+      "itemId": "3d5e03b2dc98",
+      "title": "The AI industry's gigantic debts are making investors nervous",
+      "summary": "Article URL: https://www.economist.com/business/2026/10/18/the-ai-industrys-gigantic-debts-are-making-investors-nervous…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3d5e03b2dc98"
+      ]
+    },
+    {
+      "itemId": "5478efc66827",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5478efc66827"
+      ]
+    },
+    {
+      "itemId": "bdbc16e65e61",
+      "title": "Plug-in solar is legal in these 10 states now – how it could save you money",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "bdbc16e65e61"
+      ]
+    },
+    {
+      "itemId": "63a2fe4a6815",
+      "title": "Have a Meta business account? You’re consenting to AI scraping now, legal experts say",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "63a2fe4a6815"
+      ]
+    },
+    {
+      "itemId": "e37fef0f49a7",
+      "title": "Anthropic gives third-party auditors ’employee-like access’ in AI industry first",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e37fef0f49a7"
+      ]
+    },
+    {
+      "itemId": "a58d0e049666",
+      "title": "Want an iPhone Duo before 2027? Don’t preorder from Apple – try this instead",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a58d0e049666"
+      ]
+    },
+    {
+      "itemId": "f18765cd6b91",
+      "title": "How many jobs is your state losing to AI? This dashboard tracks the cuts – and the cost",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f18765cd6b91"
+      ]
+    },
+    {
+      "itemId": "92d60b58598f",
+      "title": "Introducing Playground: Create and play custom games",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "92d60b58598f"
+      ]
+    },
+    {
+      "itemId": "1d5fed04e570",
+      "title": "The latest AI news we announced in September 2026",
+      "summary": "Here are Google’s latest AI updates from September 2026",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1d5fed04e570"
+      ]
+    },
+    {
+      "itemId": "927c795585b6",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "927c795585b6"
+      ]
+    },
+    {
+      "itemId": "5f226c85d6ea",
+      "title": "Google Beam expands with new regions, partners, and customers",
+      "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5f226c85d6ea"
+      ]
+    },
+    {
+      "itemId": "429ba3c49baa",
+      "title": "New experts join Google’s AI & Economy team",
+      "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "429ba3c49baa"
+      ]
+    },
+    {
+      "itemId": "d346e5ed11d2",
+      "title": "Claude半小时解开密码学悬案，学界集体走偏20年",
+      "summary": "谜底指向时间",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d346e5ed11d2"
+      ]
+    },
+    {
+      "itemId": "e7f2a0d924b4",
+      "title": "科技企业出海，为啥我推荐你去迪拜？",
+      "summary": "通往全球市场的超级跳板",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e7f2a0d924b4"
+      ]
+    },
+    {
+      "itemId": "a6f8278b4a08",
+      "title": "清华特奖得主AI创业再+1：GeoPT一作入局物理世界模型",
+      "summary": "从搭载物理建模能力的世界模型切入",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a6f8278b4a08"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "7349867a4cf6",
+      "title": "Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments",
+      "takeaway": "Google researchers open sourced EnvHarness, a framework that dynamically adapts agent-training environments to an agent…",
+      "evidenceItemIds": [
+        "7349867a4cf6"
+      ]
+    },
+    {
+      "itemId": "9d8e1cc9ed65",
+      "title": "AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance",
+      "takeaway": "A recent InfoQ webinar examined operational challenges in deploying agentic systems. Key points included issues like se…",
+      "evidenceItemIds": [
+        "9d8e1cc9ed65"
+      ]
+    },
+    {
+      "itemId": "e79603b7c59b",
+      "title": "Google Open-Sources Harness2, a Recursive Agent Harnessing Framework",
+      "takeaway": "Google Research released Harness2, an Apache-2.0 framework that rewrites an agent's harness at test time. One refinemen…",
+      "evidenceItemIds": [
+        "e79603b7c59b"
+      ]
+    },
+    {
+      "itemId": "ed8987c61bb8",
+      "title": "Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI",
+      "takeaway": "Voxel51 3.0 merges search, curation, annotation and evaluation of multimodal sensor data into one platform for physical…",
+      "evidenceItemIds": [
+        "ed8987c61bb8"
+      ]
+    },
+    {
+      "itemId": "d54ce541933e",
+      "title": "Reverse Engineer Anything Project Brings AI Agents to Binary Analysis",
+      "takeaway": "Reverse Engineer Anything (REA) is an open-source project with over 200K GitHub stars that connects coding agents such …",
+      "evidenceItemIds": [
+        "d54ce541933e"
+      ]
+    },
+    {
+      "itemId": "17ad7fc54cb3",
+      "title": "TinyFish Makes Search Free: What It Really Costs an AI Agent to Read the Web",
+      "takeaway": "An AI agent that reads the web pays 2 kinds of cost. The first is the retrieval charge: what a search or fetch API bill…",
+      "evidenceItemIds": [
+        "17ad7fc54cb3"
+      ]
+    },
+    {
+      "itemId": "fbacee60bd9a",
+      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "takeaway": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10…",
+      "evidenceItemIds": [
+        "fbacee60bd9a"
+      ]
+    },
+    {
+      "itemId": "3a3d2f869e46",
+      "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+      "takeaway": "Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipula…",
+      "evidenceItemIds": [
+        "3a3d2f869e46"
+      ]
+    },
+    {
+      "itemId": "d294db57c626",
+      "title": "Grafana Applies SLOs and Error Budgets to AI Agent Behaviour",
+      "takeaway": "Grafana Labs is proposing a familiar reliability engineering approach for one of the less familiar problems in modern s…",
+      "evidenceItemIds": [
+        "d294db57c626"
+      ]
+    },
+    {
+      "itemId": "f57e64b8cd50",
+      "title": "AWS Introduces Strands Decider 2B and Strands Box for AI Agent Development",
+      "takeaway": "AWS has introduced two open-source projects for AI agent development: Strands Decider 2B, a small model designed to mak…",
+      "evidenceItemIds": [
+        "f57e64b8cd50"
+      ]
+    },
+    {
+      "itemId": "c03bec7773fc",
+      "title": "Reliable web access for AI agents and automation workflows",
+      "takeaway": "Article URL: https://ninatechllc.com/ Comments URL: https://news.ycombinator.com/item?id=50147061 Points: 1 # Comments:…",
+      "evidenceItemIds": [
+        "c03bec7773fc"
+      ]
+    },
+    {
+      "itemId": "8b506f74416c",
+      "title": "Show HN: Hybro – an open interoperability engine for AI agents",
+      "takeaway": "I built an open interoperability engine for AI agents. Connect your favorite agents and harnesses. Work together. Appre…",
+      "evidenceItemIds": [
+        "8b506f74416c"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments》、《AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance》、《Google Open-Sources Harness2, a Recursive Agent Harnessing Framework》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《How Itaú is building generative AI for its entire customer base》、《DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "e3afab90f36c",
+        "c85af8cb9c0d",
+        "b764de8c621d",
+        "f41b3890d54f"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "tooling",
+      "lead": "工具链方向本期共 4 条，建议优先阅读《Google Open-Sources Harness2, a Recursive Agent Harnessing Framework》、《Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "e79603b7c59b",
+        "ed8987c61bb8",
+        "f57e64b8cd50",
+        "c03bec7773fc"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《突发！DeepSeek新模型发布，超级性价比斩杀一切》、《Will major-party U.S. presidential candidate deploy AI clone to talk to voters?》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "7b7721aa5312",
+        "203ce785549d",
+        "d79d112caae4",
+        "026525e2114f"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 4 条，建议优先阅读《AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance》、《TinyFish Makes Search Free: What It Really Costs an AI Agent to Read the Web》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "9d8e1cc9ed65",
+        "17ad7fc54cb3",
+        "fbacee60bd9a",
+        "d294db57c626"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "c717d91bdc76ae6fdafe28fdd185ffd842d47b494baba52d432a63c0ef2dc1f6",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-10-19T01:34:29.602Z",
+    "finishedAt": "2026-10-19T01:35:32.224Z",
+    "durationMs": 62657,
+    "inputCount": 42,
+    "processedCount": 42,
+    "fallbackCount": 42,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 42,
+    "failureStats": {
+      "totalFailed": 42,
+      "timeout": 0,
+      "http": 42,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 79,
+      "splitRetryCount": 37
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-12",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-05",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 1,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-10-19T01:35:35.287Z",
+    "finishedAt": "2026-10-19T01:35:48.510Z",
+    "durationMs": 13223,
+    "inputCount": 42,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "7349867a4cf6",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments",
+      "link": "https://www.infoq.com/news/2026/10/envharness-self-evolving-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Google researchers open sourced EnvHarness, a framework that dynamically adapts agent-training environments to an agent's weaknesses without modifying the agent, environment, or evaluation system. According to the researchers, this approach can improve both learning effectiveness and efficiency while helping agents overcome their weaknesses. By Sergio De Simone",
+      "publishedAt": "2026-10-16T19:00:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 127,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "9d8e1cc9ed65",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance",
+      "link": "https://www.infoq.com/news/2026/10/ai-systems-production/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "A recent InfoQ webinar examined operational challenges in deploying agentic systems. Key points included issues like semantic and embedding drift, which can lead to significant errors. Experts discussed the need for automated code reviews, continuous evaluation of models, and enhanced privacy measures. The session emphasised a strategic approach to deployment and security management. By Olimpiu Pop",
+      "publishedAt": "2026-10-16T14:14:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 91.11,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 123,
+        "ruleScoreNormalized": 91.11111111111111,
+        "finalScore": 91.11,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "e79603b7c59b",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Google Open-Sources Harness2, a Recursive Agent Harnessing Framework",
+      "link": "https://www.marktechpost.com/2026/10/18/google-harness2-recursive-agent-harnessing-framework/",
+      "contentSnippet": "Google Research released Harness2, an Apache-2.0 framework that rewrites an agent's harness at test time. One refinement step lifted GLM-5 by 11.5 points on WorkBuddy-Bench with no weight updates. The post Google Open-Sources Harness2, a Recursive Agent Harnessing Framework appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-18T08:15:04.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 80,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 118,
+        "ruleScoreNormalized": 80,
+        "finalScore": 80,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "ed8987c61bb8",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI",
+      "link": "https://www.marktechpost.com/2026/10/17/voxel51-3-0-physical-ai-data-platform/",
+      "contentSnippet": "Voxel51 3.0 merges search, curation, annotation and evaluation of multimodal sensor data into one platform for physical AI teams. It adds Voxel51 Agent with 45+ MCP tools, dataset versioning, and a free self-service tier. The post Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-18T04:06:33.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 80,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 118,
+        "ruleScoreNormalized": 80,
+        "finalScore": 80,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "d54ce541933e",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Reverse Engineer Anything Project Brings AI Agents to Binary Analysis",
+      "link": "https://www.infoq.com/news/2026/10/reverse-engineer-anything/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Reverse Engineer Anything (REA) is an open-source project with over 200K GitHub stars that connects coding agents such as Claude Code and Codex to reverse-engineering tools like Ghidra, Hopper, and IDA. The project lets developers inspect compiled binaries, trace function calls, and investigate how applications implement specific features. By Renato Losio",
+      "publishedAt": "2026-10-17T06:28:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 77.78,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 117,
+        "ruleScoreNormalized": 77.77777777777779,
+        "finalScore": 77.78,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "17ad7fc54cb3",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "TinyFish Makes Search Free: What It Really Costs an AI Agent to Read the Web",
+      "link": "https://www.marktechpost.com/2026/10/18/tinyfish-free-search-ai-agent-token-cost/",
+      "contentSnippet": "An AI agent that reads the web pays 2 kinds of cost. The first is the retrieval charge: what a search or fetch API bills per request. The second is model processing: content passed from retrieved pages into an AI model consumes tokens, while reasoning and generated responses add further costs. TinyFish, a web infrastructure […] The post TinyFish Makes Search Free: What It Really Costs an AI Agent to Read the Web appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-18T18:20:28.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 68.89,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 113,
+        "ruleScoreNormalized": 68.88888888888889,
+        "finalScore": 68.89,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "fbacee60bd9a",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "link": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "contentSnippet": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+      "publishedAt": "2026-10-16T00:00:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 62.22,
+      "importance": "low",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 110,
+        "ruleScoreNormalized": 62.22222222222222,
+        "finalScore": 62.22,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "3a3d2f869e46",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+      "link": "https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/",
+      "contentSnippet": "Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipulation. The REKI vision-language-action model is pretrained only on public data. It also carries a cheap memory of its recent past. On three out-of-distribution benchmarks, only models about twice its size beat it. All weights are live on […] The post Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-17T20:22:11.000Z",
+      "category": "research",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 57.78,
+      "importance": "low",
+      "recommendationReason": "评测与性能信息",
+      "scoreBreakdown": {
+        "ruleScore": 108,
+        "ruleScoreNormalized": 57.77777777777777,
+        "finalScore": 57.78,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：42/42",
+    "LLM 分类打分回退明细（前 3/42）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0724a6a9584f6860f952348fdef7c34f\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0724a6a94a5b78faa6b1e3198d3f0b5f\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0724a6aa4ce2b146f428029ac457bb91\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=42：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=79, split_retry=37",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments\n- AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance\n- Google Open-Sources Harness2, a Recursive Agent Harnessing Framework\n- Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI\n- Reverse Engineer Anything Project Brings AI Agents to Binary Analysis\n\n### 分类覆盖（大纲）\n- open-source: 4 条\n- agent: 5 条\n- tooling: 7 条\n- research: 2 条\n- other: 17 条\n- tutorial: 1 条\n- industry-news: 6 条",
+    "rankedItems": [
+      {
+        "id": "7349867a4cf6",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments",
+        "link": "https://www.infoq.com/news/2026/10/envharness-self-evolving-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google researchers open sourced EnvHarness, a framework that dynamically adapts agent-training environments to an agent's weaknesses without modifying the agent, environment, or evaluation system. According to the researchers, this approach can improve both learning effectiveness and efficiency while helping agents overcome their weaknesses. By Sergio De Simone",
+        "publishedAt": "2026-10-16T19:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 127,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9d8e1cc9ed65",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance",
+        "link": "https://www.infoq.com/news/2026/10/ai-systems-production/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A recent InfoQ webinar examined operational challenges in deploying agentic systems. Key points included issues like semantic and embedding drift, which can lead to significant errors. Experts discussed the need for automated code reviews, continuous evaluation of models, and enhanced privacy measures. The session emphasised a strategic approach to deployment and security management. By Olimpiu Pop",
+        "publishedAt": "2026-10-16T14:14:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 91.11,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 91.11111111111111,
+          "finalScore": 91.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e79603b7c59b",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Google Open-Sources Harness2, a Recursive Agent Harnessing Framework",
+        "link": "https://www.marktechpost.com/2026/10/18/google-harness2-recursive-agent-harnessing-framework/",
+        "contentSnippet": "Google Research released Harness2, an Apache-2.0 framework that rewrites an agent's harness at test time. One refinement step lifted GLM-5 by 11.5 points on WorkBuddy-Bench with no weight updates. The post Google Open-Sources Harness2, a Recursive Agent Harnessing Framework appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-18T08:15:04.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 80,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 80,
+          "finalScore": 80,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ed8987c61bb8",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI",
+        "link": "https://www.marktechpost.com/2026/10/17/voxel51-3-0-physical-ai-data-platform/",
+        "contentSnippet": "Voxel51 3.0 merges search, curation, annotation and evaluation of multimodal sensor data into one platform for physical AI teams. It adds Voxel51 Agent with 45+ MCP tools, dataset versioning, and a free self-service tier. The post Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-18T04:06:33.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 80,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 80,
+          "finalScore": 80,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d54ce541933e",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Reverse Engineer Anything Project Brings AI Agents to Binary Analysis",
+        "link": "https://www.infoq.com/news/2026/10/reverse-engineer-anything/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Reverse Engineer Anything (REA) is an open-source project with over 200K GitHub stars that connects coding agents such as Claude Code and Codex to reverse-engineering tools like Ghidra, Hopper, and IDA. The project lets developers inspect compiled binaries, trace function calls, and investigate how applications implement specific features. By Renato Losio",
+        "publishedAt": "2026-10-17T06:28:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 77.78,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 77.77777777777779,
+          "finalScore": 77.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "17ad7fc54cb3",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "TinyFish Makes Search Free: What It Really Costs an AI Agent to Read the Web",
+        "link": "https://www.marktechpost.com/2026/10/18/tinyfish-free-search-ai-agent-token-cost/",
+        "contentSnippet": "An AI agent that reads the web pays 2 kinds of cost. The first is the retrieval charge: what a search or fetch API bills per request. The second is model processing: content passed from retrieved pages into an AI model consumes tokens, while reasoning and generated responses add further costs. TinyFish, a web infrastructure […] The post TinyFish Makes Search Free: What It Really Costs an AI Agent to Read the Web appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-18T18:20:28.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 68.89,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 68.88888888888889,
+          "finalScore": 68.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fbacee60bd9a",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+        "link": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+        "contentSnippet": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+        "publishedAt": "2026-10-16T00:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 62.22,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 62.22222222222222,
+          "finalScore": 62.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3a3d2f869e46",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+        "link": "https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/",
+        "contentSnippet": "Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipulation. The REKI vision-language-action model is pretrained only on public data. It also carries a cheap memory of its recent past. On three out-of-distribution benchmarks, only models about twice its size beat it. All weights are live on […] The post Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-17T20:22:11.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 57.78,
+        "importance": "low",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 57.77777777777777,
+          "finalScore": 57.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d294db57c626",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Grafana Applies SLOs and Error Budgets to AI Agent Behaviour",
+        "link": "https://www.infoq.com/news/2026/10/grafana-slo-ai-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Grafana Labs is proposing a familiar reliability engineering approach for one of the less familiar problems in modern software: how to measure whether an AI agent is actually behaving well. By Craig Risi",
+        "publishedAt": "2026-10-16T12:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 51.11,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 51.11111111111111,
+          "finalScore": 51.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f57e64b8cd50",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "AWS Introduces Strands Decider 2B and Strands Box for AI Agent Development",
+        "link": "https://www.infoq.com/news/2026/10/aws-strands-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "AWS has introduced two open-source projects for AI agent development: Strands Decider 2B, a small model designed to make decisions within agent workflows, and Strands Box, a sandbox for controlling agent execution. Both projects address different aspects of building agents that use tools, execute code, and interact with external systems. By Daniel Dominguez",
+        "publishedAt": "2026-10-16T10:47:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 51.11,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 51.11111111111111,
+          "finalScore": 51.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c03bec7773fc",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Reliable web access for AI agents and automation workflows",
+        "link": "https://ninatechllc.com/",
+        "contentSnippet": "Article URL: https://ninatechllc.com/ Comments URL: https://news.ycombinator.com/item?id=50147061 Points: 1 # Comments: 1",
+        "publishedAt": "2026-10-19T00:46:38.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 51.11,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 51.11111111111111,
+          "finalScore": 51.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8b506f74416c",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Hybro – an open interoperability engine for AI agents",
+        "link": "https://github.com/hybroai/hybro",
+        "contentSnippet": "I built an open interoperability engine for AI agents. Connect your favorite agents and harnesses. Work together. Appreciate for any feedback. Comments URL: https://news.ycombinator.com/item?id=50146655 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-18T23:41:45.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 51.11,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 51.11111111111111,
+          "finalScore": 51.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e3afab90f36c",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How Itaú is building generative AI for its entire customer base",
+        "link": "https://openai.com/index/itau-generative-ai",
+        "contentSnippet": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
+        "publishedAt": "2026-10-16T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 40,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 40,
+          "finalScore": 40,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c74c2fd443b8",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "How to Make Zero-Training Tabular Predictions with NVIDIA Structured Data Models",
+        "link": "https://www.marktechpost.com/2026/10/17/how-to-make-zero-training-tabular-predictions-with-nvidia-structured-data-models/",
+        "contentSnippet": "In this tutorial, we implement Structured Data Models, NVIDIA’s new library that puts several pretrained foundation models for tables behind one PyTorch interface, and use it to make predictions without training. The library wraps TabICLv2 and KumoTabular for single tables and KumoRelational for whole relational databases, and each of them answers by in-context learning: we […] The post How to Make Zero-Training Tabular Predictions with NVIDIA Structured Data Models appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-18T05:56:05.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 37.78,
+        "importance": "low",
+        "recommendationReason": "可直接学习实践",
+        "scoreBreakdown": {
+          "ruleScore": 99,
+          "ruleScoreNormalized": 37.77777777777778,
+          "finalScore": 37.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c85af8cb9c0d",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API",
+        "link": "https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/",
+        "contentSnippet": "DeepSeek has just released DeepSeek-V4.1-Flash-1017, a new checkpoint of its V4.1-Flash model. It is live on the DeepSeek website, app and API. DeepSeek claims stronger scores, faster task completion and shorter outputs than the September V4.1-Flash release. The company calls it a Pareto improvement in performance and cost. Alongside it, DeepSeek opened its Search and […] The post DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-17T08:53:58.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 35.56,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 35.55555555555556,
+          "finalScore": 35.56,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4215c0822902",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Munich dumps proprietary for open source (again) – but no Linux desktop",
+        "link": "https://www.zdnet.com/business/munich-proprietary-open-source-no-linux-desktop/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-16T17:11:35.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 31.11,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 96,
+          "ruleScoreNormalized": 31.11111111111111,
+          "finalScore": 31.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2193619b6a2f",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Benefit Street Partners answers questions faster with Codex",
+        "link": "https://openai.com/index/benefit-street-partners",
+        "contentSnippet": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
+        "publishedAt": "2026-10-16T00:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 28.888888888888886,
+          "finalScore": 28.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7b577150654f",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Bringing GPT-Rosalind to academic research labs",
+        "link": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+        "contentSnippet": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
+        "publishedAt": "2026-10-15T19:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 28.888888888888886,
+          "finalScore": 28.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b764de8c621d",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Teaching students to think and learn through questions",
+        "link": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+        "contentSnippet": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
+        "publishedAt": "2026-10-15T13:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 28.888888888888886,
+          "finalScore": 28.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "147510c2c7a0",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Sullivan & Cromwell brings legal expertise into agreement review",
+        "link": "https://openai.com/index/sullivan-cromwell",
+        "contentSnippet": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a draft agreement.",
+        "publishedAt": "2026-10-15T00:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 28.888888888888886,
+          "finalScore": 28.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7c29f3b148b5",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "清华开源！智能体操作系统任务成本降83%，AI记忆可查可改",
+        "link": "https://www.qbitai.com/2026/10/503935.html",
+        "contentSnippet": "整套系统原生支持MCP",
+        "publishedAt": "2026-10-17T12:10:35.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 26.67,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 26.666666666666668,
+          "finalScore": 26.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7b7721aa5312",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "突发！DeepSeek新模型发布，超级性价比斩杀一切",
+        "link": "https://www.qbitai.com/2026/10/504067.html",
+        "contentSnippet": "新版本V4.1-Flash-1017，还开放了自研搜索API",
+        "publishedAt": "2026-10-17T12:21:09.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.22,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 22.22222222222222,
+          "finalScore": 22.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f41b3890d54f",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "智谱新模型，懂法方面全球第一了",
+        "link": "https://www.qbitai.com/2026/10/503965.html",
+        "contentSnippet": "AI的风还是刮到了法律圈",
+        "publishedAt": "2026-10-17T12:13:45.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.22,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 22.22222222222222,
+          "finalScore": 22.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2a0a946d131b",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Amazon Acquires DuckLabs and Integrates DuckDB in Amazon Aurora PostgreSQL",
+        "link": "https://www.infoq.com/news/2026/10/amazon-acquires-ducklabs/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Amazon has acquired DuckLabs, the company behind the analytical database DuckDB. Co-founders Hannes Mühleisen and Mark Raasveldt will continue to lead the team under AWS. The acquisition aims to enhance the development and reach of DuckDB while maintaining its open-source status. Amazon Aurora PostgreSQL gets its first DuckDB-powered feature following the acquisition. By Gianmarco Nalin",
+        "publishedAt": "2026-10-17T06:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 17.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 17.77777777777778,
+          "finalScore": 17.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "203ce785549d",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Will major-party U.S. presidential candidate deploy AI clone to talk to voters?",
+        "link": "https://manifold.markets/BrunoClawfeld/will-a-majorparty-us-presidential-c",
+        "contentSnippet": "Article URL: https://manifold.markets/BrunoClawfeld/will-a-majorparty-us-presidential-c Comments URL: https://news.ycombinator.com/item?id=50147256 Points: 2 # Comments: 2",
+        "publishedAt": "2026-10-19T01:21:56.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 17.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 17.77777777777778,
+          "finalScore": 17.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d79d112caae4",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI Optimism Globally Widespread Despite Uneven Use",
+        "link": "https://news.gallup.com/poll/714593/optimism-globally-widespread-despite-uneven.aspx",
+        "contentSnippet": "Article URL: https://news.gallup.com/poll/714593/optimism-globally-widespread-despite-uneven.aspx Comments URL: https://news.ycombinator.com/item?id=50147093 Points: 2 # Comments: 1",
+        "publishedAt": "2026-10-19T00:51:37.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 17.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 17.77777777777778,
+          "finalScore": 17.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "026525e2114f",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Don't filter your email based on AI detection",
+        "link": "https://blog.keyvan.net/p/dont-filter-your-email-based-on-ai",
+        "contentSnippet": "Article URL: https://blog.keyvan.net/p/dont-filter-your-email-based-on-ai Comments URL: https://news.ycombinator.com/item?id=50147051 Points: 1 # Comments: 1",
+        "publishedAt": "2026-10-19T00:45:13.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 17.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 17.77777777777778,
+          "finalScore": 17.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3d5e03b2dc98",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "The AI industry's gigantic debts are making investors nervous",
+        "link": "https://www.economist.com/business/2026/10/18/the-ai-industrys-gigantic-debts-are-making-investors-nervous",
+        "contentSnippet": "Article URL: https://www.economist.com/business/2026/10/18/the-ai-industrys-gigantic-debts-are-making-investors-nervous Comments URL: https://news.ycombinator.com/item?id=50146876 Points: 4 # Comments: 2",
+        "publishedAt": "2026-10-19T00:15:54.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 17.78,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 17.77777777777778,
+          "finalScore": 17.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5478efc66827",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "contentSnippet": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "publishedAt": "2026-10-13T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 11.11,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 11.11111111111111,
+          "finalScore": 11.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "bdbc16e65e61",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Plug-in solar is legal in these 10 states now – how it could save you money",
+        "link": "https://www.zdnet.com/uncategorized/plug-in-solar-balcony-solar-legalization-2026/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-17T13:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 4.44,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 4.444444444444445,
+          "finalScore": 4.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "63a2fe4a6815",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Have a Meta business account? You’re consenting to AI scraping now, legal experts say",
+        "link": "https://www.zdnet.com/uncategorized/meta-business-account-data-ai-scraping-terms/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-16T19:36:02.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 4.44,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 4.444444444444445,
+          "finalScore": 4.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e37fef0f49a7",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Anthropic gives third-party auditors ’employee-like access’ in AI industry first",
+        "link": "https://www.zdnet.com/uncategorized/anthropic-embed-third-party-ai-auditors-safety/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-16T17:10:27.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 4.44,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 4.444444444444445,
+          "finalScore": 4.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a58d0e049666",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Want an iPhone Duo before 2027? Don’t preorder from Apple – try this instead",
+        "link": "https://www.zdnet.com/tech/iphone-duo-preorders-delay-supply/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-16T16:44:50.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 4.44,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 4.444444444444445,
+          "finalScore": 4.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f18765cd6b91",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "How many jobs is your state losing to AI? This dashboard tracks the cuts – and the cost",
+        "link": "https://www.zdnet.com/innovation/ai-job-cuts-wage-loss-by-state-tracker/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-16T11:47:39.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 4.44,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 4.444444444444445,
+          "finalScore": 4.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "92d60b58598f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Introducing Playground: Create and play custom games",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+        "contentSnippet": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "publishedAt": "2026-10-07T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1d5fed04e570",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in September 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from September 2026",
+        "publishedAt": "2026-10-02T15:00:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "927c795585b6",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "contentSnippet": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "publishedAt": "2026-09-28T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5f226c85d6ea",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "link": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+        "contentSnippet": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "publishedAt": "2026-09-23T18:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "429ba3c49baa",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "New experts join Google’s AI & Economy team",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+        "contentSnippet": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+        "publishedAt": "2026-09-18T14:00:00.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d346e5ed11d2",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "Claude半小时解开密码学悬案，学界集体走偏20年",
+        "link": "https://www.qbitai.com/2026/10/503910.html",
+        "contentSnippet": "谜底指向时间",
+        "publishedAt": "2026-10-17T12:06:51.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e7f2a0d924b4",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "科技企业出海，为啥我推荐你去迪拜？",
+        "link": "https://www.qbitai.com/2026/10/503893.html",
+        "contentSnippet": "通往全球市场的超级跳板",
+        "publishedAt": "2026-10-17T09:05:08.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a6f8278b4a08",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "清华特奖得主AI创业再+1：GeoPT一作入局物理世界模型",
+        "link": "https://www.qbitai.com/2026/10/503880.html",
+        "contentSnippet": "从搭载物理建模能力的世界模型切入",
+        "publishedAt": "2026-10-16T12:54:54.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "7349867a4cf6",
+        "title": "Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments",
+        "summary": "Google researchers open sourced EnvHarness, a framework that dynamically adapts agent-training environments to an agent…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "7349867a4cf6"
+        ]
+      },
+      {
+        "itemId": "9d8e1cc9ed65",
+        "title": "AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance",
+        "summary": "A recent InfoQ webinar examined operational challenges in deploying agentic systems. Key points included issues like se…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "9d8e1cc9ed65"
+        ]
+      },
+      {
+        "itemId": "e79603b7c59b",
+        "title": "Google Open-Sources Harness2, a Recursive Agent Harnessing Framework",
+        "summary": "Google Research released Harness2, an Apache-2.0 framework that rewrites an agent's harness at test time. One refinemen…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "e79603b7c59b"
+        ]
+      },
+      {
+        "itemId": "ed8987c61bb8",
+        "title": "Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI",
+        "summary": "Voxel51 3.0 merges search, curation, annotation and evaluation of multimodal sensor data into one platform for physical…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "ed8987c61bb8"
+        ]
+      },
+      {
+        "itemId": "d54ce541933e",
+        "title": "Reverse Engineer Anything Project Brings AI Agents to Binary Analysis",
+        "summary": "Reverse Engineer Anything (REA) is an open-source project with over 200K GitHub stars that connects coding agents such …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "d54ce541933e"
+        ]
+      },
+      {
+        "itemId": "17ad7fc54cb3",
+        "title": "TinyFish Makes Search Free: What It Really Costs an AI Agent to Read the Web",
+        "summary": "An AI agent that reads the web pays 2 kinds of cost. The first is the retrieval charge: what a search or fetch API bill…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "17ad7fc54cb3"
+        ]
+      },
+      {
+        "itemId": "fbacee60bd9a",
+        "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+        "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "fbacee60bd9a"
+        ]
+      },
+      {
+        "itemId": "3a3d2f869e46",
+        "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+        "summary": "Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipula…",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "3a3d2f869e46"
+        ]
+      },
+      {
+        "itemId": "d294db57c626",
+        "title": "Grafana Applies SLOs and Error Budgets to AI Agent Behaviour",
+        "summary": "Grafana Labs is proposing a familiar reliability engineering approach for one of the less familiar problems in modern s…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "d294db57c626"
+        ]
+      },
+      {
+        "itemId": "f57e64b8cd50",
+        "title": "AWS Introduces Strands Decider 2B and Strands Box for AI Agent Development",
+        "summary": "AWS has introduced two open-source projects for AI agent development: Strands Decider 2B, a small model designed to mak…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "f57e64b8cd50"
+        ]
+      },
+      {
+        "itemId": "c03bec7773fc",
+        "title": "Reliable web access for AI agents and automation workflows",
+        "summary": "Article URL: https://ninatechllc.com/ Comments URL: https://news.ycombinator.com/item?id=50147061 Points: 1 # Comments:…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "c03bec7773fc"
+        ]
+      },
+      {
+        "itemId": "8b506f74416c",
+        "title": "Show HN: Hybro – an open interoperability engine for AI agents",
+        "summary": "I built an open interoperability engine for AI agents. Connect your favorite agents and harnesses. Work together. Appre…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "8b506f74416c"
+        ]
+      },
+      {
+        "itemId": "e3afab90f36c",
+        "title": "How Itaú is building generative AI for its entire customer base",
+        "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to cust…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e3afab90f36c"
+        ]
+      },
+      {
+        "itemId": "c74c2fd443b8",
+        "title": "How to Make Zero-Training Tabular Predictions with NVIDIA Structured Data Models",
+        "summary": "In this tutorial, we implement Structured Data Models, NVIDIA’s new library that puts several pretrained foundation mod…",
+        "recommendation": "可直接学习实践",
+        "evidenceItemIds": [
+          "c74c2fd443b8"
+        ]
+      },
+      {
+        "itemId": "c85af8cb9c0d",
+        "title": "DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API",
+        "summary": "DeepSeek has just released DeepSeek-V4.1-Flash-1017, a new checkpoint of its V4.1-Flash model. It is live on the DeepSe…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "c85af8cb9c0d"
+        ]
+      },
+      {
+        "itemId": "4215c0822902",
+        "title": "Munich dumps proprietary for open source (again) – but no Linux desktop",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "4215c0822902"
+        ]
+      },
+      {
+        "itemId": "2193619b6a2f",
+        "title": "Benefit Street Partners answers questions faster with Codex",
+        "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and fast…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2193619b6a2f"
+        ]
+      },
+      {
+        "itemId": "7b577150654f",
+        "title": "Bringing GPT-Rosalind to academic research labs",
+        "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to a…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "7b577150654f"
+        ]
+      },
+      {
+        "itemId": "b764de8c621d",
+        "title": "Teaching students to think and learn through questions",
+        "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b764de8c621d"
+        ]
+      },
+      {
+        "itemId": "147510c2c7a0",
+        "title": "Sullivan & Cromwell brings legal expertise into agreement review",
+        "summary": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "147510c2c7a0"
+        ]
+      },
+      {
+        "itemId": "7c29f3b148b5",
+        "title": "清华开源！智能体操作系统任务成本降83%，AI记忆可查可改",
+        "summary": "整套系统原生支持MCP",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "7c29f3b148b5"
+        ]
+      },
+      {
+        "itemId": "7b7721aa5312",
+        "title": "突发！DeepSeek新模型发布，超级性价比斩杀一切",
+        "summary": "新版本V4.1-Flash-1017，还开放了自研搜索API",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "7b7721aa5312"
+        ]
+      },
+      {
+        "itemId": "f41b3890d54f",
+        "title": "智谱新模型，懂法方面全球第一了",
+        "summary": "AI的风还是刮到了法律圈",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "f41b3890d54f"
+        ]
+      },
+      {
+        "itemId": "2a0a946d131b",
+        "title": "Amazon Acquires DuckLabs and Integrates DuckDB in Amazon Aurora PostgreSQL",
+        "summary": "Amazon has acquired DuckLabs, the company behind the analytical database DuckDB. Co-founders Hannes Mühleisen and Mark …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2a0a946d131b"
+        ]
+      },
+      {
+        "itemId": "203ce785549d",
+        "title": "Will major-party U.S. presidential candidate deploy AI clone to talk to voters?",
+        "summary": "Article URL: https://manifold.markets/BrunoClawfeld/will-a-majorparty-us-presidential-c Comments URL: https://news.ycom…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "203ce785549d"
+        ]
+      },
+      {
+        "itemId": "d79d112caae4",
+        "title": "AI Optimism Globally Widespread Despite Uneven Use",
+        "summary": "Article URL: https://news.gallup.com/poll/714593/optimism-globally-widespread-despite-uneven.aspx Comments URL: https:/…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d79d112caae4"
+        ]
+      },
+      {
+        "itemId": "026525e2114f",
+        "title": "Don't filter your email based on AI detection",
+        "summary": "Article URL: https://blog.keyvan.net/p/dont-filter-your-email-based-on-ai Comments URL: https://news.ycombinator.com/it…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "026525e2114f"
+        ]
+      },
+      {
+        "itemId": "3d5e03b2dc98",
+        "title": "The AI industry's gigantic debts are making investors nervous",
+        "summary": "Article URL: https://www.economist.com/business/2026/10/18/the-ai-industrys-gigantic-debts-are-making-investors-nervous…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3d5e03b2dc98"
+        ]
+      },
+      {
+        "itemId": "5478efc66827",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5478efc66827"
+        ]
+      },
+      {
+        "itemId": "bdbc16e65e61",
+        "title": "Plug-in solar is legal in these 10 states now – how it could save you money",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "bdbc16e65e61"
+        ]
+      },
+      {
+        "itemId": "63a2fe4a6815",
+        "title": "Have a Meta business account? You’re consenting to AI scraping now, legal experts say",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "63a2fe4a6815"
+        ]
+      },
+      {
+        "itemId": "e37fef0f49a7",
+        "title": "Anthropic gives third-party auditors ’employee-like access’ in AI industry first",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e37fef0f49a7"
+        ]
+      },
+      {
+        "itemId": "a58d0e049666",
+        "title": "Want an iPhone Duo before 2027? Don’t preorder from Apple – try this instead",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a58d0e049666"
+        ]
+      },
+      {
+        "itemId": "f18765cd6b91",
+        "title": "How many jobs is your state losing to AI? This dashboard tracks the cuts – and the cost",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f18765cd6b91"
+        ]
+      },
+      {
+        "itemId": "92d60b58598f",
+        "title": "Introducing Playground: Create and play custom games",
+        "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "92d60b58598f"
+        ]
+      },
+      {
+        "itemId": "1d5fed04e570",
+        "title": "The latest AI news we announced in September 2026",
+        "summary": "Here are Google’s latest AI updates from September 2026",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1d5fed04e570"
+        ]
+      },
+      {
+        "itemId": "927c795585b6",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "927c795585b6"
+        ]
+      },
+      {
+        "itemId": "5f226c85d6ea",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5f226c85d6ea"
+        ]
+      },
+      {
+        "itemId": "429ba3c49baa",
+        "title": "New experts join Google’s AI & Economy team",
+        "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "429ba3c49baa"
+        ]
+      },
+      {
+        "itemId": "d346e5ed11d2",
+        "title": "Claude半小时解开密码学悬案，学界集体走偏20年",
+        "summary": "谜底指向时间",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d346e5ed11d2"
+        ]
+      },
+      {
+        "itemId": "e7f2a0d924b4",
+        "title": "科技企业出海，为啥我推荐你去迪拜？",
+        "summary": "通往全球市场的超级跳板",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e7f2a0d924b4"
+        ]
+      },
+      {
+        "itemId": "a6f8278b4a08",
+        "title": "清华特奖得主AI创业再+1：GeoPT一作入局物理世界模型",
+        "summary": "从搭载物理建模能力的世界模型切入",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a6f8278b4a08"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "7349867a4cf6",
+        "title": "Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments",
+        "takeaway": "Google researchers open sourced EnvHarness, a framework that dynamically adapts agent-training environments to an agent…",
+        "evidenceItemIds": [
+          "7349867a4cf6"
+        ]
+      },
+      {
+        "itemId": "9d8e1cc9ed65",
+        "title": "AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance",
+        "takeaway": "A recent InfoQ webinar examined operational challenges in deploying agentic systems. Key points included issues like se…",
+        "evidenceItemIds": [
+          "9d8e1cc9ed65"
+        ]
+      },
+      {
+        "itemId": "e79603b7c59b",
+        "title": "Google Open-Sources Harness2, a Recursive Agent Harnessing Framework",
+        "takeaway": "Google Research released Harness2, an Apache-2.0 framework that rewrites an agent's harness at test time. One refinemen…",
+        "evidenceItemIds": [
+          "e79603b7c59b"
+        ]
+      },
+      {
+        "itemId": "ed8987c61bb8",
+        "title": "Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI",
+        "takeaway": "Voxel51 3.0 merges search, curation, annotation and evaluation of multimodal sensor data into one platform for physical…",
+        "evidenceItemIds": [
+          "ed8987c61bb8"
+        ]
+      },
+      {
+        "itemId": "d54ce541933e",
+        "title": "Reverse Engineer Anything Project Brings AI Agents to Binary Analysis",
+        "takeaway": "Reverse Engineer Anything (REA) is an open-source project with over 200K GitHub stars that connects coding agents such …",
+        "evidenceItemIds": [
+          "d54ce541933e"
+        ]
+      },
+      {
+        "itemId": "17ad7fc54cb3",
+        "title": "TinyFish Makes Search Free: What It Really Costs an AI Agent to Read the Web",
+        "takeaway": "An AI agent that reads the web pays 2 kinds of cost. The first is the retrieval charge: what a search or fetch API bill…",
+        "evidenceItemIds": [
+          "17ad7fc54cb3"
+        ]
+      },
+      {
+        "itemId": "fbacee60bd9a",
+        "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+        "takeaway": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10…",
+        "evidenceItemIds": [
+          "fbacee60bd9a"
+        ]
+      },
+      {
+        "itemId": "3a3d2f869e46",
+        "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+        "takeaway": "Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipula…",
+        "evidenceItemIds": [
+          "3a3d2f869e46"
+        ]
+      },
+      {
+        "itemId": "d294db57c626",
+        "title": "Grafana Applies SLOs and Error Budgets to AI Agent Behaviour",
+        "takeaway": "Grafana Labs is proposing a familiar reliability engineering approach for one of the less familiar problems in modern s…",
+        "evidenceItemIds": [
+          "d294db57c626"
+        ]
+      },
+      {
+        "itemId": "f57e64b8cd50",
+        "title": "AWS Introduces Strands Decider 2B and Strands Box for AI Agent Development",
+        "takeaway": "AWS has introduced two open-source projects for AI agent development: Strands Decider 2B, a small model designed to mak…",
+        "evidenceItemIds": [
+          "f57e64b8cd50"
+        ]
+      },
+      {
+        "itemId": "c03bec7773fc",
+        "title": "Reliable web access for AI agents and automation workflows",
+        "takeaway": "Article URL: https://ninatechllc.com/ Comments URL: https://news.ycombinator.com/item?id=50147061 Points: 1 # Comments:…",
+        "evidenceItemIds": [
+          "c03bec7773fc"
+        ]
+      },
+      {
+        "itemId": "8b506f74416c",
+        "title": "Show HN: Hybro – an open interoperability engine for AI agents",
+        "takeaway": "I built an open interoperability engine for AI agents. Connect your favorite agents and harnesses. Work together. Appre…",
+        "evidenceItemIds": [
+          "8b506f74416c"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments》、《AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance》、《Google Open-Sources Harness2, a Recursive Agent Harnessing Framework》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《How Itaú is building generative AI for its entire customer base》、《DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "e3afab90f36c",
+          "c85af8cb9c0d",
+          "b764de8c621d",
+          "f41b3890d54f"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "tooling",
+        "lead": "工具链方向本期共 4 条，建议优先阅读《Google Open-Sources Harness2, a Recursive Agent Harnessing Framework》、《Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "e79603b7c59b",
+          "ed8987c61bb8",
+          "f57e64b8cd50",
+          "c03bec7773fc"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《突发！DeepSeek新模型发布，超级性价比斩杀一切》、《Will major-party U.S. presidential candidate deploy AI clone to talk to voters?》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "7b7721aa5312",
+          "203ce785549d",
+          "d79d112caae4",
+          "026525e2114f"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 4 条，建议优先阅读《AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance》、《TinyFish Makes Search Free: What It Really Costs an AI Agent to Read the Web》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "9d8e1cc9ed65",
+          "17ad7fc54cb3",
+          "fbacee60bd9a",
+          "d294db57c626"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "c717d91bdc76ae6fdafe28fdd185ffd842d47b494baba52d432a63c0ef2dc1f6",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-10-19T01:34:29.602Z",
+      "finishedAt": "2026-10-19T01:35:32.224Z",
+      "durationMs": 62657,
+      "inputCount": 42,
+      "processedCount": 42,
+      "fallbackCount": 42,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 42,
+      "failureStats": {
+        "totalFailed": 42,
+        "timeout": 0,
+        "http": 42,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 79,
+        "splitRetryCount": 37
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-12",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-05",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 1,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-10-19T01:35:35.287Z",
+      "finishedAt": "2026-10-19T01:35:48.510Z",
+      "durationMs": 13223,
+      "inputCount": 42,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "7349867a4cf6",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments",
+        "link": "https://www.infoq.com/news/2026/10/envharness-self-evolving-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google researchers open sourced EnvHarness, a framework that dynamically adapts agent-training environments to an agent's weaknesses without modifying the agent, environment, or evaluation system. According to the researchers, this approach can improve both learning effectiveness and efficiency while helping agents overcome their weaknesses. By Sergio De Simone",
+        "publishedAt": "2026-10-16T19:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 127,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9d8e1cc9ed65",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance",
+        "link": "https://www.infoq.com/news/2026/10/ai-systems-production/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A recent InfoQ webinar examined operational challenges in deploying agentic systems. Key points included issues like semantic and embedding drift, which can lead to significant errors. Experts discussed the need for automated code reviews, continuous evaluation of models, and enhanced privacy measures. The session emphasised a strategic approach to deployment and security management. By Olimpiu Pop",
+        "publishedAt": "2026-10-16T14:14:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 91.11,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 91.11111111111111,
+          "finalScore": 91.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e79603b7c59b",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Google Open-Sources Harness2, a Recursive Agent Harnessing Framework",
+        "link": "https://www.marktechpost.com/2026/10/18/google-harness2-recursive-agent-harnessing-framework/",
+        "contentSnippet": "Google Research released Harness2, an Apache-2.0 framework that rewrites an agent's harness at test time. One refinement step lifted GLM-5 by 11.5 points on WorkBuddy-Bench with no weight updates. The post Google Open-Sources Harness2, a Recursive Agent Harnessing Framework appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-18T08:15:04.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 80,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 80,
+          "finalScore": 80,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ed8987c61bb8",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI",
+        "link": "https://www.marktechpost.com/2026/10/17/voxel51-3-0-physical-ai-data-platform/",
+        "contentSnippet": "Voxel51 3.0 merges search, curation, annotation and evaluation of multimodal sensor data into one platform for physical AI teams. It adds Voxel51 Agent with 45+ MCP tools, dataset versioning, and a free self-service tier. The post Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-18T04:06:33.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 80,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 80,
+          "finalScore": 80,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d54ce541933e",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Reverse Engineer Anything Project Brings AI Agents to Binary Analysis",
+        "link": "https://www.infoq.com/news/2026/10/reverse-engineer-anything/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Reverse Engineer Anything (REA) is an open-source project with over 200K GitHub stars that connects coding agents such as Claude Code and Codex to reverse-engineering tools like Ghidra, Hopper, and IDA. The project lets developers inspect compiled binaries, trace function calls, and investigate how applications implement specific features. By Renato Losio",
+        "publishedAt": "2026-10-17T06:28:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 77.78,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 77.77777777777779,
+          "finalScore": 77.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "17ad7fc54cb3",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "TinyFish Makes Search Free: What It Really Costs an AI Agent to Read the Web",
+        "link": "https://www.marktechpost.com/2026/10/18/tinyfish-free-search-ai-agent-token-cost/",
+        "contentSnippet": "An AI agent that reads the web pays 2 kinds of cost. The first is the retrieval charge: what a search or fetch API bills per request. The second is model processing: content passed from retrieved pages into an AI model consumes tokens, while reasoning and generated responses add further costs. TinyFish, a web infrastructure […] The post TinyFish Makes Search Free: What It Really Costs an AI Agent to Read the Web appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-18T18:20:28.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 68.89,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 68.88888888888889,
+          "finalScore": 68.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fbacee60bd9a",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+        "link": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+        "contentSnippet": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+        "publishedAt": "2026-10-16T00:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 62.22,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 62.22222222222222,
+          "finalScore": 62.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3a3d2f869e46",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+        "link": "https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/",
+        "contentSnippet": "Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipulation. The REKI vision-language-action model is pretrained only on public data. It also carries a cheap memory of its recent past. On three out-of-distribution benchmarks, only models about twice its size beat it. All weights are live on […] The post Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-17T20:22:11.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 57.78,
+        "importance": "low",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 57.77777777777777,
+          "finalScore": 57.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 42,
+      "normalizedCount": 42,
+      "dedupedCount": 42,
+      "highImportanceCount": 2,
+      "mediumImportanceCount": 4,
+      "lowImportanceCount": 36,
+      "categoryBreakdown": {
+        "open-source": 4,
+        "tooling": 7,
+        "agent": 5,
+        "research": 2,
+        "industry-news": 6,
+        "tutorial": 1,
+        "other": 17
+      }
+    },
+    "warnings": [
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：42/42",
+      "LLM 分类打分回退明细（前 3/42）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0724a6a9584f6860f952348fdef7c34f\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0724a6a94a5b78faa6b1e3198d3f0b5f\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0724a6aa4ce2b146f428029ac457bb91\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=42：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=79, split_retry=37",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": "2026-10-19T04:30:00.000Z"
+  }
+}
