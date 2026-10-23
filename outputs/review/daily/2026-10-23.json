@@ -1,0 +1,2256 @@
+{
+  "runId": "daily-1792717544408",
+  "generatedAt": "2026-10-23T01:05:44.372Z",
+  "reviewStartedAt": "2026-10-23T01:05:44.372Z",
+  "reportDate": "2026-10-23",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-10-23T01:05:44.372Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 36,
+    "normalizedCount": 36,
+    "dedupedCount": 36,
+    "highImportanceCount": 2,
+    "mediumImportanceCount": 5,
+    "lowImportanceCount": 29,
+    "categoryBreakdown": {
+      "open-source": 2,
+      "tooling": 3,
+      "agent": 4,
+      "research": 2,
+      "industry-news": 6,
+      "tutorial": 1,
+      "other": 18
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "d18a98599acb",
+      "title": "Vercel Labs Open-Sources fx: A Zig Coding Agent Designed to Be Embedded",
+      "summary": "Vercel Labs has released fx, an experimental open-source coding agent written in Zig. It runs as a CLI, a script compon…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "d18a98599acb"
+      ]
+    },
+    {
+      "itemId": "7ae223ea9ed4",
+      "title": "Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks",
+      "summary": "A recent Harvard study of 718 firms, using the Jellyfish analytics platform, finds that although AI coding assistants a…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "7ae223ea9ed4"
+      ]
+    },
+    {
+      "itemId": "5647697a8a65",
+      "title": "A Developer’s Guide to OmniParseBench: Leaderboard Benchmarks and OCR Testing",
+      "summary": "Explore how to audit and rebuild Datalab's OmniParseBench, test parser ranking certainty with document-level bootstrapp…",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "5647697a8a65"
+      ]
+    },
+    {
+      "itemId": "71684333c5a0",
+      "title": "Developer Behind the AI-Built Adobe Clones Says They Are “Not Anywhere Close to Ready",
+      "summary": "A developer used Claude Opus 5.5 to build open-source replacements for seven Adobe applications, promoted them across R…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "71684333c5a0"
+      ]
+    },
+    {
+      "itemId": "cc72fd0a11db",
+      "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
+      "summary": "中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "cc72fd0a11db"
+      ]
+    },
+    {
+      "itemId": "ec411956ac64",
+      "title": "Liquid AI Launches RIPL, a Real-Time Inference Engine for Sub-50 ms LFMs",
+      "summary": "Liquid AI released RIPL, a real-time inference engine for its LFM models. On one B200, LFM2.5-1.2B on RIPL showed 14.4 …",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "ec411956ac64"
+      ]
+    },
+    {
+      "itemId": "911bc8d301ce",
+      "title": "Cohere Releases Rerank 5 With Passage-Level Context Focus and Calibrated Scores",
+      "summary": "Cohere Rerank 5 ships in Pro and Fast tiers with a 32K context window, Context Focus passage extraction and calibrated …",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "911bc8d301ce"
+      ]
+    },
+    {
+      "itemId": "a3eda534de5c",
+      "title": "1Password launches a way for AI to log in for you without seeing your password",
+      "summary": "Article URL: https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "a3eda534de5c"
+      ]
+    },
+    {
+      "itemId": "54c3ff602f1e",
+      "title": "Scoop: Unvetted AI agents are accessing U.S. bank accounts",
+      "summary": "Article URL: https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access Comments URL: https://news.y…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "54c3ff602f1e"
+      ]
+    },
+    {
+      "itemId": "462cb040e53e",
+      "title": "IBM AI Releases Granite Speech 5.0 2B for Multilingual Transcription and Translation",
+      "summary": "IBM released Granite Speech 5.0 2B, an Apache 2.0 speech recognition and translation model. It ranks #2 on the Open ASR…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "462cb040e53e"
+      ]
+    },
+    {
+      "itemId": "7a33c1edb39e",
+      "title": "Gradium Open-Sources Phonon, a 31M-Parameter On-Device TTS Model Under Apache 2.0",
+      "summary": "Gradium has open-sourced Phonon, a family of on-device text-to-speech models. The English Phonon 31m ships under Apache…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "7a33c1edb39e"
+      ]
+    },
+    {
+      "itemId": "476b6a8801e9",
+      "title": "又一国产决策模型发布！准确率超过微软和Jev等决策模型",
+      "summary": "10月22日，蚂蚁数科正式发布决策模型 LingDT-Decision-1.0。",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "476b6a8801e9"
+      ]
+    },
+    {
+      "itemId": "036be99cb2d4",
+      "title": "EmbeddingGemma 2 Expands beyond Text to Support Code, Images, Video, and Audio",
+      "summary": "Based on Gemma 4 and released under the Apache 2.0 license, Google's EmbeddingGemma 2 is a compact, open-weight, multim…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "036be99cb2d4"
+      ]
+    },
+    {
+      "itemId": "b2394e6393fa",
+      "title": "Amazon’s Kindle Unlimited is now Kindle+, and the 2 big changes include AI audiobooks",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b2394e6393fa"
+      ]
+    },
+    {
+      "itemId": "380cdc8a07de",
+      "title": "The latest PowerToys gives your mouse 2 new tricks for free – how to use them",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "380cdc8a07de"
+      ]
+    },
+    {
+      "itemId": "0edcd192c1bf",
+      "title": "Perplexity and NVIDIA Researchers Introduce JOLT: a Joint Teacher-Student Reinforcement Learning Method",
+      "summary": "Perplexity and NVIDIA introduced JOLT, a post-training method that trains one model as both teacher and student. On MAT…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "0edcd192c1bf"
+      ]
+    },
+    {
+      "itemId": "51cd2b7b9a2d",
+      "title": "Southeast Asia’s digital economy to hit $368 billion",
+      "summary": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trilli…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "51cd2b7b9a2d"
+      ]
+    },
+    {
+      "itemId": "aad3cec146e9",
+      "title": "Google SynthID Detector Simplifies Watermark Detection and Expands Support to Other AI Providers",
+      "summary": "Google DeepMind announced the global availability of SynthID Detector, a tool designed to help identify AI-generated co…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "aad3cec146e9"
+      ]
+    },
+    {
+      "itemId": "2c2ff06826f9",
+      "title": "TornadoVM 7 Enables GPU-Native Workloads from Java Applications",
+      "summary": "TornadoVM, an open-source heterogeneous programming framework for Java, has reached version 7.0. It automatically accel…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2c2ff06826f9"
+      ]
+    },
+    {
+      "itemId": "6b1b43be330f",
+      "title": "Show HN: GrillMyProfile – AI roast of your LinkedIn, scored against a job",
+      "summary": "Article URL: https://www.grillmyprofile.com Comments URL: https://news.ycombinator.com/item?id=50203354 Points: 1 # Com…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "6b1b43be330f"
+      ]
+    },
+    {
+      "itemId": "5c6329e33839",
+      "title": "Canva's first in-house AI image model plans designs before generating them",
+      "summary": "Article URL: https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model Comments URL: ht…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5c6329e33839"
+      ]
+    },
+    {
+      "itemId": "8a5e069640d1",
+      "title": "GM Aims to Bring 'Eyes-Off' Driving to AI-Powered Cars Within 2 Years",
+      "summary": "Article URL: https://www.nytimes.com/2026/10/21/business/gm-ai-electric-vehicles-china.html Comments URL: https://news.…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "8a5e069640d1"
+      ]
+    },
+    {
+      "itemId": "dc23a8a1f598",
+      "title": "From Eyeballs to ARR: Buzzy Pricing Metrics and the AI Trade",
+      "summary": "Article URL: https://aswathdamodaran.substack.com/p/from-eyeballs-to-arr-buzzy-pricing Comments URL: https://news.ycomb…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "dc23a8a1f598"
+      ]
+    },
+    {
+      "itemId": "3f96686d390b",
+      "title": "GridCraft is the open-source Excel clone for Linux I’ve been waiting for",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3f96686d390b"
+      ]
+    },
+    {
+      "itemId": "2088f590315d",
+      "title": "Not impressed with Google Maps? Make Waze your default on Pixel – here’s how",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2088f590315d"
+      ]
+    },
+    {
+      "itemId": "e12889389300",
+      "title": "特斯拉利润腰斩，一夜跌没“通用汽车”！马斯克：FSD在中国也会遥遥领先",
+      "summary": "FSD一年增长70万付费用户",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e12889389300"
+      ]
+    },
+    {
+      "itemId": "33fe7b640d15",
+      "title": "谁在给OpenAI供应具身数据？",
+      "summary": "挤进全球Physical AI核心供应链",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "33fe7b640d15"
+      ]
+    },
+    {
+      "itemId": "a9ed2caf6a3f",
+      "title": "Hold onto your old HomePod – an upgrade is on the way",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a9ed2caf6a3f"
+      ]
+    },
+    {
+      "itemId": "4a5dcff0a2d0",
+      "title": "OpenAI’s most powerful AI models turned off safety monitoring – then lied about it",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "4a5dcff0a2d0"
+      ]
+    },
+    {
+      "itemId": "5478efc66827",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5478efc66827"
+      ]
+    },
+    {
+      "itemId": "92d60b58598f",
+      "title": "Introducing Playground: Create and play custom games",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "92d60b58598f"
+      ]
+    },
+    {
+      "itemId": "1d5fed04e570",
+      "title": "The latest AI news we announced in September 2026",
+      "summary": "Here are Google’s latest AI updates from September 2026",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1d5fed04e570"
+      ]
+    },
+    {
+      "itemId": "927c795585b6",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "927c795585b6"
+      ]
+    },
+    {
+      "itemId": "5f226c85d6ea",
+      "title": "Google Beam expands with new regions, partners, and customers",
+      "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5f226c85d6ea"
+      ]
+    },
+    {
+      "itemId": "69d16ba6c4fc",
+      "title": "多智能体协同重构医疗AI！清华AIR孵化：医生AI分身“坐诊”医院",
+      "summary": "医疗AI质变时刻",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "69d16ba6c4fc"
+      ]
+    },
+    {
+      "itemId": "7bc4521db6c6",
+      "title": "生数科技Motubrain团队将直播Physical AI训练全流程，持续半个月",
+      "summary": "10月21日，生数科技世界模型团队正式开启Motubrain 2.0训练全流程公开直播",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "7bc4521db6c6"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "d18a98599acb",
+      "title": "Vercel Labs Open-Sources fx: A Zig Coding Agent Designed to Be Embedded",
+      "takeaway": "Vercel Labs has released fx, an experimental open-source coding agent written in Zig. It runs as a CLI, a script compon…",
+      "evidenceItemIds": [
+        "d18a98599acb"
+      ]
+    },
+    {
+      "itemId": "7ae223ea9ed4",
+      "title": "Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks",
+      "takeaway": "A recent Harvard study of 718 firms, using the Jellyfish analytics platform, finds that although AI coding assistants a…",
+      "evidenceItemIds": [
+        "7ae223ea9ed4"
+      ]
+    },
+    {
+      "itemId": "5647697a8a65",
+      "title": "A Developer’s Guide to OmniParseBench: Leaderboard Benchmarks and OCR Testing",
+      "takeaway": "Explore how to audit and rebuild Datalab's OmniParseBench, test parser ranking certainty with document-level bootstrapp…",
+      "evidenceItemIds": [
+        "5647697a8a65"
+      ]
+    },
+    {
+      "itemId": "71684333c5a0",
+      "title": "Developer Behind the AI-Built Adobe Clones Says They Are “Not Anywhere Close to Ready",
+      "takeaway": "A developer used Claude Opus 5.5 to build open-source replacements for seven Adobe applications, promoted them across R…",
+      "evidenceItemIds": [
+        "71684333c5a0"
+      ]
+    },
+    {
+      "itemId": "cc72fd0a11db",
+      "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
+      "takeaway": "中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent",
+      "evidenceItemIds": [
+        "cc72fd0a11db"
+      ]
+    },
+    {
+      "itemId": "ec411956ac64",
+      "title": "Liquid AI Launches RIPL, a Real-Time Inference Engine for Sub-50 ms LFMs",
+      "takeaway": "Liquid AI released RIPL, a real-time inference engine for its LFM models. On one B200, LFM2.5-1.2B on RIPL showed 14.4 …",
+      "evidenceItemIds": [
+        "ec411956ac64"
+      ]
+    },
+    {
+      "itemId": "911bc8d301ce",
+      "title": "Cohere Releases Rerank 5 With Passage-Level Context Focus and Calibrated Scores",
+      "takeaway": "Cohere Rerank 5 ships in Pro and Fast tiers with a 32K context window, Context Focus passage extraction and calibrated …",
+      "evidenceItemIds": [
+        "911bc8d301ce"
+      ]
+    },
+    {
+      "itemId": "a3eda534de5c",
+      "title": "1Password launches a way for AI to log in for you without seeing your password",
+      "takeaway": "Article URL: https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-…",
+      "evidenceItemIds": [
+        "a3eda534de5c"
+      ]
+    },
+    {
+      "itemId": "54c3ff602f1e",
+      "title": "Scoop: Unvetted AI agents are accessing U.S. bank accounts",
+      "takeaway": "Article URL: https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access Comments URL: https://news.y…",
+      "evidenceItemIds": [
+        "54c3ff602f1e"
+      ]
+    },
+    {
+      "itemId": "462cb040e53e",
+      "title": "IBM AI Releases Granite Speech 5.0 2B for Multilingual Transcription and Translation",
+      "takeaway": "IBM released Granite Speech 5.0 2B, an Apache 2.0 speech recognition and translation model. It ranks #2 on the Open ASR…",
+      "evidenceItemIds": [
+        "462cb040e53e"
+      ]
+    },
+    {
+      "itemId": "7a33c1edb39e",
+      "title": "Gradium Open-Sources Phonon, a 31M-Parameter On-Device TTS Model Under Apache 2.0",
+      "takeaway": "Gradium has open-sourced Phonon, a family of on-device text-to-speech models. The English Phonon 31m ships under Apache…",
+      "evidenceItemIds": [
+        "7a33c1edb39e"
+      ]
+    },
+    {
+      "itemId": "476b6a8801e9",
+      "title": "又一国产决策模型发布！准确率超过微软和Jev等决策模型",
+      "takeaway": "10月22日，蚂蚁数科正式发布决策模型 LingDT-Decision-1.0。",
+      "evidenceItemIds": [
+        "476b6a8801e9"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕tooling与agent展开，建议优先关注《Vercel Labs Open-Sources fx: A Zig Coding Agent Designed to Be Embedded》、《Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks》、《A Developer’s Guide to OmniParseBench: Leaderboard Benchmarks and OCR Testing》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Liquid AI Launches RIPL, a Real-Time Inference Engine for Sub-50 ms LFMs》、《Cohere Releases Rerank 5 With Passage-Level Context Focus and Calibrated Scores》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "ec411956ac64",
+        "911bc8d301ce",
+        "462cb040e53e",
+        "7a33c1edb39e"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《又一国产决策模型发布！准确率超过微软和Jev等决策模型》、《Show HN: GrillMyProfile – AI roast of your LinkedIn, scored against a job》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "476b6a8801e9",
+        "6b1b43be330f",
+        "5c6329e33839",
+        "8a5e069640d1"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 4 条，建议优先阅读《Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks》、《Developer Behind the AI-Built Adobe Clones Says They Are “Not Anywhere Close to Ready》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "7ae223ea9ed4",
+        "71684333c5a0",
+        "a3eda534de5c",
+        "54c3ff602f1e"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "tooling",
+      "lead": "工具链方向本期共 3 条，建议优先阅读《Vercel Labs Open-Sources fx: A Zig Coding Agent Designed to Be Embedded》、《Google SynthID Detector Simplifies Watermark Detection and Expands Support to Other AI Providers》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "d18a98599acb",
+        "aad3cec146e9",
+        "2c2ff06826f9"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "a08295e5f951be3cbbb3d5c1f9129dc727b62098436b00e5895420a42e80af2b",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-10-23T01:43:45.548Z",
+    "finishedAt": "2026-10-23T01:44:27.964Z",
+    "durationMs": 42417,
+    "inputCount": 36,
+    "processedCount": 36,
+    "fallbackCount": 36,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 36,
+    "failureStats": {
+      "totalFailed": 36,
+      "timeout": 0,
+      "http": 36,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 68,
+      "splitRetryCount": 32
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-16",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=UND_ERR_CONNECT_TIMEOUT"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-09",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-10-23T01:44:28.055Z",
+    "finishedAt": "2026-10-23T01:44:39.627Z",
+    "durationMs": 11572,
+    "inputCount": 36,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "d18a98599acb",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Vercel Labs Open-Sources fx: A Zig Coding Agent Designed to Be Embedded",
+      "link": "https://www.infoq.com/news/2026/10/vercel-zig-fx-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Vercel Labs has released fx, an experimental open-source coding agent written in Zig. It runs as a CLI, a script component, or an embedded library, including a WebAssembly build. Early feedback questioned its model-agnostic claim and a name conflict with an existing tool. Vercel says the project is pre-1.0 and changing quickly. By Daniel Curtis",
+      "publishedAt": "2026-10-22T09:33:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 120,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "7ae223ea9ed4",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks",
+      "link": "https://www.infoq.com/news/2026/10/jellyfish-ai-productivity/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "A recent Harvard study of 718 firms, using the Jellyfish analytics platform, finds that although AI coding assistants and agents increase code volume, this does not translate into a corresponding increase in completed work, partly because AI-generated code increases the workload in later stages of development, particularly code review. By Sergio De Simone",
+      "publishedAt": "2026-10-22T14:00:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 86.84,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 115,
+        "ruleScoreNormalized": 86.8421052631579,
+        "finalScore": 86.84,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "5647697a8a65",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "A Developer’s Guide to OmniParseBench: Leaderboard Benchmarks and OCR Testing",
+      "link": "https://www.marktechpost.com/2026/10/22/omniparsebench-document-parsing-leaderboard-guide/",
+      "contentSnippet": "Explore how to audit and rebuild Datalab's OmniParseBench, test parser ranking certainty with document-level bootstrapping, and evaluate Tesseract and Indra OCR performance on a custom sample. The post A Developer’s Guide to OmniParseBench: Leaderboard Benchmarks and OCR Testing appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-22T16:11:52.000Z",
+      "category": "research",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 84.21,
+      "importance": "medium",
+      "recommendationReason": "评测与性能信息",
+      "scoreBreakdown": {
+        "ruleScore": 114,
+        "ruleScoreNormalized": 84.21052631578947,
+        "finalScore": 84.21,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "71684333c5a0",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Developer Behind the AI-Built Adobe Clones Says They Are “Not Anywhere Close to Ready",
+      "link": "https://www.infoq.com/news/2026/10/photocraft-adobe-parity/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "A developer used Claude Opus 5.5 to build open-source replacements for seven Adobe applications, promoted them across Reddit with a projection of roughly 100% parity within a month, then told Hacker News the project was not anywhere close to ready. Its own roadmap puts it at 45% ready for real work and 2,300 to 4,100 agent-hours from full parity. By Steef-Jan Wiggers",
+      "publishedAt": "2026-10-22T07:41:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 73.68,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 110,
+        "ruleScoreNormalized": 73.68421052631578,
+        "finalScore": 73.68,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "cc72fd0a11db",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
+      "link": "https://www.qbitai.com/2026/10/504832.html",
+      "contentSnippet": "中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent",
+      "publishedAt": "2026-10-22T07:11:14.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 71.05,
+      "importance": "medium",
+      "recommendationReason": "开源生态更新",
+      "scoreBreakdown": {
+        "ruleScore": 109,
+        "ruleScoreNormalized": 71.05263157894737,
+        "finalScore": 71.05,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=UND_ERR_CONNECT_TIMEOUT",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：36/36",
+    "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0729eed5b17537ee9c67b6b8f0389e18\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0729eed592557c3ff8db3b7c66c05703\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0729eed63527bcf01a6b003998c3f373\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Vercel Labs Open-Sources fx: A Zig Coding Agent Designed to Be Embedded\n- Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks\n- A Developer’s Guide to OmniParseBench: Leaderboard Benchmarks and OCR Testing\n- Developer Behind the AI-Built Adobe Clones Says They Are “Not Anywhere Close to Ready\n- 既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布\n\n### 分类覆盖（大纲）\n- tooling: 3 条\n- agent: 4 条\n- research: 2 条\n- open-source: 2 条\n- other: 18 条\n- industry-news: 6 条\n- tutorial: 1 条",
+    "rankedItems": [
+      {
+        "id": "d18a98599acb",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Vercel Labs Open-Sources fx: A Zig Coding Agent Designed to Be Embedded",
+        "link": "https://www.infoq.com/news/2026/10/vercel-zig-fx-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Vercel Labs has released fx, an experimental open-source coding agent written in Zig. It runs as a CLI, a script component, or an embedded library, including a WebAssembly build. Early feedback questioned its model-agnostic claim and a name conflict with an existing tool. Vercel says the project is pre-1.0 and changing quickly. By Daniel Curtis",
+        "publishedAt": "2026-10-22T09:33:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 120,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7ae223ea9ed4",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks",
+        "link": "https://www.infoq.com/news/2026/10/jellyfish-ai-productivity/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A recent Harvard study of 718 firms, using the Jellyfish analytics platform, finds that although AI coding assistants and agents increase code volume, this does not translate into a corresponding increase in completed work, partly because AI-generated code increases the workload in later stages of development, particularly code review. By Sergio De Simone",
+        "publishedAt": "2026-10-22T14:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 86.84,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 86.8421052631579,
+          "finalScore": 86.84,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5647697a8a65",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "A Developer’s Guide to OmniParseBench: Leaderboard Benchmarks and OCR Testing",
+        "link": "https://www.marktechpost.com/2026/10/22/omniparsebench-document-parsing-leaderboard-guide/",
+        "contentSnippet": "Explore how to audit and rebuild Datalab's OmniParseBench, test parser ranking certainty with document-level bootstrapping, and evaluate Tesseract and Indra OCR performance on a custom sample. The post A Developer’s Guide to OmniParseBench: Leaderboard Benchmarks and OCR Testing appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-22T16:11:52.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 84.21,
+        "importance": "medium",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 114,
+          "ruleScoreNormalized": 84.21052631578947,
+          "finalScore": 84.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "71684333c5a0",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Developer Behind the AI-Built Adobe Clones Says They Are “Not Anywhere Close to Ready",
+        "link": "https://www.infoq.com/news/2026/10/photocraft-adobe-parity/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A developer used Claude Opus 5.5 to build open-source replacements for seven Adobe applications, promoted them across Reddit with a projection of roughly 100% parity within a month, then told Hacker News the project was not anywhere close to ready. Its own roadmap puts it at 45% ready for real work and 2,300 to 4,100 agent-hours from full parity. By Steef-Jan Wiggers",
+        "publishedAt": "2026-10-22T07:41:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.68,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 73.68421052631578,
+          "finalScore": 73.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cc72fd0a11db",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
+        "link": "https://www.qbitai.com/2026/10/504832.html",
+        "contentSnippet": "中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent",
+        "publishedAt": "2026-10-22T07:11:14.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 71.05,
+        "importance": "medium",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 109,
+          "ruleScoreNormalized": 71.05263157894737,
+          "finalScore": 71.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ec411956ac64",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Liquid AI Launches RIPL, a Real-Time Inference Engine for Sub-50 ms LFMs",
+        "link": "https://www.marktechpost.com/2026/10/22/liquid-ai-ripl-real-time-inference-engine/",
+        "contentSnippet": "Liquid AI released RIPL, a real-time inference engine for its LFM models. On one B200, LFM2.5-1.2B on RIPL showed 14.4 to 28.4x lower p95 latency than Qwen3.5-0.8B on vLLM. The post Liquid AI Launches RIPL, a Real-Time Inference Engine for Sub-50 ms LFMs appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-22T17:33:25.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 68.42,
+        "importance": "medium",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 68.42105263157895,
+          "finalScore": 68.42,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "911bc8d301ce",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Cohere Releases Rerank 5 With Passage-Level Context Focus and Calibrated Scores",
+        "link": "https://www.marktechpost.com/2026/10/22/cohere-rerank-5-context-focus/",
+        "contentSnippet": "Cohere Rerank 5 ships in Pro and Fast tiers with a 32K context window, Context Focus passage extraction and calibrated relevance scores. Pro scores 82.2 on BRIGHT and costs $0.05 per 1M tokens. The post Cohere Releases Rerank 5 With Passage-Level Context Focus and Calibrated Scores appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-22T16:31:31.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 68.42,
+        "importance": "medium",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 68.42105263157895,
+          "finalScore": 68.42,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a3eda534de5c",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "1Password launches a way for AI to log in for you without seeing your password",
+        "link": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+        "contentSnippet": "Article URL: https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/ Comments URL: https://news.ycombinator.com/item?id=50203268 Points: 1 # Comments: 1",
+        "publishedAt": "2026-10-23T01:08:49.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.53,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 60.526315789473685,
+          "finalScore": 60.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "54c3ff602f1e",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Scoop: Unvetted AI agents are accessing U.S. bank accounts",
+        "link": "https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access",
+        "contentSnippet": "Article URL: https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access Comments URL: https://news.ycombinator.com/item?id=50202831 Points: 2 # Comments: 3",
+        "publishedAt": "2026-10-23T00:06:50.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.53,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 60.526315789473685,
+          "finalScore": 60.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "462cb040e53e",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "IBM AI Releases Granite Speech 5.0 2B for Multilingual Transcription and Translation",
+        "link": "https://www.marktechpost.com/2026/10/22/ibm-granite-speech-5-0-2b-release/",
+        "contentSnippet": "IBM released Granite Speech 5.0 2B, an Apache 2.0 speech recognition and translation model. It ranks #2 on the Open ASR Leaderboard with 5.68% average English WER, alongside updated Turbo CTC and 4.1 2B Plus models. The post IBM AI Releases Granite Speech 5.0 2B for Multilingual Transcription and Translation appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-22T07:00:56.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.26,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 103,
+          "ruleScoreNormalized": 55.26315789473685,
+          "finalScore": 55.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7a33c1edb39e",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Gradium Open-Sources Phonon, a 31M-Parameter On-Device TTS Model Under Apache 2.0",
+        "link": "https://www.marktechpost.com/2026/10/22/gradium-phonon-31m-on-device-tts/",
+        "contentSnippet": "Gradium has open-sourced Phonon, a family of on-device text-to-speech models. The English Phonon 31m ships under Apache 2.0, fits in 64.5 MB, and starts speaking in about 7 ms on a laptop CPU. The post Gradium Open-Sources Phonon, a 31M-Parameter On-Device TTS Model Under Apache 2.0 appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-22T16:56:12.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 42.11,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 42.10526315789473,
+          "finalScore": 42.11,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "476b6a8801e9",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "又一国产决策模型发布！准确率超过微软和Jev等决策模型",
+        "link": "https://www.qbitai.com/2026/10/504879.html",
+        "contentSnippet": "10月22日，蚂蚁数科正式发布决策模型 LingDT-Decision-1.0。",
+        "publishedAt": "2026-10-22T09:07:05.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 39.47,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 39.473684210526315,
+          "finalScore": 39.47,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "036be99cb2d4",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "EmbeddingGemma 2 Expands beyond Text to Support Code, Images, Video, and Audio",
+        "link": "https://www.infoq.com/news/2026/10/embeddinggemma-2-multimodal/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Based on Gemma 4 and released under the Apache 2.0 license, Google's EmbeddingGemma 2 is a compact, open-weight, multimodal embedding model designed to make semantic search and retrieval-augmented generation (RAG) more efficient while optimizing performance for on-device deployment. By Sergio De Simone",
+        "publishedAt": "2026-10-19T10:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.21,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 34.21052631578947,
+          "finalScore": 34.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b2394e6393fa",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Amazon’s Kindle Unlimited is now Kindle+, and the 2 big changes include AI audiobooks",
+        "link": "https://www.zdnet.com/tech/kindle-unlimited-kindle-plus-audiobooks-ai/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-22T15:55:55.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 31.58,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 31.57894736842105,
+          "finalScore": 31.58,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "380cdc8a07de",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "The latest PowerToys gives your mouse 2 new tricks for free – how to use them",
+        "link": "https://www.zdnet.com/tech/powertoys-102-windows-mouse-control/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-22T15:17:56.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 31.58,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 31.57894736842105,
+          "finalScore": 31.58,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0edcd192c1bf",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Perplexity and NVIDIA Researchers Introduce JOLT: a Joint Teacher-Student Reinforcement Learning Method",
+        "link": "https://www.marktechpost.com/2026/10/21/perplexity-jolt-joint-on-policy-learning-teaching/",
+        "contentSnippet": "Perplexity and NVIDIA introduced JOLT, a post-training method that trains one model as both teacher and student. On MATH it matched GRPO’s accuracy with 6.5x fewer processed training tokens. The post Perplexity and NVIDIA Researchers Introduce JOLT: a Joint Teacher-Student Reinforcement Learning Method appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-22T04:56:31.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 28.95,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 93,
+          "ruleScoreNormalized": 28.947368421052634,
+          "finalScore": 28.95,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "51cd2b7b9a2d",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Southeast Asia’s digital economy to hit $368 billion",
+        "link": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+        "contentSnippet": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trillion by 2035.",
+        "publishedAt": "2026-10-21T04:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 26.32,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 26.31578947368421,
+          "finalScore": 26.32,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "aad3cec146e9",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google SynthID Detector Simplifies Watermark Detection and Expands Support to Other AI Providers",
+        "link": "https://www.infoq.com/news/2026/10/synthid-watermarking-detector/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google DeepMind announced the global availability of SynthID Detector, a tool designed to help identify AI-generated content, including media created using AI tools from SynthID partners such as OpenAI, NVIDIA, and Kakao, with Apple support expected soon. By Sergio De Simone",
+        "publishedAt": "2026-10-21T10:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2c2ff06826f9",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "TornadoVM 7 Enables GPU-Native Workloads from Java Applications",
+        "link": "https://www.infoq.com/news/2026/10/tornadovm-7-gpu/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "TornadoVM, an open-source heterogeneous programming framework for Java, has reached version 7.0. It automatically accelerates Java programs on multi-core CPUs and GPUs and provides a rich GPU programming ecosystem in Java that can be used with any mainstream JDK distribution e.g. Temurin, Red Hat OpenJDK, Coretto, Oracle, GraalVM or Zulu. By Ben Evans",
+        "publishedAt": "2026-10-21T03:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6b1b43be330f",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: GrillMyProfile – AI roast of your LinkedIn, scored against a job",
+        "link": "https://www.grillmyprofile.com",
+        "contentSnippet": "Article URL: https://www.grillmyprofile.com Comments URL: https://news.ycombinator.com/item?id=50203354 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-23T01:20:10.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5c6329e33839",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Canva's first in-house AI image model plans designs before generating them",
+        "link": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
+        "contentSnippet": "Article URL: https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model Comments URL: https://news.ycombinator.com/item?id=50203240 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-23T01:04:26.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8a5e069640d1",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "GM Aims to Bring 'Eyes-Off' Driving to AI-Powered Cars Within 2 Years",
+        "link": "https://www.nytimes.com/2026/10/21/business/gm-ai-electric-vehicles-china.html",
+        "contentSnippet": "Article URL: https://www.nytimes.com/2026/10/21/business/gm-ai-electric-vehicles-china.html Comments URL: https://news.ycombinator.com/item?id=50202827 Points: 2 # Comments: 1",
+        "publishedAt": "2026-10-23T00:06:18.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "dc23a8a1f598",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "From Eyeballs to ARR: Buzzy Pricing Metrics and the AI Trade",
+        "link": "https://aswathdamodaran.substack.com/p/from-eyeballs-to-arr-buzzy-pricing",
+        "contentSnippet": "Article URL: https://aswathdamodaran.substack.com/p/from-eyeballs-to-arr-buzzy-pricing Comments URL: https://news.ycombinator.com/item?id=50202819 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-23T00:05:56.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.05,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.052631578947366,
+          "finalScore": 21.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3f96686d390b",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "GridCraft is the open-source Excel clone for Linux I’ve been waiting for",
+        "link": "https://www.zdnet.com/tech/gridcraft-excel-clone-hands-on/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-22T02:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.42,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 89,
+          "ruleScoreNormalized": 18.421052631578945,
+          "finalScore": 18.42,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2088f590315d",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Not impressed with Google Maps? Make Waze your default on Pixel – here’s how",
+        "link": "https://www.zdnet.com/tech/waze-your-way-to-a-different-default-map-app-on-pixel/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-22T01:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.42,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 89,
+          "ruleScoreNormalized": 18.421052631578945,
+          "finalScore": 18.42,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e12889389300",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "特斯拉利润腰斩，一夜跌没“通用汽车”！马斯克：FSD在中国也会遥遥领先",
+        "link": "https://www.qbitai.com/2026/10/504841.html",
+        "contentSnippet": "FSD一年增长70万付费用户",
+        "publishedAt": "2026-10-22T07:14:48.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "33fe7b640d15",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "谁在给OpenAI供应具身数据？",
+        "link": "https://www.qbitai.com/2026/10/504800.html",
+        "contentSnippet": "挤进全球Physical AI核心供应链",
+        "publishedAt": "2026-10-22T07:05:59.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.16,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 13.157894736842104,
+          "finalScore": 13.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a9ed2caf6a3f",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Hold onto your old HomePod – an upgrade is on the way",
+        "link": "https://www.zdnet.com/home-and-office/keep-old-apple-homepod-upgrades/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-21T18:37:07.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.26,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 5.263157894736842,
+          "finalScore": 5.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4a5dcff0a2d0",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "OpenAI’s most powerful AI models turned off safety monitoring – then lied about it",
+        "link": "https://www.zdnet.com/innovation/openai-astra-sol-models-disable-safety-monitoring/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-21T18:15:19.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.26,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 5.263157894736842,
+          "finalScore": 5.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5478efc66827",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "contentSnippet": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "publishedAt": "2026-10-13T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "92d60b58598f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Introducing Playground: Create and play custom games",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+        "contentSnippet": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "publishedAt": "2026-10-07T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1d5fed04e570",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in September 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from September 2026",
+        "publishedAt": "2026-10-02T15:00:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "927c795585b6",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "contentSnippet": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "publishedAt": "2026-09-28T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5f226c85d6ea",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "link": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+        "contentSnippet": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "publishedAt": "2026-09-23T18:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "69d16ba6c4fc",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "多智能体协同重构医疗AI！清华AIR孵化：医生AI分身“坐诊”医院",
+        "link": "https://www.qbitai.com/2026/10/504734.html",
+        "contentSnippet": "医疗AI质变时刻",
+        "publishedAt": "2026-10-21T11:30:59.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7bc4521db6c6",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "生数科技Motubrain团队将直播Physical AI训练全流程，持续半个月",
+        "link": "https://www.qbitai.com/2026/10/504730.html",
+        "contentSnippet": "10月21日，生数科技世界模型团队正式开启Motubrain 2.0训练全流程公开直播",
+        "publishedAt": "2026-10-21T09:45:22.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "d18a98599acb",
+        "title": "Vercel Labs Open-Sources fx: A Zig Coding Agent Designed to Be Embedded",
+        "summary": "Vercel Labs has released fx, an experimental open-source coding agent written in Zig. It runs as a CLI, a script compon…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "d18a98599acb"
+        ]
+      },
+      {
+        "itemId": "7ae223ea9ed4",
+        "title": "Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks",
+        "summary": "A recent Harvard study of 718 firms, using the Jellyfish analytics platform, finds that although AI coding assistants a…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "7ae223ea9ed4"
+        ]
+      },
+      {
+        "itemId": "5647697a8a65",
+        "title": "A Developer’s Guide to OmniParseBench: Leaderboard Benchmarks and OCR Testing",
+        "summary": "Explore how to audit and rebuild Datalab's OmniParseBench, test parser ranking certainty with document-level bootstrapp…",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "5647697a8a65"
+        ]
+      },
+      {
+        "itemId": "71684333c5a0",
+        "title": "Developer Behind the AI-Built Adobe Clones Says They Are “Not Anywhere Close to Ready",
+        "summary": "A developer used Claude Opus 5.5 to build open-source replacements for seven Adobe applications, promoted them across R…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "71684333c5a0"
+        ]
+      },
+      {
+        "itemId": "cc72fd0a11db",
+        "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
+        "summary": "中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "cc72fd0a11db"
+        ]
+      },
+      {
+        "itemId": "ec411956ac64",
+        "title": "Liquid AI Launches RIPL, a Real-Time Inference Engine for Sub-50 ms LFMs",
+        "summary": "Liquid AI released RIPL, a real-time inference engine for its LFM models. On one B200, LFM2.5-1.2B on RIPL showed 14.4 …",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "ec411956ac64"
+        ]
+      },
+      {
+        "itemId": "911bc8d301ce",
+        "title": "Cohere Releases Rerank 5 With Passage-Level Context Focus and Calibrated Scores",
+        "summary": "Cohere Rerank 5 ships in Pro and Fast tiers with a 32K context window, Context Focus passage extraction and calibrated …",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "911bc8d301ce"
+        ]
+      },
+      {
+        "itemId": "a3eda534de5c",
+        "title": "1Password launches a way for AI to log in for you without seeing your password",
+        "summary": "Article URL: https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "a3eda534de5c"
+        ]
+      },
+      {
+        "itemId": "54c3ff602f1e",
+        "title": "Scoop: Unvetted AI agents are accessing U.S. bank accounts",
+        "summary": "Article URL: https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access Comments URL: https://news.y…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "54c3ff602f1e"
+        ]
+      },
+      {
+        "itemId": "462cb040e53e",
+        "title": "IBM AI Releases Granite Speech 5.0 2B for Multilingual Transcription and Translation",
+        "summary": "IBM released Granite Speech 5.0 2B, an Apache 2.0 speech recognition and translation model. It ranks #2 on the Open ASR…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "462cb040e53e"
+        ]
+      },
+      {
+        "itemId": "7a33c1edb39e",
+        "title": "Gradium Open-Sources Phonon, a 31M-Parameter On-Device TTS Model Under Apache 2.0",
+        "summary": "Gradium has open-sourced Phonon, a family of on-device text-to-speech models. The English Phonon 31m ships under Apache…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "7a33c1edb39e"
+        ]
+      },
+      {
+        "itemId": "476b6a8801e9",
+        "title": "又一国产决策模型发布！准确率超过微软和Jev等决策模型",
+        "summary": "10月22日，蚂蚁数科正式发布决策模型 LingDT-Decision-1.0。",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "476b6a8801e9"
+        ]
+      },
+      {
+        "itemId": "036be99cb2d4",
+        "title": "EmbeddingGemma 2 Expands beyond Text to Support Code, Images, Video, and Audio",
+        "summary": "Based on Gemma 4 and released under the Apache 2.0 license, Google's EmbeddingGemma 2 is a compact, open-weight, multim…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "036be99cb2d4"
+        ]
+      },
+      {
+        "itemId": "b2394e6393fa",
+        "title": "Amazon’s Kindle Unlimited is now Kindle+, and the 2 big changes include AI audiobooks",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b2394e6393fa"
+        ]
+      },
+      {
+        "itemId": "380cdc8a07de",
+        "title": "The latest PowerToys gives your mouse 2 new tricks for free – how to use them",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "380cdc8a07de"
+        ]
+      },
+      {
+        "itemId": "0edcd192c1bf",
+        "title": "Perplexity and NVIDIA Researchers Introduce JOLT: a Joint Teacher-Student Reinforcement Learning Method",
+        "summary": "Perplexity and NVIDIA introduced JOLT, a post-training method that trains one model as both teacher and student. On MAT…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "0edcd192c1bf"
+        ]
+      },
+      {
+        "itemId": "51cd2b7b9a2d",
+        "title": "Southeast Asia’s digital economy to hit $368 billion",
+        "summary": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trilli…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "51cd2b7b9a2d"
+        ]
+      },
+      {
+        "itemId": "aad3cec146e9",
+        "title": "Google SynthID Detector Simplifies Watermark Detection and Expands Support to Other AI Providers",
+        "summary": "Google DeepMind announced the global availability of SynthID Detector, a tool designed to help identify AI-generated co…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "aad3cec146e9"
+        ]
+      },
+      {
+        "itemId": "2c2ff06826f9",
+        "title": "TornadoVM 7 Enables GPU-Native Workloads from Java Applications",
+        "summary": "TornadoVM, an open-source heterogeneous programming framework for Java, has reached version 7.0. It automatically accel…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2c2ff06826f9"
+        ]
+      },
+      {
+        "itemId": "6b1b43be330f",
+        "title": "Show HN: GrillMyProfile – AI roast of your LinkedIn, scored against a job",
+        "summary": "Article URL: https://www.grillmyprofile.com Comments URL: https://news.ycombinator.com/item?id=50203354 Points: 1 # Com…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "6b1b43be330f"
+        ]
+      },
+      {
+        "itemId": "5c6329e33839",
+        "title": "Canva's first in-house AI image model plans designs before generating them",
+        "summary": "Article URL: https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model Comments URL: ht…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5c6329e33839"
+        ]
+      },
+      {
+        "itemId": "8a5e069640d1",
+        "title": "GM Aims to Bring 'Eyes-Off' Driving to AI-Powered Cars Within 2 Years",
+        "summary": "Article URL: https://www.nytimes.com/2026/10/21/business/gm-ai-electric-vehicles-china.html Comments URL: https://news.…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "8a5e069640d1"
+        ]
+      },
+      {
+        "itemId": "dc23a8a1f598",
+        "title": "From Eyeballs to ARR: Buzzy Pricing Metrics and the AI Trade",
+        "summary": "Article URL: https://aswathdamodaran.substack.com/p/from-eyeballs-to-arr-buzzy-pricing Comments URL: https://news.ycomb…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "dc23a8a1f598"
+        ]
+      },
+      {
+        "itemId": "3f96686d390b",
+        "title": "GridCraft is the open-source Excel clone for Linux I’ve been waiting for",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3f96686d390b"
+        ]
+      },
+      {
+        "itemId": "2088f590315d",
+        "title": "Not impressed with Google Maps? Make Waze your default on Pixel – here’s how",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2088f590315d"
+        ]
+      },
+      {
+        "itemId": "e12889389300",
+        "title": "特斯拉利润腰斩，一夜跌没“通用汽车”！马斯克：FSD在中国也会遥遥领先",
+        "summary": "FSD一年增长70万付费用户",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e12889389300"
+        ]
+      },
+      {
+        "itemId": "33fe7b640d15",
+        "title": "谁在给OpenAI供应具身数据？",
+        "summary": "挤进全球Physical AI核心供应链",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "33fe7b640d15"
+        ]
+      },
+      {
+        "itemId": "a9ed2caf6a3f",
+        "title": "Hold onto your old HomePod – an upgrade is on the way",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a9ed2caf6a3f"
+        ]
+      },
+      {
+        "itemId": "4a5dcff0a2d0",
+        "title": "OpenAI’s most powerful AI models turned off safety monitoring – then lied about it",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "4a5dcff0a2d0"
+        ]
+      },
+      {
+        "itemId": "5478efc66827",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5478efc66827"
+        ]
+      },
+      {
+        "itemId": "92d60b58598f",
+        "title": "Introducing Playground: Create and play custom games",
+        "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "92d60b58598f"
+        ]
+      },
+      {
+        "itemId": "1d5fed04e570",
+        "title": "The latest AI news we announced in September 2026",
+        "summary": "Here are Google’s latest AI updates from September 2026",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1d5fed04e570"
+        ]
+      },
+      {
+        "itemId": "927c795585b6",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "927c795585b6"
+        ]
+      },
+      {
+        "itemId": "5f226c85d6ea",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5f226c85d6ea"
+        ]
+      },
+      {
+        "itemId": "69d16ba6c4fc",
+        "title": "多智能体协同重构医疗AI！清华AIR孵化：医生AI分身“坐诊”医院",
+        "summary": "医疗AI质变时刻",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "69d16ba6c4fc"
+        ]
+      },
+      {
+        "itemId": "7bc4521db6c6",
+        "title": "生数科技Motubrain团队将直播Physical AI训练全流程，持续半个月",
+        "summary": "10月21日，生数科技世界模型团队正式开启Motubrain 2.0训练全流程公开直播",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "7bc4521db6c6"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "d18a98599acb",
+        "title": "Vercel Labs Open-Sources fx: A Zig Coding Agent Designed to Be Embedded",
+        "takeaway": "Vercel Labs has released fx, an experimental open-source coding agent written in Zig. It runs as a CLI, a script compon…",
+        "evidenceItemIds": [
+          "d18a98599acb"
+        ]
+      },
+      {
+        "itemId": "7ae223ea9ed4",
+        "title": "Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks",
+        "takeaway": "A recent Harvard study of 718 firms, using the Jellyfish analytics platform, finds that although AI coding assistants a…",
+        "evidenceItemIds": [
+          "7ae223ea9ed4"
+        ]
+      },
+      {
+        "itemId": "5647697a8a65",
+        "title": "A Developer’s Guide to OmniParseBench: Leaderboard Benchmarks and OCR Testing",
+        "takeaway": "Explore how to audit and rebuild Datalab's OmniParseBench, test parser ranking certainty with document-level bootstrapp…",
+        "evidenceItemIds": [
+          "5647697a8a65"
+        ]
+      },
+      {
+        "itemId": "71684333c5a0",
+        "title": "Developer Behind the AI-Built Adobe Clones Says They Are “Not Anywhere Close to Ready",
+        "takeaway": "A developer used Claude Opus 5.5 to build open-source replacements for seven Adobe applications, promoted them across R…",
+        "evidenceItemIds": [
+          "71684333c5a0"
+        ]
+      },
+      {
+        "itemId": "cc72fd0a11db",
+        "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
+        "takeaway": "中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent",
+        "evidenceItemIds": [
+          "cc72fd0a11db"
+        ]
+      },
+      {
+        "itemId": "ec411956ac64",
+        "title": "Liquid AI Launches RIPL, a Real-Time Inference Engine for Sub-50 ms LFMs",
+        "takeaway": "Liquid AI released RIPL, a real-time inference engine for its LFM models. On one B200, LFM2.5-1.2B on RIPL showed 14.4 …",
+        "evidenceItemIds": [
+          "ec411956ac64"
+        ]
+      },
+      {
+        "itemId": "911bc8d301ce",
+        "title": "Cohere Releases Rerank 5 With Passage-Level Context Focus and Calibrated Scores",
+        "takeaway": "Cohere Rerank 5 ships in Pro and Fast tiers with a 32K context window, Context Focus passage extraction and calibrated …",
+        "evidenceItemIds": [
+          "911bc8d301ce"
+        ]
+      },
+      {
+        "itemId": "a3eda534de5c",
+        "title": "1Password launches a way for AI to log in for you without seeing your password",
+        "takeaway": "Article URL: https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-…",
+        "evidenceItemIds": [
+          "a3eda534de5c"
+        ]
+      },
+      {
+        "itemId": "54c3ff602f1e",
+        "title": "Scoop: Unvetted AI agents are accessing U.S. bank accounts",
+        "takeaway": "Article URL: https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access Comments URL: https://news.y…",
+        "evidenceItemIds": [
+          "54c3ff602f1e"
+        ]
+      },
+      {
+        "itemId": "462cb040e53e",
+        "title": "IBM AI Releases Granite Speech 5.0 2B for Multilingual Transcription and Translation",
+        "takeaway": "IBM released Granite Speech 5.0 2B, an Apache 2.0 speech recognition and translation model. It ranks #2 on the Open ASR…",
+        "evidenceItemIds": [
+          "462cb040e53e"
+        ]
+      },
+      {
+        "itemId": "7a33c1edb39e",
+        "title": "Gradium Open-Sources Phonon, a 31M-Parameter On-Device TTS Model Under Apache 2.0",
+        "takeaway": "Gradium has open-sourced Phonon, a family of on-device text-to-speech models. The English Phonon 31m ships under Apache…",
+        "evidenceItemIds": [
+          "7a33c1edb39e"
+        ]
+      },
+      {
+        "itemId": "476b6a8801e9",
+        "title": "又一国产决策模型发布！准确率超过微软和Jev等决策模型",
+        "takeaway": "10月22日，蚂蚁数科正式发布决策模型 LingDT-Decision-1.0。",
+        "evidenceItemIds": [
+          "476b6a8801e9"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕tooling与agent展开，建议优先关注《Vercel Labs Open-Sources fx: A Zig Coding Agent Designed to Be Embedded》、《Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks》、《A Developer’s Guide to OmniParseBench: Leaderboard Benchmarks and OCR Testing》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Liquid AI Launches RIPL, a Real-Time Inference Engine for Sub-50 ms LFMs》、《Cohere Releases Rerank 5 With Passage-Level Context Focus and Calibrated Scores》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "ec411956ac64",
+          "911bc8d301ce",
+          "462cb040e53e",
+          "7a33c1edb39e"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《又一国产决策模型发布！准确率超过微软和Jev等决策模型》、《Show HN: GrillMyProfile – AI roast of your LinkedIn, scored against a job》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "476b6a8801e9",
+          "6b1b43be330f",
+          "5c6329e33839",
+          "8a5e069640d1"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 4 条，建议优先阅读《Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks》、《Developer Behind the AI-Built Adobe Clones Says They Are “Not Anywhere Close to Ready》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "7ae223ea9ed4",
+          "71684333c5a0",
+          "a3eda534de5c",
+          "54c3ff602f1e"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "tooling",
+        "lead": "工具链方向本期共 3 条，建议优先阅读《Vercel Labs Open-Sources fx: A Zig Coding Agent Designed to Be Embedded》、《Google SynthID Detector Simplifies Watermark Detection and Expands Support to Other AI Providers》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "d18a98599acb",
+          "aad3cec146e9",
+          "2c2ff06826f9"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "a08295e5f951be3cbbb3d5c1f9129dc727b62098436b00e5895420a42e80af2b",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-10-23T01:43:45.548Z",
+      "finishedAt": "2026-10-23T01:44:27.964Z",
+      "durationMs": 42417,
+      "inputCount": 36,
+      "processedCount": 36,
+      "fallbackCount": 36,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 36,
+      "failureStats": {
+        "totalFailed": 36,
+        "timeout": 0,
+        "http": 36,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 68,
+        "splitRetryCount": 32
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-16",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=UND_ERR_CONNECT_TIMEOUT"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-09",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-10-23T01:44:28.055Z",
+      "finishedAt": "2026-10-23T01:44:39.627Z",
+      "durationMs": 11572,
+      "inputCount": 36,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "d18a98599acb",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Vercel Labs Open-Sources fx: A Zig Coding Agent Designed to Be Embedded",
+        "link": "https://www.infoq.com/news/2026/10/vercel-zig-fx-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Vercel Labs has released fx, an experimental open-source coding agent written in Zig. It runs as a CLI, a script component, or an embedded library, including a WebAssembly build. Early feedback questioned its model-agnostic claim and a name conflict with an existing tool. Vercel says the project is pre-1.0 and changing quickly. By Daniel Curtis",
+        "publishedAt": "2026-10-22T09:33:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 120,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7ae223ea9ed4",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks",
+        "link": "https://www.infoq.com/news/2026/10/jellyfish-ai-productivity/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A recent Harvard study of 718 firms, using the Jellyfish analytics platform, finds that although AI coding assistants and agents increase code volume, this does not translate into a corresponding increase in completed work, partly because AI-generated code increases the workload in later stages of development, particularly code review. By Sergio De Simone",
+        "publishedAt": "2026-10-22T14:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 86.84,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 86.8421052631579,
+          "finalScore": 86.84,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5647697a8a65",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "A Developer’s Guide to OmniParseBench: Leaderboard Benchmarks and OCR Testing",
+        "link": "https://www.marktechpost.com/2026/10/22/omniparsebench-document-parsing-leaderboard-guide/",
+        "contentSnippet": "Explore how to audit and rebuild Datalab's OmniParseBench, test parser ranking certainty with document-level bootstrapping, and evaluate Tesseract and Indra OCR performance on a custom sample. The post A Developer’s Guide to OmniParseBench: Leaderboard Benchmarks and OCR Testing appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-22T16:11:52.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 84.21,
+        "importance": "medium",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 114,
+          "ruleScoreNormalized": 84.21052631578947,
+          "finalScore": 84.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "71684333c5a0",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Developer Behind the AI-Built Adobe Clones Says They Are “Not Anywhere Close to Ready",
+        "link": "https://www.infoq.com/news/2026/10/photocraft-adobe-parity/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A developer used Claude Opus 5.5 to build open-source replacements for seven Adobe applications, promoted them across Reddit with a projection of roughly 100% parity within a month, then told Hacker News the project was not anywhere close to ready. Its own roadmap puts it at 45% ready for real work and 2,300 to 4,100 agent-hours from full parity. By Steef-Jan Wiggers",
+        "publishedAt": "2026-10-22T07:41:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.68,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 73.68421052631578,
+          "finalScore": 73.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cc72fd0a11db",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
+        "link": "https://www.qbitai.com/2026/10/504832.html",
+        "contentSnippet": "中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent",
+        "publishedAt": "2026-10-22T07:11:14.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 71.05,
+        "importance": "medium",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 109,
+          "ruleScoreNormalized": 71.05263157894737,
+          "finalScore": 71.05,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 36,
+      "normalizedCount": 36,
+      "dedupedCount": 36,
+      "highImportanceCount": 2,
+      "mediumImportanceCount": 5,
+      "lowImportanceCount": 29,
+      "categoryBreakdown": {
+        "open-source": 2,
+        "tooling": 3,
+        "agent": 4,
+        "research": 2,
+        "industry-news": 6,
+        "tutorial": 1,
+        "other": 18
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=UND_ERR_CONNECT_TIMEOUT",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：36/36",
+      "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0729eed5b17537ee9c67b6b8f0389e18\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0729eed592557c3ff8db3b7c66c05703\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0729eed63527bcf01a6b003998c3f373\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
