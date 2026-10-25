@@ -1,0 +1,1222 @@
+{
+  "runId": "daily-1792890114372",
+  "generatedAt": "2026-10-25T01:01:54.323Z",
+  "reviewStartedAt": "2026-10-25T01:01:54.323Z",
+  "reportDate": "2026-10-25",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-10-25T01:01:54.323Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 12,
+    "normalizedCount": 12,
+    "dedupedCount": 12,
+    "highImportanceCount": 1,
+    "mediumImportanceCount": 0,
+    "lowImportanceCount": 11,
+    "categoryBreakdown": {
+      "open-source": 1,
+      "tooling": 0,
+      "agent": 0,
+      "research": 0,
+      "industry-news": 5,
+      "tutorial": 1,
+      "other": 5
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "b16f971c0d89",
+      "title": "OneMemory – self-hosted shared memory for AI agents over MCP",
+      "summary": "Article URL: https://github.com/calasdan-sketch/onememory Comments URL: https://news.ycombinator.com/item?id=50227486 P…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "b16f971c0d89"
+      ]
+    },
+    {
+      "itemId": "4ca60b7d7058",
+      "title": "AI Performance in the Security Theater",
+      "summary": "Article URL: https://bykozy.me/blog/ai-performance-at-the-security-theater/ Comments URL: https://news.ycombinator.com/…",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "4ca60b7d7058"
+      ]
+    },
+    {
+      "itemId": "5612e6fb6264",
+      "title": "Cerebras Deploys Trillion-Parameter AI Models",
+      "summary": "Article URL: https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras Comments URL: ht…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5612e6fb6264"
+      ]
+    },
+    {
+      "itemId": "0d000e2ed195",
+      "title": "Documentary film 'Bot Love' exploring AI companionship to debut Oct. 21",
+      "summary": "Article URL: https://www.thesuburban.com/arts_and_entertainment/entertainment/documentary-film-bot-love-exploring-ai-co…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "0d000e2ed195"
+      ]
+    },
+    {
+      "itemId": "88e146487b69",
+      "title": "Forced to pick, Grok's AI model chooses Republicans. OpenAI's picks Democrats",
+      "summary": "Article URL: https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrat…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "88e146487b69"
+      ]
+    },
+    {
+      "itemId": "e867968a8584",
+      "title": "Show HN: ADRs for AI – Deliberation records for human–AI work, versioned in Git",
+      "summary": "Article URL: https://adrs.systems Comments URL: https://news.ycombinator.com/item?id=50227041 Points: 1 # Comments: 0",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e867968a8584"
+      ]
+    },
+    {
+      "itemId": "746616257d73",
+      "title": "Android lets you ‘bubble’ apps for easy access now – how it works",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "746616257d73"
+      ]
+    },
+    {
+      "itemId": "eb3d7c63262d",
+      "title": "PHP2Shell: Haven’t patched yet? Take these steps now to mitigate",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "eb3d7c63262d"
+      ]
+    },
+    {
+      "itemId": "b2394e6393fa",
+      "title": "Amazon’s Kindle Unlimited is now Kindle+, and the 2 big changes include AI audiobooks",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b2394e6393fa"
+      ]
+    },
+    {
+      "itemId": "380cdc8a07de",
+      "title": "The latest PowerToys gives your mouse 2 new tricks for free – how to use them",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "380cdc8a07de"
+      ]
+    },
+    {
+      "itemId": "3f96686d390b",
+      "title": "GridCraft is the open-source Excel clone for Linux I’ve been waiting for",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3f96686d390b"
+      ]
+    },
+    {
+      "itemId": "b519de5644e6",
+      "title": "Your iPhone can spot scams for you with iOS 27 – but you have to opt in",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b519de5644e6"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "b16f971c0d89",
+      "title": "OneMemory – self-hosted shared memory for AI agents over MCP",
+      "takeaway": "Article URL: https://github.com/calasdan-sketch/onememory Comments URL: https://news.ycombinator.com/item?id=50227486 P…",
+      "evidenceItemIds": [
+        "b16f971c0d89"
+      ]
+    },
+    {
+      "itemId": "4ca60b7d7058",
+      "title": "AI Performance in the Security Theater",
+      "takeaway": "Article URL: https://bykozy.me/blog/ai-performance-at-the-security-theater/ Comments URL: https://news.ycombinator.com/…",
+      "evidenceItemIds": [
+        "4ca60b7d7058"
+      ]
+    },
+    {
+      "itemId": "5612e6fb6264",
+      "title": "Cerebras Deploys Trillion-Parameter AI Models",
+      "takeaway": "Article URL: https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras Comments URL: ht…",
+      "evidenceItemIds": [
+        "5612e6fb6264"
+      ]
+    },
+    {
+      "itemId": "0d000e2ed195",
+      "title": "Documentary film 'Bot Love' exploring AI companionship to debut Oct. 21",
+      "takeaway": "Article URL: https://www.thesuburban.com/arts_and_entertainment/entertainment/documentary-film-bot-love-exploring-ai-co…",
+      "evidenceItemIds": [
+        "0d000e2ed195"
+      ]
+    },
+    {
+      "itemId": "88e146487b69",
+      "title": "Forced to pick, Grok's AI model chooses Republicans. OpenAI's picks Democrats",
+      "takeaway": "Article URL: https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrat…",
+      "evidenceItemIds": [
+        "88e146487b69"
+      ]
+    },
+    {
+      "itemId": "e867968a8584",
+      "title": "Show HN: ADRs for AI – Deliberation records for human–AI work, versioned in Git",
+      "takeaway": "Article URL: https://adrs.systems Comments URL: https://news.ycombinator.com/item?id=50227041 Points: 1 # Comments: 0",
+      "evidenceItemIds": [
+        "e867968a8584"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕open-source与industry-news展开，建议优先关注《OneMemory – self-hosted shared memory for AI agents over MCP》、《AI Performance in the Security Theater》、《Cerebras Deploys Trillion-Parameter AI Models》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《AI Performance in the Security Theater》、《Cerebras Deploys Trillion-Parameter AI Models》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "4ca60b7d7058",
+        "5612e6fb6264",
+        "0d000e2ed195",
+        "88e146487b69"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Android lets you ‘bubble’ apps for easy access now – how it works》、《PHP2Shell: Haven’t patched yet? Take these steps now to mitigate》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "746616257d73",
+        "eb3d7c63262d",
+        "b2394e6393fa",
+        "3f96686d390b"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 1 条，建议优先阅读《OneMemory – self-hosted shared memory for AI agents over MCP》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "b16f971c0d89"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "tutorial",
+      "lead": "教程实践本期共 1 条，建议优先阅读《The latest PowerToys gives your mouse 2 new tricks for free – how to use them》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "380cdc8a07de"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "109bff08a9e2b825238a5333bb774f742ee5a7f9ce48d030ad05242cd9e09b5e",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-10-25T02:08:43.745Z",
+    "finishedAt": "2026-10-25T02:31:46.541Z",
+    "durationMs": 1382796,
+    "inputCount": 12,
+    "processedCount": 12,
+    "fallbackCount": 12,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 12,
+    "failureStats": {
+      "totalFailed": 12,
+      "timeout": 0,
+      "http": 0,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 12,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 22,
+      "splitRetryCount": 10
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-18",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=UND_ERR_CONNECT_TIMEOUT"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-11",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 1
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-10-25T02:31:46.587Z",
+    "finishedAt": "2026-10-25T02:31:46.627Z",
+    "durationMs": 40,
+    "inputCount": 12,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 12,
+      "timeout": 0,
+      "http": 0,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 12
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 12,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "b16f971c0d89",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "OneMemory – self-hosted shared memory for AI agents over MCP",
+      "link": "https://github.com/calasdan-sketch/onememory",
+      "contentSnippet": "Article URL: https://github.com/calasdan-sketch/onememory Comments URL: https://news.ycombinator.com/item?id=50227486 Points: 1 # Comments: 0",
+      "publishedAt": "2026-10-25T01:54:19.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 117,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "4ca60b7d7058",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "AI Performance in the Security Theater",
+      "link": "https://bykozy.me/blog/ai-performance-at-the-security-theater/",
+      "contentSnippet": "Article URL: https://bykozy.me/blog/ai-performance-at-the-security-theater/ Comments URL: https://news.ycombinator.com/item?id=50227488 Points: 1 # Comments: 0",
+      "publishedAt": "2026-10-25T01:54:28.000Z",
+      "category": "industry-news",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 55.81,
+      "importance": "low",
+      "recommendationReason": "安全与合规关注",
+      "scoreBreakdown": {
+        "ruleScore": 98,
+        "ruleScoreNormalized": 55.81395348837209,
+        "finalScore": 55.81,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "5612e6fb6264",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Cerebras Deploys Trillion-Parameter AI Models",
+      "link": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+      "contentSnippet": "Article URL: https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras Comments URL: https://news.ycombinator.com/item?id=50227356 Points: 2 # Comments: 0",
+      "publishedAt": "2026-10-25T01:33:49.000Z",
+      "category": "industry-news",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 37.21,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 90,
+        "ruleScoreNormalized": 37.2093023255814,
+        "finalScore": 37.21,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "0d000e2ed195",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Documentary film 'Bot Love' exploring AI companionship to debut Oct. 21",
+      "link": "https://www.thesuburban.com/arts_and_entertainment/entertainment/documentary-film-bot-love-exploring-ai-companionship-to-debut-oct-21-on-cbc-and-cbc/article_f7277775-bd32-475f-9aa5-3ce58907374f.html",
+      "contentSnippet": "Article URL: https://www.thesuburban.com/arts_and_entertainment/entertainment/documentary-film-bot-love-exploring-ai-companionship-to-debut-oct-21-on-cbc-and-cbc/article_f7277775-bd32-475f-9aa5-3ce58907374f.html Comments URL: https://news.ycombinator.com/item?id=50227265 Points: 2 # Comments: 0",
+      "publishedAt": "2026-10-25T01:21:49.000Z",
+      "category": "industry-news",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 37.21,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 90,
+        "ruleScoreNormalized": 37.2093023255814,
+        "finalScore": 37.21,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "88e146487b69",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Forced to pick, Grok's AI model chooses Republicans. OpenAI's picks Democrats",
+      "link": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
+      "contentSnippet": "Article URL: https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/ Comments URL: https://news.ycombinator.com/item?id=50227174 Points: 1 # Comments: 0",
+      "publishedAt": "2026-10-25T01:07:24.000Z",
+      "category": "industry-news",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 37.21,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 90,
+        "ruleScoreNormalized": 37.2093023255814,
+        "finalScore": 37.21,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: This operation was aborted",
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[Google AI Blog] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[InfoQ AI/ML News] 抓取失败: This operation was aborted",
+    "[MarkTechPost] 抓取失败: This operation was aborted",
+    "[VentureBeat AI] 抓取失败: This operation was aborted",
+    "[量子位] 抓取失败: This operation was aborted",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=UND_ERR_CONNECT_TIMEOUT",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：12/12",
+    "LLM 分类打分回退明细（前 3/12）：fetch failed | fetch failed | fetch failed",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=0：business=0：missing_content=0：invalid_json=0：quality=0：other=12",
+    "LLM 分类打分重试统计：batch_retry=22, split_retry=10",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/12）：fetch failed | fetch failed | fetch failed",
+    "LLM 失败分类：missing_content=0, timeout=0, http=0, business=0, invalid_json=0, quality=0, other=12",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=12, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- OneMemory – self-hosted shared memory for AI agents over MCP\n- AI Performance in the Security Theater\n- Cerebras Deploys Trillion-Parameter AI Models\n- Documentary film 'Bot Love' exploring AI companionship to debut Oct. 21\n- Forced to pick, Grok's AI model chooses Republicans. OpenAI's picks Democrats\n\n### 分类覆盖（大纲）\n- open-source: 1 条\n- industry-news: 5 条\n- other: 5 条\n- tutorial: 1 条",
+    "rankedItems": [
+      {
+        "id": "b16f971c0d89",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "OneMemory – self-hosted shared memory for AI agents over MCP",
+        "link": "https://github.com/calasdan-sketch/onememory",
+        "contentSnippet": "Article URL: https://github.com/calasdan-sketch/onememory Comments URL: https://news.ycombinator.com/item?id=50227486 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-25T01:54:19.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4ca60b7d7058",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI Performance in the Security Theater",
+        "link": "https://bykozy.me/blog/ai-performance-at-the-security-theater/",
+        "contentSnippet": "Article URL: https://bykozy.me/blog/ai-performance-at-the-security-theater/ Comments URL: https://news.ycombinator.com/item?id=50227488 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-25T01:54:28.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.81,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 55.81395348837209,
+          "finalScore": 55.81,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5612e6fb6264",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Cerebras Deploys Trillion-Parameter AI Models",
+        "link": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+        "contentSnippet": "Article URL: https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras Comments URL: https://news.ycombinator.com/item?id=50227356 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-25T01:33:49.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 37.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 37.2093023255814,
+          "finalScore": 37.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0d000e2ed195",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Documentary film 'Bot Love' exploring AI companionship to debut Oct. 21",
+        "link": "https://www.thesuburban.com/arts_and_entertainment/entertainment/documentary-film-bot-love-exploring-ai-companionship-to-debut-oct-21-on-cbc-and-cbc/article_f7277775-bd32-475f-9aa5-3ce58907374f.html",
+        "contentSnippet": "Article URL: https://www.thesuburban.com/arts_and_entertainment/entertainment/documentary-film-bot-love-exploring-ai-companionship-to-debut-oct-21-on-cbc-and-cbc/article_f7277775-bd32-475f-9aa5-3ce58907374f.html Comments URL: https://news.ycombinator.com/item?id=50227265 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-25T01:21:49.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 37.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 37.2093023255814,
+          "finalScore": 37.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "88e146487b69",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Forced to pick, Grok's AI model chooses Republicans. OpenAI's picks Democrats",
+        "link": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
+        "contentSnippet": "Article URL: https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/ Comments URL: https://news.ycombinator.com/item?id=50227174 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-25T01:07:24.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 37.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 37.2093023255814,
+          "finalScore": 37.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e867968a8584",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: ADRs for AI – Deliberation records for human–AI work, versioned in Git",
+        "link": "https://adrs.systems",
+        "contentSnippet": "Article URL: https://adrs.systems Comments URL: https://news.ycombinator.com/item?id=50227041 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-25T00:43:47.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 37.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 37.2093023255814,
+          "finalScore": 37.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "746616257d73",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Android lets you ‘bubble’ apps for easy access now – how it works",
+        "link": "https://www.zdnet.com/tech/android-17-app-bubbles-how-to/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-23T16:28:46.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 23.26,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 23.25581395348837,
+          "finalScore": 23.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "eb3d7c63262d",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "PHP2Shell: Haven’t patched yet? Take these steps now to mitigate",
+        "link": "https://www.zdnet.com/tech/php2shell-php-patch-mitigation-critical-exploit/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-23T15:09:47.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 23.26,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 23.25581395348837,
+          "finalScore": 23.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b2394e6393fa",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Amazon’s Kindle Unlimited is now Kindle+, and the 2 big changes include AI audiobooks",
+        "link": "https://www.zdnet.com/tech/kindle-unlimited-kindle-plus-audiobooks-ai/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-22T15:55:55.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 23.26,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 23.25581395348837,
+          "finalScore": 23.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "380cdc8a07de",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "The latest PowerToys gives your mouse 2 new tricks for free – how to use them",
+        "link": "https://www.zdnet.com/tech/powertoys-102-windows-mouse-control/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-22T15:17:56.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 23.26,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 23.25581395348837,
+          "finalScore": 23.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3f96686d390b",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "GridCraft is the open-source Excel clone for Linux I’ve been waiting for",
+        "link": "https://www.zdnet.com/tech/gridcraft-excel-clone-hands-on/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-22T02:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 23.26,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 23.25581395348837,
+          "finalScore": 23.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b519de5644e6",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Your iPhone can spot scams for you with iOS 27 – but you have to opt in",
+        "link": "https://www.zdnet.com/tech/ios-27-impersonation-risk-detection-security-feature/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-30T15:45:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 74,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "b16f971c0d89",
+        "title": "OneMemory – self-hosted shared memory for AI agents over MCP",
+        "summary": "Article URL: https://github.com/calasdan-sketch/onememory Comments URL: https://news.ycombinator.com/item?id=50227486 P…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "b16f971c0d89"
+        ]
+      },
+      {
+        "itemId": "4ca60b7d7058",
+        "title": "AI Performance in the Security Theater",
+        "summary": "Article URL: https://bykozy.me/blog/ai-performance-at-the-security-theater/ Comments URL: https://news.ycombinator.com/…",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "4ca60b7d7058"
+        ]
+      },
+      {
+        "itemId": "5612e6fb6264",
+        "title": "Cerebras Deploys Trillion-Parameter AI Models",
+        "summary": "Article URL: https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras Comments URL: ht…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5612e6fb6264"
+        ]
+      },
+      {
+        "itemId": "0d000e2ed195",
+        "title": "Documentary film 'Bot Love' exploring AI companionship to debut Oct. 21",
+        "summary": "Article URL: https://www.thesuburban.com/arts_and_entertainment/entertainment/documentary-film-bot-love-exploring-ai-co…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "0d000e2ed195"
+        ]
+      },
+      {
+        "itemId": "88e146487b69",
+        "title": "Forced to pick, Grok's AI model chooses Republicans. OpenAI's picks Democrats",
+        "summary": "Article URL: https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrat…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "88e146487b69"
+        ]
+      },
+      {
+        "itemId": "e867968a8584",
+        "title": "Show HN: ADRs for AI – Deliberation records for human–AI work, versioned in Git",
+        "summary": "Article URL: https://adrs.systems Comments URL: https://news.ycombinator.com/item?id=50227041 Points: 1 # Comments: 0",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e867968a8584"
+        ]
+      },
+      {
+        "itemId": "746616257d73",
+        "title": "Android lets you ‘bubble’ apps for easy access now – how it works",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "746616257d73"
+        ]
+      },
+      {
+        "itemId": "eb3d7c63262d",
+        "title": "PHP2Shell: Haven’t patched yet? Take these steps now to mitigate",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "eb3d7c63262d"
+        ]
+      },
+      {
+        "itemId": "b2394e6393fa",
+        "title": "Amazon’s Kindle Unlimited is now Kindle+, and the 2 big changes include AI audiobooks",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b2394e6393fa"
+        ]
+      },
+      {
+        "itemId": "380cdc8a07de",
+        "title": "The latest PowerToys gives your mouse 2 new tricks for free – how to use them",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "380cdc8a07de"
+        ]
+      },
+      {
+        "itemId": "3f96686d390b",
+        "title": "GridCraft is the open-source Excel clone for Linux I’ve been waiting for",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3f96686d390b"
+        ]
+      },
+      {
+        "itemId": "b519de5644e6",
+        "title": "Your iPhone can spot scams for you with iOS 27 – but you have to opt in",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b519de5644e6"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "b16f971c0d89",
+        "title": "OneMemory – self-hosted shared memory for AI agents over MCP",
+        "takeaway": "Article URL: https://github.com/calasdan-sketch/onememory Comments URL: https://news.ycombinator.com/item?id=50227486 P…",
+        "evidenceItemIds": [
+          "b16f971c0d89"
+        ]
+      },
+      {
+        "itemId": "4ca60b7d7058",
+        "title": "AI Performance in the Security Theater",
+        "takeaway": "Article URL: https://bykozy.me/blog/ai-performance-at-the-security-theater/ Comments URL: https://news.ycombinator.com/…",
+        "evidenceItemIds": [
+          "4ca60b7d7058"
+        ]
+      },
+      {
+        "itemId": "5612e6fb6264",
+        "title": "Cerebras Deploys Trillion-Parameter AI Models",
+        "takeaway": "Article URL: https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras Comments URL: ht…",
+        "evidenceItemIds": [
+          "5612e6fb6264"
+        ]
+      },
+      {
+        "itemId": "0d000e2ed195",
+        "title": "Documentary film 'Bot Love' exploring AI companionship to debut Oct. 21",
+        "takeaway": "Article URL: https://www.thesuburban.com/arts_and_entertainment/entertainment/documentary-film-bot-love-exploring-ai-co…",
+        "evidenceItemIds": [
+          "0d000e2ed195"
+        ]
+      },
+      {
+        "itemId": "88e146487b69",
+        "title": "Forced to pick, Grok's AI model chooses Republicans. OpenAI's picks Democrats",
+        "takeaway": "Article URL: https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrat…",
+        "evidenceItemIds": [
+          "88e146487b69"
+        ]
+      },
+      {
+        "itemId": "e867968a8584",
+        "title": "Show HN: ADRs for AI – Deliberation records for human–AI work, versioned in Git",
+        "takeaway": "Article URL: https://adrs.systems Comments URL: https://news.ycombinator.com/item?id=50227041 Points: 1 # Comments: 0",
+        "evidenceItemIds": [
+          "e867968a8584"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕open-source与industry-news展开，建议优先关注《OneMemory – self-hosted shared memory for AI agents over MCP》、《AI Performance in the Security Theater》、《Cerebras Deploys Trillion-Parameter AI Models》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《AI Performance in the Security Theater》、《Cerebras Deploys Trillion-Parameter AI Models》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "4ca60b7d7058",
+          "5612e6fb6264",
+          "0d000e2ed195",
+          "88e146487b69"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Android lets you ‘bubble’ apps for easy access now – how it works》、《PHP2Shell: Haven’t patched yet? Take these steps now to mitigate》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "746616257d73",
+          "eb3d7c63262d",
+          "b2394e6393fa",
+          "3f96686d390b"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 1 条，建议优先阅读《OneMemory – self-hosted shared memory for AI agents over MCP》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "b16f971c0d89"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "tutorial",
+        "lead": "教程实践本期共 1 条，建议优先阅读《The latest PowerToys gives your mouse 2 new tricks for free – how to use them》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "380cdc8a07de"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "109bff08a9e2b825238a5333bb774f742ee5a7f9ce48d030ad05242cd9e09b5e",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-10-25T02:08:43.745Z",
+      "finishedAt": "2026-10-25T02:31:46.541Z",
+      "durationMs": 1382796,
+      "inputCount": 12,
+      "processedCount": 12,
+      "fallbackCount": 12,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 12,
+      "failureStats": {
+        "totalFailed": 12,
+        "timeout": 0,
+        "http": 0,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 12,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 22,
+        "splitRetryCount": 10
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-18",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=UND_ERR_CONNECT_TIMEOUT"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-11",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 1
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-10-25T02:31:46.587Z",
+      "finishedAt": "2026-10-25T02:31:46.627Z",
+      "durationMs": 40,
+      "inputCount": 12,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 12,
+        "timeout": 0,
+        "http": 0,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 12
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 12,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "b16f971c0d89",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "OneMemory – self-hosted shared memory for AI agents over MCP",
+        "link": "https://github.com/calasdan-sketch/onememory",
+        "contentSnippet": "Article URL: https://github.com/calasdan-sketch/onememory Comments URL: https://news.ycombinator.com/item?id=50227486 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-25T01:54:19.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4ca60b7d7058",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI Performance in the Security Theater",
+        "link": "https://bykozy.me/blog/ai-performance-at-the-security-theater/",
+        "contentSnippet": "Article URL: https://bykozy.me/blog/ai-performance-at-the-security-theater/ Comments URL: https://news.ycombinator.com/item?id=50227488 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-25T01:54:28.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.81,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 55.81395348837209,
+          "finalScore": 55.81,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5612e6fb6264",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Cerebras Deploys Trillion-Parameter AI Models",
+        "link": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+        "contentSnippet": "Article URL: https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras Comments URL: https://news.ycombinator.com/item?id=50227356 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-25T01:33:49.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 37.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 37.2093023255814,
+          "finalScore": 37.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0d000e2ed195",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Documentary film 'Bot Love' exploring AI companionship to debut Oct. 21",
+        "link": "https://www.thesuburban.com/arts_and_entertainment/entertainment/documentary-film-bot-love-exploring-ai-companionship-to-debut-oct-21-on-cbc-and-cbc/article_f7277775-bd32-475f-9aa5-3ce58907374f.html",
+        "contentSnippet": "Article URL: https://www.thesuburban.com/arts_and_entertainment/entertainment/documentary-film-bot-love-exploring-ai-companionship-to-debut-oct-21-on-cbc-and-cbc/article_f7277775-bd32-475f-9aa5-3ce58907374f.html Comments URL: https://news.ycombinator.com/item?id=50227265 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-25T01:21:49.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 37.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 37.2093023255814,
+          "finalScore": 37.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "88e146487b69",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Forced to pick, Grok's AI model chooses Republicans. OpenAI's picks Democrats",
+        "link": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
+        "contentSnippet": "Article URL: https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/ Comments URL: https://news.ycombinator.com/item?id=50227174 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-25T01:07:24.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 37.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 37.2093023255814,
+          "finalScore": 37.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 12,
+      "normalizedCount": 12,
+      "dedupedCount": 12,
+      "highImportanceCount": 1,
+      "mediumImportanceCount": 0,
+      "lowImportanceCount": 11,
+      "categoryBreakdown": {
+        "open-source": 1,
+        "tooling": 0,
+        "agent": 0,
+        "research": 0,
+        "industry-news": 5,
+        "tutorial": 1,
+        "other": 5
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: This operation was aborted",
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[Google AI Blog] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[InfoQ AI/ML News] 抓取失败: This operation was aborted",
+      "[MarkTechPost] 抓取失败: This operation was aborted",
+      "[VentureBeat AI] 抓取失败: This operation was aborted",
+      "[量子位] 抓取失败: This operation was aborted",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=UND_ERR_CONNECT_TIMEOUT",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：12/12",
+      "LLM 分类打分回退明细（前 3/12）：fetch failed | fetch failed | fetch failed",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=0：business=0：missing_content=0：invalid_json=0：quality=0：other=12",
+      "LLM 分类打分重试统计：batch_retry=22, split_retry=10",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/12）：fetch failed | fetch failed | fetch failed",
+      "LLM 失败分类：missing_content=0, timeout=0, http=0, business=0, invalid_json=0, quality=0, other=12",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=12, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
