@@ -1,0 +1,2340 @@
+{
+  "runId": "watch-recheck-2026-10-26-1792989066378",
+  "generatedAt": "2026-10-26T04:31:04.544Z",
+  "reviewStartedAt": "2026-10-26T01:50:33.550Z",
+  "reportDate": "2026-10-26",
+  "mode": "weekly",
+  "reviewStatus": "timeout_published",
+  "reviewStage": "final_review",
+  "reviewDeadlineAt": "2026-10-26T04:30:00.000Z",
+  "reviewReason": "超过周一 12:30 审核截止时间，触发自动发布",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "weekly_timeout_auto_publish",
+  "publishedAt": "2026-10-26T04:31:04.544Z",
+  "outlineApproved": true,
+  "finalApproved": false,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 36,
+    "normalizedCount": 36,
+    "dedupedCount": 36,
+    "highImportanceCount": 2,
+    "mediumImportanceCount": 5,
+    "lowImportanceCount": 29,
+    "categoryBreakdown": {
+      "open-source": 9,
+      "tooling": 1,
+      "agent": 2,
+      "research": 2,
+      "industry-news": 6,
+      "tutorial": 1,
+      "other": 15
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "3956312cdce7",
+      "title": "Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats",
+      "summary": "Cognition released the Devin Vulnerability Fixes plugin, 3 MIT-licensed agent skills that inventory, patch and test PHP…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "3956312cdce7"
+      ]
+    },
+    {
+      "itemId": "4be811646b28",
+      "title": "Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model",
+      "summary": "Nanbeige LLM Lab released Nanbeige4.3-33B, a 33B dense Apache 2.0 model with 512K context. It reports 80.9 on Terminal-…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "4be811646b28"
+      ]
+    },
+    {
+      "itemId": "0a88f192181c",
+      "title": "Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time",
+      "summary": "Hugging Face released Carbon-X, an open 14.8B DNA language model built on Qwen3-14B. It reads raw DNA in chat, answers …",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "0a88f192181c"
+      ]
+    },
+    {
+      "itemId": "edfb2d5d1a93",
+      "title": "One gateway for your AI agents, APIs and MCP servers",
+      "summary": "Article URL: https://github.com/Clivern/Sloth Comments URL: https://news.ycombinator.com/item?id=50237533 Points: 1 # C…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "edfb2d5d1a93"
+      ]
+    },
+    {
+      "itemId": "2c59aa188be9",
+      "title": "PyTorch Conference 2026: Google and Meta Open-Source TorchTPU for Native PyTorch on TPUs",
+      "summary": "Google and Meta open-sourced TorchTPU, a native PyTorch backend for Google's TPUs, at PyTorch Conference North America …",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "2c59aa188be9"
+      ]
+    },
+    {
+      "itemId": "dedf04258f1a",
+      "title": "Google ML Drift Accelerates On-Device AI Inference Across Diverse GPUs",
+      "summary": "Google has released ML Drift, an open-source, cross-platform GPU compute engine designed for on-device AI and machine l…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "dedf04258f1a"
+      ]
+    },
+    {
+      "itemId": "d283cf4bd01b",
+      "title": "Microsoft Open-Sources Agensh: A Multi-Agent Harness for 1,024 Agents",
+      "summary": "Microsoft Research open-sourced Agensh, a multi-agent harness with no central orchestrator. Self-organizing workers sha…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "d283cf4bd01b"
+      ]
+    },
+    {
+      "itemId": "55fef3384039",
+      "title": "Google Optimizes Agent Development Kit's 200K-line Python Codebase Overnight with Gemini 4 Argon",
+      "summary": "Google explained how an 11-hour unattended run of Gemini 4 Argon produced two accepted optimizations for Google Agent D…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "55fef3384039"
+      ]
+    },
+    {
+      "itemId": "050dc28ce449",
+      "title": "Google’s Data Agent Kit Hits GA, Splitting Agent Guardrails Between Skills and IAM",
+      "summary": "Google has made Data Agent Kit generally available, a free set of MCP tools and 37 open-source skills that connect codi…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "050dc28ce449"
+      ]
+    },
+    {
+      "itemId": "f583fd2eeb40",
+      "title": "Researchers from Stanford and UC Berkeley Introduce TokenGate: Token-Gated Attention Makes Long-Context Prefill Up to 11.3x Faster",
+      "summary": "Stanford and UC Berkeley researchers released TokenGate, a drop-in learned token pruning module for LLMs. It cuts long-…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "f583fd2eeb40"
+      ]
+    },
+    {
+      "itemId": "10a844b1ab08",
+      "title": "Bend: A fast language that blocks AI mistakes via proof",
+      "summary": "Article URL: https://github.com/bendlang/bend Comments URL: https://news.ycombinator.com/item?id=50237170 Points: 1 # C…",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "10a844b1ab08"
+      ]
+    },
+    {
+      "itemId": "7ae223ea9ed4",
+      "title": "Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks",
+      "summary": "A recent Harvard study of 718 firms, using the Jellyfish analytics platform, finds that although AI coding assistants a…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "7ae223ea9ed4"
+      ]
+    },
+    {
+      "itemId": "cc72fd0a11db",
+      "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
+      "summary": "中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "cc72fd0a11db"
+      ]
+    },
+    {
+      "itemId": "54bd8d8f9717",
+      "title": "Anthropic Adds Opt-In Security Scanning for Critical Open-Source Projects",
+      "summary": "AI company Anthropic has launched OSS Scanner, a free, opt-in service to find vulnerabilities in open-source projects. …",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "54bd8d8f9717"
+      ]
+    },
+    {
+      "itemId": "c1d6aac8e8ea",
+      "title": "Anthropic Launches OSS Scanner, a Free AI Vulnerability Scanner",
+      "summary": "Anthropic has launched OSS Scanner, a free, opt-in vulnerability scanner for critical open-source projects. The Anthrop…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c1d6aac8e8ea"
+      ]
+    },
+    {
+      "itemId": "7242361afc5a",
+      "title": "Show HN: Depono – Chat with many AI models at cost and 10%, files kept in Git",
+      "summary": "Article URL: https://depono.xyz/ Comments URL: https://news.ycombinator.com/item?id=50237806 Points: 1 # Comments: 0",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "7242361afc5a"
+      ]
+    },
+    {
+      "itemId": "a07e284e5604",
+      "title": "I Think My AI Company Needs HR",
+      "summary": "Article URL: https://www.fasttrackfemme.com/p/i-think-my-ai-company-needs-hr Comments URL: https://news.ycombinator.com…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a07e284e5604"
+      ]
+    },
+    {
+      "itemId": "927dd5211e8d",
+      "title": "AI is getting good at math, here's why",
+      "summary": "Article URL: https://latent.space/p/ai-is-getting-good-at-math/ Comments URL: https://news.ycombinator.com/item?id=5023…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "927dd5211e8d"
+      ]
+    },
+    {
+      "itemId": "ac8b1fb6add1",
+      "title": "Apollo says AI has delivered 'zero financial payoff' outside the tech industry",
+      "summary": "Article URL: https://www.businessinsider.com/apollo-ai-zero-financial-payoff-corporate-america-economic-analysis-2026-1…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "ac8b1fb6add1"
+      ]
+    },
+    {
+      "itemId": "51cd2b7b9a2d",
+      "title": "Southeast Asia’s digital economy to hit $368 billion",
+      "summary": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trilli…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "51cd2b7b9a2d"
+      ]
+    },
+    {
+      "itemId": "476b6a8801e9",
+      "title": "又一国产决策模型发布！准确率超过微软和Jev等决策模型",
+      "summary": "10月22日，蚂蚁数科正式发布决策模型 LingDT-Decision-1.0。",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "476b6a8801e9"
+      ]
+    },
+    {
+      "itemId": "746616257d73",
+      "title": "Android lets you ‘bubble’ apps for easy access now – how it works",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "746616257d73"
+      ]
+    },
+    {
+      "itemId": "eb3d7c63262d",
+      "title": "PHP2Shell: Haven’t patched yet? Take these steps now to mitigate",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "eb3d7c63262d"
+      ]
+    },
+    {
+      "itemId": "5478efc66827",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5478efc66827"
+      ]
+    },
+    {
+      "itemId": "92d60b58598f",
+      "title": "Introducing Playground: Create and play custom games",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "92d60b58598f"
+      ]
+    },
+    {
+      "itemId": "1d5fed04e570",
+      "title": "The latest AI news we announced in September 2026",
+      "summary": "Here are Google’s latest AI updates from September 2026",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1d5fed04e570"
+      ]
+    },
+    {
+      "itemId": "927c795585b6",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "927c795585b6"
+      ]
+    },
+    {
+      "itemId": "5f226c85d6ea",
+      "title": "Google Beam expands with new regions, partners, and customers",
+      "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5f226c85d6ea"
+      ]
+    },
+    {
+      "itemId": "8b4230c8927f",
+      "title": "百度世界2026前瞻：10+重磅分论坛，全面解码AI时代的智能组织进化路径",
+      "summary": "10月21日，百度官方公众号发文披露了百度世界2026分论坛的更多议程信息。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "8b4230c8927f"
+      ]
+    },
+    {
+      "itemId": "b2394e6393fa",
+      "title": "Amazon’s Kindle Unlimited is now Kindle+, and the 2 big changes include AI audiobooks",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b2394e6393fa"
+      ]
+    },
+    {
+      "itemId": "380cdc8a07de",
+      "title": "The latest PowerToys gives your mouse 2 new tricks for free – how to use them",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "380cdc8a07de"
+      ]
+    },
+    {
+      "itemId": "e12889389300",
+      "title": "特斯拉利润腰斩，一夜跌没“通用汽车”！马斯克：FSD在中国也会遥遥领先",
+      "summary": "FSD一年增长70万付费用户",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e12889389300"
+      ]
+    },
+    {
+      "itemId": "33fe7b640d15",
+      "title": "谁在给OpenAI供应具身数据？",
+      "summary": "挤进全球Physical AI核心供应链",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "33fe7b640d15"
+      ]
+    },
+    {
+      "itemId": "69d16ba6c4fc",
+      "title": "多智能体协同重构医疗AI！清华AIR孵化：医生AI分身“坐诊”医院",
+      "summary": "医疗AI质变时刻",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "69d16ba6c4fc"
+      ]
+    },
+    {
+      "itemId": "5485da075ffa",
+      "title": "As a home tech expert, I beg you: don’t run these appliances on a power station",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5485da075ffa"
+      ]
+    },
+    {
+      "itemId": "b519de5644e6",
+      "title": "Your iPhone can spot scams for you with iOS 27 – but you have to opt in",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b519de5644e6"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "3956312cdce7",
+      "title": "Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats",
+      "takeaway": "Cognition released the Devin Vulnerability Fixes plugin, 3 MIT-licensed agent skills that inventory, patch and test PHP…",
+      "evidenceItemIds": [
+        "3956312cdce7"
+      ]
+    },
+    {
+      "itemId": "4be811646b28",
+      "title": "Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model",
+      "takeaway": "Nanbeige LLM Lab released Nanbeige4.3-33B, a 33B dense Apache 2.0 model with 512K context. It reports 80.9 on Terminal-…",
+      "evidenceItemIds": [
+        "4be811646b28"
+      ]
+    },
+    {
+      "itemId": "0a88f192181c",
+      "title": "Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time",
+      "takeaway": "Hugging Face released Carbon-X, an open 14.8B DNA language model built on Qwen3-14B. It reads raw DNA in chat, answers …",
+      "evidenceItemIds": [
+        "0a88f192181c"
+      ]
+    },
+    {
+      "itemId": "edfb2d5d1a93",
+      "title": "One gateway for your AI agents, APIs and MCP servers",
+      "takeaway": "Article URL: https://github.com/Clivern/Sloth Comments URL: https://news.ycombinator.com/item?id=50237533 Points: 1 # C…",
+      "evidenceItemIds": [
+        "edfb2d5d1a93"
+      ]
+    },
+    {
+      "itemId": "2c59aa188be9",
+      "title": "PyTorch Conference 2026: Google and Meta Open-Source TorchTPU for Native PyTorch on TPUs",
+      "takeaway": "Google and Meta open-sourced TorchTPU, a native PyTorch backend for Google's TPUs, at PyTorch Conference North America …",
+      "evidenceItemIds": [
+        "2c59aa188be9"
+      ]
+    },
+    {
+      "itemId": "dedf04258f1a",
+      "title": "Google ML Drift Accelerates On-Device AI Inference Across Diverse GPUs",
+      "takeaway": "Google has released ML Drift, an open-source, cross-platform GPU compute engine designed for on-device AI and machine l…",
+      "evidenceItemIds": [
+        "dedf04258f1a"
+      ]
+    },
+    {
+      "itemId": "d283cf4bd01b",
+      "title": "Microsoft Open-Sources Agensh: A Multi-Agent Harness for 1,024 Agents",
+      "takeaway": "Microsoft Research open-sourced Agensh, a multi-agent harness with no central orchestrator. Self-organizing workers sha…",
+      "evidenceItemIds": [
+        "d283cf4bd01b"
+      ]
+    },
+    {
+      "itemId": "55fef3384039",
+      "title": "Google Optimizes Agent Development Kit's 200K-line Python Codebase Overnight with Gemini 4 Argon",
+      "takeaway": "Google explained how an 11-hour unattended run of Gemini 4 Argon produced two accepted optimizations for Google Agent D…",
+      "evidenceItemIds": [
+        "55fef3384039"
+      ]
+    },
+    {
+      "itemId": "050dc28ce449",
+      "title": "Google’s Data Agent Kit Hits GA, Splitting Agent Guardrails Between Skills and IAM",
+      "takeaway": "Google has made Data Agent Kit generally available, a free set of MCP tools and 37 open-source skills that connect codi…",
+      "evidenceItemIds": [
+        "050dc28ce449"
+      ]
+    },
+    {
+      "itemId": "f583fd2eeb40",
+      "title": "Researchers from Stanford and UC Berkeley Introduce TokenGate: Token-Gated Attention Makes Long-Context Prefill Up to 11.3x Faster",
+      "takeaway": "Stanford and UC Berkeley researchers released TokenGate, a drop-in learned token pruning module for LLMs. It cuts long-…",
+      "evidenceItemIds": [
+        "f583fd2eeb40"
+      ]
+    },
+    {
+      "itemId": "10a844b1ab08",
+      "title": "Bend: A fast language that blocks AI mistakes via proof",
+      "takeaway": "Article URL: https://github.com/bendlang/bend Comments URL: https://news.ycombinator.com/item?id=50237170 Points: 1 # C…",
+      "evidenceItemIds": [
+        "10a844b1ab08"
+      ]
+    },
+    {
+      "itemId": "7ae223ea9ed4",
+      "title": "Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks",
+      "takeaway": "A recent Harvard study of 718 firms, using the Jellyfish analytics platform, finds that although AI coding assistants a…",
+      "evidenceItemIds": [
+        "7ae223ea9ed4"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕open-source与research展开，建议优先关注《Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats》、《Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model》、《Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《PyTorch Conference 2026: Google and Meta Open-Source TorchTPU for Native PyTorch on TPUs》、《Southeast Asia’s digital economy to hit $368 billion》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "2c59aa188be9",
+        "51cd2b7b9a2d",
+        "746616257d73",
+        "eb3d7c63262d"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 4 条，建议优先阅读《Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats》、《Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "3956312cdce7",
+        "4be811646b28",
+        "edfb2d5d1a93",
+        "dedf04258f1a"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《Show HN: Depono – Chat with many AI models at cost and 10%, files kept in Git》、《I Think My AI Company Needs HR》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "7242361afc5a",
+        "a07e284e5604",
+        "927dd5211e8d",
+        "ac8b1fb6add1"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "research",
+      "lead": "研究方向本期共 2 条，建议优先阅读《Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time》、《Researchers from Stanford and UC Berkeley Introduce TokenGate: Token-Gated Attention Makes Long-Context Prefill Up to 11.3x Faster》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "0a88f192181c",
+        "f583fd2eeb40"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "d06d648212ecd635f5c37c3517e3d735552ac3c1a78a336e45a7d5cd527d920e",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-10-26T01:51:27.385Z",
+    "finishedAt": "2026-10-26T01:52:08.758Z",
+    "durationMs": 41373,
+    "inputCount": 36,
+    "processedCount": 36,
+    "fallbackCount": 36,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 36,
+    "failureStats": {
+      "totalFailed": 36,
+      "timeout": 0,
+      "http": 36,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 68,
+      "splitRetryCount": 32
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-19",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=ENOTFOUND"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-12",
+        "fetchedCount": 0,
+        "failedReason": "This operation was aborted"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 1,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 1
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-10-26T04:31:06.434Z",
+    "finishedAt": "2026-10-26T04:31:20.224Z",
+    "durationMs": 13790,
+    "inputCount": 36,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "3956312cdce7",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats",
+      "link": "https://www.marktechpost.com/2026/10/24/cognition-devin-vulnerability-fixes-plugin-php2shell-nodejs-gitlab/",
+      "contentSnippet": "Cognition released the Devin Vulnerability Fixes plugin, 3 MIT-licensed agent skills that inventory, patch and test PHP, Node.js and self-managed GitLab deployments hit by this week’s critical RCE flaws, then open 1 PR per repo. The post Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-25T02:59:08.000Z",
+      "category": "open-source",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 126,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "4be811646b28",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model",
+      "link": "https://www.marktechpost.com/2026/10/25/nanbeige-releases-nanbeige4-3-33b-open-agentic-coding-model/",
+      "contentSnippet": "Nanbeige LLM Lab released Nanbeige4.3-33B, a 33B dense Apache 2.0 model with 512K context. It reports 80.9 on Terminal-Bench 2.1 and will teach the upcoming Nanbeige4.3-3B. The post Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-25T21:15:21.000Z",
+      "category": "open-source",
+      "score": 94.23,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 123,
+        "ruleScoreNormalized": 94.23076923076923,
+        "finalScore": 94.23,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "0a88f192181c",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time",
+      "link": "https://www.marktechpost.com/2026/10/25/hugging-face-carbon-x-14b-dna-language-model/",
+      "contentSnippet": "Hugging Face released Carbon-X, an open 14.8B DNA language model built on Qwen3-14B. It reads raw DNA in chat, answers in English, and averages 66.7% across 5 DNA benchmarks under Apache 2.0. The post Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-25T16:53:40.000Z",
+      "category": "research",
+      "score": 84.62,
+      "importance": "medium",
+      "recommendationReason": "评测与性能信息",
+      "scoreBreakdown": {
+        "ruleScore": 118,
+        "ruleScoreNormalized": 84.61538461538461,
+        "finalScore": 84.62,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "edfb2d5d1a93",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "One gateway for your AI agents, APIs and MCP servers",
+      "link": "https://github.com/Clivern/Sloth",
+      "contentSnippet": "Article URL: https://github.com/Clivern/Sloth Comments URL: https://news.ycombinator.com/item?id=50237533 Points: 1 # Comments: 0",
+      "publishedAt": "2026-10-26T00:38:22.000Z",
+      "category": "open-source",
+      "score": 82.69,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 117,
+        "ruleScoreNormalized": 82.6923076923077,
+        "finalScore": 82.69,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "2c59aa188be9",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "PyTorch Conference 2026: Google and Meta Open-Source TorchTPU for Native PyTorch on TPUs",
+      "link": "https://www.infoq.com/news/2026/10/google-meta-torchtpu/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Google and Meta open-sourced TorchTPU, a native PyTorch backend for Google's TPUs, at PyTorch Conference North America 2026, and Meta said it plans to move larger LLM workloads onto TPUs with it. AWS released TorchNeuron for Trainium the same week, while developers questioned TPU availability and where vendor lock-in now sits. By Andrew Hoblitzell",
+      "publishedAt": "2026-10-25T18:00:00.000Z",
+      "category": "other",
+      "score": 69.23,
+      "importance": "medium",
+      "recommendationReason": "模型或产品发布",
+      "scoreBreakdown": {
+        "ruleScore": 110,
+        "ruleScoreNormalized": 69.23076923076923,
+        "finalScore": 69.23,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "dedf04258f1a",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Google ML Drift Accelerates On-Device AI Inference Across Diverse GPUs",
+      "link": "https://www.infoq.com/news/2026/10/google-ml-drift/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Google has released ML Drift, an open-source, cross-platform GPU compute engine designed for on-device AI and machine learning inference. Licensed under Apache 2.0, it abstracts the complexities of different GPU hardware and low-level APIs, supporting OpenGL ES, OpenCL, Metal, and WebGPU. By Sergio De Simone",
+      "publishedAt": "2026-10-25T17:00:00.000Z",
+      "category": "open-source",
+      "score": 69.23,
+      "importance": "medium",
+      "recommendationReason": "模型或产品发布",
+      "scoreBreakdown": {
+        "ruleScore": 110,
+        "ruleScoreNormalized": 69.23076923076923,
+        "finalScore": 69.23,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "d283cf4bd01b",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Microsoft Open-Sources Agensh: A Multi-Agent Harness for 1,024 Agents",
+      "link": "https://www.marktechpost.com/2026/10/24/microsoft-agensh-multi-agent-harness-1024-agents/",
+      "contentSnippet": "Microsoft Research open-sourced Agensh, a multi-agent harness with no central orchestrator. Self-organizing workers share a Git repo, chat and a findings board, scaling from 1 to 1,024 agents on ProgramBench under a 6-hour budget. The post Microsoft Open-Sources Agensh: A Multi-Agent Harness for 1,024 Agents appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-25T03:32:59.000Z",
+      "category": "open-source",
+      "score": 65.38,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 108,
+        "ruleScoreNormalized": 65.38461538461539,
+        "finalScore": 65.38,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "55fef3384039",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Google Optimizes Agent Development Kit's 200K-line Python Codebase Overnight with Gemini 4 Argon",
+      "link": "https://www.infoq.com/news/2026/10/google-argon-optimizes-adk/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Google explained how an 11-hour unattended run of Gemini 4 Argon produced two accepted optimizations for Google Agent Development Kit's codebase, reducing in-memory session-preparation overhead by about 40% in long sessions and cold package import time by 21%. By Sergio De Simone",
+      "publishedAt": "2026-10-24T16:00:00.000Z",
+      "category": "agent",
+      "score": 59.62,
+      "importance": "low",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 105,
+        "ruleScoreNormalized": 59.61538461538461,
+        "finalScore": 59.62,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+    "[Microsoft AI Blog] 抓取失败: This operation was aborted",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): This operation was aborted",
+    "LLM 分类打分部分回退：36/36",
+    "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"072de523eb8d8ff74614e760052d3236\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"072de52358e6d5b274c05f7a21d32b46\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"072de524b238999e9600dfe7ce3c19b3\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats\n- Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model\n- Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time\n- One gateway for your AI agents, APIs and MCP servers\n- PyTorch Conference 2026: Google and Meta Open-Source TorchTPU for Native PyTorch on TPUs\n\n### 分类覆盖（大纲）\n- open-source: 9 条\n- research: 2 条\n- other: 15 条\n- agent: 2 条\n- tooling: 1 条\n- industry-news: 6 条\n- tutorial: 1 条",
+    "rankedItems": [
+      {
+        "id": "3956312cdce7",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats",
+        "link": "https://www.marktechpost.com/2026/10/24/cognition-devin-vulnerability-fixes-plugin-php2shell-nodejs-gitlab/",
+        "contentSnippet": "Cognition released the Devin Vulnerability Fixes plugin, 3 MIT-licensed agent skills that inventory, patch and test PHP, Node.js and self-managed GitLab deployments hit by this week’s critical RCE flaws, then open 1 PR per repo. The post Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-25T02:59:08.000Z",
+        "category": "open-source",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 126,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4be811646b28",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model",
+        "link": "https://www.marktechpost.com/2026/10/25/nanbeige-releases-nanbeige4-3-33b-open-agentic-coding-model/",
+        "contentSnippet": "Nanbeige LLM Lab released Nanbeige4.3-33B, a 33B dense Apache 2.0 model with 512K context. It reports 80.9 on Terminal-Bench 2.1 and will teach the upcoming Nanbeige4.3-3B. The post Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-25T21:15:21.000Z",
+        "category": "open-source",
+        "score": 94.23,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 94.23076923076923,
+          "finalScore": 94.23,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0a88f192181c",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time",
+        "link": "https://www.marktechpost.com/2026/10/25/hugging-face-carbon-x-14b-dna-language-model/",
+        "contentSnippet": "Hugging Face released Carbon-X, an open 14.8B DNA language model built on Qwen3-14B. It reads raw DNA in chat, answers in English, and averages 66.7% across 5 DNA benchmarks under Apache 2.0. The post Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-25T16:53:40.000Z",
+        "category": "research",
+        "score": 84.62,
+        "importance": "medium",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 84.61538461538461,
+          "finalScore": 84.62,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "edfb2d5d1a93",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "One gateway for your AI agents, APIs and MCP servers",
+        "link": "https://github.com/Clivern/Sloth",
+        "contentSnippet": "Article URL: https://github.com/Clivern/Sloth Comments URL: https://news.ycombinator.com/item?id=50237533 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-26T00:38:22.000Z",
+        "category": "open-source",
+        "score": 82.69,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 82.6923076923077,
+          "finalScore": 82.69,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2c59aa188be9",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "PyTorch Conference 2026: Google and Meta Open-Source TorchTPU for Native PyTorch on TPUs",
+        "link": "https://www.infoq.com/news/2026/10/google-meta-torchtpu/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google and Meta open-sourced TorchTPU, a native PyTorch backend for Google's TPUs, at PyTorch Conference North America 2026, and Meta said it plans to move larger LLM workloads onto TPUs with it. AWS released TorchNeuron for Trainium the same week, while developers questioned TPU availability and where vendor lock-in now sits. By Andrew Hoblitzell",
+        "publishedAt": "2026-10-25T18:00:00.000Z",
+        "category": "other",
+        "score": 69.23,
+        "importance": "medium",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 69.23076923076923,
+          "finalScore": 69.23,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "dedf04258f1a",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google ML Drift Accelerates On-Device AI Inference Across Diverse GPUs",
+        "link": "https://www.infoq.com/news/2026/10/google-ml-drift/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has released ML Drift, an open-source, cross-platform GPU compute engine designed for on-device AI and machine learning inference. Licensed under Apache 2.0, it abstracts the complexities of different GPU hardware and low-level APIs, supporting OpenGL ES, OpenCL, Metal, and WebGPU. By Sergio De Simone",
+        "publishedAt": "2026-10-25T17:00:00.000Z",
+        "category": "open-source",
+        "score": 69.23,
+        "importance": "medium",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 69.23076923076923,
+          "finalScore": 69.23,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d283cf4bd01b",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Microsoft Open-Sources Agensh: A Multi-Agent Harness for 1,024 Agents",
+        "link": "https://www.marktechpost.com/2026/10/24/microsoft-agensh-multi-agent-harness-1024-agents/",
+        "contentSnippet": "Microsoft Research open-sourced Agensh, a multi-agent harness with no central orchestrator. Self-organizing workers share a Git repo, chat and a findings board, scaling from 1 to 1,024 agents on ProgramBench under a 6-hour budget. The post Microsoft Open-Sources Agensh: A Multi-Agent Harness for 1,024 Agents appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-25T03:32:59.000Z",
+        "category": "open-source",
+        "score": 65.38,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 65.38461538461539,
+          "finalScore": 65.38,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "55fef3384039",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Optimizes Agent Development Kit's 200K-line Python Codebase Overnight with Gemini 4 Argon",
+        "link": "https://www.infoq.com/news/2026/10/google-argon-optimizes-adk/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google explained how an 11-hour unattended run of Gemini 4 Argon produced two accepted optimizations for Google Agent Development Kit's codebase, reducing in-memory session-preparation overhead by about 40% in long sessions and cold package import time by 21%. By Sergio De Simone",
+        "publishedAt": "2026-10-24T16:00:00.000Z",
+        "category": "agent",
+        "score": 59.62,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 59.61538461538461,
+          "finalScore": 59.62,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "050dc28ce449",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google’s Data Agent Kit Hits GA, Splitting Agent Guardrails Between Skills and IAM",
+        "link": "https://www.infoq.com/news/2026/10/data-agent-kit-ga/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has made Data Agent Kit generally available, a free set of MCP tools and 37 open-source skills that connect coding agents to more than fifteen Google Data Cloud services. Two kinds of guardrail ship with it, and practitioners need to tell them apart: one is a skill asking the agent to stop, the other an IAM deny policy that refuses the call. By Steef-Jan Wiggers",
+        "publishedAt": "2026-10-24T08:34:00.000Z",
+        "category": "tooling",
+        "score": 59.62,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 59.61538461538461,
+          "finalScore": 59.62,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f583fd2eeb40",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Researchers from Stanford and UC Berkeley Introduce TokenGate: Token-Gated Attention Makes Long-Context Prefill Up to 11.3x Faster",
+        "link": "https://www.marktechpost.com/2026/10/25/stanford-berkeley-tokengate-learned-token-pruning-llm-prefill/",
+        "contentSnippet": "Stanford and UC Berkeley researchers released TokenGate, a drop-in learned token pruning module for LLMs. It cuts long-context prefill time-to-first-token by 1.4x to 11.3x and peak memory by 1.5x to 3.4x without accuracy loss. The post Researchers from Stanford and UC Berkeley Introduce TokenGate: Token-Gated Attention Makes Long-Context Prefill Up to 11.3x Faster appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-25T12:12:18.000Z",
+        "category": "research",
+        "score": 55.77,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 103,
+          "ruleScoreNormalized": 55.769230769230774,
+          "finalScore": 55.77,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "10a844b1ab08",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Bend: A fast language that blocks AI mistakes via proof",
+        "link": "https://github.com/bendlang/bend",
+        "contentSnippet": "Article URL: https://github.com/bendlang/bend Comments URL: https://news.ycombinator.com/item?id=50237170 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-25T23:41:04.000Z",
+        "category": "open-source",
+        "score": 53.85,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 53.84615384615385,
+          "finalScore": 53.85,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7ae223ea9ed4",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks",
+        "link": "https://www.infoq.com/news/2026/10/jellyfish-ai-productivity/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "A recent Harvard study of 718 firms, using the Jellyfish analytics platform, finds that although AI coding assistants and agents increase code volume, this does not translate into a corresponding increase in completed work, partly because AI-generated code increases the workload in later stages of development, particularly code review. By Sergio De Simone",
+        "publishedAt": "2026-10-22T14:00:00.000Z",
+        "category": "agent",
+        "score": 50,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 50,
+          "finalScore": 50,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cc72fd0a11db",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
+        "link": "https://www.qbitai.com/2026/10/504832.html",
+        "contentSnippet": "中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent",
+        "publishedAt": "2026-10-22T07:11:14.000Z",
+        "category": "open-source",
+        "score": 48.08,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 99,
+          "ruleScoreNormalized": 48.07692307692308,
+          "finalScore": 48.08,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "54bd8d8f9717",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Anthropic Adds Opt-In Security Scanning for Critical Open-Source Projects",
+        "link": "https://www.infoq.com/news/2026/10/anthropic-oss-security-scanner/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "AI company Anthropic has launched OSS Scanner, a free, opt-in service to find vulnerabilities in open-source projects. Enrolled maintainers receive periodic security reports generated by the company's strongest models, including Claude Mythos. The reports are sent without human review, and project maintainers can choose to validate their findings and decide which proposed fixes to accept. By Matt Saunders",
+        "publishedAt": "2026-10-23T09:00:00.000Z",
+        "category": "open-source",
+        "score": 46.15,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 46.15384615384615,
+          "finalScore": 46.15,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c1d6aac8e8ea",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Anthropic Launches OSS Scanner, a Free AI Vulnerability Scanner",
+        "link": "https://www.marktechpost.com/2026/10/25/anthropic-launches-oss-scanner-a-free-ai-vulnerability-scanner/",
+        "contentSnippet": "Anthropic has launched OSS Scanner, a free, opt-in vulnerability scanner for critical open-source projects. The Anthropic OSS Scanner runs the company’s strongest models, including Claude Mythos, against enrolled codebases. Reports go straight to maintainers without human review. That trade delivers faster findings, but shifts triage work onto project teams. 11 days after the October 8 […] The post Anthropic Launches OSS Scanner, a Free AI Vulnerability Scanner appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-25T11:32:29.000Z",
+        "category": "open-source",
+        "score": 36.54,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 93,
+          "ruleScoreNormalized": 36.53846153846153,
+          "finalScore": 36.54,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7242361afc5a",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Depono – Chat with many AI models at cost and 10%, files kept in Git",
+        "link": "https://depono.xyz/",
+        "contentSnippet": "Article URL: https://depono.xyz/ Comments URL: https://news.ycombinator.com/item?id=50237806 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-26T01:12:25.000Z",
+        "category": "industry-news",
+        "score": 30.77,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 30.76923076923077,
+          "finalScore": 30.77,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a07e284e5604",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "I Think My AI Company Needs HR",
+        "link": "https://www.fasttrackfemme.com/p/i-think-my-ai-company-needs-hr",
+        "contentSnippet": "Article URL: https://www.fasttrackfemme.com/p/i-think-my-ai-company-needs-hr Comments URL: https://news.ycombinator.com/item?id=50237335 Points: 1 # Comments: 1",
+        "publishedAt": "2026-10-26T00:08:49.000Z",
+        "category": "industry-news",
+        "score": 30.77,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 30.76923076923077,
+          "finalScore": 30.77,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "927dd5211e8d",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI is getting good at math, here's why",
+        "link": "https://latent.space/p/ai-is-getting-good-at-math/",
+        "contentSnippet": "Article URL: https://latent.space/p/ai-is-getting-good-at-math/ Comments URL: https://news.ycombinator.com/item?id=50237104 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-25T23:30:52.000Z",
+        "category": "industry-news",
+        "score": 30.77,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 30.76923076923077,
+          "finalScore": 30.77,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ac8b1fb6add1",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Apollo says AI has delivered 'zero financial payoff' outside the tech industry",
+        "link": "https://www.businessinsider.com/apollo-ai-zero-financial-payoff-corporate-america-economic-analysis-2026-10",
+        "contentSnippet": "Article URL: https://www.businessinsider.com/apollo-ai-zero-financial-payoff-corporate-america-economic-analysis-2026-10 Comments URL: https://news.ycombinator.com/item?id=50236828 Points: 32 # Comments: 21",
+        "publishedAt": "2026-10-25T22:49:06.000Z",
+        "category": "industry-news",
+        "score": 30.77,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 30.76923076923077,
+          "finalScore": 30.77,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "51cd2b7b9a2d",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Southeast Asia’s digital economy to hit $368 billion",
+        "link": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+        "contentSnippet": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trillion by 2035.",
+        "publishedAt": "2026-10-21T04:00:00.000Z",
+        "category": "other",
+        "score": 25,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 25,
+          "finalScore": 25,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "476b6a8801e9",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "又一国产决策模型发布！准确率超过微软和Jev等决策模型",
+        "link": "https://www.qbitai.com/2026/10/504879.html",
+        "contentSnippet": "10月22日，蚂蚁数科正式发布决策模型 LingDT-Decision-1.0。",
+        "publishedAt": "2026-10-22T09:07:05.000Z",
+        "category": "industry-news",
+        "score": 25,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 25,
+          "finalScore": 25,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "746616257d73",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Android lets you ‘bubble’ apps for easy access now – how it works",
+        "link": "https://www.zdnet.com/tech/android-17-app-bubbles-how-to/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-23T16:28:46.000Z",
+        "category": "other",
+        "score": 19.23,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 19.230769230769234,
+          "finalScore": 19.23,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "eb3d7c63262d",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "PHP2Shell: Haven’t patched yet? Take these steps now to mitigate",
+        "link": "https://www.zdnet.com/tech/php2shell-php-patch-mitigation-critical-exploit/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-23T15:09:47.000Z",
+        "category": "other",
+        "score": 19.23,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 19.230769230769234,
+          "finalScore": 19.23,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5478efc66827",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "contentSnippet": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "publishedAt": "2026-10-13T16:00:00.000Z",
+        "category": "other",
+        "score": 15.38,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 15.384615384615385,
+          "finalScore": 15.38,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "92d60b58598f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Introducing Playground: Create and play custom games",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+        "contentSnippet": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "publishedAt": "2026-10-07T12:00:00.000Z",
+        "category": "other",
+        "score": 15.38,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 15.384615384615385,
+          "finalScore": 15.38,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1d5fed04e570",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in September 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from September 2026",
+        "publishedAt": "2026-10-02T15:00:00.000Z",
+        "category": "industry-news",
+        "score": 15.38,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 15.384615384615385,
+          "finalScore": 15.38,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "927c795585b6",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "contentSnippet": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "publishedAt": "2026-09-28T19:00:00.000Z",
+        "category": "other",
+        "score": 15.38,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 15.384615384615385,
+          "finalScore": 15.38,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5f226c85d6ea",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "link": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+        "contentSnippet": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "publishedAt": "2026-09-23T18:00:00.000Z",
+        "category": "other",
+        "score": 15.38,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 15.384615384615385,
+          "finalScore": 15.38,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8b4230c8927f",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "百度世界2026前瞻：10+重磅分论坛，全面解码AI时代的智能组织进化路径",
+        "link": "https://www.qbitai.com/2026/10/504901.html",
+        "contentSnippet": "10月21日，百度官方公众号发文披露了百度世界2026分论坛的更多议程信息。",
+        "publishedAt": "2026-10-23T07:35:51.000Z",
+        "category": "other",
+        "score": 15.38,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 15.384615384615385,
+          "finalScore": 15.38,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b2394e6393fa",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Amazon’s Kindle Unlimited is now Kindle+, and the 2 big changes include AI audiobooks",
+        "link": "https://www.zdnet.com/tech/kindle-unlimited-kindle-plus-audiobooks-ai/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-22T15:55:55.000Z",
+        "category": "other",
+        "score": 9.62,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 9.615384615384617,
+          "finalScore": 9.62,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "380cdc8a07de",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "The latest PowerToys gives your mouse 2 new tricks for free – how to use them",
+        "link": "https://www.zdnet.com/tech/powertoys-102-windows-mouse-control/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-22T15:17:56.000Z",
+        "category": "tutorial",
+        "score": 9.62,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 9.615384615384617,
+          "finalScore": 9.62,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e12889389300",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "特斯拉利润腰斩，一夜跌没“通用汽车”！马斯克：FSD在中国也会遥遥领先",
+        "link": "https://www.qbitai.com/2026/10/504841.html",
+        "contentSnippet": "FSD一年增长70万付费用户",
+        "publishedAt": "2026-10-22T07:14:48.000Z",
+        "category": "other",
+        "score": 5.77,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 77,
+          "ruleScoreNormalized": 5.769230769230769,
+          "finalScore": 5.77,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "33fe7b640d15",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "谁在给OpenAI供应具身数据？",
+        "link": "https://www.qbitai.com/2026/10/504800.html",
+        "contentSnippet": "挤进全球Physical AI核心供应链",
+        "publishedAt": "2026-10-22T07:05:59.000Z",
+        "category": "other",
+        "score": 5.77,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 77,
+          "ruleScoreNormalized": 5.769230769230769,
+          "finalScore": 5.77,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "69d16ba6c4fc",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "多智能体协同重构医疗AI！清华AIR孵化：医生AI分身“坐诊”医院",
+        "link": "https://www.qbitai.com/2026/10/504734.html",
+        "contentSnippet": "医疗AI质变时刻",
+        "publishedAt": "2026-10-21T11:30:59.000Z",
+        "category": "other",
+        "score": 5.77,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 77,
+          "ruleScoreNormalized": 5.769230769230769,
+          "finalScore": 5.77,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5485da075ffa",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "As a home tech expert, I beg you: don’t run these appliances on a power station",
+        "link": "https://www.zdnet.com/home-and-office/do-not-run-these-appliances-on-power-stations/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-16T17:44:31.000Z",
+        "category": "other",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 74,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b519de5644e6",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Your iPhone can spot scams for you with iOS 27 – but you have to opt in",
+        "link": "https://www.zdnet.com/tech/ios-27-impersonation-risk-detection-security-feature/",
+        "contentSnippet": "",
+        "publishedAt": "2026-09-30T15:45:00.000Z",
+        "category": "other",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 74,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "3956312cdce7",
+        "title": "Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats",
+        "summary": "Cognition released the Devin Vulnerability Fixes plugin, 3 MIT-licensed agent skills that inventory, patch and test PHP…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "3956312cdce7"
+        ]
+      },
+      {
+        "itemId": "4be811646b28",
+        "title": "Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model",
+        "summary": "Nanbeige LLM Lab released Nanbeige4.3-33B, a 33B dense Apache 2.0 model with 512K context. It reports 80.9 on Terminal-…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "4be811646b28"
+        ]
+      },
+      {
+        "itemId": "0a88f192181c",
+        "title": "Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time",
+        "summary": "Hugging Face released Carbon-X, an open 14.8B DNA language model built on Qwen3-14B. It reads raw DNA in chat, answers …",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "0a88f192181c"
+        ]
+      },
+      {
+        "itemId": "edfb2d5d1a93",
+        "title": "One gateway for your AI agents, APIs and MCP servers",
+        "summary": "Article URL: https://github.com/Clivern/Sloth Comments URL: https://news.ycombinator.com/item?id=50237533 Points: 1 # C…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "edfb2d5d1a93"
+        ]
+      },
+      {
+        "itemId": "2c59aa188be9",
+        "title": "PyTorch Conference 2026: Google and Meta Open-Source TorchTPU for Native PyTorch on TPUs",
+        "summary": "Google and Meta open-sourced TorchTPU, a native PyTorch backend for Google's TPUs, at PyTorch Conference North America …",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "2c59aa188be9"
+        ]
+      },
+      {
+        "itemId": "dedf04258f1a",
+        "title": "Google ML Drift Accelerates On-Device AI Inference Across Diverse GPUs",
+        "summary": "Google has released ML Drift, an open-source, cross-platform GPU compute engine designed for on-device AI and machine l…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "dedf04258f1a"
+        ]
+      },
+      {
+        "itemId": "d283cf4bd01b",
+        "title": "Microsoft Open-Sources Agensh: A Multi-Agent Harness for 1,024 Agents",
+        "summary": "Microsoft Research open-sourced Agensh, a multi-agent harness with no central orchestrator. Self-organizing workers sha…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "d283cf4bd01b"
+        ]
+      },
+      {
+        "itemId": "55fef3384039",
+        "title": "Google Optimizes Agent Development Kit's 200K-line Python Codebase Overnight with Gemini 4 Argon",
+        "summary": "Google explained how an 11-hour unattended run of Gemini 4 Argon produced two accepted optimizations for Google Agent D…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "55fef3384039"
+        ]
+      },
+      {
+        "itemId": "050dc28ce449",
+        "title": "Google’s Data Agent Kit Hits GA, Splitting Agent Guardrails Between Skills and IAM",
+        "summary": "Google has made Data Agent Kit generally available, a free set of MCP tools and 37 open-source skills that connect codi…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "050dc28ce449"
+        ]
+      },
+      {
+        "itemId": "f583fd2eeb40",
+        "title": "Researchers from Stanford and UC Berkeley Introduce TokenGate: Token-Gated Attention Makes Long-Context Prefill Up to 11.3x Faster",
+        "summary": "Stanford and UC Berkeley researchers released TokenGate, a drop-in learned token pruning module for LLMs. It cuts long-…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "f583fd2eeb40"
+        ]
+      },
+      {
+        "itemId": "10a844b1ab08",
+        "title": "Bend: A fast language that blocks AI mistakes via proof",
+        "summary": "Article URL: https://github.com/bendlang/bend Comments URL: https://news.ycombinator.com/item?id=50237170 Points: 1 # C…",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "10a844b1ab08"
+        ]
+      },
+      {
+        "itemId": "7ae223ea9ed4",
+        "title": "Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks",
+        "summary": "A recent Harvard study of 718 firms, using the Jellyfish analytics platform, finds that although AI coding assistants a…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "7ae223ea9ed4"
+        ]
+      },
+      {
+        "itemId": "cc72fd0a11db",
+        "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
+        "summary": "中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "cc72fd0a11db"
+        ]
+      },
+      {
+        "itemId": "54bd8d8f9717",
+        "title": "Anthropic Adds Opt-In Security Scanning for Critical Open-Source Projects",
+        "summary": "AI company Anthropic has launched OSS Scanner, a free, opt-in service to find vulnerabilities in open-source projects. …",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "54bd8d8f9717"
+        ]
+      },
+      {
+        "itemId": "c1d6aac8e8ea",
+        "title": "Anthropic Launches OSS Scanner, a Free AI Vulnerability Scanner",
+        "summary": "Anthropic has launched OSS Scanner, a free, opt-in vulnerability scanner for critical open-source projects. The Anthrop…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c1d6aac8e8ea"
+        ]
+      },
+      {
+        "itemId": "7242361afc5a",
+        "title": "Show HN: Depono – Chat with many AI models at cost and 10%, files kept in Git",
+        "summary": "Article URL: https://depono.xyz/ Comments URL: https://news.ycombinator.com/item?id=50237806 Points: 1 # Comments: 0",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "7242361afc5a"
+        ]
+      },
+      {
+        "itemId": "a07e284e5604",
+        "title": "I Think My AI Company Needs HR",
+        "summary": "Article URL: https://www.fasttrackfemme.com/p/i-think-my-ai-company-needs-hr Comments URL: https://news.ycombinator.com…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a07e284e5604"
+        ]
+      },
+      {
+        "itemId": "927dd5211e8d",
+        "title": "AI is getting good at math, here's why",
+        "summary": "Article URL: https://latent.space/p/ai-is-getting-good-at-math/ Comments URL: https://news.ycombinator.com/item?id=5023…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "927dd5211e8d"
+        ]
+      },
+      {
+        "itemId": "ac8b1fb6add1",
+        "title": "Apollo says AI has delivered 'zero financial payoff' outside the tech industry",
+        "summary": "Article URL: https://www.businessinsider.com/apollo-ai-zero-financial-payoff-corporate-america-economic-analysis-2026-1…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "ac8b1fb6add1"
+        ]
+      },
+      {
+        "itemId": "51cd2b7b9a2d",
+        "title": "Southeast Asia’s digital economy to hit $368 billion",
+        "summary": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trilli…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "51cd2b7b9a2d"
+        ]
+      },
+      {
+        "itemId": "476b6a8801e9",
+        "title": "又一国产决策模型发布！准确率超过微软和Jev等决策模型",
+        "summary": "10月22日，蚂蚁数科正式发布决策模型 LingDT-Decision-1.0。",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "476b6a8801e9"
+        ]
+      },
+      {
+        "itemId": "746616257d73",
+        "title": "Android lets you ‘bubble’ apps for easy access now – how it works",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "746616257d73"
+        ]
+      },
+      {
+        "itemId": "eb3d7c63262d",
+        "title": "PHP2Shell: Haven’t patched yet? Take these steps now to mitigate",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "eb3d7c63262d"
+        ]
+      },
+      {
+        "itemId": "5478efc66827",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5478efc66827"
+        ]
+      },
+      {
+        "itemId": "92d60b58598f",
+        "title": "Introducing Playground: Create and play custom games",
+        "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "92d60b58598f"
+        ]
+      },
+      {
+        "itemId": "1d5fed04e570",
+        "title": "The latest AI news we announced in September 2026",
+        "summary": "Here are Google’s latest AI updates from September 2026",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1d5fed04e570"
+        ]
+      },
+      {
+        "itemId": "927c795585b6",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "927c795585b6"
+        ]
+      },
+      {
+        "itemId": "5f226c85d6ea",
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5f226c85d6ea"
+        ]
+      },
+      {
+        "itemId": "8b4230c8927f",
+        "title": "百度世界2026前瞻：10+重磅分论坛，全面解码AI时代的智能组织进化路径",
+        "summary": "10月21日，百度官方公众号发文披露了百度世界2026分论坛的更多议程信息。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "8b4230c8927f"
+        ]
+      },
+      {
+        "itemId": "b2394e6393fa",
+        "title": "Amazon’s Kindle Unlimited is now Kindle+, and the 2 big changes include AI audiobooks",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b2394e6393fa"
+        ]
+      },
+      {
+        "itemId": "380cdc8a07de",
+        "title": "The latest PowerToys gives your mouse 2 new tricks for free – how to use them",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "380cdc8a07de"
+        ]
+      },
+      {
+        "itemId": "e12889389300",
+        "title": "特斯拉利润腰斩，一夜跌没“通用汽车”！马斯克：FSD在中国也会遥遥领先",
+        "summary": "FSD一年增长70万付费用户",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e12889389300"
+        ]
+      },
+      {
+        "itemId": "33fe7b640d15",
+        "title": "谁在给OpenAI供应具身数据？",
+        "summary": "挤进全球Physical AI核心供应链",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "33fe7b640d15"
+        ]
+      },
+      {
+        "itemId": "69d16ba6c4fc",
+        "title": "多智能体协同重构医疗AI！清华AIR孵化：医生AI分身“坐诊”医院",
+        "summary": "医疗AI质变时刻",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "69d16ba6c4fc"
+        ]
+      },
+      {
+        "itemId": "5485da075ffa",
+        "title": "As a home tech expert, I beg you: don’t run these appliances on a power station",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5485da075ffa"
+        ]
+      },
+      {
+        "itemId": "b519de5644e6",
+        "title": "Your iPhone can spot scams for you with iOS 27 – but you have to opt in",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b519de5644e6"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "3956312cdce7",
+        "title": "Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats",
+        "takeaway": "Cognition released the Devin Vulnerability Fixes plugin, 3 MIT-licensed agent skills that inventory, patch and test PHP…",
+        "evidenceItemIds": [
+          "3956312cdce7"
+        ]
+      },
+      {
+        "itemId": "4be811646b28",
+        "title": "Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model",
+        "takeaway": "Nanbeige LLM Lab released Nanbeige4.3-33B, a 33B dense Apache 2.0 model with 512K context. It reports 80.9 on Terminal-…",
+        "evidenceItemIds": [
+          "4be811646b28"
+        ]
+      },
+      {
+        "itemId": "0a88f192181c",
+        "title": "Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time",
+        "takeaway": "Hugging Face released Carbon-X, an open 14.8B DNA language model built on Qwen3-14B. It reads raw DNA in chat, answers …",
+        "evidenceItemIds": [
+          "0a88f192181c"
+        ]
+      },
+      {
+        "itemId": "edfb2d5d1a93",
+        "title": "One gateway for your AI agents, APIs and MCP servers",
+        "takeaway": "Article URL: https://github.com/Clivern/Sloth Comments URL: https://news.ycombinator.com/item?id=50237533 Points: 1 # C…",
+        "evidenceItemIds": [
+          "edfb2d5d1a93"
+        ]
+      },
+      {
+        "itemId": "2c59aa188be9",
+        "title": "PyTorch Conference 2026: Google and Meta Open-Source TorchTPU for Native PyTorch on TPUs",
+        "takeaway": "Google and Meta open-sourced TorchTPU, a native PyTorch backend for Google's TPUs, at PyTorch Conference North America …",
+        "evidenceItemIds": [
+          "2c59aa188be9"
+        ]
+      },
+      {
+        "itemId": "dedf04258f1a",
+        "title": "Google ML Drift Accelerates On-Device AI Inference Across Diverse GPUs",
+        "takeaway": "Google has released ML Drift, an open-source, cross-platform GPU compute engine designed for on-device AI and machine l…",
+        "evidenceItemIds": [
+          "dedf04258f1a"
+        ]
+      },
+      {
+        "itemId": "d283cf4bd01b",
+        "title": "Microsoft Open-Sources Agensh: A Multi-Agent Harness for 1,024 Agents",
+        "takeaway": "Microsoft Research open-sourced Agensh, a multi-agent harness with no central orchestrator. Self-organizing workers sha…",
+        "evidenceItemIds": [
+          "d283cf4bd01b"
+        ]
+      },
+      {
+        "itemId": "55fef3384039",
+        "title": "Google Optimizes Agent Development Kit's 200K-line Python Codebase Overnight with Gemini 4 Argon",
+        "takeaway": "Google explained how an 11-hour unattended run of Gemini 4 Argon produced two accepted optimizations for Google Agent D…",
+        "evidenceItemIds": [
+          "55fef3384039"
+        ]
+      },
+      {
+        "itemId": "050dc28ce449",
+        "title": "Google’s Data Agent Kit Hits GA, Splitting Agent Guardrails Between Skills and IAM",
+        "takeaway": "Google has made Data Agent Kit generally available, a free set of MCP tools and 37 open-source skills that connect codi…",
+        "evidenceItemIds": [
+          "050dc28ce449"
+        ]
+      },
+      {
+        "itemId": "f583fd2eeb40",
+        "title": "Researchers from Stanford and UC Berkeley Introduce TokenGate: Token-Gated Attention Makes Long-Context Prefill Up to 11.3x Faster",
+        "takeaway": "Stanford and UC Berkeley researchers released TokenGate, a drop-in learned token pruning module for LLMs. It cuts long-…",
+        "evidenceItemIds": [
+          "f583fd2eeb40"
+        ]
+      },
+      {
+        "itemId": "10a844b1ab08",
+        "title": "Bend: A fast language that blocks AI mistakes via proof",
+        "takeaway": "Article URL: https://github.com/bendlang/bend Comments URL: https://news.ycombinator.com/item?id=50237170 Points: 1 # C…",
+        "evidenceItemIds": [
+          "10a844b1ab08"
+        ]
+      },
+      {
+        "itemId": "7ae223ea9ed4",
+        "title": "Study Finds AI-generated Code Fails to Boost Productivity Due to Downstream Bottlenecks",
+        "takeaway": "A recent Harvard study of 718 firms, using the Jellyfish analytics platform, finds that although AI coding assistants a…",
+        "evidenceItemIds": [
+          "7ae223ea9ed4"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕open-source与research展开，建议优先关注《Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats》、《Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model》、《Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《PyTorch Conference 2026: Google and Meta Open-Source TorchTPU for Native PyTorch on TPUs》、《Southeast Asia’s digital economy to hit $368 billion》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "2c59aa188be9",
+          "51cd2b7b9a2d",
+          "746616257d73",
+          "eb3d7c63262d"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 4 条，建议优先阅读《Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats》、《Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "3956312cdce7",
+          "4be811646b28",
+          "edfb2d5d1a93",
+          "dedf04258f1a"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《Show HN: Depono – Chat with many AI models at cost and 10%, files kept in Git》、《I Think My AI Company Needs HR》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "7242361afc5a",
+          "a07e284e5604",
+          "927dd5211e8d",
+          "ac8b1fb6add1"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "research",
+        "lead": "研究方向本期共 2 条，建议优先阅读《Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time》、《Researchers from Stanford and UC Berkeley Introduce TokenGate: Token-Gated Attention Makes Long-Context Prefill Up to 11.3x Faster》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "0a88f192181c",
+          "f583fd2eeb40"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "d06d648212ecd635f5c37c3517e3d735552ac3c1a78a336e45a7d5cd527d920e",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-10-26T01:51:27.385Z",
+      "finishedAt": "2026-10-26T01:52:08.758Z",
+      "durationMs": 41373,
+      "inputCount": 36,
+      "processedCount": 36,
+      "fallbackCount": 36,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 36,
+      "failureStats": {
+        "totalFailed": 36,
+        "timeout": 0,
+        "http": 36,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 68,
+        "splitRetryCount": 32
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-19",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=ENOTFOUND"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-12",
+          "fetchedCount": 0,
+          "failedReason": "This operation was aborted"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 1,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 1
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-10-26T04:31:06.434Z",
+      "finishedAt": "2026-10-26T04:31:20.224Z",
+      "durationMs": 13790,
+      "inputCount": 36,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "3956312cdce7",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats",
+        "link": "https://www.marktechpost.com/2026/10/24/cognition-devin-vulnerability-fixes-plugin-php2shell-nodejs-gitlab/",
+        "contentSnippet": "Cognition released the Devin Vulnerability Fixes plugin, 3 MIT-licensed agent skills that inventory, patch and test PHP, Node.js and self-managed GitLab deployments hit by this week’s critical RCE flaws, then open 1 PR per repo. The post Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-25T02:59:08.000Z",
+        "category": "open-source",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 126,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4be811646b28",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model",
+        "link": "https://www.marktechpost.com/2026/10/25/nanbeige-releases-nanbeige4-3-33b-open-agentic-coding-model/",
+        "contentSnippet": "Nanbeige LLM Lab released Nanbeige4.3-33B, a 33B dense Apache 2.0 model with 512K context. It reports 80.9 on Terminal-Bench 2.1 and will teach the upcoming Nanbeige4.3-3B. The post Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-25T21:15:21.000Z",
+        "category": "open-source",
+        "score": 94.23,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 94.23076923076923,
+          "finalScore": 94.23,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0a88f192181c",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time",
+        "link": "https://www.marktechpost.com/2026/10/25/hugging-face-carbon-x-14b-dna-language-model/",
+        "contentSnippet": "Hugging Face released Carbon-X, an open 14.8B DNA language model built on Qwen3-14B. It reads raw DNA in chat, answers in English, and averages 66.7% across 5 DNA benchmarks under Apache 2.0. The post Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-25T16:53:40.000Z",
+        "category": "research",
+        "score": 84.62,
+        "importance": "medium",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 84.61538461538461,
+          "finalScore": 84.62,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "edfb2d5d1a93",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "One gateway for your AI agents, APIs and MCP servers",
+        "link": "https://github.com/Clivern/Sloth",
+        "contentSnippet": "Article URL: https://github.com/Clivern/Sloth Comments URL: https://news.ycombinator.com/item?id=50237533 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-26T00:38:22.000Z",
+        "category": "open-source",
+        "score": 82.69,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 82.6923076923077,
+          "finalScore": 82.69,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2c59aa188be9",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "PyTorch Conference 2026: Google and Meta Open-Source TorchTPU for Native PyTorch on TPUs",
+        "link": "https://www.infoq.com/news/2026/10/google-meta-torchtpu/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google and Meta open-sourced TorchTPU, a native PyTorch backend for Google's TPUs, at PyTorch Conference North America 2026, and Meta said it plans to move larger LLM workloads onto TPUs with it. AWS released TorchNeuron for Trainium the same week, while developers questioned TPU availability and where vendor lock-in now sits. By Andrew Hoblitzell",
+        "publishedAt": "2026-10-25T18:00:00.000Z",
+        "category": "other",
+        "score": 69.23,
+        "importance": "medium",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 69.23076923076923,
+          "finalScore": 69.23,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "dedf04258f1a",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google ML Drift Accelerates On-Device AI Inference Across Diverse GPUs",
+        "link": "https://www.infoq.com/news/2026/10/google-ml-drift/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has released ML Drift, an open-source, cross-platform GPU compute engine designed for on-device AI and machine learning inference. Licensed under Apache 2.0, it abstracts the complexities of different GPU hardware and low-level APIs, supporting OpenGL ES, OpenCL, Metal, and WebGPU. By Sergio De Simone",
+        "publishedAt": "2026-10-25T17:00:00.000Z",
+        "category": "open-source",
+        "score": 69.23,
+        "importance": "medium",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 69.23076923076923,
+          "finalScore": 69.23,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d283cf4bd01b",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Microsoft Open-Sources Agensh: A Multi-Agent Harness for 1,024 Agents",
+        "link": "https://www.marktechpost.com/2026/10/24/microsoft-agensh-multi-agent-harness-1024-agents/",
+        "contentSnippet": "Microsoft Research open-sourced Agensh, a multi-agent harness with no central orchestrator. Self-organizing workers share a Git repo, chat and a findings board, scaling from 1 to 1,024 agents on ProgramBench under a 6-hour budget. The post Microsoft Open-Sources Agensh: A Multi-Agent Harness for 1,024 Agents appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-25T03:32:59.000Z",
+        "category": "open-source",
+        "score": 65.38,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 65.38461538461539,
+          "finalScore": 65.38,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "55fef3384039",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Optimizes Agent Development Kit's 200K-line Python Codebase Overnight with Gemini 4 Argon",
+        "link": "https://www.infoq.com/news/2026/10/google-argon-optimizes-adk/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google explained how an 11-hour unattended run of Gemini 4 Argon produced two accepted optimizations for Google Agent Development Kit's codebase, reducing in-memory session-preparation overhead by about 40% in long sessions and cold package import time by 21%. By Sergio De Simone",
+        "publishedAt": "2026-10-24T16:00:00.000Z",
+        "category": "agent",
+        "score": 59.62,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 59.61538461538461,
+          "finalScore": 59.62,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 36,
+      "normalizedCount": 36,
+      "dedupedCount": 36,
+      "highImportanceCount": 2,
+      "mediumImportanceCount": 5,
+      "lowImportanceCount": 29,
+      "categoryBreakdown": {
+        "open-source": 9,
+        "tooling": 1,
+        "agent": 2,
+        "research": 2,
+        "industry-news": 6,
+        "tutorial": 1,
+        "other": 15
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[LangChain Changelog] 抓取失败: fetch failed (code=ENOTFOUND)",
+      "[Microsoft AI Blog] 抓取失败: This operation was aborted",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=ENOTFOUND",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): This operation was aborted",
+      "LLM 分类打分部分回退：36/36",
+      "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"072de523eb8d8ff74614e760052d3236\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"072de52358e6d5b274c05f7a21d32b46\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"072de524b238999e9600dfe7ce3c19b3\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": "2026-10-26T04:30:00.000Z"
+  }
+}
