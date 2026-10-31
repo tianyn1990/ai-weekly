@@ -1,0 +1,2490 @@
+{
+  "runId": "daily-1793408435267",
+  "generatedAt": "2026-10-31T01:00:35.216Z",
+  "reviewStartedAt": "2026-10-31T01:00:35.216Z",
+  "reportDate": "2026-10-31",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-10-31T01:00:35.216Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 42,
+    "normalizedCount": 42,
+    "dedupedCount": 42,
+    "highImportanceCount": 2,
+    "mediumImportanceCount": 4,
+    "lowImportanceCount": 36,
+    "categoryBreakdown": {
+      "open-source": 6,
+      "tooling": 2,
+      "agent": 7,
+      "research": 0,
+      "industry-news": 4,
+      "tutorial": 2,
+      "other": 21
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "82ef17bc4cb7",
+      "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+      "summary": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use t…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "82ef17bc4cb7"
+      ]
+    },
+    {
+      "itemId": "f92ff814afb7",
+      "title": "Bug0 Releases QA Agent to Automate Regression Testing With Cached Playwright Replays",
+      "summary": "QA Agent is a new source-available Playwright library for agentic browser regression testing. The agent associates test…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "f92ff814afb7"
+      ]
+    },
+    {
+      "itemId": "b76f737539ea",
+      "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+      "summary": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cu…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "b76f737539ea"
+      ]
+    },
+    {
+      "itemId": "8f4e0b4bb769",
+      "title": "Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost",
+      "summary": "Samaya AI’s Sterling is a post-trained Nemotron 3.5 Lightning model for financial research. It scores 58.9% on Frontier…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "8f4e0b4bb769"
+      ]
+    },
+    {
+      "itemId": "60adcdaf1f1a",
+      "title": "How we detect frontier model misalignment",
+      "summary": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "60adcdaf1f1a"
+      ]
+    },
+    {
+      "itemId": "c90747fc3e6c",
+      "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+      "summary": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "c90747fc3e6c"
+      ]
+    },
+    {
+      "itemId": "4bb138e39218",
+      "title": "英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成",
+      "summary": "英伟达与麻省理工学院团队，在 Hugging Face 发布了视频增强项目 Open-H3-Regenerate-2K 的模型权重",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "4bb138e39218"
+      ]
+    },
+    {
+      "itemId": "813b81289e18",
+      "title": "An updated Model Spec for more capable and beneficial AI",
+      "summary": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and…",
+      "recommendation": "可直接学习实践",
+      "evidenceItemIds": [
+        "813b81289e18"
+      ]
+    },
+    {
+      "itemId": "dde388700b4a",
+      "title": "Making it easier for websites to express AI training preferences",
+      "summary": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to par…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "dde388700b4a"
+      ]
+    },
+    {
+      "itemId": "581919a7a3a0",
+      "title": "Community safety report and new protections for teens",
+      "summary": "OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commi…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "581919a7a3a0"
+      ]
+    },
+    {
+      "itemId": "5c92adb4327d",
+      "title": "QCon AI New York 2026 Program Committee Picks: Agent Identity, Context Costs, and Open-Source Infere",
+      "summary": "Who authorizes an agent’s actions, and how should teams manage growing context costs? The QCon AI New York 2026 program…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "5c92adb4327d"
+      ]
+    },
+    {
+      "itemId": "cf5b7c7a3669",
+      "title": "Show HN: Governor, a firewall for AI agent spend and tool calls",
+      "summary": "Article URL: https://bsvkey-governor-demo.fly.dev/ Comments URL: https://news.ycombinator.com/item?id=50311974 Points: …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "cf5b7c7a3669"
+      ]
+    },
+    {
+      "itemId": "5b48575c6c71",
+      "title": "Where AI agents' social boundaries break: 5 LLMs try to form a government",
+      "summary": "Article URL: https://judgementlabs.app/blog/the-coalition-room Comments URL: https://news.ycombinator.com/item?id=50311…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "5b48575c6c71"
+      ]
+    },
+    {
+      "itemId": "a2d2d8f553ed",
+      "title": "AI agents shape experts' judgment calls",
+      "summary": "Article URL: https://www.anthropic.com/research/agents-judgment-calls Comments URL: https://news.ycombinator.com/item?i…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "a2d2d8f553ed"
+      ]
+    },
+    {
+      "itemId": "72516d3295d5",
+      "title": "Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice Cloning TTS Model",
+      "summary": "Edge0 released Audio8-TTS-Realistic, a 0.6B open-weight zero-shot voice cloning TTS model under Apache 2.0. It supports…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "72516d3295d5"
+      ]
+    },
+    {
+      "itemId": "db035389cb0a",
+      "title": "Your Netgear router may be vulnerable to a security exploit – how to check and patch it",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "db035389cb0a"
+      ]
+    },
+    {
+      "itemId": "3e0ad60041ea",
+      "title": "Fair use benefits everyone",
+      "summary": "OpenAI shares excerpts from court briefs by creators, academics, accessibility advocates, and legal experts, among othe…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3e0ad60041ea"
+      ]
+    },
+    {
+      "itemId": "b0ac292d1047",
+      "title": "How Ropes & Gray is developing AI for transactional diligence",
+      "summary": "Ropes & Gray is developing AI for transactional diligence with OpenAI. Lawyers review grouped documents, summaries, and…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b0ac292d1047"
+      ]
+    },
+    {
+      "itemId": "74967987599c",
+      "title": "RSI立大功！国产开源登顶全球第一，1.3B OXR重塑OCR",
+      "summary": "解析一切",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "74967987599c"
+      ]
+    },
+    {
+      "itemId": "70735b1af75c",
+      "title": "Baseten Releases joey-1, a 2B Decision Model at $0.01 per 1M Tokens",
+      "summary": "Baseten has released joey-1, a 2B open-weight decision model that returns calibrated probabilities instead of text. It …",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "70735b1af75c"
+      ]
+    },
+    {
+      "itemId": "3c39baaa29c5",
+      "title": "Prime Intellect Releases Prime Mega MoE: Trainable Fused MoE Kernel, 3.11x Faster Forward Pass",
+      "summary": "Prime Intellect released Prime Mega MoE, a backward pass for DeepSeek’s fused Mega MoE kernel. It makes the kernel trai…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "3c39baaa29c5"
+      ]
+    },
+    {
+      "itemId": "0a1d7ba8dc6d",
+      "title": "Claude新模型曝光：新Fable，新Opus…",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "0a1d7ba8dc6d"
+      ]
+    },
+    {
+      "itemId": "e50b632b0ca4",
+      "title": "Netflix Treats GPU Reliability as a Distributed Systems Problem",
+      "summary": "Netflix has detailed how it is building a reliability platform for large-scale GPU training and inference, using layere…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e50b632b0ca4"
+      ]
+    },
+    {
+      "itemId": "d7cc81c3c392",
+      "title": "Android 17 adoption hits a staggering 1% – why you really should update now",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d7cc81c3c392"
+      ]
+    },
+    {
+      "itemId": "180f10777f3a",
+      "title": "Samsung adds better sleep tracking to Galaxy Watches – here’s what to expect",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "180f10777f3a"
+      ]
+    },
+    {
+      "itemId": "88616d198d0f",
+      "title": "I’m finally ready for a smart calendar – why the Echo Show 16 stands out",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "88616d198d0f"
+      ]
+    },
+    {
+      "itemId": "3f28d45d40ef",
+      "title": "Google’s latest Home updates just fixed my biggest annoyances with its speakers and cameras",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3f28d45d40ef"
+      ]
+    },
+    {
+      "itemId": "be825ae61e7e",
+      "title": "How to Make Artificial Intelligence More Environmentally Sustainable",
+      "summary": "IT is responsible for about 2 - 4% of all global emissions, and electricity use at Microsoft and Google has climbed bec…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "be825ae61e7e"
+      ]
+    },
+    {
+      "itemId": "f27bd64f1ac5",
+      "title": "Anthropic Says Nobody Needs a Mental Model of Claude Code. Practitioners Are Testing That",
+      "summary": "Anthropic has published how the Claude Code team reviews code now that Claude writes roughly 90% of it, including a cla…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f27bd64f1ac5"
+      ]
+    },
+    {
+      "itemId": "eaef76c7009c",
+      "title": "Black October: At least nine AI developer platforms breached this month",
+      "summary": "Article URL: https://www.wiz.io/blog/black-october-for-ai-developer-platforms Comments URL: https://news.ycombinator.co…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "eaef76c7009c"
+      ]
+    },
+    {
+      "itemId": "96e91e299a90",
+      "title": "AI changed what I can build",
+      "summary": "Article URL: https://tanner.place/blog/how-ai-changed-what-i-can-build Comments URL: https://news.ycombinator.com/item?…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "96e91e299a90"
+      ]
+    },
+    {
+      "itemId": "91875ea5fc39",
+      "title": "Reddit shares plunge as Google's AI search squeezes traffic",
+      "summary": "Article URL: https://www.reuters.com/business/reddit-pinterest-shares-tumble-weak-user-revenue-growth-2026-10-30/ Comme…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "91875ea5fc39"
+      ]
+    },
+    {
+      "itemId": "e604a204e5b1",
+      "title": "Our newest AI Quest: Mapping the human brain",
+      "summary": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e604a204e5b1"
+      ]
+    },
+    {
+      "itemId": "950ecbd37190",
+      "title": "从学习人类到学习机器人同伴，清华大学联合无问芯穹、智元提出具身智能规模化落地新路径",
+      "summary": "让机器人成为彼此的“老师”",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "950ecbd37190"
+      ]
+    },
+    {
+      "itemId": "9fc81749b3e2",
+      "title": "前排围观！MEET2027报名通道正式开启，首批重磅嘉宾已就位",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9fc81749b3e2"
+      ]
+    },
+    {
+      "itemId": "1cda70312973",
+      "title": "买车送终身AI？智己LS8纯电版25万起！全系线控底盘宁德时代标配",
+      "summary": "Momenta世界模型上车",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1cda70312973"
+      ]
+    },
+    {
+      "itemId": "72458b8b3dd2",
+      "title": "Your headphones have hidden LE Audio features you’ll want to know about",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "72458b8b3dd2"
+      ]
+    },
+    {
+      "itemId": "51cd2b7b9a2d",
+      "title": "Southeast Asia’s digital economy to hit $368 billion",
+      "summary": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trilli…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "51cd2b7b9a2d"
+      ]
+    },
+    {
+      "itemId": "5478efc66827",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5478efc66827"
+      ]
+    },
+    {
+      "itemId": "92d60b58598f",
+      "title": "Introducing Playground: Create and play custom games",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "92d60b58598f"
+      ]
+    },
+    {
+      "itemId": "1d5fed04e570",
+      "title": "The latest AI news we announced in September 2026",
+      "summary": "Here are Google’s latest AI updates from September 2026",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1d5fed04e570"
+      ]
+    },
+    {
+      "itemId": "927c795585b6",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "927c795585b6"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "82ef17bc4cb7",
+      "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+      "takeaway": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use t…",
+      "evidenceItemIds": [
+        "82ef17bc4cb7"
+      ]
+    },
+    {
+      "itemId": "f92ff814afb7",
+      "title": "Bug0 Releases QA Agent to Automate Regression Testing With Cached Playwright Replays",
+      "takeaway": "QA Agent is a new source-available Playwright library for agentic browser regression testing. The agent associates test…",
+      "evidenceItemIds": [
+        "f92ff814afb7"
+      ]
+    },
+    {
+      "itemId": "b76f737539ea",
+      "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+      "takeaway": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cu…",
+      "evidenceItemIds": [
+        "b76f737539ea"
+      ]
+    },
+    {
+      "itemId": "8f4e0b4bb769",
+      "title": "Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost",
+      "takeaway": "Samaya AI’s Sterling is a post-trained Nemotron 3.5 Lightning model for financial research. It scores 58.9% on Frontier…",
+      "evidenceItemIds": [
+        "8f4e0b4bb769"
+      ]
+    },
+    {
+      "itemId": "60adcdaf1f1a",
+      "title": "How we detect frontier model misalignment",
+      "takeaway": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can …",
+      "evidenceItemIds": [
+        "60adcdaf1f1a"
+      ]
+    },
+    {
+      "itemId": "c90747fc3e6c",
+      "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+      "takeaway": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM …",
+      "evidenceItemIds": [
+        "c90747fc3e6c"
+      ]
+    },
+    {
+      "itemId": "4bb138e39218",
+      "title": "英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成",
+      "takeaway": "英伟达与麻省理工学院团队，在 Hugging Face 发布了视频增强项目 Open-H3-Regenerate-2K 的模型权重",
+      "evidenceItemIds": [
+        "4bb138e39218"
+      ]
+    },
+    {
+      "itemId": "813b81289e18",
+      "title": "An updated Model Spec for more capable and beneficial AI",
+      "takeaway": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and…",
+      "evidenceItemIds": [
+        "813b81289e18"
+      ]
+    },
+    {
+      "itemId": "dde388700b4a",
+      "title": "Making it easier for websites to express AI training preferences",
+      "takeaway": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to par…",
+      "evidenceItemIds": [
+        "dde388700b4a"
+      ]
+    },
+    {
+      "itemId": "581919a7a3a0",
+      "title": "Community safety report and new protections for teens",
+      "takeaway": "OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commi…",
+      "evidenceItemIds": [
+        "581919a7a3a0"
+      ]
+    },
+    {
+      "itemId": "5c92adb4327d",
+      "title": "QCon AI New York 2026 Program Committee Picks: Agent Identity, Context Costs, and Open-Source Infere",
+      "takeaway": "Who authorizes an agent’s actions, and how should teams manage growing context costs? The QCon AI New York 2026 program…",
+      "evidenceItemIds": [
+        "5c92adb4327d"
+      ]
+    },
+    {
+      "itemId": "cf5b7c7a3669",
+      "title": "Show HN: Governor, a firewall for AI agent spend and tool calls",
+      "takeaway": "Article URL: https://bsvkey-governor-demo.fly.dev/ Comments URL: https://news.ycombinator.com/item?id=50311974 Points: …",
+      "evidenceItemIds": [
+        "cf5b7c7a3669"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕tooling与agent展开，建议优先关注《AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare》、《Bug0 Releases QA Agent to Automate Regression Testing With Cached Playwright Replays》、《Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Making it easier for websites to express AI training preferences》、《Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice Cloning TTS Model》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "dde388700b4a",
+        "72516d3295d5",
+        "3e0ad60041ea",
+        "70735b1af75c"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 4 条，建议优先阅读《Bug0 Releases QA Agent to Automate Regression Testing With Cached Playwright Replays》、《Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "f92ff814afb7",
+        "b76f737539ea",
+        "8f4e0b4bb769",
+        "60adcdaf1f1a"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 4 条，建议优先阅读《DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents》、《英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "c90747fc3e6c",
+        "4bb138e39218",
+        "581919a7a3a0",
+        "b0ac292d1047"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《Black October: At least nine AI developer platforms breached this month》、《AI changed what I can build》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "eaef76c7009c",
+        "96e91e299a90",
+        "91875ea5fc39",
+        "1d5fed04e570"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "f99d8c8b7d8206b03bfde15bc9aa146f8dbf8cee9b40e7e2cc055655fb74ad80",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-10-31T01:00:51.023Z",
+    "finishedAt": "2026-10-31T01:01:39.699Z",
+    "durationMs": 48676,
+    "inputCount": 42,
+    "processedCount": 42,
+    "fallbackCount": 42,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 42,
+    "failureStats": {
+      "totalFailed": 42,
+      "timeout": 0,
+      "http": 42,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 79,
+      "splitRetryCount": 37
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-24",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-17",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-10-31T01:01:39.739Z",
+    "finishedAt": "2026-10-31T01:01:53.971Z",
+    "durationMs": 14232,
+    "inputCount": 42,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "82ef17bc4cb7",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+      "link": "https://www.marktechpost.com/2026/10/30/ai-security-agents-claude-codex-mantis-cloudflare/",
+      "contentSnippet": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use the same find, disprove, then patch loop. Here is how they differ, plus 12 more tools. The post AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-30T17:34:15.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 131,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "f92ff814afb7",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Bug0 Releases QA Agent to Automate Regression Testing With Cached Playwright Replays",
+      "link": "https://www.infoq.com/news/2026/10/bug0-agent-testing-cached-replay/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "QA Agent is a new source-available Playwright library for agentic browser regression testing. The agent associates test instructions expressed in natural language to actions on the user interface, caches those when appropriate for faster CI replays, remapping them to test specifications when the user interface changes. Verification is based on multi-model consensus and vision model evaluations. By Bruno Couriol",
+      "publishedAt": "2026-10-29T15:17:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 87.76,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 125,
+        "ruleScoreNormalized": 87.75510204081633,
+        "finalScore": 87.76,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "b76f737539ea",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+      "link": "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/",
+      "contentSnippet": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cut coding agent token costs by 18.4% to 30.9% on SWE-Bench, with no change to the agent. The post Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9% appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-30T17:53:37.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 83.67,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 123,
+        "ruleScoreNormalized": 83.6734693877551,
+        "finalScore": 83.67,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "8f4e0b4bb769",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost",
+      "link": "https://www.marktechpost.com/2026/10/30/samaya-sterling-post-trained-finance-research-model-frontierfinance/",
+      "contentSnippet": "Samaya AI’s Sterling is a post-trained Nemotron 3.5 Lightning model for financial research. It scores 58.9% on FrontierFinance at $0.61 per question, beating Claude Fable 5.1’s 55.9% at $6.89. The post Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-30T07:26:12.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 73.47,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 118,
+        "ruleScoreNormalized": 73.46938775510205,
+        "finalScore": 73.47,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "60adcdaf1f1a",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "How we detect frontier model misalignment",
+      "link": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+      "contentSnippet": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
+      "publishedAt": "2026-10-29T09:00:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 67.35,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 115,
+        "ruleScoreNormalized": 67.3469387755102,
+        "finalScore": 67.35,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：42/42",
+    "LLM 分类打分回退明细（前 3/42）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"073470c61e8715fea65f40d7b0028b92\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"073470c7b946bd3d88c638dd790b24c8\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"073470c874e01ca910a593eb3694c484\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=42：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=79, split_retry=37",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare\n- Bug0 Releases QA Agent to Automate Regression Testing With Cached Playwright Replays\n- Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%\n- Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost\n- How we detect frontier model misalignment\n\n### 分类覆盖（大纲）\n- tooling: 2 条\n- agent: 7 条\n- open-source: 6 条\n- tutorial: 2 条\n- other: 21 条\n- industry-news: 4 条",
+    "rankedItems": [
+      {
+        "id": "82ef17bc4cb7",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+        "link": "https://www.marktechpost.com/2026/10/30/ai-security-agents-claude-codex-mantis-cloudflare/",
+        "contentSnippet": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use the same find, disprove, then patch loop. Here is how they differ, plus 12 more tools. The post AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T17:34:15.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 131,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f92ff814afb7",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Bug0 Releases QA Agent to Automate Regression Testing With Cached Playwright Replays",
+        "link": "https://www.infoq.com/news/2026/10/bug0-agent-testing-cached-replay/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "QA Agent is a new source-available Playwright library for agentic browser regression testing. The agent associates test instructions expressed in natural language to actions on the user interface, caches those when appropriate for faster CI replays, remapping them to test specifications when the user interface changes. Verification is based on multi-model consensus and vision model evaluations. By Bruno Couriol",
+        "publishedAt": "2026-10-29T15:17:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 87.76,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 125,
+          "ruleScoreNormalized": 87.75510204081633,
+          "finalScore": 87.76,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b76f737539ea",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+        "link": "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/",
+        "contentSnippet": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cut coding agent token costs by 18.4% to 30.9% on SWE-Bench, with no change to the agent. The post Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9% appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T17:53:37.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 83.67,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 83.6734693877551,
+          "finalScore": 83.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8f4e0b4bb769",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost",
+        "link": "https://www.marktechpost.com/2026/10/30/samaya-sterling-post-trained-finance-research-model-frontierfinance/",
+        "contentSnippet": "Samaya AI’s Sterling is a post-trained Nemotron 3.5 Lightning model for financial research. It scores 58.9% on FrontierFinance at $0.61 per question, beating Claude Fable 5.1’s 55.9% at $6.89. The post Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T07:26:12.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.47,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 73.46938775510205,
+          "finalScore": 73.47,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "60adcdaf1f1a",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How we detect frontier model misalignment",
+        "link": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+        "contentSnippet": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
+        "publishedAt": "2026-10-29T09:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 67.35,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 67.3469387755102,
+          "finalScore": 67.35,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c90747fc3e6c",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+        "link": "https://www.infoq.com/news/2026/10/doordash-ai-grocery-reorder/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM inference and deterministic validation. Live catalog resolution keeps product selections current, while an editable shopping interface avoids unnecessary model calls. The company reports that shopping list views doubled and the flow’s order rate increased by approximately 34% By Leela Kumili",
+        "publishedAt": "2026-10-30T13:31:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 67.35,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 67.3469387755102,
+          "finalScore": 67.35,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4bb138e39218",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成",
+        "link": "https://www.qbitai.com/2026/10/506743.html",
+        "contentSnippet": "英伟达与麻省理工学院团队，在 Hugging Face 发布了视频增强项目 Open-H3-Regenerate-2K 的模型权重",
+        "publishedAt": "2026-10-30T07:31:11.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.1,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 109,
+          "ruleScoreNormalized": 55.10204081632652,
+          "finalScore": 55.1,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "813b81289e18",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "An updated Model Spec for more capable and beneficial AI",
+        "link": "https://openai.com/index/updated-model-spec",
+        "contentSnippet": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.",
+        "publishedAt": "2026-10-29T17:00:00.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 48.98,
+        "importance": "low",
+        "recommendationReason": "可直接学习实践",
+        "scoreBreakdown": {
+          "ruleScore": 106,
+          "ruleScoreNormalized": 48.97959183673469,
+          "finalScore": 48.98,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "dde388700b4a",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Making it easier for websites to express AI training preferences",
+        "link": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+        "contentSnippet": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to participating providers.",
+        "publishedAt": "2026-10-30T09:30:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 46.94,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 46.93877551020408,
+          "finalScore": 46.94,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "581919a7a3a0",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Community safety report and new protections for teens",
+        "link": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+        "contentSnippet": "OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commitment to public safety reporting.",
+        "publishedAt": "2026-10-30T09:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 46.94,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 46.93877551020408,
+          "finalScore": 46.94,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5c92adb4327d",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "QCon AI New York 2026 Program Committee Picks: Agent Identity, Context Costs, and Open-Source Infere",
+        "link": "https://www.infoq.com/news/2026/10/qcon-ai-newyork-2026-pc-picks/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Who authorizes an agent’s actions, and how should teams manage growing context costs? The QCon AI New York 2026 program committee shares six session picks that tackle these questions, alongside open-source inference, agent standards, and audio AI. By Artenisa Chatziou",
+        "publishedAt": "2026-10-29T11:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 46.94,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 46.93877551020408,
+          "finalScore": 46.94,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cf5b7c7a3669",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Governor, a firewall for AI agent spend and tool calls",
+        "link": "https://bsvkey-governor-demo.fly.dev/",
+        "contentSnippet": "Article URL: https://bsvkey-governor-demo.fly.dev/ Comments URL: https://news.ycombinator.com/item?id=50311974 Points: 1 # Comments: 0",
+        "publishedAt": "2026-10-31T00:27:46.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 46.94,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 46.93877551020408,
+          "finalScore": 46.94,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5b48575c6c71",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Where AI agents' social boundaries break: 5 LLMs try to form a government",
+        "link": "https://judgementlabs.app/blog/the-coalition-room",
+        "contentSnippet": "Article URL: https://judgementlabs.app/blog/the-coalition-room Comments URL: https://news.ycombinator.com/item?id=50311801 Points: 1 # Comments: 2",
+        "publishedAt": "2026-10-31T00:06:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 46.94,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 46.93877551020408,
+          "finalScore": 46.94,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a2d2d8f553ed",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI agents shape experts' judgment calls",
+        "link": "https://www.anthropic.com/research/agents-judgment-calls",
+        "contentSnippet": "Article URL: https://www.anthropic.com/research/agents-judgment-calls Comments URL: https://news.ycombinator.com/item?id=50311585 Points: 1 # Comments: 1",
+        "publishedAt": "2026-10-30T23:39:19.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 46.94,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 46.93877551020408,
+          "finalScore": 46.94,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "72516d3295d5",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice Cloning TTS Model",
+        "link": "https://www.marktechpost.com/2026/10/29/edge0-audio8-tts-realistic-0-6b-voice-cloning/",
+        "contentSnippet": "Edge0 released Audio8-TTS-Realistic, a 0.6B open-weight zero-shot voice cloning TTS model under Apache 2.0. It supports 23 languages and adds a final GRPO stage driven by a learned realism critic. The post Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice Cloning TTS Model appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T05:02:52.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 42.86,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 103,
+          "ruleScoreNormalized": 42.857142857142854,
+          "finalScore": 42.86,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "db035389cb0a",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Your Netgear router may be vulnerable to a security exploit – how to check and patch it",
+        "link": "https://www.zdnet.com/tech/netgear-routers-vulnerable-security-exploit/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T16:58:22.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 40.82,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 40.816326530612244,
+          "finalScore": 40.82,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3e0ad60041ea",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Fair use benefits everyone",
+        "link": "https://openai.com/index/fair-use-benefits-everyone",
+        "contentSnippet": "OpenAI shares excerpts from court briefs by creators, academics, accessibility advocates, and legal experts, among others, on how fair use supports AI training and innovation.",
+        "publishedAt": "2026-10-30T00:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 36.73,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 36.734693877551024,
+          "finalScore": 36.73,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b0ac292d1047",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How Ropes & Gray is developing AI for transactional diligence",
+        "link": "https://openai.com/index/ropes-gray-ai-diligence",
+        "contentSnippet": "Ropes & Gray is developing AI for transactional diligence with OpenAI. Lawyers review grouped documents, summaries, and reports before advising clients.",
+        "publishedAt": "2026-10-29T07:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 36.73,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 36.734693877551024,
+          "finalScore": 36.73,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "74967987599c",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "RSI立大功！国产开源登顶全球第一，1.3B OXR重塑OCR",
+        "link": "https://www.qbitai.com/2026/10/506686.html",
+        "contentSnippet": "解析一切",
+        "publishedAt": "2026-10-30T05:52:47.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.69,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 99,
+          "ruleScoreNormalized": 34.69387755102041,
+          "finalScore": 34.69,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "70735b1af75c",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Baseten Releases joey-1, a 2B Decision Model at $0.01 per 1M Tokens",
+        "link": "https://www.marktechpost.com/2026/10/29/baseten-joey-1-2b-decision-model/",
+        "contentSnippet": "Baseten has released joey-1, a 2B open-weight decision model that returns calibrated probabilities instead of text. It runs at 20 ms P50 latency and costs $0.01 per million input tokens. The post Baseten Releases joey-1, a 2B Decision Model at $0.01 per 1M Tokens appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-29T21:20:29.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 32.65,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 32.6530612244898,
+          "finalScore": 32.65,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3c39baaa29c5",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Prime Intellect Releases Prime Mega MoE: Trainable Fused MoE Kernel, 3.11x Faster Forward Pass",
+        "link": "https://www.marktechpost.com/2026/10/29/prime-intellect-prime-mega-moe-fused-moe-kernel-training/",
+        "contentSnippet": "Prime Intellect released Prime Mega MoE, a backward pass for DeepSeek’s fused Mega MoE kernel. It makes the kernel trainable and speeds Qwen3 MoE training steps by up to 34% in prime-rl. The post Prime Intellect Releases Prime Mega MoE: Trainable Fused MoE Kernel, 3.11x Faster Forward Pass appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-29T18:28:57.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 32.65,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 32.6530612244898,
+          "finalScore": 32.65,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0a1d7ba8dc6d",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "Claude新模型曝光：新Fable，新Opus…",
+        "link": "https://www.qbitai.com/2026/10/506674.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T05:50:44.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 30.61,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 30.612244897959183,
+          "finalScore": 30.61,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e50b632b0ca4",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Netflix Treats GPU Reliability as a Distributed Systems Problem",
+        "link": "https://www.infoq.com/news/2026/10/netflix-gpu-distributed-systems/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Netflix has detailed how it is building a reliability platform for large-scale GPU training and inference, using layered health checks, automated remediation, and fault-tolerant training to keep jobs running despite hardware failures. By Craig Risi",
+        "publishedAt": "2026-10-30T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 26.53,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 26.53061224489796,
+          "finalScore": 26.53,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d7cc81c3c392",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Android 17 adoption hits a staggering 1% – why you really should update now",
+        "link": "https://www.zdnet.com/tech/android-17-os-adoption-numbers-october-2026/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T18:18:24.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 24.49,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 24.489795918367346,
+          "finalScore": 24.49,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "180f10777f3a",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Samsung adds better sleep tracking to Galaxy Watches – here’s what to expect",
+        "link": "https://www.zdnet.com/health/advanced-sleep-apnea-tracking-galaxy-watches/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T17:29:50.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 24.49,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 24.489795918367346,
+          "finalScore": 24.49,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "88616d198d0f",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "I’m finally ready for a smart calendar – why the Echo Show 16 stands out",
+        "link": "https://www.zdnet.com/home-and-office/im-finally-ready-for-a-smart-calendar-why-the-echo-show-16-stands-out/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T17:23:50.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 24.49,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 24.489795918367346,
+          "finalScore": 24.49,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3f28d45d40ef",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Google’s latest Home updates just fixed my biggest annoyances with its speakers and cameras",
+        "link": "https://www.zdnet.com/home-and-office/google-home-gemini-updates-42-fixes/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T16:14:11.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 24.49,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 24.489795918367346,
+          "finalScore": 24.49,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "be825ae61e7e",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "How to Make Artificial Intelligence More Environmentally Sustainable",
+        "link": "https://www.infoq.com/news/2026/10/AI-environmentally-sustainable/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "IT is responsible for about 2 - 4% of all global emissions, and electricity use at Microsoft and Google has climbed because of AI, according to their own reports. Sustainability ought to be a top-level architectural concern. Some recommendations are: use pre-built and smaller models, run compute where low-carbon electricity is abundant, and train on renewable energy. By Ben Linders",
+        "publishedAt": "2026-10-29T11:41:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 16.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 16.3265306122449,
+          "finalScore": 16.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f27bd64f1ac5",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Anthropic Says Nobody Needs a Mental Model of Claude Code. Practitioners Are Testing That",
+        "link": "https://www.infoq.com/news/2026/10/anthropic-code-review/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Anthropic has published how the Claude Code team reviews code now that Claude writes roughly 90% of it, including a claim that nobody keeps a complete mental model of the codebase. The post documents a pull request that ran more than fifty review rounds overnight, a reviewer spending most of its effort on pre-existing code, and a control the team says it does not yet have. By Steef-Jan Wiggers",
+        "publishedAt": "2026-10-29T09:58:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 16.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 16.3265306122449,
+          "finalScore": 16.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "eaef76c7009c",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Black October: At least nine AI developer platforms breached this month",
+        "link": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+        "contentSnippet": "Article URL: https://www.wiz.io/blog/black-october-for-ai-developer-platforms Comments URL: https://news.ycombinator.com/item?id=50311844 Points: 2 # Comments: 0",
+        "publishedAt": "2026-10-31T00:11:32.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 16.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 16.3265306122449,
+          "finalScore": 16.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "96e91e299a90",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI changed what I can build",
+        "link": "https://tanner.place/blog/how-ai-changed-what-i-can-build",
+        "contentSnippet": "Article URL: https://tanner.place/blog/how-ai-changed-what-i-can-build Comments URL: https://news.ycombinator.com/item?id=50311326 Points: 3 # Comments: 3",
+        "publishedAt": "2026-10-30T23:10:13.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 16.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 16.3265306122449,
+          "finalScore": 16.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "91875ea5fc39",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Reddit shares plunge as Google's AI search squeezes traffic",
+        "link": "https://www.reuters.com/business/reddit-pinterest-shares-tumble-weak-user-revenue-growth-2026-10-30/",
+        "contentSnippet": "Article URL: https://www.reuters.com/business/reddit-pinterest-shares-tumble-weak-user-revenue-growth-2026-10-30/ Comments URL: https://news.ycombinator.com/item?id=50311250 Points: 1 # Comments: 1",
+        "publishedAt": "2026-10-30T23:02:48.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 16.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 16.3265306122449,
+          "finalScore": 16.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e604a204e5b1",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Our newest AI Quest: Mapping the human brain",
+        "link": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+        "contentSnippet": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”",
+        "publishedAt": "2026-10-26T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 10.2,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 10.204081632653061,
+          "finalScore": 10.2,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "950ecbd37190",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "从学习人类到学习机器人同伴，清华大学联合无问芯穹、智元提出具身智能规模化落地新路径",
+        "link": "https://www.qbitai.com/2026/10/506662.html",
+        "contentSnippet": "让机器人成为彼此的“老师”",
+        "publishedAt": "2026-10-30T03:48:04.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 10.2,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 10.204081632653061,
+          "finalScore": 10.2,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9fc81749b3e2",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "前排围观！MEET2027报名通道正式开启，首批重磅嘉宾已就位",
+        "link": "https://www.qbitai.com/2026/10/506609.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T03:40:21.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 10.2,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 10.204081632653061,
+          "finalScore": 10.2,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1cda70312973",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "买车送终身AI？智己LS8纯电版25万起！全系线控底盘宁德时代标配",
+        "link": "https://www.qbitai.com/2026/10/506569.html",
+        "contentSnippet": "Momenta世界模型上车",
+        "publishedAt": "2026-10-30T00:19:06.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 10.2,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 10.204081632653061,
+          "finalScore": 10.2,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "72458b8b3dd2",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Your headphones have hidden LE Audio features you’ll want to know about",
+        "link": "https://www.zdnet.com/tech/bluetooth-headphones-hidden-le-audio-features-jbl-sony-bose/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-29T17:45:05.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 4.08,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 4.081632653061225,
+          "finalScore": 4.08,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "51cd2b7b9a2d",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Southeast Asia’s digital economy to hit $368 billion",
+        "link": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+        "contentSnippet": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trillion by 2035.",
+        "publishedAt": "2026-10-21T04:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5478efc66827",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "contentSnippet": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "publishedAt": "2026-10-13T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "92d60b58598f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Introducing Playground: Create and play custom games",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+        "contentSnippet": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "publishedAt": "2026-10-07T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1d5fed04e570",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in September 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from September 2026",
+        "publishedAt": "2026-10-02T15:00:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "927c795585b6",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "contentSnippet": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "publishedAt": "2026-09-28T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "82ef17bc4cb7",
+        "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+        "summary": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use t…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "82ef17bc4cb7"
+        ]
+      },
+      {
+        "itemId": "f92ff814afb7",
+        "title": "Bug0 Releases QA Agent to Automate Regression Testing With Cached Playwright Replays",
+        "summary": "QA Agent is a new source-available Playwright library for agentic browser regression testing. The agent associates test…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "f92ff814afb7"
+        ]
+      },
+      {
+        "itemId": "b76f737539ea",
+        "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+        "summary": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cu…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "b76f737539ea"
+        ]
+      },
+      {
+        "itemId": "8f4e0b4bb769",
+        "title": "Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost",
+        "summary": "Samaya AI’s Sterling is a post-trained Nemotron 3.5 Lightning model for financial research. It scores 58.9% on Frontier…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "8f4e0b4bb769"
+        ]
+      },
+      {
+        "itemId": "60adcdaf1f1a",
+        "title": "How we detect frontier model misalignment",
+        "summary": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "60adcdaf1f1a"
+        ]
+      },
+      {
+        "itemId": "c90747fc3e6c",
+        "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+        "summary": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "c90747fc3e6c"
+        ]
+      },
+      {
+        "itemId": "4bb138e39218",
+        "title": "英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成",
+        "summary": "英伟达与麻省理工学院团队，在 Hugging Face 发布了视频增强项目 Open-H3-Regenerate-2K 的模型权重",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "4bb138e39218"
+        ]
+      },
+      {
+        "itemId": "813b81289e18",
+        "title": "An updated Model Spec for more capable and beneficial AI",
+        "summary": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and…",
+        "recommendation": "可直接学习实践",
+        "evidenceItemIds": [
+          "813b81289e18"
+        ]
+      },
+      {
+        "itemId": "dde388700b4a",
+        "title": "Making it easier for websites to express AI training preferences",
+        "summary": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to par…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "dde388700b4a"
+        ]
+      },
+      {
+        "itemId": "581919a7a3a0",
+        "title": "Community safety report and new protections for teens",
+        "summary": "OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commi…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "581919a7a3a0"
+        ]
+      },
+      {
+        "itemId": "5c92adb4327d",
+        "title": "QCon AI New York 2026 Program Committee Picks: Agent Identity, Context Costs, and Open-Source Infere",
+        "summary": "Who authorizes an agent’s actions, and how should teams manage growing context costs? The QCon AI New York 2026 program…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "5c92adb4327d"
+        ]
+      },
+      {
+        "itemId": "cf5b7c7a3669",
+        "title": "Show HN: Governor, a firewall for AI agent spend and tool calls",
+        "summary": "Article URL: https://bsvkey-governor-demo.fly.dev/ Comments URL: https://news.ycombinator.com/item?id=50311974 Points: …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "cf5b7c7a3669"
+        ]
+      },
+      {
+        "itemId": "5b48575c6c71",
+        "title": "Where AI agents' social boundaries break: 5 LLMs try to form a government",
+        "summary": "Article URL: https://judgementlabs.app/blog/the-coalition-room Comments URL: https://news.ycombinator.com/item?id=50311…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "5b48575c6c71"
+        ]
+      },
+      {
+        "itemId": "a2d2d8f553ed",
+        "title": "AI agents shape experts' judgment calls",
+        "summary": "Article URL: https://www.anthropic.com/research/agents-judgment-calls Comments URL: https://news.ycombinator.com/item?i…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "a2d2d8f553ed"
+        ]
+      },
+      {
+        "itemId": "72516d3295d5",
+        "title": "Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice Cloning TTS Model",
+        "summary": "Edge0 released Audio8-TTS-Realistic, a 0.6B open-weight zero-shot voice cloning TTS model under Apache 2.0. It supports…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "72516d3295d5"
+        ]
+      },
+      {
+        "itemId": "db035389cb0a",
+        "title": "Your Netgear router may be vulnerable to a security exploit – how to check and patch it",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "db035389cb0a"
+        ]
+      },
+      {
+        "itemId": "3e0ad60041ea",
+        "title": "Fair use benefits everyone",
+        "summary": "OpenAI shares excerpts from court briefs by creators, academics, accessibility advocates, and legal experts, among othe…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3e0ad60041ea"
+        ]
+      },
+      {
+        "itemId": "b0ac292d1047",
+        "title": "How Ropes & Gray is developing AI for transactional diligence",
+        "summary": "Ropes & Gray is developing AI for transactional diligence with OpenAI. Lawyers review grouped documents, summaries, and…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b0ac292d1047"
+        ]
+      },
+      {
+        "itemId": "74967987599c",
+        "title": "RSI立大功！国产开源登顶全球第一，1.3B OXR重塑OCR",
+        "summary": "解析一切",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "74967987599c"
+        ]
+      },
+      {
+        "itemId": "70735b1af75c",
+        "title": "Baseten Releases joey-1, a 2B Decision Model at $0.01 per 1M Tokens",
+        "summary": "Baseten has released joey-1, a 2B open-weight decision model that returns calibrated probabilities instead of text. It …",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "70735b1af75c"
+        ]
+      },
+      {
+        "itemId": "3c39baaa29c5",
+        "title": "Prime Intellect Releases Prime Mega MoE: Trainable Fused MoE Kernel, 3.11x Faster Forward Pass",
+        "summary": "Prime Intellect released Prime Mega MoE, a backward pass for DeepSeek’s fused Mega MoE kernel. It makes the kernel trai…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "3c39baaa29c5"
+        ]
+      },
+      {
+        "itemId": "0a1d7ba8dc6d",
+        "title": "Claude新模型曝光：新Fable，新Opus…",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "0a1d7ba8dc6d"
+        ]
+      },
+      {
+        "itemId": "e50b632b0ca4",
+        "title": "Netflix Treats GPU Reliability as a Distributed Systems Problem",
+        "summary": "Netflix has detailed how it is building a reliability platform for large-scale GPU training and inference, using layere…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e50b632b0ca4"
+        ]
+      },
+      {
+        "itemId": "d7cc81c3c392",
+        "title": "Android 17 adoption hits a staggering 1% – why you really should update now",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d7cc81c3c392"
+        ]
+      },
+      {
+        "itemId": "180f10777f3a",
+        "title": "Samsung adds better sleep tracking to Galaxy Watches – here’s what to expect",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "180f10777f3a"
+        ]
+      },
+      {
+        "itemId": "88616d198d0f",
+        "title": "I’m finally ready for a smart calendar – why the Echo Show 16 stands out",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "88616d198d0f"
+        ]
+      },
+      {
+        "itemId": "3f28d45d40ef",
+        "title": "Google’s latest Home updates just fixed my biggest annoyances with its speakers and cameras",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3f28d45d40ef"
+        ]
+      },
+      {
+        "itemId": "be825ae61e7e",
+        "title": "How to Make Artificial Intelligence More Environmentally Sustainable",
+        "summary": "IT is responsible for about 2 - 4% of all global emissions, and electricity use at Microsoft and Google has climbed bec…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "be825ae61e7e"
+        ]
+      },
+      {
+        "itemId": "f27bd64f1ac5",
+        "title": "Anthropic Says Nobody Needs a Mental Model of Claude Code. Practitioners Are Testing That",
+        "summary": "Anthropic has published how the Claude Code team reviews code now that Claude writes roughly 90% of it, including a cla…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f27bd64f1ac5"
+        ]
+      },
+      {
+        "itemId": "eaef76c7009c",
+        "title": "Black October: At least nine AI developer platforms breached this month",
+        "summary": "Article URL: https://www.wiz.io/blog/black-october-for-ai-developer-platforms Comments URL: https://news.ycombinator.co…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "eaef76c7009c"
+        ]
+      },
+      {
+        "itemId": "96e91e299a90",
+        "title": "AI changed what I can build",
+        "summary": "Article URL: https://tanner.place/blog/how-ai-changed-what-i-can-build Comments URL: https://news.ycombinator.com/item?…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "96e91e299a90"
+        ]
+      },
+      {
+        "itemId": "91875ea5fc39",
+        "title": "Reddit shares plunge as Google's AI search squeezes traffic",
+        "summary": "Article URL: https://www.reuters.com/business/reddit-pinterest-shares-tumble-weak-user-revenue-growth-2026-10-30/ Comme…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "91875ea5fc39"
+        ]
+      },
+      {
+        "itemId": "e604a204e5b1",
+        "title": "Our newest AI Quest: Mapping the human brain",
+        "summary": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e604a204e5b1"
+        ]
+      },
+      {
+        "itemId": "950ecbd37190",
+        "title": "从学习人类到学习机器人同伴，清华大学联合无问芯穹、智元提出具身智能规模化落地新路径",
+        "summary": "让机器人成为彼此的“老师”",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "950ecbd37190"
+        ]
+      },
+      {
+        "itemId": "9fc81749b3e2",
+        "title": "前排围观！MEET2027报名通道正式开启，首批重磅嘉宾已就位",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9fc81749b3e2"
+        ]
+      },
+      {
+        "itemId": "1cda70312973",
+        "title": "买车送终身AI？智己LS8纯电版25万起！全系线控底盘宁德时代标配",
+        "summary": "Momenta世界模型上车",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1cda70312973"
+        ]
+      },
+      {
+        "itemId": "72458b8b3dd2",
+        "title": "Your headphones have hidden LE Audio features you’ll want to know about",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "72458b8b3dd2"
+        ]
+      },
+      {
+        "itemId": "51cd2b7b9a2d",
+        "title": "Southeast Asia’s digital economy to hit $368 billion",
+        "summary": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trilli…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "51cd2b7b9a2d"
+        ]
+      },
+      {
+        "itemId": "5478efc66827",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5478efc66827"
+        ]
+      },
+      {
+        "itemId": "92d60b58598f",
+        "title": "Introducing Playground: Create and play custom games",
+        "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "92d60b58598f"
+        ]
+      },
+      {
+        "itemId": "1d5fed04e570",
+        "title": "The latest AI news we announced in September 2026",
+        "summary": "Here are Google’s latest AI updates from September 2026",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1d5fed04e570"
+        ]
+      },
+      {
+        "itemId": "927c795585b6",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "927c795585b6"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "82ef17bc4cb7",
+        "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+        "takeaway": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use t…",
+        "evidenceItemIds": [
+          "82ef17bc4cb7"
+        ]
+      },
+      {
+        "itemId": "f92ff814afb7",
+        "title": "Bug0 Releases QA Agent to Automate Regression Testing With Cached Playwright Replays",
+        "takeaway": "QA Agent is a new source-available Playwright library for agentic browser regression testing. The agent associates test…",
+        "evidenceItemIds": [
+          "f92ff814afb7"
+        ]
+      },
+      {
+        "itemId": "b76f737539ea",
+        "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+        "takeaway": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cu…",
+        "evidenceItemIds": [
+          "b76f737539ea"
+        ]
+      },
+      {
+        "itemId": "8f4e0b4bb769",
+        "title": "Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost",
+        "takeaway": "Samaya AI’s Sterling is a post-trained Nemotron 3.5 Lightning model for financial research. It scores 58.9% on Frontier…",
+        "evidenceItemIds": [
+          "8f4e0b4bb769"
+        ]
+      },
+      {
+        "itemId": "60adcdaf1f1a",
+        "title": "How we detect frontier model misalignment",
+        "takeaway": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can …",
+        "evidenceItemIds": [
+          "60adcdaf1f1a"
+        ]
+      },
+      {
+        "itemId": "c90747fc3e6c",
+        "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+        "takeaway": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM …",
+        "evidenceItemIds": [
+          "c90747fc3e6c"
+        ]
+      },
+      {
+        "itemId": "4bb138e39218",
+        "title": "英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成",
+        "takeaway": "英伟达与麻省理工学院团队，在 Hugging Face 发布了视频增强项目 Open-H3-Regenerate-2K 的模型权重",
+        "evidenceItemIds": [
+          "4bb138e39218"
+        ]
+      },
+      {
+        "itemId": "813b81289e18",
+        "title": "An updated Model Spec for more capable and beneficial AI",
+        "takeaway": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and…",
+        "evidenceItemIds": [
+          "813b81289e18"
+        ]
+      },
+      {
+        "itemId": "dde388700b4a",
+        "title": "Making it easier for websites to express AI training preferences",
+        "takeaway": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to par…",
+        "evidenceItemIds": [
+          "dde388700b4a"
+        ]
+      },
+      {
+        "itemId": "581919a7a3a0",
+        "title": "Community safety report and new protections for teens",
+        "takeaway": "OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commi…",
+        "evidenceItemIds": [
+          "581919a7a3a0"
+        ]
+      },
+      {
+        "itemId": "5c92adb4327d",
+        "title": "QCon AI New York 2026 Program Committee Picks: Agent Identity, Context Costs, and Open-Source Infere",
+        "takeaway": "Who authorizes an agent’s actions, and how should teams manage growing context costs? The QCon AI New York 2026 program…",
+        "evidenceItemIds": [
+          "5c92adb4327d"
+        ]
+      },
+      {
+        "itemId": "cf5b7c7a3669",
+        "title": "Show HN: Governor, a firewall for AI agent spend and tool calls",
+        "takeaway": "Article URL: https://bsvkey-governor-demo.fly.dev/ Comments URL: https://news.ycombinator.com/item?id=50311974 Points: …",
+        "evidenceItemIds": [
+          "cf5b7c7a3669"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕tooling与agent展开，建议优先关注《AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare》、《Bug0 Releases QA Agent to Automate Regression Testing With Cached Playwright Replays》、《Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Making it easier for websites to express AI training preferences》、《Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice Cloning TTS Model》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "dde388700b4a",
+          "72516d3295d5",
+          "3e0ad60041ea",
+          "70735b1af75c"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 4 条，建议优先阅读《Bug0 Releases QA Agent to Automate Regression Testing With Cached Playwright Replays》、《Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "f92ff814afb7",
+          "b76f737539ea",
+          "8f4e0b4bb769",
+          "60adcdaf1f1a"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 4 条，建议优先阅读《DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents》、《英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "c90747fc3e6c",
+          "4bb138e39218",
+          "581919a7a3a0",
+          "b0ac292d1047"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《Black October: At least nine AI developer platforms breached this month》、《AI changed what I can build》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "eaef76c7009c",
+          "96e91e299a90",
+          "91875ea5fc39",
+          "1d5fed04e570"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "f99d8c8b7d8206b03bfde15bc9aa146f8dbf8cee9b40e7e2cc055655fb74ad80",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-10-31T01:00:51.023Z",
+      "finishedAt": "2026-10-31T01:01:39.699Z",
+      "durationMs": 48676,
+      "inputCount": 42,
+      "processedCount": 42,
+      "fallbackCount": 42,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 42,
+      "failureStats": {
+        "totalFailed": 42,
+        "timeout": 0,
+        "http": 42,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 79,
+        "splitRetryCount": 37
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-24",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-17",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-10-31T01:01:39.739Z",
+      "finishedAt": "2026-10-31T01:01:53.971Z",
+      "durationMs": 14232,
+      "inputCount": 42,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "82ef17bc4cb7",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+        "link": "https://www.marktechpost.com/2026/10/30/ai-security-agents-claude-codex-mantis-cloudflare/",
+        "contentSnippet": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use the same find, disprove, then patch loop. Here is how they differ, plus 12 more tools. The post AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T17:34:15.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 131,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f92ff814afb7",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Bug0 Releases QA Agent to Automate Regression Testing With Cached Playwright Replays",
+        "link": "https://www.infoq.com/news/2026/10/bug0-agent-testing-cached-replay/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "QA Agent is a new source-available Playwright library for agentic browser regression testing. The agent associates test instructions expressed in natural language to actions on the user interface, caches those when appropriate for faster CI replays, remapping them to test specifications when the user interface changes. Verification is based on multi-model consensus and vision model evaluations. By Bruno Couriol",
+        "publishedAt": "2026-10-29T15:17:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 87.76,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 125,
+          "ruleScoreNormalized": 87.75510204081633,
+          "finalScore": 87.76,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b76f737539ea",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+        "link": "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/",
+        "contentSnippet": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cut coding agent token costs by 18.4% to 30.9% on SWE-Bench, with no change to the agent. The post Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9% appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T17:53:37.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 83.67,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 83.6734693877551,
+          "finalScore": 83.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8f4e0b4bb769",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost",
+        "link": "https://www.marktechpost.com/2026/10/30/samaya-sterling-post-trained-finance-research-model-frontierfinance/",
+        "contentSnippet": "Samaya AI’s Sterling is a post-trained Nemotron 3.5 Lightning model for financial research. It scores 58.9% on FrontierFinance at $0.61 per question, beating Claude Fable 5.1’s 55.9% at $6.89. The post Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T07:26:12.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 73.47,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 73.46938775510205,
+          "finalScore": 73.47,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "60adcdaf1f1a",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How we detect frontier model misalignment",
+        "link": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+        "contentSnippet": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
+        "publishedAt": "2026-10-29T09:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 67.35,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 67.3469387755102,
+          "finalScore": 67.35,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 42,
+      "normalizedCount": 42,
+      "dedupedCount": 42,
+      "highImportanceCount": 2,
+      "mediumImportanceCount": 4,
+      "lowImportanceCount": 36,
+      "categoryBreakdown": {
+        "open-source": 6,
+        "tooling": 2,
+        "agent": 7,
+        "research": 0,
+        "industry-news": 4,
+        "tutorial": 2,
+        "other": 21
+      }
+    },
+    "warnings": [
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：42/42",
+      "LLM 分类打分回退明细（前 3/42）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"073470c61e8715fea65f40d7b0028b92\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"073470c7b946bd3d88c638dd790b24c8\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"073470c874e01ca910a593eb3694c484\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=42：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=79, split_retry=37",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
