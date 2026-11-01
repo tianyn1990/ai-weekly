@@ -1,0 +1,1756 @@
+{
+  "runId": "daily-1793495043877",
+  "generatedAt": "2026-11-01T01:04:03.866Z",
+  "reviewStartedAt": "2026-11-01T01:04:03.866Z",
+  "reportDate": "2026-11-01",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-11-01T01:04:03.866Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 24,
+    "normalizedCount": 24,
+    "dedupedCount": 24,
+    "highImportanceCount": 4,
+    "mediumImportanceCount": 2,
+    "lowImportanceCount": 18,
+    "categoryBreakdown": {
+      "open-source": 1,
+      "tooling": 2,
+      "agent": 3,
+      "research": 0,
+      "industry-news": 6,
+      "tutorial": 1,
+      "other": 11
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "82ef17bc4cb7",
+      "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+      "summary": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use t…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "82ef17bc4cb7"
+      ]
+    },
+    {
+      "itemId": "4bcfc33831e6",
+      "title": "Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode",
+      "summary": "Factory released Droid 1.0, a model-independent coding agent harness that makes programmatic tool calling the default. …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "4bcfc33831e6"
+      ]
+    },
+    {
+      "itemId": "d93ee9d7c64d",
+      "title": "Vercel Labs Open-Sources agent-desktop for Agent Computer Use",
+      "summary": "Vercel Labs released agent-desktop, an Apache-2.0 Rust CLI that gives any AI agent computer use on macOS, Windows and L…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "d93ee9d7c64d"
+      ]
+    },
+    {
+      "itemId": "ccd909dfb563",
+      "title": "Show HN: LinkedIn-ops – Zero-dependency CDP automation built for AI agents",
+      "summary": "Article URL: https://github.com/shashtag-ventures/linkedin-ops Comments URL: https://news.ycombinator.com/item?id=50322…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "ccd909dfb563"
+      ]
+    },
+    {
+      "itemId": "b76f737539ea",
+      "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+      "summary": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cu…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "b76f737539ea"
+      ]
+    },
+    {
+      "itemId": "8f4e0b4bb769",
+      "title": "Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost",
+      "summary": "Samaya AI’s Sterling is a post-trained Nemotron 3.5 Lightning model for financial research. It scores 58.9% on Frontier…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "8f4e0b4bb769"
+      ]
+    },
+    {
+      "itemId": "72516d3295d5",
+      "title": "Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice Cloning TTS Model",
+      "summary": "Edge0 released Audio8-TTS-Realistic, a 0.6B open-weight zero-shot voice cloning TTS model under Apache 2.0. It supports…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "72516d3295d5"
+      ]
+    },
+    {
+      "itemId": "db035389cb0a",
+      "title": "Your Netgear router may be vulnerable to a security exploit – how to check and patch it",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "db035389cb0a"
+      ]
+    },
+    {
+      "itemId": "dd8357e763e2",
+      "title": "“超能模式”重磅登场！联想天禧AI 4.5全端升级，三大场景打造“职场超能搭档”",
+      "summary": "10月30日，联想天禧AI 4.5迎来AIPC端正式发布。",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "dd8357e763e2"
+      ]
+    },
+    {
+      "itemId": "e5d43521965a",
+      "title": "James Mickens' Talk: A Sober Analysis of AI Impact (LABScon '26)",
+      "summary": "Article URL: https://www.youtube.com/watch?v=usZLo_9Jz54 Comments URL: https://news.ycombinator.com/item?id=50322165 Po…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e5d43521965a"
+      ]
+    },
+    {
+      "itemId": "7659c2c62e4d",
+      "title": "How AI may drive union-resistant tech workers to the bargaining table",
+      "summary": "Article URL: https://www.theguardian.com/technology/2026/jul/21/ai-tech-workers-unionize Comments URL: https://news.yco…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "7659c2c62e4d"
+      ]
+    },
+    {
+      "itemId": "66e0d8e09120",
+      "title": "The Elephant-Goldfish Model plugin for spec-driven AI development",
+      "summary": "Article URL: https://opensource.googleblog.com/2026/10/introducing-elephant-goldfish-model-plugin.html Comments URL: ht…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "66e0d8e09120"
+      ]
+    },
+    {
+      "itemId": "f79a53882575",
+      "title": "Wikimedia Foundation Tries to Save Itself by Brokering AI Copyright Deal",
+      "summary": "Article URL: https://gizmodo.com/wikimedia-foundation-tries-to-save-itself-from-oblivion-by-brokering-ai-copyright-deal…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f79a53882575"
+      ]
+    },
+    {
+      "itemId": "90bf3628a328",
+      "title": "Supersonic airliner in doubt as company shifts to powering AI data centers",
+      "summary": "Article URL: https://arstechnica.com/gadgets/2026/10/united-airlines-ceo-doubts-supersonic-airliner-from-boom-will-be-r…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "90bf3628a328"
+      ]
+    },
+    {
+      "itemId": "fed825503da0",
+      "title": "你的8G iPad里有12G内存！库克走了但他的刀法追着我砍",
+      "summary": "苹果“牛奶倒河里”式操作翻红",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fed825503da0"
+      ]
+    },
+    {
+      "itemId": "0a3f2eafa04f",
+      "title": "世界模型首次指导设计芯片！超大核NPU700TOPS，99%算力可用",
+      "summary": "AI算力利用“九九成”",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "0a3f2eafa04f"
+      ]
+    },
+    {
+      "itemId": "e36e69534a91",
+      "title": "刚刚，Claude宣布取消5小时限制！首批Ultra用户已「解封」",
+      "summary": "200美元Ultra用户先用",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e36e69534a91"
+      ]
+    },
+    {
+      "itemId": "d7cc81c3c392",
+      "title": "Android 17 adoption hits a staggering 1% – why you really should update now",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d7cc81c3c392"
+      ]
+    },
+    {
+      "itemId": "180f10777f3a",
+      "title": "Samsung adds better sleep tracking to Galaxy Watches – here’s what to expect",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "180f10777f3a"
+      ]
+    },
+    {
+      "itemId": "88616d198d0f",
+      "title": "I’m finally ready for a smart calendar – why the Echo Show 16 stands out",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "88616d198d0f"
+      ]
+    },
+    {
+      "itemId": "3f28d45d40ef",
+      "title": "Google’s latest Home updates just fixed my biggest annoyances with its speakers and cameras",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3f28d45d40ef"
+      ]
+    },
+    {
+      "itemId": "72458b8b3dd2",
+      "title": "Your headphones have hidden LE Audio features you’ll want to know about",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "72458b8b3dd2"
+      ]
+    },
+    {
+      "itemId": "d6dc06a16d07",
+      "title": "榜一，拿来吧你！智元这波双模型杀穿多榜榜单",
+      "summary": "xs，还要给机器人打绩效",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d6dc06a16d07"
+      ]
+    },
+    {
+      "itemId": "a1f1dc136b7c",
+      "title": "AI零帧起手写算子，反超DeepSeek人类手写巅峰：快了9.8%！",
+      "summary": "之前还连登昇腾三榜第一",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a1f1dc136b7c"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "82ef17bc4cb7",
+      "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+      "takeaway": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use t…",
+      "evidenceItemIds": [
+        "82ef17bc4cb7"
+      ]
+    },
+    {
+      "itemId": "4bcfc33831e6",
+      "title": "Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode",
+      "takeaway": "Factory released Droid 1.0, a model-independent coding agent harness that makes programmatic tool calling the default. …",
+      "evidenceItemIds": [
+        "4bcfc33831e6"
+      ]
+    },
+    {
+      "itemId": "d93ee9d7c64d",
+      "title": "Vercel Labs Open-Sources agent-desktop for Agent Computer Use",
+      "takeaway": "Vercel Labs released agent-desktop, an Apache-2.0 Rust CLI that gives any AI agent computer use on macOS, Windows and L…",
+      "evidenceItemIds": [
+        "d93ee9d7c64d"
+      ]
+    },
+    {
+      "itemId": "ccd909dfb563",
+      "title": "Show HN: LinkedIn-ops – Zero-dependency CDP automation built for AI agents",
+      "takeaway": "Article URL: https://github.com/shashtag-ventures/linkedin-ops Comments URL: https://news.ycombinator.com/item?id=50322…",
+      "evidenceItemIds": [
+        "ccd909dfb563"
+      ]
+    },
+    {
+      "itemId": "b76f737539ea",
+      "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+      "takeaway": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cu…",
+      "evidenceItemIds": [
+        "b76f737539ea"
+      ]
+    },
+    {
+      "itemId": "8f4e0b4bb769",
+      "title": "Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost",
+      "takeaway": "Samaya AI’s Sterling is a post-trained Nemotron 3.5 Lightning model for financial research. It scores 58.9% on Frontier…",
+      "evidenceItemIds": [
+        "8f4e0b4bb769"
+      ]
+    },
+    {
+      "itemId": "72516d3295d5",
+      "title": "Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice Cloning TTS Model",
+      "takeaway": "Edge0 released Audio8-TTS-Realistic, a 0.6B open-weight zero-shot voice cloning TTS model under Apache 2.0. It supports…",
+      "evidenceItemIds": [
+        "72516d3295d5"
+      ]
+    },
+    {
+      "itemId": "db035389cb0a",
+      "title": "Your Netgear router may be vulnerable to a security exploit – how to check and patch it",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "db035389cb0a"
+      ]
+    },
+    {
+      "itemId": "dd8357e763e2",
+      "title": "“超能模式”重磅登场！联想天禧AI 4.5全端升级，三大场景打造“职场超能搭档”",
+      "takeaway": "10月30日，联想天禧AI 4.5迎来AIPC端正式发布。",
+      "evidenceItemIds": [
+        "dd8357e763e2"
+      ]
+    },
+    {
+      "itemId": "e5d43521965a",
+      "title": "James Mickens' Talk: A Sober Analysis of AI Impact (LABScon '26)",
+      "takeaway": "Article URL: https://www.youtube.com/watch?v=usZLo_9Jz54 Comments URL: https://news.ycombinator.com/item?id=50322165 Po…",
+      "evidenceItemIds": [
+        "e5d43521965a"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕tooling与agent展开，建议优先关注《AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare》、《Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode》、《Vercel Labs Open-Sources agent-desktop for Agent Computer Use》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice Cloning TTS Model》、《你的8G iPad里有12G内存！库克走了但他的刀法追着我砍》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "72516d3295d5",
+        "fed825503da0",
+        "0a3f2eafa04f",
+        "e36e69534a91"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《“超能模式”重磅登场！联想天禧AI 4.5全端升级，三大场景打造“职场超能搭档”》、《James Mickens' Talk: A Sober Analysis of AI Impact (LABScon '26)》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "dd8357e763e2",
+        "e5d43521965a",
+        "7659c2c62e4d",
+        "66e0d8e09120"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 3 条，建议优先阅读《Vercel Labs Open-Sources agent-desktop for Agent Computer Use》、《Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "d93ee9d7c64d",
+        "b76f737539ea",
+        "8f4e0b4bb769"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "tooling",
+      "lead": "工具链方向本期共 2 条，建议优先阅读《AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare》、《Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "82ef17bc4cb7",
+        "4bcfc33831e6"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "8d9c64afe54bac08ba42a7ab09f27988b0232b68cff4f57371d3f5c1309ee4a7",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-11-01T02:39:42.001Z",
+    "finishedAt": "2026-11-01T02:40:16.678Z",
+    "durationMs": 34677,
+    "inputCount": 24,
+    "processedCount": 24,
+    "fallbackCount": 24,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 24,
+    "failureStats": {
+      "totalFailed": 24,
+      "timeout": 0,
+      "http": 24,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 45,
+      "splitRetryCount": 21
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-25",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=UND_ERR_CONNECT_TIMEOUT"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-18",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=UND_ERR_CONNECT_TIMEOUT"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 1
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-11-01T02:40:16.738Z",
+    "finishedAt": "2026-11-01T02:40:30.112Z",
+    "durationMs": 13374,
+    "inputCount": 24,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 24,
+      "timeout": 0,
+      "http": 24,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 24,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "82ef17bc4cb7",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+      "link": "https://www.marktechpost.com/2026/10/30/ai-security-agents-claude-codex-mantis-cloudflare/",
+      "contentSnippet": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use the same find, disprove, then patch loop. Here is how they differ, plus 12 more tools. The post AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-30T17:34:15.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 121,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "4bcfc33831e6",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode",
+      "link": "https://www.marktechpost.com/2026/10/31/factory-droid-1-0-frontier-harness/",
+      "contentSnippet": "Factory released Droid 1.0, a model-independent coding agent harness that makes programmatic tool calling the default. On Factory’s own Terminal-Bench 4 runs, Droid scores 65.2% with Claude Opus 5.5 at $4.73 per passed task. The post Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-31T10:38:14.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 92.31,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 118,
+        "ruleScoreNormalized": 92.3076923076923,
+        "finalScore": 92.31,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "d93ee9d7c64d",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Vercel Labs Open-Sources agent-desktop for Agent Computer Use",
+      "link": "https://www.marktechpost.com/2026/10/31/vercel-labs-agent-desktop-computer-use/",
+      "contentSnippet": "Vercel Labs released agent-desktop, an Apache-2.0 Rust CLI that gives any AI agent computer use on macOS, Windows and Linux by reading OS accessibility trees and acting on stable refs instead of pixels. The post Vercel Labs Open-Sources agent-desktop for Agent Computer Use appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-31T10:10:28.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 92.31,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 118,
+        "ruleScoreNormalized": 92.3076923076923,
+        "finalScore": 92.31,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "ccd909dfb563",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Show HN: LinkedIn-ops – Zero-dependency CDP automation built for AI agents",
+      "link": "https://github.com/shashtag-ventures/linkedin-ops",
+      "contentSnippet": "Article URL: https://github.com/shashtag-ventures/linkedin-ops Comments URL: https://news.ycombinator.com/item?id=50322021 Points: 1 # Comments: 0",
+      "publishedAt": "2026-11-01T01:46:21.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 89.74,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 117,
+        "ruleScoreNormalized": 89.74358974358975,
+        "finalScore": 89.74,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "b76f737539ea",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+      "link": "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/",
+      "contentSnippet": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cut coding agent token costs by 18.4% to 30.9% on SWE-Bench, with no change to the agent. The post Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9% appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-30T17:53:37.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 79.49,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 113,
+        "ruleScoreNormalized": 79.48717948717949,
+        "finalScore": 79.49,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[LangChain Changelog] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[Microsoft AI Blog] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[Google AI Blog] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[InfoQ AI/ML News] 抓取失败: This operation was aborted",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=UND_ERR_CONNECT_TIMEOUT",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=UND_ERR_CONNECT_TIMEOUT",
+    "LLM 分类打分部分回退：24/24",
+    "LLM 分类打分回退明细（前 3/24）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0735d97254498c84921b720f05754444\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0735d9732f46ec7757e0e4f41f832c84\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0735d973251be68e36fa2a421067940b\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=24：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=45, split_retry=21",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/24）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=24, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=24, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare\n- Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode\n- Vercel Labs Open-Sources agent-desktop for Agent Computer Use\n- Show HN: LinkedIn-ops – Zero-dependency CDP automation built for AI agents\n- Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%\n\n### 分类覆盖（大纲）\n- tooling: 2 条\n- agent: 3 条\n- open-source: 1 条\n- other: 11 条\n- tutorial: 1 条\n- industry-news: 6 条",
+    "rankedItems": [
+      {
+        "id": "82ef17bc4cb7",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+        "link": "https://www.marktechpost.com/2026/10/30/ai-security-agents-claude-codex-mantis-cloudflare/",
+        "contentSnippet": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use the same find, disprove, then patch loop. Here is how they differ, plus 12 more tools. The post AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T17:34:15.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 121,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4bcfc33831e6",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode",
+        "link": "https://www.marktechpost.com/2026/10/31/factory-droid-1-0-frontier-harness/",
+        "contentSnippet": "Factory released Droid 1.0, a model-independent coding agent harness that makes programmatic tool calling the default. On Factory’s own Terminal-Bench 4 runs, Droid scores 65.2% with Claude Opus 5.5 at $4.73 per passed task. The post Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-31T10:38:14.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 92.31,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 92.3076923076923,
+          "finalScore": 92.31,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d93ee9d7c64d",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Vercel Labs Open-Sources agent-desktop for Agent Computer Use",
+        "link": "https://www.marktechpost.com/2026/10/31/vercel-labs-agent-desktop-computer-use/",
+        "contentSnippet": "Vercel Labs released agent-desktop, an Apache-2.0 Rust CLI that gives any AI agent computer use on macOS, Windows and Linux by reading OS accessibility trees and acting on stable refs instead of pixels. The post Vercel Labs Open-Sources agent-desktop for Agent Computer Use appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-31T10:10:28.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 92.31,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 92.3076923076923,
+          "finalScore": 92.31,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ccd909dfb563",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: LinkedIn-ops – Zero-dependency CDP automation built for AI agents",
+        "link": "https://github.com/shashtag-ventures/linkedin-ops",
+        "contentSnippet": "Article URL: https://github.com/shashtag-ventures/linkedin-ops Comments URL: https://news.ycombinator.com/item?id=50322021 Points: 1 # Comments: 0",
+        "publishedAt": "2026-11-01T01:46:21.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 89.74,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 89.74358974358975,
+          "finalScore": 89.74,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b76f737539ea",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+        "link": "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/",
+        "contentSnippet": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cut coding agent token costs by 18.4% to 30.9% on SWE-Bench, with no change to the agent. The post Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9% appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T17:53:37.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 79.49,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 79.48717948717949,
+          "finalScore": 79.49,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8f4e0b4bb769",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost",
+        "link": "https://www.marktechpost.com/2026/10/30/samaya-sterling-post-trained-finance-research-model-frontierfinance/",
+        "contentSnippet": "Samaya AI’s Sterling is a post-trained Nemotron 3.5 Lightning model for financial research. It scores 58.9% on FrontierFinance at $0.61 per question, beating Claude Fable 5.1’s 55.9% at $6.89. The post Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T07:26:12.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 79.49,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 79.48717948717949,
+          "finalScore": 79.49,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "72516d3295d5",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice Cloning TTS Model",
+        "link": "https://www.marktechpost.com/2026/10/29/edge0-audio8-tts-realistic-0-6b-voice-cloning/",
+        "contentSnippet": "Edge0 released Audio8-TTS-Realistic, a 0.6B open-weight zero-shot voice cloning TTS model under Apache 2.0. It supports 23 languages and adds a final GRPO stage driven by a learned realism critic. The post Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice Cloning TTS Model appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T05:02:52.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 41.03,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 41.02564102564102,
+          "finalScore": 41.03,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "db035389cb0a",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Your Netgear router may be vulnerable to a security exploit – how to check and patch it",
+        "link": "https://www.zdnet.com/tech/netgear-routers-vulnerable-security-exploit/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T16:58:22.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 25.64,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 25.64102564102564,
+          "finalScore": 25.64,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "dd8357e763e2",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "“超能模式”重磅登场！联想天禧AI 4.5全端升级，三大场景打造“职场超能搭档”",
+        "link": "https://www.qbitai.com/2026/10/506779.html",
+        "contentSnippet": "10月30日，联想天禧AI 4.5迎来AIPC端正式发布。",
+        "publishedAt": "2026-10-30T10:44:01.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 25.64,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 25.64102564102564,
+          "finalScore": 25.64,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e5d43521965a",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "James Mickens' Talk: A Sober Analysis of AI Impact (LABScon '26)",
+        "link": "https://www.youtube.com/watch?v=usZLo_9Jz54",
+        "contentSnippet": "Article URL: https://www.youtube.com/watch?v=usZLo_9Jz54 Comments URL: https://news.ycombinator.com/item?id=50322165 Points: 1 # Comments: 1",
+        "publishedAt": "2026-11-01T02:17:57.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7659c2c62e4d",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "How AI may drive union-resistant tech workers to the bargaining table",
+        "link": "https://www.theguardian.com/technology/2026/jul/21/ai-tech-workers-unionize",
+        "contentSnippet": "Article URL: https://www.theguardian.com/technology/2026/jul/21/ai-tech-workers-unionize Comments URL: https://news.ycombinator.com/item?id=50321734 Points: 6 # Comments: 1",
+        "publishedAt": "2026-11-01T00:49:23.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "66e0d8e09120",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "The Elephant-Goldfish Model plugin for spec-driven AI development",
+        "link": "https://opensource.googleblog.com/2026/10/introducing-elephant-goldfish-model-plugin.html",
+        "contentSnippet": "Article URL: https://opensource.googleblog.com/2026/10/introducing-elephant-goldfish-model-plugin.html Comments URL: https://news.ycombinator.com/item?id=50321682 Points: 1 # Comments: 0",
+        "publishedAt": "2026-11-01T00:39:58.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f79a53882575",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Wikimedia Foundation Tries to Save Itself by Brokering AI Copyright Deal",
+        "link": "https://gizmodo.com/wikimedia-foundation-tries-to-save-itself-from-oblivion-by-brokering-ai-copyright-deal-2000833099",
+        "contentSnippet": "Article URL: https://gizmodo.com/wikimedia-foundation-tries-to-save-itself-from-oblivion-by-brokering-ai-copyright-deal-2000833099 Comments URL: https://news.ycombinator.com/item?id=50321629 Points: 6 # Comments: 0",
+        "publishedAt": "2026-11-01T00:30:34.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "90bf3628a328",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Supersonic airliner in doubt as company shifts to powering AI data centers",
+        "link": "https://arstechnica.com/gadgets/2026/10/united-airlines-ceo-doubts-supersonic-airliner-from-boom-will-be-ready-by-2029/",
+        "contentSnippet": "Article URL: https://arstechnica.com/gadgets/2026/10/united-airlines-ceo-doubts-supersonic-airliner-from-boom-will-be-ready-by-2029/ Comments URL: https://news.ycombinator.com/item?id=50321572 Points: 2 # Comments: 0",
+        "publishedAt": "2026-11-01T00:19:20.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 20.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 20.51282051282051,
+          "finalScore": 20.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fed825503da0",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "你的8G iPad里有12G内存！库克走了但他的刀法追着我砍",
+        "link": "https://www.qbitai.com/2026/10/506884.html",
+        "contentSnippet": "苹果“牛奶倒河里”式操作翻红",
+        "publishedAt": "2026-10-31T05:17:50.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 12.82,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 12.82051282051282,
+          "finalScore": 12.82,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0a3f2eafa04f",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "世界模型首次指导设计芯片！超大核NPU700TOPS，99%算力可用",
+        "link": "https://www.qbitai.com/2026/10/506866.html",
+        "contentSnippet": "AI算力利用“九九成”",
+        "publishedAt": "2026-10-31T05:11:19.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 12.82,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 12.82051282051282,
+          "finalScore": 12.82,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e36e69534a91",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "刚刚，Claude宣布取消5小时限制！首批Ultra用户已「解封」",
+        "link": "https://www.qbitai.com/2026/10/506855.html",
+        "contentSnippet": "200美元Ultra用户先用",
+        "publishedAt": "2026-10-31T05:05:29.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 12.82,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 12.82051282051282,
+          "finalScore": 12.82,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d7cc81c3c392",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Android 17 adoption hits a staggering 1% – why you really should update now",
+        "link": "https://www.zdnet.com/tech/android-17-os-adoption-numbers-october-2026/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T18:18:24.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.13,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 5.128205128205128,
+          "finalScore": 5.13,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "180f10777f3a",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Samsung adds better sleep tracking to Galaxy Watches – here’s what to expect",
+        "link": "https://www.zdnet.com/health/advanced-sleep-apnea-tracking-galaxy-watches/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T17:29:50.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.13,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 5.128205128205128,
+          "finalScore": 5.13,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "88616d198d0f",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "I’m finally ready for a smart calendar – why the Echo Show 16 stands out",
+        "link": "https://www.zdnet.com/home-and-office/im-finally-ready-for-a-smart-calendar-why-the-echo-show-16-stands-out/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T17:23:50.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.13,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 5.128205128205128,
+          "finalScore": 5.13,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3f28d45d40ef",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Google’s latest Home updates just fixed my biggest annoyances with its speakers and cameras",
+        "link": "https://www.zdnet.com/home-and-office/google-home-gemini-updates-42-fixes/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T16:14:11.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.13,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 5.128205128205128,
+          "finalScore": 5.13,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "72458b8b3dd2",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Your headphones have hidden LE Audio features you’ll want to know about",
+        "link": "https://www.zdnet.com/tech/bluetooth-headphones-hidden-le-audio-features-jbl-sony-bose/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-29T17:45:05.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.13,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 5.128205128205128,
+          "finalScore": 5.13,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d6dc06a16d07",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "榜一，拿来吧你！智元这波双模型杀穿多榜榜单",
+        "link": "https://www.qbitai.com/2026/10/506819.html",
+        "contentSnippet": "xs，还要给机器人打绩效",
+        "publishedAt": "2026-10-30T12:58:31.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a1f1dc136b7c",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "AI零帧起手写算子，反超DeepSeek人类手写巅峰：快了9.8%！",
+        "link": "https://www.qbitai.com/2026/10/506785.html",
+        "contentSnippet": "之前还连登昇腾三榜第一",
+        "publishedAt": "2026-10-30T11:05:06.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "82ef17bc4cb7",
+        "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+        "summary": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use t…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "82ef17bc4cb7"
+        ]
+      },
+      {
+        "itemId": "4bcfc33831e6",
+        "title": "Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode",
+        "summary": "Factory released Droid 1.0, a model-independent coding agent harness that makes programmatic tool calling the default. …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "4bcfc33831e6"
+        ]
+      },
+      {
+        "itemId": "d93ee9d7c64d",
+        "title": "Vercel Labs Open-Sources agent-desktop for Agent Computer Use",
+        "summary": "Vercel Labs released agent-desktop, an Apache-2.0 Rust CLI that gives any AI agent computer use on macOS, Windows and L…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "d93ee9d7c64d"
+        ]
+      },
+      {
+        "itemId": "ccd909dfb563",
+        "title": "Show HN: LinkedIn-ops – Zero-dependency CDP automation built for AI agents",
+        "summary": "Article URL: https://github.com/shashtag-ventures/linkedin-ops Comments URL: https://news.ycombinator.com/item?id=50322…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "ccd909dfb563"
+        ]
+      },
+      {
+        "itemId": "b76f737539ea",
+        "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+        "summary": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cu…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "b76f737539ea"
+        ]
+      },
+      {
+        "itemId": "8f4e0b4bb769",
+        "title": "Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost",
+        "summary": "Samaya AI’s Sterling is a post-trained Nemotron 3.5 Lightning model for financial research. It scores 58.9% on Frontier…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "8f4e0b4bb769"
+        ]
+      },
+      {
+        "itemId": "72516d3295d5",
+        "title": "Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice Cloning TTS Model",
+        "summary": "Edge0 released Audio8-TTS-Realistic, a 0.6B open-weight zero-shot voice cloning TTS model under Apache 2.0. It supports…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "72516d3295d5"
+        ]
+      },
+      {
+        "itemId": "db035389cb0a",
+        "title": "Your Netgear router may be vulnerable to a security exploit – how to check and patch it",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "db035389cb0a"
+        ]
+      },
+      {
+        "itemId": "dd8357e763e2",
+        "title": "“超能模式”重磅登场！联想天禧AI 4.5全端升级，三大场景打造“职场超能搭档”",
+        "summary": "10月30日，联想天禧AI 4.5迎来AIPC端正式发布。",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "dd8357e763e2"
+        ]
+      },
+      {
+        "itemId": "e5d43521965a",
+        "title": "James Mickens' Talk: A Sober Analysis of AI Impact (LABScon '26)",
+        "summary": "Article URL: https://www.youtube.com/watch?v=usZLo_9Jz54 Comments URL: https://news.ycombinator.com/item?id=50322165 Po…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e5d43521965a"
+        ]
+      },
+      {
+        "itemId": "7659c2c62e4d",
+        "title": "How AI may drive union-resistant tech workers to the bargaining table",
+        "summary": "Article URL: https://www.theguardian.com/technology/2026/jul/21/ai-tech-workers-unionize Comments URL: https://news.yco…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "7659c2c62e4d"
+        ]
+      },
+      {
+        "itemId": "66e0d8e09120",
+        "title": "The Elephant-Goldfish Model plugin for spec-driven AI development",
+        "summary": "Article URL: https://opensource.googleblog.com/2026/10/introducing-elephant-goldfish-model-plugin.html Comments URL: ht…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "66e0d8e09120"
+        ]
+      },
+      {
+        "itemId": "f79a53882575",
+        "title": "Wikimedia Foundation Tries to Save Itself by Brokering AI Copyright Deal",
+        "summary": "Article URL: https://gizmodo.com/wikimedia-foundation-tries-to-save-itself-from-oblivion-by-brokering-ai-copyright-deal…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f79a53882575"
+        ]
+      },
+      {
+        "itemId": "90bf3628a328",
+        "title": "Supersonic airliner in doubt as company shifts to powering AI data centers",
+        "summary": "Article URL: https://arstechnica.com/gadgets/2026/10/united-airlines-ceo-doubts-supersonic-airliner-from-boom-will-be-r…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "90bf3628a328"
+        ]
+      },
+      {
+        "itemId": "fed825503da0",
+        "title": "你的8G iPad里有12G内存！库克走了但他的刀法追着我砍",
+        "summary": "苹果“牛奶倒河里”式操作翻红",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fed825503da0"
+        ]
+      },
+      {
+        "itemId": "0a3f2eafa04f",
+        "title": "世界模型首次指导设计芯片！超大核NPU700TOPS，99%算力可用",
+        "summary": "AI算力利用“九九成”",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "0a3f2eafa04f"
+        ]
+      },
+      {
+        "itemId": "e36e69534a91",
+        "title": "刚刚，Claude宣布取消5小时限制！首批Ultra用户已「解封」",
+        "summary": "200美元Ultra用户先用",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e36e69534a91"
+        ]
+      },
+      {
+        "itemId": "d7cc81c3c392",
+        "title": "Android 17 adoption hits a staggering 1% – why you really should update now",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d7cc81c3c392"
+        ]
+      },
+      {
+        "itemId": "180f10777f3a",
+        "title": "Samsung adds better sleep tracking to Galaxy Watches – here’s what to expect",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "180f10777f3a"
+        ]
+      },
+      {
+        "itemId": "88616d198d0f",
+        "title": "I’m finally ready for a smart calendar – why the Echo Show 16 stands out",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "88616d198d0f"
+        ]
+      },
+      {
+        "itemId": "3f28d45d40ef",
+        "title": "Google’s latest Home updates just fixed my biggest annoyances with its speakers and cameras",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3f28d45d40ef"
+        ]
+      },
+      {
+        "itemId": "72458b8b3dd2",
+        "title": "Your headphones have hidden LE Audio features you’ll want to know about",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "72458b8b3dd2"
+        ]
+      },
+      {
+        "itemId": "d6dc06a16d07",
+        "title": "榜一，拿来吧你！智元这波双模型杀穿多榜榜单",
+        "summary": "xs，还要给机器人打绩效",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d6dc06a16d07"
+        ]
+      },
+      {
+        "itemId": "a1f1dc136b7c",
+        "title": "AI零帧起手写算子，反超DeepSeek人类手写巅峰：快了9.8%！",
+        "summary": "之前还连登昇腾三榜第一",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a1f1dc136b7c"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "82ef17bc4cb7",
+        "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+        "takeaway": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use t…",
+        "evidenceItemIds": [
+          "82ef17bc4cb7"
+        ]
+      },
+      {
+        "itemId": "4bcfc33831e6",
+        "title": "Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode",
+        "takeaway": "Factory released Droid 1.0, a model-independent coding agent harness that makes programmatic tool calling the default. …",
+        "evidenceItemIds": [
+          "4bcfc33831e6"
+        ]
+      },
+      {
+        "itemId": "d93ee9d7c64d",
+        "title": "Vercel Labs Open-Sources agent-desktop for Agent Computer Use",
+        "takeaway": "Vercel Labs released agent-desktop, an Apache-2.0 Rust CLI that gives any AI agent computer use on macOS, Windows and L…",
+        "evidenceItemIds": [
+          "d93ee9d7c64d"
+        ]
+      },
+      {
+        "itemId": "ccd909dfb563",
+        "title": "Show HN: LinkedIn-ops – Zero-dependency CDP automation built for AI agents",
+        "takeaway": "Article URL: https://github.com/shashtag-ventures/linkedin-ops Comments URL: https://news.ycombinator.com/item?id=50322…",
+        "evidenceItemIds": [
+          "ccd909dfb563"
+        ]
+      },
+      {
+        "itemId": "b76f737539ea",
+        "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+        "takeaway": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cu…",
+        "evidenceItemIds": [
+          "b76f737539ea"
+        ]
+      },
+      {
+        "itemId": "8f4e0b4bb769",
+        "title": "Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost",
+        "takeaway": "Samaya AI’s Sterling is a post-trained Nemotron 3.5 Lightning model for financial research. It scores 58.9% on Frontier…",
+        "evidenceItemIds": [
+          "8f4e0b4bb769"
+        ]
+      },
+      {
+        "itemId": "72516d3295d5",
+        "title": "Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice Cloning TTS Model",
+        "takeaway": "Edge0 released Audio8-TTS-Realistic, a 0.6B open-weight zero-shot voice cloning TTS model under Apache 2.0. It supports…",
+        "evidenceItemIds": [
+          "72516d3295d5"
+        ]
+      },
+      {
+        "itemId": "db035389cb0a",
+        "title": "Your Netgear router may be vulnerable to a security exploit – how to check and patch it",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "db035389cb0a"
+        ]
+      },
+      {
+        "itemId": "dd8357e763e2",
+        "title": "“超能模式”重磅登场！联想天禧AI 4.5全端升级，三大场景打造“职场超能搭档”",
+        "takeaway": "10月30日，联想天禧AI 4.5迎来AIPC端正式发布。",
+        "evidenceItemIds": [
+          "dd8357e763e2"
+        ]
+      },
+      {
+        "itemId": "e5d43521965a",
+        "title": "James Mickens' Talk: A Sober Analysis of AI Impact (LABScon '26)",
+        "takeaway": "Article URL: https://www.youtube.com/watch?v=usZLo_9Jz54 Comments URL: https://news.ycombinator.com/item?id=50322165 Po…",
+        "evidenceItemIds": [
+          "e5d43521965a"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕tooling与agent展开，建议优先关注《AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare》、《Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode》、《Vercel Labs Open-Sources agent-desktop for Agent Computer Use》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice Cloning TTS Model》、《你的8G iPad里有12G内存！库克走了但他的刀法追着我砍》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "72516d3295d5",
+          "fed825503da0",
+          "0a3f2eafa04f",
+          "e36e69534a91"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《“超能模式”重磅登场！联想天禧AI 4.5全端升级，三大场景打造“职场超能搭档”》、《James Mickens' Talk: A Sober Analysis of AI Impact (LABScon '26)》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "dd8357e763e2",
+          "e5d43521965a",
+          "7659c2c62e4d",
+          "66e0d8e09120"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 3 条，建议优先阅读《Vercel Labs Open-Sources agent-desktop for Agent Computer Use》、《Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "d93ee9d7c64d",
+          "b76f737539ea",
+          "8f4e0b4bb769"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "tooling",
+        "lead": "工具链方向本期共 2 条，建议优先阅读《AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare》、《Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "82ef17bc4cb7",
+          "4bcfc33831e6"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "8d9c64afe54bac08ba42a7ab09f27988b0232b68cff4f57371d3f5c1309ee4a7",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-11-01T02:39:42.001Z",
+      "finishedAt": "2026-11-01T02:40:16.678Z",
+      "durationMs": 34677,
+      "inputCount": 24,
+      "processedCount": 24,
+      "fallbackCount": 24,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 24,
+      "failureStats": {
+        "totalFailed": 24,
+        "timeout": 0,
+        "http": 24,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 45,
+        "splitRetryCount": 21
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-25",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=UND_ERR_CONNECT_TIMEOUT"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-18",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=UND_ERR_CONNECT_TIMEOUT"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 1
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-11-01T02:40:16.738Z",
+      "finishedAt": "2026-11-01T02:40:30.112Z",
+      "durationMs": 13374,
+      "inputCount": 24,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 24,
+        "timeout": 0,
+        "http": 24,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 24,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "82ef17bc4cb7",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+        "link": "https://www.marktechpost.com/2026/10/30/ai-security-agents-claude-codex-mantis-cloudflare/",
+        "contentSnippet": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use the same find, disprove, then patch loop. Here is how they differ, plus 12 more tools. The post AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T17:34:15.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 121,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4bcfc33831e6",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode",
+        "link": "https://www.marktechpost.com/2026/10/31/factory-droid-1-0-frontier-harness/",
+        "contentSnippet": "Factory released Droid 1.0, a model-independent coding agent harness that makes programmatic tool calling the default. On Factory’s own Terminal-Bench 4 runs, Droid scores 65.2% with Claude Opus 5.5 at $4.73 per passed task. The post Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-31T10:38:14.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 92.31,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 92.3076923076923,
+          "finalScore": 92.31,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d93ee9d7c64d",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Vercel Labs Open-Sources agent-desktop for Agent Computer Use",
+        "link": "https://www.marktechpost.com/2026/10/31/vercel-labs-agent-desktop-computer-use/",
+        "contentSnippet": "Vercel Labs released agent-desktop, an Apache-2.0 Rust CLI that gives any AI agent computer use on macOS, Windows and Linux by reading OS accessibility trees and acting on stable refs instead of pixels. The post Vercel Labs Open-Sources agent-desktop for Agent Computer Use appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-31T10:10:28.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 92.31,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 92.3076923076923,
+          "finalScore": 92.31,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ccd909dfb563",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: LinkedIn-ops – Zero-dependency CDP automation built for AI agents",
+        "link": "https://github.com/shashtag-ventures/linkedin-ops",
+        "contentSnippet": "Article URL: https://github.com/shashtag-ventures/linkedin-ops Comments URL: https://news.ycombinator.com/item?id=50322021 Points: 1 # Comments: 0",
+        "publishedAt": "2026-11-01T01:46:21.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 89.74,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 89.74358974358975,
+          "finalScore": 89.74,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b76f737539ea",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+        "link": "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/",
+        "contentSnippet": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cut coding agent token costs by 18.4% to 30.9% on SWE-Bench, with no change to the agent. The post Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9% appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T17:53:37.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 79.49,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 79.48717948717949,
+          "finalScore": 79.49,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 24,
+      "normalizedCount": 24,
+      "dedupedCount": 24,
+      "highImportanceCount": 4,
+      "mediumImportanceCount": 2,
+      "lowImportanceCount": 18,
+      "categoryBreakdown": {
+        "open-source": 1,
+        "tooling": 2,
+        "agent": 3,
+        "research": 0,
+        "industry-news": 6,
+        "tutorial": 1,
+        "other": 11
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[LangChain Changelog] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[Microsoft AI Blog] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[Google AI Blog] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[InfoQ AI/ML News] 抓取失败: This operation was aborted",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=UND_ERR_CONNECT_TIMEOUT",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): fetch failed code=UND_ERR_CONNECT_TIMEOUT",
+      "LLM 分类打分部分回退：24/24",
+      "LLM 分类打分回退明细（前 3/24）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0735d97254498c84921b720f05754444\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0735d9732f46ec7757e0e4f41f832c84\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0735d973251be68e36fa2a421067940b\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=24：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=45, split_retry=21",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/24）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=24, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=24, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
