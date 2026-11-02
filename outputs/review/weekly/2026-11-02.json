@@ -1,0 +1,2616 @@
+{
+  "runId": "weekly-1793583374656",
+  "generatedAt": "2026-11-02T01:36:14.624Z",
+  "reviewStartedAt": "2026-11-02T01:36:14.624Z",
+  "reportDate": "2026-11-02",
+  "mode": "weekly",
+  "reviewStatus": "pending_review",
+  "reviewStage": "final_review",
+  "reviewDeadlineAt": "2026-11-02T04:30:00.000Z",
+  "reviewReason": "仍在审核窗口内，等待人工审核",
+  "publishStatus": "pending",
+  "shouldPublish": false,
+  "publishReason": "waiting_for_manual_review",
+  "publishedAt": null,
+  "outlineApproved": true,
+  "finalApproved": false,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 42,
+    "normalizedCount": 42,
+    "dedupedCount": 42,
+    "highImportanceCount": 1,
+    "mediumImportanceCount": 6,
+    "lowImportanceCount": 35,
+    "categoryBreakdown": {
+      "open-source": 9,
+      "tooling": 2,
+      "agent": 6,
+      "research": 2,
+      "industry-news": 4,
+      "tutorial": 2,
+      "other": 17
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "30b9a7083910",
+      "title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent",
+      "summary": "DeepSeek released dsh-superagent, an MIT-licensed research prototype that turns GitHub and Feishu requests into paralle…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "30b9a7083910"
+      ]
+    },
+    {
+      "itemId": "82ef17bc4cb7",
+      "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+      "summary": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use t…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "82ef17bc4cb7"
+      ]
+    },
+    {
+      "itemId": "d6d60d1b33d5",
+      "title": "Bug0 Releases QA Agent to Automate Regression Testing with Cached Playwright Replays",
+      "summary": "QA Agent is a new source-available Playwright library for agentic browser regression testing. The agent associates test…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "d6d60d1b33d5"
+      ]
+    },
+    {
+      "itemId": "342a0de7eaf9",
+      "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+      "summary": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "342a0de7eaf9"
+      ]
+    },
+    {
+      "itemId": "4bcfc33831e6",
+      "title": "Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode",
+      "summary": "Factory released Droid 1.0, a model-independent coding agent harness that makes programmatic tool calling the default. …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "4bcfc33831e6"
+      ]
+    },
+    {
+      "itemId": "d93ee9d7c64d",
+      "title": "Vercel Labs Open-Sources agent-desktop for Agent Computer Use",
+      "summary": "Vercel Labs released agent-desktop, an Apache-2.0 Rust CLI that gives any AI agent computer use on macOS, Windows and L…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "d93ee9d7c64d"
+      ]
+    },
+    {
+      "itemId": "b76f737539ea",
+      "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+      "summary": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cu…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "b76f737539ea"
+      ]
+    },
+    {
+      "itemId": "60adcdaf1f1a",
+      "title": "How we detect frontier model misalignment",
+      "summary": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "60adcdaf1f1a"
+      ]
+    },
+    {
+      "itemId": "8c1252934b01",
+      "title": "刚刚，DeepSeek重磅开源：Agent底座架构！",
+      "summary": "AI已经自己找到Bug并提交PR",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "8c1252934b01"
+      ]
+    },
+    {
+      "itemId": "c90747fc3e6c",
+      "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+      "summary": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "c90747fc3e6c"
+      ]
+    },
+    {
+      "itemId": "d374e018ef09",
+      "title": "Show HN: Skep – live cross-device sessions for AI coding agents",
+      "summary": "Article URL: https://skepagent.com/ Comments URL: https://news.ycombinator.com/item?id=50331879 Points: 1 # Comments: 0",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "d374e018ef09"
+      ]
+    },
+    {
+      "itemId": "d602766d4bb8",
+      "title": "Show HN: Better Together – AI agents team up against spam calls and texts",
+      "summary": "Launched https://better-together.fun this weekend to allow our personal AI agents to collaborate on problems that are t…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "d602766d4bb8"
+      ]
+    },
+    {
+      "itemId": "813b81289e18",
+      "title": "An updated Model Spec for more capable and beneficial AI",
+      "summary": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and…",
+      "recommendation": "可直接学习实践",
+      "evidenceItemIds": [
+        "813b81289e18"
+      ]
+    },
+    {
+      "itemId": "dde388700b4a",
+      "title": "Making it easier for websites to express AI training preferences",
+      "summary": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to par…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "dde388700b4a"
+      ]
+    },
+    {
+      "itemId": "581919a7a3a0",
+      "title": "Community safety report and new protections for teens",
+      "summary": "OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commi…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "581919a7a3a0"
+      ]
+    },
+    {
+      "itemId": "bb5e3ebcb89e",
+      "title": "Jev新成果，再次引爆开源",
+      "summary": "再次“性价比屠夫”",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "bb5e3ebcb89e"
+      ]
+    },
+    {
+      "itemId": "3e0ad60041ea",
+      "title": "Fair use benefits everyone",
+      "summary": "OpenAI shares excerpts from court briefs by creators, academics, accessibility advocates, and legal experts, among othe…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3e0ad60041ea"
+      ]
+    },
+    {
+      "itemId": "b0ac292d1047",
+      "title": "How Ropes & Gray is developing AI for transactional diligence",
+      "summary": "Ropes & Gray is developing AI for transactional diligence with OpenAI. Lawyers review grouped documents, summaries, and…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b0ac292d1047"
+      ]
+    },
+    {
+      "itemId": "347d639a0c72",
+      "title": "AWS Capacity Largely Sold Out Through 2027, With On Demand Headroom Reserved",
+      "summary": "Amazon CEO Andy Jassy says AWS’s large committed cloud capacity is largely sold out through 2027, with part of 2028 alr…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "347d639a0c72"
+      ]
+    },
+    {
+      "itemId": "84dc9e2f3b84",
+      "title": "Nace AI Open-Sources Drex Max v1: A 27B Decision Model That Runs Locally on Apple Silicon",
+      "summary": "Nace AI open-sources Drex Max v1, a 27B multimodal decision model scoring 67.52 that runs on Apple Silicon. The post Na…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "84dc9e2f3b84"
+      ]
+    },
+    {
+      "itemId": "db035389cb0a",
+      "title": "Your Netgear router may be vulnerable to a security exploit – how to check and patch it",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "db035389cb0a"
+      ]
+    },
+    {
+      "itemId": "3c6dee34c864",
+      "title": "三年前布局，今年爆火丨西湖大学成立新中心",
+      "summary": "西湖世界模型研究中心成立",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3c6dee34c864"
+      ]
+    },
+    {
+      "itemId": "4a4c3137d06e",
+      "title": "Claude紧急叫停！暗改Harness禁止逆向游戏",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "4a4c3137d06e"
+      ]
+    },
+    {
+      "itemId": "e50b632b0ca4",
+      "title": "Netflix Treats GPU Reliability as a Distributed Systems Problem",
+      "summary": "Netflix has detailed how it is building a reliability platform for large-scale GPU training and inference, using layere…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e50b632b0ca4"
+      ]
+    },
+    {
+      "itemId": "4eb3c980cd9d",
+      "title": "Competition in Generative AI: Evidence from Consumer Demand (NBER)",
+      "summary": "Article URL: https://www.nber.org/papers/w35953 Comments URL: https://news.ycombinator.com/item?id=50331511 Points: 1 #…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "4eb3c980cd9d"
+      ]
+    },
+    {
+      "itemId": "ce2e6049c47f",
+      "title": "How Small Can We Slice an AI Model?",
+      "summary": "Article URL: https://operator0x.com/field-notes/weights-still-need-a-home/ Comments URL: https://news.ycombinator.com/i…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "ce2e6049c47f"
+      ]
+    },
+    {
+      "itemId": "b92135db2f3a",
+      "title": "AI Nerfs: Are Claude, ChatGPT, and Gemini Nerfed Today?",
+      "summary": "Article URL: https://ai-nerfs.com Comments URL: https://news.ycombinator.com/item?id=50330883 Points: 1 # Comments: 0",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b92135db2f3a"
+      ]
+    },
+    {
+      "itemId": "63c7ae608e94",
+      "title": "Empires of AI – By Eric Schmidt and Niall Ferguson",
+      "summary": "Article URL: https://www.foreignaffairs.com/china/empires-artificial-intelligence-niall-ferguson-eric-schmidt Comments …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "63c7ae608e94"
+      ]
+    },
+    {
+      "itemId": "e604a204e5b1",
+      "title": "Our newest AI Quest: Mapping the human brain",
+      "summary": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e604a204e5b1"
+      ]
+    },
+    {
+      "itemId": "443c8daec13b",
+      "title": "清华姚期智团队新作：代数世界模型，让AI像牛顿一样思考",
+      "summary": "让AI像牛顿一样思考",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "443c8daec13b"
+      ]
+    },
+    {
+      "itemId": "a10176ec63d1",
+      "title": "老牌便利店机器人售货折戟：实验室锤炼上万次，货架前还是摔瓶子",
+      "summary": "这事还是想得太简单了",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a10176ec63d1"
+      ]
+    },
+    {
+      "itemId": "be825ae61e7e",
+      "title": "How to Make Artificial Intelligence More Environmentally Sustainable",
+      "summary": "IT is responsible for about 2 - 4% of all global emissions, and electricity use at Microsoft and Google has climbed bec…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "be825ae61e7e"
+      ]
+    },
+    {
+      "itemId": "d7cc81c3c392",
+      "title": "Android 17 adoption hits a staggering 1% – why you really should update now",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d7cc81c3c392"
+      ]
+    },
+    {
+      "itemId": "180f10777f3a",
+      "title": "Samsung adds better sleep tracking to Galaxy Watches – here’s what to expect",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "180f10777f3a"
+      ]
+    },
+    {
+      "itemId": "88616d198d0f",
+      "title": "I’m finally ready for a smart calendar – why the Echo Show 16 stands out",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "88616d198d0f"
+      ]
+    },
+    {
+      "itemId": "3f28d45d40ef",
+      "title": "Google’s latest Home updates just fixed my biggest annoyances with its speakers and cameras",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3f28d45d40ef"
+      ]
+    },
+    {
+      "itemId": "51cd2b7b9a2d",
+      "title": "Southeast Asia’s digital economy to hit $368 billion",
+      "summary": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trilli…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "51cd2b7b9a2d"
+      ]
+    },
+    {
+      "itemId": "5478efc66827",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5478efc66827"
+      ]
+    },
+    {
+      "itemId": "92d60b58598f",
+      "title": "Introducing Playground: Create and play custom games",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "92d60b58598f"
+      ]
+    },
+    {
+      "itemId": "1d5fed04e570",
+      "title": "The latest AI news we announced in September 2026",
+      "summary": "Here are Google’s latest AI updates from September 2026",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1d5fed04e570"
+      ]
+    },
+    {
+      "itemId": "927c795585b6",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "927c795585b6"
+      ]
+    },
+    {
+      "itemId": "72458b8b3dd2",
+      "title": "Your headphones have hidden LE Audio features you’ll want to know about",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "72458b8b3dd2"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "30b9a7083910",
+      "title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent",
+      "takeaway": "DeepSeek released dsh-superagent, an MIT-licensed research prototype that turns GitHub and Feishu requests into paralle…",
+      "evidenceItemIds": [
+        "30b9a7083910"
+      ]
+    },
+    {
+      "itemId": "82ef17bc4cb7",
+      "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+      "takeaway": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use t…",
+      "evidenceItemIds": [
+        "82ef17bc4cb7"
+      ]
+    },
+    {
+      "itemId": "d6d60d1b33d5",
+      "title": "Bug0 Releases QA Agent to Automate Regression Testing with Cached Playwright Replays",
+      "takeaway": "QA Agent is a new source-available Playwright library for agentic browser regression testing. The agent associates test…",
+      "evidenceItemIds": [
+        "d6d60d1b33d5"
+      ]
+    },
+    {
+      "itemId": "342a0de7eaf9",
+      "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+      "takeaway": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities…",
+      "evidenceItemIds": [
+        "342a0de7eaf9"
+      ]
+    },
+    {
+      "itemId": "4bcfc33831e6",
+      "title": "Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode",
+      "takeaway": "Factory released Droid 1.0, a model-independent coding agent harness that makes programmatic tool calling the default. …",
+      "evidenceItemIds": [
+        "4bcfc33831e6"
+      ]
+    },
+    {
+      "itemId": "d93ee9d7c64d",
+      "title": "Vercel Labs Open-Sources agent-desktop for Agent Computer Use",
+      "takeaway": "Vercel Labs released agent-desktop, an Apache-2.0 Rust CLI that gives any AI agent computer use on macOS, Windows and L…",
+      "evidenceItemIds": [
+        "d93ee9d7c64d"
+      ]
+    },
+    {
+      "itemId": "b76f737539ea",
+      "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+      "takeaway": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cu…",
+      "evidenceItemIds": [
+        "b76f737539ea"
+      ]
+    },
+    {
+      "itemId": "60adcdaf1f1a",
+      "title": "How we detect frontier model misalignment",
+      "takeaway": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can …",
+      "evidenceItemIds": [
+        "60adcdaf1f1a"
+      ]
+    },
+    {
+      "itemId": "8c1252934b01",
+      "title": "刚刚，DeepSeek重磅开源：Agent底座架构！",
+      "takeaway": "AI已经自己找到Bug并提交PR",
+      "evidenceItemIds": [
+        "8c1252934b01"
+      ]
+    },
+    {
+      "itemId": "c90747fc3e6c",
+      "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+      "takeaway": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM …",
+      "evidenceItemIds": [
+        "c90747fc3e6c"
+      ]
+    },
+    {
+      "itemId": "d374e018ef09",
+      "title": "Show HN: Skep – live cross-device sessions for AI coding agents",
+      "takeaway": "Article URL: https://skepagent.com/ Comments URL: https://news.ycombinator.com/item?id=50331879 Points: 1 # Comments: 0",
+      "evidenceItemIds": [
+        "d374e018ef09"
+      ]
+    },
+    {
+      "itemId": "d602766d4bb8",
+      "title": "Show HN: Better Together – AI agents team up against spam calls and texts",
+      "takeaway": "Launched https://better-together.fun this weekend to allow our personal AI agents to collaborate on problems that are t…",
+      "evidenceItemIds": [
+        "d602766d4bb8"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕open-source与tooling展开，建议优先关注《DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent》、《AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare》、《Bug0 Releases QA Agent to Automate Regression Testing with Cached Playwright Replays》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Making it easier for websites to express AI training preferences》、《Fair use benefits everyone》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "dde388700b4a",
+        "3e0ad60041ea",
+        "84dc9e2f3b84",
+        "4a4c3137d06e"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 4 条，建议优先阅读《DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent》、《Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "30b9a7083910",
+        "342a0de7eaf9",
+        "8c1252934b01",
+        "c90747fc3e6c"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 4 条，建议优先阅读《Bug0 Releases QA Agent to Automate Regression Testing with Cached Playwright Replays》、《Vercel Labs Open-Sources agent-desktop for Agent Computer Use》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "d6d60d1b33d5",
+        "d93ee9d7c64d",
+        "b76f737539ea",
+        "60adcdaf1f1a"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《How Small Can We Slice an AI Model?》、《AI Nerfs: Are Claude, ChatGPT, and Gemini Nerfed Today?》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "ce2e6049c47f",
+        "b92135db2f3a",
+        "63c7ae608e94",
+        "1d5fed04e570"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "e497abda5d27e6112566e7a898f97114fb4bd9b7cdce803d03ba0676cd76545e",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-11-02T01:36:26.177Z",
+    "finishedAt": "2026-11-02T01:37:22.269Z",
+    "durationMs": 56092,
+    "inputCount": 42,
+    "processedCount": 42,
+    "fallbackCount": 42,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 42,
+    "failureStats": {
+      "totalFailed": 42,
+      "timeout": 0,
+      "http": 42,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 79,
+      "splitRetryCount": 37
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-26",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-19",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 1,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-11-02T01:37:22.319Z",
+    "finishedAt": "2026-11-02T01:37:36.459Z",
+    "durationMs": 14140,
+    "inputCount": 42,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "30b9a7083910",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent",
+      "link": "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/",
+      "contentSnippet": "DeepSeek released dsh-superagent, an MIT-licensed research prototype that turns GitHub and Feishu requests into parallel worker sessions. In DeepSeek’s own simulation, p95 task completion fell to 15.7 minutes from 29.5 minutes. The post DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent appeared first on MarkTechPost.",
+      "publishedAt": "2026-11-01T07:47:17.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 130,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "82ef17bc4cb7",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+      "link": "https://www.marktechpost.com/2026/10/30/ai-security-agents-claude-codex-mantis-cloudflare/",
+      "contentSnippet": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use the same find, disprove, then patch loop. Here is how they differ, plus 12 more tools. The post AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-30T17:34:15.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 82.35,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 121,
+        "ruleScoreNormalized": 82.35294117647058,
+        "finalScore": 82.35,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "d6d60d1b33d5",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Bug0 Releases QA Agent to Automate Regression Testing with Cached Playwright Replays",
+      "link": "https://www.infoq.com/news/2026/10/bug0-agent-testing-cached-replay/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "QA Agent is a new source-available Playwright library for agentic browser regression testing. The agent associates test instructions expressed in natural language to actions on the user interface, caches those when appropriate for faster CI replays, remapping them to test specifications when the user interface changes. Verification is based on multi-model consensus and vision model evaluations. By Bruno Couriol",
+      "publishedAt": "2026-10-29T15:17:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 80.39,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 120,
+        "ruleScoreNormalized": 80.3921568627451,
+        "finalScore": 80.39,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "342a0de7eaf9",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+      "link": "https://www.infoq.com/news/2026/10/google-pagebreak-security-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities across its web applications since entering full operation in January. PageBreak uses Gemini models to autonomously investigate potential vulnerabilities, but reports them only after deterministic validators successfully reproduce the exploit against a running application. By Renato Losio",
+      "publishedAt": "2026-10-31T06:20:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 66.67,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 113,
+        "ruleScoreNormalized": 66.66666666666666,
+        "finalScore": 66.67,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "4bcfc33831e6",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode",
+      "link": "https://www.marktechpost.com/2026/10/31/factory-droid-1-0-frontier-harness/",
+      "contentSnippet": "Factory released Droid 1.0, a model-independent coding agent harness that makes programmatic tool calling the default. On Factory’s own Terminal-Bench 4 runs, Droid scores 65.2% with Claude Opus 5.5 at $4.73 per passed task. The post Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-31T10:38:14.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 66.67,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 113,
+        "ruleScoreNormalized": 66.66666666666666,
+        "finalScore": 66.67,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "d93ee9d7c64d",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Vercel Labs Open-Sources agent-desktop for Agent Computer Use",
+      "link": "https://www.marktechpost.com/2026/10/31/vercel-labs-agent-desktop-computer-use/",
+      "contentSnippet": "Vercel Labs released agent-desktop, an Apache-2.0 Rust CLI that gives any AI agent computer use on macOS, Windows and Linux by reading OS accessibility trees and acting on stable refs instead of pixels. The post Vercel Labs Open-Sources agent-desktop for Agent Computer Use appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-31T10:10:28.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 66.67,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 113,
+        "ruleScoreNormalized": 66.66666666666666,
+        "finalScore": 66.67,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "b76f737539ea",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+      "link": "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/",
+      "contentSnippet": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cut coding agent token costs by 18.4% to 30.9% on SWE-Bench, with no change to the agent. The post Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9% appeared first on MarkTechPost.",
+      "publishedAt": "2026-10-30T17:53:37.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 66.67,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 113,
+        "ruleScoreNormalized": 66.66666666666666,
+        "finalScore": 66.67,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "60adcdaf1f1a",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "How we detect frontier model misalignment",
+      "link": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+      "contentSnippet": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
+      "publishedAt": "2026-10-29T09:00:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 60.78,
+      "importance": "low",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 110,
+        "ruleScoreNormalized": 60.78431372549019,
+        "finalScore": 60.78,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：42/42",
+    "LLM 分类打分回退明细（前 3/42）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07371c1d0615d0cb8ff3f0a7d784142e\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07371c1e718f95838212f82308c7a4f2\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07371c1fde09cd3458918888d4181a92\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=42：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=79, split_retry=37",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent\n- AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare\n- Bug0 Releases QA Agent to Automate Regression Testing with Cached Playwright Replays\n- Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs\n- Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode\n\n### 分类覆盖（大纲）\n- open-source: 9 条\n- tooling: 2 条\n- agent: 6 条\n- tutorial: 2 条\n- other: 17 条\n- research: 2 条\n- industry-news: 4 条",
+    "rankedItems": [
+      {
+        "id": "30b9a7083910",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent",
+        "link": "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/",
+        "contentSnippet": "DeepSeek released dsh-superagent, an MIT-licensed research prototype that turns GitHub and Feishu requests into parallel worker sessions. In DeepSeek’s own simulation, p95 task completion fell to 15.7 minutes from 29.5 minutes. The post DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-01T07:47:17.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 130,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "82ef17bc4cb7",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+        "link": "https://www.marktechpost.com/2026/10/30/ai-security-agents-claude-codex-mantis-cloudflare/",
+        "contentSnippet": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use the same find, disprove, then patch loop. Here is how they differ, plus 12 more tools. The post AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T17:34:15.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 82.35,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 121,
+          "ruleScoreNormalized": 82.35294117647058,
+          "finalScore": 82.35,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d6d60d1b33d5",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Bug0 Releases QA Agent to Automate Regression Testing with Cached Playwright Replays",
+        "link": "https://www.infoq.com/news/2026/10/bug0-agent-testing-cached-replay/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "QA Agent is a new source-available Playwright library for agentic browser regression testing. The agent associates test instructions expressed in natural language to actions on the user interface, caches those when appropriate for faster CI replays, remapping them to test specifications when the user interface changes. Verification is based on multi-model consensus and vision model evaluations. By Bruno Couriol",
+        "publishedAt": "2026-10-29T15:17:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 80.39,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 120,
+          "ruleScoreNormalized": 80.3921568627451,
+          "finalScore": 80.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "342a0de7eaf9",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+        "link": "https://www.infoq.com/news/2026/10/google-pagebreak-security-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities across its web applications since entering full operation in January. PageBreak uses Gemini models to autonomously investigate potential vulnerabilities, but reports them only after deterministic validators successfully reproduce the exploit against a running application. By Renato Losio",
+        "publishedAt": "2026-10-31T06:20:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 66.67,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 66.66666666666666,
+          "finalScore": 66.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4bcfc33831e6",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode",
+        "link": "https://www.marktechpost.com/2026/10/31/factory-droid-1-0-frontier-harness/",
+        "contentSnippet": "Factory released Droid 1.0, a model-independent coding agent harness that makes programmatic tool calling the default. On Factory’s own Terminal-Bench 4 runs, Droid scores 65.2% with Claude Opus 5.5 at $4.73 per passed task. The post Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-31T10:38:14.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 66.67,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 66.66666666666666,
+          "finalScore": 66.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d93ee9d7c64d",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Vercel Labs Open-Sources agent-desktop for Agent Computer Use",
+        "link": "https://www.marktechpost.com/2026/10/31/vercel-labs-agent-desktop-computer-use/",
+        "contentSnippet": "Vercel Labs released agent-desktop, an Apache-2.0 Rust CLI that gives any AI agent computer use on macOS, Windows and Linux by reading OS accessibility trees and acting on stable refs instead of pixels. The post Vercel Labs Open-Sources agent-desktop for Agent Computer Use appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-31T10:10:28.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 66.67,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 66.66666666666666,
+          "finalScore": 66.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b76f737539ea",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+        "link": "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/",
+        "contentSnippet": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cut coding agent token costs by 18.4% to 30.9% on SWE-Bench, with no change to the agent. The post Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9% appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T17:53:37.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 66.67,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 66.66666666666666,
+          "finalScore": 66.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "60adcdaf1f1a",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How we detect frontier model misalignment",
+        "link": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+        "contentSnippet": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
+        "publishedAt": "2026-10-29T09:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.78,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 60.78431372549019,
+          "finalScore": 60.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8c1252934b01",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "刚刚，DeepSeek重磅开源：Agent底座架构！",
+        "link": "https://www.qbitai.com/2026/10/506904.html",
+        "contentSnippet": "AI已经自己找到Bug并提交PR",
+        "publishedAt": "2026-10-31T13:49:44.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 58.82,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 109,
+          "ruleScoreNormalized": 58.82352941176471,
+          "finalScore": 58.82,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c90747fc3e6c",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+        "link": "https://www.infoq.com/news/2026/10/doordash-ai-grocery-reorder/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM inference and deterministic validation. Live catalog resolution keeps product selections current, while an editable shopping interface avoids unnecessary model calls. The company reports that shopping list views doubled and the flow’s order rate increased by approximately 34% By Leela Kumili",
+        "publishedAt": "2026-10-30T13:31:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 50.98,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 50.98039215686274,
+          "finalScore": 50.98,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d374e018ef09",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Skep – live cross-device sessions for AI coding agents",
+        "link": "https://skepagent.com/",
+        "contentSnippet": "Article URL: https://skepagent.com/ Comments URL: https://news.ycombinator.com/item?id=50331879 Points: 1 # Comments: 0",
+        "publishedAt": "2026-11-02T01:20:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 50.98,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 50.98039215686274,
+          "finalScore": 50.98,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d602766d4bb8",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Better Together – AI agents team up against spam calls and texts",
+        "link": "https://better-together.fun/",
+        "contentSnippet": "Launched https://better-together.fun this weekend to allow our personal AI agents to collaborate on problems that are tough to solve solo. First up is dealing with spam texts and calls. Comments URL: https://news.ycombinator.com/item?id=50331415 Points: 2 # Comments: 0",
+        "publishedAt": "2026-11-02T00:19:11.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 50.98,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 50.98039215686274,
+          "finalScore": 50.98,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "813b81289e18",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "An updated Model Spec for more capable and beneficial AI",
+        "link": "https://openai.com/index/updated-model-spec",
+        "contentSnippet": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.",
+        "publishedAt": "2026-10-29T17:00:00.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 43.14,
+        "importance": "low",
+        "recommendationReason": "可直接学习实践",
+        "scoreBreakdown": {
+          "ruleScore": 101,
+          "ruleScoreNormalized": 43.13725490196079,
+          "finalScore": 43.14,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "dde388700b4a",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Making it easier for websites to express AI training preferences",
+        "link": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+        "contentSnippet": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to participating providers.",
+        "publishedAt": "2026-10-30T09:30:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 41.18,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 41.17647058823529,
+          "finalScore": 41.18,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "581919a7a3a0",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Community safety report and new protections for teens",
+        "link": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+        "contentSnippet": "OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commitment to public safety reporting.",
+        "publishedAt": "2026-10-30T09:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 41.18,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 41.17647058823529,
+          "finalScore": 41.18,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "bb5e3ebcb89e",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "Jev新成果，再次引爆开源",
+        "link": "https://www.qbitai.com/2026/11/506922.html",
+        "contentSnippet": "再次“性价比屠夫”",
+        "publishedAt": "2026-11-01T04:18:37.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 39.22,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 99,
+          "ruleScoreNormalized": 39.21568627450981,
+          "finalScore": 39.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3e0ad60041ea",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Fair use benefits everyone",
+        "link": "https://openai.com/index/fair-use-benefits-everyone",
+        "contentSnippet": "OpenAI shares excerpts from court briefs by creators, academics, accessibility advocates, and legal experts, among others, on how fair use supports AI training and innovation.",
+        "publishedAt": "2026-10-30T00:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 31.37,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 31.372549019607842,
+          "finalScore": 31.37,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b0ac292d1047",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How Ropes & Gray is developing AI for transactional diligence",
+        "link": "https://openai.com/index/ropes-gray-ai-diligence",
+        "contentSnippet": "Ropes & Gray is developing AI for transactional diligence with OpenAI. Lawyers review grouped documents, summaries, and reports before advising clients.",
+        "publishedAt": "2026-10-29T07:00:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 31.37,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 31.372549019607842,
+          "finalScore": 31.37,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "347d639a0c72",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "AWS Capacity Largely Sold Out Through 2027, With On Demand Headroom Reserved",
+        "link": "https://www.infoq.com/news/2026/11/aws-capacity-sold-out/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Amazon CEO Andy Jassy says AWS’s large committed cloud capacity is largely sold out through 2027, with part of 2028 already allocated, while the company continues to reserve headroom for On Demand, EC2 and Bedrock. Practitioners discussing the remarks report difficulty obtaining On Demand capacity for ordinary EC2 instances, and similar constraints at other providers. By Steef-Jan Wiggers",
+        "publishedAt": "2026-11-01T08:03:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 31.37,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 31.372549019607842,
+          "finalScore": 31.37,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "84dc9e2f3b84",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Nace AI Open-Sources Drex Max v1: A 27B Decision Model That Runs Locally on Apple Silicon",
+        "link": "https://www.marktechpost.com/2026/11/01/nace-ai-open-sources-drex-max-v1-local-inference/",
+        "contentSnippet": "Nace AI open-sources Drex Max v1, a 27B multimodal decision model scoring 67.52 that runs on Apple Silicon. The post Nace AI Open-Sources Drex Max v1: A 27B Decision Model That Runs Locally on Apple Silicon appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-01T08:10:07.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 27.45,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 93,
+          "ruleScoreNormalized": 27.450980392156865,
+          "finalScore": 27.45,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "db035389cb0a",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Your Netgear router may be vulnerable to a security exploit – how to check and patch it",
+        "link": "https://www.zdnet.com/tech/netgear-routers-vulnerable-security-exploit/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T16:58:22.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 25.49,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 25.49019607843137,
+          "finalScore": 25.49,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3c6dee34c864",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "三年前布局，今年爆火丨西湖大学成立新中心",
+        "link": "https://www.qbitai.com/2026/11/507076.html",
+        "contentSnippet": "西湖世界模型研究中心成立",
+        "publishedAt": "2026-11-01T13:28:10.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 25.49,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 25.49019607843137,
+          "finalScore": 25.49,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4a4c3137d06e",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "Claude紧急叫停！暗改Harness禁止逆向游戏",
+        "link": "https://www.qbitai.com/2026/11/507038.html",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-01T13:09:55.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 25.49,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 25.49019607843137,
+          "finalScore": 25.49,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e50b632b0ca4",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Netflix Treats GPU Reliability as a Distributed Systems Problem",
+        "link": "https://www.infoq.com/news/2026/10/netflix-gpu-distributed-systems/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Netflix has detailed how it is building a reliability platform for large-scale GPU training and inference, using layered health checks, automated remediation, and fault-tolerant training to keep jobs running despite hardware failures. By Craig Risi",
+        "publishedAt": "2026-10-30T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.57,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.568627450980394,
+          "finalScore": 21.57,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4eb3c980cd9d",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Competition in Generative AI: Evidence from Consumer Demand (NBER)",
+        "link": "https://www.nber.org/papers/w35953",
+        "contentSnippet": "Article URL: https://www.nber.org/papers/w35953 Comments URL: https://news.ycombinator.com/item?id=50331511 Points: 1 # Comments: 1",
+        "publishedAt": "2026-11-02T00:32:20.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.57,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.568627450980394,
+          "finalScore": 21.57,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ce2e6049c47f",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "How Small Can We Slice an AI Model?",
+        "link": "https://operator0x.com/field-notes/weights-still-need-a-home/",
+        "contentSnippet": "Article URL: https://operator0x.com/field-notes/weights-still-need-a-home/ Comments URL: https://news.ycombinator.com/item?id=50331384 Points: 2 # Comments: 0",
+        "publishedAt": "2026-11-02T00:15:04.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.57,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.568627450980394,
+          "finalScore": 21.57,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b92135db2f3a",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "AI Nerfs: Are Claude, ChatGPT, and Gemini Nerfed Today?",
+        "link": "https://ai-nerfs.com",
+        "contentSnippet": "Article URL: https://ai-nerfs.com Comments URL: https://news.ycombinator.com/item?id=50330883 Points: 1 # Comments: 0",
+        "publishedAt": "2026-11-01T23:14:01.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.57,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.568627450980394,
+          "finalScore": 21.57,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "63c7ae608e94",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Empires of AI – By Eric Schmidt and Niall Ferguson",
+        "link": "https://www.foreignaffairs.com/china/empires-artificial-intelligence-niall-ferguson-eric-schmidt",
+        "contentSnippet": "Article URL: https://www.foreignaffairs.com/china/empires-artificial-intelligence-niall-ferguson-eric-schmidt Comments URL: https://news.ycombinator.com/item?id=50330753 Points: 3 # Comments: 1",
+        "publishedAt": "2026-11-01T22:52:23.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 21.57,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 21.568627450980394,
+          "finalScore": 21.57,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e604a204e5b1",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Our newest AI Quest: Mapping the human brain",
+        "link": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+        "contentSnippet": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”",
+        "publishedAt": "2026-10-26T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 15.69,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 15.686274509803921,
+          "finalScore": 15.69,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "443c8daec13b",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "清华姚期智团队新作：代数世界模型，让AI像牛顿一样思考",
+        "link": "https://www.qbitai.com/2026/11/507031.html",
+        "contentSnippet": "让AI像牛顿一样思考",
+        "publishedAt": "2026-11-01T08:02:37.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 15.69,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 15.686274509803921,
+          "finalScore": 15.69,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a10176ec63d1",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "老牌便利店机器人售货折戟：实验室锤炼上万次，货架前还是摔瓶子",
+        "link": "https://www.qbitai.com/2026/11/506990.html",
+        "contentSnippet": "这事还是想得太简单了",
+        "publishedAt": "2026-11-01T07:50:57.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 15.69,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 15.686274509803921,
+          "finalScore": 15.69,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "be825ae61e7e",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "How to Make Artificial Intelligence More Environmentally Sustainable",
+        "link": "https://www.infoq.com/news/2026/10/AI-environmentally-sustainable/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "IT is responsible for about 2 - 4% of all global emissions, and electricity use at Microsoft and Google has climbed because of AI, according to their own reports. Sustainability ought to be a top-level architectural concern. Some recommendations are: use pre-built and smaller models, run compute where low-carbon electricity is abundant, and train on renewable energy. By Ben Linders",
+        "publishedAt": "2026-10-29T11:41:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 11.76,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 85,
+          "ruleScoreNormalized": 11.76470588235294,
+          "finalScore": 11.76,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d7cc81c3c392",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Android 17 adoption hits a staggering 1% – why you really should update now",
+        "link": "https://www.zdnet.com/tech/android-17-os-adoption-numbers-october-2026/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T18:18:24.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 9.8,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 9.803921568627452,
+          "finalScore": 9.8,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "180f10777f3a",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Samsung adds better sleep tracking to Galaxy Watches – here’s what to expect",
+        "link": "https://www.zdnet.com/health/advanced-sleep-apnea-tracking-galaxy-watches/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T17:29:50.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 9.8,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 9.803921568627452,
+          "finalScore": 9.8,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "88616d198d0f",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "I’m finally ready for a smart calendar – why the Echo Show 16 stands out",
+        "link": "https://www.zdnet.com/home-and-office/im-finally-ready-for-a-smart-calendar-why-the-echo-show-16-stands-out/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T17:23:50.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 9.8,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 9.803921568627452,
+          "finalScore": 9.8,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3f28d45d40ef",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Google’s latest Home updates just fixed my biggest annoyances with its speakers and cameras",
+        "link": "https://www.zdnet.com/home-and-office/google-home-gemini-updates-42-fixes/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-30T16:14:11.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 9.8,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 9.803921568627452,
+          "finalScore": 9.8,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "51cd2b7b9a2d",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Southeast Asia’s digital economy to hit $368 billion",
+        "link": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+        "contentSnippet": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trillion by 2035.",
+        "publishedAt": "2026-10-21T04:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.88,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 5.88235294117647,
+          "finalScore": 5.88,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5478efc66827",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "contentSnippet": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "publishedAt": "2026-10-13T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.88,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 5.88235294117647,
+          "finalScore": 5.88,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "92d60b58598f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Introducing Playground: Create and play custom games",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+        "contentSnippet": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "publishedAt": "2026-10-07T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.88,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 5.88235294117647,
+          "finalScore": 5.88,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1d5fed04e570",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in September 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from September 2026",
+        "publishedAt": "2026-10-02T15:00:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.88,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 5.88235294117647,
+          "finalScore": 5.88,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "927c795585b6",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+        "contentSnippet": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "publishedAt": "2026-09-28T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 5.88,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 5.88235294117647,
+          "finalScore": 5.88,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "72458b8b3dd2",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Your headphones have hidden LE Audio features you’ll want to know about",
+        "link": "https://www.zdnet.com/tech/bluetooth-headphones-hidden-le-audio-features-jbl-sony-bose/",
+        "contentSnippet": "",
+        "publishedAt": "2026-10-29T17:45:05.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 79,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "30b9a7083910",
+        "title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent",
+        "summary": "DeepSeek released dsh-superagent, an MIT-licensed research prototype that turns GitHub and Feishu requests into paralle…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "30b9a7083910"
+        ]
+      },
+      {
+        "itemId": "82ef17bc4cb7",
+        "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+        "summary": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use t…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "82ef17bc4cb7"
+        ]
+      },
+      {
+        "itemId": "d6d60d1b33d5",
+        "title": "Bug0 Releases QA Agent to Automate Regression Testing with Cached Playwright Replays",
+        "summary": "QA Agent is a new source-available Playwright library for agentic browser regression testing. The agent associates test…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "d6d60d1b33d5"
+        ]
+      },
+      {
+        "itemId": "342a0de7eaf9",
+        "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+        "summary": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "342a0de7eaf9"
+        ]
+      },
+      {
+        "itemId": "4bcfc33831e6",
+        "title": "Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode",
+        "summary": "Factory released Droid 1.0, a model-independent coding agent harness that makes programmatic tool calling the default. …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "4bcfc33831e6"
+        ]
+      },
+      {
+        "itemId": "d93ee9d7c64d",
+        "title": "Vercel Labs Open-Sources agent-desktop for Agent Computer Use",
+        "summary": "Vercel Labs released agent-desktop, an Apache-2.0 Rust CLI that gives any AI agent computer use on macOS, Windows and L…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "d93ee9d7c64d"
+        ]
+      },
+      {
+        "itemId": "b76f737539ea",
+        "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+        "summary": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cu…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "b76f737539ea"
+        ]
+      },
+      {
+        "itemId": "60adcdaf1f1a",
+        "title": "How we detect frontier model misalignment",
+        "summary": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "60adcdaf1f1a"
+        ]
+      },
+      {
+        "itemId": "8c1252934b01",
+        "title": "刚刚，DeepSeek重磅开源：Agent底座架构！",
+        "summary": "AI已经自己找到Bug并提交PR",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "8c1252934b01"
+        ]
+      },
+      {
+        "itemId": "c90747fc3e6c",
+        "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+        "summary": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "c90747fc3e6c"
+        ]
+      },
+      {
+        "itemId": "d374e018ef09",
+        "title": "Show HN: Skep – live cross-device sessions for AI coding agents",
+        "summary": "Article URL: https://skepagent.com/ Comments URL: https://news.ycombinator.com/item?id=50331879 Points: 1 # Comments: 0",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "d374e018ef09"
+        ]
+      },
+      {
+        "itemId": "d602766d4bb8",
+        "title": "Show HN: Better Together – AI agents team up against spam calls and texts",
+        "summary": "Launched https://better-together.fun this weekend to allow our personal AI agents to collaborate on problems that are t…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "d602766d4bb8"
+        ]
+      },
+      {
+        "itemId": "813b81289e18",
+        "title": "An updated Model Spec for more capable and beneficial AI",
+        "summary": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and…",
+        "recommendation": "可直接学习实践",
+        "evidenceItemIds": [
+          "813b81289e18"
+        ]
+      },
+      {
+        "itemId": "dde388700b4a",
+        "title": "Making it easier for websites to express AI training preferences",
+        "summary": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to par…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "dde388700b4a"
+        ]
+      },
+      {
+        "itemId": "581919a7a3a0",
+        "title": "Community safety report and new protections for teens",
+        "summary": "OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commi…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "581919a7a3a0"
+        ]
+      },
+      {
+        "itemId": "bb5e3ebcb89e",
+        "title": "Jev新成果，再次引爆开源",
+        "summary": "再次“性价比屠夫”",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "bb5e3ebcb89e"
+        ]
+      },
+      {
+        "itemId": "3e0ad60041ea",
+        "title": "Fair use benefits everyone",
+        "summary": "OpenAI shares excerpts from court briefs by creators, academics, accessibility advocates, and legal experts, among othe…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3e0ad60041ea"
+        ]
+      },
+      {
+        "itemId": "b0ac292d1047",
+        "title": "How Ropes & Gray is developing AI for transactional diligence",
+        "summary": "Ropes & Gray is developing AI for transactional diligence with OpenAI. Lawyers review grouped documents, summaries, and…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b0ac292d1047"
+        ]
+      },
+      {
+        "itemId": "347d639a0c72",
+        "title": "AWS Capacity Largely Sold Out Through 2027, With On Demand Headroom Reserved",
+        "summary": "Amazon CEO Andy Jassy says AWS’s large committed cloud capacity is largely sold out through 2027, with part of 2028 alr…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "347d639a0c72"
+        ]
+      },
+      {
+        "itemId": "84dc9e2f3b84",
+        "title": "Nace AI Open-Sources Drex Max v1: A 27B Decision Model That Runs Locally on Apple Silicon",
+        "summary": "Nace AI open-sources Drex Max v1, a 27B multimodal decision model scoring 67.52 that runs on Apple Silicon. The post Na…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "84dc9e2f3b84"
+        ]
+      },
+      {
+        "itemId": "db035389cb0a",
+        "title": "Your Netgear router may be vulnerable to a security exploit – how to check and patch it",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "db035389cb0a"
+        ]
+      },
+      {
+        "itemId": "3c6dee34c864",
+        "title": "三年前布局，今年爆火丨西湖大学成立新中心",
+        "summary": "西湖世界模型研究中心成立",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3c6dee34c864"
+        ]
+      },
+      {
+        "itemId": "4a4c3137d06e",
+        "title": "Claude紧急叫停！暗改Harness禁止逆向游戏",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "4a4c3137d06e"
+        ]
+      },
+      {
+        "itemId": "e50b632b0ca4",
+        "title": "Netflix Treats GPU Reliability as a Distributed Systems Problem",
+        "summary": "Netflix has detailed how it is building a reliability platform for large-scale GPU training and inference, using layere…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e50b632b0ca4"
+        ]
+      },
+      {
+        "itemId": "4eb3c980cd9d",
+        "title": "Competition in Generative AI: Evidence from Consumer Demand (NBER)",
+        "summary": "Article URL: https://www.nber.org/papers/w35953 Comments URL: https://news.ycombinator.com/item?id=50331511 Points: 1 #…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "4eb3c980cd9d"
+        ]
+      },
+      {
+        "itemId": "ce2e6049c47f",
+        "title": "How Small Can We Slice an AI Model?",
+        "summary": "Article URL: https://operator0x.com/field-notes/weights-still-need-a-home/ Comments URL: https://news.ycombinator.com/i…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "ce2e6049c47f"
+        ]
+      },
+      {
+        "itemId": "b92135db2f3a",
+        "title": "AI Nerfs: Are Claude, ChatGPT, and Gemini Nerfed Today?",
+        "summary": "Article URL: https://ai-nerfs.com Comments URL: https://news.ycombinator.com/item?id=50330883 Points: 1 # Comments: 0",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b92135db2f3a"
+        ]
+      },
+      {
+        "itemId": "63c7ae608e94",
+        "title": "Empires of AI – By Eric Schmidt and Niall Ferguson",
+        "summary": "Article URL: https://www.foreignaffairs.com/china/empires-artificial-intelligence-niall-ferguson-eric-schmidt Comments …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "63c7ae608e94"
+        ]
+      },
+      {
+        "itemId": "e604a204e5b1",
+        "title": "Our newest AI Quest: Mapping the human brain",
+        "summary": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e604a204e5b1"
+        ]
+      },
+      {
+        "itemId": "443c8daec13b",
+        "title": "清华姚期智团队新作：代数世界模型，让AI像牛顿一样思考",
+        "summary": "让AI像牛顿一样思考",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "443c8daec13b"
+        ]
+      },
+      {
+        "itemId": "a10176ec63d1",
+        "title": "老牌便利店机器人售货折戟：实验室锤炼上万次，货架前还是摔瓶子",
+        "summary": "这事还是想得太简单了",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a10176ec63d1"
+        ]
+      },
+      {
+        "itemId": "be825ae61e7e",
+        "title": "How to Make Artificial Intelligence More Environmentally Sustainable",
+        "summary": "IT is responsible for about 2 - 4% of all global emissions, and electricity use at Microsoft and Google has climbed bec…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "be825ae61e7e"
+        ]
+      },
+      {
+        "itemId": "d7cc81c3c392",
+        "title": "Android 17 adoption hits a staggering 1% – why you really should update now",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d7cc81c3c392"
+        ]
+      },
+      {
+        "itemId": "180f10777f3a",
+        "title": "Samsung adds better sleep tracking to Galaxy Watches – here’s what to expect",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "180f10777f3a"
+        ]
+      },
+      {
+        "itemId": "88616d198d0f",
+        "title": "I’m finally ready for a smart calendar – why the Echo Show 16 stands out",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "88616d198d0f"
+        ]
+      },
+      {
+        "itemId": "3f28d45d40ef",
+        "title": "Google’s latest Home updates just fixed my biggest annoyances with its speakers and cameras",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3f28d45d40ef"
+        ]
+      },
+      {
+        "itemId": "51cd2b7b9a2d",
+        "title": "Southeast Asia’s digital economy to hit $368 billion",
+        "summary": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trilli…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "51cd2b7b9a2d"
+        ]
+      },
+      {
+        "itemId": "5478efc66827",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5478efc66827"
+        ]
+      },
+      {
+        "itemId": "92d60b58598f",
+        "title": "Introducing Playground: Create and play custom games",
+        "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "92d60b58598f"
+        ]
+      },
+      {
+        "itemId": "1d5fed04e570",
+        "title": "The latest AI news we announced in September 2026",
+        "summary": "Here are Google’s latest AI updates from September 2026",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1d5fed04e570"
+        ]
+      },
+      {
+        "itemId": "927c795585b6",
+        "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "927c795585b6"
+        ]
+      },
+      {
+        "itemId": "72458b8b3dd2",
+        "title": "Your headphones have hidden LE Audio features you’ll want to know about",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "72458b8b3dd2"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "30b9a7083910",
+        "title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent",
+        "takeaway": "DeepSeek released dsh-superagent, an MIT-licensed research prototype that turns GitHub and Feishu requests into paralle…",
+        "evidenceItemIds": [
+          "30b9a7083910"
+        ]
+      },
+      {
+        "itemId": "82ef17bc4cb7",
+        "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+        "takeaway": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use t…",
+        "evidenceItemIds": [
+          "82ef17bc4cb7"
+        ]
+      },
+      {
+        "itemId": "d6d60d1b33d5",
+        "title": "Bug0 Releases QA Agent to Automate Regression Testing with Cached Playwright Replays",
+        "takeaway": "QA Agent is a new source-available Playwright library for agentic browser regression testing. The agent associates test…",
+        "evidenceItemIds": [
+          "d6d60d1b33d5"
+        ]
+      },
+      {
+        "itemId": "342a0de7eaf9",
+        "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+        "takeaway": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities…",
+        "evidenceItemIds": [
+          "342a0de7eaf9"
+        ]
+      },
+      {
+        "itemId": "4bcfc33831e6",
+        "title": "Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode",
+        "takeaway": "Factory released Droid 1.0, a model-independent coding agent harness that makes programmatic tool calling the default. …",
+        "evidenceItemIds": [
+          "4bcfc33831e6"
+        ]
+      },
+      {
+        "itemId": "d93ee9d7c64d",
+        "title": "Vercel Labs Open-Sources agent-desktop for Agent Computer Use",
+        "takeaway": "Vercel Labs released agent-desktop, an Apache-2.0 Rust CLI that gives any AI agent computer use on macOS, Windows and L…",
+        "evidenceItemIds": [
+          "d93ee9d7c64d"
+        ]
+      },
+      {
+        "itemId": "b76f737539ea",
+        "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+        "takeaway": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cu…",
+        "evidenceItemIds": [
+          "b76f737539ea"
+        ]
+      },
+      {
+        "itemId": "60adcdaf1f1a",
+        "title": "How we detect frontier model misalignment",
+        "takeaway": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can …",
+        "evidenceItemIds": [
+          "60adcdaf1f1a"
+        ]
+      },
+      {
+        "itemId": "8c1252934b01",
+        "title": "刚刚，DeepSeek重磅开源：Agent底座架构！",
+        "takeaway": "AI已经自己找到Bug并提交PR",
+        "evidenceItemIds": [
+          "8c1252934b01"
+        ]
+      },
+      {
+        "itemId": "c90747fc3e6c",
+        "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+        "takeaway": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM …",
+        "evidenceItemIds": [
+          "c90747fc3e6c"
+        ]
+      },
+      {
+        "itemId": "d374e018ef09",
+        "title": "Show HN: Skep – live cross-device sessions for AI coding agents",
+        "takeaway": "Article URL: https://skepagent.com/ Comments URL: https://news.ycombinator.com/item?id=50331879 Points: 1 # Comments: 0",
+        "evidenceItemIds": [
+          "d374e018ef09"
+        ]
+      },
+      {
+        "itemId": "d602766d4bb8",
+        "title": "Show HN: Better Together – AI agents team up against spam calls and texts",
+        "takeaway": "Launched https://better-together.fun this weekend to allow our personal AI agents to collaborate on problems that are t…",
+        "evidenceItemIds": [
+          "d602766d4bb8"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕open-source与tooling展开，建议优先关注《DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent》、《AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare》、《Bug0 Releases QA Agent to Automate Regression Testing with Cached Playwright Replays》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Making it easier for websites to express AI training preferences》、《Fair use benefits everyone》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "dde388700b4a",
+          "3e0ad60041ea",
+          "84dc9e2f3b84",
+          "4a4c3137d06e"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 4 条，建议优先阅读《DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent》、《Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "30b9a7083910",
+          "342a0de7eaf9",
+          "8c1252934b01",
+          "c90747fc3e6c"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 4 条，建议优先阅读《Bug0 Releases QA Agent to Automate Regression Testing with Cached Playwright Replays》、《Vercel Labs Open-Sources agent-desktop for Agent Computer Use》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "d6d60d1b33d5",
+          "d93ee9d7c64d",
+          "b76f737539ea",
+          "60adcdaf1f1a"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《How Small Can We Slice an AI Model?》、《AI Nerfs: Are Claude, ChatGPT, and Gemini Nerfed Today?》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "ce2e6049c47f",
+          "b92135db2f3a",
+          "63c7ae608e94",
+          "1d5fed04e570"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "e497abda5d27e6112566e7a898f97114fb4bd9b7cdce803d03ba0676cd76545e",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-11-02T01:36:26.177Z",
+      "finishedAt": "2026-11-02T01:37:22.269Z",
+      "durationMs": 56092,
+      "inputCount": 42,
+      "processedCount": 42,
+      "fallbackCount": 42,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 42,
+      "failureStats": {
+        "totalFailed": 42,
+        "timeout": 0,
+        "http": 42,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 79,
+        "splitRetryCount": 37
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-26",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-19",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 1,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-11-02T01:37:22.319Z",
+      "finishedAt": "2026-11-02T01:37:36.459Z",
+      "durationMs": 14140,
+      "inputCount": 42,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "30b9a7083910",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent",
+        "link": "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/",
+        "contentSnippet": "DeepSeek released dsh-superagent, an MIT-licensed research prototype that turns GitHub and Feishu requests into parallel worker sessions. In DeepSeek’s own simulation, p95 task completion fell to 15.7 minutes from 29.5 minutes. The post DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-01T07:47:17.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 130,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "82ef17bc4cb7",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+        "link": "https://www.marktechpost.com/2026/10/30/ai-security-agents-claude-codex-mantis-cloudflare/",
+        "contentSnippet": "Anthropic, OpenAI, Cloudflare and Google each released an AI agent that hunts security bugs in source code. All 4 use the same find, disprove, then patch loop. Here is how they differ, plus 12 more tools. The post AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T17:34:15.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 82.35,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 121,
+          "ruleScoreNormalized": 82.35294117647058,
+          "finalScore": 82.35,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d6d60d1b33d5",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Bug0 Releases QA Agent to Automate Regression Testing with Cached Playwright Replays",
+        "link": "https://www.infoq.com/news/2026/10/bug0-agent-testing-cached-replay/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "QA Agent is a new source-available Playwright library for agentic browser regression testing. The agent associates test instructions expressed in natural language to actions on the user interface, caches those when appropriate for faster CI replays, remapping them to test specifications when the user interface changes. Verification is based on multi-model consensus and vision model evaluations. By Bruno Couriol",
+        "publishedAt": "2026-10-29T15:17:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 80.39,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 120,
+          "ruleScoreNormalized": 80.3921568627451,
+          "finalScore": 80.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "342a0de7eaf9",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+        "link": "https://www.infoq.com/news/2026/10/google-pagebreak-security-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities across its web applications since entering full operation in January. PageBreak uses Gemini models to autonomously investigate potential vulnerabilities, but reports them only after deterministic validators successfully reproduce the exploit against a running application. By Renato Losio",
+        "publishedAt": "2026-10-31T06:20:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 66.67,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 66.66666666666666,
+          "finalScore": 66.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4bcfc33831e6",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode",
+        "link": "https://www.marktechpost.com/2026/10/31/factory-droid-1-0-frontier-harness/",
+        "contentSnippet": "Factory released Droid 1.0, a model-independent coding agent harness that makes programmatic tool calling the default. On Factory’s own Terminal-Bench 4 runs, Droid scores 65.2% with Claude Opus 5.5 at $4.73 per passed task. The post Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-31T10:38:14.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 66.67,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 66.66666666666666,
+          "finalScore": 66.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d93ee9d7c64d",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Vercel Labs Open-Sources agent-desktop for Agent Computer Use",
+        "link": "https://www.marktechpost.com/2026/10/31/vercel-labs-agent-desktop-computer-use/",
+        "contentSnippet": "Vercel Labs released agent-desktop, an Apache-2.0 Rust CLI that gives any AI agent computer use on macOS, Windows and Linux by reading OS accessibility trees and acting on stable refs instead of pixels. The post Vercel Labs Open-Sources agent-desktop for Agent Computer Use appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-31T10:10:28.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 66.67,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 66.66666666666666,
+          "finalScore": 66.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b76f737539ea",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
+        "link": "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/",
+        "contentSnippet": "Microsoft Research and UC Berkeley released TokenEconomizer, an open-source plugin that learns from past sessions to cut coding agent token costs by 18.4% to 30.9% on SWE-Bench, with no change to the agent. The post Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9% appeared first on MarkTechPost.",
+        "publishedAt": "2026-10-30T17:53:37.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 66.67,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 66.66666666666666,
+          "finalScore": 66.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "60adcdaf1f1a",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How we detect frontier model misalignment",
+        "link": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+        "contentSnippet": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
+        "publishedAt": "2026-10-29T09:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.78,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 60.78431372549019,
+          "finalScore": 60.78,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 42,
+      "normalizedCount": 42,
+      "dedupedCount": 42,
+      "highImportanceCount": 1,
+      "mediumImportanceCount": 6,
+      "lowImportanceCount": 35,
+      "categoryBreakdown": {
+        "open-source": 9,
+        "tooling": 2,
+        "agent": 6,
+        "research": 2,
+        "industry-news": 4,
+        "tutorial": 2,
+        "other": 17
+      }
+    },
+    "warnings": [
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：42/42",
+      "LLM 分类打分回退明细（前 3/42）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07371c1d0615d0cb8ff3f0a7d784142e\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07371c1e718f95838212f82308c7a4f2\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07371c1fde09cd3458918888d4181a92\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=42：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=79, split_retry=37",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": "2026-11-02T04:30:00.000Z"
+  }
+}
