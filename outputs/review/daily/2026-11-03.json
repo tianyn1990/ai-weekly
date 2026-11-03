@@ -1,0 +1,2256 @@
+{
+  "runId": "daily-1793668185514",
+  "generatedAt": "2026-11-03T01:09:45.474Z",
+  "reviewStartedAt": "2026-11-03T01:09:45.474Z",
+  "reportDate": "2026-11-03",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-11-03T01:09:45.474Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 36,
+    "normalizedCount": 36,
+    "dedupedCount": 36,
+    "highImportanceCount": 3,
+    "mediumImportanceCount": 4,
+    "lowImportanceCount": 29,
+    "categoryBreakdown": {
+      "open-source": 8,
+      "tooling": 2,
+      "agent": 3,
+      "research": 0,
+      "industry-news": 7,
+      "tutorial": 0,
+      "other": 16
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "30b9a7083910",
+      "title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent",
+      "summary": "DeepSeek released dsh-superagent, an MIT-licensed research prototype that turns GitHub and Feishu requests into paralle…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "30b9a7083910"
+      ]
+    },
+    {
+      "itemId": "d39184030f51",
+      "title": "The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering",
+      "summary": "Letter has released the beta of Letterpress-1, a coding agent, harness and IDE for growth engineering. It reads a git-b…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "d39184030f51"
+      ]
+    },
+    {
+      "itemId": "ca43c25c476b",
+      "title": "Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery",
+      "summary": "Deep Principle has released Hydrogen-1.0, an open-weight scientific model for chemistry, materials science and life sci…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "ca43c25c476b"
+      ]
+    },
+    {
+      "itemId": "6b0e08e039af",
+      "title": "NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL",
+      "summary": "NVIDIA released Auto Ontology, an Apache 2.0 library that generates a semantic layer from enterprise metadata. It groun…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "6b0e08e039af"
+      ]
+    },
+    {
+      "itemId": "2e528402eed4",
+      "title": "Uber Builds MCP Gateway to Govern Access to 800+ Servers and 5,000+ AI Agent Tools",
+      "summary": "Uber has built an MCP Gateway to standardize how AI agents discover and invoke internal services across more than 800 M…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "2e528402eed4"
+      ]
+    },
+    {
+      "itemId": "b474ce96d863",
+      "title": "小米开源了个150元的AI小玩意，火到配件都涨价了",
+      "summary": "能指挥Agent干活，还能控制智能家居",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "b474ce96d863"
+      ]
+    },
+    {
+      "itemId": "342a0de7eaf9",
+      "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+      "summary": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "342a0de7eaf9"
+      ]
+    },
+    {
+      "itemId": "ce048c5e9087",
+      "title": "50 AI agents tried to build a thriving Minecraft civilization – it didn’t end well",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "ce048c5e9087"
+      ]
+    },
+    {
+      "itemId": "1085709cb6a7",
+      "title": "The latest AI news we announced in October 2026",
+      "summary": "Here are Google’s latest AI updates from October 2026",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1085709cb6a7"
+      ]
+    },
+    {
+      "itemId": "0de798e241b6",
+      "title": "Samsung’s Privacy Display may be coming to more Galaxy phones – what we know",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "0de798e241b6"
+      ]
+    },
+    {
+      "itemId": "bc1666852b97",
+      "title": "Google and Meta Open-source TorchTPU to Bring Native PyTorch Support to Google TPUs",
+      "summary": "TorchTPU is an open-source project developed by Google in collaboration with Meta that provides a native PyTorch backen…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "bc1666852b97"
+      ]
+    },
+    {
+      "itemId": "c90747fc3e6c",
+      "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+      "summary": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "c90747fc3e6c"
+      ]
+    },
+    {
+      "itemId": "5b847c3a0244",
+      "title": "从“能调用”到“敢托付”：仪电智算云 Token 工厂的三重可信",
+      "summary": "上海仪电与上海创智学院联合发布“飞轮转・万象生”仪电智算数链生态。",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "5b847c3a0244"
+      ]
+    },
+    {
+      "itemId": "9bd3b1ff930b",
+      "title": "OpenAI will merge ChatGPT’s chat and work tabs – here’s when, and what to expect",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9bd3b1ff930b"
+      ]
+    },
+    {
+      "itemId": "99beb8e83fa1",
+      "title": "Athenahealth patients can ask Claude about their medical records now",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "99beb8e83fa1"
+      ]
+    },
+    {
+      "itemId": "2d8d7f160d8e",
+      "title": "Don’t want a touchscreen? All premium MacBook Pros could have one soon, reports say",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2d8d7f160d8e"
+      ]
+    },
+    {
+      "itemId": "2246520288ca",
+      "title": "Firefox’s new Mini Window is every multitasker’s dream – Chrome can’t do this",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "2246520288ca"
+      ]
+    },
+    {
+      "itemId": "ac8e401572e6",
+      "title": "Meet qwenGPU: Qwen3.5-2B With 45 Compiled GPU Layers That Run CUDA",
+      "summary": "qwenGPU compiles a 4-lane SIMT GPU into Qwen3.5-2B as 45 untrained layers. The model writes every step of real CUDA lau…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "ac8e401572e6"
+      ]
+    },
+    {
+      "itemId": "16daf5611cb1",
+      "title": "顶级AI翻车的活儿，被这个新出的免费国产AI接住了！",
+      "summary": "商汤SenseNova 6.8 Flash",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "16daf5611cb1"
+      ]
+    },
+    {
+      "itemId": "c3e63ef1bbcd",
+      "title": "AWS Capacity Largely Sold out through 2027, with On-Demand Headroom Reserved",
+      "summary": "Amazon CEO Andy Jassy says AWS’s large committed cloud capacity is largely sold out through 2027, with part of 2028 alr…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c3e63ef1bbcd"
+      ]
+    },
+    {
+      "itemId": "9710cc51f44e",
+      "title": "OpenAI considers rebranding data centers to 'AI compute campuses\"",
+      "summary": "Article URL: https://www.tomshardware.com/tech-industry/data-centers/openai-considers-rebranding-data-centers-to-ai-com…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9710cc51f44e"
+      ]
+    },
+    {
+      "itemId": "db4883f6848f",
+      "title": "Claudbar: An AI side panel for Firefox",
+      "summary": "Article URL: https://addons.mozilla.org/firefox/addon/claudbar/ Comments URL: https://news.ycombinator.com/item?id=5034…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "db4883f6848f"
+      ]
+    },
+    {
+      "itemId": "fe87d49095b3",
+      "title": "Goldman restricts traders and bankers from using some AI tools",
+      "summary": "Article URL: https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/goldman-restricts-trad…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fe87d49095b3"
+      ]
+    },
+    {
+      "itemId": "88c5e599538e",
+      "title": "Dartmouth's provost warned us about AI cheating–but his AI use cost him his job",
+      "summary": "Article URL: https://arstechnica.com/tech-policy/2026/10/dartmouths-provost-warned-us-about-ai-cheating-but-his-own-ai-…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "88c5e599538e"
+      ]
+    },
+    {
+      "itemId": "b44e58640aa8",
+      "title": "Stolen AI API keys generated nearly $1M in charges for a single company",
+      "summary": "Article URL: https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models/ C…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b44e58640aa8"
+      ]
+    },
+    {
+      "itemId": "a9b451de50a8",
+      "title": "Faulty AI face recognition is wrongly accusing alarming numbers of shoplifting",
+      "summary": "Article URL: https://www.gadgetreview.com/the-number-of-innocent-people-being-accused-of-shoplifting-by-faulty-ai-facia…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a9b451de50a8"
+      ]
+    },
+    {
+      "itemId": "84dc9e2f3b84",
+      "title": "Nace AI Open-Sources Drex Max v1: A 27B Decision Model That Runs Locally on Apple Silicon",
+      "summary": "Nace AI open-sources Drex Max v1, a 27B multimodal decision model scoring 67.52 that runs on Apple Silicon. The post Na…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "84dc9e2f3b84"
+      ]
+    },
+    {
+      "itemId": "eabc0bfd5c75",
+      "title": "OpenAI重写大模型法则，第一条：忠于人类！！",
+      "summary": "新版“机器人三定律”。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "eabc0bfd5c75"
+      ]
+    },
+    {
+      "itemId": "e6751f391824",
+      "title": "央视严选「中国AI创业十骏」：唯一AI制药公司是清华系",
+      "summary": "模型管线双驱动",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e6751f391824"
+      ]
+    },
+    {
+      "itemId": "e7ec877dd397",
+      "title": "GPT-6.2 Astra开启灰测！Claude Mythos 5.5同日曝光",
+      "summary": "HuggingFace疑似泄露权重已被下5000次",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e7ec877dd397"
+      ]
+    },
+    {
+      "itemId": "e50b632b0ca4",
+      "title": "Netflix Treats GPU Reliability as a Distributed Systems Problem",
+      "summary": "Netflix has detailed how it is building a reliability platform for large-scale GPU training and inference, using layere…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e50b632b0ca4"
+      ]
+    },
+    {
+      "itemId": "e604a204e5b1",
+      "title": "Our newest AI Quest: Mapping the human brain",
+      "summary": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e604a204e5b1"
+      ]
+    },
+    {
+      "itemId": "51cd2b7b9a2d",
+      "title": "Southeast Asia’s digital economy to hit $368 billion",
+      "summary": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trilli…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "51cd2b7b9a2d"
+      ]
+    },
+    {
+      "itemId": "5478efc66827",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5478efc66827"
+      ]
+    },
+    {
+      "itemId": "92d60b58598f",
+      "title": "Introducing Playground: Create and play custom games",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "92d60b58598f"
+      ]
+    },
+    {
+      "itemId": "1d5fed04e570",
+      "title": "The latest AI news we announced in September 2026",
+      "summary": "Here are Google’s latest AI updates from September 2026",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1d5fed04e570"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "30b9a7083910",
+      "title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent",
+      "takeaway": "DeepSeek released dsh-superagent, an MIT-licensed research prototype that turns GitHub and Feishu requests into paralle…",
+      "evidenceItemIds": [
+        "30b9a7083910"
+      ]
+    },
+    {
+      "itemId": "d39184030f51",
+      "title": "The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering",
+      "takeaway": "Letter has released the beta of Letterpress-1, a coding agent, harness and IDE for growth engineering. It reads a git-b…",
+      "evidenceItemIds": [
+        "d39184030f51"
+      ]
+    },
+    {
+      "itemId": "ca43c25c476b",
+      "title": "Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery",
+      "takeaway": "Deep Principle has released Hydrogen-1.0, an open-weight scientific model for chemistry, materials science and life sci…",
+      "evidenceItemIds": [
+        "ca43c25c476b"
+      ]
+    },
+    {
+      "itemId": "6b0e08e039af",
+      "title": "NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL",
+      "takeaway": "NVIDIA released Auto Ontology, an Apache 2.0 library that generates a semantic layer from enterprise metadata. It groun…",
+      "evidenceItemIds": [
+        "6b0e08e039af"
+      ]
+    },
+    {
+      "itemId": "2e528402eed4",
+      "title": "Uber Builds MCP Gateway to Govern Access to 800+ Servers and 5,000+ AI Agent Tools",
+      "takeaway": "Uber has built an MCP Gateway to standardize how AI agents discover and invoke internal services across more than 800 M…",
+      "evidenceItemIds": [
+        "2e528402eed4"
+      ]
+    },
+    {
+      "itemId": "b474ce96d863",
+      "title": "小米开源了个150元的AI小玩意，火到配件都涨价了",
+      "takeaway": "能指挥Agent干活，还能控制智能家居",
+      "evidenceItemIds": [
+        "b474ce96d863"
+      ]
+    },
+    {
+      "itemId": "342a0de7eaf9",
+      "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+      "takeaway": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities…",
+      "evidenceItemIds": [
+        "342a0de7eaf9"
+      ]
+    },
+    {
+      "itemId": "ce048c5e9087",
+      "title": "50 AI agents tried to build a thriving Minecraft civilization – it didn’t end well",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "ce048c5e9087"
+      ]
+    },
+    {
+      "itemId": "1085709cb6a7",
+      "title": "The latest AI news we announced in October 2026",
+      "takeaway": "Here are Google’s latest AI updates from October 2026",
+      "evidenceItemIds": [
+        "1085709cb6a7"
+      ]
+    },
+    {
+      "itemId": "0de798e241b6",
+      "title": "Samsung’s Privacy Display may be coming to more Galaxy phones – what we know",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "0de798e241b6"
+      ]
+    },
+    {
+      "itemId": "bc1666852b97",
+      "title": "Google and Meta Open-source TorchTPU to Bring Native PyTorch Support to Google TPUs",
+      "takeaway": "TorchTPU is an open-source project developed by Google in collaboration with Meta that provides a native PyTorch backen…",
+      "evidenceItemIds": [
+        "bc1666852b97"
+      ]
+    },
+    {
+      "itemId": "c90747fc3e6c",
+      "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+      "takeaway": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM …",
+      "evidenceItemIds": [
+        "c90747fc3e6c"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent》、《The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering》、《Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Samsung’s Privacy Display may be coming to more Galaxy phones – what we know》、《Google and Meta Open-source TorchTPU to Bring Native PyTorch Support to Google TPUs》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "0de798e241b6",
+        "bc1666852b97",
+        "9bd3b1ff930b",
+        "99beb8e83fa1"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 4 条，建议优先阅读《DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent》、《Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "30b9a7083910",
+        "ca43c25c476b",
+        "b474ce96d863",
+        "342a0de7eaf9"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《The latest AI news we announced in October 2026》、《从“能调用”到“敢托付”：仪电智算云 Token 工厂的三重可信》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "1085709cb6a7",
+        "5b847c3a0244",
+        "db4883f6848f",
+        "88c5e599538e"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 3 条，建议优先阅读《The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering》、《NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "d39184030f51",
+        "6b0e08e039af",
+        "ce048c5e9087"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "c497223e04a7325f140415f024220ad643e421f39ce094158face6b8bebd5b63",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-11-03T01:33:58.668Z",
+    "finishedAt": "2026-11-03T01:36:11.849Z",
+    "durationMs": 133181,
+    "inputCount": 36,
+    "processedCount": 36,
+    "fallbackCount": 36,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 36,
+    "failureStats": {
+      "totalFailed": 36,
+      "timeout": 0,
+      "http": 36,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 68,
+      "splitRetryCount": 32
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-27",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=UND_ERR_CONNECT_TIMEOUT"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-20",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 1,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-11-03T01:36:11.939Z",
+    "finishedAt": "2026-11-03T01:36:25.113Z",
+    "durationMs": 13174,
+    "inputCount": 36,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "30b9a7083910",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent",
+      "link": "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/",
+      "contentSnippet": "DeepSeek released dsh-superagent, an MIT-licensed research prototype that turns GitHub and Feishu requests into parallel worker sessions. In DeepSeek’s own simulation, p95 task completion fell to 15.7 minutes from 29.5 minutes. The post DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent appeared first on MarkTechPost.",
+      "publishedAt": "2026-11-01T07:47:17.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 125,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "d39184030f51",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering",
+      "link": "https://www.marktechpost.com/2026/11/02/letter-letterpress-1-growth-engineering-coding-agent/",
+      "contentSnippet": "Letter has released the beta of Letterpress-1, a coding agent, harness and IDE for growth engineering. It reads a git-based site and its market, then opens pull requests for SEO, GEO and conversion work. The post The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering appeared first on MarkTechPost.",
+      "publishedAt": "2026-11-03T00:43:03.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 95.35,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 123,
+        "ruleScoreNormalized": 95.34883720930233,
+        "finalScore": 95.35,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "ca43c25c476b",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery",
+      "link": "https://www.marktechpost.com/2026/11/02/deep-principle-hydrogen-1-0-open-weight-scientific-model/",
+      "contentSnippet": "Deep Principle has released Hydrogen-1.0, an open-weight scientific model for chemistry, materials science and life sciences. It is built by post-training Z.ai’s GLM-5.3 on domain data, laboratory records and agent discovery trajectories. For developers, it offers open weights that report a FrontierScience-Research win over GPT-6-Astra. The weights ship under the MIT License. TL;DR What is […] The post Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery appeared first on MarkTechPost.",
+      "publishedAt": "2026-11-02T18:41:41.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 95.35,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 123,
+        "ruleScoreNormalized": 95.34883720930233,
+        "finalScore": 95.35,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "6b0e08e039af",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL",
+      "link": "https://www.marktechpost.com/2026/11/01/nvidia-auto-ontology-open-source-semantic-layer-ai-agents/",
+      "contentSnippet": "NVIDIA released Auto Ontology, an Apache 2.0 library that generates a semantic layer from enterprise metadata. It grounds agent SQL in certified definitions and serves context through MCP, CLI and API. The post NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL appeared first on MarkTechPost.",
+      "publishedAt": "2026-11-02T07:47:12.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 83.72,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 118,
+        "ruleScoreNormalized": 83.72093023255815,
+        "finalScore": 83.72,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "2e528402eed4",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Uber Builds MCP Gateway to Govern Access to 800+ Servers and 5,000+ AI Agent Tools",
+      "link": "https://www.infoq.com/news/2026/11/uber-mcp-gateway-ai-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Uber has built an MCP Gateway to standardize how AI agents discover and invoke internal services across more than 800 MCP servers and 5,000 tools. The gateway separates tool registration from runtime execution and includes automated API discovery, access controls, sensitive data redaction, incremental tool discovery through Omni MCP, and response filtering. By Leela Kumili",
+      "publishedAt": "2026-11-02T13:53:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 76.74,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 115,
+        "ruleScoreNormalized": 76.74418604651163,
+        "finalScore": 76.74,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=UND_ERR_CONNECT_TIMEOUT",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：36/36",
+    "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07386d65528956f97f28e0aaa7b162cf\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07386d6684b1047f3b4a37d547b15174\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07386d67b539af709f205c5cd95dd030\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent\n- The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering\n- Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery\n- NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL\n- Uber Builds MCP Gateway to Govern Access to 800+ Servers and 5,000+ AI Agent Tools\n\n### 分类覆盖（大纲）\n- open-source: 8 条\n- agent: 3 条\n- tooling: 2 条\n- industry-news: 7 条\n- other: 16 条",
+    "rankedItems": [
+      {
+        "id": "30b9a7083910",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent",
+        "link": "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/",
+        "contentSnippet": "DeepSeek released dsh-superagent, an MIT-licensed research prototype that turns GitHub and Feishu requests into parallel worker sessions. In DeepSeek’s own simulation, p95 task completion fell to 15.7 minutes from 29.5 minutes. The post DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-01T07:47:17.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 125,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d39184030f51",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering",
+        "link": "https://www.marktechpost.com/2026/11/02/letter-letterpress-1-growth-engineering-coding-agent/",
+        "contentSnippet": "Letter has released the beta of Letterpress-1, a coding agent, harness and IDE for growth engineering. It reads a git-based site and its market, then opens pull requests for SEO, GEO and conversion work. The post The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-03T00:43:03.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 95.35,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 95.34883720930233,
+          "finalScore": 95.35,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ca43c25c476b",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery",
+        "link": "https://www.marktechpost.com/2026/11/02/deep-principle-hydrogen-1-0-open-weight-scientific-model/",
+        "contentSnippet": "Deep Principle has released Hydrogen-1.0, an open-weight scientific model for chemistry, materials science and life sciences. It is built by post-training Z.ai’s GLM-5.3 on domain data, laboratory records and agent discovery trajectories. For developers, it offers open weights that report a FrontierScience-Research win over GPT-6-Astra. The weights ship under the MIT License. TL;DR What is […] The post Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-02T18:41:41.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 95.35,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 95.34883720930233,
+          "finalScore": 95.35,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6b0e08e039af",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL",
+        "link": "https://www.marktechpost.com/2026/11/01/nvidia-auto-ontology-open-source-semantic-layer-ai-agents/",
+        "contentSnippet": "NVIDIA released Auto Ontology, an Apache 2.0 library that generates a semantic layer from enterprise metadata. It grounds agent SQL in certified definitions and serves context through MCP, CLI and API. The post NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-02T07:47:12.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 83.72,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 83.72093023255815,
+          "finalScore": 83.72,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2e528402eed4",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Uber Builds MCP Gateway to Govern Access to 800+ Servers and 5,000+ AI Agent Tools",
+        "link": "https://www.infoq.com/news/2026/11/uber-mcp-gateway-ai-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Uber has built an MCP Gateway to standardize how AI agents discover and invoke internal services across more than 800 MCP servers and 5,000 tools. The gateway separates tool registration from runtime execution and includes automated API discovery, access controls, sensitive data redaction, incremental tool discovery through Omni MCP, and response filtering. By Leela Kumili",
+        "publishedAt": "2026-11-02T13:53:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 76.74,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 76.74418604651163,
+          "finalScore": 76.74,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b474ce96d863",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "小米开源了个150元的AI小玩意，火到配件都涨价了",
+        "link": "https://www.qbitai.com/2026/11/507107.html",
+        "contentSnippet": "能指挥Agent干活，还能控制智能家居",
+        "publishedAt": "2026-11-02T06:08:04.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 74.42,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 114,
+          "ruleScoreNormalized": 74.4186046511628,
+          "finalScore": 74.42,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "342a0de7eaf9",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+        "link": "https://www.infoq.com/news/2026/10/google-pagebreak-security-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities across its web applications since entering full operation in January. PageBreak uses Gemini models to autonomously investigate potential vulnerabilities, but reports them only after deterministic validators successfully reproduce the exploit against a running application. By Renato Losio",
+        "publishedAt": "2026-10-31T06:20:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 72.09,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 72.09302325581395,
+          "finalScore": 72.09,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ce048c5e9087",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "50 AI agents tried to build a thriving Minecraft civilization – it didn’t end well",
+        "link": "https://www.zdnet.com/innovation/y-combinator-ai-agents-minecraft-experiment-behavior/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-02T16:30:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 62.79,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 109,
+          "ruleScoreNormalized": 62.7906976744186,
+          "finalScore": 62.79,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1085709cb6a7",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in October 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from October 2026",
+        "publishedAt": "2026-11-02T17:45:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 46.51,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 46.51162790697674,
+          "finalScore": 46.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0de798e241b6",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Samsung’s Privacy Display may be coming to more Galaxy phones – what we know",
+        "link": "https://www.zdnet.com/tech/samsung-privacy-display-galaxy-s27-pro-ultra/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-02T16:52:54.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 46.51,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 46.51162790697674,
+          "finalScore": 46.51,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "bc1666852b97",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google and Meta Open-source TorchTPU to Bring Native PyTorch Support to Google TPUs",
+        "link": "https://www.infoq.com/news/2026/11/torchtpu-native-pythorch-tpu/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "TorchTPU is an open-source project developed by Google in collaboration with Meta that provides a native PyTorch backend for Google TPUs. It enables PyTorch workloads to execute on TPU hardware with minimal code modifications, supporting eager and compiled execution, distributed computing, and hardware-specific optimizations. By Sergio De Simone",
+        "publishedAt": "2026-11-02T17:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 41.86,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 41.86046511627907,
+          "finalScore": 41.86,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c90747fc3e6c",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+        "link": "https://www.infoq.com/news/2026/10/doordash-ai-grocery-reorder/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM inference and deterministic validation. Live catalog resolution keeps product selections current, while an editable shopping interface avoids unnecessary model calls. The company reports that shopping list views doubled and the flow’s order rate increased by approximately 34% By Leela Kumili",
+        "publishedAt": "2026-10-30T13:31:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 41.86,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 41.86046511627907,
+          "finalScore": 41.86,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5b847c3a0244",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "从“能调用”到“敢托付”：仪电智算云 Token 工厂的三重可信",
+        "link": "https://www.qbitai.com/2026/11/507260.html",
+        "contentSnippet": "上海仪电与上海创智学院联合发布“飞轮转・万象生”仪电智算数链生态。",
+        "publishedAt": "2026-11-02T07:47:38.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 34.88,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 34.883720930232556,
+          "finalScore": 34.88,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9bd3b1ff930b",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "OpenAI will merge ChatGPT’s chat and work tabs – here’s when, and what to expect",
+        "link": "https://www.zdnet.com/innovation/openai-merge-chatgpt-chat-work-tabs/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-02T18:01:55.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 27.91,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 27.906976744186046,
+          "finalScore": 27.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "99beb8e83fa1",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Athenahealth patients can ask Claude about their medical records now",
+        "link": "https://www.zdnet.com/health/athenahealth-claude-ai-medical-partnership/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-02T17:30:47.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 27.91,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 27.906976744186046,
+          "finalScore": 27.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2d8d7f160d8e",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Don’t want a touchscreen? All premium MacBook Pros could have one soon, reports say",
+        "link": "https://www.zdnet.com/tech/all-premium-macbook-pros-touchscreens-2027/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-02T17:23:24.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 27.91,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 27.906976744186046,
+          "finalScore": 27.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2246520288ca",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Firefox’s new Mini Window is every multitasker’s dream – Chrome can’t do this",
+        "link": "https://www.zdnet.com/home-and-office/firefox-mini-window-browser-feature/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-02T17:15:17.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 27.91,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 27.906976744186046,
+          "finalScore": 27.91,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ac8e401572e6",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet qwenGPU: Qwen3.5-2B With 45 Compiled GPU Layers That Run CUDA",
+        "link": "https://www.marktechpost.com/2026/11/01/qwengpu-simt-gpu-compiled-into-qwen3-5-2b-weights-runs-cuda/",
+        "contentSnippet": "qwenGPU compiles a 4-lane SIMT GPU into Qwen3.5-2B as 45 untrained layers. The model writes every step of real CUDA launches itself, using Gated DeltaNet state as registers and memory. The post Meet qwenGPU: Qwen3.5-2B With 45 Compiled GPU Layers That Run CUDA appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-02T07:28:29.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 25.58,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 93,
+          "ruleScoreNormalized": 25.581395348837212,
+          "finalScore": 25.58,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "16daf5611cb1",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "顶级AI翻车的活儿，被这个新出的免费国产AI接住了！",
+        "link": "https://www.qbitai.com/2026/11/507277.html",
+        "contentSnippet": "商汤SenseNova 6.8 Flash",
+        "publishedAt": "2026-11-02T13:36:41.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 23.26,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 23.25581395348837,
+          "finalScore": 23.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c3e63ef1bbcd",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "AWS Capacity Largely Sold out through 2027, with On-Demand Headroom Reserved",
+        "link": "https://www.infoq.com/news/2026/11/aws-capacity-sold-out/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Amazon CEO Andy Jassy says AWS’s large committed cloud capacity is largely sold out through 2027, with part of 2028 already allocated, while the company continues to reserve headroom for On Demand, EC2 and Bedrock. Practitioners discussing the remarks report difficulty obtaining On Demand capacity for ordinary EC2 instances, and similar constraints at other providers. By Steef-Jan Wiggers",
+        "publishedAt": "2026-11-01T08:03:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.6,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 18.6046511627907,
+          "finalScore": 18.6,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9710cc51f44e",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "OpenAI considers rebranding data centers to 'AI compute campuses\"",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/openai-considers-rebranding-data-centers-to-ai-compute-campuses-as-data-center-backlash-intensifies-company-reportedly-sees-2028-presidential-election-becoming-an-ai-issue",
+        "contentSnippet": "Article URL: https://www.tomshardware.com/tech-industry/data-centers/openai-considers-rebranding-data-centers-to-ai-compute-campuses-as-data-center-backlash-intensifies-company-reportedly-sees-2028-presidential-election-becoming-an-ai-issue Comments URL: https://news.ycombinator.com/item?id=50346759 Points: 3 # Comments: 0",
+        "publishedAt": "2026-11-03T01:18:33.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.6,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 18.6046511627907,
+          "finalScore": 18.6,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "db4883f6848f",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Claudbar: An AI side panel for Firefox",
+        "link": "https://addons.mozilla.org/firefox/addon/claudbar/",
+        "contentSnippet": "Article URL: https://addons.mozilla.org/firefox/addon/claudbar/ Comments URL: https://news.ycombinator.com/item?id=50346627 Points: 2 # Comments: 0",
+        "publishedAt": "2026-11-03T01:04:11.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.6,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 18.6046511627907,
+          "finalScore": 18.6,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fe87d49095b3",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Goldman restricts traders and bankers from using some AI tools",
+        "link": "https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/goldman-restricts-traders-and-bankers-from-using-some-ai-tools-14066677.html",
+        "contentSnippet": "Article URL: https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/goldman-restricts-traders-and-bankers-from-using-some-ai-tools-14066677.html Comments URL: https://news.ycombinator.com/item?id=50346504 Points: 2 # Comments: 0",
+        "publishedAt": "2026-11-03T00:50:45.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.6,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 18.6046511627907,
+          "finalScore": 18.6,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "88c5e599538e",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Dartmouth's provost warned us about AI cheating–but his AI use cost him his job",
+        "link": "https://arstechnica.com/tech-policy/2026/10/dartmouths-provost-warned-us-about-ai-cheating-but-his-own-ai-use-cost-him-his-job/",
+        "contentSnippet": "Article URL: https://arstechnica.com/tech-policy/2026/10/dartmouths-provost-warned-us-about-ai-cheating-but-his-own-ai-use-cost-him-his-job/ Comments URL: https://news.ycombinator.com/item?id=50346414 Points: 1 # Comments: 0",
+        "publishedAt": "2026-11-03T00:40:14.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.6,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 18.6046511627907,
+          "finalScore": 18.6,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b44e58640aa8",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Stolen AI API keys generated nearly $1M in charges for a single company",
+        "link": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models/",
+        "contentSnippet": "Article URL: https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models/ Comments URL: https://news.ycombinator.com/item?id=50346350 Points: 4 # Comments: 2",
+        "publishedAt": "2026-11-03T00:32:32.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.6,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 18.6046511627907,
+          "finalScore": 18.6,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a9b451de50a8",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Faulty AI face recognition is wrongly accusing alarming numbers of shoplifting",
+        "link": "https://www.gadgetreview.com/the-number-of-innocent-people-being-accused-of-shoplifting-by-faulty-ai-facial-recognition-systems-is-alarming",
+        "contentSnippet": "Article URL: https://www.gadgetreview.com/the-number-of-innocent-people-being-accused-of-shoplifting-by-faulty-ai-facial-recognition-systems-is-alarming Comments URL: https://news.ycombinator.com/item?id=50346125 Points: 3 # Comments: 1",
+        "publishedAt": "2026-11-03T00:06:38.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.6,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 18.6046511627907,
+          "finalScore": 18.6,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "84dc9e2f3b84",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Nace AI Open-Sources Drex Max v1: A 27B Decision Model That Runs Locally on Apple Silicon",
+        "link": "https://www.marktechpost.com/2026/11/01/nace-ai-open-sources-drex-max-v1-local-inference/",
+        "contentSnippet": "Nace AI open-sources Drex Max v1, a 27B multimodal decision model scoring 67.52 that runs on Apple Silicon. The post Nace AI Open-Sources Drex Max v1: A 27B Decision Model That Runs Locally on Apple Silicon appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-01T08:10:07.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.95,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 88,
+          "ruleScoreNormalized": 13.953488372093023,
+          "finalScore": 13.95,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "eabc0bfd5c75",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "OpenAI重写大模型法则，第一条：忠于人类！！",
+        "link": "https://www.qbitai.com/2026/11/507225.html",
+        "contentSnippet": "新版“机器人三定律”。",
+        "publishedAt": "2026-11-02T07:27:54.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 11.63,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 11.627906976744185,
+          "finalScore": 11.63,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e6751f391824",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "央视严选「中国AI创业十骏」：唯一AI制药公司是清华系",
+        "link": "https://www.qbitai.com/2026/11/507150.html",
+        "contentSnippet": "模型管线双驱动",
+        "publishedAt": "2026-11-02T06:28:07.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 11.63,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 11.627906976744185,
+          "finalScore": 11.63,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e7ec877dd397",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "GPT-6.2 Astra开启灰测！Claude Mythos 5.5同日曝光",
+        "link": "https://www.qbitai.com/2026/11/507082.html",
+        "contentSnippet": "HuggingFace疑似泄露权重已被下5000次",
+        "publishedAt": "2026-11-02T04:28:53.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 11.63,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 11.627906976744185,
+          "finalScore": 11.63,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e50b632b0ca4",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Netflix Treats GPU Reliability as a Distributed Systems Problem",
+        "link": "https://www.infoq.com/news/2026/10/netflix-gpu-distributed-systems/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Netflix has detailed how it is building a reliability platform for large-scale GPU training and inference, using layered health checks, automated remediation, and fault-tolerant training to keep jobs running despite hardware failures. By Craig Risi",
+        "publishedAt": "2026-10-30T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.98,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 85,
+          "ruleScoreNormalized": 6.976744186046512,
+          "finalScore": 6.98,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e604a204e5b1",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Our newest AI Quest: Mapping the human brain",
+        "link": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+        "contentSnippet": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”",
+        "publishedAt": "2026-10-26T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "51cd2b7b9a2d",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Southeast Asia’s digital economy to hit $368 billion",
+        "link": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+        "contentSnippet": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trillion by 2035.",
+        "publishedAt": "2026-10-21T04:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5478efc66827",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "contentSnippet": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "publishedAt": "2026-10-13T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "92d60b58598f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Introducing Playground: Create and play custom games",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+        "contentSnippet": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "publishedAt": "2026-10-07T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1d5fed04e570",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in September 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from September 2026",
+        "publishedAt": "2026-10-02T15:00:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "30b9a7083910",
+        "title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent",
+        "summary": "DeepSeek released dsh-superagent, an MIT-licensed research prototype that turns GitHub and Feishu requests into paralle…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "30b9a7083910"
+        ]
+      },
+      {
+        "itemId": "d39184030f51",
+        "title": "The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering",
+        "summary": "Letter has released the beta of Letterpress-1, a coding agent, harness and IDE for growth engineering. It reads a git-b…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "d39184030f51"
+        ]
+      },
+      {
+        "itemId": "ca43c25c476b",
+        "title": "Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery",
+        "summary": "Deep Principle has released Hydrogen-1.0, an open-weight scientific model for chemistry, materials science and life sci…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "ca43c25c476b"
+        ]
+      },
+      {
+        "itemId": "6b0e08e039af",
+        "title": "NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL",
+        "summary": "NVIDIA released Auto Ontology, an Apache 2.0 library that generates a semantic layer from enterprise metadata. It groun…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "6b0e08e039af"
+        ]
+      },
+      {
+        "itemId": "2e528402eed4",
+        "title": "Uber Builds MCP Gateway to Govern Access to 800+ Servers and 5,000+ AI Agent Tools",
+        "summary": "Uber has built an MCP Gateway to standardize how AI agents discover and invoke internal services across more than 800 M…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "2e528402eed4"
+        ]
+      },
+      {
+        "itemId": "b474ce96d863",
+        "title": "小米开源了个150元的AI小玩意，火到配件都涨价了",
+        "summary": "能指挥Agent干活，还能控制智能家居",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "b474ce96d863"
+        ]
+      },
+      {
+        "itemId": "342a0de7eaf9",
+        "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+        "summary": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "342a0de7eaf9"
+        ]
+      },
+      {
+        "itemId": "ce048c5e9087",
+        "title": "50 AI agents tried to build a thriving Minecraft civilization – it didn’t end well",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "ce048c5e9087"
+        ]
+      },
+      {
+        "itemId": "1085709cb6a7",
+        "title": "The latest AI news we announced in October 2026",
+        "summary": "Here are Google’s latest AI updates from October 2026",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1085709cb6a7"
+        ]
+      },
+      {
+        "itemId": "0de798e241b6",
+        "title": "Samsung’s Privacy Display may be coming to more Galaxy phones – what we know",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "0de798e241b6"
+        ]
+      },
+      {
+        "itemId": "bc1666852b97",
+        "title": "Google and Meta Open-source TorchTPU to Bring Native PyTorch Support to Google TPUs",
+        "summary": "TorchTPU is an open-source project developed by Google in collaboration with Meta that provides a native PyTorch backen…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "bc1666852b97"
+        ]
+      },
+      {
+        "itemId": "c90747fc3e6c",
+        "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+        "summary": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "c90747fc3e6c"
+        ]
+      },
+      {
+        "itemId": "5b847c3a0244",
+        "title": "从“能调用”到“敢托付”：仪电智算云 Token 工厂的三重可信",
+        "summary": "上海仪电与上海创智学院联合发布“飞轮转・万象生”仪电智算数链生态。",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "5b847c3a0244"
+        ]
+      },
+      {
+        "itemId": "9bd3b1ff930b",
+        "title": "OpenAI will merge ChatGPT’s chat and work tabs – here’s when, and what to expect",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9bd3b1ff930b"
+        ]
+      },
+      {
+        "itemId": "99beb8e83fa1",
+        "title": "Athenahealth patients can ask Claude about their medical records now",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "99beb8e83fa1"
+        ]
+      },
+      {
+        "itemId": "2d8d7f160d8e",
+        "title": "Don’t want a touchscreen? All premium MacBook Pros could have one soon, reports say",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2d8d7f160d8e"
+        ]
+      },
+      {
+        "itemId": "2246520288ca",
+        "title": "Firefox’s new Mini Window is every multitasker’s dream – Chrome can’t do this",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "2246520288ca"
+        ]
+      },
+      {
+        "itemId": "ac8e401572e6",
+        "title": "Meet qwenGPU: Qwen3.5-2B With 45 Compiled GPU Layers That Run CUDA",
+        "summary": "qwenGPU compiles a 4-lane SIMT GPU into Qwen3.5-2B as 45 untrained layers. The model writes every step of real CUDA lau…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "ac8e401572e6"
+        ]
+      },
+      {
+        "itemId": "16daf5611cb1",
+        "title": "顶级AI翻车的活儿，被这个新出的免费国产AI接住了！",
+        "summary": "商汤SenseNova 6.8 Flash",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "16daf5611cb1"
+        ]
+      },
+      {
+        "itemId": "c3e63ef1bbcd",
+        "title": "AWS Capacity Largely Sold out through 2027, with On-Demand Headroom Reserved",
+        "summary": "Amazon CEO Andy Jassy says AWS’s large committed cloud capacity is largely sold out through 2027, with part of 2028 alr…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c3e63ef1bbcd"
+        ]
+      },
+      {
+        "itemId": "9710cc51f44e",
+        "title": "OpenAI considers rebranding data centers to 'AI compute campuses\"",
+        "summary": "Article URL: https://www.tomshardware.com/tech-industry/data-centers/openai-considers-rebranding-data-centers-to-ai-com…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9710cc51f44e"
+        ]
+      },
+      {
+        "itemId": "db4883f6848f",
+        "title": "Claudbar: An AI side panel for Firefox",
+        "summary": "Article URL: https://addons.mozilla.org/firefox/addon/claudbar/ Comments URL: https://news.ycombinator.com/item?id=5034…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "db4883f6848f"
+        ]
+      },
+      {
+        "itemId": "fe87d49095b3",
+        "title": "Goldman restricts traders and bankers from using some AI tools",
+        "summary": "Article URL: https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/goldman-restricts-trad…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fe87d49095b3"
+        ]
+      },
+      {
+        "itemId": "88c5e599538e",
+        "title": "Dartmouth's provost warned us about AI cheating–but his AI use cost him his job",
+        "summary": "Article URL: https://arstechnica.com/tech-policy/2026/10/dartmouths-provost-warned-us-about-ai-cheating-but-his-own-ai-…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "88c5e599538e"
+        ]
+      },
+      {
+        "itemId": "b44e58640aa8",
+        "title": "Stolen AI API keys generated nearly $1M in charges for a single company",
+        "summary": "Article URL: https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models/ C…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b44e58640aa8"
+        ]
+      },
+      {
+        "itemId": "a9b451de50a8",
+        "title": "Faulty AI face recognition is wrongly accusing alarming numbers of shoplifting",
+        "summary": "Article URL: https://www.gadgetreview.com/the-number-of-innocent-people-being-accused-of-shoplifting-by-faulty-ai-facia…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a9b451de50a8"
+        ]
+      },
+      {
+        "itemId": "84dc9e2f3b84",
+        "title": "Nace AI Open-Sources Drex Max v1: A 27B Decision Model That Runs Locally on Apple Silicon",
+        "summary": "Nace AI open-sources Drex Max v1, a 27B multimodal decision model scoring 67.52 that runs on Apple Silicon. The post Na…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "84dc9e2f3b84"
+        ]
+      },
+      {
+        "itemId": "eabc0bfd5c75",
+        "title": "OpenAI重写大模型法则，第一条：忠于人类！！",
+        "summary": "新版“机器人三定律”。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "eabc0bfd5c75"
+        ]
+      },
+      {
+        "itemId": "e6751f391824",
+        "title": "央视严选「中国AI创业十骏」：唯一AI制药公司是清华系",
+        "summary": "模型管线双驱动",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e6751f391824"
+        ]
+      },
+      {
+        "itemId": "e7ec877dd397",
+        "title": "GPT-6.2 Astra开启灰测！Claude Mythos 5.5同日曝光",
+        "summary": "HuggingFace疑似泄露权重已被下5000次",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e7ec877dd397"
+        ]
+      },
+      {
+        "itemId": "e50b632b0ca4",
+        "title": "Netflix Treats GPU Reliability as a Distributed Systems Problem",
+        "summary": "Netflix has detailed how it is building a reliability platform for large-scale GPU training and inference, using layere…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e50b632b0ca4"
+        ]
+      },
+      {
+        "itemId": "e604a204e5b1",
+        "title": "Our newest AI Quest: Mapping the human brain",
+        "summary": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e604a204e5b1"
+        ]
+      },
+      {
+        "itemId": "51cd2b7b9a2d",
+        "title": "Southeast Asia’s digital economy to hit $368 billion",
+        "summary": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trilli…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "51cd2b7b9a2d"
+        ]
+      },
+      {
+        "itemId": "5478efc66827",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5478efc66827"
+        ]
+      },
+      {
+        "itemId": "92d60b58598f",
+        "title": "Introducing Playground: Create and play custom games",
+        "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "92d60b58598f"
+        ]
+      },
+      {
+        "itemId": "1d5fed04e570",
+        "title": "The latest AI news we announced in September 2026",
+        "summary": "Here are Google’s latest AI updates from September 2026",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1d5fed04e570"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "30b9a7083910",
+        "title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent",
+        "takeaway": "DeepSeek released dsh-superagent, an MIT-licensed research prototype that turns GitHub and Feishu requests into paralle…",
+        "evidenceItemIds": [
+          "30b9a7083910"
+        ]
+      },
+      {
+        "itemId": "d39184030f51",
+        "title": "The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering",
+        "takeaway": "Letter has released the beta of Letterpress-1, a coding agent, harness and IDE for growth engineering. It reads a git-b…",
+        "evidenceItemIds": [
+          "d39184030f51"
+        ]
+      },
+      {
+        "itemId": "ca43c25c476b",
+        "title": "Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery",
+        "takeaway": "Deep Principle has released Hydrogen-1.0, an open-weight scientific model for chemistry, materials science and life sci…",
+        "evidenceItemIds": [
+          "ca43c25c476b"
+        ]
+      },
+      {
+        "itemId": "6b0e08e039af",
+        "title": "NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL",
+        "takeaway": "NVIDIA released Auto Ontology, an Apache 2.0 library that generates a semantic layer from enterprise metadata. It groun…",
+        "evidenceItemIds": [
+          "6b0e08e039af"
+        ]
+      },
+      {
+        "itemId": "2e528402eed4",
+        "title": "Uber Builds MCP Gateway to Govern Access to 800+ Servers and 5,000+ AI Agent Tools",
+        "takeaway": "Uber has built an MCP Gateway to standardize how AI agents discover and invoke internal services across more than 800 M…",
+        "evidenceItemIds": [
+          "2e528402eed4"
+        ]
+      },
+      {
+        "itemId": "b474ce96d863",
+        "title": "小米开源了个150元的AI小玩意，火到配件都涨价了",
+        "takeaway": "能指挥Agent干活，还能控制智能家居",
+        "evidenceItemIds": [
+          "b474ce96d863"
+        ]
+      },
+      {
+        "itemId": "342a0de7eaf9",
+        "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+        "takeaway": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities…",
+        "evidenceItemIds": [
+          "342a0de7eaf9"
+        ]
+      },
+      {
+        "itemId": "ce048c5e9087",
+        "title": "50 AI agents tried to build a thriving Minecraft civilization – it didn’t end well",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "ce048c5e9087"
+        ]
+      },
+      {
+        "itemId": "1085709cb6a7",
+        "title": "The latest AI news we announced in October 2026",
+        "takeaway": "Here are Google’s latest AI updates from October 2026",
+        "evidenceItemIds": [
+          "1085709cb6a7"
+        ]
+      },
+      {
+        "itemId": "0de798e241b6",
+        "title": "Samsung’s Privacy Display may be coming to more Galaxy phones – what we know",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "0de798e241b6"
+        ]
+      },
+      {
+        "itemId": "bc1666852b97",
+        "title": "Google and Meta Open-source TorchTPU to Bring Native PyTorch Support to Google TPUs",
+        "takeaway": "TorchTPU is an open-source project developed by Google in collaboration with Meta that provides a native PyTorch backen…",
+        "evidenceItemIds": [
+          "bc1666852b97"
+        ]
+      },
+      {
+        "itemId": "c90747fc3e6c",
+        "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+        "takeaway": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM …",
+        "evidenceItemIds": [
+          "c90747fc3e6c"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent》、《The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering》、《Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Samsung’s Privacy Display may be coming to more Galaxy phones – what we know》、《Google and Meta Open-source TorchTPU to Bring Native PyTorch Support to Google TPUs》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "0de798e241b6",
+          "bc1666852b97",
+          "9bd3b1ff930b",
+          "99beb8e83fa1"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 4 条，建议优先阅读《DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent》、《Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "30b9a7083910",
+          "ca43c25c476b",
+          "b474ce96d863",
+          "342a0de7eaf9"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《The latest AI news we announced in October 2026》、《从“能调用”到“敢托付”：仪电智算云 Token 工厂的三重可信》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "1085709cb6a7",
+          "5b847c3a0244",
+          "db4883f6848f",
+          "88c5e599538e"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 3 条，建议优先阅读《The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering》、《NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "d39184030f51",
+          "6b0e08e039af",
+          "ce048c5e9087"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "c497223e04a7325f140415f024220ad643e421f39ce094158face6b8bebd5b63",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-11-03T01:33:58.668Z",
+      "finishedAt": "2026-11-03T01:36:11.849Z",
+      "durationMs": 133181,
+      "inputCount": 36,
+      "processedCount": 36,
+      "fallbackCount": 36,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 36,
+      "failureStats": {
+        "totalFailed": 36,
+        "timeout": 0,
+        "http": 36,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 68,
+        "splitRetryCount": 32
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-27",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=UND_ERR_CONNECT_TIMEOUT"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-20",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 1,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-11-03T01:36:11.939Z",
+      "finishedAt": "2026-11-03T01:36:25.113Z",
+      "durationMs": 13174,
+      "inputCount": 36,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "30b9a7083910",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent",
+        "link": "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/",
+        "contentSnippet": "DeepSeek released dsh-superagent, an MIT-licensed research prototype that turns GitHub and Feishu requests into parallel worker sessions. In DeepSeek’s own simulation, p95 task completion fell to 15.7 minutes from 29.5 minutes. The post DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-01T07:47:17.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 125,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d39184030f51",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering",
+        "link": "https://www.marktechpost.com/2026/11/02/letter-letterpress-1-growth-engineering-coding-agent/",
+        "contentSnippet": "Letter has released the beta of Letterpress-1, a coding agent, harness and IDE for growth engineering. It reads a git-based site and its market, then opens pull requests for SEO, GEO and conversion work. The post The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-03T00:43:03.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 95.35,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 95.34883720930233,
+          "finalScore": 95.35,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ca43c25c476b",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery",
+        "link": "https://www.marktechpost.com/2026/11/02/deep-principle-hydrogen-1-0-open-weight-scientific-model/",
+        "contentSnippet": "Deep Principle has released Hydrogen-1.0, an open-weight scientific model for chemistry, materials science and life sciences. It is built by post-training Z.ai’s GLM-5.3 on domain data, laboratory records and agent discovery trajectories. For developers, it offers open weights that report a FrontierScience-Research win over GPT-6-Astra. The weights ship under the MIT License. TL;DR What is […] The post Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-02T18:41:41.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 95.35,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 123,
+          "ruleScoreNormalized": 95.34883720930233,
+          "finalScore": 95.35,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6b0e08e039af",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL",
+        "link": "https://www.marktechpost.com/2026/11/01/nvidia-auto-ontology-open-source-semantic-layer-ai-agents/",
+        "contentSnippet": "NVIDIA released Auto Ontology, an Apache 2.0 library that generates a semantic layer from enterprise metadata. It grounds agent SQL in certified definitions and serves context through MCP, CLI and API. The post NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-02T07:47:12.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 83.72,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 83.72093023255815,
+          "finalScore": 83.72,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2e528402eed4",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Uber Builds MCP Gateway to Govern Access to 800+ Servers and 5,000+ AI Agent Tools",
+        "link": "https://www.infoq.com/news/2026/11/uber-mcp-gateway-ai-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Uber has built an MCP Gateway to standardize how AI agents discover and invoke internal services across more than 800 MCP servers and 5,000 tools. The gateway separates tool registration from runtime execution and includes automated API discovery, access controls, sensitive data redaction, incremental tool discovery through Omni MCP, and response filtering. By Leela Kumili",
+        "publishedAt": "2026-11-02T13:53:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 76.74,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 76.74418604651163,
+          "finalScore": 76.74,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 36,
+      "normalizedCount": 36,
+      "dedupedCount": 36,
+      "highImportanceCount": 3,
+      "mediumImportanceCount": 4,
+      "lowImportanceCount": 29,
+      "categoryBreakdown": {
+        "open-source": 8,
+        "tooling": 2,
+        "agent": 3,
+        "research": 0,
+        "industry-news": 7,
+        "tutorial": 0,
+        "other": 16
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=UND_ERR_CONNECT_TIMEOUT",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：36/36",
+      "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07386d65528956f97f28e0aaa7b162cf\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07386d6684b1047f3b4a37d547b15174\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07386d67b539af709f205c5cd95dd030\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
