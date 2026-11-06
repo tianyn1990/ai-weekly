@@ -1,0 +1,2258 @@
+{
+  "runId": "daily-1793927337762",
+  "generatedAt": "2026-11-06T01:08:57.734Z",
+  "reviewStartedAt": "2026-11-06T01:08:57.734Z",
+  "reportDate": "2026-11-06",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-11-06T01:08:57.734Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 36,
+    "normalizedCount": 36,
+    "dedupedCount": 36,
+    "highImportanceCount": 3,
+    "mediumImportanceCount": 4,
+    "lowImportanceCount": 29,
+    "categoryBreakdown": {
+      "open-source": 4,
+      "tooling": 4,
+      "agent": 3,
+      "research": 1,
+      "industry-news": 6,
+      "tutorial": 1,
+      "other": 17
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "e101e37aa950",
+      "title": "Together AI Releases Together Compiler: Agents Make Inference Up to 2.6x Faster",
+      "summary": "Together AI released Together Compiler, an agent-driven loop that keeps re-optimizing the inference forward pass as tra…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "e101e37aa950"
+      ]
+    },
+    {
+      "itemId": "f6caa8d4abf3",
+      "title": "Axiom – blocks AI agents from inventing limits your code never defined",
+      "summary": "Article URL: https://github.com/axiom-csc/axiom-skill Comments URL: https://news.ycombinator.com/item?id=50386839 Point…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "f6caa8d4abf3"
+      ]
+    },
+    {
+      "itemId": "5bdace9b25cc",
+      "title": "Google Cloud API Gateway Introduces Streaming Support for Real-Time and AI-Powered Applications",
+      "summary": "Google has announced the public preview of streaming support for API Gateway, extending its traditional request-respons…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "5bdace9b25cc"
+      ]
+    },
+    {
+      "itemId": "342a0de7eaf9",
+      "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+      "summary": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "342a0de7eaf9"
+      ]
+    },
+    {
+      "itemId": "09237346dcb3",
+      "title": "Google Releases Gemini Omni 1.2 Flash: 15-Second AI Video at $0.07 per Second",
+      "summary": "Google released Gemini Omni 1.2 Flash, a video generation and editing model with native 15-second clips, multi-turn con…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "09237346dcb3"
+      ]
+    },
+    {
+      "itemId": "369959af512a",
+      "title": "Baidu Releases ERNIE 5.5 Flash Base: A 280B MoE Base Model With 14B Active Parameters",
+      "summary": "Baidu has released ERNIE 5.5 Flash Base, a 280B sparse MoE base model with 14B active parameters, trained on 33.5T toke…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "369959af512a"
+      ]
+    },
+    {
+      "itemId": "152871d5afa0",
+      "title": "webAI Releases TwIL-8B, an 8.8B Reasoning Model Scoring 98.2 on MATH-500",
+      "summary": "webAI released TwIL-8B, an 8.8B reasoning model post-trained from IBM Granite 4.2 8B. It posts 98.2 on MATH-500 and 81.…",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "152871d5afa0"
+      ]
+    },
+    {
+      "itemId": "ba3f56331675",
+      "title": "Paper: Nubank cuts AI agent update cycles from 3 weeks to under 5 days",
+      "summary": "Article URL: https://arxiv.org/abs/2609.30137 Comments URL: https://news.ycombinator.com/item?id=50386702 Points: 1 # C…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "ba3f56331675"
+      ]
+    },
+    {
+      "itemId": "5aeb04dd2d6a",
+      "title": "OpenAI Launches GPT-Image-2.6 Flare and Sunburst: Adds GIFs, SVG Export and 6-Second API Generation",
+      "summary": "OpenAI released Images 2.6 and the GPT-Image-2.6 Flare and Sunburst API models. Flare generates images in as little as …",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "5aeb04dd2d6a"
+      ]
+    },
+    {
+      "itemId": "cf092cf2186a",
+      "title": "Google AI Research Releases Agile Deliberation Framework for Gray-Area Image Classifiers",
+      "summary": "Google Research released Agile Deliberation, a human-in-the-loop framework that helps users define subjective visual co…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "cf092cf2186a"
+      ]
+    },
+    {
+      "itemId": "508152f4c2e7",
+      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+      "summary": "Gemini Omni 1.2 Flash brings native 15-second video generation and editing, stronger consistency, and 30% lower pricing.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "508152f4c2e7"
+      ]
+    },
+    {
+      "itemId": "75acc7825b92",
+      "title": "基于本体+知识+Harness+Datat Agent的智能体完整落地链路！",
+      "summary": "Data + AI 技术实践巡展 · 上海站",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "75acc7825b92"
+      ]
+    },
+    {
+      "itemId": "2e528402eed4",
+      "title": "Uber Builds MCP Gateway to Govern Access to 800+ Servers and 5,000+ AI Agent Tools",
+      "summary": "Uber has built an MCP Gateway to standardize how AI agents discover and invoke internal services across more than 800 M…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "2e528402eed4"
+      ]
+    },
+    {
+      "itemId": "bf5a6e1dbea6",
+      "title": "百度开源文心5.5 Flash Base，多基准测试刷新同尺寸模型 SOTA",
+      "summary": "11月5日，百度正式开源最新基座模型文心5.5 Flash Base",
+      "recommendation": "开源生态更新",
+      "evidenceItemIds": [
+        "bf5a6e1dbea6"
+      ]
+    },
+    {
+      "itemId": "36a574372b04",
+      "title": "以“真实工作”检验机器人价值，XROGO在CeMAT ASIA发布机器人到岗计划",
+      "summary": "像雇人一样雇机器人",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "36a574372b04"
+      ]
+    },
+    {
+      "itemId": "8c7a1411f387",
+      "title": "HR thinks you can learn AI skills – so why is your company hiring elsewhere?",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "8c7a1411f387"
+      ]
+    },
+    {
+      "itemId": "9c0bb1c5747c",
+      "title": "6 default Pixel 11 settings I changed that made a big difference – and why",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9c0bb1c5747c"
+      ]
+    },
+    {
+      "itemId": "eeb24d3c78fa",
+      "title": "Claude’s new Personal Finance tool aims to help analyze your spending – read-only, of course",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "eeb24d3c78fa"
+      ]
+    },
+    {
+      "itemId": "fe5b03ff8c56",
+      "title": "3 ways Bluetooth 7 upgrades your devices beyond lossless audio",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fe5b03ff8c56"
+      ]
+    },
+    {
+      "itemId": "27b22ee0b4a8",
+      "title": "The Siri AI waitlist is gone in iOS 27: How to try the beta today",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "27b22ee0b4a8"
+      ]
+    },
+    {
+      "itemId": "5409f27c841b",
+      "title": "Google Launches LiteRT Tensor API for Building, Customizing, and Optimizing ML Models for On-Device",
+      "summary": "Google has introduced the LiteRT Tensor API, a lightweight C++ API that allows developers to build, customize, and opti…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5409f27c841b"
+      ]
+    },
+    {
+      "itemId": "11ff38c1b868",
+      "title": "Supermicro Super AI Station Review: The AI Server That Doubles as a Workstation",
+      "summary": "Article URL: https://www.servethehome.com/supermicro-super-ai-station-review-the-ai-server-that-doubles-as-a-workstatio…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "11ff38c1b868"
+      ]
+    },
+    {
+      "itemId": "3b1924f9532c",
+      "title": "Investors wipe $2.5T off Nasdaq as blue tsunami prompts AI fears",
+      "summary": "Article URL: https://www.reuters.com/legal/transactional/ai-data-center-stocks-slip-democratic-sweep-clouds-expansion-p…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3b1924f9532c"
+      ]
+    },
+    {
+      "itemId": "c16f4b2a3839",
+      "title": "University libraries are being swarmed by AI bots, putting public access at risk",
+      "summary": "Article URL: https://www.cbc.ca/news/world/university-libraries-ai-data-scraping-bots-9.7408287 Comments URL: https://n…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c16f4b2a3839"
+      ]
+    },
+    {
+      "itemId": "83d24c270a9a",
+      "title": "Show HN: Lab Canary – Rating AI labs on whether their staff can speak up",
+      "summary": "Article URL: https://labcanary.com/ Comments URL: https://news.ycombinator.com/item?id=50386089 Points: 2 # Comments: 0",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "83d24c270a9a"
+      ]
+    },
+    {
+      "itemId": "d79329ba2304",
+      "title": "Linux Mint 27 arrives next month, and I like it already: New features and other upgrades to expect",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d79329ba2304"
+      ]
+    },
+    {
+      "itemId": "1085709cb6a7",
+      "title": "The latest AI news we announced in October 2026",
+      "summary": "Here are Google’s latest AI updates from October 2026",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1085709cb6a7"
+      ]
+    },
+    {
+      "itemId": "a6f3538328d1",
+      "title": "MIT神作被锤：Astra爆改Qwen权重？就吹吧！",
+      "summary": "spaCy作者长文炮轰",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a6f3538328d1"
+      ]
+    },
+    {
+      "itemId": "b1f3f748cc91",
+      "title": "(无标题)",
+      "summary": "尹希官宣离开OpenAI",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b1f3f748cc91"
+      ]
+    },
+    {
+      "itemId": "8e90b7cf4d47",
+      "title": "GPT-Image-2.6全量上线！直出GIF和SVG，6.2 Astra也现身了",
+      "summary": "最快6秒出图",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "8e90b7cf4d47"
+      ]
+    },
+    {
+      "itemId": "6444f8191d8b",
+      "title": "Google and Meta Open-Source TorchTPU to Bring Native PyTorch Support to Google TPUs",
+      "summary": "TorchTPU is an open-source project developed by Google in collaboration with Meta that provides a native PyTorch backen…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "6444f8191d8b"
+      ]
+    },
+    {
+      "itemId": "c3e63ef1bbcd",
+      "title": "AWS Capacity Largely Sold out through 2027, with On-Demand Headroom Reserved",
+      "summary": "Amazon CEO Andy Jassy says AWS’s large committed cloud capacity is largely sold out through 2027, with part of 2028 alr…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c3e63ef1bbcd"
+      ]
+    },
+    {
+      "itemId": "e604a204e5b1",
+      "title": "Our newest AI Quest: Mapping the human brain",
+      "summary": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "e604a204e5b1"
+      ]
+    },
+    {
+      "itemId": "51cd2b7b9a2d",
+      "title": "Southeast Asia’s digital economy to hit $368 billion",
+      "summary": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trilli…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "51cd2b7b9a2d"
+      ]
+    },
+    {
+      "itemId": "5478efc66827",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "5478efc66827"
+      ]
+    },
+    {
+      "itemId": "92d60b58598f",
+      "title": "Introducing Playground: Create and play custom games",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "92d60b58598f"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "e101e37aa950",
+      "title": "Together AI Releases Together Compiler: Agents Make Inference Up to 2.6x Faster",
+      "takeaway": "Together AI released Together Compiler, an agent-driven loop that keeps re-optimizing the inference forward pass as tra…",
+      "evidenceItemIds": [
+        "e101e37aa950"
+      ]
+    },
+    {
+      "itemId": "f6caa8d4abf3",
+      "title": "Axiom – blocks AI agents from inventing limits your code never defined",
+      "takeaway": "Article URL: https://github.com/axiom-csc/axiom-skill Comments URL: https://news.ycombinator.com/item?id=50386839 Point…",
+      "evidenceItemIds": [
+        "f6caa8d4abf3"
+      ]
+    },
+    {
+      "itemId": "5bdace9b25cc",
+      "title": "Google Cloud API Gateway Introduces Streaming Support for Real-Time and AI-Powered Applications",
+      "takeaway": "Google has announced the public preview of streaming support for API Gateway, extending its traditional request-respons…",
+      "evidenceItemIds": [
+        "5bdace9b25cc"
+      ]
+    },
+    {
+      "itemId": "342a0de7eaf9",
+      "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+      "takeaway": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities…",
+      "evidenceItemIds": [
+        "342a0de7eaf9"
+      ]
+    },
+    {
+      "itemId": "09237346dcb3",
+      "title": "Google Releases Gemini Omni 1.2 Flash: 15-Second AI Video at $0.07 per Second",
+      "takeaway": "Google released Gemini Omni 1.2 Flash, a video generation and editing model with native 15-second clips, multi-turn con…",
+      "evidenceItemIds": [
+        "09237346dcb3"
+      ]
+    },
+    {
+      "itemId": "369959af512a",
+      "title": "Baidu Releases ERNIE 5.5 Flash Base: A 280B MoE Base Model With 14B Active Parameters",
+      "takeaway": "Baidu has released ERNIE 5.5 Flash Base, a 280B sparse MoE base model with 14B active parameters, trained on 33.5T toke…",
+      "evidenceItemIds": [
+        "369959af512a"
+      ]
+    },
+    {
+      "itemId": "152871d5afa0",
+      "title": "webAI Releases TwIL-8B, an 8.8B Reasoning Model Scoring 98.2 on MATH-500",
+      "takeaway": "webAI released TwIL-8B, an 8.8B reasoning model post-trained from IBM Granite 4.2 8B. It posts 98.2 on MATH-500 and 81.…",
+      "evidenceItemIds": [
+        "152871d5afa0"
+      ]
+    },
+    {
+      "itemId": "ba3f56331675",
+      "title": "Paper: Nubank cuts AI agent update cycles from 3 weeks to under 5 days",
+      "takeaway": "Article URL: https://arxiv.org/abs/2609.30137 Comments URL: https://news.ycombinator.com/item?id=50386702 Points: 1 # C…",
+      "evidenceItemIds": [
+        "ba3f56331675"
+      ]
+    },
+    {
+      "itemId": "5aeb04dd2d6a",
+      "title": "OpenAI Launches GPT-Image-2.6 Flare and Sunburst: Adds GIFs, SVG Export and 6-Second API Generation",
+      "takeaway": "OpenAI released Images 2.6 and the GPT-Image-2.6 Flare and Sunburst API models. Flare generates images in as little as …",
+      "evidenceItemIds": [
+        "5aeb04dd2d6a"
+      ]
+    },
+    {
+      "itemId": "cf092cf2186a",
+      "title": "Google AI Research Releases Agile Deliberation Framework for Gray-Area Image Classifiers",
+      "takeaway": "Google Research released Agile Deliberation, a human-in-the-loop framework that helps users define subjective visual co…",
+      "evidenceItemIds": [
+        "cf092cf2186a"
+      ]
+    },
+    {
+      "itemId": "508152f4c2e7",
+      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+      "takeaway": "Gemini Omni 1.2 Flash brings native 15-second video generation and editing, stronger consistency, and 30% lower pricing.",
+      "evidenceItemIds": [
+        "508152f4c2e7"
+      ]
+    },
+    {
+      "itemId": "75acc7825b92",
+      "title": "基于本体+知识+Harness+Datat Agent的智能体完整落地链路！",
+      "takeaway": "Data + AI 技术实践巡展 · 上海站",
+      "evidenceItemIds": [
+        "75acc7825b92"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕agent与open-source展开，建议优先关注《Together AI Releases Together Compiler: Agents Make Inference Up to 2.6x Faster》、《Axiom – blocks AI agents from inventing limits your code never defined》、《Google Cloud API Gateway Introduces Streaming Support for Real-Time and AI-Powered Applications》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Google Releases Gemini Omni 1.2 Flash: 15-Second AI Video at $0.07 per Second》、《Baidu Releases ERNIE 5.5 Flash Base: A 280B MoE Base Model With 14B Active Parameters》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "09237346dcb3",
+        "369959af512a",
+        "5aeb04dd2d6a",
+        "508152f4c2e7"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《以“真实工作”检验机器人价值，XROGO在CeMAT ASIA发布机器人到岗计划》、《Supermicro Super AI Station Review: The AI Server That Doubles as a Workstation》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "36a574372b04",
+        "11ff38c1b868",
+        "3b1924f9532c",
+        "c16f4b2a3839"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 4 条，建议优先阅读《Axiom – blocks AI agents from inventing limits your code never defined》、《Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "f6caa8d4abf3",
+        "342a0de7eaf9",
+        "bf5a6e1dbea6",
+        "c3e63ef1bbcd"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "tooling",
+      "lead": "工具链方向本期共 4 条，建议优先阅读《Google Cloud API Gateway Introduces Streaming Support for Real-Time and AI-Powered Applications》、《Google AI Research Releases Agile Deliberation Framework for Gray-Area Image Classifiers》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "5bdace9b25cc",
+        "cf092cf2186a",
+        "2e528402eed4",
+        "eeb24d3c78fa"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "ca7a9546937593f84e9f30e4d841b45b7a016e15fabe28ba4edce6dfd7b001e9",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-11-06T01:41:47.654Z",
+    "finishedAt": "2026-11-06T01:42:32.020Z",
+    "durationMs": 44367,
+    "inputCount": 36,
+    "processedCount": 36,
+    "fallbackCount": 36,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 36,
+    "failureStats": {
+      "totalFailed": 36,
+      "timeout": 0,
+      "http": 36,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 68,
+      "splitRetryCount": 32
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-30",
+        "fetchedCount": 0,
+        "failedReason": "fetch failed code=UND_ERR_CONNECT_TIMEOUT"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-23",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 1,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 1
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-11-06T01:42:32.082Z",
+    "finishedAt": "2026-11-06T01:42:46.503Z",
+    "durationMs": 14421,
+    "inputCount": 36,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "e101e37aa950",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Together AI Releases Together Compiler: Agents Make Inference Up to 2.6x Faster",
+      "link": "https://www.marktechpost.com/2026/11/05/together-ai-together-compiler-continual-compilation-ai-inference/",
+      "contentSnippet": "Together AI released Together Compiler, an agent-driven loop that keeps re-optimizing the inference forward pass as traffic shifts. It beat the best InferenceX configurations by up to 2.6x TPS in under 24 hours per model. The post Together AI Releases Together Compiler: Agents Make Inference Up to 2.6x Faster appeared first on MarkTechPost.",
+      "publishedAt": "2026-11-05T08:02:58.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 118,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "f6caa8d4abf3",
+      "sourceId": "hnrss-ai",
+      "sourceName": "HNRSS AI",
+      "title": "Axiom – blocks AI agents from inventing limits your code never defined",
+      "link": "https://github.com/axiom-csc/axiom-skill",
+      "contentSnippet": "Article URL: https://github.com/axiom-csc/axiom-skill Comments URL: https://news.ycombinator.com/item?id=50386839 Points: 1 # Comments: 0",
+      "publishedAt": "2026-11-06T01:00:43.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 97.22,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 117,
+        "ruleScoreNormalized": 97.22222222222221,
+        "finalScore": 97.22,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "5bdace9b25cc",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Google Cloud API Gateway Introduces Streaming Support for Real-Time and AI-Powered Applications",
+      "link": "https://www.infoq.com/news/2026/11/gcp-api-gateway-streaming/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Google has announced the public preview of streaming support for API Gateway, extending its traditional request-response model to support applications requiring real-time communication. According to Google, this is particularly relevant for AI applications that provide streaming model responses, multi-step agent workflows, and interactive sessions. By Sergio De Simone",
+      "publishedAt": "2026-11-05T16:00:00.000Z",
+      "category": "tooling",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 91.67,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 115,
+        "ruleScoreNormalized": 91.66666666666666,
+        "finalScore": 91.67,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "342a0de7eaf9",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+      "link": "https://www.infoq.com/news/2026/10/google-pagebreak-security-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities across its web applications since entering full operation in January. PageBreak uses Gemini models to autonomously investigate potential vulnerabilities, but reports them only after deterministic validators successfully reproduce the exploit against a running application. By Renato Losio",
+      "publishedAt": "2026-10-31T06:20:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 72.22,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 108,
+        "ruleScoreNormalized": 72.22222222222221,
+        "finalScore": 72.22,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "09237346dcb3",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Google Releases Gemini Omni 1.2 Flash: 15-Second AI Video at $0.07 per Second",
+      "link": "https://www.marktechpost.com/2026/11/05/google-gemini-omni-1-2-flash-15-second-video/",
+      "contentSnippet": "Google released Gemini Omni 1.2 Flash, a video generation and editing model with native 15-second clips, multi-turn conversational editing and a 30% price cut to $0.07 per second of 720p video. The post Google Releases Gemini Omni 1.2 Flash: 15-Second AI Video at $0.07 per Second appeared first on MarkTechPost.",
+      "publishedAt": "2026-11-05T22:58:21.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 72.22,
+      "importance": "medium",
+      "recommendationReason": "模型或产品发布",
+      "scoreBreakdown": {
+        "ruleScore": 108,
+        "ruleScoreNormalized": 72.22222222222221,
+        "finalScore": 72.22,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=UND_ERR_CONNECT_TIMEOUT",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：36/36",
+    "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"073c63604c11e4090e80f934fdd0a442\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"073c6361592b5412292c6ff01121b56d\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"073c6362b62e6a47a9e9d08ed1846669\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Together AI Releases Together Compiler: Agents Make Inference Up to 2.6x Faster\n- Axiom – blocks AI agents from inventing limits your code never defined\n- Google Cloud API Gateway Introduces Streaming Support for Real-Time and AI-Powered Applications\n- Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs\n- Google Releases Gemini Omni 1.2 Flash: 15-Second AI Video at $0.07 per Second\n\n### 分类覆盖（大纲）\n- agent: 3 条\n- open-source: 4 条\n- tooling: 4 条\n- other: 17 条\n- research: 1 条\n- industry-news: 6 条\n- tutorial: 1 条",
+    "rankedItems": [
+      {
+        "id": "e101e37aa950",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Together AI Releases Together Compiler: Agents Make Inference Up to 2.6x Faster",
+        "link": "https://www.marktechpost.com/2026/11/05/together-ai-together-compiler-continual-compilation-ai-inference/",
+        "contentSnippet": "Together AI released Together Compiler, an agent-driven loop that keeps re-optimizing the inference forward pass as traffic shifts. It beat the best InferenceX configurations by up to 2.6x TPS in under 24 hours per model. The post Together AI Releases Together Compiler: Agents Make Inference Up to 2.6x Faster appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-05T08:02:58.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f6caa8d4abf3",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Axiom – blocks AI agents from inventing limits your code never defined",
+        "link": "https://github.com/axiom-csc/axiom-skill",
+        "contentSnippet": "Article URL: https://github.com/axiom-csc/axiom-skill Comments URL: https://news.ycombinator.com/item?id=50386839 Points: 1 # Comments: 0",
+        "publishedAt": "2026-11-06T01:00:43.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 97.22,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 97.22222222222221,
+          "finalScore": 97.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5bdace9b25cc",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Cloud API Gateway Introduces Streaming Support for Real-Time and AI-Powered Applications",
+        "link": "https://www.infoq.com/news/2026/11/gcp-api-gateway-streaming/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has announced the public preview of streaming support for API Gateway, extending its traditional request-response model to support applications requiring real-time communication. According to Google, this is particularly relevant for AI applications that provide streaming model responses, multi-step agent workflows, and interactive sessions. By Sergio De Simone",
+        "publishedAt": "2026-11-05T16:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 91.67,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 91.66666666666666,
+          "finalScore": 91.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "342a0de7eaf9",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+        "link": "https://www.infoq.com/news/2026/10/google-pagebreak-security-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities across its web applications since entering full operation in January. PageBreak uses Gemini models to autonomously investigate potential vulnerabilities, but reports them only after deterministic validators successfully reproduce the exploit against a running application. By Renato Losio",
+        "publishedAt": "2026-10-31T06:20:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 72.22,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 72.22222222222221,
+          "finalScore": 72.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "09237346dcb3",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Google Releases Gemini Omni 1.2 Flash: 15-Second AI Video at $0.07 per Second",
+        "link": "https://www.marktechpost.com/2026/11/05/google-gemini-omni-1-2-flash-15-second-video/",
+        "contentSnippet": "Google released Gemini Omni 1.2 Flash, a video generation and editing model with native 15-second clips, multi-turn conversational editing and a 30% price cut to $0.07 per second of 720p video. The post Google Releases Gemini Omni 1.2 Flash: 15-Second AI Video at $0.07 per Second appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-05T22:58:21.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 72.22,
+        "importance": "medium",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 72.22222222222221,
+          "finalScore": 72.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "369959af512a",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Baidu Releases ERNIE 5.5 Flash Base: A 280B MoE Base Model With 14B Active Parameters",
+        "link": "https://www.marktechpost.com/2026/11/05/baidu-ernie-5-5-flash-base-280b-moe/",
+        "contentSnippet": "Baidu has released ERNIE 5.5 Flash Base, a 280B sparse MoE base model with 14B active parameters, trained on 33.5T tokens and published before any mid- or post-training. The post Baidu Releases ERNIE 5.5 Flash Base: A 280B MoE Base Model With 14B Active Parameters appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-05T21:33:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 72.22,
+        "importance": "medium",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 72.22222222222221,
+          "finalScore": 72.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "152871d5afa0",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "webAI Releases TwIL-8B, an 8.8B Reasoning Model Scoring 98.2 on MATH-500",
+        "link": "https://www.marktechpost.com/2026/11/04/webai-twil-8b-reasoning-model/",
+        "contentSnippet": "webAI released TwIL-8B, an 8.8B reasoning model post-trained from IBM Granite 4.2 8B. It posts 98.2 on MATH-500 and 81.6 on LiveCodeBench, but trails similar-size models on knowledge benchmarks. The post webAI Releases TwIL-8B, an 8.8B Reasoning Model Scoring 98.2 on MATH-500 appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-04T22:25:05.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 72.22,
+        "importance": "medium",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 72.22222222222221,
+          "finalScore": 72.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ba3f56331675",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Paper: Nubank cuts AI agent update cycles from 3 weeks to under 5 days",
+        "link": "https://arxiv.org/abs/2609.30137",
+        "contentSnippet": "Article URL: https://arxiv.org/abs/2609.30137 Comments URL: https://news.ycombinator.com/item?id=50386702 Points: 1 # Comments: 0",
+        "publishedAt": "2026-11-06T00:43:27.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 63.89,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 63.888888888888886,
+          "finalScore": 63.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5aeb04dd2d6a",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "OpenAI Launches GPT-Image-2.6 Flare and Sunburst: Adds GIFs, SVG Export and 6-Second API Generation",
+        "link": "https://www.marktechpost.com/2026/11/04/openai-gpt-image-2-6-flare-sunburst/",
+        "contentSnippet": "OpenAI released Images 2.6 and the GPT-Image-2.6 Flare and Sunburst API models. Flare generates images in as little as 6 seconds, and both add GIF output, SVG export, markup edits and a complexity parameter. The post OpenAI Launches GPT-Image-2.6 Flare and Sunburst: Adds GIFs, SVG Export and 6-Second API Generation appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-05T07:03:17.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 58.33,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 103,
+          "ruleScoreNormalized": 58.333333333333336,
+          "finalScore": 58.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cf092cf2186a",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Google AI Research Releases Agile Deliberation Framework for Gray-Area Image Classifiers",
+        "link": "https://www.marktechpost.com/2026/11/04/google-agile-deliberation-subjective-image-classifiers/",
+        "contentSnippet": "Google Research released Agile Deliberation, a human-in-the-loop framework that helps users define subjective visual concepts through borderline images. In 18 live sessions, it lifted Gemini-based classifier F1 by 10.5 points over zero-shot. The post Google AI Research Releases Agile Deliberation Framework for Gray-Area Image Classifiers appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-05T05:42:18.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 58.33,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 103,
+          "ruleScoreNormalized": 58.333333333333336,
+          "finalScore": 58.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "508152f4c2e7",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+        "link": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+        "contentSnippet": "Gemini Omni 1.2 Flash brings native 15-second video generation and editing, stronger consistency, and 30% lower pricing.",
+        "publishedAt": "2026-11-05T17:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.56,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 55.55555555555556,
+          "finalScore": 55.56,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "75acc7825b92",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "基于本体+知识+Harness+Datat Agent的智能体完整落地链路！",
+        "link": "https://www.qbitai.com/2026/11/507696.html",
+        "contentSnippet": "Data + AI 技术实践巡展 · 上海站",
+        "publishedAt": "2026-11-05T02:01:51.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.56,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 55.55555555555556,
+          "finalScore": 55.56,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2e528402eed4",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Uber Builds MCP Gateway to Govern Access to 800+ Servers and 5,000+ AI Agent Tools",
+        "link": "https://www.infoq.com/news/2026/11/uber-mcp-gateway-ai-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Uber has built an MCP Gateway to standardize how AI agents discover and invoke internal services across more than 800 MCP servers and 5,000 tools. The gateway separates tool registration from runtime execution and includes automated API discovery, access controls, sensitive data redaction, incremental tool discovery through Omni MCP, and response filtering. By Leela Kumili",
+        "publishedAt": "2026-11-02T13:53:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 50,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 50,
+          "finalScore": 50,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "bf5a6e1dbea6",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "百度开源文心5.5 Flash Base，多基准测试刷新同尺寸模型 SOTA",
+        "link": "https://www.qbitai.com/2026/11/507787.html",
+        "contentSnippet": "11月5日，百度正式开源最新基座模型文心5.5 Flash Base",
+        "publishedAt": "2026-11-05T07:15:13.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 47.22,
+        "importance": "low",
+        "recommendationReason": "开源生态更新",
+        "scoreBreakdown": {
+          "ruleScore": 99,
+          "ruleScoreNormalized": 47.22222222222222,
+          "finalScore": 47.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "36a574372b04",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "以“真实工作”检验机器人价值，XROGO在CeMAT ASIA发布机器人到岗计划",
+        "link": "https://www.qbitai.com/2026/11/507767.html",
+        "contentSnippet": "像雇人一样雇机器人",
+        "publishedAt": "2026-11-05T05:25:37.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 41.67,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 41.66666666666667,
+          "finalScore": 41.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8c7a1411f387",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "HR thinks you can learn AI skills – so why is your company hiring elsewhere?",
+        "link": "https://www.zdnet.com/innovation/ai-hiring-vs-reskilling-careerminds-research/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-05T18:44:47.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 33.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 33.33333333333333,
+          "finalScore": 33.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9c0bb1c5747c",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "6 default Pixel 11 settings I changed that made a big difference – and why",
+        "link": "https://www.zdnet.com/tech/pixel-11-settings-to-change/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-05T18:18:16.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 33.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 33.33333333333333,
+          "finalScore": 33.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "eeb24d3c78fa",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Claude’s new Personal Finance tool aims to help analyze your spending – read-only, of course",
+        "link": "https://www.zdnet.com/innovation/personal-finance-claude-anthropic/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-05T18:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 33.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 33.33333333333333,
+          "finalScore": 33.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fe5b03ff8c56",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "3 ways Bluetooth 7 upgrades your devices beyond lossless audio",
+        "link": "https://www.zdnet.com/tech/bluetooth-7-features-headphones-smart-home-lossless-audio/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-05T17:46:35.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 33.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 33.33333333333333,
+          "finalScore": 33.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "27b22ee0b4a8",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "The Siri AI waitlist is gone in iOS 27: How to try the beta today",
+        "link": "https://www.zdnet.com/business/siri-ai-beta-waitlist-ends-ios-27/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-05T16:08:49.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 33.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 33.33333333333333,
+          "finalScore": 33.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5409f27c841b",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Launches LiteRT Tensor API for Building, Customizing, and Optimizing ML Models for On-Device",
+        "link": "https://www.infoq.com/news/2026/11/litert-tensor-api/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has introduced the LiteRT Tensor API, a lightweight C++ API that allows developers to build, customize, and optimize machine learning models directly for on-device execution. According to Google, it combines the flexibility of native model authoring with cross-platform portability. By Sergio De Simone",
+        "publishedAt": "2026-11-03T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.22,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 22.22222222222222,
+          "finalScore": 22.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "11ff38c1b868",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Supermicro Super AI Station Review: The AI Server That Doubles as a Workstation",
+        "link": "https://www.servethehome.com/supermicro-super-ai-station-review-the-ai-server-that-doubles-as-a-workstation/",
+        "contentSnippet": "Article URL: https://www.servethehome.com/supermicro-super-ai-station-review-the-ai-server-that-doubles-as-a-workstation/ Comments URL: https://news.ycombinator.com/item?id=50387018 Points: 2 # Comments: 0",
+        "publishedAt": "2026-11-06T01:27:59.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.22,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 22.22222222222222,
+          "finalScore": 22.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3b1924f9532c",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Investors wipe $2.5T off Nasdaq as blue tsunami prompts AI fears",
+        "link": "https://www.reuters.com/legal/transactional/ai-data-center-stocks-slip-democratic-sweep-clouds-expansion-plans-2026-11-05/",
+        "contentSnippet": "Article URL: https://www.reuters.com/legal/transactional/ai-data-center-stocks-slip-democratic-sweep-clouds-expansion-plans-2026-11-05/ Comments URL: https://news.ycombinator.com/item?id=50386909 Points: 9 # Comments: 1",
+        "publishedAt": "2026-11-06T01:11:40.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.22,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 22.22222222222222,
+          "finalScore": 22.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c16f4b2a3839",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "University libraries are being swarmed by AI bots, putting public access at risk",
+        "link": "https://www.cbc.ca/news/world/university-libraries-ai-data-scraping-bots-9.7408287",
+        "contentSnippet": "Article URL: https://www.cbc.ca/news/world/university-libraries-ai-data-scraping-bots-9.7408287 Comments URL: https://news.ycombinator.com/item?id=50386516 Points: 2 # Comments: 0",
+        "publishedAt": "2026-11-06T00:21:25.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.22,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 22.22222222222222,
+          "finalScore": 22.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "83d24c270a9a",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Show HN: Lab Canary – Rating AI labs on whether their staff can speak up",
+        "link": "https://labcanary.com/",
+        "contentSnippet": "Article URL: https://labcanary.com/ Comments URL: https://news.ycombinator.com/item?id=50386089 Points: 2 # Comments: 0",
+        "publishedAt": "2026-11-05T23:31:34.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.22,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 22.22222222222222,
+          "finalScore": 22.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d79329ba2304",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Linux Mint 27 arrives next month, and I like it already: New features and other upgrades to expect",
+        "link": "https://www.zdnet.com/tech/linux-mint-27-release-date/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-05T02:35:58.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 19.44,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 89,
+          "ruleScoreNormalized": 19.444444444444446,
+          "finalScore": 19.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1085709cb6a7",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "The latest AI news we announced in October 2026",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+        "contentSnippet": "Here are Google’s latest AI updates from October 2026",
+        "publishedAt": "2026-11-02T17:45:00.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 13.88888888888889,
+          "finalScore": 13.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a6f3538328d1",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "MIT神作被锤：Astra爆改Qwen权重？就吹吧！",
+        "link": "https://www.qbitai.com/2026/11/507782.html",
+        "contentSnippet": "spaCy作者长文炮轰",
+        "publishedAt": "2026-11-05T07:10:56.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 13.88888888888889,
+          "finalScore": 13.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b1f3f748cc91",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "(无标题)",
+        "link": "https://www.qbitai.com/2026/11/507757.html",
+        "contentSnippet": "尹希官宣离开OpenAI",
+        "publishedAt": "2026-11-05T03:58:41.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 13.88888888888889,
+          "finalScore": 13.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8e90b7cf4d47",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "GPT-Image-2.6全量上线！直出GIF和SVG，6.2 Astra也现身了",
+        "link": "https://www.qbitai.com/2026/11/507707.html",
+        "contentSnippet": "最快6秒出图",
+        "publishedAt": "2026-11-05T01:59:37.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.89,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 13.88888888888889,
+          "finalScore": 13.89,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6444f8191d8b",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google and Meta Open-Source TorchTPU to Bring Native PyTorch Support to Google TPUs",
+        "link": "https://www.infoq.com/news/2026/11/torchtpu-native-pythorch-tpu/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "TorchTPU is an open-source project developed by Google in collaboration with Meta that provides a native PyTorch backend for Google TPUs. It enables PyTorch workloads to execute on TPU hardware with minimal code modifications, supporting eager and compiled execution, distributed computing, and hardware-specific optimizations. By Sergio De Simone",
+        "publishedAt": "2026-11-02T17:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 8.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 85,
+          "ruleScoreNormalized": 8.333333333333332,
+          "finalScore": 8.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c3e63ef1bbcd",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "AWS Capacity Largely Sold out through 2027, with On-Demand Headroom Reserved",
+        "link": "https://www.infoq.com/news/2026/11/aws-capacity-sold-out/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Amazon CEO Andy Jassy says AWS’s large committed cloud capacity is largely sold out through 2027, with part of 2028 already allocated, while the company continues to reserve headroom for On Demand, EC2 and Bedrock. Practitioners discussing the remarks report difficulty obtaining On Demand capacity for ordinary EC2 instances, and similar constraints at other providers. By Steef-Jan Wiggers",
+        "publishedAt": "2026-11-01T08:03:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 8.33,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 85,
+          "ruleScoreNormalized": 8.333333333333332,
+          "finalScore": 8.33,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e604a204e5b1",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Our newest AI Quest: Mapping the human brain",
+        "link": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+        "contentSnippet": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”",
+        "publishedAt": "2026-10-26T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "51cd2b7b9a2d",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Southeast Asia’s digital economy to hit $368 billion",
+        "link": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+        "contentSnippet": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trillion by 2035.",
+        "publishedAt": "2026-10-21T04:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5478efc66827",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "contentSnippet": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "publishedAt": "2026-10-13T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "92d60b58598f",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Introducing Playground: Create and play custom games",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+        "contentSnippet": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "publishedAt": "2026-10-07T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 82,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "e101e37aa950",
+        "title": "Together AI Releases Together Compiler: Agents Make Inference Up to 2.6x Faster",
+        "summary": "Together AI released Together Compiler, an agent-driven loop that keeps re-optimizing the inference forward pass as tra…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "e101e37aa950"
+        ]
+      },
+      {
+        "itemId": "f6caa8d4abf3",
+        "title": "Axiom – blocks AI agents from inventing limits your code never defined",
+        "summary": "Article URL: https://github.com/axiom-csc/axiom-skill Comments URL: https://news.ycombinator.com/item?id=50386839 Point…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "f6caa8d4abf3"
+        ]
+      },
+      {
+        "itemId": "5bdace9b25cc",
+        "title": "Google Cloud API Gateway Introduces Streaming Support for Real-Time and AI-Powered Applications",
+        "summary": "Google has announced the public preview of streaming support for API Gateway, extending its traditional request-respons…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "5bdace9b25cc"
+        ]
+      },
+      {
+        "itemId": "342a0de7eaf9",
+        "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+        "summary": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "342a0de7eaf9"
+        ]
+      },
+      {
+        "itemId": "09237346dcb3",
+        "title": "Google Releases Gemini Omni 1.2 Flash: 15-Second AI Video at $0.07 per Second",
+        "summary": "Google released Gemini Omni 1.2 Flash, a video generation and editing model with native 15-second clips, multi-turn con…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "09237346dcb3"
+        ]
+      },
+      {
+        "itemId": "369959af512a",
+        "title": "Baidu Releases ERNIE 5.5 Flash Base: A 280B MoE Base Model With 14B Active Parameters",
+        "summary": "Baidu has released ERNIE 5.5 Flash Base, a 280B sparse MoE base model with 14B active parameters, trained on 33.5T toke…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "369959af512a"
+        ]
+      },
+      {
+        "itemId": "152871d5afa0",
+        "title": "webAI Releases TwIL-8B, an 8.8B Reasoning Model Scoring 98.2 on MATH-500",
+        "summary": "webAI released TwIL-8B, an 8.8B reasoning model post-trained from IBM Granite 4.2 8B. It posts 98.2 on MATH-500 and 81.…",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "152871d5afa0"
+        ]
+      },
+      {
+        "itemId": "ba3f56331675",
+        "title": "Paper: Nubank cuts AI agent update cycles from 3 weeks to under 5 days",
+        "summary": "Article URL: https://arxiv.org/abs/2609.30137 Comments URL: https://news.ycombinator.com/item?id=50386702 Points: 1 # C…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "ba3f56331675"
+        ]
+      },
+      {
+        "itemId": "5aeb04dd2d6a",
+        "title": "OpenAI Launches GPT-Image-2.6 Flare and Sunburst: Adds GIFs, SVG Export and 6-Second API Generation",
+        "summary": "OpenAI released Images 2.6 and the GPT-Image-2.6 Flare and Sunburst API models. Flare generates images in as little as …",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "5aeb04dd2d6a"
+        ]
+      },
+      {
+        "itemId": "cf092cf2186a",
+        "title": "Google AI Research Releases Agile Deliberation Framework for Gray-Area Image Classifiers",
+        "summary": "Google Research released Agile Deliberation, a human-in-the-loop framework that helps users define subjective visual co…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "cf092cf2186a"
+        ]
+      },
+      {
+        "itemId": "508152f4c2e7",
+        "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+        "summary": "Gemini Omni 1.2 Flash brings native 15-second video generation and editing, stronger consistency, and 30% lower pricing.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "508152f4c2e7"
+        ]
+      },
+      {
+        "itemId": "75acc7825b92",
+        "title": "基于本体+知识+Harness+Datat Agent的智能体完整落地链路！",
+        "summary": "Data + AI 技术实践巡展 · 上海站",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "75acc7825b92"
+        ]
+      },
+      {
+        "itemId": "2e528402eed4",
+        "title": "Uber Builds MCP Gateway to Govern Access to 800+ Servers and 5,000+ AI Agent Tools",
+        "summary": "Uber has built an MCP Gateway to standardize how AI agents discover and invoke internal services across more than 800 M…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "2e528402eed4"
+        ]
+      },
+      {
+        "itemId": "bf5a6e1dbea6",
+        "title": "百度开源文心5.5 Flash Base，多基准测试刷新同尺寸模型 SOTA",
+        "summary": "11月5日，百度正式开源最新基座模型文心5.5 Flash Base",
+        "recommendation": "开源生态更新",
+        "evidenceItemIds": [
+          "bf5a6e1dbea6"
+        ]
+      },
+      {
+        "itemId": "36a574372b04",
+        "title": "以“真实工作”检验机器人价值，XROGO在CeMAT ASIA发布机器人到岗计划",
+        "summary": "像雇人一样雇机器人",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "36a574372b04"
+        ]
+      },
+      {
+        "itemId": "8c7a1411f387",
+        "title": "HR thinks you can learn AI skills – so why is your company hiring elsewhere?",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "8c7a1411f387"
+        ]
+      },
+      {
+        "itemId": "9c0bb1c5747c",
+        "title": "6 default Pixel 11 settings I changed that made a big difference – and why",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9c0bb1c5747c"
+        ]
+      },
+      {
+        "itemId": "eeb24d3c78fa",
+        "title": "Claude’s new Personal Finance tool aims to help analyze your spending – read-only, of course",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "eeb24d3c78fa"
+        ]
+      },
+      {
+        "itemId": "fe5b03ff8c56",
+        "title": "3 ways Bluetooth 7 upgrades your devices beyond lossless audio",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fe5b03ff8c56"
+        ]
+      },
+      {
+        "itemId": "27b22ee0b4a8",
+        "title": "The Siri AI waitlist is gone in iOS 27: How to try the beta today",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "27b22ee0b4a8"
+        ]
+      },
+      {
+        "itemId": "5409f27c841b",
+        "title": "Google Launches LiteRT Tensor API for Building, Customizing, and Optimizing ML Models for On-Device",
+        "summary": "Google has introduced the LiteRT Tensor API, a lightweight C++ API that allows developers to build, customize, and opti…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5409f27c841b"
+        ]
+      },
+      {
+        "itemId": "11ff38c1b868",
+        "title": "Supermicro Super AI Station Review: The AI Server That Doubles as a Workstation",
+        "summary": "Article URL: https://www.servethehome.com/supermicro-super-ai-station-review-the-ai-server-that-doubles-as-a-workstatio…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "11ff38c1b868"
+        ]
+      },
+      {
+        "itemId": "3b1924f9532c",
+        "title": "Investors wipe $2.5T off Nasdaq as blue tsunami prompts AI fears",
+        "summary": "Article URL: https://www.reuters.com/legal/transactional/ai-data-center-stocks-slip-democratic-sweep-clouds-expansion-p…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3b1924f9532c"
+        ]
+      },
+      {
+        "itemId": "c16f4b2a3839",
+        "title": "University libraries are being swarmed by AI bots, putting public access at risk",
+        "summary": "Article URL: https://www.cbc.ca/news/world/university-libraries-ai-data-scraping-bots-9.7408287 Comments URL: https://n…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c16f4b2a3839"
+        ]
+      },
+      {
+        "itemId": "83d24c270a9a",
+        "title": "Show HN: Lab Canary – Rating AI labs on whether their staff can speak up",
+        "summary": "Article URL: https://labcanary.com/ Comments URL: https://news.ycombinator.com/item?id=50386089 Points: 2 # Comments: 0",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "83d24c270a9a"
+        ]
+      },
+      {
+        "itemId": "d79329ba2304",
+        "title": "Linux Mint 27 arrives next month, and I like it already: New features and other upgrades to expect",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d79329ba2304"
+        ]
+      },
+      {
+        "itemId": "1085709cb6a7",
+        "title": "The latest AI news we announced in October 2026",
+        "summary": "Here are Google’s latest AI updates from October 2026",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1085709cb6a7"
+        ]
+      },
+      {
+        "itemId": "a6f3538328d1",
+        "title": "MIT神作被锤：Astra爆改Qwen权重？就吹吧！",
+        "summary": "spaCy作者长文炮轰",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a6f3538328d1"
+        ]
+      },
+      {
+        "itemId": "b1f3f748cc91",
+        "title": "(无标题)",
+        "summary": "尹希官宣离开OpenAI",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b1f3f748cc91"
+        ]
+      },
+      {
+        "itemId": "8e90b7cf4d47",
+        "title": "GPT-Image-2.6全量上线！直出GIF和SVG，6.2 Astra也现身了",
+        "summary": "最快6秒出图",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "8e90b7cf4d47"
+        ]
+      },
+      {
+        "itemId": "6444f8191d8b",
+        "title": "Google and Meta Open-Source TorchTPU to Bring Native PyTorch Support to Google TPUs",
+        "summary": "TorchTPU is an open-source project developed by Google in collaboration with Meta that provides a native PyTorch backen…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "6444f8191d8b"
+        ]
+      },
+      {
+        "itemId": "c3e63ef1bbcd",
+        "title": "AWS Capacity Largely Sold out through 2027, with On-Demand Headroom Reserved",
+        "summary": "Amazon CEO Andy Jassy says AWS’s large committed cloud capacity is largely sold out through 2027, with part of 2028 alr…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c3e63ef1bbcd"
+        ]
+      },
+      {
+        "itemId": "e604a204e5b1",
+        "title": "Our newest AI Quest: Mapping the human brain",
+        "summary": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "e604a204e5b1"
+        ]
+      },
+      {
+        "itemId": "51cd2b7b9a2d",
+        "title": "Southeast Asia’s digital economy to hit $368 billion",
+        "summary": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trilli…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "51cd2b7b9a2d"
+        ]
+      },
+      {
+        "itemId": "5478efc66827",
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "5478efc66827"
+        ]
+      },
+      {
+        "itemId": "92d60b58598f",
+        "title": "Introducing Playground: Create and play custom games",
+        "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "92d60b58598f"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "e101e37aa950",
+        "title": "Together AI Releases Together Compiler: Agents Make Inference Up to 2.6x Faster",
+        "takeaway": "Together AI released Together Compiler, an agent-driven loop that keeps re-optimizing the inference forward pass as tra…",
+        "evidenceItemIds": [
+          "e101e37aa950"
+        ]
+      },
+      {
+        "itemId": "f6caa8d4abf3",
+        "title": "Axiom – blocks AI agents from inventing limits your code never defined",
+        "takeaway": "Article URL: https://github.com/axiom-csc/axiom-skill Comments URL: https://news.ycombinator.com/item?id=50386839 Point…",
+        "evidenceItemIds": [
+          "f6caa8d4abf3"
+        ]
+      },
+      {
+        "itemId": "5bdace9b25cc",
+        "title": "Google Cloud API Gateway Introduces Streaming Support for Real-Time and AI-Powered Applications",
+        "takeaway": "Google has announced the public preview of streaming support for API Gateway, extending its traditional request-respons…",
+        "evidenceItemIds": [
+          "5bdace9b25cc"
+        ]
+      },
+      {
+        "itemId": "342a0de7eaf9",
+        "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+        "takeaway": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities…",
+        "evidenceItemIds": [
+          "342a0de7eaf9"
+        ]
+      },
+      {
+        "itemId": "09237346dcb3",
+        "title": "Google Releases Gemini Omni 1.2 Flash: 15-Second AI Video at $0.07 per Second",
+        "takeaway": "Google released Gemini Omni 1.2 Flash, a video generation and editing model with native 15-second clips, multi-turn con…",
+        "evidenceItemIds": [
+          "09237346dcb3"
+        ]
+      },
+      {
+        "itemId": "369959af512a",
+        "title": "Baidu Releases ERNIE 5.5 Flash Base: A 280B MoE Base Model With 14B Active Parameters",
+        "takeaway": "Baidu has released ERNIE 5.5 Flash Base, a 280B sparse MoE base model with 14B active parameters, trained on 33.5T toke…",
+        "evidenceItemIds": [
+          "369959af512a"
+        ]
+      },
+      {
+        "itemId": "152871d5afa0",
+        "title": "webAI Releases TwIL-8B, an 8.8B Reasoning Model Scoring 98.2 on MATH-500",
+        "takeaway": "webAI released TwIL-8B, an 8.8B reasoning model post-trained from IBM Granite 4.2 8B. It posts 98.2 on MATH-500 and 81.…",
+        "evidenceItemIds": [
+          "152871d5afa0"
+        ]
+      },
+      {
+        "itemId": "ba3f56331675",
+        "title": "Paper: Nubank cuts AI agent update cycles from 3 weeks to under 5 days",
+        "takeaway": "Article URL: https://arxiv.org/abs/2609.30137 Comments URL: https://news.ycombinator.com/item?id=50386702 Points: 1 # C…",
+        "evidenceItemIds": [
+          "ba3f56331675"
+        ]
+      },
+      {
+        "itemId": "5aeb04dd2d6a",
+        "title": "OpenAI Launches GPT-Image-2.6 Flare and Sunburst: Adds GIFs, SVG Export and 6-Second API Generation",
+        "takeaway": "OpenAI released Images 2.6 and the GPT-Image-2.6 Flare and Sunburst API models. Flare generates images in as little as …",
+        "evidenceItemIds": [
+          "5aeb04dd2d6a"
+        ]
+      },
+      {
+        "itemId": "cf092cf2186a",
+        "title": "Google AI Research Releases Agile Deliberation Framework for Gray-Area Image Classifiers",
+        "takeaway": "Google Research released Agile Deliberation, a human-in-the-loop framework that helps users define subjective visual co…",
+        "evidenceItemIds": [
+          "cf092cf2186a"
+        ]
+      },
+      {
+        "itemId": "508152f4c2e7",
+        "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+        "takeaway": "Gemini Omni 1.2 Flash brings native 15-second video generation and editing, stronger consistency, and 30% lower pricing.",
+        "evidenceItemIds": [
+          "508152f4c2e7"
+        ]
+      },
+      {
+        "itemId": "75acc7825b92",
+        "title": "基于本体+知识+Harness+Datat Agent的智能体完整落地链路！",
+        "takeaway": "Data + AI 技术实践巡展 · 上海站",
+        "evidenceItemIds": [
+          "75acc7825b92"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕agent与open-source展开，建议优先关注《Together AI Releases Together Compiler: Agents Make Inference Up to 2.6x Faster》、《Axiom – blocks AI agents from inventing limits your code never defined》、《Google Cloud API Gateway Introduces Streaming Support for Real-Time and AI-Powered Applications》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Google Releases Gemini Omni 1.2 Flash: 15-Second AI Video at $0.07 per Second》、《Baidu Releases ERNIE 5.5 Flash Base: A 280B MoE Base Model With 14B Active Parameters》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "09237346dcb3",
+          "369959af512a",
+          "5aeb04dd2d6a",
+          "508152f4c2e7"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《以“真实工作”检验机器人价值，XROGO在CeMAT ASIA发布机器人到岗计划》、《Supermicro Super AI Station Review: The AI Server That Doubles as a Workstation》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "36a574372b04",
+          "11ff38c1b868",
+          "3b1924f9532c",
+          "c16f4b2a3839"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 4 条，建议优先阅读《Axiom – blocks AI agents from inventing limits your code never defined》、《Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "f6caa8d4abf3",
+          "342a0de7eaf9",
+          "bf5a6e1dbea6",
+          "c3e63ef1bbcd"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "tooling",
+        "lead": "工具链方向本期共 4 条，建议优先阅读《Google Cloud API Gateway Introduces Streaming Support for Real-Time and AI-Powered Applications》、《Google AI Research Releases Agile Deliberation Framework for Gray-Area Image Classifiers》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "5bdace9b25cc",
+          "cf092cf2186a",
+          "2e528402eed4",
+          "eeb24d3c78fa"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "ca7a9546937593f84e9f30e4d841b45b7a016e15fabe28ba4edce6dfd7b001e9",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-11-06T01:41:47.654Z",
+      "finishedAt": "2026-11-06T01:42:32.020Z",
+      "durationMs": 44367,
+      "inputCount": 36,
+      "processedCount": 36,
+      "fallbackCount": 36,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 36,
+      "failureStats": {
+        "totalFailed": 36,
+        "timeout": 0,
+        "http": 36,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 68,
+        "splitRetryCount": 32
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-10-30",
+          "fetchedCount": 0,
+          "failedReason": "fetch failed code=UND_ERR_CONNECT_TIMEOUT"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-23",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 1,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 1
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-11-06T01:42:32.082Z",
+      "finishedAt": "2026-11-06T01:42:46.503Z",
+      "durationMs": 14421,
+      "inputCount": 36,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "e101e37aa950",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Together AI Releases Together Compiler: Agents Make Inference Up to 2.6x Faster",
+        "link": "https://www.marktechpost.com/2026/11/05/together-ai-together-compiler-continual-compilation-ai-inference/",
+        "contentSnippet": "Together AI released Together Compiler, an agent-driven loop that keeps re-optimizing the inference forward pass as traffic shifts. It beat the best InferenceX configurations by up to 2.6x TPS in under 24 hours per model. The post Together AI Releases Together Compiler: Agents Make Inference Up to 2.6x Faster appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-05T08:02:58.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f6caa8d4abf3",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Axiom – blocks AI agents from inventing limits your code never defined",
+        "link": "https://github.com/axiom-csc/axiom-skill",
+        "contentSnippet": "Article URL: https://github.com/axiom-csc/axiom-skill Comments URL: https://news.ycombinator.com/item?id=50386839 Points: 1 # Comments: 0",
+        "publishedAt": "2026-11-06T01:00:43.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 97.22,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 117,
+          "ruleScoreNormalized": 97.22222222222221,
+          "finalScore": 97.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5bdace9b25cc",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Cloud API Gateway Introduces Streaming Support for Real-Time and AI-Powered Applications",
+        "link": "https://www.infoq.com/news/2026/11/gcp-api-gateway-streaming/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has announced the public preview of streaming support for API Gateway, extending its traditional request-response model to support applications requiring real-time communication. According to Google, this is particularly relevant for AI applications that provide streaming model responses, multi-step agent workflows, and interactive sessions. By Sergio De Simone",
+        "publishedAt": "2026-11-05T16:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 91.67,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 91.66666666666666,
+          "finalScore": 91.67,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "342a0de7eaf9",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+        "link": "https://www.infoq.com/news/2026/10/google-pagebreak-security-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities across its web applications since entering full operation in January. PageBreak uses Gemini models to autonomously investigate potential vulnerabilities, but reports them only after deterministic validators successfully reproduce the exploit against a running application. By Renato Losio",
+        "publishedAt": "2026-10-31T06:20:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 72.22,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 72.22222222222221,
+          "finalScore": 72.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "09237346dcb3",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Google Releases Gemini Omni 1.2 Flash: 15-Second AI Video at $0.07 per Second",
+        "link": "https://www.marktechpost.com/2026/11/05/google-gemini-omni-1-2-flash-15-second-video/",
+        "contentSnippet": "Google released Gemini Omni 1.2 Flash, a video generation and editing model with native 15-second clips, multi-turn conversational editing and a 30% price cut to $0.07 per second of 720p video. The post Google Releases Gemini Omni 1.2 Flash: 15-Second AI Video at $0.07 per Second appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-05T22:58:21.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 72.22,
+        "importance": "medium",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 72.22222222222221,
+          "finalScore": 72.22,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 36,
+      "normalizedCount": 36,
+      "dedupedCount": 36,
+      "highImportanceCount": 3,
+      "mediumImportanceCount": 4,
+      "lowImportanceCount": 29,
+      "categoryBreakdown": {
+        "open-source": 4,
+        "tooling": 4,
+        "agent": 3,
+        "research": 1,
+        "industry-news": 6,
+        "tutorial": 1,
+        "other": 17
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): fetch failed code=UND_ERR_CONNECT_TIMEOUT",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：36/36",
+      "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"073c63604c11e4090e80f934fdd0a442\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"073c6361592b5412292c6ff01121b56d\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"073c6362b62e6a47a9e9d08ed1846669\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
