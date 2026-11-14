@@ -1,0 +1,2258 @@
+{
+  "runId": "daily-1794618010145",
+  "generatedAt": "2026-11-14T01:00:10.112Z",
+  "reviewStartedAt": "2026-11-14T01:00:10.112Z",
+  "reportDate": "2026-11-14",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-11-14T01:00:10.112Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 36,
+    "normalizedCount": 36,
+    "dedupedCount": 36,
+    "highImportanceCount": 2,
+    "mediumImportanceCount": 6,
+    "lowImportanceCount": 28,
+    "categoryBreakdown": {
+      "open-source": 5,
+      "tooling": 4,
+      "agent": 5,
+      "research": 1,
+      "industry-news": 1,
+      "tutorial": 1,
+      "other": 19
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "102b4cb0ac74",
+      "title": "Google Open Sources Ambient Quality Agent (AQuA) to Diagnose Production AI Agent Failures",
+      "summary": "Google has open-sourced AQuA, a reference implementation that analyzes production AI agent sessions, verifies recurring…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "102b4cb0ac74"
+      ]
+    },
+    {
+      "itemId": "51b8fc28d917",
+      "title": "Introducing ChatGPT Wallet",
+      "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user ap…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "51b8fc28d917"
+      ]
+    },
+    {
+      "itemId": "42f8c7b27535",
+      "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+      "summary": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technic…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "42f8c7b27535"
+      ]
+    },
+    {
+      "itemId": "1cf2e66f249f",
+      "title": "Google Releases Gemini 4 Hydrogen: 2.5x Faster Than Gemini 3.8 Flash",
+      "summary": "Google released Gemini 4 Hydrogen, a fast agentic model with a 1M-token window, 4 thinking levels and $1.50/$7.50 prici…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "1cf2e66f249f"
+      ]
+    },
+    {
+      "itemId": "855fe7599b74",
+      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "855fe7599b74"
+      ]
+    },
+    {
+      "itemId": "28ebaf860fc9",
+      "title": "Azure Logic Apps Standard Gets a Local CLI in Preview",
+      "summary": "Microsoft has released a public preview of the logicapp extension for the Azure CLI, adding local project creation, wor…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "28ebaf860fc9"
+      ]
+    },
+    {
+      "itemId": "0d3d521568f6",
+      "title": "JioHotstar Benchmarks Knowledge Bases for AI Coding Agents",
+      "summary": "JioHotstar evaluated 6 approaches to code retrieval for AI coding agents using SWE, CodeScale Bench, and an internal qu…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "0d3d521568f6"
+      ]
+    },
+    {
+      "itemId": "4a6c31287257",
+      "title": "CopilotKit Releases OpenBot 1.0: An MIT-Licensed, Self-Hostable AI Coworker With Built-In Governance",
+      "summary": "CopilotKit released OpenBot 1.0, an MIT-licensed, self-hostable AI coworker workspace. Companies bring their own agents…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "4a6c31287257"
+      ]
+    },
+    {
+      "itemId": "569c96ca8b6c",
+      "title": "Netflix Turns Operational Data Into a Knowledge Graph for AI-Driven Observability",
+      "summary": "Netflix is developing an ontology-driven knowledge graph to accelerate production investigations and provide AI agents …",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "569c96ca8b6c"
+      ]
+    },
+    {
+      "itemId": "41f799b556f2",
+      "title": "Perplexity Releases Decider v1.3: Open-Weight Decision Models Add Locate",
+      "summary": "Perplexity Decider v1.3 and Flash v1.3 are open-weight decision models that return probabilities, not text. Version 1.3…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "41f799b556f2"
+      ]
+    },
+    {
+      "itemId": "326f3c81ffec",
+      "title": "How LinkedIn, Netflix & DoorDash Run Agents, Evals & Inference in Production: QCon AI New York 2026",
+      "summary": "QCon AI New York has published its full program for December 15–16, 2026. Engineers from LinkedIn, Netflix, DoorDash, F…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "326f3c81ffec"
+      ]
+    },
+    {
+      "itemId": "5a66a6a617aa",
+      "title": "Google Releases TPU Sync: Open-Source KV Cache Transfer for TPUs",
+      "summary": "Google released TPU Sync, an open-source C++ library that moves KV caches and weights across TPU HBM, host DRAM, storag…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "5a66a6a617aa"
+      ]
+    },
+    {
+      "itemId": "f6a6662b7ee9",
+      "title": "Gondola doubles revenue as its team builds more with Codex",
+      "summary": "Gondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and ChatGPT simp…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f6a6662b7ee9"
+      ]
+    },
+    {
+      "itemId": "541216264f75",
+      "title": "Holiday Extras is rethinking what it can build with Codex",
+      "summary": "With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilit…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "541216264f75"
+      ]
+    },
+    {
+      "itemId": "772175ba8e89",
+      "title": "Supporting research on AI and children’s safety",
+      "summary": "OpenAI commits $2 million to research on AI and children’s safety. The work supports shared tools to measure risks and …",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "772175ba8e89"
+      ]
+    },
+    {
+      "itemId": "d20916e0118f",
+      "title": "Best AI Video Generation Models in 2026: Elo, Price per Second, Open Weights",
+      "summary": "The AI video leaderboard looks very different from 12 months ago. Native audio is now table stakes. Clips run 15–30 sec…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d20916e0118f"
+      ]
+    },
+    {
+      "itemId": "1addf18f1b89",
+      "title": "Liquid AI Releases LiquidCodec, a 74M-Parameter Streaming Audio Codec",
+      "summary": "Liquid AI released LiquidCodec, a ~74M-parameter streaming audio codec that powers LFM3-Audio-2B and LFM3-Omni-2B. It r…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "1addf18f1b89"
+      ]
+    },
+    {
+      "itemId": "95621506a7e0",
+      "title": "中国AI突破复杂肺癌诊疗！中美医疗圈集体坐不住了",
+      "summary": "250名国内顶尖三甲医院医生联合评测",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "95621506a7e0"
+      ]
+    },
+    {
+      "itemId": "89681d836bb9",
+      "title": "从仰望极速新纪录和鼎曜全球发布 看比亚迪的国际化与高端化之路",
+      "summary": "比亚迪正在把规模优势转化为技术与品牌价值",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "89681d836bb9"
+      ]
+    },
+    {
+      "itemId": "a2e3859c04a6",
+      "title": "Microsoft doesn’t ‘have an ETA for full recovery’ on outage yet",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a2e3859c04a6"
+      ]
+    },
+    {
+      "itemId": "fa0203ea5beb",
+      "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+      "summary": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive res…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fa0203ea5beb"
+      ]
+    },
+    {
+      "itemId": "1eab4cf1f82e",
+      "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+      "summary": "Meet the Gemini Decisions API, powered by our state-of-the-art model Gemini Decision for fast, calibrated multimodal de…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1eab4cf1f82e"
+      ]
+    },
+    {
+      "itemId": "bb43b1944706",
+      "title": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
+      "summary": "Tabletop is a new Google Labs experiment for group collaboration. Build interactive itineraries, polls, and brackets wi…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "bb43b1944706"
+      ]
+    },
+    {
+      "itemId": "c1fb719b7863",
+      "title": "Experience the art and legacy of Dr. Esther Mahlangu",
+      "summary": "A new online archive of Esther Mahlangu’s life and art is now on Google Arts & Culture.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c1fb719b7863"
+      ]
+    },
+    {
+      "itemId": "22d4985714cb",
+      "title": "Google Open-Sources TPU Sync for KV Cache and Weight Transfer on TPUs",
+      "summary": "Google Cloud has open-sourced TPU Sync, a native C++ library that moves KV cache blocks and model weights between TPU H…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "22d4985714cb"
+      ]
+    },
+    {
+      "itemId": "830f32d0221e",
+      "title": "Gemini Intelligence: New features, on more devices",
+      "summary": "Gemini Intelligence is rolling out to more devices. See how expanded capabilities across these devices help you do more.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "830f32d0221e"
+      ]
+    },
+    {
+      "itemId": "faa28d71da34",
+      "title": "We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps.",
+      "summary": "Google and Adobe are integrating creative and productivity tools. Edit PDFs in Drive and use Adobe AI in Gemini. See wh…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "faa28d71da34"
+      ]
+    },
+    {
+      "itemId": "28216bd34dd9",
+      "title": "黄仁勋辞职，英伟达33年首换帅，市值蒸发超3万亿",
+      "summary": "一个时代结束了",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "28216bd34dd9"
+      ]
+    },
+    {
+      "itemId": "26a169e1e27f",
+      "title": "MEET2027含金量再加码：AI4S/量子计算/AI Infra…第二批嘉宾强势来袭！",
+      "summary": "12.9 北京，来MEET2027现场",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "26a169e1e27f"
+      ]
+    },
+    {
+      "itemId": "da021f31e865",
+      "title": "比亚迪第1900万辆新能源汽车下线，科技新奢旗舰SUV方程豹钛9开启预订",
+      "summary": "比亚迪第1900万辆新能源汽车在西安工厂正式下线",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "da021f31e865"
+      ]
+    },
+    {
+      "itemId": "6f7fa652151c",
+      "title": "比亚迪与神州租车首批闪充车及闪充站投放仪式顺利举行，战略合作落地兑现，闪充中国再次提速",
+      "summary": "2026年11月10日，比亚迪与神州租车首批闪充车及闪充站投放仪式在山东济南隆重举办",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "6f7fa652151c"
+      ]
+    },
+    {
+      "itemId": "3a55a71fdd2d",
+      "title": "Roku drops smart home products to focus on streaming – what that means for your devices",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3a55a71fdd2d"
+      ]
+    },
+    {
+      "itemId": "b97c1eeabff9",
+      "title": "Attention, Android power users: This app unlocks 30+ features you won’t find in Settings",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "b97c1eeabff9"
+      ]
+    },
+    {
+      "itemId": "7fb0308472b3",
+      "title": "You can force Gemini to forget about you now – how to edit its Memory",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "7fb0308472b3"
+      ]
+    },
+    {
+      "itemId": "3f2b2ffadbf4",
+      "title": "Google Wallet just turned your Android phone into a digital house key – how it works",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "3f2b2ffadbf4"
+      ]
+    },
+    {
+      "itemId": "c2482cfb800f",
+      "title": "Google’s Pixel Tag tracker won’t work as well on older Android phones – check our list",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c2482cfb800f"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "102b4cb0ac74",
+      "title": "Google Open Sources Ambient Quality Agent (AQuA) to Diagnose Production AI Agent Failures",
+      "takeaway": "Google has open-sourced AQuA, a reference implementation that analyzes production AI agent sessions, verifies recurring…",
+      "evidenceItemIds": [
+        "102b4cb0ac74"
+      ]
+    },
+    {
+      "itemId": "51b8fc28d917",
+      "title": "Introducing ChatGPT Wallet",
+      "takeaway": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user ap…",
+      "evidenceItemIds": [
+        "51b8fc28d917"
+      ]
+    },
+    {
+      "itemId": "42f8c7b27535",
+      "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+      "takeaway": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technic…",
+      "evidenceItemIds": [
+        "42f8c7b27535"
+      ]
+    },
+    {
+      "itemId": "1cf2e66f249f",
+      "title": "Google Releases Gemini 4 Hydrogen: 2.5x Faster Than Gemini 3.8 Flash",
+      "takeaway": "Google released Gemini 4 Hydrogen, a fast agentic model with a 1M-token window, 4 thinking levels and $1.50/$7.50 prici…",
+      "evidenceItemIds": [
+        "1cf2e66f249f"
+      ]
+    },
+    {
+      "itemId": "855fe7599b74",
+      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "takeaway": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship…",
+      "evidenceItemIds": [
+        "855fe7599b74"
+      ]
+    },
+    {
+      "itemId": "28ebaf860fc9",
+      "title": "Azure Logic Apps Standard Gets a Local CLI in Preview",
+      "takeaway": "Microsoft has released a public preview of the logicapp extension for the Azure CLI, adding local project creation, wor…",
+      "evidenceItemIds": [
+        "28ebaf860fc9"
+      ]
+    },
+    {
+      "itemId": "0d3d521568f6",
+      "title": "JioHotstar Benchmarks Knowledge Bases for AI Coding Agents",
+      "takeaway": "JioHotstar evaluated 6 approaches to code retrieval for AI coding agents using SWE, CodeScale Bench, and an internal qu…",
+      "evidenceItemIds": [
+        "0d3d521568f6"
+      ]
+    },
+    {
+      "itemId": "4a6c31287257",
+      "title": "CopilotKit Releases OpenBot 1.0: An MIT-Licensed, Self-Hostable AI Coworker With Built-In Governance",
+      "takeaway": "CopilotKit released OpenBot 1.0, an MIT-licensed, self-hostable AI coworker workspace. Companies bring their own agents…",
+      "evidenceItemIds": [
+        "4a6c31287257"
+      ]
+    },
+    {
+      "itemId": "569c96ca8b6c",
+      "title": "Netflix Turns Operational Data Into a Knowledge Graph for AI-Driven Observability",
+      "takeaway": "Netflix is developing an ontology-driven knowledge graph to accelerate production investigations and provide AI agents …",
+      "evidenceItemIds": [
+        "569c96ca8b6c"
+      ]
+    },
+    {
+      "itemId": "41f799b556f2",
+      "title": "Perplexity Releases Decider v1.3: Open-Weight Decision Models Add Locate",
+      "takeaway": "Perplexity Decider v1.3 and Flash v1.3 are open-weight decision models that return probabilities, not text. Version 1.3…",
+      "evidenceItemIds": [
+        "41f799b556f2"
+      ]
+    },
+    {
+      "itemId": "326f3c81ffec",
+      "title": "How LinkedIn, Netflix & DoorDash Run Agents, Evals & Inference in Production: QCon AI New York 2026",
+      "takeaway": "QCon AI New York has published its full program for December 15–16, 2026. Engineers from LinkedIn, Netflix, DoorDash, F…",
+      "evidenceItemIds": [
+        "326f3c81ffec"
+      ]
+    },
+    {
+      "itemId": "5a66a6a617aa",
+      "title": "Google Releases TPU Sync: Open-Source KV Cache Transfer for TPUs",
+      "takeaway": "Google released TPU Sync, an open-source C++ library that moves KV caches and weights across TPU HBM, host DRAM, storag…",
+      "evidenceItemIds": [
+        "5a66a6a617aa"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《Google Open Sources Ambient Quality Agent (AQuA) to Diagnose Production AI Agent Failures》、《Introducing ChatGPT Wallet》、《Shield helps technicians hand off legacy portal work with OpenAI》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Gondola doubles revenue as its team builds more with Codex》、《Holiday Extras is rethinking what it can build with Codex》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "f6a6662b7ee9",
+        "541216264f75",
+        "d20916e0118f",
+        "1addf18f1b89"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 4 条，建议优先阅读《Google Open Sources Ambient Quality Agent (AQuA) to Diagnose Production AI Agent Failures》、《Google Releases Gemini 4 Hydrogen: 2.5x Faster Than Gemini 3.8 Flash》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "102b4cb0ac74",
+        "1cf2e66f249f",
+        "4a6c31287257",
+        "41f799b556f2"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 4 条，建议优先阅读《Introducing ChatGPT Wallet》、《Shield helps technicians hand off legacy portal work with OpenAI》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "51b8fc28d917",
+        "42f8c7b27535",
+        "855fe7599b74",
+        "569c96ca8b6c"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "tooling",
+      "lead": "工具链方向本期共 4 条，建议优先阅读《Azure Logic Apps Standard Gets a Local CLI in Preview》、《JioHotstar Benchmarks Knowledge Bases for AI Coding Agents》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "28ebaf860fc9",
+        "0d3d521568f6",
+        "772175ba8e89",
+        "faa28d71da34"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "22c102accd20583f353aba8d68446c39ef7a0504e19bd80fba21cde764f2f89e",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-11-14T01:00:37.512Z",
+    "finishedAt": "2026-11-14T01:01:28.794Z",
+    "durationMs": 51282,
+    "inputCount": 36,
+    "processedCount": 36,
+    "fallbackCount": 36,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 36,
+    "failureStats": {
+      "totalFailed": 36,
+      "timeout": 0,
+      "http": 36,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 68,
+      "splitRetryCount": 32
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-11-07",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-31",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-11-14T01:01:28.845Z",
+    "finishedAt": "2026-11-14T01:01:44.177Z",
+    "durationMs": 15332,
+    "inputCount": 36,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "102b4cb0ac74",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Google Open Sources Ambient Quality Agent (AQuA) to Diagnose Production AI Agent Failures",
+      "link": "https://www.infoq.com/news/2026/11/google-ambient-agent-prod/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Google has open-sourced AQuA, a reference implementation that analyzes production AI agent sessions, verifies recurring failure patterns, and investigates root causes against deployed source snapshots. In a 32-session replay, developers reduced seat selection bypasses from 15 sessions to two and dietary preference omissions from seven to zero after prompt changes. By Leela Kumili",
+      "publishedAt": "2026-11-13T13:53:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 127,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "51b8fc28d917",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "Introducing ChatGPT Wallet",
+      "link": "https://openai.com/index/introducing-chatgpt-wallet",
+      "contentSnippet": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
+      "publishedAt": "2026-11-13T15:00:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 95.35,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 125,
+        "ruleScoreNormalized": 95.34883720930233,
+        "finalScore": 95.35,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "42f8c7b27535",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+      "link": "https://openai.com/business/customer-stories/shield",
+      "contentSnippet": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their judgment.",
+      "publishedAt": "2026-11-13T08:00:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 83.72,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 120,
+        "ruleScoreNormalized": 83.72093023255815,
+        "finalScore": 83.72,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "1cf2e66f249f",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Google Releases Gemini 4 Hydrogen: 2.5x Faster Than Gemini 3.8 Flash",
+      "link": "https://www.marktechpost.com/2026/11/13/google-gemini-4-hydrogen/",
+      "contentSnippet": "Google released Gemini 4 Hydrogen, a fast agentic model with a 1M-token window, 4 thinking levels and $1.50/$7.50 pricing. Google reports a 51 Artificial Analysis score and 57% on Terminal-Bench 4.1. The post Google Releases Gemini 4 Hydrogen: 2.5x Faster Than Gemini 3.8 Flash appeared first on MarkTechPost.",
+      "publishedAt": "2026-11-13T09:45:48.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 79.07,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 118,
+        "ruleScoreNormalized": 79.06976744186046,
+        "finalScore": 79.07,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "855fe7599b74",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "link": "https://openai.com/business/customer-stories/amplitude",
+      "contentSnippet": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+      "publishedAt": "2026-11-12T20:00:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 72.09,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 115,
+        "ruleScoreNormalized": 72.09302325581395,
+        "finalScore": 72.09,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[HNRSS AI] 抓取失败: fetch failed (code=UND_ERR_SOCKET)",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：36/36",
+    "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0746e5b90c7e046afea874f21c4716f9\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0746e5b96d189863292dc5beaf84ee09\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0746e5ba3e38aefa2cfa1b085c0d16d1\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Google Open Sources Ambient Quality Agent (AQuA) to Diagnose Production AI Agent Failures\n- Introducing ChatGPT Wallet\n- Shield helps technicians hand off legacy portal work with OpenAI\n- Google Releases Gemini 4 Hydrogen: 2.5x Faster Than Gemini 3.8 Flash\n- How Amplitude ships product improvements in 1–2 days with OpenAI\n\n### 分类覆盖（大纲）\n- open-source: 5 条\n- agent: 5 条\n- tooling: 4 条\n- other: 19 条\n- research: 1 条\n- industry-news: 1 条\n- tutorial: 1 条",
+    "rankedItems": [
+      {
+        "id": "102b4cb0ac74",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Open Sources Ambient Quality Agent (AQuA) to Diagnose Production AI Agent Failures",
+        "link": "https://www.infoq.com/news/2026/11/google-ambient-agent-prod/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has open-sourced AQuA, a reference implementation that analyzes production AI agent sessions, verifies recurring failure patterns, and investigates root causes against deployed source snapshots. In a 32-session replay, developers reduced seat selection bypasses from 15 sessions to two and dietary preference omissions from seven to zero after prompt changes. By Leela Kumili",
+        "publishedAt": "2026-11-13T13:53:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 127,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "51b8fc28d917",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Introducing ChatGPT Wallet",
+        "link": "https://openai.com/index/introducing-chatgpt-wallet",
+        "contentSnippet": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
+        "publishedAt": "2026-11-13T15:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 95.35,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 125,
+          "ruleScoreNormalized": 95.34883720930233,
+          "finalScore": 95.35,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "42f8c7b27535",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+        "link": "https://openai.com/business/customer-stories/shield",
+        "contentSnippet": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their judgment.",
+        "publishedAt": "2026-11-13T08:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 83.72,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 120,
+          "ruleScoreNormalized": 83.72093023255815,
+          "finalScore": 83.72,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1cf2e66f249f",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Google Releases Gemini 4 Hydrogen: 2.5x Faster Than Gemini 3.8 Flash",
+        "link": "https://www.marktechpost.com/2026/11/13/google-gemini-4-hydrogen/",
+        "contentSnippet": "Google released Gemini 4 Hydrogen, a fast agentic model with a 1M-token window, 4 thinking levels and $1.50/$7.50 pricing. Google reports a 51 Artificial Analysis score and 57% on Terminal-Bench 4.1. The post Google Releases Gemini 4 Hydrogen: 2.5x Faster Than Gemini 3.8 Flash appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-13T09:45:48.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 79.07,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 79.06976744186046,
+          "finalScore": 79.07,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "855fe7599b74",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+        "link": "https://openai.com/business/customer-stories/amplitude",
+        "contentSnippet": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+        "publishedAt": "2026-11-12T20:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 72.09,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 72.09302325581395,
+          "finalScore": 72.09,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "28ebaf860fc9",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Azure Logic Apps Standard Gets a Local CLI in Preview",
+        "link": "https://www.infoq.com/news/2026/11/logic-apps-local-cli/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Microsoft has released a public preview of the logicapp extension for the Azure CLI, adding local project creation, workflow authoring, a runtime lifecycle, connector management, run inspection, and test scaffolding for Logic Apps Standard, work that previously required the VS Code extension. The product team pitches the terminal surface as determinism for AI-assisted development. By Steef-Jan Wiggers",
+        "publishedAt": "2026-11-12T10:23:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 72.09,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 72.09302325581395,
+          "finalScore": 72.09,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "0d3d521568f6",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "JioHotstar Benchmarks Knowledge Bases for AI Coding Agents",
+        "link": "https://www.infoq.com/news/2026/11/jiohotstar-codingagent-retrieval/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "JioHotstar evaluated 6 approaches to code retrieval for AI coding agents using SWE, CodeScale Bench, and an internal question-answering harness. Structural search performed well on concrete tasks, while semantic retrieval helped with ambiguous requirements. The findings highlight trade-offs in accuracy, token use, and tool design, underscoring the need to match retrieval tools to task types. By Leela Kumili",
+        "publishedAt": "2026-11-11T14:28:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 72.09,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 72.09302325581395,
+          "finalScore": 72.09,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "4a6c31287257",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "CopilotKit Releases OpenBot 1.0: An MIT-Licensed, Self-Hostable AI Coworker With Built-In Governance",
+        "link": "https://www.marktechpost.com/2026/11/12/copilotkit-openbot-1-0-open-source-ai-coworker/",
+        "contentSnippet": "CopilotKit released OpenBot 1.0, an MIT-licensed, self-hostable AI coworker workspace. Companies bring their own agents, models and infrastructure, while every Bot action passes a policy check and lands in an audit trail. The post CopilotKit Releases OpenBot 1.0: An MIT-Licensed, Self-Hostable AI Coworker With Built-In Governance appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-12T21:45:36.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 67.44,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 113,
+          "ruleScoreNormalized": 67.44186046511628,
+          "finalScore": 67.44,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "569c96ca8b6c",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Netflix Turns Operational Data Into a Knowledge Graph for AI-Driven Observability",
+        "link": "https://www.infoq.com/news/2026/11/netflix-ai-driven-observability/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Netflix is developing an ontology-driven knowledge graph to accelerate production investigations and provide AI agents with a shared understanding of its operational environment. By Craig Risi",
+        "publishedAt": "2026-11-13T12:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 60.47,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 60.46511627906976,
+          "finalScore": 60.47,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "41f799b556f2",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Perplexity Releases Decider v1.3: Open-Weight Decision Models Add Locate",
+        "link": "https://www.marktechpost.com/2026/11/13/perplexity-decider-v1-3-open-weight-decision-models-locate/",
+        "contentSnippet": "Perplexity Decider v1.3 and Flash v1.3 are open-weight decision models that return probabilities, not text. Version 1.3 adds Locate for span extraction and reports 91.6% mean accuracy on 63 query-classification tasks. The post Perplexity Releases Decider v1.3: Open-Weight Decision Models Add Locate appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-13T16:10:02.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 55.81,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 55.81395348837209,
+          "finalScore": 55.81,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "326f3c81ffec",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "How LinkedIn, Netflix & DoorDash Run Agents, Evals & Inference in Production: QCon AI New York 2026",
+        "link": "https://www.infoq.com/news/2026/11/qcon-ai-newyork-2026-program/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "QCon AI New York has published its full program for December 15–16, 2026. Engineers from LinkedIn, Netflix, DoorDash, Figma, Pinterest, Honeycomb, Harvey, Google DeepMind and OpenAI describe AI systems they run in production. Talks cover agent permissions and guardrails, eval loops, inference cost, AI code review, and team adoption. By Artenisa Chatziou",
+        "publishedAt": "2026-11-11T11:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 48.84,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 48.837209302325576,
+          "finalScore": 48.84,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "5a66a6a617aa",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Google Releases TPU Sync: Open-Source KV Cache Transfer for TPUs",
+        "link": "https://www.marktechpost.com/2026/11/13/google-tpu-sync-kv-cache-transfer-library/",
+        "contentSnippet": "Google released TPU Sync, an open-source C++ library that moves KV caches and weights across TPU HBM, host DRAM, storage and network. Google reports over 90% lower KV transfer latency on 235B to 480B MoE models. The post Google Releases TPU Sync: Open-Source KV Cache Transfer for TPUs appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-13T10:32:26.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 44.19,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 103,
+          "ruleScoreNormalized": 44.18604651162791,
+          "finalScore": 44.19,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f6a6662b7ee9",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Gondola doubles revenue as its team builds more with Codex",
+        "link": "https://openai.com/business/customer-stories/gondola",
+        "contentSnippet": "Gondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and ChatGPT simplifying daily work.",
+        "publishedAt": "2026-11-12T12:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 37.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 37.2093023255814,
+          "finalScore": 37.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "541216264f75",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Holiday Extras is rethinking what it can build with Codex",
+        "link": "https://openai.com/business/customer-stories/holidays-extras-codex",
+        "contentSnippet": "With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilities for growth.",
+        "publishedAt": "2026-11-12T09:30:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 37.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 37.2093023255814,
+          "finalScore": 37.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "772175ba8e89",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Supporting research on AI and children’s safety",
+        "link": "https://openai.com/index/children-first-declaration",
+        "contentSnippet": "OpenAI commits $2 million to research on AI and children’s safety. The work supports shared tools to measure risks and opportunities for young people.",
+        "publishedAt": "2026-11-12T00:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 37.21,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 37.2093023255814,
+          "finalScore": 37.21,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d20916e0118f",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Best AI Video Generation Models in 2026: Elo, Price per Second, Open Weights",
+        "link": "https://www.marktechpost.com/2026/11/13/best-ai-video-generation-models-2026/",
+        "contentSnippet": "The AI video leaderboard looks very different from 12 months ago. Native audio is now table stakes. Clips run 15–30 seconds. And an open-weights model sits in the top 3. This ranking (as of Nov 13, 2026) uses one quality signal: blind human-preference Elo from the Artificial Analysis Video Arena. We pair it with API […] The post Best AI Video Generation Models in 2026: Elo, Price per Second, Open Weights appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-13T17:23:51.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 32.56,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 32.55813953488372,
+          "finalScore": 32.56,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1addf18f1b89",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Liquid AI Releases LiquidCodec, a 74M-Parameter Streaming Audio Codec",
+        "link": "https://www.marktechpost.com/2026/11/12/liquid-ai-liquidcodec-streaming-audio-codec/",
+        "contentSnippet": "Liquid AI released LiquidCodec, a ~74M-parameter streaming audio codec that powers LFM3-Audio-2B and LFM3-Omni-2B. It runs at 12.5 Hz with 12 codebooks and encodes about 361x faster than real time on a single CPU thread. The post Liquid AI Releases LiquidCodec, a 74M-Parameter Streaming Audio Codec appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-12T22:43:26.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 32.56,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 32.55813953488372,
+          "finalScore": 32.56,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "95621506a7e0",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "中国AI突破复杂肺癌诊疗！中美医疗圈集体坐不住了",
+        "link": "https://www.qbitai.com/2026/11/509796.html",
+        "contentSnippet": "250名国内顶尖三甲医院医生联合评测",
+        "publishedAt": "2026-11-13T07:43:03.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 30.23,
+        "importance": "low",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 30.23255813953488,
+          "finalScore": 30.23,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "89681d836bb9",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "从仰望极速新纪录和鼎曜全球发布 看比亚迪的国际化与高端化之路",
+        "link": "https://www.qbitai.com/2026/11/509716.html",
+        "contentSnippet": "比亚迪正在把规模优势转化为技术与品牌价值",
+        "publishedAt": "2026-11-13T07:12:42.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 30.23,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 30.23255813953488,
+          "finalScore": 30.23,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a2e3859c04a6",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Microsoft doesn’t ‘have an ETA for full recovery’ on outage yet",
+        "link": "https://www.zdnet.com/business/microsoft-outage-outlook-teams-copilot/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-13T21:43:32.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 23.26,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 23.25581395348837,
+          "finalScore": 23.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fa0203ea5beb",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+        "link": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+        "contentSnippet": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive responses.",
+        "publishedAt": "2026-11-12T18:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.6,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 18.6046511627907,
+          "finalScore": 18.6,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1eab4cf1f82e",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+        "link": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+        "contentSnippet": "Meet the Gemini Decisions API, powered by our state-of-the-art model Gemini Decision for fast, calibrated multimodal decisions.",
+        "publishedAt": "2026-11-11T18:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.6,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 18.6046511627907,
+          "finalScore": 18.6,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "bb43b1944706",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
+        "link": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/",
+        "contentSnippet": "Tabletop is a new Google Labs experiment for group collaboration. Build interactive itineraries, polls, and brackets with your team. Join the waitlist.",
+        "publishedAt": "2026-11-11T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.6,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 18.6046511627907,
+          "finalScore": 18.6,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c1fb719b7863",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Experience the art and legacy of Dr. Esther Mahlangu",
+        "link": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
+        "contentSnippet": "A new online archive of Esther Mahlangu’s life and art is now on Google Arts & Culture.",
+        "publishedAt": "2026-11-11T09:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 18.6,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 92,
+          "ruleScoreNormalized": 18.6046511627907,
+          "finalScore": 18.6,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "22d4985714cb",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Open-Sources TPU Sync for KV Cache and Weight Transfer on TPUs",
+        "link": "https://www.infoq.com/news/2026/11/google-tpu-sync/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google Cloud has open-sourced TPU Sync, a native C++ library that moves KV cache blocks and model weights between TPU HBM, host DRAM, shared storage, and the data center network. By Daniel Dominguez",
+        "publishedAt": "2026-11-12T10:06:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 13.95,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 13.953488372093023,
+          "finalScore": 13.95,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "830f32d0221e",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Gemini Intelligence: New features, on more devices",
+        "link": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
+        "contentSnippet": "Gemini Intelligence is rolling out to more devices. See how expanded capabilities across these devices help you do more.",
+        "publishedAt": "2026-11-10T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.98,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 6.976744186046512,
+          "finalScore": 6.98,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "faa28d71da34",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps.",
+        "link": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
+        "contentSnippet": "Google and Adobe are integrating creative and productivity tools. Edit PDFs in Drive and use Adobe AI in Gemini. See what’s new in this partnership.",
+        "publishedAt": "2026-11-10T14:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.98,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 6.976744186046512,
+          "finalScore": 6.98,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "28216bd34dd9",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "黄仁勋辞职，英伟达33年首换帅，市值蒸发超3万亿",
+        "link": "https://www.qbitai.com/2026/11/509995.html",
+        "contentSnippet": "一个时代结束了",
+        "publishedAt": "2026-11-13T09:02:39.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.98,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 6.976744186046512,
+          "finalScore": 6.98,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "26a169e1e27f",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "MEET2027含金量再加码：AI4S/量子计算/AI Infra…第二批嘉宾强势来袭！",
+        "link": "https://www.qbitai.com/2026/11/509827.html",
+        "contentSnippet": "12.9 北京，来MEET2027现场",
+        "publishedAt": "2026-11-13T07:51:08.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.98,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 6.976744186046512,
+          "finalScore": 6.98,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "da021f31e865",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "比亚迪第1900万辆新能源汽车下线，科技新奢旗舰SUV方程豹钛9开启预订",
+        "link": "https://www.qbitai.com/2026/11/509730.html",
+        "contentSnippet": "比亚迪第1900万辆新能源汽车在西安工厂正式下线",
+        "publishedAt": "2026-11-13T07:17:54.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.98,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 6.976744186046512,
+          "finalScore": 6.98,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6f7fa652151c",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "比亚迪与神州租车首批闪充车及闪充站投放仪式顺利举行，战略合作落地兑现，闪充中国再次提速",
+        "link": "https://www.qbitai.com/2026/11/509710.html",
+        "contentSnippet": "2026年11月10日，比亚迪与神州租车首批闪充车及闪充站投放仪式在山东济南隆重举办",
+        "publishedAt": "2026-11-13T07:09:05.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 6.98,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 6.976744186046512,
+          "finalScore": 6.98,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3a55a71fdd2d",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Roku drops smart home products to focus on streaming – what that means for your devices",
+        "link": "https://www.zdnet.com/home-and-office/roku-discontinues-smart-home-products/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-12T18:43:08.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b97c1eeabff9",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Attention, Android power users: This app unlocks 30+ features you won’t find in Settings",
+        "link": "https://www.zdnet.com/tech/essentials-android-app-power-user-settings/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-12T18:15:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7fb0308472b3",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "You can force Gemini to forget about you now – how to edit its Memory",
+        "link": "https://www.zdnet.com/innovation/google-gemini-memory-summary-user-control/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-12T17:58:52.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "3f2b2ffadbf4",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Google Wallet just turned your Android phone into a digital house key – how it works",
+        "link": "https://www.zdnet.com/home-and-office/google-wallet-digital-home-keys-smart-locks/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-12T17:50:24.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c2482cfb800f",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Google’s Pixel Tag tracker won’t work as well on older Android phones – check our list",
+        "link": "https://www.zdnet.com/tech/google-pixel-tag-android-tracker-bluetooth-6-0-older-phones/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-12T17:11:16.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 84,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "102b4cb0ac74",
+        "title": "Google Open Sources Ambient Quality Agent (AQuA) to Diagnose Production AI Agent Failures",
+        "summary": "Google has open-sourced AQuA, a reference implementation that analyzes production AI agent sessions, verifies recurring…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "102b4cb0ac74"
+        ]
+      },
+      {
+        "itemId": "51b8fc28d917",
+        "title": "Introducing ChatGPT Wallet",
+        "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user ap…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "51b8fc28d917"
+        ]
+      },
+      {
+        "itemId": "42f8c7b27535",
+        "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+        "summary": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technic…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "42f8c7b27535"
+        ]
+      },
+      {
+        "itemId": "1cf2e66f249f",
+        "title": "Google Releases Gemini 4 Hydrogen: 2.5x Faster Than Gemini 3.8 Flash",
+        "summary": "Google released Gemini 4 Hydrogen, a fast agentic model with a 1M-token window, 4 thinking levels and $1.50/$7.50 prici…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "1cf2e66f249f"
+        ]
+      },
+      {
+        "itemId": "855fe7599b74",
+        "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+        "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "855fe7599b74"
+        ]
+      },
+      {
+        "itemId": "28ebaf860fc9",
+        "title": "Azure Logic Apps Standard Gets a Local CLI in Preview",
+        "summary": "Microsoft has released a public preview of the logicapp extension for the Azure CLI, adding local project creation, wor…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "28ebaf860fc9"
+        ]
+      },
+      {
+        "itemId": "0d3d521568f6",
+        "title": "JioHotstar Benchmarks Knowledge Bases for AI Coding Agents",
+        "summary": "JioHotstar evaluated 6 approaches to code retrieval for AI coding agents using SWE, CodeScale Bench, and an internal qu…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "0d3d521568f6"
+        ]
+      },
+      {
+        "itemId": "4a6c31287257",
+        "title": "CopilotKit Releases OpenBot 1.0: An MIT-Licensed, Self-Hostable AI Coworker With Built-In Governance",
+        "summary": "CopilotKit released OpenBot 1.0, an MIT-licensed, self-hostable AI coworker workspace. Companies bring their own agents…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "4a6c31287257"
+        ]
+      },
+      {
+        "itemId": "569c96ca8b6c",
+        "title": "Netflix Turns Operational Data Into a Knowledge Graph for AI-Driven Observability",
+        "summary": "Netflix is developing an ontology-driven knowledge graph to accelerate production investigations and provide AI agents …",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "569c96ca8b6c"
+        ]
+      },
+      {
+        "itemId": "41f799b556f2",
+        "title": "Perplexity Releases Decider v1.3: Open-Weight Decision Models Add Locate",
+        "summary": "Perplexity Decider v1.3 and Flash v1.3 are open-weight decision models that return probabilities, not text. Version 1.3…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "41f799b556f2"
+        ]
+      },
+      {
+        "itemId": "326f3c81ffec",
+        "title": "How LinkedIn, Netflix & DoorDash Run Agents, Evals & Inference in Production: QCon AI New York 2026",
+        "summary": "QCon AI New York has published its full program for December 15–16, 2026. Engineers from LinkedIn, Netflix, DoorDash, F…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "326f3c81ffec"
+        ]
+      },
+      {
+        "itemId": "5a66a6a617aa",
+        "title": "Google Releases TPU Sync: Open-Source KV Cache Transfer for TPUs",
+        "summary": "Google released TPU Sync, an open-source C++ library that moves KV caches and weights across TPU HBM, host DRAM, storag…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "5a66a6a617aa"
+        ]
+      },
+      {
+        "itemId": "f6a6662b7ee9",
+        "title": "Gondola doubles revenue as its team builds more with Codex",
+        "summary": "Gondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and ChatGPT simp…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f6a6662b7ee9"
+        ]
+      },
+      {
+        "itemId": "541216264f75",
+        "title": "Holiday Extras is rethinking what it can build with Codex",
+        "summary": "With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilit…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "541216264f75"
+        ]
+      },
+      {
+        "itemId": "772175ba8e89",
+        "title": "Supporting research on AI and children’s safety",
+        "summary": "OpenAI commits $2 million to research on AI and children’s safety. The work supports shared tools to measure risks and …",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "772175ba8e89"
+        ]
+      },
+      {
+        "itemId": "d20916e0118f",
+        "title": "Best AI Video Generation Models in 2026: Elo, Price per Second, Open Weights",
+        "summary": "The AI video leaderboard looks very different from 12 months ago. Native audio is now table stakes. Clips run 15–30 sec…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d20916e0118f"
+        ]
+      },
+      {
+        "itemId": "1addf18f1b89",
+        "title": "Liquid AI Releases LiquidCodec, a 74M-Parameter Streaming Audio Codec",
+        "summary": "Liquid AI released LiquidCodec, a ~74M-parameter streaming audio codec that powers LFM3-Audio-2B and LFM3-Omni-2B. It r…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "1addf18f1b89"
+        ]
+      },
+      {
+        "itemId": "95621506a7e0",
+        "title": "中国AI突破复杂肺癌诊疗！中美医疗圈集体坐不住了",
+        "summary": "250名国内顶尖三甲医院医生联合评测",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "95621506a7e0"
+        ]
+      },
+      {
+        "itemId": "89681d836bb9",
+        "title": "从仰望极速新纪录和鼎曜全球发布 看比亚迪的国际化与高端化之路",
+        "summary": "比亚迪正在把规模优势转化为技术与品牌价值",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "89681d836bb9"
+        ]
+      },
+      {
+        "itemId": "a2e3859c04a6",
+        "title": "Microsoft doesn’t ‘have an ETA for full recovery’ on outage yet",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a2e3859c04a6"
+        ]
+      },
+      {
+        "itemId": "fa0203ea5beb",
+        "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+        "summary": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive res…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fa0203ea5beb"
+        ]
+      },
+      {
+        "itemId": "1eab4cf1f82e",
+        "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+        "summary": "Meet the Gemini Decisions API, powered by our state-of-the-art model Gemini Decision for fast, calibrated multimodal de…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1eab4cf1f82e"
+        ]
+      },
+      {
+        "itemId": "bb43b1944706",
+        "title": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
+        "summary": "Tabletop is a new Google Labs experiment for group collaboration. Build interactive itineraries, polls, and brackets wi…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "bb43b1944706"
+        ]
+      },
+      {
+        "itemId": "c1fb719b7863",
+        "title": "Experience the art and legacy of Dr. Esther Mahlangu",
+        "summary": "A new online archive of Esther Mahlangu’s life and art is now on Google Arts & Culture.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c1fb719b7863"
+        ]
+      },
+      {
+        "itemId": "22d4985714cb",
+        "title": "Google Open-Sources TPU Sync for KV Cache and Weight Transfer on TPUs",
+        "summary": "Google Cloud has open-sourced TPU Sync, a native C++ library that moves KV cache blocks and model weights between TPU H…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "22d4985714cb"
+        ]
+      },
+      {
+        "itemId": "830f32d0221e",
+        "title": "Gemini Intelligence: New features, on more devices",
+        "summary": "Gemini Intelligence is rolling out to more devices. See how expanded capabilities across these devices help you do more.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "830f32d0221e"
+        ]
+      },
+      {
+        "itemId": "faa28d71da34",
+        "title": "We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps.",
+        "summary": "Google and Adobe are integrating creative and productivity tools. Edit PDFs in Drive and use Adobe AI in Gemini. See wh…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "faa28d71da34"
+        ]
+      },
+      {
+        "itemId": "28216bd34dd9",
+        "title": "黄仁勋辞职，英伟达33年首换帅，市值蒸发超3万亿",
+        "summary": "一个时代结束了",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "28216bd34dd9"
+        ]
+      },
+      {
+        "itemId": "26a169e1e27f",
+        "title": "MEET2027含金量再加码：AI4S/量子计算/AI Infra…第二批嘉宾强势来袭！",
+        "summary": "12.9 北京，来MEET2027现场",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "26a169e1e27f"
+        ]
+      },
+      {
+        "itemId": "da021f31e865",
+        "title": "比亚迪第1900万辆新能源汽车下线，科技新奢旗舰SUV方程豹钛9开启预订",
+        "summary": "比亚迪第1900万辆新能源汽车在西安工厂正式下线",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "da021f31e865"
+        ]
+      },
+      {
+        "itemId": "6f7fa652151c",
+        "title": "比亚迪与神州租车首批闪充车及闪充站投放仪式顺利举行，战略合作落地兑现，闪充中国再次提速",
+        "summary": "2026年11月10日，比亚迪与神州租车首批闪充车及闪充站投放仪式在山东济南隆重举办",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "6f7fa652151c"
+        ]
+      },
+      {
+        "itemId": "3a55a71fdd2d",
+        "title": "Roku drops smart home products to focus on streaming – what that means for your devices",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3a55a71fdd2d"
+        ]
+      },
+      {
+        "itemId": "b97c1eeabff9",
+        "title": "Attention, Android power users: This app unlocks 30+ features you won’t find in Settings",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "b97c1eeabff9"
+        ]
+      },
+      {
+        "itemId": "7fb0308472b3",
+        "title": "You can force Gemini to forget about you now – how to edit its Memory",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "7fb0308472b3"
+        ]
+      },
+      {
+        "itemId": "3f2b2ffadbf4",
+        "title": "Google Wallet just turned your Android phone into a digital house key – how it works",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "3f2b2ffadbf4"
+        ]
+      },
+      {
+        "itemId": "c2482cfb800f",
+        "title": "Google’s Pixel Tag tracker won’t work as well on older Android phones – check our list",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c2482cfb800f"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "102b4cb0ac74",
+        "title": "Google Open Sources Ambient Quality Agent (AQuA) to Diagnose Production AI Agent Failures",
+        "takeaway": "Google has open-sourced AQuA, a reference implementation that analyzes production AI agent sessions, verifies recurring…",
+        "evidenceItemIds": [
+          "102b4cb0ac74"
+        ]
+      },
+      {
+        "itemId": "51b8fc28d917",
+        "title": "Introducing ChatGPT Wallet",
+        "takeaway": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user ap…",
+        "evidenceItemIds": [
+          "51b8fc28d917"
+        ]
+      },
+      {
+        "itemId": "42f8c7b27535",
+        "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+        "takeaway": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technic…",
+        "evidenceItemIds": [
+          "42f8c7b27535"
+        ]
+      },
+      {
+        "itemId": "1cf2e66f249f",
+        "title": "Google Releases Gemini 4 Hydrogen: 2.5x Faster Than Gemini 3.8 Flash",
+        "takeaway": "Google released Gemini 4 Hydrogen, a fast agentic model with a 1M-token window, 4 thinking levels and $1.50/$7.50 prici…",
+        "evidenceItemIds": [
+          "1cf2e66f249f"
+        ]
+      },
+      {
+        "itemId": "855fe7599b74",
+        "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+        "takeaway": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship…",
+        "evidenceItemIds": [
+          "855fe7599b74"
+        ]
+      },
+      {
+        "itemId": "28ebaf860fc9",
+        "title": "Azure Logic Apps Standard Gets a Local CLI in Preview",
+        "takeaway": "Microsoft has released a public preview of the logicapp extension for the Azure CLI, adding local project creation, wor…",
+        "evidenceItemIds": [
+          "28ebaf860fc9"
+        ]
+      },
+      {
+        "itemId": "0d3d521568f6",
+        "title": "JioHotstar Benchmarks Knowledge Bases for AI Coding Agents",
+        "takeaway": "JioHotstar evaluated 6 approaches to code retrieval for AI coding agents using SWE, CodeScale Bench, and an internal qu…",
+        "evidenceItemIds": [
+          "0d3d521568f6"
+        ]
+      },
+      {
+        "itemId": "4a6c31287257",
+        "title": "CopilotKit Releases OpenBot 1.0: An MIT-Licensed, Self-Hostable AI Coworker With Built-In Governance",
+        "takeaway": "CopilotKit released OpenBot 1.0, an MIT-licensed, self-hostable AI coworker workspace. Companies bring their own agents…",
+        "evidenceItemIds": [
+          "4a6c31287257"
+        ]
+      },
+      {
+        "itemId": "569c96ca8b6c",
+        "title": "Netflix Turns Operational Data Into a Knowledge Graph for AI-Driven Observability",
+        "takeaway": "Netflix is developing an ontology-driven knowledge graph to accelerate production investigations and provide AI agents …",
+        "evidenceItemIds": [
+          "569c96ca8b6c"
+        ]
+      },
+      {
+        "itemId": "41f799b556f2",
+        "title": "Perplexity Releases Decider v1.3: Open-Weight Decision Models Add Locate",
+        "takeaway": "Perplexity Decider v1.3 and Flash v1.3 are open-weight decision models that return probabilities, not text. Version 1.3…",
+        "evidenceItemIds": [
+          "41f799b556f2"
+        ]
+      },
+      {
+        "itemId": "326f3c81ffec",
+        "title": "How LinkedIn, Netflix & DoorDash Run Agents, Evals & Inference in Production: QCon AI New York 2026",
+        "takeaway": "QCon AI New York has published its full program for December 15–16, 2026. Engineers from LinkedIn, Netflix, DoorDash, F…",
+        "evidenceItemIds": [
+          "326f3c81ffec"
+        ]
+      },
+      {
+        "itemId": "5a66a6a617aa",
+        "title": "Google Releases TPU Sync: Open-Source KV Cache Transfer for TPUs",
+        "takeaway": "Google released TPU Sync, an open-source C++ library that moves KV caches and weights across TPU HBM, host DRAM, storag…",
+        "evidenceItemIds": [
+          "5a66a6a617aa"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕open-source与agent展开，建议优先关注《Google Open Sources Ambient Quality Agent (AQuA) to Diagnose Production AI Agent Failures》、《Introducing ChatGPT Wallet》、《Shield helps technicians hand off legacy portal work with OpenAI》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Gondola doubles revenue as its team builds more with Codex》、《Holiday Extras is rethinking what it can build with Codex》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "f6a6662b7ee9",
+          "541216264f75",
+          "d20916e0118f",
+          "1addf18f1b89"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 4 条，建议优先阅读《Google Open Sources Ambient Quality Agent (AQuA) to Diagnose Production AI Agent Failures》、《Google Releases Gemini 4 Hydrogen: 2.5x Faster Than Gemini 3.8 Flash》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "102b4cb0ac74",
+          "1cf2e66f249f",
+          "4a6c31287257",
+          "41f799b556f2"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 4 条，建议优先阅读《Introducing ChatGPT Wallet》、《Shield helps technicians hand off legacy portal work with OpenAI》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "51b8fc28d917",
+          "42f8c7b27535",
+          "855fe7599b74",
+          "569c96ca8b6c"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "tooling",
+        "lead": "工具链方向本期共 4 条，建议优先阅读《Azure Logic Apps Standard Gets a Local CLI in Preview》、《JioHotstar Benchmarks Knowledge Bases for AI Coding Agents》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "28ebaf860fc9",
+          "0d3d521568f6",
+          "772175ba8e89",
+          "faa28d71da34"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "22c102accd20583f353aba8d68446c39ef7a0504e19bd80fba21cde764f2f89e",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-11-14T01:00:37.512Z",
+      "finishedAt": "2026-11-14T01:01:28.794Z",
+      "durationMs": 51282,
+      "inputCount": 36,
+      "processedCount": 36,
+      "fallbackCount": 36,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 36,
+      "failureStats": {
+        "totalFailed": 36,
+        "timeout": 0,
+        "http": 36,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 68,
+        "splitRetryCount": 32
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-11-07",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-10-31",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-11-14T01:01:28.845Z",
+      "finishedAt": "2026-11-14T01:01:44.177Z",
+      "durationMs": 15332,
+      "inputCount": 36,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "102b4cb0ac74",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Google Open Sources Ambient Quality Agent (AQuA) to Diagnose Production AI Agent Failures",
+        "link": "https://www.infoq.com/news/2026/11/google-ambient-agent-prod/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Google has open-sourced AQuA, a reference implementation that analyzes production AI agent sessions, verifies recurring failure patterns, and investigates root causes against deployed source snapshots. In a 32-session replay, developers reduced seat selection bypasses from 15 sessions to two and dietary preference omissions from seven to zero after prompt changes. By Leela Kumili",
+        "publishedAt": "2026-11-13T13:53:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 127,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "51b8fc28d917",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Introducing ChatGPT Wallet",
+        "link": "https://openai.com/index/introducing-chatgpt-wallet",
+        "contentSnippet": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
+        "publishedAt": "2026-11-13T15:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 95.35,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 125,
+          "ruleScoreNormalized": 95.34883720930233,
+          "finalScore": 95.35,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "42f8c7b27535",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+        "link": "https://openai.com/business/customer-stories/shield",
+        "contentSnippet": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their judgment.",
+        "publishedAt": "2026-11-13T08:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 83.72,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 120,
+          "ruleScoreNormalized": 83.72093023255815,
+          "finalScore": 83.72,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1cf2e66f249f",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Google Releases Gemini 4 Hydrogen: 2.5x Faster Than Gemini 3.8 Flash",
+        "link": "https://www.marktechpost.com/2026/11/13/google-gemini-4-hydrogen/",
+        "contentSnippet": "Google released Gemini 4 Hydrogen, a fast agentic model with a 1M-token window, 4 thinking levels and $1.50/$7.50 pricing. Google reports a 51 Artificial Analysis score and 57% on Terminal-Bench 4.1. The post Google Releases Gemini 4 Hydrogen: 2.5x Faster Than Gemini 3.8 Flash appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-13T09:45:48.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 79.07,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 79.06976744186046,
+          "finalScore": 79.07,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "855fe7599b74",
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+        "link": "https://openai.com/business/customer-stories/amplitude",
+        "contentSnippet": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+        "publishedAt": "2026-11-12T20:00:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 72.09,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 72.09302325581395,
+          "finalScore": 72.09,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 36,
+      "normalizedCount": 36,
+      "dedupedCount": 36,
+      "highImportanceCount": 2,
+      "mediumImportanceCount": 6,
+      "lowImportanceCount": 28,
+      "categoryBreakdown": {
+        "open-source": 5,
+        "tooling": 4,
+        "agent": 5,
+        "research": 1,
+        "industry-news": 1,
+        "tutorial": 1,
+        "other": 19
+      }
+    },
+    "warnings": [
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[HNRSS AI] 抓取失败: fetch failed (code=UND_ERR_SOCKET)",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): HTTP 401 response=http_401",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：36/36",
+      "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0746e5b90c7e046afea874f21c4716f9\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0746e5b96d189863292dc5beaf84ee09\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"0746e5ba3e38aefa2cfa1b085c0d16d1\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
