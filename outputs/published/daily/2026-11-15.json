@@ -1,0 +1,916 @@
+{
+  "runId": "daily-1794704638311",
+  "generatedAt": "2026-11-15T01:03:58.278Z",
+  "reviewStartedAt": "2026-11-15T01:03:58.278Z",
+  "reportDate": "2026-11-15",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-11-15T01:03:58.278Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 6,
+    "normalizedCount": 6,
+    "dedupedCount": 6,
+    "highImportanceCount": 1,
+    "mediumImportanceCount": 0,
+    "lowImportanceCount": 5,
+    "categoryBreakdown": {
+      "open-source": 0,
+      "tooling": 0,
+      "agent": 0,
+      "research": 0,
+      "industry-news": 1,
+      "tutorial": 0,
+      "other": 5
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "be36c4b1824b",
+      "title": "「史上最严」湿实验预测基准发布！推理拉满、算力翻5倍也白搭",
+      "summary": "斯坦福、哈佛、康奈尔……十余家顶尖团队齐坐一桌了",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "be36c4b1824b"
+      ]
+    },
+    {
+      "itemId": "cd174e31f423",
+      "title": "英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！",
+      "summary": "马斯克也签名了",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "cd174e31f423"
+      ]
+    },
+    {
+      "itemId": "24e2082ac8c6",
+      "title": "程序员集体沉迷折纸飞机！最长滞空31.2秒",
+      "summary": "童年的纸飞机，现在终于飞回我手里～",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "24e2082ac8c6"
+      ]
+    },
+    {
+      "itemId": "62bd737c8ef9",
+      "title": "绿电进Token出！联想重新定义词元工厂",
+      "summary": "年产2000万亿Token，成本狂降70%",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "62bd737c8ef9"
+      ]
+    },
+    {
+      "itemId": "8fce5f4a8a37",
+      "title": "中专生拍出《哈利·波特》爆款！欧美明星、好莱坞制片人集体点赞",
+      "summary": "狂揽3000万播放量",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "8fce5f4a8a37"
+      ]
+    },
+    {
+      "itemId": "00b5d99e1371",
+      "title": "突发！DeepSeek开放全家桶API",
+      "summary": "官方App功能均可自由组合调用",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "00b5d99e1371"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "be36c4b1824b",
+      "title": "「史上最严」湿实验预测基准发布！推理拉满、算力翻5倍也白搭",
+      "takeaway": "斯坦福、哈佛、康奈尔……十余家顶尖团队齐坐一桌了",
+      "evidenceItemIds": [
+        "be36c4b1824b"
+      ]
+    },
+    {
+      "itemId": "cd174e31f423",
+      "title": "英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！",
+      "takeaway": "马斯克也签名了",
+      "evidenceItemIds": [
+        "cd174e31f423"
+      ]
+    },
+    {
+      "itemId": "24e2082ac8c6",
+      "title": "程序员集体沉迷折纸飞机！最长滞空31.2秒",
+      "takeaway": "童年的纸飞机，现在终于飞回我手里～",
+      "evidenceItemIds": [
+        "24e2082ac8c6"
+      ]
+    },
+    {
+      "itemId": "62bd737c8ef9",
+      "title": "绿电进Token出！联想重新定义词元工厂",
+      "takeaway": "年产2000万亿Token，成本狂降70%",
+      "evidenceItemIds": [
+        "62bd737c8ef9"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕industry-news与other展开，建议优先关注《「史上最严」湿实验预测基准发布！推理拉满、算力翻5倍也白搭》、《英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！》、《程序员集体沉迷折纸飞机！最长滞空31.2秒》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！》、《程序员集体沉迷折纸飞机！最长滞空31.2秒》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "cd174e31f423",
+        "24e2082ac8c6",
+        "62bd737c8ef9",
+        "8fce5f4a8a37"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 1 条，建议优先阅读《「史上最严」湿实验预测基准发布！推理拉满、算力翻5倍也白搭》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "be36c4b1824b"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "a497fcfd46e404a108757ae00e7d7873217d098b33d396236bfd0a4aea5b0197",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-11-15T03:42:14.572Z",
+    "finishedAt": "2026-11-15T03:42:39.829Z",
+    "durationMs": 25334,
+    "inputCount": 6,
+    "processedCount": 6,
+    "fallbackCount": 6,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 6,
+    "failureStats": {
+      "totalFailed": 6,
+      "timeout": 0,
+      "http": 6,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 11,
+      "splitRetryCount": 5
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-11-08",
+        "fetchedCount": 0,
+        "failedReason": "This operation was aborted"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-11-01",
+        "fetchedCount": 0,
+        "failedReason": "This operation was aborted"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-11-15T03:42:42.364Z",
+    "finishedAt": "2026-11-15T03:42:46.638Z",
+    "durationMs": 4274,
+    "inputCount": 6,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 6,
+      "timeout": 0,
+      "http": 6,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 6,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "be36c4b1824b",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "「史上最严」湿实验预测基准发布！推理拉满、算力翻5倍也白搭",
+      "link": "https://www.qbitai.com/2026/11/510232.html",
+      "contentSnippet": "斯坦福、哈佛、康奈尔……十余家顶尖团队齐坐一桌了",
+      "publishedAt": "2026-11-14T09:58:22.000Z",
+      "category": "industry-news",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "模型或产品发布",
+      "scoreBreakdown": {
+        "ruleScore": 97,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "cd174e31f423",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！",
+      "link": "https://www.qbitai.com/2026/11/510297.html",
+      "contentSnippet": "马斯克也签名了",
+      "publishedAt": "2026-11-14T10:08:08.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 0,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 87,
+        "ruleScoreNormalized": 0,
+        "finalScore": 0,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "24e2082ac8c6",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "程序员集体沉迷折纸飞机！最长滞空31.2秒",
+      "link": "https://www.qbitai.com/2026/11/510150.html",
+      "contentSnippet": "童年的纸飞机，现在终于飞回我手里～",
+      "publishedAt": "2026-11-14T09:48:34.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 0,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 87,
+        "ruleScoreNormalized": 0,
+        "finalScore": 0,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "62bd737c8ef9",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "绿电进Token出！联想重新定义词元工厂",
+      "link": "https://www.qbitai.com/2026/11/510094.html",
+      "contentSnippet": "年产2000万亿Token，成本狂降70%",
+      "publishedAt": "2026-11-14T09:41:02.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 0,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 87,
+        "ruleScoreNormalized": 0,
+        "finalScore": 0,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "8fce5f4a8a37",
+      "sourceId": "qbitai",
+      "sourceName": "量子位",
+      "title": "中专生拍出《哈利·波特》爆款！欧美明星、好莱坞制片人集体点赞",
+      "link": "https://www.qbitai.com/2026/11/510013.html",
+      "contentSnippet": "狂揽3000万播放量",
+      "publishedAt": "2026-11-14T02:59:35.000Z",
+      "category": "other",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 0,
+      "importance": "low",
+      "recommendationReason": "综合价值较高",
+      "scoreBreakdown": {
+        "ruleScore": 87,
+        "ruleScoreNormalized": 0,
+        "finalScore": 0,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: This operation was aborted",
+    "[LangChain Changelog] 抓取失败: This operation was aborted",
+    "[Microsoft AI Blog] 抓取失败: This operation was aborted",
+    "[Google AI Blog] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[InfoQ AI/ML News] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[MarkTechPost] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[VentureBeat AI] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[ZDNet AI] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[HNRSS AI] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): This operation was aborted",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): This operation was aborted",
+    "LLM 分类打分部分回退：6/6",
+    "LLM 分类打分回退明细（前 3/6）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07485d2606c9afb99847ccf0453a84e7\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07485d27b9c7b2e469cfbf994bbdb8bc\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07485d28dba1e83b912fba586d6c5b70\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=6：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=11, split_retry=5",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/6）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=6, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=6, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- 「史上最严」湿实验预测基准发布！推理拉满、算力翻5倍也白搭\n- 英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！\n- 程序员集体沉迷折纸飞机！最长滞空31.2秒\n- 绿电进Token出！联想重新定义词元工厂\n- 中专生拍出《哈利·波特》爆款！欧美明星、好莱坞制片人集体点赞\n\n### 分类覆盖（大纲）\n- industry-news: 1 条\n- other: 5 条",
+    "rankedItems": [
+      {
+        "id": "be36c4b1824b",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "「史上最严」湿实验预测基准发布！推理拉满、算力翻5倍也白搭",
+        "link": "https://www.qbitai.com/2026/11/510232.html",
+        "contentSnippet": "斯坦福、哈佛、康奈尔……十余家顶尖团队齐坐一桌了",
+        "publishedAt": "2026-11-14T09:58:22.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cd174e31f423",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！",
+        "link": "https://www.qbitai.com/2026/11/510297.html",
+        "contentSnippet": "马斯克也签名了",
+        "publishedAt": "2026-11-14T10:08:08.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "24e2082ac8c6",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "程序员集体沉迷折纸飞机！最长滞空31.2秒",
+        "link": "https://www.qbitai.com/2026/11/510150.html",
+        "contentSnippet": "童年的纸飞机，现在终于飞回我手里～",
+        "publishedAt": "2026-11-14T09:48:34.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "62bd737c8ef9",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "绿电进Token出！联想重新定义词元工厂",
+        "link": "https://www.qbitai.com/2026/11/510094.html",
+        "contentSnippet": "年产2000万亿Token，成本狂降70%",
+        "publishedAt": "2026-11-14T09:41:02.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8fce5f4a8a37",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "中专生拍出《哈利·波特》爆款！欧美明星、好莱坞制片人集体点赞",
+        "link": "https://www.qbitai.com/2026/11/510013.html",
+        "contentSnippet": "狂揽3000万播放量",
+        "publishedAt": "2026-11-14T02:59:35.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "00b5d99e1371",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "突发！DeepSeek开放全家桶API",
+        "link": "https://www.qbitai.com/2026/11/510003.html",
+        "contentSnippet": "官方App功能均可自由组合调用",
+        "publishedAt": "2026-11-14T02:39:56.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "be36c4b1824b",
+        "title": "「史上最严」湿实验预测基准发布！推理拉满、算力翻5倍也白搭",
+        "summary": "斯坦福、哈佛、康奈尔……十余家顶尖团队齐坐一桌了",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "be36c4b1824b"
+        ]
+      },
+      {
+        "itemId": "cd174e31f423",
+        "title": "英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！",
+        "summary": "马斯克也签名了",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "cd174e31f423"
+        ]
+      },
+      {
+        "itemId": "24e2082ac8c6",
+        "title": "程序员集体沉迷折纸飞机！最长滞空31.2秒",
+        "summary": "童年的纸飞机，现在终于飞回我手里～",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "24e2082ac8c6"
+        ]
+      },
+      {
+        "itemId": "62bd737c8ef9",
+        "title": "绿电进Token出！联想重新定义词元工厂",
+        "summary": "年产2000万亿Token，成本狂降70%",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "62bd737c8ef9"
+        ]
+      },
+      {
+        "itemId": "8fce5f4a8a37",
+        "title": "中专生拍出《哈利·波特》爆款！欧美明星、好莱坞制片人集体点赞",
+        "summary": "狂揽3000万播放量",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "8fce5f4a8a37"
+        ]
+      },
+      {
+        "itemId": "00b5d99e1371",
+        "title": "突发！DeepSeek开放全家桶API",
+        "summary": "官方App功能均可自由组合调用",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "00b5d99e1371"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "be36c4b1824b",
+        "title": "「史上最严」湿实验预测基准发布！推理拉满、算力翻5倍也白搭",
+        "takeaway": "斯坦福、哈佛、康奈尔……十余家顶尖团队齐坐一桌了",
+        "evidenceItemIds": [
+          "be36c4b1824b"
+        ]
+      },
+      {
+        "itemId": "cd174e31f423",
+        "title": "英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！",
+        "takeaway": "马斯克也签名了",
+        "evidenceItemIds": [
+          "cd174e31f423"
+        ]
+      },
+      {
+        "itemId": "24e2082ac8c6",
+        "title": "程序员集体沉迷折纸飞机！最长滞空31.2秒",
+        "takeaway": "童年的纸飞机，现在终于飞回我手里～",
+        "evidenceItemIds": [
+          "24e2082ac8c6"
+        ]
+      },
+      {
+        "itemId": "62bd737c8ef9",
+        "title": "绿电进Token出！联想重新定义词元工厂",
+        "takeaway": "年产2000万亿Token，成本狂降70%",
+        "evidenceItemIds": [
+          "62bd737c8ef9"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕industry-news与other展开，建议优先关注《「史上最严」湿实验预测基准发布！推理拉满、算力翻5倍也白搭》、《英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！》、《程序员集体沉迷折纸飞机！最长滞空31.2秒》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！》、《程序员集体沉迷折纸飞机！最长滞空31.2秒》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "cd174e31f423",
+          "24e2082ac8c6",
+          "62bd737c8ef9",
+          "8fce5f4a8a37"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 1 条，建议优先阅读《「史上最严」湿实验预测基准发布！推理拉满、算力翻5倍也白搭》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "be36c4b1824b"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "a497fcfd46e404a108757ae00e7d7873217d098b33d396236bfd0a4aea5b0197",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-11-15T03:42:14.572Z",
+      "finishedAt": "2026-11-15T03:42:39.829Z",
+      "durationMs": 25334,
+      "inputCount": 6,
+      "processedCount": 6,
+      "fallbackCount": 6,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 6,
+      "failureStats": {
+        "totalFailed": 6,
+        "timeout": 0,
+        "http": 6,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 11,
+        "splitRetryCount": 5
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-11-08",
+          "fetchedCount": 0,
+          "failedReason": "This operation was aborted"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-11-01",
+          "fetchedCount": 0,
+          "failedReason": "This operation was aborted"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-11-15T03:42:42.364Z",
+      "finishedAt": "2026-11-15T03:42:46.638Z",
+      "durationMs": 4274,
+      "inputCount": 6,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 6,
+        "timeout": 0,
+        "http": 6,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 6,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "be36c4b1824b",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "「史上最严」湿实验预测基准发布！推理拉满、算力翻5倍也白搭",
+        "link": "https://www.qbitai.com/2026/11/510232.html",
+        "contentSnippet": "斯坦福、哈佛、康奈尔……十余家顶尖团队齐坐一桌了",
+        "publishedAt": "2026-11-14T09:58:22.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "cd174e31f423",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！",
+        "link": "https://www.qbitai.com/2026/11/510297.html",
+        "contentSnippet": "马斯克也签名了",
+        "publishedAt": "2026-11-14T10:08:08.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "24e2082ac8c6",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "程序员集体沉迷折纸飞机！最长滞空31.2秒",
+        "link": "https://www.qbitai.com/2026/11/510150.html",
+        "contentSnippet": "童年的纸飞机，现在终于飞回我手里～",
+        "publishedAt": "2026-11-14T09:48:34.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "62bd737c8ef9",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "绿电进Token出！联想重新定义词元工厂",
+        "link": "https://www.qbitai.com/2026/11/510094.html",
+        "contentSnippet": "年产2000万亿Token，成本狂降70%",
+        "publishedAt": "2026-11-14T09:41:02.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "8fce5f4a8a37",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "中专生拍出《哈利·波特》爆款！欧美明星、好莱坞制片人集体点赞",
+        "link": "https://www.qbitai.com/2026/11/510013.html",
+        "contentSnippet": "狂揽3000万播放量",
+        "publishedAt": "2026-11-14T02:59:35.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 6,
+      "normalizedCount": 6,
+      "dedupedCount": 6,
+      "highImportanceCount": 1,
+      "mediumImportanceCount": 0,
+      "lowImportanceCount": 5,
+      "categoryBreakdown": {
+        "open-source": 0,
+        "tooling": 0,
+        "agent": 0,
+        "research": 0,
+        "industry-news": 1,
+        "tutorial": 0,
+        "other": 5
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: This operation was aborted",
+      "[LangChain Changelog] 抓取失败: This operation was aborted",
+      "[Microsoft AI Blog] 抓取失败: This operation was aborted",
+      "[Google AI Blog] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[InfoQ AI/ML News] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[MarkTechPost] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[VentureBeat AI] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[ZDNet AI] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[HNRSS AI] 抓取失败: fetch failed (code=UND_ERR_CONNECT_TIMEOUT)",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): This operation was aborted",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): This operation was aborted",
+      "LLM 分类打分部分回退：6/6",
+      "LLM 分类打分回退明细（前 3/6）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07485d2606c9afb99847ccf0453a84e7\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07485d27b9c7b2e469cfbf994bbdb8bc\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"07485d28dba1e83b912fba586d6c5b70\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=6：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=11, split_retry=5",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/6）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=6, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=6, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
