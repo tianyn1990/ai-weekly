@@ -1,0 +1,2256 @@
+{
+  "runId": "daily-1794879261624",
+  "generatedAt": "2026-11-17T01:34:21.572Z",
+  "reviewStartedAt": "2026-11-17T01:34:21.572Z",
+  "reportDate": "2026-11-17",
+  "mode": "daily",
+  "reviewStatus": "not_required",
+  "reviewStage": "none",
+  "reviewDeadlineAt": null,
+  "reviewReason": "日报默认不强制审核",
+  "publishStatus": "published",
+  "shouldPublish": true,
+  "publishReason": "daily_direct_publish",
+  "publishedAt": "2026-11-17T01:34:21.572Z",
+  "outlineApproved": true,
+  "finalApproved": true,
+  "rejected": false,
+  "metrics": {
+    "collectedCount": 36,
+    "normalizedCount": 36,
+    "dedupedCount": 36,
+    "highImportanceCount": 2,
+    "mediumImportanceCount": 3,
+    "lowImportanceCount": 31,
+    "categoryBreakdown": {
+      "open-source": 3,
+      "tooling": 2,
+      "agent": 4,
+      "research": 3,
+      "industry-news": 8,
+      "tutorial": 1,
+      "other": 15
+    }
+  },
+  "itemSummaries": [
+    {
+      "itemId": "09018fe2656a",
+      "title": "Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro",
+      "summary": "Hark has released Handoff², the computer-use agent inside Hark Pro. It averages 2x faster than v1, completes 82% of 478…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "09018fe2656a"
+      ]
+    },
+    {
+      "itemId": "e8853bd0857e",
+      "title": "Uber’s Legal AI Agent Cuts Contract Review Time by 20% with Rules and RAG",
+      "summary": "Uber’s Legal Redlining Agent reviews contract changes in Microsoft Word using RAG, historical lawyer feedback, and dete…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "e8853bd0857e"
+      ]
+    },
+    {
+      "itemId": "1bb85ee6f539",
+      "title": "AWS Open-Sources Emulator for Local Testing of 200+ Services by Coding Agents",
+      "summary": "AWS Emulator is a generally available local HTTPS endpoint, generated from public Smithy API models, that lets develope…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "1bb85ee6f539"
+      ]
+    },
+    {
+      "itemId": "eaebae21f6a9",
+      "title": "Your Samsung phone could soon get a personal AI agent – what we know about Galaxy Claw",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "eaebae21f6a9"
+      ]
+    },
+    {
+      "itemId": "b8426675f4de",
+      "title": "Bland Launches Tofu-1, a Full-Duplex Speech-to-Speech Model for Calls",
+      "summary": "Bland has released Tofu-1, a full-duplex speech-to-speech model for noisy, high-stakes phone calls. It is in enterprise…",
+      "recommendation": "评测与性能信息",
+      "evidenceItemIds": [
+        "b8426675f4de"
+      ]
+    },
+    {
+      "itemId": "a3200a384080",
+      "title": "Uber's Secure AI Framework Governs Autonomous AI Agents across Their Lifecycle",
+      "summary": "In a recent article, Uber Engineering highlights the limitations of traditional identity and API controls in securing A…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "a3200a384080"
+      ]
+    },
+    {
+      "itemId": "48293136b969",
+      "title": "Anthropic Outlines its AI-Powered Code Review Process for Claude Code",
+      "summary": "Anthropic has outlined how the Claude Code team handles code reviews as AI agents increasingly contribute to its codeba…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "48293136b969"
+      ]
+    },
+    {
+      "itemId": "43f1a6cb70f8",
+      "title": "Cohere Finding Shows Self-Hosted Open-Weight Models Still Need Egress Controls",
+      "summary": "Cohere recently reported that one of Alibaba’s newest Qwen3.8 models attempted to upload a probe file to a storage cont…",
+      "recommendation": "Agent 工程实践相关",
+      "evidenceItemIds": [
+        "43f1a6cb70f8"
+      ]
+    },
+    {
+      "itemId": "2301ca4f8789",
+      "title": "Alibaba Releases Qwen4-Max: 2.4T MoE, 71B Active, 1M Context",
+      "summary": "Alibaba released Qwen4-Max, a proprietary 2.4T-parameter MoE model with 71B active parameters, native vision and a 1M-t…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "2301ca4f8789"
+      ]
+    },
+    {
+      "itemId": "d9910a43afce",
+      "title": "New Ask Maps features to help with holiday travel and prep",
+      "summary": "Plan holiday road trips, get route tips, find local appointments, and search your saved lists with new Ask Maps feature…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d9910a43afce"
+      ]
+    },
+    {
+      "itemId": "c76538c540c2",
+      "title": "Meet Meta’s JiTTests: LLM-Generated Tests Designed to Fail Before Risky Code Lands",
+      "summary": "Meta has moved Catching JiTTests into production. The LLM system writes tests designed to fail on risky diffs, and caug…",
+      "recommendation": "安全与合规关注",
+      "evidenceItemIds": [
+        "c76538c540c2"
+      ]
+    },
+    {
+      "itemId": "c2db5bf6057a",
+      "title": "Statement on Sharing Research Produced by AI Companies in Theoretical Physics",
+      "summary": "Article URL: https://hep-open-release.org/ Comments URL: https://news.ycombinator.com/item?id=50525947 Points: 1 # Comm…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "c2db5bf6057a"
+      ]
+    },
+    {
+      "itemId": "428729c50394",
+      "title": "Cmpnd Releases dspy-wsp: Weight-Space Programming Comes to DSPy",
+      "summary": "Cmpnd released dspy-wsp, a prototype DSPy optimizer for weight-space programming. A frontier LLM reads a small model’s …",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "428729c50394"
+      ]
+    },
+    {
+      "itemId": "7b1221c9ca82",
+      "title": "Stanford Research Open-Sources Memorilla, a Latent Memory Module for Frozen LLMs",
+      "summary": "Stanford researchers released Memorilla, an open-source memory system that compresses a document collection into 16 mem…",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "7b1221c9ca82"
+      ]
+    },
+    {
+      "itemId": "f6cee1fe7d8e",
+      "title": "阿里正式发布Qwen4，智能体及编程能力进阶，迈向真实全场景",
+      "summary": "11月16日，阿里巴巴发布全新一代基座大模型Qwen4-Max",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "f6cee1fe7d8e"
+      ]
+    },
+    {
+      "itemId": "ea240796e3eb",
+      "title": "余承东发布新款问界M8：38万元起售，全系预埋L3架构",
+      "summary": "余承东重新明确分工",
+      "recommendation": "模型或产品发布",
+      "evidenceItemIds": [
+        "ea240796e3eb"
+      ]
+    },
+    {
+      "itemId": "a209cfd5409f",
+      "title": "Airbnb Introduces CASTLE for Training Natural Language Search Models with Synthetic Data",
+      "summary": "Airbnb researchers have introduced CASTLE, a framework designed to address the cold-start problem in natural language s…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a209cfd5409f"
+      ]
+    },
+    {
+      "itemId": "f001fa733928",
+      "title": "6 Chrome settings tweaks every power user needs to know",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "f001fa733928"
+      ]
+    },
+    {
+      "itemId": "de03abc947a9",
+      "title": "Apple could build its AI health chatbot from this study – how to enroll",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "de03abc947a9"
+      ]
+    },
+    {
+      "itemId": "d9a1aa52b534",
+      "title": "5 ways AI will change how you defend your business in 2027",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d9a1aa52b534"
+      ]
+    },
+    {
+      "itemId": "954821723461",
+      "title": "iPhone Duo 2 prototypes suggest FaceID, Action Button, other potential 2027 features",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "954821723461"
+      ]
+    },
+    {
+      "itemId": "570dea3bab37",
+      "title": "4 new Google Maps features to try on your next holiday road trip",
+      "summary": "该条目缺少可用摘要，请查看原文链接。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "570dea3bab37"
+      ]
+    },
+    {
+      "itemId": "d2db359f6f00",
+      "title": "The AI Ascent",
+      "summary": "Article URL: https://medium.com/@chipmunkworks/the-helicopter-problem-9bfec2cfdfab Comments URL: https://news.ycombinat…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d2db359f6f00"
+      ]
+    },
+    {
+      "itemId": "deef845adea3",
+      "title": "Own your AI, at full speed",
+      "summary": "Article URL: https://www.ycombinator.com/launches/XcZ-rightnow-own-your-ai-at-full-speed Comments URL: https://news.yco…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "deef845adea3"
+      ]
+    },
+    {
+      "itemId": "1dad12d2a497",
+      "title": "Gemini Decision 1 can't separate AI voices made after 2024",
+      "summary": "Article URL: https://echo.ls/posts/gemini-decision-ai-voices/ Comments URL: https://news.ycombinator.com/item?id=505260…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1dad12d2a497"
+      ]
+    },
+    {
+      "itemId": "d9f844d78a81",
+      "title": "Forward Deployed Engineer – AI/ML and Data Science",
+      "summary": "Article URL: https://www.dialogkey.com/careers/119ce7f304 Comments URL: https://news.ycombinator.com/item?id=50525715 P…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "d9f844d78a81"
+      ]
+    },
+    {
+      "itemId": "9d3ed865f160",
+      "title": "2027 AI Power Shortfall of 15 GW",
+      "summary": "Article URL: https://grok.com/share/bGVnYWN5_4f06d401-90e9-4ed4-bad8-89e3b4fadde2 Comments URL: https://news.ycombinato…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "9d3ed865f160"
+      ]
+    },
+    {
+      "itemId": "fa0203ea5beb",
+      "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+      "summary": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive res…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "fa0203ea5beb"
+      ]
+    },
+    {
+      "itemId": "1eab4cf1f82e",
+      "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+      "summary": "Meet the Gemini Decisions API, powered by our state-of-the-art model Gemini Decision for fast, calibrated multimodal de…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "1eab4cf1f82e"
+      ]
+    },
+    {
+      "itemId": "bb43b1944706",
+      "title": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
+      "summary": "Tabletop is a new Google Labs experiment for group collaboration. Build interactive itineraries, polls, and brackets wi…",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "bb43b1944706"
+      ]
+    },
+    {
+      "itemId": "c1fb719b7863",
+      "title": "Experience the art and legacy of Dr. Esther Mahlangu",
+      "summary": "A new online archive of Esther Mahlangu’s life and art is now on Google Arts & Culture.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "c1fb719b7863"
+      ]
+    },
+    {
+      "itemId": "830f32d0221e",
+      "title": "Gemini Intelligence: New features, on more devices",
+      "summary": "Gemini Intelligence is rolling out to more devices. See how expanded capabilities across these devices help you do more.",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "830f32d0221e"
+      ]
+    },
+    {
+      "itemId": "62e45eaa1b84",
+      "title": "睿尔曼智能郑随兵：质量、经济性、稳定性是机器人落地三大标准",
+      "summary": "具身智能的真正价值是“把人的经验、技能复刻出来”",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "62e45eaa1b84"
+      ]
+    },
+    {
+      "itemId": "6a20b2ff204d",
+      "title": "2026甲子引力年终盛典即将启幕，AI的无限游戏进入「第二序章」｜甲子引力",
+      "summary": "12月1日，细数AI的未竟之问。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "6a20b2ff204d"
+      ]
+    },
+    {
+      "itemId": "478d67fbbaa0",
+      "title": "没搞过一天研发的他，50岁以华为董事的身份退休了",
+      "summary": "在华为待了快10000天。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "478d67fbbaa0"
+      ]
+    },
+    {
+      "itemId": "a339373bf46a",
+      "title": "SuperLink2026开启创投行业超级链接时刻，12月北京见",
+      "summary": "2026年12月2-3日，清科控股、投资界主办的SuperLink2026将在北京启幕，汇聚创投各方，设置多场垂直专场与特色活动，探讨行业趋势、挖掘投资机会。",
+      "recommendation": "综合价值较高",
+      "evidenceItemIds": [
+        "a339373bf46a"
+      ]
+    }
+  ],
+  "quickDigest": [
+    {
+      "itemId": "09018fe2656a",
+      "title": "Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro",
+      "takeaway": "Hark has released Handoff², the computer-use agent inside Hark Pro. It averages 2x faster than v1, completes 82% of 478…",
+      "evidenceItemIds": [
+        "09018fe2656a"
+      ]
+    },
+    {
+      "itemId": "e8853bd0857e",
+      "title": "Uber’s Legal AI Agent Cuts Contract Review Time by 20% with Rules and RAG",
+      "takeaway": "Uber’s Legal Redlining Agent reviews contract changes in Microsoft Word using RAG, historical lawyer feedback, and dete…",
+      "evidenceItemIds": [
+        "e8853bd0857e"
+      ]
+    },
+    {
+      "itemId": "1bb85ee6f539",
+      "title": "AWS Open-Sources Emulator for Local Testing of 200+ Services by Coding Agents",
+      "takeaway": "AWS Emulator is a generally available local HTTPS endpoint, generated from public Smithy API models, that lets develope…",
+      "evidenceItemIds": [
+        "1bb85ee6f539"
+      ]
+    },
+    {
+      "itemId": "eaebae21f6a9",
+      "title": "Your Samsung phone could soon get a personal AI agent – what we know about Galaxy Claw",
+      "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+      "evidenceItemIds": [
+        "eaebae21f6a9"
+      ]
+    },
+    {
+      "itemId": "b8426675f4de",
+      "title": "Bland Launches Tofu-1, a Full-Duplex Speech-to-Speech Model for Calls",
+      "takeaway": "Bland has released Tofu-1, a full-duplex speech-to-speech model for noisy, high-stakes phone calls. It is in enterprise…",
+      "evidenceItemIds": [
+        "b8426675f4de"
+      ]
+    },
+    {
+      "itemId": "a3200a384080",
+      "title": "Uber's Secure AI Framework Governs Autonomous AI Agents across Their Lifecycle",
+      "takeaway": "In a recent article, Uber Engineering highlights the limitations of traditional identity and API controls in securing A…",
+      "evidenceItemIds": [
+        "a3200a384080"
+      ]
+    },
+    {
+      "itemId": "48293136b969",
+      "title": "Anthropic Outlines its AI-Powered Code Review Process for Claude Code",
+      "takeaway": "Anthropic has outlined how the Claude Code team handles code reviews as AI agents increasingly contribute to its codeba…",
+      "evidenceItemIds": [
+        "48293136b969"
+      ]
+    },
+    {
+      "itemId": "43f1a6cb70f8",
+      "title": "Cohere Finding Shows Self-Hosted Open-Weight Models Still Need Egress Controls",
+      "takeaway": "Cohere recently reported that one of Alibaba’s newest Qwen3.8 models attempted to upload a probe file to a storage cont…",
+      "evidenceItemIds": [
+        "43f1a6cb70f8"
+      ]
+    },
+    {
+      "itemId": "2301ca4f8789",
+      "title": "Alibaba Releases Qwen4-Max: 2.4T MoE, 71B Active, 1M Context",
+      "takeaway": "Alibaba released Qwen4-Max, a proprietary 2.4T-parameter MoE model with 71B active parameters, native vision and a 1M-t…",
+      "evidenceItemIds": [
+        "2301ca4f8789"
+      ]
+    },
+    {
+      "itemId": "d9910a43afce",
+      "title": "New Ask Maps features to help with holiday travel and prep",
+      "takeaway": "Plan holiday road trips, get route tips, find local appointments, and search your saved lists with new Ask Maps feature…",
+      "evidenceItemIds": [
+        "d9910a43afce"
+      ]
+    },
+    {
+      "itemId": "c76538c540c2",
+      "title": "Meet Meta’s JiTTests: LLM-Generated Tests Designed to Fail Before Risky Code Lands",
+      "takeaway": "Meta has moved Catching JiTTests into production. The LLM system writes tests designed to fail on risky diffs, and caug…",
+      "evidenceItemIds": [
+        "c76538c540c2"
+      ]
+    },
+    {
+      "itemId": "c2db5bf6057a",
+      "title": "Statement on Sharing Research Produced by AI Companies in Theoretical Physics",
+      "takeaway": "Article URL: https://hep-open-release.org/ Comments URL: https://news.ycombinator.com/item?id=50525947 Points: 1 # Comm…",
+      "evidenceItemIds": [
+        "c2db5bf6057a"
+      ]
+    }
+  ],
+  "leadSummary": "本期重点围绕agent与open-source展开，建议优先关注《Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro》、《Uber’s Legal AI Agent Cuts Contract Review Time by 20% with Rules and RAG》、《AWS Open-Sources Emulator for Local Testing of 200+ Services by Coding Agents》，并结合现有工程路线评估接入优先级与落地成本。",
+  "categoryLeadSummaries": [
+    {
+      "category": "other",
+      "lead": "其他方向本期共 4 条，建议优先阅读《Alibaba Releases Qwen4-Max: 2.4T MoE, 71B Active, 1M Context》、《New Ask Maps features to help with holiday travel and prep》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "2301ca4f8789",
+        "d9910a43afce",
+        "428729c50394",
+        "f001fa733928"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "industry-news",
+      "lead": "行业动态本期共 4 条，建议优先阅读《阿里正式发布Qwen4，智能体及编程能力进阶，迈向真实全场景》、《余承东发布新款问界M8：38万元起售，全系预埋L3架构》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "f6cee1fe7d8e",
+        "ea240796e3eb",
+        "d2db359f6f00",
+        "deef845adea3"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "agent",
+      "lead": "Agent 方向本期共 4 条，建议优先阅读《Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro》、《AWS Open-Sources Emulator for Local Testing of 200+ Services by Coding Agents》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "09018fe2656a",
+        "1bb85ee6f539",
+        "eaebae21f6a9",
+        "48293136b969"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    },
+    {
+      "category": "open-source",
+      "lead": "开源方向本期共 3 条，建议优先阅读《Uber’s Legal AI Agent Cuts Contract Review Time by 20% with Rules and RAG》、《Cohere Finding Shows Self-Hosted Open-Weight Models Still Need Egress Controls》，重点关注其工程可落地性与集成成本。",
+      "sourceItemIds": [
+        "e8853bd0857e",
+        "43f1a6cb70f8",
+        "c76538c540c2"
+      ],
+      "fallbackTriggered": true,
+      "reason": "template_fallback_only"
+    }
+  ],
+  "summaryInputHash": "fb17a00a0faa49c1d6b71ed47ba393bb0189bf982400e6f39eac33fbd58b6956",
+  "llmClassifyScoreMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.4-v1",
+    "startedAt": "2026-11-17T01:53:12.072Z",
+    "finishedAt": "2026-11-17T01:53:57.299Z",
+    "durationMs": 45229,
+    "inputCount": 36,
+    "processedCount": 36,
+    "fallbackCount": 36,
+    "fallbackTriggered": true,
+    "batchSize": 10,
+    "timeoutMs": 90000,
+    "effectiveConcurrency": 1,
+    "llmAppliedCount": 0,
+    "llmScoreFallbackCount": 36,
+    "failureStats": {
+      "totalFailed": 36,
+      "timeout": 0,
+      "http": 36,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0,
+      "lowConfidence": 0
+    },
+    "retryStats": {
+      "batchRetryCount": 68,
+      "splitRetryCount": 32
+    }
+  },
+  "githubSelectionMeta": {
+    "sourceCount": 1,
+    "queryMode": "dual",
+    "queryStats": [
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "active_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-11-10",
+        "fetchedCount": 0,
+        "failedReason": "This operation was aborted"
+      },
+      {
+        "sourceId": "github-hot-open-source",
+        "sourceName": "GitHub 热门开源（AI）",
+        "queryPath": "new_repo_window",
+        "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-11-03",
+        "fetchedCount": 0,
+        "failedReason": "HTTP 401 response=http_401"
+      }
+    ],
+    "collectedRepoCount": 0,
+    "mergedRepoCount": 0,
+    "historicalRepoCount": 0,
+    "cooldownDays": 10,
+    "cooldownSuppressedCount": 0,
+    "breakoutAllowedCount": 0,
+    "keptRepoCount": 0,
+    "selectedRepoCount": 0
+  },
+  "llmSummaryMeta": {
+    "enabled": true,
+    "provider": "minimax",
+    "model": "MiniMax-M2.5",
+    "promptVersion": "m5.3-v1",
+    "startedAt": "2026-11-17T01:53:57.723Z",
+    "finishedAt": "2026-11-17T01:54:12.390Z",
+    "durationMs": 14667,
+    "inputCount": 36,
+    "summarizedCount": 0,
+    "fallbackTriggered": true,
+    "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+    "assistAppliedCount": 0,
+    "assistFallbackCount": 0,
+    "leadFallbackTriggered": true,
+    "failureStats": {
+      "totalFailed": 30,
+      "timeout": 0,
+      "http": 30,
+      "business": 0,
+      "missingContent": 0,
+      "invalidJson": 0,
+      "quality": 0,
+      "other": 0
+    },
+    "retryStats": {
+      "retryableTriggeredCount": 0,
+      "missingContentExtraRetryTriggeredCount": 0,
+      "compensationRetryItemCount": 30,
+      "serialDegradeTriggered": false,
+      "serialRetriedItemCount": 0,
+      "serialTriggerMaxConsecutiveMissingContent": 0
+    },
+    "adaptiveDegradeStats": {
+      "windowSize": 6,
+      "triggerMissingContentRateThreshold": 0.34,
+      "recoverSuccessRateThreshold": 0.85,
+      "triggerCount": 0,
+      "recoverCount": 0,
+      "degradedRetriedItemCount": 0,
+      "currentMode": "normal",
+      "maxWindowMissingContentRate": 0,
+      "maxWindowSuccessRate": 0,
+      "lastWindowMissingContentRate": 0,
+      "lastWindowSuccessRate": 0
+    },
+    "zhQualityStats": {
+      "nonZhDetectedCount": 0,
+      "zhRepairAttemptedCount": 0,
+      "zhRepairSucceededCount": 0,
+      "englishRetainedCount": 0
+    },
+    "effectiveConcurrency": 1
+  },
+  "highlights": [
+    {
+      "id": "09018fe2656a",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro",
+      "link": "https://www.marktechpost.com/2026/11/16/hark-handoff-2-computer-use-agent-2x-faster/",
+      "contentSnippet": "Hark has released Handoff², the computer-use agent inside Hark Pro. It averages 2x faster than v1, completes 82% of 478 internal web tasks, and learned to batch actions through latency-penalized RL. The post Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro appeared first on MarkTechPost.",
+      "publishedAt": "2026-11-16T09:08:37.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 100,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 118,
+        "ruleScoreNormalized": 100,
+        "finalScore": 100,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "e8853bd0857e",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "Uber’s Legal AI Agent Cuts Contract Review Time by 20% with Rules and RAG",
+      "link": "https://www.infoq.com/news/2026/11/uber-legal-redlining-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "Uber’s Legal Redlining Agent reviews contract changes in Microsoft Word using RAG, historical lawyer feedback, and deterministic policy rules. Built with LangGraph, OpenSearch, and Redis, the system reports more than 20% lower average contract review time and 91% accuracy in AI-generated decisions. Uber is exploring agentic harnesses, skills, legal ontologies, and knowledge graphs. By Leela Kumili",
+      "publishedAt": "2026-11-16T14:37:00.000Z",
+      "category": "open-source",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 90.32,
+      "importance": "high",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 115,
+        "ruleScoreNormalized": 90.32258064516128,
+        "finalScore": 90.32,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "1bb85ee6f539",
+      "sourceId": "infoq-ai-news",
+      "sourceName": "InfoQ AI/ML News",
+      "title": "AWS Open-Sources Emulator for Local Testing of 200+ Services by Coding Agents",
+      "link": "https://www.infoq.com/news/2026/11/aws-emulator-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+      "contentSnippet": "AWS Emulator is a generally available local HTTPS endpoint, generated from public Smithy API models, that lets developers and coding agents test against more than 200 AWS services without an account, with published fidelity scores and documented limits around IAM, regions, and in-memory state. By Daniel Dominguez",
+      "publishedAt": "2026-11-16T10:40:00.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 74.19,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 110,
+        "ruleScoreNormalized": 74.19354838709677,
+        "finalScore": 74.19,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "eaebae21f6a9",
+      "sourceId": "zdnet-ai",
+      "sourceName": "ZDNet AI",
+      "title": "Your Samsung phone could soon get a personal AI agent – what we know about Galaxy Claw",
+      "link": "https://www.zdnet.com/innovation/samsung-galaxy-claw-ai-cross-app-upgrade/",
+      "contentSnippet": "",
+      "publishedAt": "2026-11-16T17:35:43.000Z",
+      "category": "agent",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 70.97,
+      "importance": "medium",
+      "recommendationReason": "Agent 工程实践相关",
+      "scoreBreakdown": {
+        "ruleScore": 109,
+        "ruleScoreNormalized": 70.96774193548387,
+        "finalScore": 70.97,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    },
+    {
+      "id": "b8426675f4de",
+      "sourceId": "marktechpost",
+      "sourceName": "MarkTechPost",
+      "title": "Bland Launches Tofu-1, a Full-Duplex Speech-to-Speech Model for Calls",
+      "link": "https://www.marktechpost.com/2026/11/15/bland-tofu-1-full-duplex-speech-to-speech-model/",
+      "contentSnippet": "Bland has released Tofu-1, a full-duplex speech-to-speech model for noisy, high-stakes phone calls. It is in enterprise research preview, with no published benchmarks, size or pricing yet. The post Bland Launches Tofu-1, a Full-Duplex Speech-to-Speech Model for Calls appeared first on MarkTechPost.",
+      "publishedAt": "2026-11-15T10:06:21.000Z",
+      "category": "research",
+      "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+      "score": 67.74,
+      "importance": "medium",
+      "recommendationReason": "评测与性能信息",
+      "scoreBreakdown": {
+        "ruleScore": 108,
+        "ruleScoreNormalized": 67.74193548387096,
+        "finalScore": 67.74,
+        "fusionWeight": 0.65,
+        "usedLlm": false
+      }
+    }
+  ],
+  "revisionAuditLogs": [],
+  "warnings": [
+    "[OpenAI News] 抓取失败: This operation was aborted",
+    "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+    "[Microsoft AI Blog] 抓取失败: HTTP 410",
+    "[VentureBeat AI] 抓取失败: HTTP 429",
+    "[GitHub 热门开源（AI）] 抓取失败(active_window): This operation was aborted",
+    "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+    "LLM 分类打分部分回退：36/36",
+    "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"074ae68d8ab8d6edfcc18b38bbaff761\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"074ae68ec3c3b27913acb3e937c6ad12\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"074ae68e4ebee933cc3c01f6819f0f44\"}",
+    "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+    "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+    "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+    "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+    "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+    "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+    "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+    "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+  ],
+  "snapshot": {
+    "timezone": "Asia/Shanghai",
+    "sourceConfigPath": "data/sources.yaml",
+    "runtimeConfigPath": "/Users/hetao/.local/state/ai-weekly/runtime/runtime-config/global.json",
+    "storageBackend": "db",
+    "storageDbPath": "/Users/hetao/.local/state/ai-weekly/runtime/db/app.sqlite",
+    "storageFallbackToFile": true,
+    "sourceLimit": 6,
+    "outlineMarkdown": "### 重点推荐（大纲）\n- Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro\n- Uber’s Legal AI Agent Cuts Contract Review Time by 20% with Rules and RAG\n- AWS Open-Sources Emulator for Local Testing of 200+ Services by Coding Agents\n- Your Samsung phone could soon get a personal AI agent – what we know about Galaxy Claw\n- Bland Launches Tofu-1, a Full-Duplex Speech-to-Speech Model for Calls\n\n### 分类覆盖（大纲）\n- agent: 4 条\n- open-source: 3 条\n- research: 3 条\n- tooling: 2 条\n- other: 15 条\n- industry-news: 8 条\n- tutorial: 1 条",
+    "rankedItems": [
+      {
+        "id": "09018fe2656a",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro",
+        "link": "https://www.marktechpost.com/2026/11/16/hark-handoff-2-computer-use-agent-2x-faster/",
+        "contentSnippet": "Hark has released Handoff², the computer-use agent inside Hark Pro. It averages 2x faster than v1, completes 82% of 478 internal web tasks, and learned to batch actions through latency-penalized RL. The post Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-16T09:08:37.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e8853bd0857e",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Uber’s Legal AI Agent Cuts Contract Review Time by 20% with Rules and RAG",
+        "link": "https://www.infoq.com/news/2026/11/uber-legal-redlining-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Uber’s Legal Redlining Agent reviews contract changes in Microsoft Word using RAG, historical lawyer feedback, and deterministic policy rules. Built with LangGraph, OpenSearch, and Redis, the system reports more than 20% lower average contract review time and 91% accuracy in AI-generated decisions. Uber is exploring agentic harnesses, skills, legal ontologies, and knowledge graphs. By Leela Kumili",
+        "publishedAt": "2026-11-16T14:37:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 90.32,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 90.32258064516128,
+          "finalScore": 90.32,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1bb85ee6f539",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "AWS Open-Sources Emulator for Local Testing of 200+ Services by Coding Agents",
+        "link": "https://www.infoq.com/news/2026/11/aws-emulator-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "AWS Emulator is a generally available local HTTPS endpoint, generated from public Smithy API models, that lets developers and coding agents test against more than 200 AWS services without an account, with published fidelity scores and documented limits around IAM, regions, and in-memory state. By Daniel Dominguez",
+        "publishedAt": "2026-11-16T10:40:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 74.19,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 74.19354838709677,
+          "finalScore": 74.19,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "eaebae21f6a9",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Your Samsung phone could soon get a personal AI agent – what we know about Galaxy Claw",
+        "link": "https://www.zdnet.com/innovation/samsung-galaxy-claw-ai-cross-app-upgrade/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-16T17:35:43.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 70.97,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 109,
+          "ruleScoreNormalized": 70.96774193548387,
+          "finalScore": 70.97,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b8426675f4de",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Bland Launches Tofu-1, a Full-Duplex Speech-to-Speech Model for Calls",
+        "link": "https://www.marktechpost.com/2026/11/15/bland-tofu-1-full-duplex-speech-to-speech-model/",
+        "contentSnippet": "Bland has released Tofu-1, a full-duplex speech-to-speech model for noisy, high-stakes phone calls. It is in enterprise research preview, with no published benchmarks, size or pricing yet. The post Bland Launches Tofu-1, a Full-Duplex Speech-to-Speech Model for Calls appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-15T10:06:21.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 67.74,
+        "importance": "medium",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 67.74193548387096,
+          "finalScore": 67.74,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a3200a384080",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Uber's Secure AI Framework Governs Autonomous AI Agents across Their Lifecycle",
+        "link": "https://www.infoq.com/news/2026/11/uber-secure-ai-framework/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "In a recent article, Uber Engineering highlights the limitations of traditional identity and API controls in securing AI agents that dynamically reason over external content and take real-world actions. Uber developed a framework to determine whether an agent's action is appropriate given the user's request, the agent's intended purpose, its permissions, and the context of the interaction. By Sergio De Simone",
+        "publishedAt": "2026-11-15T20:00:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 58.06,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 58.06451612903226,
+          "finalScore": 58.06,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "48293136b969",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Anthropic Outlines its AI-Powered Code Review Process for Claude Code",
+        "link": "https://www.infoq.com/news/2026/11/claude-code-review/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Anthropic has outlined how the Claude Code team handles code reviews as AI agents increasingly contribute to its codebase. The approach relies on multiple layers of automated verification, AI-powered reviews, and risk-based human approval, aiming to reduce manual review time without increasing regressions or production incidents. By Robert Krzaczyński",
+        "publishedAt": "2026-11-15T09:55:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 58.06,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 58.06451612903226,
+          "finalScore": 58.06,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "43f1a6cb70f8",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Cohere Finding Shows Self-Hosted Open-Weight Models Still Need Egress Controls",
+        "link": "https://www.infoq.com/news/2026/11/cohere-open-weight-egress-risk/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Cohere recently reported that one of Alibaba’s newest Qwen3.8 models attempted to upload a probe file to a storage container in Beijing while explicitly stating in its reasoning trace that no tools would be triggered. While there is no evidence of intentional backdooring, the report is a reminder that, even for self-hosted agents based on open-weight models, egress risks exist and need mitigation. By Bruno Couriol",
+        "publishedAt": "2026-11-15T02:42:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 58.06,
+        "importance": "low",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 105,
+          "ruleScoreNormalized": 58.06451612903226,
+          "finalScore": 58.06,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "2301ca4f8789",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Alibaba Releases Qwen4-Max: 2.4T MoE, 71B Active, 1M Context",
+        "link": "https://www.marktechpost.com/2026/11/16/alibaba-qwen4-max-release/",
+        "contentSnippet": "Alibaba released Qwen4-Max, a proprietary 2.4T-parameter MoE model with 71B active parameters, native vision and a 1M-token context. It costs $1.5/M input tokens and cuts Work360 cost per task by 62%. The post Alibaba Releases Qwen4-Max: 2.4T MoE, 71B Active, 1M Context appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-16T09:44:17.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 51.61,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 103,
+          "ruleScoreNormalized": 51.61290322580645,
+          "finalScore": 51.61,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d9910a43afce",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "New Ask Maps features to help with holiday travel and prep",
+        "link": "https://blog.google/products-and-platforms/products/maps/ask-maps-holiday-travel-features-2026/",
+        "contentSnippet": "Plan holiday road trips, get route tips, find local appointments, and search your saved lists with new Ask Maps features.",
+        "publishedAt": "2026-11-16T14:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 48.39,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 102,
+          "ruleScoreNormalized": 48.38709677419355,
+          "finalScore": 48.39,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c76538c540c2",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Meet Meta’s JiTTests: LLM-Generated Tests Designed to Fail Before Risky Code Lands",
+        "link": "https://www.marktechpost.com/2026/11/16/meta-jittests-llm-catching-tests-privacy-bugs/",
+        "contentSnippet": "Meta has moved Catching JiTTests into production. The LLM system writes tests designed to fail on risky diffs, and caught 74 privacy SEVs before landing in H1 2026, with a 60% engineer-reported true-positive rate. The post Meet Meta’s JiTTests: LLM-Generated Tests Designed to Fail Before Risky Code Lands appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-16T10:39:41.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 45.16,
+        "importance": "low",
+        "recommendationReason": "安全与合规关注",
+        "scoreBreakdown": {
+          "ruleScore": 101,
+          "ruleScoreNormalized": 45.16129032258064,
+          "finalScore": 45.16,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c2db5bf6057a",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Statement on Sharing Research Produced by AI Companies in Theoretical Physics",
+        "link": "https://hep-open-release.org/",
+        "contentSnippet": "Article URL: https://hep-open-release.org/ Comments URL: https://news.ycombinator.com/item?id=50525947 Points: 1 # Comments: 0",
+        "publishedAt": "2026-11-17T00:55:17.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 41.94,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 100,
+          "ruleScoreNormalized": 41.935483870967744,
+          "finalScore": 41.94,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "428729c50394",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Cmpnd Releases dspy-wsp: Weight-Space Programming Comes to DSPy",
+        "link": "https://www.marktechpost.com/2026/11/14/cmpnd-dspy-wsp-weight-space-programming/",
+        "contentSnippet": "Cmpnd released dspy-wsp, a prototype DSPy optimizer for weight-space programming. A frontier LLM reads a small model’s weights, edits them in a sandbox, and tests each change, with no gradients and about $5 to $10 per run. The post Cmpnd Releases dspy-wsp: Weight-Space Programming Comes to DSPy appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-14T16:45:48.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 35.48,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 35.483870967741936,
+          "finalScore": 35.48,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "7b1221c9ca82",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Stanford Research Open-Sources Memorilla, a Latent Memory Module for Frozen LLMs",
+        "link": "https://www.marktechpost.com/2026/11/14/stanford-memorilla-memory-system-16-memory-tokens/",
+        "contentSnippet": "Stanford researchers released Memorilla, an open-source memory system that compresses a document collection into 16 memory tokens for a frozen Qwen3-8B. It reaches 84.33% on FactKG using 108x fewer document tokens than full context. The post Stanford Research Open-Sources Memorilla, a Latent Memory Module for Frozen LLMs appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-14T10:21:21.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 35.48,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 98,
+          "ruleScoreNormalized": 35.483870967741936,
+          "finalScore": 35.48,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f6cee1fe7d8e",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "阿里正式发布Qwen4，智能体及编程能力进阶，迈向真实全场景",
+        "link": "https://www.qbitai.com/2026/11/510486.html",
+        "contentSnippet": "11月16日，阿里巴巴发布全新一代基座大模型Qwen4-Max",
+        "publishedAt": "2026-11-16T07:51:57.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 32.26,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 32.25806451612903,
+          "finalScore": 32.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "ea240796e3eb",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "余承东发布新款问界M8：38万元起售，全系预埋L3架构",
+        "link": "https://www.qbitai.com/2026/11/510436.html",
+        "contentSnippet": "余承东重新明确分工",
+        "publishedAt": "2026-11-16T07:26:33.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 32.26,
+        "importance": "low",
+        "recommendationReason": "模型或产品发布",
+        "scoreBreakdown": {
+          "ruleScore": 97,
+          "ruleScoreNormalized": 32.25806451612903,
+          "finalScore": 32.26,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a209cfd5409f",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Airbnb Introduces CASTLE for Training Natural Language Search Models with Synthetic Data",
+        "link": "https://www.infoq.com/news/2026/11/airbnb-castle/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Airbnb researchers have introduced CASTLE, a framework designed to address the cold-start problem in natural language search. The approach uses de-identified booking sessions and large language models (LLMs) to jointly generate synthetic search queries and relevance labels, enabling model training before sufficient real search traffic is available. By Robert Krzaczyński",
+        "publishedAt": "2026-11-16T12:25:00.000Z",
+        "category": "tooling",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 25.81,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 95,
+          "ruleScoreNormalized": 25.806451612903224,
+          "finalScore": 25.81,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "f001fa733928",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "6 Chrome settings tweaks every power user needs to know",
+        "link": "https://www.zdnet.com/home-and-office/chrome-default-settings-to-change/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-17T01:05:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.58,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 22.58064516129032,
+          "finalScore": 22.58,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "de03abc947a9",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Apple could build its AI health chatbot from this study – how to enroll",
+        "link": "https://www.zdnet.com/tech/apple-health-ai-usage-study-how-to-enroll/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-16T19:25:57.000Z",
+        "category": "tutorial",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.58,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 22.58064516129032,
+          "finalScore": 22.58,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d9a1aa52b534",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "5 ways AI will change how you defend your business in 2027",
+        "link": "https://www.zdnet.com/innovation/google-cloud-ciso-perspectives-2027-ai-security-defenses/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-16T18:58:52.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.58,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 22.58064516129032,
+          "finalScore": 22.58,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "954821723461",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "iPhone Duo 2 prototypes suggest FaceID, Action Button, other potential 2027 features",
+        "link": "https://www.zdnet.com/tech/apple-iphone-duo-2-face-id-upgrades-2027/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-16T18:43:17.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.58,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 22.58064516129032,
+          "finalScore": 22.58,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "570dea3bab37",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "4 new Google Maps features to try on your next holiday road trip",
+        "link": "https://www.zdnet.com/tech/google-ask-maps-new-features-holiday-travel/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-16T17:21:42.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 22.58,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 94,
+          "ruleScoreNormalized": 22.58064516129032,
+          "finalScore": 22.58,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d2db359f6f00",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "The AI Ascent",
+        "link": "https://medium.com/@chipmunkworks/the-helicopter-problem-9bfec2cfdfab",
+        "contentSnippet": "Article URL: https://medium.com/@chipmunkworks/the-helicopter-problem-9bfec2cfdfab Comments URL: https://news.ycombinator.com/item?id=50526341 Points: 1 # Comments: 1",
+        "publishedAt": "2026-11-17T01:45:59.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 9.68,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 9.67741935483871,
+          "finalScore": 9.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "deef845adea3",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Own your AI, at full speed",
+        "link": "https://www.ycombinator.com/launches/XcZ-rightnow-own-your-ai-at-full-speed",
+        "contentSnippet": "Article URL: https://www.ycombinator.com/launches/XcZ-rightnow-own-your-ai-at-full-speed Comments URL: https://news.ycombinator.com/item?id=50526103 Points: 5 # Comments: 0",
+        "publishedAt": "2026-11-17T01:13:26.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 9.68,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 9.67741935483871,
+          "finalScore": 9.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1dad12d2a497",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Gemini Decision 1 can't separate AI voices made after 2024",
+        "link": "https://echo.ls/posts/gemini-decision-ai-voices/",
+        "contentSnippet": "Article URL: https://echo.ls/posts/gemini-decision-ai-voices/ Comments URL: https://news.ycombinator.com/item?id=50526058 Points: 1 # Comments: 0",
+        "publishedAt": "2026-11-17T01:08:11.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 9.68,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 9.67741935483871,
+          "finalScore": 9.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "d9f844d78a81",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "Forward Deployed Engineer – AI/ML and Data Science",
+        "link": "https://www.dialogkey.com/careers/119ce7f304",
+        "contentSnippet": "Article URL: https://www.dialogkey.com/careers/119ce7f304 Comments URL: https://news.ycombinator.com/item?id=50525715 Points: 1 # Comments: 0",
+        "publishedAt": "2026-11-17T00:28:21.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 9.68,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 9.67741935483871,
+          "finalScore": 9.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "9d3ed865f160",
+        "sourceId": "hnrss-ai",
+        "sourceName": "HNRSS AI",
+        "title": "2027 AI Power Shortfall of 15 GW",
+        "link": "https://grok.com/share/bGVnYWN5_4f06d401-90e9-4ed4-bad8-89e3b4fadde2",
+        "contentSnippet": "Article URL: https://grok.com/share/bGVnYWN5_4f06d401-90e9-4ed4-bad8-89e3b4fadde2 Comments URL: https://news.ycombinator.com/item?id=50525654 Points: 2 # Comments: 1",
+        "publishedAt": "2026-11-17T00:22:53.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 9.68,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 90,
+          "ruleScoreNormalized": 9.67741935483871,
+          "finalScore": 9.68,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "fa0203ea5beb",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+        "link": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+        "contentSnippet": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive responses.",
+        "publishedAt": "2026-11-12T18:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1eab4cf1f82e",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+        "link": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+        "contentSnippet": "Meet the Gemini Decisions API, powered by our state-of-the-art model Gemini Decision for fast, calibrated multimodal decisions.",
+        "publishedAt": "2026-11-11T18:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "bb43b1944706",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
+        "link": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/",
+        "contentSnippet": "Tabletop is a new Google Labs experiment for group collaboration. Build interactive itineraries, polls, and brackets with your team. Join the waitlist.",
+        "publishedAt": "2026-11-11T16:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "c1fb719b7863",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Experience the art and legacy of Dr. Esther Mahlangu",
+        "link": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
+        "contentSnippet": "A new online archive of Esther Mahlangu’s life and art is now on Google Arts & Culture.",
+        "publishedAt": "2026-11-11T09:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "830f32d0221e",
+        "sourceId": "google-ai-blog",
+        "sourceName": "Google AI Blog",
+        "title": "Gemini Intelligence: New features, on more devices",
+        "link": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
+        "contentSnippet": "Gemini Intelligence is rolling out to more devices. See how expanded capabilities across these devices help you do more.",
+        "publishedAt": "2026-11-10T19:00:00.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "62e45eaa1b84",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "睿尔曼智能郑随兵：质量、经济性、稳定性是机器人落地三大标准",
+        "link": "https://www.qbitai.com/2026/11/510542.html",
+        "contentSnippet": "具身智能的真正价值是“把人的经验、技能复刻出来”",
+        "publishedAt": "2026-11-16T10:57:31.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "6a20b2ff204d",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "2026甲子引力年终盛典即将启幕，AI的无限游戏进入「第二序章」｜甲子引力",
+        "link": "https://www.qbitai.com/2026/11/510526.html",
+        "contentSnippet": "12月1日，细数AI的未竟之问。",
+        "publishedAt": "2026-11-16T08:45:17.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "478d67fbbaa0",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "没搞过一天研发的他，50岁以华为董事的身份退休了",
+        "link": "https://www.qbitai.com/2026/11/510496.html",
+        "contentSnippet": "在华为待了快10000天。",
+        "publishedAt": "2026-11-16T08:02:07.000Z",
+        "category": "other",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "a339373bf46a",
+        "sourceId": "qbitai",
+        "sourceName": "量子位",
+        "title": "SuperLink2026开启创投行业超级链接时刻，12月北京见",
+        "link": "https://www.qbitai.com/2026/11/510493.html",
+        "contentSnippet": "2026年12月2-3日，清科控股、投资界主办的SuperLink2026将在北京启幕，汇聚创投各方，设置多场垂直专场与特色活动，探讨行业趋势、挖掘投资机会。",
+        "publishedAt": "2026-11-16T07:58:57.000Z",
+        "category": "industry-news",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 0,
+        "importance": "low",
+        "recommendationReason": "综合价值较高",
+        "scoreBreakdown": {
+          "ruleScore": 87,
+          "ruleScoreNormalized": 0,
+          "finalScore": 0,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "itemSummaries": [
+      {
+        "itemId": "09018fe2656a",
+        "title": "Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro",
+        "summary": "Hark has released Handoff², the computer-use agent inside Hark Pro. It averages 2x faster than v1, completes 82% of 478…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "09018fe2656a"
+        ]
+      },
+      {
+        "itemId": "e8853bd0857e",
+        "title": "Uber’s Legal AI Agent Cuts Contract Review Time by 20% with Rules and RAG",
+        "summary": "Uber’s Legal Redlining Agent reviews contract changes in Microsoft Word using RAG, historical lawyer feedback, and dete…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "e8853bd0857e"
+        ]
+      },
+      {
+        "itemId": "1bb85ee6f539",
+        "title": "AWS Open-Sources Emulator for Local Testing of 200+ Services by Coding Agents",
+        "summary": "AWS Emulator is a generally available local HTTPS endpoint, generated from public Smithy API models, that lets develope…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "1bb85ee6f539"
+        ]
+      },
+      {
+        "itemId": "eaebae21f6a9",
+        "title": "Your Samsung phone could soon get a personal AI agent – what we know about Galaxy Claw",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "eaebae21f6a9"
+        ]
+      },
+      {
+        "itemId": "b8426675f4de",
+        "title": "Bland Launches Tofu-1, a Full-Duplex Speech-to-Speech Model for Calls",
+        "summary": "Bland has released Tofu-1, a full-duplex speech-to-speech model for noisy, high-stakes phone calls. It is in enterprise…",
+        "recommendation": "评测与性能信息",
+        "evidenceItemIds": [
+          "b8426675f4de"
+        ]
+      },
+      {
+        "itemId": "a3200a384080",
+        "title": "Uber's Secure AI Framework Governs Autonomous AI Agents across Their Lifecycle",
+        "summary": "In a recent article, Uber Engineering highlights the limitations of traditional identity and API controls in securing A…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "a3200a384080"
+        ]
+      },
+      {
+        "itemId": "48293136b969",
+        "title": "Anthropic Outlines its AI-Powered Code Review Process for Claude Code",
+        "summary": "Anthropic has outlined how the Claude Code team handles code reviews as AI agents increasingly contribute to its codeba…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "48293136b969"
+        ]
+      },
+      {
+        "itemId": "43f1a6cb70f8",
+        "title": "Cohere Finding Shows Self-Hosted Open-Weight Models Still Need Egress Controls",
+        "summary": "Cohere recently reported that one of Alibaba’s newest Qwen3.8 models attempted to upload a probe file to a storage cont…",
+        "recommendation": "Agent 工程实践相关",
+        "evidenceItemIds": [
+          "43f1a6cb70f8"
+        ]
+      },
+      {
+        "itemId": "2301ca4f8789",
+        "title": "Alibaba Releases Qwen4-Max: 2.4T MoE, 71B Active, 1M Context",
+        "summary": "Alibaba released Qwen4-Max, a proprietary 2.4T-parameter MoE model with 71B active parameters, native vision and a 1M-t…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "2301ca4f8789"
+        ]
+      },
+      {
+        "itemId": "d9910a43afce",
+        "title": "New Ask Maps features to help with holiday travel and prep",
+        "summary": "Plan holiday road trips, get route tips, find local appointments, and search your saved lists with new Ask Maps feature…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d9910a43afce"
+        ]
+      },
+      {
+        "itemId": "c76538c540c2",
+        "title": "Meet Meta’s JiTTests: LLM-Generated Tests Designed to Fail Before Risky Code Lands",
+        "summary": "Meta has moved Catching JiTTests into production. The LLM system writes tests designed to fail on risky diffs, and caug…",
+        "recommendation": "安全与合规关注",
+        "evidenceItemIds": [
+          "c76538c540c2"
+        ]
+      },
+      {
+        "itemId": "c2db5bf6057a",
+        "title": "Statement on Sharing Research Produced by AI Companies in Theoretical Physics",
+        "summary": "Article URL: https://hep-open-release.org/ Comments URL: https://news.ycombinator.com/item?id=50525947 Points: 1 # Comm…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "c2db5bf6057a"
+        ]
+      },
+      {
+        "itemId": "428729c50394",
+        "title": "Cmpnd Releases dspy-wsp: Weight-Space Programming Comes to DSPy",
+        "summary": "Cmpnd released dspy-wsp, a prototype DSPy optimizer for weight-space programming. A frontier LLM reads a small model’s …",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "428729c50394"
+        ]
+      },
+      {
+        "itemId": "7b1221c9ca82",
+        "title": "Stanford Research Open-Sources Memorilla, a Latent Memory Module for Frozen LLMs",
+        "summary": "Stanford researchers released Memorilla, an open-source memory system that compresses a document collection into 16 mem…",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "7b1221c9ca82"
+        ]
+      },
+      {
+        "itemId": "f6cee1fe7d8e",
+        "title": "阿里正式发布Qwen4，智能体及编程能力进阶，迈向真实全场景",
+        "summary": "11月16日，阿里巴巴发布全新一代基座大模型Qwen4-Max",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "f6cee1fe7d8e"
+        ]
+      },
+      {
+        "itemId": "ea240796e3eb",
+        "title": "余承东发布新款问界M8：38万元起售，全系预埋L3架构",
+        "summary": "余承东重新明确分工",
+        "recommendation": "模型或产品发布",
+        "evidenceItemIds": [
+          "ea240796e3eb"
+        ]
+      },
+      {
+        "itemId": "a209cfd5409f",
+        "title": "Airbnb Introduces CASTLE for Training Natural Language Search Models with Synthetic Data",
+        "summary": "Airbnb researchers have introduced CASTLE, a framework designed to address the cold-start problem in natural language s…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a209cfd5409f"
+        ]
+      },
+      {
+        "itemId": "f001fa733928",
+        "title": "6 Chrome settings tweaks every power user needs to know",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "f001fa733928"
+        ]
+      },
+      {
+        "itemId": "de03abc947a9",
+        "title": "Apple could build its AI health chatbot from this study – how to enroll",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "de03abc947a9"
+        ]
+      },
+      {
+        "itemId": "d9a1aa52b534",
+        "title": "5 ways AI will change how you defend your business in 2027",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d9a1aa52b534"
+        ]
+      },
+      {
+        "itemId": "954821723461",
+        "title": "iPhone Duo 2 prototypes suggest FaceID, Action Button, other potential 2027 features",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "954821723461"
+        ]
+      },
+      {
+        "itemId": "570dea3bab37",
+        "title": "4 new Google Maps features to try on your next holiday road trip",
+        "summary": "该条目缺少可用摘要，请查看原文链接。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "570dea3bab37"
+        ]
+      },
+      {
+        "itemId": "d2db359f6f00",
+        "title": "The AI Ascent",
+        "summary": "Article URL: https://medium.com/@chipmunkworks/the-helicopter-problem-9bfec2cfdfab Comments URL: https://news.ycombinat…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d2db359f6f00"
+        ]
+      },
+      {
+        "itemId": "deef845adea3",
+        "title": "Own your AI, at full speed",
+        "summary": "Article URL: https://www.ycombinator.com/launches/XcZ-rightnow-own-your-ai-at-full-speed Comments URL: https://news.yco…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "deef845adea3"
+        ]
+      },
+      {
+        "itemId": "1dad12d2a497",
+        "title": "Gemini Decision 1 can't separate AI voices made after 2024",
+        "summary": "Article URL: https://echo.ls/posts/gemini-decision-ai-voices/ Comments URL: https://news.ycombinator.com/item?id=505260…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1dad12d2a497"
+        ]
+      },
+      {
+        "itemId": "d9f844d78a81",
+        "title": "Forward Deployed Engineer – AI/ML and Data Science",
+        "summary": "Article URL: https://www.dialogkey.com/careers/119ce7f304 Comments URL: https://news.ycombinator.com/item?id=50525715 P…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "d9f844d78a81"
+        ]
+      },
+      {
+        "itemId": "9d3ed865f160",
+        "title": "2027 AI Power Shortfall of 15 GW",
+        "summary": "Article URL: https://grok.com/share/bGVnYWN5_4f06d401-90e9-4ed4-bad8-89e3b4fadde2 Comments URL: https://news.ycombinato…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "9d3ed865f160"
+        ]
+      },
+      {
+        "itemId": "fa0203ea5beb",
+        "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+        "summary": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive res…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "fa0203ea5beb"
+        ]
+      },
+      {
+        "itemId": "1eab4cf1f82e",
+        "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+        "summary": "Meet the Gemini Decisions API, powered by our state-of-the-art model Gemini Decision for fast, calibrated multimodal de…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "1eab4cf1f82e"
+        ]
+      },
+      {
+        "itemId": "bb43b1944706",
+        "title": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
+        "summary": "Tabletop is a new Google Labs experiment for group collaboration. Build interactive itineraries, polls, and brackets wi…",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "bb43b1944706"
+        ]
+      },
+      {
+        "itemId": "c1fb719b7863",
+        "title": "Experience the art and legacy of Dr. Esther Mahlangu",
+        "summary": "A new online archive of Esther Mahlangu’s life and art is now on Google Arts & Culture.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "c1fb719b7863"
+        ]
+      },
+      {
+        "itemId": "830f32d0221e",
+        "title": "Gemini Intelligence: New features, on more devices",
+        "summary": "Gemini Intelligence is rolling out to more devices. See how expanded capabilities across these devices help you do more.",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "830f32d0221e"
+        ]
+      },
+      {
+        "itemId": "62e45eaa1b84",
+        "title": "睿尔曼智能郑随兵：质量、经济性、稳定性是机器人落地三大标准",
+        "summary": "具身智能的真正价值是“把人的经验、技能复刻出来”",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "62e45eaa1b84"
+        ]
+      },
+      {
+        "itemId": "6a20b2ff204d",
+        "title": "2026甲子引力年终盛典即将启幕，AI的无限游戏进入「第二序章」｜甲子引力",
+        "summary": "12月1日，细数AI的未竟之问。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "6a20b2ff204d"
+        ]
+      },
+      {
+        "itemId": "478d67fbbaa0",
+        "title": "没搞过一天研发的他，50岁以华为董事的身份退休了",
+        "summary": "在华为待了快10000天。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "478d67fbbaa0"
+        ]
+      },
+      {
+        "itemId": "a339373bf46a",
+        "title": "SuperLink2026开启创投行业超级链接时刻，12月北京见",
+        "summary": "2026年12月2-3日，清科控股、投资界主办的SuperLink2026将在北京启幕，汇聚创投各方，设置多场垂直专场与特色活动，探讨行业趋势、挖掘投资机会。",
+        "recommendation": "综合价值较高",
+        "evidenceItemIds": [
+          "a339373bf46a"
+        ]
+      }
+    ],
+    "quickDigest": [
+      {
+        "itemId": "09018fe2656a",
+        "title": "Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro",
+        "takeaway": "Hark has released Handoff², the computer-use agent inside Hark Pro. It averages 2x faster than v1, completes 82% of 478…",
+        "evidenceItemIds": [
+          "09018fe2656a"
+        ]
+      },
+      {
+        "itemId": "e8853bd0857e",
+        "title": "Uber’s Legal AI Agent Cuts Contract Review Time by 20% with Rules and RAG",
+        "takeaway": "Uber’s Legal Redlining Agent reviews contract changes in Microsoft Word using RAG, historical lawyer feedback, and dete…",
+        "evidenceItemIds": [
+          "e8853bd0857e"
+        ]
+      },
+      {
+        "itemId": "1bb85ee6f539",
+        "title": "AWS Open-Sources Emulator for Local Testing of 200+ Services by Coding Agents",
+        "takeaway": "AWS Emulator is a generally available local HTTPS endpoint, generated from public Smithy API models, that lets develope…",
+        "evidenceItemIds": [
+          "1bb85ee6f539"
+        ]
+      },
+      {
+        "itemId": "eaebae21f6a9",
+        "title": "Your Samsung phone could soon get a personal AI agent – what we know about Galaxy Claw",
+        "takeaway": "该条目缺少可用摘要，请查看原文链接。",
+        "evidenceItemIds": [
+          "eaebae21f6a9"
+        ]
+      },
+      {
+        "itemId": "b8426675f4de",
+        "title": "Bland Launches Tofu-1, a Full-Duplex Speech-to-Speech Model for Calls",
+        "takeaway": "Bland has released Tofu-1, a full-duplex speech-to-speech model for noisy, high-stakes phone calls. It is in enterprise…",
+        "evidenceItemIds": [
+          "b8426675f4de"
+        ]
+      },
+      {
+        "itemId": "a3200a384080",
+        "title": "Uber's Secure AI Framework Governs Autonomous AI Agents across Their Lifecycle",
+        "takeaway": "In a recent article, Uber Engineering highlights the limitations of traditional identity and API controls in securing A…",
+        "evidenceItemIds": [
+          "a3200a384080"
+        ]
+      },
+      {
+        "itemId": "48293136b969",
+        "title": "Anthropic Outlines its AI-Powered Code Review Process for Claude Code",
+        "takeaway": "Anthropic has outlined how the Claude Code team handles code reviews as AI agents increasingly contribute to its codeba…",
+        "evidenceItemIds": [
+          "48293136b969"
+        ]
+      },
+      {
+        "itemId": "43f1a6cb70f8",
+        "title": "Cohere Finding Shows Self-Hosted Open-Weight Models Still Need Egress Controls",
+        "takeaway": "Cohere recently reported that one of Alibaba’s newest Qwen3.8 models attempted to upload a probe file to a storage cont…",
+        "evidenceItemIds": [
+          "43f1a6cb70f8"
+        ]
+      },
+      {
+        "itemId": "2301ca4f8789",
+        "title": "Alibaba Releases Qwen4-Max: 2.4T MoE, 71B Active, 1M Context",
+        "takeaway": "Alibaba released Qwen4-Max, a proprietary 2.4T-parameter MoE model with 71B active parameters, native vision and a 1M-t…",
+        "evidenceItemIds": [
+          "2301ca4f8789"
+        ]
+      },
+      {
+        "itemId": "d9910a43afce",
+        "title": "New Ask Maps features to help with holiday travel and prep",
+        "takeaway": "Plan holiday road trips, get route tips, find local appointments, and search your saved lists with new Ask Maps feature…",
+        "evidenceItemIds": [
+          "d9910a43afce"
+        ]
+      },
+      {
+        "itemId": "c76538c540c2",
+        "title": "Meet Meta’s JiTTests: LLM-Generated Tests Designed to Fail Before Risky Code Lands",
+        "takeaway": "Meta has moved Catching JiTTests into production. The LLM system writes tests designed to fail on risky diffs, and caug…",
+        "evidenceItemIds": [
+          "c76538c540c2"
+        ]
+      },
+      {
+        "itemId": "c2db5bf6057a",
+        "title": "Statement on Sharing Research Produced by AI Companies in Theoretical Physics",
+        "takeaway": "Article URL: https://hep-open-release.org/ Comments URL: https://news.ycombinator.com/item?id=50525947 Points: 1 # Comm…",
+        "evidenceItemIds": [
+          "c2db5bf6057a"
+        ]
+      }
+    ],
+    "leadSummary": "本期重点围绕agent与open-source展开，建议优先关注《Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro》、《Uber’s Legal AI Agent Cuts Contract Review Time by 20% with Rules and RAG》、《AWS Open-Sources Emulator for Local Testing of 200+ Services by Coding Agents》，并结合现有工程路线评估接入优先级与落地成本。",
+    "categoryLeadSummaries": [
+      {
+        "category": "other",
+        "lead": "其他方向本期共 4 条，建议优先阅读《Alibaba Releases Qwen4-Max: 2.4T MoE, 71B Active, 1M Context》、《New Ask Maps features to help with holiday travel and prep》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "2301ca4f8789",
+          "d9910a43afce",
+          "428729c50394",
+          "f001fa733928"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "industry-news",
+        "lead": "行业动态本期共 4 条，建议优先阅读《阿里正式发布Qwen4，智能体及编程能力进阶，迈向真实全场景》、《余承东发布新款问界M8：38万元起售，全系预埋L3架构》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "f6cee1fe7d8e",
+          "ea240796e3eb",
+          "d2db359f6f00",
+          "deef845adea3"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "agent",
+        "lead": "Agent 方向本期共 4 条，建议优先阅读《Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro》、《AWS Open-Sources Emulator for Local Testing of 200+ Services by Coding Agents》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "09018fe2656a",
+          "1bb85ee6f539",
+          "eaebae21f6a9",
+          "48293136b969"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      },
+      {
+        "category": "open-source",
+        "lead": "开源方向本期共 3 条，建议优先阅读《Uber’s Legal AI Agent Cuts Contract Review Time by 20% with Rules and RAG》、《Cohere Finding Shows Self-Hosted Open-Weight Models Still Need Egress Controls》，重点关注其工程可落地性与集成成本。",
+        "sourceItemIds": [
+          "e8853bd0857e",
+          "43f1a6cb70f8",
+          "c76538c540c2"
+        ],
+        "fallbackTriggered": true,
+        "reason": "template_fallback_only"
+      }
+    ],
+    "summaryInputHash": "fb17a00a0faa49c1d6b71ed47ba393bb0189bf982400e6f39eac33fbd58b6956",
+    "llmClassifyScoreMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.4-v1",
+      "startedAt": "2026-11-17T01:53:12.072Z",
+      "finishedAt": "2026-11-17T01:53:57.299Z",
+      "durationMs": 45229,
+      "inputCount": 36,
+      "processedCount": 36,
+      "fallbackCount": 36,
+      "fallbackTriggered": true,
+      "batchSize": 10,
+      "timeoutMs": 90000,
+      "effectiveConcurrency": 1,
+      "llmAppliedCount": 0,
+      "llmScoreFallbackCount": 36,
+      "failureStats": {
+        "totalFailed": 36,
+        "timeout": 0,
+        "http": 36,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0,
+        "lowConfidence": 0
+      },
+      "retryStats": {
+        "batchRetryCount": 68,
+        "splitRetryCount": 32
+      }
+    },
+    "githubSelectionMeta": {
+      "sourceCount": 1,
+      "queryMode": "dual",
+      "queryStats": [
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "active_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 pushed:>=2026-11-10",
+          "fetchedCount": 0,
+          "failedReason": "This operation was aborted"
+        },
+        {
+          "sourceId": "github-hot-open-source",
+          "sourceName": "GitHub 热门开源（AI）",
+          "queryPath": "new_repo_window",
+          "query": "topic:artificial-intelligence archived:false stars:>=200 created:>=2026-11-03",
+          "fetchedCount": 0,
+          "failedReason": "HTTP 401 response=http_401"
+        }
+      ],
+      "collectedRepoCount": 0,
+      "mergedRepoCount": 0,
+      "historicalRepoCount": 0,
+      "cooldownDays": 10,
+      "cooldownSuppressedCount": 0,
+      "breakoutAllowedCount": 0,
+      "keptRepoCount": 0,
+      "selectedRepoCount": 0
+    },
+    "llmSummaryMeta": {
+      "enabled": true,
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "promptVersion": "m5.3-v1",
+      "startedAt": "2026-11-17T01:53:57.723Z",
+      "finishedAt": "2026-11-17T01:54:12.390Z",
+      "durationMs": 14667,
+      "inputCount": 36,
+      "summarizedCount": 0,
+      "fallbackTriggered": true,
+      "fallbackReason": "llm_success_rate_below_threshold:0%<70%",
+      "assistAppliedCount": 0,
+      "assistFallbackCount": 0,
+      "leadFallbackTriggered": true,
+      "failureStats": {
+        "totalFailed": 30,
+        "timeout": 0,
+        "http": 30,
+        "business": 0,
+        "missingContent": 0,
+        "invalidJson": 0,
+        "quality": 0,
+        "other": 0
+      },
+      "retryStats": {
+        "retryableTriggeredCount": 0,
+        "missingContentExtraRetryTriggeredCount": 0,
+        "compensationRetryItemCount": 30,
+        "serialDegradeTriggered": false,
+        "serialRetriedItemCount": 0,
+        "serialTriggerMaxConsecutiveMissingContent": 0
+      },
+      "adaptiveDegradeStats": {
+        "windowSize": 6,
+        "triggerMissingContentRateThreshold": 0.34,
+        "recoverSuccessRateThreshold": 0.85,
+        "triggerCount": 0,
+        "recoverCount": 0,
+        "degradedRetriedItemCount": 0,
+        "currentMode": "normal",
+        "maxWindowMissingContentRate": 0,
+        "maxWindowSuccessRate": 0,
+        "lastWindowMissingContentRate": 0,
+        "lastWindowSuccessRate": 0
+      },
+      "zhQualityStats": {
+        "nonZhDetectedCount": 0,
+        "zhRepairAttemptedCount": 0,
+        "zhRepairSucceededCount": 0,
+        "englishRetainedCount": 0
+      },
+      "effectiveConcurrency": 1
+    },
+    "highlights": [
+      {
+        "id": "09018fe2656a",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro",
+        "link": "https://www.marktechpost.com/2026/11/16/hark-handoff-2-computer-use-agent-2x-faster/",
+        "contentSnippet": "Hark has released Handoff², the computer-use agent inside Hark Pro. It averages 2x faster than v1, completes 82% of 478 internal web tasks, and learned to batch actions through latency-penalized RL. The post Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-16T09:08:37.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 100,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 118,
+          "ruleScoreNormalized": 100,
+          "finalScore": 100,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "e8853bd0857e",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "Uber’s Legal AI Agent Cuts Contract Review Time by 20% with Rules and RAG",
+        "link": "https://www.infoq.com/news/2026/11/uber-legal-redlining-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "Uber’s Legal Redlining Agent reviews contract changes in Microsoft Word using RAG, historical lawyer feedback, and deterministic policy rules. Built with LangGraph, OpenSearch, and Redis, the system reports more than 20% lower average contract review time and 91% accuracy in AI-generated decisions. Uber is exploring agentic harnesses, skills, legal ontologies, and knowledge graphs. By Leela Kumili",
+        "publishedAt": "2026-11-16T14:37:00.000Z",
+        "category": "open-source",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 90.32,
+        "importance": "high",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 115,
+          "ruleScoreNormalized": 90.32258064516128,
+          "finalScore": 90.32,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "1bb85ee6f539",
+        "sourceId": "infoq-ai-news",
+        "sourceName": "InfoQ AI/ML News",
+        "title": "AWS Open-Sources Emulator for Local Testing of 200+ Services by Coding Agents",
+        "link": "https://www.infoq.com/news/2026/11/aws-emulator-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering-news",
+        "contentSnippet": "AWS Emulator is a generally available local HTTPS endpoint, generated from public Smithy API models, that lets developers and coding agents test against more than 200 AWS services without an account, with published fidelity scores and documented limits around IAM, regions, and in-memory state. By Daniel Dominguez",
+        "publishedAt": "2026-11-16T10:40:00.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 74.19,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 110,
+          "ruleScoreNormalized": 74.19354838709677,
+          "finalScore": 74.19,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "eaebae21f6a9",
+        "sourceId": "zdnet-ai",
+        "sourceName": "ZDNet AI",
+        "title": "Your Samsung phone could soon get a personal AI agent – what we know about Galaxy Claw",
+        "link": "https://www.zdnet.com/innovation/samsung-galaxy-claw-ai-cross-app-upgrade/",
+        "contentSnippet": "",
+        "publishedAt": "2026-11-16T17:35:43.000Z",
+        "category": "agent",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 70.97,
+        "importance": "medium",
+        "recommendationReason": "Agent 工程实践相关",
+        "scoreBreakdown": {
+          "ruleScore": 109,
+          "ruleScoreNormalized": 70.96774193548387,
+          "finalScore": 70.97,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      },
+      {
+        "id": "b8426675f4de",
+        "sourceId": "marktechpost",
+        "sourceName": "MarkTechPost",
+        "title": "Bland Launches Tofu-1, a Full-Duplex Speech-to-Speech Model for Calls",
+        "link": "https://www.marktechpost.com/2026/11/15/bland-tofu-1-full-duplex-speech-to-speech-model/",
+        "contentSnippet": "Bland has released Tofu-1, a full-duplex speech-to-speech model for noisy, high-stakes phone calls. It is in enterprise research preview, with no published benchmarks, size or pricing yet. The post Bland Launches Tofu-1, a Full-Duplex Speech-to-Speech Model for Calls appeared first on MarkTechPost.",
+        "publishedAt": "2026-11-15T10:06:21.000Z",
+        "category": "research",
+        "llmClassifyReason": "LLM 分类打分失败，已回退规则结果。",
+        "score": 67.74,
+        "importance": "medium",
+        "recommendationReason": "评测与性能信息",
+        "scoreBreakdown": {
+          "ruleScore": 108,
+          "ruleScoreNormalized": 67.74193548387096,
+          "finalScore": 67.74,
+          "fusionWeight": 0.65,
+          "usedLlm": false
+        }
+      }
+    ],
+    "metrics": {
+      "collectedCount": 36,
+      "normalizedCount": 36,
+      "dedupedCount": 36,
+      "highImportanceCount": 2,
+      "mediumImportanceCount": 3,
+      "lowImportanceCount": 31,
+      "categoryBreakdown": {
+        "open-source": 3,
+        "tooling": 2,
+        "agent": 4,
+        "research": 3,
+        "industry-news": 8,
+        "tutorial": 1,
+        "other": 15
+      }
+    },
+    "warnings": [
+      "[OpenAI News] 抓取失败: This operation was aborted",
+      "[LangChain Changelog] 抓取失败: Feed not recognized as RSS 1 or 2.",
+      "[Microsoft AI Blog] 抓取失败: HTTP 410",
+      "[VentureBeat AI] 抓取失败: HTTP 429",
+      "[GitHub 热门开源（AI）] 抓取失败(active_window): This operation was aborted",
+      "[GitHub 热门开源（AI）] 抓取失败(new_repo_window): HTTP 401 response=http_401",
+      "LLM 分类打分部分回退：36/36",
+      "LLM 分类打分回退明细（前 3/36）：minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"074ae68d8ab8d6edfcc18b38bbaff761\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"074ae68ec3c3b27913acb3e937c6ad12\"} | minimax_http_402:{\"type\":\"error\",\"error\":{\"type\":\"insufficient_balance_error\",\"message\":\"insufficient balance (1008)\"},\"request_id\":\"074ae68e4ebee933cc3c01f6819f0f44\"}",
+      "LLM 分类打分失败分类：low_confidence=0：timeout=0：http=36：business=0：missing_content=0：invalid_json=0：quality=0：other=0",
+      "LLM 分类打分重试统计：batch_retry=68, split_retry=32",
+      "LLM 总结已回退规则模式：llm_success_rate_below_threshold:0%<70%",
+      "LLM 条目失败明细（前 3/30）：minimax_http_failed:402 | minimax_http_failed:402 | minimax_http_failed:402",
+      "LLM 失败分类：missing_content=0, timeout=0, http=30, business=0, invalid_json=0, quality=0, other=0",
+      "LLM 重试统计：retryable=0, missing_content_extra=0, compensation=30, serial_degrade=0, serial_retried=0",
+      "LLM 自适应降载：trigger=0, recover=0, retried=0, mode=normal, window_missing_content=0%, window_success=0%",
+      "LLM 中文质量：detected_non_zh=0, repair_attempted=0, repair_succeeded=0, english_retained=0"
+    ],
+    "reviewDeadlineAt": null
+  }
+}
